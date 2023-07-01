@@ -1,0 +1,26 @@
+nav {
+    background-color: white;
+    padding: 10px;
+    position: relative;
+  }
+  
+  h1 {
+    color: black;
+    margin: 0;
+    margin-left: 10px;
+    font-family: "Barlow", sans-serif;
+  }
+  
+  .orange-text {
+    color: orange;
+  }
+  
+  .nav-line {
+    position: absolute;
+    left: -10px; /* Adjusted the left value to -10px */
+    bottom: -6px;
+    width: calc(100% + 20px); /* Adjusted the width value */
+    height: 2px;
+    background-color: orange;
+  }
+  
