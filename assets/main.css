@@ -49,11 +49,15 @@ h2 {
   max-width: 30em;
   flex-basis: calc(50% - 1em);
   flex-direction: row;
-  background-color: #696969;
+  background-color: #FFF2E4;
   border: 0;
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
   margin: 1em;
   border-radius: 15px; /* Adjust the value as desired */
+}
+
+.card-custom {
+  color: #FFF2E4;
 }
 
 .card-title{
@@ -88,6 +92,7 @@ h2 {
   top: 80%;
   left: 17%;
   transform: translate(-50%, -50%);
+  background-color: #E77429;
 }
 
 .text-section {
@@ -108,7 +113,6 @@ h2 {
 
 .card.bg-light-subtle .cta-section .btn {
   background-color: #898989;
-  border-color: #898989;
 }
 
 @media screen and (max-width: 475px) {
