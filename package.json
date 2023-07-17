@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-shell": "^0.8.0"
+  }
+}
