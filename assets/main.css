@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  font-size: 800;
+  font-size: 2.5rem;
   font-weight: bolder;
 }
 
@@ -14,7 +14,7 @@ h2 {
 }
 
 .navbar {
-  height: 80px; /* Adjust the height as needed */
+  height: 80px;
   position: relative;
 }
 
@@ -26,8 +26,8 @@ h2 {
   font-size: 30px;
 }
 
-.orange-text{
-  color: #E77429;
+.orange-text {
+  color: #e77429;
 }
 
 .nav-line {
@@ -36,9 +36,8 @@ h2 {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #E77429;
+  background-color: #e77429;
 }
-
 
 .hero-container {
   display: flex;
@@ -54,12 +53,12 @@ h2 {
 }
 
 .hero-content h1 {
-    font-size: 50px;
-    color: #333;
-    text-align: center;
+  font-size: 50px;
+  color: #333;
+  text-align: center;
 }
 
-.hero-list{
+.hero-list {
   font-size: 18px;
   text-align: center;
   list-style-position: inside;
@@ -68,47 +67,47 @@ h2 {
 }
 
 .hero-image img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-.green-text{
+.green-text {
   margin-top: 30px;
-  color: #24B292;
+  color: #24b292;
 }
 
-.btn-block{
+.btn-block {
   border-width: 3px;
-  border-color: #E77429;
+  border-color: #e77429;
   color: #333;
 }
 
-.btn-custom-green{
+.btn-custom-green {
   border-width: 3px;
   color: #333;
-  background-color: #24B292;
-  border-color: #24B292;
+  background-color: #24b292;
+  border-color: #24b292;
 }
 
-.btn-custom-orange{
+.btn-custom-orange {
   border-width: 3px;
   color: #333;
-  background-color: #E77429;
-  border-color: #E77429;
+  background-color: #e77429;
+  border-color: #e77429;
 }
 
-.btn-custom-brown{
+.btn-custom-brown {
   border-width: 3px;
   color: #333;
-  background-color: #B47235;
-  border-color: #B47235;
+  background-color: #b47235;
+  border-color: #b47235;
 }
 
-.btn-custom-yellow{
+.btn-custom-yellow {
   border-width: 3px;
   color: #333;
-  background-color: #FAB544;
-  border-color: #FAB544;
+  background-color: #fab544;
+  border-color: #fab544;
 }
 
 .container {
@@ -117,30 +116,30 @@ h2 {
   justify-content: center;
 }
 
-
 .card {
   max-width: 30em;
   flex-basis: calc(50% - 1em);
   flex-direction: row;
-  background-color: #FFF2E4;
+  background-color: #fff2e4;
   border: 0;
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
   margin: 1em;
-  border-radius: 15px; /* Adjust the value as desired */
+  border-radius: 15px;
 }
 
 .card-custom {
-  color: #FFF2E4;
+  color: #fff2e4;
 }
 
-.card-title{
+.card-title {
   margin-top: 10px;
 }
+
 .card.dark {
   color: #fff;
 }
 
-.card.card.bg-light-subtle .card-title {
+.card.bg-light-subtle .card-title {
   color: dimgrey;
 }
 
@@ -151,7 +150,7 @@ h2 {
   border-radius: 20px;
 }
 
-.card-body .text-section .card-text{
+.card-body .text-section .card-text {
   margin-top: 0;
 }
 
@@ -187,15 +186,69 @@ h2 {
   background-color: #898989;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 767px) {
+  .hero-image {
+    max-width: 100%;
+  }
+  .navbar-brand {
+    max-width: 100%;
+    font-size: medium;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .hero-content {
+    margin-top: 50px;
+  }
+  .hero-list {
+    text-align: left;
+  }
   .card {
-    font-size: 0.9em;
+    font-size: smaller;
+    max-width: 90%;
+  }
+  .custom-button {
+    font-size: smaller;
+    padding: 5px 10px;
+  }
+  .button-container {
+    gap: 10px;
+  }
+  .btn-custom-brown{
+    font-size: smaller;
+  }
+  .btn-custom-green{
+    font-size: smaller;
+  }
+  .btn-custom-orange{
+    font-size: smaller;
+  }
+  .btn-custom-yellow{
+    font-size: smaller;
   }
 }
 
-@media screen and (max-width: 575px) {
-  .card {
-    flex-basis: 100%;
-    margin: 1em auto;
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.custom-button {
+  padding: 10px 20px;
+  background-color: #f8f5ee;
+  color: #000000;
+  border: 3px solid #fab544;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px #fab44468;
+  width: 150px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 912px) {
+  .hero-image {
+    width: 400px;
+    height: 570px;
   }
 }
