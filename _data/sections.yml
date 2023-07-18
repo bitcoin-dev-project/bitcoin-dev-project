@@ -3,81 +3,81 @@
     - title: Bitcoin Protocol
       description: Take a no-cost 6 week seminar on bitcoin & lightning protocol development.
       link: https://learning.chaincode.com/#seminars
-      image: ../assets/img/Laptop-Blocks-Abstract.png
+      image: Laptop-Blocks-Abstract.png
       type: Live
     - title: Mastering Bitcoin
       description: Foundational book we recommend reading before diving deeper.
       link: https://github.com/Qala-Dev/discussion-questions/tree/main/mastering-bitcoin
-      image: ../assets/img/House-Drawing-Orange-Abstract.png
+      image: House-Drawing-Orange-Abstract.png
       type: Self-paced
     - title: Chaincode Seminars
       description: Learn our Bitcoin & Lightning dev seminar content at your own pace.
       link: https://chaincode.gitbook.io/seminars/
-      image: ../assets/img/Students-Sitting-Behind-Abstract.png
+      image: Students-Sitting-Behind-Abstract.png
       type: Self-paced
     - title: Lightning Protocol
       description: Take a no-cost 6 week seminar on lightning development.
       link: https://learning.chaincode.com/#seminars
-      image: ../assets/img/Transaction-Flow-Abstract.png
+      image: Transaction-Flow-Abstract.png
       type: Live
 - name: Other Learning Resources
   cards:
     - title: Onboarding to Bitcoin Core
       description: A comprehensive onboarding guide to Satoshi Nakamoto's bitcoin implementation.
       link: https://bitcoincore.wtf/
-      image: ../assets/img/Person-Boarding-Boat-Abstract.png
+      image: Person-Boarding-Boat-Abstract.png
       type: Self-paced
     - title: Transaction Tutorial
       description: A technical tutorial for understanding how bitcoin transactions are created and signed.
       link: https://github.com/chaincodelabs/bitcoin-tx-tutorial
-      image: ../assets/img/Teacher-Class-Abstract.png
+      image: Teacher-Class-Abstract.png
       type: Self-paced
     - title: Bitcoin Dev Philosophy
       description: A guide for developers to gain a deeper understanding of Bitcoin's design trade-offs and philosophy.
       link: https://bitcoindevphilosophy.com/
-      image: ../assets/img/Philosophical-Thought-Abstract.png
+      image: Philosophical-Thought-Abstract.png
       type: interactive
     - title: Try Bitcoin
       description: An interactive bitcoin tutorial for orange-pilled beginners.
       link: https://trybitcoin.satsie.dev/
-      image: ../assets/img/Dice-Abstract.png
+      image: Dice-Abstract.png
       type: Self-paced
     - title: Schorr Taproot Workshop
       description: A technical introduction to Schnorr and Taproot.
       link: https://bitcoinops.org/en/schorr-taproot-workshop/
-      image: ../assets/img/Tree-Roots-Abstract.png
+      image: Tree-Roots-Abstract.png
       type: Self-paced
     - title: Saving Satoshi
       description: An interactive science fiction story designed to inspire a generation to fall in love with bitcoin.
       link: https://savingsatoshi.com
-      image: ../assets/img/holocat.png
+      image: holocat.png
       type: Interactive
 - name: Tools
   cards:
     - title: Bitcoin Search
       description: The technical bitcoin search engine we deserve.
       link: https://bitcoinsearch.xyz/
-      image: ../assets/img/Person-Searching-Micro-Abstract.png
+      image: Person-Searching-Micro-Abstract.png
       type: Tools
     - title: BTC Transcripts
       description: Peruse archives of transcribed talks, podcasts, and lectures.
       link: https://btctranscripts.com/
-      image: ../assets/img/Bookshelf-With-Books-Abstract.png
+      image: Bookshelf-With-Books-Abstract.png
       type: Tools
 - name: Coming Soon
   cards:
     - title: BTC Transcripts Reviews
       description: Contribute to BTC Transcripts by reviewing AI-generated copy.
       link: ""
-      image: ../assets/img/Book-Writing-Abstract.png
+      image: Book-Writing-Abstract.png
       type: Tools
     - title: ChatBTC
       description: Chat with your favorite sources and authors.
       link: ""
-      image: ../assets/img/Two_people_talking.png
+      image: Two_people_talking.png
       type: Tools
     - title: In-Person Residency
       description: A life-changing bitcoin focused educational experience.
       link: https://residency.chaincode.com/
-      image: ../assets/img/House-Drawing-Orange-Abstract.png
+      image: House-Drawing-Orange-Abstract.png
       type: Live

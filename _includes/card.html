@@ -1,7 +1,7 @@
 <div class="col-md-6">
   <a href="{{ card.link }}" class="card-link">
     <div class="card bg-danger-subtle mt-4">
-      <img src="{{ card.image }}" class="card-img-top" alt="{{ card.title }} image">
+      <img src="/assets/img/{{ card.image | relative_path }}" class="card-img-top" alt="{{ card.title }} image">
       <div class="cta-section">
         <span class="btn btn-custom-{{ card.type | downcase }}">{{ card.type }}</span>
       </div>
