@@ -1,8 +1,9 @@
 <div class="col-md-6">
-  <div class="card bg-danger-subtle mt-4">
-    <img src="{{ card.image }}" class="card-img-top" alt="{{ card.title }} image">
+  <a href="{{ card.link }}" class="card-link">
+    <div class="card bg-danger-subtle mt-4">
+      <img src="{{ card.image }}" class="card-img-top" alt="{{ card.title }} image">
       <div class="cta-section">
-        <a href="{{ card.link }}" class="btn btn-custom-{{ card.type | downcase }}">{{ card.type }}</a>
+        <span class="btn btn-custom-{{ card.type | downcase }}">{{ card.type }}</span>
       </div>
       <div class="card-body">
         <div class="text-section">
@@ -10,6 +11,6 @@
           <p class="card-text">{{ card.description }}</p>
         </div>
       </div>
-  </div> 
+    </div>
+  </a>
 </div>
-
