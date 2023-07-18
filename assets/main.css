@@ -82,28 +82,28 @@ h2 {
   color: #333;
 }
 
-.btn-custom-green {
+.btn-custom-live {
   border-width: 3px;
   color: #333;
   background-color: #24b292;
   border-color: #24b292;
 }
 
-.btn-custom-orange {
+.btn-custom-self-paced {
   border-width: 3px;
   color: #333;
   background-color: #e77429;
   border-color: #e77429;
 }
 
-.btn-custom-brown {
+.btn-custom-interactive {
   border-width: 3px;
   color: #333;
   background-color: #b47235;
   border-color: #b47235;
 }
 
-.btn-custom-yellow {
+.btn-custom-tools {
   border-width: 3px;
   color: #333;
   background-color: #fab544;
