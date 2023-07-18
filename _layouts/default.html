@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/main.css">
-  <title>Bitcoin Knowledge Project</title>
+    <meta charset="{{ site.meta_charset }}">
+    <meta name="viewport" content="{{ site.meta_viewport }}">
+    <link rel="stylesheet" href="{{ site.bootstrap_stylesheet }}">
+    <link rel="stylesheet" href="{{ site.custom_stylesheet }}">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}"
 </head>
 
 <body>
@@ -33,7 +34,7 @@
         </div>
       </div>
       <div class="col-md-6 text-right">
-        <img src="../assets/img/Mogashni_Mo.png" alt="Hero Image" class="hero-image">
+        <img src="../assets/img/hero.png" alt="Hero Image" class="hero-image">
       </div>
     </div>
   </div>
@@ -112,7 +113,7 @@
           <div class="card-body">
             <div class="text-section">
               <h2 class="card-title fw-bold">Onboarding to Bitcoin Core</h2>
-              <p class="card-text">A comprehensive onboarding guide to Satoshi Nakamoto’s bitcoin implementation.</p>
+              <p class="card-text">A comprehensive onboarding guide to Satoshi Nakamoto's bitcoin implementation.</p>
             </div>
           </div>
         </div>
@@ -144,7 +145,7 @@
           <div class="card-body">
             <div class="text-section">
               <h2 class="card-title fw-bold">Bitcoin Dev Philosophy</h2>
-              <p class="card-text">A guide for developers to gain a deeper understanding of Bitcoin’s design
+              <p class="card-text">A guide for developers to gain a deeper understanding of Bitcoin's design
                 trade-offs and philosophy.</p>
             </div>
             <div class="cta-section">
@@ -306,8 +307,7 @@
           <div class="card-body">
             <div class="text-section">
               <h2 class="card-title fw-bold">Bitcoin Feed</h2>
-              <p class="card-text">AI generated summary of bitcoin-dev and lightning-dev mailing lists as someone
-                should be reading it.</p>
+              <p class="card-text">AI generated summary of bitcoin-dev and lightning-dev mailing lists as someone should be reading it.</p>
             </div>
           </div>
         </div>
