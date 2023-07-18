@@ -28,11 +28,9 @@ author: chaincodelabs
 bootstrap_stylesheet: https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css
 meta_viewport: width=device-width, initial-scale=1.0
 meta_charset: utf-8
-  
+
 # Build settings
 theme: minima
-plugins:
-  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
