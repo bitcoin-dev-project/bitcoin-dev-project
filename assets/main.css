@@ -117,7 +117,7 @@ h2 {
 }
 
 .card {
-  max-width: 30em;
+  max-width: 32em;
   flex-basis: calc(50% - 1em);
   flex-direction: row;
   background-color: #fff2e4;
@@ -125,6 +125,11 @@ h2 {
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
   margin: 1em;
   border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #f9ce9f;
 }
 
 .card-custom {
@@ -157,6 +162,17 @@ h2 {
 .card-body {
   display: flex;
   justify-content: space-between;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link:hover, .card-link:hover * {
+  color: black; /* Change to the desired color */
+  text-decoration: none;
 }
 
 .card .btn {

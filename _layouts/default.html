@@ -31,8 +31,12 @@
           </ul>
         </div>
         <div class="button-container">
-          <button class="custom-button">Learn</button>
-          <button class="custom-button">Use Our Tools</button>
+          <a href="#guided-content">
+            <button class="custom-button">Learn</button>
+          </a>
+          <a href="#tools">
+            <button class="custom-button">Tooling</button>
+          </a>
         </div>
       </div>
       <div class="col-md-6 text-right">
@@ -42,7 +46,7 @@
   </div>
 
 <div class="allcards">
-  <div class="container">
+  <div class="container" id="guided-content">
     <h1 class="text-center mt-4">Guided Content</h1>
     <div class="row">
       {% for section in site.data.sections %}
@@ -56,10 +60,23 @@
   </div>
 
   <div class="container">
-    <h1 class="text-center mt-4">Coming Soon</h1>
+    <h1 class="text-center mt-4">Other Learning Resources</h1>
     <div class="row">
       {% for section in site.data.sections %}
-        {% if section.name == "Coming Soon" %}
+        {% if section.name == "Other Learning Resources" %}
+          {% for card in section.cards %}
+            {% include card.html card=card %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="container" id="tools">
+    <h1 class="text-center mt-4">Tools</h1>
+    <div class="row">
+      {% for section in site.data.sections %}
+        {% if section.name == "Tools" %}
           {% for card in section.cards %}
             {% include card.html card=card %}
           {% endfor %}
@@ -69,10 +86,10 @@
   </div>
 
   <div class="container">
-    <h1 class="text-center mt-4">Learning Tools</h1>
+    <h1 class="text-center mt-4">Coming Soon</h1>
     <div class="row">
       {% for section in site.data.sections %}
-        {% if section.name == "Learning Tools" %}
+        {% if section.name == "Coming Soon" %}
           {% for card in section.cards %}
             {% include card.html card=card %}
           {% endfor %}
