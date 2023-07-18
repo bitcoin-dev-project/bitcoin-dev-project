@@ -231,7 +231,14 @@ h2 {
   cursor: pointer;
   box-shadow: 2px 2px #fab44468;
   width: 150px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #f9ce9f;
+  }
+  
 }
+
 
 @media screen and (max-width: 767px) {
   .hero-image {
