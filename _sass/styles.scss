@@ -278,3 +278,15 @@ h2 {
     height: 570px;
   }
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1024px){
+  .allcards {
+    margin-left: 170px;
+  }
+}
+
+@media screen and (min-width: 1280px){
+  .allcards {
+    margin-left: 40px;
+  }
+}
