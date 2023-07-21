@@ -27,6 +27,11 @@
       link: https://bitcoincore.wtf/
       image: Person-Boarding-Boat-Abstract.png
       type: Self-paced
+    - title: Building on Lightning
+      description: Guided walk-through of two applications that interact with the Lightning Network.
+      link: https://bmancini55.github.io/building-lightning/
+      image: Chinese-Astronaut-Abstract.png
+      type: Self-paced
     - title: Transaction Tutorial
       description: A technical tutorial for understanding how bitcoin transactions are created and signed.
       link: https://github.com/chaincodelabs/bitcoin-tx-tutorial
