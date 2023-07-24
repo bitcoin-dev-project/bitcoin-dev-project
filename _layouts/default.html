@@ -16,9 +16,9 @@
       <meta name="twitter:creator" content="{{ site.twitter_username }}">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" defer></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
       <meta charset="{{ site.meta_charset }}">
   </head>
 
@@ -55,58 +55,65 @@
       </div>
     </div>
 
-  <div class="allcards">
-    <div class="container" id="guided-content">
-      <h1 class="text-center mt-4">Guided Content</h1>
-      <div class="row">
-        {% for section in site.data.sections %}
-          {% if section.name == "Guided Content" %}
-            {% for card in section.cards %}
-              {% include card.html card=card %}
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
+    <div class="allcards">
+      <div class="container" id="guided-content">
+        <h1 class="text-center mt-4">Guided Content</h1>
+        <div class="row">
+          {% for section in site.data.sections %}
+            {% if section.name == "Guided Content" %}
+              {% for card in section.cards %}
+                {% include card.html card=card %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
 
-    <div class="container">
-      <h1 class="text-center mt-4">Other Learning Resources</h1>
-      <div class="row">
-        {% for section in site.data.sections %}
-          {% if section.name == "Other Learning Resources" %}
-            {% for card in section.cards %}
-              {% include card.html card=card %}
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
+      <div class="container">
+        <h1 class="text-center mt-4">Other Learning Resources</h1>
+        <div class="row">
+          {% for section in site.data.sections %}
+            {% if section.name == "Other Learning Resources" %}
+              {% for card in section.cards %}
+                {% include card.html card=card %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
 
-    <div class="container" id="tools">
-      <h1 class="text-center mt-4">Tools</h1>
-      <div class="row">
-        {% for section in site.data.sections %}
-          {% if section.name == "Tools" %}
-            {% for card in section.cards %}
-              {% include card.html card=card %}
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
+      <div class="container" id="tools">
+        <h1 class="text-center mt-4">Tools</h1>
+        <div class="row">
+          {% for section in site.data.sections %}
+            {% if section.name == "Tools" %}
+              {% for card in section.cards %}
+                {% include card.html card=card %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
 
-    <div class="container">
-      <h1 class="text-center mt-4">Coming Soon</h1>
-      <div class="row">
-        {% for section in site.data.sections %}
-          {% if section.name == "Coming Soon" %}
-            {% for card in section.cards %}
-              {% include card.html card=card %}
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
+      <div class="container">
+        <h1 class="text-center mt-4">Coming Soon</h1>
+        <div class="row">
+          {% for section in site.data.sections %}
+            {% if section.name == "Coming Soon" %}
+              {% for card in section.cards %}
+                {% include card.html card=card %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
+
+        <footer class="footer">
+          <p>Built with ❤️ by
+              <a target="_blank" rel="noopener" class="footer-link chaincode" href="https://chaincode.com">Chaincode Labs</a>
+          </p>
+          <a target="_blank" rel="noopener" class="footer-link feedback" href="https://cryptpad.fr/form/#/2/form/view/3P2CsohsHOkcH7C+WdtX0-tvqjBHqXnAmz5D9yx0e04/">Submit Feedback</a>
+      </footer>
 
     </div>
   </body>
