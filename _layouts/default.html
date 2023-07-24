@@ -1,107 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="{{ site.meta_charset }}">
-    <meta name="viewport" content="{{ site.meta_viewport }}">
-    <link rel="stylesheet" href="{{ site.bootstrap_stylesheet }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-    <title>{{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="{{ site.author }}">
-    <link rel="icon" href="{{ site.favicon }}" type="image/x-icon">
-</head>
+  <head>
+      <title>{{ site.title }}</title>
+      <meta name="viewport" content="{{ site.meta_viewport }}">
+      <link rel="icon" href="/favicon.ico" type="image/x-icon">
+      <meta name="description" content="{{ site.description }}">
+      <meta property="og:title" content="{{ site.title }}">
+      <meta property="og:url" content="{{ site.url }}">
+      <meta property="og:description" content="A place to learn about bitcoin development">
+      <meta property="og:image" content="{{ site.url | append: site.square_image }}">
+      <meta name="twitter:image" content="{{ site.url | append: site.landscape_image }}">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="{{ site.twitter_username }}">
+      <meta name="twitter:creator" content="{{ site.twitter_username }}">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <meta charset="{{ site.meta_charset }}">
+  </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg ">
-    <h1 class="navbar-brand"><span class="orange-text">Bitcoin</span>&nbsp;Knowledge Project</h1>
-    <div class="nav-line"></div>
-  </nav>
+  <body>
+    <nav class="navbar navbar-expand-lg ">
+      <h1 class="navbar-brand"><span class="orange-text">Bitcoin</span>&nbsp;Knowledge Project</h1>
+      <div class="nav-line"></div>
+    </nav>
 
-  <div class="container">
-    <div class="row hero-container text-center">
-      <div class="col-md-6 hero-content">
-        <h1>Your <span class="orange-text">technical</span> <br>bitcoin rabbit hole</h1>
-        <h1><span class="green-text">Simplified.</span></h1>
-        <div class="hero-list">
-          <ul>
-            <li>Live and self-paced educational resources</li>
-            <li>Tools to explore & play with technical ideas</li>
-            <li>Resources for historic decisions in Bitcoin</li>
-          </ul>
+    <div class="container">
+      <div class="row hero-container text-center">
+        <div class="col-md-6 hero-content">
+          <h1>Your <span class="orange-text">technical</span> <br>bitcoin rabbit hole</h1>
+          <h1><span class="green-text">Simplified.</span></h1>
+          <div class="hero-list">
+            <ul>
+              <li>Live and self-paced educational resources</li>
+              <li>Tools to explore & play with technical ideas</li>
+              <li>Resources for historic decisions in Bitcoin</li>
+            </ul>
+          </div>
+          <div class="button-container">
+            <a href="#guided-content">
+              <button class="custom-button">Learn</button>
+            </a>
+            <a href="#tools">
+              <button class="custom-button">Tooling</button>
+            </a>
+          </div>
         </div>
-        <div class="button-container">
-          <a href="#guided-content">
-            <button class="custom-button">Learn</button>
-          </a>
-          <a href="#tools">
-            <button class="custom-button">Tooling</button>
-          </a>
+        <div class="col-md-6 text-right">
+          <img src="{{ '/assets/img/hero.jpg' | relative_path }}" alt="Hero Image" class="hero-image">
         </div>
       </div>
-      <div class="col-md-6 text-right">
-        <img src="{{ '/assets/img/hero.png' | relative_path }}" alt="Hero Image" class="hero-image">
+    </div>
+
+  <div class="allcards">
+    <div class="container" id="guided-content">
+      <h1 class="text-center mt-4">Guided Content</h1>
+      <div class="row">
+        {% for section in site.data.sections %}
+          {% if section.name == "Guided Content" %}
+            {% for card in section.cards %}
+              {% include card.html card=card %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
-  </div>
 
-<div class="allcards">
-  <div class="container" id="guided-content">
-    <h1 class="text-center mt-4">Guided Content</h1>
-    <div class="row">
-      {% for section in site.data.sections %}
-        {% if section.name == "Guided Content" %}
-          {% for card in section.cards %}
-            {% include card.html card=card %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
+    <div class="container">
+      <h1 class="text-center mt-4">Other Learning Resources</h1>
+      <div class="row">
+        {% for section in site.data.sections %}
+          {% if section.name == "Other Learning Resources" %}
+            {% for card in section.cards %}
+              {% include card.html card=card %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <div class="container">
-    <h1 class="text-center mt-4">Other Learning Resources</h1>
-    <div class="row">
-      {% for section in site.data.sections %}
-        {% if section.name == "Other Learning Resources" %}
-          {% for card in section.cards %}
-            {% include card.html card=card %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
+    <div class="container" id="tools">
+      <h1 class="text-center mt-4">Tools</h1>
+      <div class="row">
+        {% for section in site.data.sections %}
+          {% if section.name == "Tools" %}
+            {% for card in section.cards %}
+              {% include card.html card=card %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <div class="container" id="tools">
-    <h1 class="text-center mt-4">Tools</h1>
-    <div class="row">
-      {% for section in site.data.sections %}
-        {% if section.name == "Tools" %}
-          {% for card in section.cards %}
-            {% include card.html card=card %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
+    <div class="container">
+      <h1 class="text-center mt-4">Coming Soon</h1>
+      <div class="row">
+        {% for section in site.data.sections %}
+          {% if section.name == "Coming Soon" %}
+            {% for card in section.cards %}
+              {% include card.html card=card %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <div class="container">
-    <h1 class="text-center mt-4">Coming Soon</h1>
-    <div class="row">
-      {% for section in site.data.sections %}
-        {% if section.name == "Coming Soon" %}
-          {% for card in section.cards %}
-            {% include card.html card=card %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
     </div>
-  </div>
-
-  </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
-
 </html>

@@ -22,12 +22,12 @@ title: The Bitcoin Knowledge Project
 email: learning@chaincode.com
 description: >- # this means to ignore newlines until "baseurl:"
   A place to learn about bitcoin development
-url: "thelastbitcoin.org" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: chaincodelabs
+twitter_username: '@chaincodelabs'
 author: chaincodelabs
-bootstrap_stylesheet: https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css
 meta_viewport: width=device-width, initial-scale=1.0
 meta_charset: utf-8
+square_image: '/assets/img/hero.jpg'
+landscape_image: '/assets/img/rabbit_landscape.jpg'
 
 # Build settings
 theme: minima
