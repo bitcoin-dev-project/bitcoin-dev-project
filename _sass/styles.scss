@@ -239,6 +239,25 @@ h2 {
   
 }
 
+.footer {
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.footer-link {
+  color: $orange;
+  text-decoration: none;
+
+  &.chaincode {
+    color:$yellow
+  }
+}
+
+.footer-link:hover {
+  color: $orange;
+}
 
 @media screen and (max-width: 767px) {
   .hero-image {
