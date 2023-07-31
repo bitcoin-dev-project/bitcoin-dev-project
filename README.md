@@ -1,4 +1,4 @@
-# Bitcoin Knowledge Project
+# The Bitcoin Dev Project
 
 ## Setup
 
@@ -7,7 +7,7 @@
 
 ## Development with Live Reloading
 
-The Bitcoin Knowledge Project uses Gulp for live reloading and development. To set up the development environment, follow these steps:
+The Bitcoin Dev Project uses Gulp for live reloading and development. To set up the development environment, follow these steps:
 
 1. Run the command `npm install` to install the necessary dependencies.
 2. Run the command `gulp build` to build the project.

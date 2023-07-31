@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The Bitcoin Knowledge Project
+title: The Bitcoin Dev Project
 email: learning@chaincode.com
 description: >- # this means to ignore newlines until "baseurl:"
   A place to learn about bitcoin development
