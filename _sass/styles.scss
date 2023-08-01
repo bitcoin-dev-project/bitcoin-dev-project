@@ -126,6 +126,7 @@ h2 {
 
 .card {
   max-width: 32em;
+  min-height: 12em;
   flex-basis: calc(50% - 1em);
   flex-direction: row;
   background-color: $white;
@@ -146,6 +147,7 @@ h2 {
 
 .card-title {
   margin-top: 10px;
+  font-weight: 800;
 }
 
 .card.dark {
@@ -204,6 +206,8 @@ h2 {
 
   .btn {
     padding: 0.1em 0.5em;
+    font-weight: 600;
+    color: $bg-color;
   }
 }
 

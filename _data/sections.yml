@@ -41,7 +41,7 @@
       description: A guide for developers to gain a deeper understanding of Bitcoin's design trade-offs and philosophy.
       link: https://bitcoindevphilosophy.com/
       image: Philosophical-Thought-Abstract.png
-      type: interactive
+      type: Interactive
     - title: Try Bitcoin
       description: An interactive bitcoin tutorial for orange-pilled beginners.
       link: https://trybitcoin.satsie.dev/
@@ -52,37 +52,42 @@
       link: https://bitcoinops.org/en/schorr-taproot-workshop/
       image: Tree-Roots-Abstract.png
       type: Self-paced
-    - title: Saving Satoshi
-      description: An interactive science fiction story designed to inspire a generation to fall in love with bitcoin.
-      link: https://savingsatoshi.com
-      image: holocat.png
-      type: Interactive
 - name: Tools
   cards:
     - title: Bitcoin Search
       description: The technical bitcoin search engine we deserve.
-      link: https://bitcoinsearch.xyz/
+      link: https://bitcoinsearch.xyz
       image: Person-Searching-Micro-Abstract.png
       type: Tools
     - title: BTC Transcripts
       description: Peruse archives of transcribed talks, podcasts, and lectures.
-      link: https://btctranscripts.com/
+      link: https://btctranscripts.com
       image: Bookshelf-With-Books-Abstract.png
       type: Tools
-- name: Coming Soon
-  cards:
     - title: BTC Transcripts Reviews
       description: Contribute to BTC Transcripts by reviewing AI-generated copy.
-      link: ""
+      link: https://review.btctranscripts.com
       image: Book-Writing-Abstract.png
       type: Tools
     - title: ChatBTC
       description: Chat with your favorite sources and authors.
-      link: ""
+      link: https://chat.bitcoinsearch.xyz
       image: Two_people_talking.png
       type: Tools
+    - title: TLDR
+      description: Bitcoin-dev and Lightning-dev mailing list summaries and discovery.
+      link: https://tldr.bitcoinsearch.xyz
+      image: One-long-scroll.jpg
+      type: Tools
+- name: Coming Soon
+  cards:
     - title: In-Person Residency
       description: A life-changing bitcoin focused educational experience.
       link: https://residency.chaincode.com/
       image: House-Drawing-Orange-Abstract.png
       type: Live
+    - title: Saving Satoshi
+      description: An interactive science fiction story designed to inspire a generation to fall in love with bitcoin.
+      link: https://savingsatoshi.com
+      image: holocat.png
+      type: Interactive
