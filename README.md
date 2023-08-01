@@ -1,4 +1,8 @@
+![The Bitcoin Dev Project](./assets/img/rabbit_landscape.jpg)
+
 # The Bitcoin Dev Project
+
+This is the source code for the [Bitcoin Dev Project](https://bitcoindevs.xyz) that we hope will serve as a go-to place for asiriing bitcoin developers to learn about the many curriculums and programs that exist.
 
 ## Setup
 
