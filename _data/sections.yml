@@ -47,7 +47,7 @@
       link: https://trybitcoin.satsie.dev/
       image: Dice-Abstract.png
       type: Self-paced
-    - title: Schorr Taproot Workshop
+    - title: Schnorr Taproot Workshop
       description: A technical introduction to Schnorr and Taproot.
       link: https://bitcoinops.org/en/schorr-taproot-workshop/
       image: Tree-Roots-Abstract.png
