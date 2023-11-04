@@ -3,21 +3,37 @@ import Button from "@/components/button";
 import SectionCard from "@/components/section-card";
 import ToolsCard from "@/components/tools-card";
 import Image from "next/image";
-import Link from "next/link";
+
+const Points = ({
+  btnText,
+  description,
+  jumpTo,
+}: {
+  btnText: string;
+  description: string;
+  jumpTo: string;
+}) => (
+  <div className="flex flex-col w-[186px] gap-y-2 text-center md:flex-col-reverse">
+    <Button href={`#${jumpTo}`} className="w-full">
+      {btnText}
+    </Button>
+    <p className="text-sm font-medium">{description}</p>
+  </div>
+);
 
 export default function Home() {
   return (
     <main className="max-w-[100%]">
-      <div className="flex justify-between md:flex-col">
-        <div className="flex flex-col justify-end">
-          <div className="flex flex-col gap-y-[56px] pl-14 lg:pl-0">
-            <h1 className="text-[62px] lg:text-[36px] font-bold leading-normal">
+      <div className="flex justify-between md:flex-col gap-x-4">
+        <div className="flex flex-col justify-end md:px-14">
+          <div className="flex flex-col gap-y-[56px] pl-14 md:pl-0">
+            <h1 className="text-[62px] lg:text-[36px] font-bold leading-normal md:text-center">
               Learn, contribute <br></br> and build on{" "}
               <span className="text-orange">bitcoin</span> <br></br>
               and <span className="text-green">lightning</span>
             </h1>
             <div>
-              <ul className="list-disc text-2xl lg:text-lg leading-[150%]">
+              <ul className="list-disc text-2xl lg:text-lg leading-[150%] md:self-center">
                 <li>Help build the future of money </li>
                 <li>Challenge yourself & go down various rabbit holes</li>
                 <li>
@@ -26,34 +42,33 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-4">
-              <div className="flex flex-col w-[186px] gap-y-2 text-center ">
-                <Button href="#learn" className="w-full">
-                  Learn
-                </Button>
-                <p>Guided journey for development on bitcoin and lightning</p>
-              </div>
-
-              <div className="flex flex-col w-[186px] gap-y-2 text-center">
-                <Button href="#contribute" className="w-full">
-                  Contribute
-                </Button>
-                <p>
-                  Resources to teach you to contribute to bitcoin & lightning
-                </p>
-              </div>
-
-              <div className="flex flex-col w-[186px] gap-y-2 text-center">
-                <Button href="#build" className="w-full">
-                  Build
-                </Button>
-                <p>Hands-on and theoretical supports to build applications</p>
-              </div>
+            <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-4 md:flex-row">
+              <Points
+                btnText="Learn"
+                description="Guided journey for development on bitcoin and lightning"
+                jumpTo="learn"
+              />
+              <Points
+                btnText="Contribute"
+                description="Resources to teach you to contribute to bitcoin & lightning"
+                jumpTo="contribute"
+              />
+              <Points
+                btnText="Build"
+                description="Hands-on and theoretical supports to build applications"
+                jumpTo="build"
+              />
             </div>
           </div>
         </div>
-        <div className="relative h-[664px] w-[690px] md:w-full bg-green">
-          <Image src="/hero.jpg" alt="Hero" fill priority />
+        <div className="relative h-[664px] w-[690px] md:w-full bg-green md:mt-10">
+          <Image
+            src="/hero.jpg"
+            alt="Hero"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
       </div>
       <div className="flex flex-col px-14">
@@ -153,18 +168,11 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <Button
-                href="#"
-                className="mt-[12px] w-[212px] md:w-[100px] self-center"
-              >
-                Explore
-              </Button>
-              {/* <Link
-                href="#"
-                className=" flex items-center justify-center py-4 text-[20px] bg-gradient-btn rounded-md text-white self-center"
-              >
-                Explore
-              </Link> */}
+              <div className="mt-[12px] md:w-[100px] w-[212px] self-center it">
+                <Button href="#" className="w-full">
+                  Explore
+                </Button>
+              </div>
             </div>
           </div>
         </div>

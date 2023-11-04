@@ -24,12 +24,20 @@ export default function SectionCard({
       className={`flex flex-col bg-pale-orange rounded-xl shadow-normal hover:shadow-raised transition-[box-shadow] duration-500 ease-in-out overflow-hidden w-[32%] md:w-full ${className}`}
     >
       <div className={`relative h-[200px] w-full`}>
-        <Image src={src} alt={alt} fill priority />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
       <div className="p-[24px] flex flex-col items-center gap-y-[24px] text-center">
         <h2 className="text-[38px] font-semibold leading-[100%]">{title}</h2>
         <p className="text-xl">{body}</p>
-        <Button href="/random/curriculum">{btnText}</Button>
+        <Button className="w-[55%]" href="/random/curriculum">
+          {btnText}
+        </Button>
       </div>
     </div>
   );

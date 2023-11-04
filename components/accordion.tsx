@@ -19,7 +19,7 @@ export default function Accordion({ content, title }: Props) {
         onClick={() => setIsOpen((value) => !value)}
         className="flex justify-between items-center p-7 "
       >
-        <h3 className="text-2xl md:text-lg leading-normal font-inter font-bold text-left">
+        <h3 className="text-2xl leading-normal font-inter font-bold text-left md:text-lg">
           {title}
         </h3>
         <svg
