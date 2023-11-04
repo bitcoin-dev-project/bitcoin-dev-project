@@ -1,75 +1,6 @@
 import Button from "@/components/button";
+import { curriculumLevels } from "@/content/data";
 import Image from "next/image";
-
-const levels = [
-  {
-    color: "text-orange",
-    image: "/hero.jpg",
-    title: "Novice",
-    gradient: "from-orange to-yellow",
-    description:
-      "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
-    items: [
-      {
-        title: "Mastering Bitcoin",
-        subTitle: "The de-facto book on Bitcoin development",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-      {
-        title: "Bitcoin Development Philosophy",
-        subTitle:
-          "Gain a deeper understanding of bitcoin’s development philosophy",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-    ],
-  },
-  {
-    color: "text-yellow",
-    image: "/hero.jpg",
-    title: "Intermediate",
-    gradient: "from-yellow to-light-orange",
-    description:
-      "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
-    items: [
-      {
-        title: "Learn Bitcoin From the Command Line",
-        subTitle: "Describe the value this gives me",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-      {
-        title: "Core Lightning by Blockstream on GitHub With Flowers and Roses",
-        subTitle: "Describe the value this gives me",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-    ],
-  },
-  {
-    color: "text-green",
-    image: "/hero.jpg",
-    title: "Wizard",
-    gradient: "from-green to-bright-cyan",
-    description:
-      "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
-    items: [
-      {
-        title: "Learn Bitcoin From the Command Line",
-        subTitle: "Describe the value this gives me",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-      {
-        title: "Core Lightning by Blockstream on GitHub With Flowers and Roses",
-        subTitle: "Describe the value this gives me",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-    ],
-  },
-];
 
 export default function Curriculum() {
   return (
@@ -86,7 +17,7 @@ export default function Curriculum() {
           Sats UTXO timestamp server stacking sats.
         </p>
         <div className="flex gap-x-6 md:flex-col md:gap-y-6 md:py-8">
-          {levels.map((item) => (
+          {curriculumLevels.map((item) => (
             <Button
               href={`#${item.title}`}
               key={item.title}
@@ -99,7 +30,7 @@ export default function Curriculum() {
       </div>
 
       <div className="flex flex-col gap-y-24">
-        {levels.map((level, index) => (
+        {curriculumLevels.map((level, index) => (
           <div
             id={level.title}
             key={level.title}

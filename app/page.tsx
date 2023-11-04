@@ -1,25 +1,17 @@
 import Accordion from "@/components/accordion";
 import Button from "@/components/button";
+import Pointer from "@/components/pointer";
 import SectionCard from "@/components/section-card";
 import ToolsCard from "@/components/tools-card";
+import {
+  buildSection,
+  contributeSection,
+  faqs,
+  learnSection,
+  pointers,
+  toolsData,
+} from "@/content/data";
 import Image from "next/image";
-
-const Points = ({
-  btnText,
-  description,
-  jumpTo,
-}: {
-  btnText: string;
-  description: string;
-  jumpTo: string;
-}) => (
-  <div className="flex flex-col w-[186px] gap-y-2 text-center md:flex-col-reverse">
-    <Button href={`#${jumpTo}`} className="w-full">
-      {btnText}
-    </Button>
-    <p className="text-sm font-medium">{description}</p>
-  </div>
-);
 
 export default function Home() {
   return (
@@ -43,21 +35,9 @@ export default function Home() {
               </ul>
             </div>
             <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-4 md:flex-row">
-              <Points
-                btnText="Learn"
-                description="Guided journey for development on bitcoin and lightning"
-                jumpTo="learn"
-              />
-              <Points
-                btnText="Contribute"
-                description="Resources to teach you to contribute to bitcoin & lightning"
-                jumpTo="contribute"
-              />
-              <Points
-                btnText="Build"
-                description="Hands-on and theoretical supports to build applications"
-                jumpTo="build"
-              />
+              {pointers.map((pointer) => (
+                <Pointer key={pointer.btnText} {...pointer} />
+              ))}
             </div>
           </div>
         </div>
@@ -73,61 +53,48 @@ export default function Home() {
       </div>
       <div className="flex flex-col px-14">
         <h2
-          id="learn"
+          id={learnSection.title}
           className="mt-[100px] text-5xl font-semibold text-center self-center mb-6"
         >
-          Learn
+          {learnSection.title}
         </h2>
         <div className="flex justify-between md:flex-col md:gap-y-4">
-          <SectionCard
-            alt="bitcoin-infra-development"
-            body="Learning resources for your journey to become a Bitcoin Core developer."
-            btnText="Learn"
-            src="/bitcoin-infra-development.jpg"
-            title="Bitcoin Infrastructure Development"
-          />
-          <SectionCard
-            alt="lighting-infra-development"
-            body="Learning resources for your journey to becoming a Infrastructure developer."
-            btnText="Learn"
-            src="/lighting-infra-development.jpg"
-            title="Lightning Infrastructure Development"
-          />
-          <SectionCard
-            alt="lighting-app-development"
-            body="Discover the wide range of applications you can build with lightning."
-            btnText="Learn"
-            src="/lighting-app-development.jpg"
-            title="Lightning Infrastructure Development"
-          />
+          {learnSection.data.map((section) => (
+            <SectionCard key={section.title} alt={section.title} {...section} />
+          ))}
         </div>
-
         <div className="flex mt-32 md:flex-col md:gap-y-4">
           <div className="flex flex-col gap-y-6">
-            <h2 id="build" className="text-5xl font-semibold text-center">
-              Build
+            <h2
+              id={buildSection.title}
+              className="text-5xl font-semibold text-center"
+            >
+              {buildSection.title}
             </h2>
-            <SectionCard
-              alt="lighting-app-development"
-              body="Discover the wide range of applications you can build with lightning."
-              btnText="Learn"
-              src="/build.jpg"
-              title="Lightning Infrastructure Development"
-              className="w-[95%]"
-            />
+            {buildSection.data.map((section) => (
+              <SectionCard
+                key={section.title}
+                alt={section.title}
+                className="w-[95%]"
+                {...section}
+              />
+            ))}
           </div>
           <div className="flex flex-col gap-y-6">
-            <h2 id="contribute" className="text-5xl font-semibold text-center">
-              Contribute
+            <h2
+              id={contributeSection.title}
+              className="text-5xl font-semibold text-center"
+            >
+              {contributeSection.title}
             </h2>
-            <SectionCard
-              alt="lighting-app-development"
-              body="Discover the wide range of applications you can build with lightning."
-              btnText="Learn"
-              src="/contribute.jpg"
-              title="Lightning Infrastructure Development"
-              className="w-[95%]"
-            />
+            {contributeSection.data.map((section) => (
+              <SectionCard
+                key={section.title}
+                alt={section.title}
+                className="w-[95%]"
+                {...section}
+              />
+            ))}
           </div>
         </div>
 
@@ -144,28 +111,26 @@ export default function Home() {
             <div className="px-[80px] pb-10 absolute bottom-0 left-0 right-0 flex flex-col">
               <div className="flex justify-between xl:flex-col xl:items-center xl:gap-y-6">
                 <div className="flex gap-x-10 md:flex-col md:gap-y-4">
-                  <ToolsCard
-                    alt=""
-                    name="Bitcoin Transcripts"
-                    src="/chat-btc.jpg"
-                  />
-                  <ToolsCard
-                    alt=""
-                    name="Bitcoin Transcripts"
-                    src="/saving-satoshi.jpg"
-                  />
+                  {toolsData.slice(0, 2).map((data) => (
+                    <ToolsCard
+                      target="_blank"
+                      rel="noopener"
+                      key={data.name}
+                      alt={data.name}
+                      {...data}
+                    />
+                  ))}
                 </div>
                 <div className="flex gap-x-10 md:flex-col md:gap-y-4">
-                  <ToolsCard
-                    alt=""
-                    name="Bitcoin Transcripts"
-                    src="/bitcoin-transcript.jpg"
-                  />
-                  <ToolsCard
-                    alt=""
-                    name="Bitcoin Search"
-                    src="/bitcoin-search.jpg"
-                  />
+                  {toolsData.slice(2).map((data) => (
+                    <ToolsCard
+                      target="_blank"
+                      rel="noopener"
+                      key={data.name}
+                      alt={data.name}
+                      {...data}
+                    />
+                  ))}
                 </div>
               </div>
               <div className="mt-[12px] md:w-[100px] w-[212px] self-center it">
@@ -180,22 +145,9 @@ export default function Home() {
         <div className="mt-32 flex flex-col self-center text-center mb-8 gap-y-5">
           <h2 className="text-5xl font-semibold md:text-3xl">FAQs</h2>
           <div className="flex flex-col gap-y-8">
-            <Accordion
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum nemo necessitatibus quaerat rerum officiis nesciunt praesentium, id, itaque voluptatibus a tempora fuga laboriosam modi blanditiis incidunt earum. Tempore, deserunt?"
-              title="I'm not a dev but I want to learn more about bitcoin"
-            />
-            <Accordion
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum nemo necessitatibus quaerat rerum officiis nesciunt praesentium, id, itaque voluptatibus a tempora fuga laboriosam modi blanditiis incidunt earum. Tempore, deserunt?"
-              title="I'd like to learn how to become a dev"
-            />
-            <Accordion
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum nemo necessitatibus quaerat rerum officiis nesciunt praesentium, id, itaque voluptatibus a tempora fuga laboriosam modi blanditiis incidunt earum. Tempore, deserunt?"
-              title="Where do I learn about funding in bitcoin and FOSS?"
-            />
-            <Accordion
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum nemo necessitatibus quaerat rerum officiis nesciunt praesentium, id, itaque voluptatibus a tempora fuga laboriosam modi blanditiis incidunt earum. Tempore, deserunt?"
-              title="What is the meaning of life?"
-            />
+            {faqs.map((faq) => (
+              <Accordion key={faq.title} {...faq} />
+            ))}
           </div>
         </div>
       </div>

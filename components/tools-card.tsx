@@ -2,15 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type Props = {
+type Props = React.ComponentProps<typeof Link> & {
   alt: string;
   name: string;
   src: string;
 };
 
-export default function ToolsCard({ alt, name, src }: Props) {
+export default function ToolsCard({ alt, name, src, ...rest }: Props) {
   return (
-    <Link href={"#"}>
+    <Link {...rest}>
       <div className="relative h-[184px] overflow-hidden w-[184px] rounded-[18px] xl:w-[25vw] md:w-[50vw] md:h-[200px] hover:scale-105 transition-all duration-500 ease-in-out">
         <Image
           fill
