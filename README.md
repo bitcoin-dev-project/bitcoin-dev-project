@@ -2,7 +2,7 @@
 
 # The Bitcoin Dev Project
 
-This is the source code for the [Bitcoin Dev Project](https://bitcoindevs.xyz) that we hope will serve as a go-to place for aspiring bitcoin developers to learn about the many curriculums and programs that exist.
+This is the source code for the [Bitcoin Dev Project](https://bitcoindevs.xyz) that serves as a go-to place for aspiring bitcoin developers to learn about the many curriculums and programs that exist.
 
 ## Setup
 
