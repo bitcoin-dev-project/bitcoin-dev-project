@@ -15,7 +15,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="max-w-[100%]">
+    <main>
       <div className="flex justify-between md:flex-col gap-x-4">
         <div className="flex flex-col justify-end md:px-14">
           <div className="flex flex-col gap-y-[56px] pl-14 md:pl-0">

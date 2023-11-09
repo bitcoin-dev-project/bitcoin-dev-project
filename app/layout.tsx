@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={barlow.className}>
         <Fonts />
         <NavBar />
-        <div className="flex flex-grow flex-col min-h-screen w-[100%]">
+        <div className="flex flex-grow flex-col min-h-screen max-w-7xl m-auto">
           {children}
         </div>
         <Footer />
