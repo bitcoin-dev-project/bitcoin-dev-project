@@ -10,7 +10,7 @@ export default function Button({ children, className, ...rest }: Props) {
     <Link
       {...rest}
       className={clsx(
-        "flex items-center justify-center py-4 text-[20px] leading-[104%] bg-gradient-94 from-dark-orange to-bright-orange from-[-6.5%] to-[100%] rounded-md text-white",
+        "flex items-center justify-center py-4 text-[20px] md:text-[14px] leading-[104%] bg-gradient-94 from-dark-orange to-bright-orange from-[-6.5%] to-[100%] rounded-md text-white",
         className
       )}
     >

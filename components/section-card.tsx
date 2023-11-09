@@ -28,6 +28,7 @@ export default function SectionCard({
     >
       <div className={`relative h-[200px] w-full`}>
         <Image
+          className="md:object-cover"
           src={src}
           alt={alt}
           fill
@@ -36,8 +37,10 @@ export default function SectionCard({
         />
       </div>
       <div className="p-[24px] flex flex-col items-center gap-y-[24px] text-center">
-        <h2 className="text-[38px] font-semibold leading-[100%]">{title}</h2>
-        <p className="text-xl">{description}</p>
+        <h2 className="text-[38px] md:text-2xl font-semibold leading-[100%]">
+          {title}
+        </h2>
+        <p className="text-xl md:text-base">{description}</p>
         <Button
           className="w-[55%]"
           href={{

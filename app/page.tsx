@@ -11,6 +11,7 @@ import {
   pointers,
   toolsData,
 } from "@/content/data";
+import { slugify } from "@/utils/slugify";
 import Image from "next/image";
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
               and <span className="text-green">lightning</span>
             </h1>
             <div>
-              <ul className="list-disc text-2xl lg:text-lg leading-[150%] md:self-center">
+              <ul className="list-disc text-2xl lg:text-lg leading-[150%] md:flex md:flex-col md:items-center">
                 <li>Help build the future of money </li>
                 <li>Challenge yourself & go down various rabbit holes</li>
                 <li>
@@ -34,15 +35,16 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-4 md:flex-row">
+            <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-4 md:items-center">
               {pointers.map((pointer) => (
                 <Pointer key={pointer.btnText} {...pointer} />
               ))}
             </div>
           </div>
         </div>
-        <div className="relative h-[664px] w-[690px] md:w-full bg-green md:mt-10">
+        <div className="relative h-[664px] w-[690px] md:w-full  md:mt-10">
           <Image
+            className="md:object-contain"
             src="/hero.jpg"
             alt="Hero"
             fill
@@ -51,10 +53,10 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex flex-col px-14">
+      <div className="flex flex-col px-14 sm:px-7">
         <h2
-          id={learnSection.title}
-          className="mt-[100px] text-5xl font-semibold text-center self-center mb-6"
+          id={slugify(learnSection.title)}
+          className="mt-[100px] text-5xl md:text-3xl font-semibold text-center self-center mb-6"
         >
           {learnSection.title}
         </h2>
@@ -63,11 +65,11 @@ export default function Home() {
             <SectionCard key={section.title} alt={section.title} {...section} />
           ))}
         </div>
-        <div className="flex mt-32 md:flex-col md:gap-y-4">
+        <div className="flex items-center mt-32 md:flex-col md:gap-y-4">
           <div className="flex flex-col gap-y-6">
             <h2
-              id={buildSection.title}
-              className="text-5xl font-semibold text-center"
+              id={slugify(buildSection.title)}
+              className="text-5xl md:text-3xl font-semibold text-center"
             >
               {buildSection.title}
             </h2>
@@ -82,8 +84,8 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-y-6">
             <h2
-              id={contributeSection.title}
-              className="text-5xl font-semibold text-center"
+              id={slugify(contributeSection.title)}
+              className="text-5xl md:text-3xl font-semibold text-center"
             >
               {contributeSection.title}
             </h2>
@@ -99,8 +101,10 @@ export default function Home() {
         </div>
 
         <div className="mt-32 flex flex-col self-center text-center gap-y-2">
-          <h2 className="text-5xl font-semibold">Tools to Explore</h2>
-          <p className="text-xl leading-[140%]">
+          <h2 className="text-5xl md:text-3xl font-semibold">
+            Tools to Explore
+          </h2>
+          <p className="text-xl md:text-base  leading-[140%]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             accumsan tempus nunc, nec posuere magna sagittis euismod. Vestibulum
             sed justo ullamcorper, pharetra leo eget, accumsan quam. Fusce
@@ -142,7 +146,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-32 flex flex-col self-center text-center mb-8 gap-y-5">
+        <div className="my-32 flex flex-col self-center text-center mb-8 gap-y-5">
           <h2 className="text-5xl font-semibold md:text-3xl">FAQs</h2>
           <div className="flex flex-col gap-y-8">
             {faqs.map((faq) => (

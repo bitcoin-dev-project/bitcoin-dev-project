@@ -1,3 +1,5 @@
+import { slugify } from "@/utils/slugify";
+
 export const toolsData = [
   {
     name: "Chat BTC",
@@ -101,17 +103,17 @@ export const pointers = [
   {
     btnText: "Learn",
     description: "Guided journey for development on bitcoin and lightning",
-    jumpTo: `#${learnSection.title}`,
+    jumpTo: `#${slugify(learnSection.title)}`,
   },
   {
     btnText: "Contribute",
     description: "Resources to teach you to contribute to bitcoin & lightning",
-    jumpTo: `#${contributeSection.title}`,
+    jumpTo: `#${slugify(contributeSection.title)}`,
   },
   {
     btnText: "Build",
     description: "Hands-on and theoretical supports to build applications",
-    jumpTo: `#${buildSection.title}`,
+    jumpTo: `#${slugify(buildSection.title)}`,
   },
 ];
 
