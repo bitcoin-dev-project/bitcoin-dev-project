@@ -93,10 +93,11 @@ export default function Curriculum({
                       {item.title}
                     </h3>
                     <p
-                      className={clsx(
-                        `text-2xl md:text-lg font-semibold`,
-                        level.color
-                      )}
+                      className={clsx(`text-2xl md:text-lg font-semibold`, {
+                        "text-orange": index === 0,
+                        "text-yellow": index === 1,
+                        "text-green": index === 2,
+                      })}
                     >
                       {item.subTitle}
                     </p>

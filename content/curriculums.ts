@@ -2,7 +2,6 @@ export type Curriculum = {
   title: string;
   description: string;
   levels: {
-    color: string;
     title: string;
     description: string;
     items: {
@@ -26,7 +25,6 @@ export const curriculums: Curriculums = {
       "Bitcoin ipsum dolor sit amet. Private key key pair outputs soft fork, stacking sats halvening mempool halvening! Whitepaper, block height, blockchain mining, hash private key, UTXO sats. Mempool difficulty transaction consensus double-spend problem whitepaper hash mining! Sats UTXO timestamp server stacking sats.",
     levels: [
       {
-        color: "text-orange",
         title: "Explorer",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
@@ -51,7 +49,6 @@ export const curriculums: Curriculums = {
         ],
       },
       {
-        color: "text-yellow",
         title: "Voyager",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
@@ -111,7 +108,6 @@ export const curriculums: Curriculums = {
         ],
       },
       {
-        color: "text-green",
         title: "Conqueror",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
@@ -141,7 +137,6 @@ export const curriculums: Curriculums = {
       "Bitcoin ipsum dolor sit amet. Private key key pair outputs soft fork, stacking sats halvening mempool halvening! Whitepaper, block height, blockchain mining, hash private key, UTXO sats. Mempool difficulty transaction consensus double-spend problem whitepaper hash mining! Sats UTXO timestamp server stacking sats.",
     levels: [
       {
-        color: "text-orange",
         title: "Pioneer",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
@@ -166,7 +161,6 @@ export const curriculums: Curriculums = {
         ],
       },
       {
-        color: "text-yellow",
         title: "Navigator",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
@@ -205,7 +199,6 @@ export const curriculums: Curriculums = {
       "Bitcoin ipsum dolor sit amet. Private key key pair outputs soft fork, stacking sats halvening mempool halvening! Whitepaper, block height, blockchain mining, hash private key, UTXO sats. Mempool difficulty transaction consensus double-spend problem whitepaper hash mining! Sats UTXO timestamp server stacking sats.",
     levels: [
       {
-        color: "text-orange",
         title: "Pioneer",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
@@ -220,7 +213,6 @@ export const curriculums: Curriculums = {
         ],
       },
       {
-        color: "text-yellow",
         title: "Navigator",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
