@@ -28,7 +28,7 @@ export default function SectionCard({
     >
       <div className={`relative h-[200px] w-full`}>
         <Image
-          className="md:object-cover"
+          className="object-cover"
           src={src}
           alt={alt}
           fill

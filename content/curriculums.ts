@@ -4,7 +4,6 @@ export type Curriculum = {
   levels: {
     color: string;
     title: string;
-    gradient: string;
     description: string;
     items: {
       image: string;
@@ -29,7 +28,6 @@ export const curriculums: Curriculums = {
       {
         color: "text-orange",
         title: "Explorer",
-        gradient: "from-orange to-yellow",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
         items: [
@@ -55,7 +53,6 @@ export const curriculums: Curriculums = {
       {
         color: "text-yellow",
         title: "Voyager",
-        gradient: "from-yellow to-light-orange",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
         items: [
@@ -116,7 +113,6 @@ export const curriculums: Curriculums = {
       {
         color: "text-green",
         title: "Conqueror",
-        gradient: "from-green to-bright-cyan",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
         items: [
@@ -147,7 +143,6 @@ export const curriculums: Curriculums = {
       {
         color: "text-orange",
         title: "Pioneer",
-        gradient: "from-orange to-yellow",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
         items: [
@@ -173,7 +168,6 @@ export const curriculums: Curriculums = {
       {
         color: "text-yellow",
         title: "Navigator",
-        gradient: "from-yellow to-light-orange",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
         items: [
@@ -213,7 +207,6 @@ export const curriculums: Curriculums = {
       {
         color: "text-orange",
         title: "Pioneer",
-        gradient: "from-orange to-yellow",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
         items: [
@@ -229,7 +222,6 @@ export const curriculums: Curriculums = {
       {
         color: "text-yellow",
         title: "Navigator",
-        gradient: "from-yellow to-light-orange",
         description:
           "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
         items: [

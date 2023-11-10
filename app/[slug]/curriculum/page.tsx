@@ -22,13 +22,17 @@ export default function Curriculum({
           {curriculum.description}
         </p>
         <div className="flex gap-x-6 md:flex-col md:gap-y-6 md:py-8">
-          {curriculum.levels.map((item) => (
+          {curriculum.levels.map((item, index) => (
             <Button
               href={`#${slugify(item.title)}`}
               key={item.title}
               className={clsx(
                 `w-[165px] bg-gradient-130 from-[0%] to-[104%] rounded-[10px]`,
-                item.gradient
+                {
+                  "from-orange to-yellow": index === 0,
+                  "from-yellow to-light-orange": index === 1,
+                  "from-green to-bright-cyan": index === 2,
+                }
               )}
             >
               {item.title}
@@ -49,7 +53,11 @@ export default function Curriculum({
                 <div
                   className={clsx(
                     `min-w-[80px] h-[80px] border-[#D9D9D9] border md:border-0 rounded-2xl overflow-hidden bg-gradient-130 from-[0%] to-[104%]`,
-                    level.gradient
+                    {
+                      "from-orange to-yellow": index === 0,
+                      "from-yellow to-light-orange": index === 1,
+                      "from-green to-bright-cyan": index === 2,
+                    }
                   )}
                 />
                 <h2 className="text-5xl md:text-2xl font-semibold">
