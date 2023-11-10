@@ -1,24 +1,26 @@
 import Button from "@/components/button";
-import { curriculumLevels } from "@/content/data";
+import { curriculums, type KnownCurriculums } from "@/content/curriculums";
 import { slugify } from "@/utils/slugify";
 import Image from "next/image";
 
-export default function Curriculum() {
+export default function Curriculum({
+  params,
+}: {
+  params: { slug: KnownCurriculums };
+}) {
+  const curriculum = curriculums[params.slug];
+
   return (
     <main className="p-14 sm:p-7 mx-auto my-0">
       <div className="flex flex-col md:items-center mb-24 gap-y-10">
         <h1 className="text-[62px] lg:text-[36px] md:text-center font-bold leading-normal">
-          Bitcoin Infrastructure Development
+          {curriculum.title}
         </h1>
         <p className="text-2xl md:text-base md:text-center max-w-[60vw]">
-          Bitcoin ipsum dolor sit amet. Private key key pair outputs soft fork,
-          stacking sats halvening mempool halvening! Whitepaper, block height,
-          blockchain mining, hash private key, UTXO sats. Mempool difficulty
-          transaction consensus double-spend problem whitepaper hash mining!
-          Sats UTXO timestamp server stacking sats.
+          {curriculum.description}
         </p>
         <div className="flex gap-x-6 md:flex-col md:gap-y-6 md:py-8">
-          {curriculumLevels.map((item) => (
+          {curriculum.levels.map((item) => (
             <Button
               href={`#${slugify(item.title)}`}
               key={item.title}
@@ -31,7 +33,7 @@ export default function Curriculum() {
       </div>
 
       <div className="flex flex-col gap-y-24">
-        {curriculumLevels.map((level, index) => (
+        {curriculum.levels.map((level, index) => (
           <div
             id={slugify(level.title)}
             key={level.title}
@@ -39,16 +41,9 @@ export default function Curriculum() {
           >
             <div className="flex flex-col gap-y-6 w-[50%] pb-4 border-b-8 border-b-orange md:border-b-4 md:w-full">
               <div className="flex items-center gap-x-6 md:gap-x-2">
-                <div className="relative min-w-[80px] h-[80px] border-[#D9D9D9] border md:border-0 rounded-2xl overflow-hidden">
-                  {/* TODO: Placeholder, note to optimize images by updating sizes props when implementing */}
-                  <Image
-                    className="md:object-contain"
-                    alt=""
-                    src="/hero.jpg"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
+                <div
+                  className={`min-w-[80px] h-[80px] border-[#D9D9D9] border md:border-0 rounded-2xl overflow-hidden bg-gradient-130 from-[0%] to-[104%] ${level.gradient}`}
+                />
                 <h2 className="text-5xl md:text-2xl font-semibold">
                   {index + 1}. {level.title}
                 </h2>
@@ -61,20 +56,19 @@ export default function Curriculum() {
               </p>
             </div>
 
-            <div className="flex w-full justify-between lg:flex-col">
+            <div className="flex w-full justify-between gap-y-5 flex-wrap lg:flex-col">
               {level.items.map((item) => (
                 <div
                   key={item.title}
-                  className="flex p-6 gap-x-6 max-w-[45%] lg:max-w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline hover:bg-[#FCFCFC] md:flex-col"
+                  className="flex p-6 gap-x-6 w-[48%] lg:w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline hover:bg-[#FCFCFC] md:flex-col"
                 >
                   <div className="relative min-w-[160px] h-[160px] md:w-full md:min-w-min md:h-[200px] border-[#D9D9D9] border rounded-2xl overflow-hidden">
-                    {/* TODO: Placeholder, note to optimize images by updating sizes props when implementing */}
                     <Image
-                      alt=""
+                      alt={item.title}
                       className="md:object-cover w-full"
-                      src={level.image}
+                      src={item.image}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, (min-width: 769px) 20vw"
                     />
                   </div>
                   <div className="flex flex-col gap-y-[6px] flex-shrink">

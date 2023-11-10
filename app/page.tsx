@@ -55,7 +55,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col px-14 sm:px-7">
         <h2
-          id={slugify(learnSection.title)}
+          id={learnSection.slug}
           className="mt-[100px] text-5xl md:text-3xl font-semibold text-center self-center mb-6"
         >
           {learnSection.title}
@@ -68,7 +68,7 @@ export default function Home() {
         <div className="flex items-center mt-32 md:flex-col md:gap-y-4">
           <div className="flex flex-col gap-y-6">
             <h2
-              id={slugify(buildSection.title)}
+              id={buildSection.slug}
               className="text-5xl md:text-3xl font-semibold text-center"
             >
               {buildSection.title}
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-y-6">
             <h2
-              id={slugify(contributeSection.title)}
+              id={contributeSection.slug}
               className="text-5xl md:text-3xl font-semibold text-center"
             >
               {contributeSection.title}
@@ -111,7 +111,7 @@ export default function Home() {
             efficitur leo nisi, sed elementum arcu molestie
           </p>
           <div className="relative flex flex-col w-full min-h-[420px] xl:h-[600px] md:h-[1000px]">
-            <Image alt="explore-map" src="/explore-map.jpg" fill />
+            <Image alt="Explore Map" src="/explore-map.jpg" fill />
             <div className="px-[80px] pb-10 absolute bottom-0 left-0 right-0 flex flex-col">
               <div className="flex justify-between xl:flex-col xl:items-center xl:gap-y-6">
                 <div className="flex gap-x-10 md:flex-col md:gap-y-4">

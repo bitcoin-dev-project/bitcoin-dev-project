@@ -1,3 +1,4 @@
+import { learnSection } from "@/content/data";
 import Link from "next/link";
 import React from "react";
 
@@ -14,9 +15,11 @@ export default function NavBar() {
           </Link>
           <div className="hidden sm:block"></div>
           <div className="sm:hidden flex items-center gap-x-[24px]">
-            <Link href={"#"}>Bitcoin Dev</Link>
-            <Link href={"#"}>Lightning Dev</Link>
-            <Link href={"#"}>Lightning App</Link>
+            {learnSection.data.map((item) => (
+              <Link key={item.slug} href={`/${item.slug}/curriculum`}>
+                {item.shortTitle}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

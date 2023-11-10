@@ -1,5 +1,3 @@
-import { slugify } from "@/utils/slugify";
-
 export const toolsData = [
   {
     name: "Chat BTC",
@@ -48,6 +46,7 @@ export const faqs = [
 
 export const learnSection = {
   title: "Learn",
+  slug: "learn",
   data: [
     {
       description:
@@ -55,6 +54,8 @@ export const learnSection = {
       btnText: "Learn",
       src: "/bitcoin-infra-development.jpg",
       title: "Bitcoin Infrastructure Development",
+      shortTitle: "Bitcoin Dev",
+      slug: "bitcoin-infrastructure-development",
     },
     {
       description:
@@ -62,19 +63,24 @@ export const learnSection = {
       btnText: "Learn",
       src: "/lighting-infra-development.jpg",
       title: "Lightning Infrastructure Development",
+      shortTitle: "Lightning Dev",
+      slug: "lightning-infrastructure-development",
     },
     {
       description:
         "Discover the wide range of applications you can build with lightning.",
       btnText: "Learn",
       src: "/lighting-app-development.jpg",
-      title: "Lightning Infrastructure Development",
+      title: "Lightning Application Development",
+      shortTitle: "Lightning App",
+      slug: "lightning-application-development",
     },
   ],
 };
 
 export const buildSection = {
   title: "Build",
+  slug: "build",
   data: [
     {
       description:
@@ -82,12 +88,14 @@ export const buildSection = {
       btnText: "Learn",
       src: "/build.jpg",
       title: "Lightning Infrastructure Development",
+      slug: "bitcoin-infrastructure-development",
     },
   ],
 };
 
 export const contributeSection = {
   title: "Contribute",
+  slug: "contribute",
   data: [
     {
       description:
@@ -95,6 +103,7 @@ export const contributeSection = {
       btnText: "Learn",
       src: "/contribute.jpg",
       title: "Lightning Infrastructure Development",
+      slug: "lightning-infrastructure-development",
     },
   ],
 };
@@ -103,87 +112,16 @@ export const pointers = [
   {
     btnText: "Learn",
     description: "Guided journey for development on bitcoin and lightning",
-    jumpTo: `#${slugify(learnSection.title)}`,
+    jumpTo: `#${learnSection.slug}`,
   },
   {
     btnText: "Contribute",
     description: "Resources to teach you to contribute to bitcoin & lightning",
-    jumpTo: `#${slugify(contributeSection.title)}`,
+    jumpTo: `#${contributeSection.slug}`,
   },
   {
     btnText: "Build",
     description: "Hands-on and theoretical supports to build applications",
-    jumpTo: `#${slugify(buildSection.title)}`,
-  },
-];
-
-// Mock of curriculum levels, this is just to display data in the curriculum template page
-export const curriculumLevels = [
-  {
-    color: "text-orange",
-    image: "/hero.jpg",
-    title: "Novice",
-    gradient: "from-orange to-yellow",
-    description:
-      "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
-    items: [
-      {
-        title: "Mastering Bitcoin",
-        subTitle: "The de-facto book on Bitcoin development",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-      {
-        title: "Bitcoin Development Philosophy",
-        subTitle:
-          "Gain a deeper understanding of bitcoin’s development philosophy",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-    ],
-  },
-  {
-    color: "text-yellow",
-    image: "/hero.jpg",
-    title: "Intermediate",
-    gradient: "from-yellow to-light-orange",
-    description:
-      "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
-    items: [
-      {
-        title: "Learn Bitcoin From the Command Line",
-        subTitle: "Describe the value this gives me",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-      {
-        title: "Core Lightning by Blockstream on GitHub With Flowers and Roses",
-        subTitle: "Describe the value this gives me",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-    ],
-  },
-  {
-    color: "text-green",
-    image: "/hero.jpg",
-    title: "Wizard",
-    gradient: "from-green to-bright-cyan",
-    description:
-      "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
-    items: [
-      {
-        title: "Learn Bitcoin From the Command Line",
-        subTitle: "Describe the value this gives me",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-      {
-        title: "Core Lightning by Blockstream on GitHub With Flowers and Roses",
-        subTitle: "Describe the value this gives me",
-        description:
-          "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-      },
-    ],
+    jumpTo: `#${buildSection.slug}`,
   },
 ];

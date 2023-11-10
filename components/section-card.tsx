@@ -8,6 +8,7 @@ type Props = {
   description: string;
   btnText: string;
   className?: string;
+  slug: string;
   src: string;
   title: string;
 };
@@ -17,11 +18,10 @@ export default function SectionCard({
   btnText,
   description,
   className,
+  slug,
   src,
   title,
 }: Props) {
-  const slug = slugify(title);
-
   return (
     <div
       className={`flex flex-col bg-pale-orange rounded-xl shadow-normal hover:shadow-raised transition-[box-shadow] duration-500 ease-in-out overflow-hidden w-[32%] md:w-full ${className}`}
@@ -45,10 +45,6 @@ export default function SectionCard({
           className="w-[55%]"
           href={{
             pathname: `/${slug}/curriculum`,
-            query: {
-              title,
-              description,
-            },
           }}
         >
           {btnText}
