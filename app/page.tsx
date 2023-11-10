@@ -20,7 +20,7 @@ export default function Home() {
       <div className="flex justify-between md:flex-col gap-x-4">
         <div className="flex flex-col justify-end md:px-14">
           <div className="flex flex-col gap-y-[56px] pl-14 md:pl-0">
-            <h1 className="text-[62px] lg:text-[36px] font-bold leading-normal md:text-center">
+            <h1 className="mt-10 md:mt-6 text-[62px] lg:text-[36px] font-bold leading-normal md:text-center">
               Learn, contribute <br></br> and build on{" "}
               <span className="text-orange">bitcoin</span> <br></br>
               and <span className="text-green">lightning</span>

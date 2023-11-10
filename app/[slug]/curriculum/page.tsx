@@ -1,7 +1,9 @@
 import Button from "@/components/button";
 import { curriculums, type KnownCurriculums } from "@/content/curriculums";
 import { slugify } from "@/utils/slugify";
+import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Curriculum({
   params,
@@ -24,7 +26,10 @@ export default function Curriculum({
             <Button
               href={`#${slugify(item.title)}`}
               key={item.title}
-              className={`w-[165px] bg-gradient-130 from-[0%] to-[104%] rounded-[10px] ${item.gradient}`}
+              className={clsx(
+                `w-[165px] bg-gradient-130 from-[0%] to-[104%] rounded-[10px]`,
+                item.gradient
+              )}
             >
               {item.title}
             </Button>
@@ -42,7 +47,10 @@ export default function Curriculum({
             <div className="flex flex-col gap-y-6 w-[50%] pb-4 border-b-8 border-b-orange md:border-b-4 md:w-full">
               <div className="flex items-center gap-x-6 md:gap-x-2">
                 <div
-                  className={`min-w-[80px] h-[80px] border-[#D9D9D9] border md:border-0 rounded-2xl overflow-hidden bg-gradient-130 from-[0%] to-[104%] ${level.gradient}`}
+                  className={clsx(
+                    `min-w-[80px] h-[80px] border-[#D9D9D9] border md:border-0 rounded-2xl overflow-hidden bg-gradient-130 from-[0%] to-[104%]`,
+                    level.gradient
+                  )}
                 />
                 <h2 className="text-5xl md:text-2xl font-semibold">
                   {index + 1}. {level.title}
@@ -58,14 +66,15 @@ export default function Curriculum({
 
             <div className="flex w-full justify-between gap-y-5 flex-wrap lg:flex-col">
               {level.items.map((item) => (
-                <div
+                <Link
+                  href={"#"}
                   key={item.title}
                   className="flex p-6 gap-x-6 w-[48%] lg:w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline hover:bg-[#FCFCFC] md:flex-col"
                 >
                   <div className="relative min-w-[160px] h-[160px] md:w-full md:min-w-min md:h-[200px] border-[#D9D9D9] border rounded-2xl overflow-hidden">
                     <Image
                       alt={item.title}
-                      className="md:object-cover w-full"
+                      className="object-fill md:object-cover w-full"
                       src={item.image}
                       fill
                       sizes="(max-width: 768px) 100vw, (min-width: 769px) 20vw"
@@ -76,7 +85,10 @@ export default function Curriculum({
                       {item.title}
                     </h3>
                     <p
-                      className={`${level.color} text-2xl md:text-lg font-semibold`}
+                      className={clsx(
+                        `text-2xl md:text-lg font-semibold`,
+                        level.color
+                      )}
                     >
                       {item.subTitle}
                     </p>
@@ -84,7 +96,7 @@ export default function Curriculum({
                       {item.description}
                     </p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

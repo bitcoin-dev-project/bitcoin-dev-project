@@ -36,11 +36,11 @@ export default function SectionCard({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <div className="p-[24px] flex flex-col items-center gap-y-[24px] text-center">
-        <h2 className="text-[38px] md:text-2xl font-semibold leading-[100%]">
+      <div className="p-6 md:p-4 flex flex-col items-center gap-y-4 text-center">
+        <h2 className="text-[38px] md:text-xl font-semibold leading-[100%]">
           {title}
         </h2>
-        <p className="text-xl md:text-base">{description}</p>
+        <p className="text-xl md:text-sm">{description}</p>
         <Button
           className="w-[55%]"
           href={{
