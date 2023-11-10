@@ -17,8 +17,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <div className="flex justify-between md:flex-col gap-x-4">
-        <div className="flex flex-col justify-end md:px-14">
+      <div className="flex justify-between md:flex-col gap-4">
+        <div className="flex basis-1/2 flex-grow flex-col justify-end md:px-14">
           <div className="flex flex-col gap-y-[56px] pl-14 md:pl-0">
             <h1 className="mt-10 md:mt-6 text-[62px] lg:text-[36px] font-bold leading-normal md:text-center">
               Learn, contribute <br></br> and build on{" "}
@@ -42,9 +42,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative h-[664px] w-[690px] md:w-full  md:mt-10">
+        <div className="relative flex-grow basis-1/2 object-cover pb-[50%]">
           <Image
-            className="md:object-contain"
+            className="object-cover"
             src="/hero.jpg"
             alt="Hero"
             fill
@@ -56,7 +56,7 @@ export default function Home() {
       <div className="flex flex-col px-14 sm:px-7">
         <h2
           id={learnSection.slug}
-          className="mt-[100px] text-5xl md:text-3xl font-semibold text-center self-center mb-6"
+          className="mt-32 md:mt-10 text-5xl md:text-3xl font-semibold text-center self-center mb-6"
         >
           {learnSection.title}
         </h2>
@@ -65,7 +65,7 @@ export default function Home() {
             <SectionCard key={section.title} alt={section.title} {...section} />
           ))}
         </div>
-        <div className="flex items-center mt-32 md:flex-col md:gap-y-4">
+        <div className="flex items-center justify-between mt-32 md:mt-10  md:flex-col md:gap-y-4">
           <div className="flex flex-col gap-y-6">
             <h2
               id={buildSection.slug}
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-32 flex flex-col self-center text-center gap-y-2">
+        <div className="mt-32 md:mt-10  flex flex-col self-center text-center gap-y-2">
           <h2 className="text-5xl md:text-3xl font-semibold">
             Tools to Explore
           </h2>
