@@ -1,6 +1,7 @@
 import { learnSection } from "@/content/data";
 import Link from "next/link";
 import React from "react";
+import Drawer from "./dawer";
 
 export default function NavBar() {
   return (
@@ -13,7 +14,7 @@ export default function NavBar() {
               Project
             </h1>
           </Link>
-          <div className="hidden sm:block"></div>
+          <Drawer />
           <div className="sm:hidden flex items-center gap-x-[24px]">
             {learnSection.data.map((item) => (
               <Link key={item.slug} href={`/${item.slug}/curriculum`}>
