@@ -17,7 +17,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <div className="flex justify-between md:flex-col gap-4">
+      <div className="flex justify-between md:flex-col gap-4 md:gap-y-10">
         <div className="flex basis-1/2 flex-grow flex-col justify-end md:px-14">
           <div className="flex flex-col gap-y-[56px] pl-14 md:pl-0">
             <h1 className="mt-10 md:mt-6 text-[62px] lg:text-[36px] font-bold leading-normal md:text-center">
@@ -25,8 +25,8 @@ export default function Home() {
               <span className="text-orange">bitcoin</span> <br></br>
               and <span className="text-green">lightning</span>
             </h1>
-            <div>
-              <ul className="list-disc text-2xl lg:text-lg leading-[150%] md:flex md:flex-col md:items-center">
+            <div className="md:flex md:flex-col md:items-center">
+              <ul className="list-disc text-2xl lg:text-lg leading-[150%]">
                 <li>Help build the future of money </li>
                 <li>Challenge yourself & go down various rabbit holes</li>
                 <li>
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative flex-grow basis-1/2 object-cover pb-[50%]">
+        <div className="relative flex-grow basis-1/2 object-cover pb-[50%] md:mx-14 sm:mx-7">
           <Image
             className="object-cover"
             src="/hero.jpg"
