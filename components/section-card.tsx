@@ -1,7 +1,5 @@
 import Image from "next/image";
-import React from "react";
 import Button from "./button";
-import { slugify } from "@/utils/slugify";
 
 type Props = {
   alt: string;

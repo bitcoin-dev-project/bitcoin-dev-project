@@ -11,7 +11,6 @@ import {
   pointers,
   toolsData,
 } from "@/content/data";
-import { slugify } from "@/utils/slugify";
 import Image from "next/image";
 
 export default function Home() {
