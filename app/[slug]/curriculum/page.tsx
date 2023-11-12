@@ -31,7 +31,7 @@ export default function Curriculum({
                 {
                   "from-orange to-yellow": index === 0,
                   "from-yellow to-light-orange": index === 1,
-                  "from-green to-bright-cyan": index === 2,
+                  "from-green !to-bright-cyan": index === 2,
                 }
               )}
             >
