@@ -1,24 +1,21 @@
 export type Curriculum = {
   title: string;
   description: string;
-  levels: {
+  levels: ReadonlyArray<{
     title: string;
     description: string;
-    items: {
+    items: ReadonlyArray<{
       image: string;
       title: string;
       subTitle: string;
       description: string;
-    }[];
-  }[];
+    }>;
+  }>;
 };
-export type KnownCurriculums =
-  | "bitcoin-infrastructure-development"
-  | "lightning-infrastructure-development"
-  | "lightning-application-development";
-export type Curriculums = Record<KnownCurriculums, Curriculum>;
 
-export const curriculums: Curriculums = {
+export type Curriculums = Record<string, Curriculum>;
+
+export const curriculums = {
   "bitcoin-infrastructure-development": {
     title: "Bitcoin Infrastructure Developement",
     description:
@@ -229,4 +226,6 @@ export const curriculums: Curriculums = {
       },
     ],
   },
-};
+} as const satisfies Curriculums;
+
+export type KnownCurriculums = keyof typeof curriculums;
