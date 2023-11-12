@@ -39,10 +39,10 @@ export default function Drawer() {
       )}
       <div
         className={clsx(
-          `flex flex-col fixed inset-y-0 left-0 w-2/3 bg-white z-50 transform p-6 gap-4  transition-transform`,
+          `flex flex-col fixed inset-y-0 right-0 w-2/3 bg-white z-50 transform p-6 gap-4  transition-transform`,
           {
             "translate-x-0": isOpen,
-            "-translate-x-full": !isOpen,
+            "translate-x-full": !isOpen,
           }
         )}
       >
