@@ -3,17 +3,21 @@
 import { learnSection } from "@/content/data";
 import clsx from "clsx";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Drawer() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", isOpen);
+  }, [isOpen]);
 
   return (
     <div className="hidden sm:flex">
       <button
         type="button"
         className="cursor-pointer"
-        onClick={() => setIsOpen((VALUE) => !VALUE)}
+        onClick={() => setIsOpen((value) => !value)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
