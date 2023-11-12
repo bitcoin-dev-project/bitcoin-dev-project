@@ -1,7 +1,6 @@
 import { learnSection } from "@/content/data";
 import Link from "next/link";
-import React from "react";
-import Drawer from "./dawer";
+import Drawer from "./drawer";
 
 export default function NavBar() {
   return (
