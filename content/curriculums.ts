@@ -1,19 +1,6 @@
-export type Curriculum = {
-  title: string;
-  description: string;
-  levels: ReadonlyArray<{
-    title: string;
-    description: string;
-    items: ReadonlyArray<{
-      image: string;
-      title: string;
-      subTitle: string;
-      description: string;
-    }>;
-  }>;
-};
+import { Page } from "./types";
 
-export type Curriculums = Record<string, Curriculum>;
+export type Curriculums = Record<string, Page>;
 
 export const curriculums = {
   "bitcoin-infrastructure-development": {

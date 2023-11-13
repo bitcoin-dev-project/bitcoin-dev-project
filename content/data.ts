@@ -1,3 +1,5 @@
+import { slugify } from "@/utils/slugify";
+
 export const toolsData = [
   {
     name: "Chat BTC",
@@ -44,7 +46,28 @@ export const faqs = [
   },
 ];
 
-export const learnSection = {
+type Section = {
+  title: string;
+  slug: string;
+  data: {
+    description: string;
+    btnText: string;
+    src: string;
+    title: string;
+    shortTitle?: string;
+    slug: string;
+  }[];
+};
+
+const createSection = (section: Section) => ({
+  ...section,
+  data: section.data.map((node) => ({
+    ...node,
+    slug: slugify(node.title),
+  })),
+});
+
+export const learnSection = createSection({
   title: "Learn",
   slug: "learn",
   data: [
@@ -55,7 +78,7 @@ export const learnSection = {
       src: "/bitcoin-infra-development.jpg",
       title: "Bitcoin Infrastructure Development",
       shortTitle: "Bitcoin Dev",
-      slug: "bitcoin-infrastructure-development",
+      slug: "",
     },
     {
       description:
@@ -64,7 +87,7 @@ export const learnSection = {
       src: "/lighting-infra-development.jpg",
       title: "Lightning Infrastructure Development",
       shortTitle: "Lightning Dev",
-      slug: "lightning-infrastructure-development",
+      slug: "",
     },
     {
       description:
@@ -73,40 +96,38 @@ export const learnSection = {
       src: "/lighting-app-development.jpg",
       title: "Lightning Application Development",
       shortTitle: "Lightning App",
-      slug: "lightning-application-development",
+      slug: "",
     },
   ],
-};
+});
 
-export const buildSection = {
+export const buildSection = createSection({
   title: "Build",
   slug: "build",
   data: [
     {
-      description:
-        "Discover the wide range of applications you can build with lightning.",
+      description: "Add content here.",
       btnText: "Learn",
       src: "/build.jpg",
-      title: "Lightning Infrastructure Development",
-      slug: "bitcoin-infrastructure-development",
+      title: "Build on bitcoin and lightning",
+      slug: "",
     },
   ],
-};
+});
 
-export const contributeSection = {
+export const contributeSection = createSection({
   title: "Contribute",
   slug: "contribute",
   data: [
     {
-      description:
-        "Discover the wide range of applications you can build with lightning.",
+      description: "Add content here.",
       btnText: "Learn",
       src: "/contribute.jpg",
-      title: "Lightning Infrastructure Development",
-      slug: "lightning-infrastructure-development",
+      title: "Contribute by reviewing PR's",
+      slug: "",
     },
   ],
-};
+});
 
 export const pointers = [
   {
