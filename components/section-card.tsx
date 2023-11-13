@@ -6,7 +6,7 @@ type Props = {
   description: string;
   btnText: string;
   className?: string;
-  slug: string;
+  href: string;
   src: string;
   title: string;
 };
@@ -16,7 +16,7 @@ export default function SectionCard({
   btnText,
   description,
   className,
-  slug,
+  href,
   src,
   title,
 }: Props) {
@@ -39,12 +39,7 @@ export default function SectionCard({
           {title}
         </h2>
         <p className="text-xl md:text-sm">{description}</p>
-        <Button
-          className="w-[55%]"
-          href={{
-            pathname: `/${slug}/curriculum`,
-          }}
-        >
+        <Button className="w-[55%]" href={href}>
           {btnText}
         </Button>
       </div>
