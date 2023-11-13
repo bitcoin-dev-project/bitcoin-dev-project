@@ -61,7 +61,12 @@ export default function Home() {
         </h2>
         <div className="flex justify-between md:flex-col md:gap-y-4">
           {learnSection.data.map((section) => (
-            <SectionCard key={section.title} alt={section.title} {...section} />
+            <SectionCard
+              key={section.title}
+              alt={section.title}
+              {...section}
+              href={`/${section.slug}/curriculum`}
+            />
           ))}
         </div>
         <div className="flex items-center justify-between mt-32 md:mt-10  md:flex-col md:gap-y-4">
@@ -78,6 +83,7 @@ export default function Home() {
                 alt={section.title}
                 className="w-[95%]"
                 {...section}
+                href="#"
               />
             ))}
           </div>
@@ -94,6 +100,7 @@ export default function Home() {
                 alt={section.title}
                 className="w-[95%]"
                 {...section}
+                href="/contribute"
               />
             ))}
           </div>
