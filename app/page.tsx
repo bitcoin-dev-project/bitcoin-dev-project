@@ -59,11 +59,12 @@ export default function Home() {
         >
           {learnSection.title}
         </h2>
-        <div className="flex justify-between md:flex-col md:gap-y-4">
+        <div className="flex justify-between gap-y-7 flex-wrap md:flex-col md:gap-y-4">
           {learnSection.data.map((section) => (
             <SectionCard
               key={section.title}
               alt={section.title}
+              className="lg:w-[48%]"
               {...section}
               href={`/${section.slug}/curriculum`}
             />
@@ -144,7 +145,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-[12px] md:w-[100px] w-[212px] self-center it">
-                <Button href="#" className="w-full">
+                <Button href="/explore" className="w-full">
                   Explore
                 </Button>
               </div>
