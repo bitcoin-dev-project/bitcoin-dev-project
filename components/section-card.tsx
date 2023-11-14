@@ -1,12 +1,13 @@
+import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "./button";
 
-type Props = {
+type Props = React.ComponentProps<typeof Link> & {
   alt: string;
   description: string;
   btnText: string;
   className?: string;
-  href: string;
   src: string;
   title: string;
 };
@@ -16,13 +17,16 @@ export default function SectionCard({
   btnText,
   description,
   className,
-  href,
   src,
   title,
+  ...rest
 }: Props) {
   return (
     <div
-      className={`flex flex-col bg-pale-orange rounded-xl shadow-normal hover:shadow-raised transition-[box-shadow] duration-500 ease-in-out overflow-hidden w-[32%] md:w-full ${className}`}
+      className={clsx(
+        `flex flex-col bg-pale-orange rounded-xl shadow-normal hover:shadow-raised transition-[box-shadow] duration-500 ease-in-out overflow-hidden w-[32%] md:w-full`,
+        className
+      )}
     >
       <div className={`relative h-[200px] w-full`}>
         <Image
@@ -39,7 +43,7 @@ export default function SectionCard({
           {title}
         </h2>
         <p className="text-xl md:text-sm">{description}</p>
-        <Button className="w-[55%]" href={href}>
+        <Button className="w-[55%]" {...rest}>
           {btnText}
         </Button>
       </div>
