@@ -88,7 +88,7 @@ export default function Home() {
                   alt={section.title}
                   className="w-full"
                   {...section}
-                  href="#"
+                  href={section.href ?? "/"}
                 />
               ))}
             </div>

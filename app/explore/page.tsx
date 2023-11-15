@@ -22,7 +22,7 @@ export default function Explore() {
             {...section}
             target="_blank"
             rel="noopener"
-            href={section.href as string}
+            href={section.href ?? "/"}
           />
         ))}
       </div>

@@ -113,6 +113,7 @@ export const buildSection = createSection({
       src: "/build.jpg",
       title: "Build on bitcoin and lightning",
       slug: "",
+      href: "/",
     },
   ],
 });
@@ -127,6 +128,7 @@ export const contributeSection = createSection({
       src: "/contribute.jpg",
       title: "Contribute by reviewing PR's",
       slug: "",
+      href: "/contribute",
     },
   ],
 });
