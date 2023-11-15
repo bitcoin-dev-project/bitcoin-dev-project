@@ -70,41 +70,29 @@ export default function Home() {
             />
           ))}
         </div>
-        <div className="flex items-center justify-between mt-32 md:mt-10  md:flex-col md:gap-y-4">
-          <div className="flex flex-col gap-y-6">
-            <h2
-              id={buildSection.slug}
-              className="text-5xl md:text-3xl font-semibold text-center"
+        <div className="flex items-center justify-between gap-x-6 mt-32 md:mt-10  md:flex-col md:gap-y-4">
+          {[buildSection, contributeSection].map((item) => (
+            <div
+              key={item.title}
+              className="flex flex-col gap-y-6 md:w-full lg:w-[48%]"
             >
-              {buildSection.title}
-            </h2>
-            {buildSection.data.map((section) => (
-              <SectionCard
-                key={section.title}
-                alt={section.title}
-                className="w-[95%]"
-                {...section}
-                href="#"
-              />
-            ))}
-          </div>
-          <div className="flex flex-col gap-y-6">
-            <h2
-              id={contributeSection.slug}
-              className="text-5xl md:text-3xl font-semibold text-center"
-            >
-              {contributeSection.title}
-            </h2>
-            {contributeSection.data.map((section) => (
-              <SectionCard
-                key={section.title}
-                alt={section.title}
-                className="w-[95%]"
-                {...section}
-                href="/contribute"
-              />
-            ))}
-          </div>
+              <h2
+                id={item.slug}
+                className="text-5xl md:text-3xl font-semibold text-center"
+              >
+                {item.title}
+              </h2>
+              {item.data.map((section) => (
+                <SectionCard
+                  key={section.title}
+                  alt={section.title}
+                  className="w-full"
+                  {...section}
+                  href="#"
+                />
+              ))}
+            </div>
+          ))}
         </div>
 
         <div className="mt-32 md:mt-10  flex flex-col self-center text-center gap-y-2">

@@ -8,7 +8,7 @@ export default function Explore() {
         <h1 className="text-[62px] lg:text-[36px] md:text-center font-bold leading-normal">
           {exploreSection.title}
         </h1>
-        <p className="text-2xl md:text-base md:text-center max-w-[60vw]">
+        <p className="text-2xl md:text-base md:text-center">
           {exploreSection.description}
         </p>
       </div>
