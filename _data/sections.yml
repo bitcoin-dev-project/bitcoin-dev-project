@@ -24,12 +24,12 @@
   cards:
     - title: Onboarding to Bitcoin Core
       description: A comprehensive onboarding guide to Satoshi Nakamoto's bitcoin implementation.
-      link: https://bitcoincore.wtf/
+      link: https://bitcoincore.academy/
       image: Person-Boarding-Boat-Abstract.png
       type: Self-paced
     - title: Building on Lightning
       description: Guided walk-through of two applications that interact with the Lightning Network.
-      link: https://bmancini55.github.io/building-lightning/
+      link: https://buildonln.com/
       image: Chinese-Astronaut-Abstract.png
       type: Self-paced
     - title: Transaction Tutorial
