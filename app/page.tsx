@@ -17,15 +17,16 @@ export default function Home() {
   return (
     <main>
       <div className="flex justify-between md:flex-col gap-4 md:gap-y-10">
-        <div className="flex basis-1/2 flex-grow flex-col justify-end md:px-14">
+        <div className="flex basis-1/2 flex-grow flex-col justify-end px-14 md:px-7">
           <div className="flex flex-col gap-y-[56px] pl-14 md:pl-0">
-            <h1 className="mt-10 md:mt-6 text-[62px] lg:text-[36px] font-bold leading-normal md:text-center">
-              Learn, contribute <br></br> and build on{" "}
-              <span className="text-orange">bitcoin</span> <br></br>
+            <h1 className="mt-10 md:mt-6 text-[62px] lg:text-[36px] md:text-[30px] font-bold leading-normal">
+              Learn, contribute <br className="md:hidden"></br> and build on{" "}
+              <span className="text-orange">bitcoin</span>{" "}
+              <br className="md:hidden"></br>
               and <span className="text-green">lightning</span>
             </h1>
             <div className="md:flex md:flex-col md:items-center">
-              <ul className="list-disc text-2xl lg:text-lg leading-[150%]">
+              <ul className="list-disc text-2xl lg:text-lg leading-[150%] md:mx-4">
                 <li>Help build the future of money </li>
                 <li>Challenge yourself & go down various rabbit holes</li>
                 <li>
@@ -60,7 +61,7 @@ export default function Home() {
           {learnSection.title}
         </h2>
         <div className="flex justify-between gap-y-7 flex-wrap md:flex-col md:gap-y-4">
-          {learnSection.data.map((section) => (
+          {learnSection.data.map(({ shortTitle: _, ...section }) => (
             <SectionCard
               key={section.title}
               alt={section.title}
@@ -106,7 +107,18 @@ export default function Home() {
             efficitur leo nisi, sed elementum arcu molestie
           </p>
           <div className="relative flex flex-col w-full min-h-[420px] xl:h-[600px] md:h-[1000px]">
-            <Image alt="Explore Map" src="/explore-map.jpg" fill />
+            <Image
+              className="block md:hidden"
+              alt="Explore Map"
+              src="/explore-map.jpg"
+              fill
+            />
+            <Image
+              className="hidden md:block"
+              alt="Explore Map"
+              src="/explore-map-mobile.jpg"
+              fill
+            />
             <div className="px-[80px] pb-10 absolute bottom-0 left-0 right-0 flex flex-col">
               <div className="flex justify-between xl:flex-col xl:items-center xl:gap-y-6">
                 <div className="flex gap-x-10 md:flex-col md:gap-y-4">
@@ -132,7 +144,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              <div className="mt-[12px] md:w-[100px] w-[212px] self-center it">
+              <div className="mt-[12px] w-[212px] md:w-[50vw] self-center it">
                 <Button href="/explore" className="w-full">
                   Explore
                 </Button>
