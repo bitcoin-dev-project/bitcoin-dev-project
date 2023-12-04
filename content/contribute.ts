@@ -12,6 +12,7 @@ export const contribute = {
       items: [
         {
           image: "/contribute/onboarding-to-bitcoin-core.jpg",
+          link: "",
           title: "Onboarding to bitcoin core",
           subTitle: "Dive into Bitcoin Core Development",
           description:
@@ -19,6 +20,7 @@ export const contribute = {
         },
         {
           image: "/contribute/bitcoin-pr-review-club.jpg",
+          link: "",
           title: "Bitcoin PR Review Club",
           subTitle: "Join the Bitcoin Core PR Club!",
           description:
@@ -33,6 +35,7 @@ export const contribute = {
       items: [
         {
           image: "/contribute/lnd-lightning-labs.jpg",
+          link: "",
           title: "LND Lightning Labs",
           subTitle: "Power-Up with Lightning Network's LND!",
           description:
@@ -40,6 +43,7 @@ export const contribute = {
         },
         {
           image: "/contribute/core-lightning-by-blockstream.jpg",
+          link: "",
           title: "Core Lightning by Blockstream",
           subTitle: "Electrify Bitcoin with c-lightning!",
           description:
@@ -47,6 +51,7 @@ export const contribute = {
         },
         {
           image: "/contribute/eclair.jpg",
+          link: "",
           title: "Eclair",
           subTitle: "Spark Bitcoin Payments with Eclair!",
           description:
@@ -54,6 +59,7 @@ export const contribute = {
         },
         {
           image: "/contribute/ldk.jpg",
+          link: "",
           title: "LDK",
           subTitle: "Supercharge Wallet Integration with LDK",
           description:
@@ -61,6 +67,7 @@ export const contribute = {
         },
         {
           image: "/contribute/ldk-pr-review-club.jpg",
+          link: "",
           title: "LDK PR Review Club",
           subTitle: "Sharpen Your Lightning Skills",
           description:
@@ -68,6 +75,7 @@ export const contribute = {
         },
         {
           image: "/contribute/lnd-pr-review-club.jpg",
+          link: "",
           title: "LND PR Review Club",
           subTitle: "Boost Your Contribution Expertise",
           description:

@@ -1,6 +1,6 @@
 import Button from "@/components/button";
 import PageLevel from "@/components/page-level";
-import { contribute } from "@/content/contribute";
+import { projects } from "@/content/projects";
 import { slugify } from "@/utils/slugify";
 import clsx from "clsx";
 
@@ -9,13 +9,13 @@ export default function Curriculum() {
     <main className="p-14 sm:p-7 mx-auto my-0">
       <div className="flex flex-col md:items-center mb-24 gap-y-10">
         <h1 className="text-[62px] lg:text-[36px] md:text-center font-bold leading-normal">
-          {contribute.title}
+          {projects.title}
         </h1>
         <p className="text-2xl md:text-base md:text-center max-w-[60vw]">
-          {contribute.description}
+          {projects.description}
         </p>
         <div className="flex gap-x-6 md:flex-col md:gap-y-6 md:py-8">
-          {contribute.levels.map((item, index) => (
+          {projects.levels.map((item, index) => (
             <Button
               href={`#${slugify(item.title)}`}
               key={item.title}
@@ -34,7 +34,7 @@ export default function Curriculum() {
       </div>
 
       <div className="flex flex-col gap-y-24">
-        {contribute.levels.map((level, index) => (
+        {projects.levels.map((level, index) => (
           <PageLevel
             key={level.title}
             colorClass={clsx({

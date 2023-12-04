@@ -70,36 +70,27 @@ const createSection = (section: Section) => ({
 });
 
 export const learnSection = createSection({
-  title: "Learn",
+  title: "Start Your FOSS Journey",
   slug: "learn",
   data: [
     {
       description:
-        "Learning resources for your journey to become a Bitcoin Core developer.",
+        "Become a Bitcoin Core Contributor",
       btnText: "Learn",
       src: "/bitcoin-infra-development.jpg",
-      title: "Bitcoin Infrastructure Development",
+      title: "Bitcoin FOSS",
       shortTitle: "Bitcoin Dev",
-      slug: "",
+      slug: "/bitcoin-foss/curriculum",
     },
     {
       description:
-        "Learning resources for your journey to becoming a Infrastructure developer.",
+        "Become a Lightning FOSS Developer",
       btnText: "Learn",
       src: "/lighting-infra-development.jpg",
-      title: "Lightning Infrastructure Development",
+      title: "Lightning FOSS",
       shortTitle: "Lightning Dev",
-      slug: "",
-    },
-    {
-      description:
-        "Discover the wide range of applications you can build with lightning.",
-      btnText: "Learn",
-      src: "/lighting-app-development.jpg",
-      title: "Lightning Application Development",
-      shortTitle: "Lightning App",
-      slug: "",
-    },
+      slug: "/lightning-foss/curriculum",
+    }
   ],
 });
 
@@ -119,16 +110,16 @@ export const buildSection = createSection({
 });
 
 export const contributeSection = createSection({
-  title: "Contribute",
-  slug: "contribute",
+  title: "Projects",
+  slug: "projects",
   data: [
     {
-      description: "Add content here.",
-      btnText: "Learn",
+      description: "Discover Bitcoin FOSS projects",
+      btnText: "Discover",
       src: "/contribute.jpg",
       title: "Contribute by reviewing PR's",
       slug: "",
-      href: "/contribute",
+      href: "/projects",
     },
   ],
 });
@@ -140,7 +131,7 @@ export const exploreSection = createSection({
   slug: "learn",
   data: [
     {
-      description: "Chat with your favourite sources and authors.",
+      description: "Chat with your favorite bitcoin sources and authors",
       btnText: "Chat",
       src: "/chat-btc.jpg",
       title: "Chat BTC",
@@ -148,7 +139,7 @@ export const exploreSection = createSection({
       href: "https://chat.bitcoinsearch.xyz",
     },
     {
-      description: "The technical bitcoin search engine we deserve.",
+      description: "The technical bitcoin search engine we deserve",
       btnText: "Search",
       src: "/bitcoin-search.jpg",
       title: "Bitcoin Search",
@@ -157,7 +148,7 @@ export const exploreSection = createSection({
     },
     {
       description:
-        "Bitcoin-dev and Lightning-dev mailing list, summaries and discovery.",
+        "Bitcoin-dev and Lightning-dev mailing list, summaries and discovery",
       btnText: "Read",
       src: "/tldr.jpg",
       title: "Bitcoin TLDR",
@@ -166,7 +157,7 @@ export const exploreSection = createSection({
     },
     {
       description:
-        "Peruse archives of transcribed talks, podcasts and lectures.",
+        "Peruse archives of transcribed talks, podcasts and lectures",
       btnText: "Read",
       src: "/bitcoin-transcript.jpg",
       title: "Bitcoin Transcripts",
@@ -175,10 +166,10 @@ export const exploreSection = createSection({
     },
     {
       description:
-        "Contribute to BTC transcripts by reviewing AI-generated copy.",
+        "Contribute to BTC transcripts by reviewing AI-generated copy",
       btnText: "Contribute",
       src: "/btc-transcript-editor.jpg",
-      title: "BTC Transcript Editor",
+      title: "Transcript Review",
       slug: "",
       href: "https://review.btctranscripts.com/",
     },
@@ -197,17 +188,12 @@ export const exploreSection = createSection({
 export const pointers = [
   {
     btnText: "Learn",
-    description: "Guided journey for development on bitcoin and lightning",
+    description: "Start your journey on bitcoin and lightning FOSS",
     jumpTo: `#${learnSection.slug}`,
   },
   {
-    btnText: "Contribute",
-    description: "Resources to teach you to contribute to bitcoin & lightning",
-    jumpTo: `#${contributeSection.slug}`,
-  },
-  {
     btnText: "Build",
-    description: "Hands-on and theoretical supports to build applications",
+    description: "Hands-on tutorials to get your hands dirty",
     jumpTo: `#${buildSection.slug}`,
   },
 ];

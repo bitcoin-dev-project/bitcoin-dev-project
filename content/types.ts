@@ -9,6 +9,7 @@ export type Page = {
       title: string;
       subTitle: string;
       description: string;
+      link: string;
     }>;
   }>;
 };

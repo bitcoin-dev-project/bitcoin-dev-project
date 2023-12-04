@@ -4,8 +4,6 @@ import Pointer from "@/components/pointer";
 import SectionCard from "@/components/section-card";
 import ToolsCard from "@/components/tools-card";
 import {
-  buildSection,
-  contributeSection,
   faqs,
   learnSection,
   pointers,
@@ -26,14 +24,7 @@ export default function Home() {
               and <span className="text-green">lightning</span>
             </h1>
             <div className="md:flex md:flex-col md:items-center">
-              <ul className="list-disc text-2xl lg:text-lg leading-[150%] md:mx-4">
-                <li>Help build the future of money </li>
-                <li>Challenge yourself & go down various rabbit holes</li>
-                <li>
-                  Build applications and infrastructure that have meaning and
-                  impact
-                </li>
-              </ul>
+              <h2 className="mt-10 md:mt-6 text-[32px] lg:text-[26px] md:text-[20px] font-bold leading-normal">Build the future of money</h2>
             </div>
             <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-4 md:items-center">
               {pointers.map((pointer) => (
@@ -69,30 +60,6 @@ export default function Home() {
               {...section}
               href={`/${section.slug}/curriculum`}
             />
-          ))}
-        </div>
-        <div className="flex items-center justify-between gap-x-6 mt-32 md:mt-10  md:flex-col md:gap-y-4">
-          {[buildSection, contributeSection].map((item) => (
-            <div
-              key={item.title}
-              className="flex flex-col gap-y-6 md:w-full lg:w-[48%]"
-            >
-              <h2
-                id={item.slug}
-                className="text-5xl md:text-3xl font-semibold text-center"
-              >
-                {item.title}
-              </h2>
-              {item.data.map((section) => (
-                <SectionCard
-                  key={section.title}
-                  alt={section.title}
-                  className="w-full"
-                  {...section}
-                  href={section.href ?? "/"}
-                />
-              ))}
-            </div>
           ))}
         </div>
 
