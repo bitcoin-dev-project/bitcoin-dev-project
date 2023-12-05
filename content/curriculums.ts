@@ -134,7 +134,7 @@ export const curriculums = {
   "lightning-foss": {
     title: "Lightning FOSS Development",
     description:
-      "Bitcoin ipsum dolor sit amet. Private key key pair outputs soft fork, stacking sats halvening mempool halvening! Whitepaper, block height, blockchain mining, hash private key, UTXO sats. Mempool difficulty transaction consensus double-spend problem whitepaper hash mining! Sats UTXO timestamp server stacking sats.",
+      "Lightning Network provides fast and inexpensive payments, addressing some of the scalability issues that bitcoin faces at the base layer. Lightning much younger than bitcoin and technical challenges remain. But for those that are ready to jump into the fast-paced development of the protocol, Lightning presents a unique learning opportunity to contribute to a maturing protocol.",
     levels: [
       {
         title: "Pioneer",
@@ -145,9 +145,9 @@ export const curriculums = {
             image:
               "/curriculums/lighting-infra-development/chaincode-ln-seminar.jpg",
             title: "Chaincode LN Seminar",
-            subTitle: "The de-facto book on Bitcoin development",
+            subTitle: "Dive Deep into Lightning Network Development",
             description:
-              "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
+              "Experience a comprehensive learning journey with the Chaincode LN Seminar. This curriculum is curated to cover key aspects of Lightning Network protocol development, offering study groups, extensive syllabus, and hands-on sessions.",
             link: "https://learning.chaincode.com/#seminars",
           },
           {
@@ -155,10 +155,18 @@ export const curriculums = {
               "/curriculums/lighting-infra-development/bitcoin-development-philosophy.jpg",
             title: "Bitcoin Development Philosophy",
             subTitle:
-              "Gain a deeper understanding of bitcoin's development philosophy",
+              "Gain a deeper understanding of lightning's development philosophy",
             description:
-              "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
+              "Gain a deeper understanding of Lightning’s design trade-offs and philosophy, offering insights into over a decade of Bitcoin development and public debate. This resource provides a critical framework for evaluating and innovating within the Bitcoin ecosystem.",
             link: "https://bitcoindevphilosophy.com/",
+          },
+          {
+            image: "/curriculums/lighting-app-development/building-on-ln.jpg",
+            title: "Building on LN",
+            subTitle: "Create applications that interact with the Lightning Network",
+            description:
+              "Get comfortable building an application that connects to a Lightning Network node. Build a Lightning graph visualizer, construct a simple game of ownership using paid invoices and dip your toes into advanced Lightning Network topics all using Typescript.",
+            link: "https://buildonln.com"
           },
         ],
       },
@@ -171,26 +179,18 @@ export const curriculums = {
             image:
               "/curriculums/lighting-infra-development/ldk-pr-review-club.jpg",
             title: "LDK PR Review Club",
-            subTitle: "The de-facto book on Bitcoin development",
+            subTitle: "Your Gateway to LDK Contribution",
             description:
-              "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
+              "Navigate the world of LDK with an every-other-Friday session aimed at mentoring newcomers to become full fledged contributors.",
             link: "https://ldk.reviews"
-          },
-          {
-            image: "/curriculums/lighting-app-development/building-on-ln.jpg",
-            title: "Building on LN",
-            subTitle: "The de-facto book on Bitcoin development",
-            description:
-              "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
-            link: "https://buildonln.com"
           },
           {
             image:
               "/curriculums/lighting-infra-development/mastering-lightning.jpg",
             title: "Mastering Lightning",
-            subTitle: "The de-facto book on Bitcoin development",
+            subTitle: "Dive into the details of the Lightning Network",
             description:
-              "Sats hard fork mining stacking sats block height sats blockchain satoshis! Segwit genesis block private key miner sats consensus soft fork transaction. Full node double-spend.",
+              "The most comprehensive book on the technical side of the Lightning Network. Lightning is not simple so prepare to dive into some complexity.",
             link: "https://github.com/lnbook/lnbook"
           },
         ],
@@ -198,7 +198,7 @@ export const curriculums = {
       {
         title: "What's Next",
         description:
-          "The four major Lightning implementations - LDK, LND, Core Lightning and Eclair are backed by core teams. Lightning protocol development moves faster than the bitcoin protocol. Given that Lightning is still young, there are more rough edges to smooth and problems to sort. The best way to get involved is to jump on their slack or discord and start picking up issues. Join in - it's a striking opportunity!",
+          "The four major Lightning implementations - LDK, LND, Core Lightning and Eclair [TODO:INSERT LINKS!!] are backed by core teams. Lightning protocol development moves faster than the bitcoin protocol. Given that Lightning is still young, there are more rough edges to smooth and problems to sort. The best way to get involved is to jump on their slack or discord and start picking up issues. Join in - it's a striking opportunity!",
         items: [],
       },
     ],
