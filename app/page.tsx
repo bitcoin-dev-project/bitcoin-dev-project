@@ -63,15 +63,15 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-32 md:mt-10  flex flex-col self-center text-center gap-y-2">
+        <div className="mt-32 md:mt-10 flex flex-col self-center text-center gap-y-2">
           <h2 className="text-5xl md:text-3xl font-semibold">
             Tools to Explore
           </h2>
-          <p className="text-xl md:text-base  leading-[140%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            accumsan tempus nunc, nec posuere magna sagittis euismod. Vestibulum
-            sed justo ullamcorper, pharetra leo eget, accumsan quam. Fusce
-            efficitur leo nisi, sed elementum arcu molestie
+          <p className="text-xl md:text-base leading-[140%] mx-20 my-6">
+            Bitcoin and Lightning aim to solve some of the world&apos;s most difficult problems.
+            While we recognize the enormity of the task, the Bitcoin Dev Project also aims
+            to make Bitcoin and Lightning development enjoyable and approachable. Check out
+            some of the tools and educational content made by us and our friends.
           </p>
           <div className="relative flex flex-col w-full min-h-[420px] xl:h-[600px] md:h-[1000px]">
             <Image

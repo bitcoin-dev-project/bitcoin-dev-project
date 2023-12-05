@@ -127,7 +127,7 @@ export const contributeSection = createSection({
 export const exploreSection = createSection({
   title: "Explore tools and resources",
   description:
-    "Some  text here Some  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text hereSome  text",
+    "Explore tools built by the Bitcoin Dev Project in addition to some others we cannot live without.",
   slug: "learn",
   data: [
     {
