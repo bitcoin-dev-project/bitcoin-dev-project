@@ -78,7 +78,7 @@ export const learnSection = createSection({
         "Discover Bitcoin and Lightning FOSS Projects",
       btnText: "Explore",
       src: "/bitcoin-infra-development.jpg",
-      title: "FOSS Projects",
+      title: "Projects",
       shortTitle: "FOSS Projects",
       slug: "/projects",
     },
@@ -87,7 +87,7 @@ export const learnSection = createSection({
         "What is the Bitcoin Dev Project?",
       btnText: "Discover",
       src: "/lighting-infra-development.jpg",
-      title: "About the Bitcoin Dev Project",
+      title: "About",
       shortTitle: "About",
       slug: "/about",
     }
