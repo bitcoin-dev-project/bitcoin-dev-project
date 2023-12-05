@@ -18,15 +18,17 @@ export default function Home() {
         <div className="flex basis-1/2 flex-grow flex-col justify-end px-14 md:px-7">
           <div className="flex flex-col gap-y-[56px] pl-14 md:pl-0">
             <h1 className="mt-10 md:mt-6 text-[62px] lg:text-[36px] md:text-[30px] font-bold leading-normal">
-              Learn, contribute <br className="md:hidden"></br> and build on{" "}
+              Learn and contribute to{" "}
               <span className="text-orange">bitcoin</span>{" "}
+              and
               <br className="md:hidden"></br>
-              and <span className="text-green">lightning</span>
+              <span className="text-green">lightning</span>{" "}
+              FOSS
             </h1>
             <div className="md:flex md:flex-col md:items-center">
               <h2 className="mt-10 md:mt-6 text-[32px] lg:text-[26px] md:text-[20px] font-bold leading-normal">Build the future of money</h2>
             </div>
-            <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-4 md:items-center">
+            <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-3 md:items-center">
               {pointers.map((pointer) => (
                 <Pointer key={pointer.btnText} {...pointer} />
               ))}
@@ -58,7 +60,7 @@ export default function Home() {
               alt={section.title}
               className="lg:w-[48%]"
               {...section}
-              href={`/${section.slug}/curriculum`}
+              href={`/${section.slug}`}
             />
           ))}
         </div>

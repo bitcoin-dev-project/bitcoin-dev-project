@@ -71,41 +71,26 @@ const createSection = (section: Section) => ({
 
 export const learnSection = createSection({
   title: "Start Your FOSS Journey",
-  slug: "learn",
+  slug: "explore",
   data: [
     {
       description:
-        "Become a Bitcoin Core Contributor",
-      btnText: "Learn",
+        "Discover Bitcoin and Lightning FOSS Projects",
+      btnText: "Explore",
       src: "/bitcoin-infra-development.jpg",
-      title: "Bitcoin FOSS",
-      shortTitle: "Bitcoin Dev",
-      slug: "/bitcoin-foss/curriculum",
+      title: "FOSS Projects",
+      shortTitle: "FOSS Projects",
+      slug: "/projects",
     },
     {
       description:
-        "Become a Lightning FOSS Developer",
-      btnText: "Learn",
+        "What is the Bitcoin Dev Project?",
+      btnText: "Discover",
       src: "/lighting-infra-development.jpg",
-      title: "Lightning FOSS",
-      shortTitle: "Lightning Dev",
-      slug: "/lightning-foss/curriculum",
+      title: "About the Bitcoin Dev Project",
+      shortTitle: "About",
+      slug: "/about",
     }
-  ],
-});
-
-export const buildSection = createSection({
-  title: "Build",
-  slug: "build",
-  data: [
-    {
-      description: "Add content here.",
-      btnText: "Learn",
-      src: "/build.jpg",
-      title: "Build on bitcoin and lightning",
-      slug: "",
-      href: "/",
-    },
   ],
 });
 
@@ -187,13 +172,13 @@ export const exploreSection = createSection({
 
 export const pointers = [
   {
-    btnText: "Learn",
-    description: "Start your journey on bitcoin and lightning FOSS",
-    jumpTo: `#${learnSection.slug}`,
+    btnText: "Learn Bitcoin FOSS",
+    description: "",
+    jumpTo: `/bitcoin-foss`,
   },
   {
-    btnText: "Build",
-    description: "Hands-on tutorials to get your hands dirty",
-    jumpTo: `#${buildSection.slug}`,
+    btnText: "Learn Lightning FOSS",
+    description: "",
+    jumpTo: `/lightning-foss`,
   },
 ];
