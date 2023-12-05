@@ -16,7 +16,7 @@ export default function NavBar() {
           <Drawer />
           <div className="sm:hidden flex items-center gap-x-[24px]">
             {learnSection.data.map((item) => (
-              <Link key={item.slug} href={`/${item.slug}/curriculum`}>
+              <Link key={item.slug} href={`/${item.slug}`}>
                 {item.shortTitle}
               </Link>
             ))}
