@@ -13,7 +13,7 @@ export const projects = {
         {
           title: "Bitcoin Core",
           subTitle: "",
-          description: "Bitcoin's reference implementation of the bitcoin protocol",
+          description: "The reference implementation of the bitcoin protocol",
           image: "/projects/bitcoin-core.png",
           link: "https://github.com/bitcoin/bitcoin",
         },
@@ -63,7 +63,7 @@ export const projects = {
           title: "Validating Lightning Signer",
           subTitle: "",
           description: "Improve your Lightning node security by protecting your keys separately",
-          image: "/projects/bdk.png",
+          image: "/projects/vls.png",
           link: "https://vls.tech",
         },
         {
@@ -90,7 +90,7 @@ export const projects = {
         {
           title: "Stratum V2",
           subTitle: "",
-          description: "Stratum V2 is the next generation protocol for pooled mining",
+          description: "The next generation protocol for pooled mining",
           image: "/projects/stratum-v2.png",
           link: "https://github.com/stratum-mining",
         },
@@ -99,6 +99,20 @@ export const projects = {
           subTitle: "",
           description: "A Series of Projects to implement various Bitcoin Protocols in Rust",
           image: "/projects/rust-bitcoin.png",
+          link: "https://github.com/rust-bitcoin",
+        },
+        {
+          title: "Warnet",
+          subTitle: "",
+          description: "Monitor and analyze the emergent behaviors of P2P networks",
+          image: "/projects/warnet.jpg",
+          link: "https://github.com/rust-bitcoin",
+        },
+        {
+          title: "SimLN",
+          subTitle: "",
+          description: "Instantly simulate real-world Lightning network activity",
+          image: "/projects/simln.jpg",
           link: "https://github.com/rust-bitcoin",
         },
       ],
