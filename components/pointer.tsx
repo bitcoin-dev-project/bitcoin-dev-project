@@ -9,11 +9,11 @@ type Props = {
 
 export default function Pointer({ btnText, description, jumpTo }: Props) {
   return (
-    <div className="flex flex-col w-[186px] gap-y-2 text-center md:flex-col-reverse">
-      <Button href={`${jumpTo}`} className="w-full">
+    <div className="flex flex-col min-w-[186px] gap-y-2 text-center md:flex-col-reverse">
+      <Button href={`${jumpTo}`} className="w-full px-4">
         {btnText}
       </Button>
-      <p className="text-sm font-medium">{description}</p>
+      {!!description && <p className="text-sm font-medium">{description}</p>}
     </div>
   );
 }
