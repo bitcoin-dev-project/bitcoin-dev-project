@@ -3,12 +3,7 @@ import Button from "@/components/button";
 import Pointer from "@/components/pointer";
 import SectionCard from "@/components/section-card";
 import ToolsCard from "@/components/tools-card";
-import {
-  faqs,
-  learnSection,
-  pointers,
-  toolsData,
-} from "@/content/data";
+import { faqs, learnSection, pointers, toolsData } from "@/content/data";
 import Image from "next/image";
 
 export default function Home() {
@@ -16,17 +11,17 @@ export default function Home() {
     <main>
       <div className="flex justify-between md:flex-col gap-4 md:gap-y-10">
         <div className="flex basis-1/2 flex-grow flex-col justify-end px-14 md:px-7">
-          <div className="flex flex-col gap-y-[56px] pl-14 md:pl-0">
-            <h1 className="mt-10 md:mt-6 text-[62px] lg:text-[36px] md:text-[30px] font-bold leading-normal">
+          <div className="flex flex-col gap-y-[40px] pl-14 md:pl-0">
+            <h1 className="mt-10 md:mt-6 text-[62px] sm:text-center lg:text-[36px] md:text-[30px] font-bold leading-normal">
               Learn and contribute to{" "}
-              <span className="text-orange">bitcoin</span>{" "}
-              and
+              <span className="text-orange">bitcoin</span> and{" "}
               <br className="md:hidden"></br>
-              <span className="text-green">lightning</span>{" "}
-              FOSS
+              <span className="text-green">lightning</span> FOSS
             </h1>
             <div className="md:flex md:flex-col md:items-center">
-              <h2 className="mt-10 md:mt-6 text-[32px] lg:text-[26px] md:text-[20px] font-bold leading-normal">Build the future of money</h2>
+              <h2 className="text-[32px] lg:text-[26px] md:text-[20px] font-medium leading-normal">
+                Build the future of money
+              </h2>
             </div>
             <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-3 md:items-center">
               {pointers.map((pointer) => (
@@ -70,10 +65,11 @@ export default function Home() {
             Tools to Explore
           </h2>
           <p className="text-xl md:text-base leading-[140%] mx-20 my-6">
-            Bitcoin and Lightning aim to solve some of the world&apos;s most difficult problems.
-            While we recognize the enormity of the task, the Bitcoin Dev Project also aims
-            to make Bitcoin and Lightning development enjoyable and approachable. Check out
-            some of the tools and educational content made by us and our friends.
+            Bitcoin and Lightning aim to solve some of the world&apos;s most
+            difficult problems. While we recognize the enormity of the task, the
+            Bitcoin Dev Project also aims to make Bitcoin and Lightning
+            development enjoyable and approachable. Check out some of the tools
+            and educational content made by us and our friends.
           </p>
           <div className="relative flex flex-col w-full min-h-[420px] xl:h-[600px] md:h-[1000px]">
             <Image

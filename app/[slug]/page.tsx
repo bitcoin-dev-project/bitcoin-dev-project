@@ -31,6 +31,7 @@ export default function Curriculum({
                   "from-orange to-yellow": index === 0,
                   "from-yellow to-light-orange": index === 1,
                   "from-green !to-bright-cyan": index === 2,
+                  "from-light-orange to-bright-orange": index === 3,
                 }
               )}
             >
@@ -48,11 +49,13 @@ export default function Curriculum({
               "text-orange": index === 0,
               "text-yellow": index === 1,
               "text-green": index === 2,
+              "text-light-orange": index === 3,
             })}
             gradientClass={clsx({
               "from-orange to-yellow": index === 0,
               "from-yellow to-light-orange": index === 1,
               "from-green to-bright-cyan": index === 2,
+              "from-light-orange to-bright-orange": index === 3,
             })}
             pageTitle={`${index + 1}. ${level.title}`}
             {...level}
