@@ -3,7 +3,7 @@ export type Page = {
   description: string;
   levels: ReadonlyArray<{
     title: string;
-    description: string;
+    description: string | JSX.Element;
     items: ReadonlyArray<{
       image: string;
       title: string;

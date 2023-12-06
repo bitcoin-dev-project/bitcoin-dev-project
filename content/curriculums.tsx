@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Page } from "./types";
 
 export type Curriculums = Record<string, Page>;
@@ -26,8 +27,7 @@ export const curriculums = {
             image:
               "/curriculums/bitcoin-infra-development/bitcoin-development-philosophy.jpg",
             title: "Bitcoin Development Philosophy",
-            subTitle:
-              "A Study of the Philosophy of Bitcoin Development",
+            subTitle: "A Study of the Philosophy of Bitcoin Development",
             description:
               "Gain a deeper understanding of Bitcoin's design trade-offs and philosophy, offering insights into over a decade of Bitcoin development and public debate. This resource provides a critical framework for evaluating and innovating within the Bitcoin ecosystem.",
             link: "https://bitcoindevphilosophy.com/",
@@ -56,14 +56,13 @@ export const curriculums = {
               "Hands-on Tutorial That Teaches Direct Interaction with Your Bitcoin Node",
             description:
               "Use your own Bitcoin node to execute transactions, script Bitcoin operations, integrate with hardware wallets and hidden services with this step by step guide.",
-            link: "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line"
+            link: "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line",
           },
           {
             image:
               "/curriculums/bitcoin-infra-development/transaction-tutorial.jpg",
             title: "Transaction Tutorial",
-            subTitle:
-              "Bitcoin Transactions from the Inside Out",
+            subTitle: "Bitcoin Transactions from the Inside Out",
             description:
               "Get on a first name basis with SegWit and Taproot transactions. Add sighashes and timelocks to your list of friends by creating and signing Bitcoin transactions using a local bitcoind instance via Jupyter notebooks.",
             link: "https://github.com/chaincodelabs/bitcoin-tx-tutorial",
@@ -71,31 +70,28 @@ export const curriculums = {
           {
             image: "/curriculums/bitcoin-infra-development/minesim.jpg",
             title: "Minesim",
-            subTitle:
-              "Master Bitcoin Mining with Minesim Simulator",
+            subTitle: "Master Bitcoin Mining with Minesim Simulator",
             description:
               "Dive into the intricate world of Bitcoin mining with Minesim, a comprehensive POW mining simulator. This tool offers a hands-on experience in simulating various aspects of mining networks, including block discovery, peer node configuration, and chain splits, using realistic Poisson distribution models.",
-            link: "https://github.com/LarryRuane/minesim"
+            link: "https://github.com/LarryRuane/minesim",
           },
           {
             image:
               "/curriculums/bitcoin-infra-development/tiny-bitcoin-peer.jpg",
             title: "Tinybitcoinpeer",
-            subTitle:
-              "Explore the Permissionless Bitcoin Networking",
+            subTitle: "Explore the Permissionless Bitcoin Networking",
             description:
               "TinyBitcoinPeer offers a unique and playful way to understand Bitcoin's network dynamics. Connect to live nodes on the network, engage in basic network interactions like handshakes, and respond to pings with 150 lines of Python.",
-            link: "https://github.com/willcl-ark/tinybitcoinpeer"
+            link: "https://github.com/willcl-ark/tinybitcoinpeer",
           },
           {
             image:
               "/curriculums/bitcoin-infra-development/schnorr-taproot-workshop.jpg",
             title: "Schnorr Taproot Workshop",
-            subTitle:
-              "Unlock Bitcoin's Future with Schnorr/Taproot Workshop",
+            subTitle: "Unlock Bitcoin's Future with Schnorr/Taproot Workshop",
             description:
               "The Schnorr/Taproot Workshop by Bitcoin Optech is an invaluable resource for delving into Bitcoin's latest softfork. Featuring interactive Jupyter notebooks, the workshop covers Schnorr signatures, MuSig aggregation, and Taproot applications.",
-            link: "https://bitcoinops.org/en/schorr-taproot-workshop/"
+            link: "https://bitcoinops.org/en/schorr-taproot-workshop/",
           },
         ],
       },
@@ -111,7 +107,7 @@ export const curriculums = {
             subTitle: "Discover Bitcoin Core's Missing Onboarding Guide",
             description:
               "This guide covers both the technical components such as, architecture, consensus, validation, the wallet, P2P, and script, but also introduces the under-documented social aspects like PR etiquette and understanding the decentralized development process.",
-            link: "https://bitcoincore.academy"
+            link: "https://bitcoincore.academy",
           },
           {
             image: "/curriculums/bitcoin-infra-development/pr-review-club.jpg",
@@ -119,7 +115,7 @@ export const curriculums = {
             subTitle: "Review real Bitcoin Core PRs with the Crew",
             description:
               "The Bitcoin Core PR Review Club is a monthly meetup for discussing Bitcoin Core PRs and boosting your understanding of the codebase. It's an open invitation for anyone eager to learn and contribute, with hands-on guidance through the PR review process.",
-            link: "https://bitcoincore.reviews"
+            link: "https://bitcoincore.reviews",
           },
         ],
       },
@@ -163,10 +159,11 @@ export const curriculums = {
           {
             image: "/curriculums/lighting-app-development/building-on-ln.jpg",
             title: "Building on LN",
-            subTitle: "Create applications that interact with the Lightning Network",
+            subTitle:
+              "Create applications that interact with the Lightning Network",
             description:
               "Get comfortable building an application that connects to a Lightning Network node. Build a Lightning graph visualizer, construct a simple game of ownership using paid invoices and dip your toes into advanced Lightning Network topics all using Typescript.",
-            link: "https://buildonln.com"
+            link: "https://buildonln.com",
           },
         ],
       },
@@ -182,7 +179,7 @@ export const curriculums = {
             subTitle: "Your Gateway to LDK Contribution",
             description:
               "Navigate the world of LDK with an every-other-Friday session aimed at mentoring newcomers to become full fledged contributors.",
-            link: "https://ldk.reviews"
+            link: "https://ldk.reviews",
           },
           {
             image:
@@ -191,14 +188,23 @@ export const curriculums = {
             subTitle: "Dive into the details of the Lightning Network",
             description:
               "The most comprehensive book on the technical side of the Lightning Network. Lightning is not simple so prepare to dive into some complexity.",
-            link: "https://github.com/lnbook/lnbook"
+            link: "https://github.com/lnbook/lnbook",
           },
         ],
       },
       {
         title: "What's Next",
-        description:
-          "The four major Lightning implementations - LDK, LND, Core Lightning and Eclair [TODO:INSERT LINKS!!] are backed by core teams. Lightning protocol development moves faster than the bitcoin protocol. Given that Lightning is still young, there are more rough edges to smooth and problems to sort. The best way to get involved is to jump on their slack or discord and start picking up issues. Join in - it's a striking opportunity!",
+        description: (
+          <>
+            The four major Lightning implementations - LDK, LND, Core Lightning
+            and Eclair <Link href={"#"}>[TODO:INSERT LINKS!!]</Link> are backed
+            by core teams. Lightning protocol development moves faster than the
+            bitcoin protocol. Given that Lightning is still young, there are
+            more rough edges to smooth and problems to sort. The best way to get
+            involved is to jump on their slack or discord and start picking up
+            issues. Join in - it&apos;s a striking opportunity!
+          </>
+        ),
         items: [],
       },
     ],
