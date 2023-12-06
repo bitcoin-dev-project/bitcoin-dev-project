@@ -1,10 +1,8 @@
-import Button from "@/components/button";
 import PageLevel from "@/components/page-level";
 import { projects } from "@/content/projects";
-import { slugify } from "@/utils/slugify";
 import clsx from "clsx";
 
-export default function Curriculum() {
+export default function Projects() {
   return (
     <main className="p-14 sm:p-7 mx-auto my-0">
       <div className="flex flex-col md:items-center mb-24 gap-y-10">
@@ -14,25 +12,7 @@ export default function Curriculum() {
         <p className="text-2xl md:text-base md:text-center max-w-[60vw]">
           {projects.description}
         </p>
-        <div className="flex gap-x-6 md:flex-col md:gap-y-6 md:py-8">
-          {projects.levels.map((item, index) => (
-            <Button
-              href={`#${slugify(item.title)}`}
-              key={item.title}
-              className={clsx(
-                `w-[165px] bg-gradient-130 from-[0%] to-[104%] rounded-[10px]`,
-                {
-                  "from-orange to-yellow": index === 0,
-                  "from-green !to-bright-cyan": index === 1,
-                }
-              )}
-            >
-              {item.title}
-            </Button>
-          ))}
-        </div>
       </div>
-
       <div className="flex flex-col gap-y-24">
         {projects.levels.map((level, index) => (
           <PageLevel
@@ -46,6 +26,7 @@ export default function Curriculum() {
               "from-green to-bright-cyan": index === 1,
             })}
             pageTitle={`${index + 1}. ${level.title}`}
+            showHeader={false}
             {...level}
           />
         ))}
