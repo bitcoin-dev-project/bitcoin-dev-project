@@ -196,13 +196,48 @@ export const curriculums = {
         title: "What's Next",
         description: (
           <>
-            The four major Lightning implementations - LDK, LND, Core Lightning
-            and Eclair <Link href={"#"}>[TODO:INSERT LINKS!!]</Link> are backed
-            by core teams. Lightning protocol development moves faster than the
-            bitcoin protocol. Given that Lightning is still young, there are
-            more rough edges to smooth and problems to sort. The best way to get
-            involved is to jump on their slack or discord and start picking up
-            issues. Join in - it&apos;s a striking opportunity!
+            The four major Lightning implementations -{" "}
+            <Link
+              target="_blank"
+              rel="noopener"
+              className="text-orange underline"
+              href="https://github.com/lightningdevkit"
+            >
+              LDK
+            </Link>
+            ,{" "}
+            <Link
+              target="_blank"
+              rel="noopener"
+              className="text-orange underline"
+              href="https://github.com/lightningnetwork/lnd"
+            >
+              LND
+            </Link>
+            ,{" "}
+            <Link
+              target="_blank"
+              rel="noopener"
+              className="text-orange underline"
+              href="https://github.com/ElementsProject/lightning"
+            >
+              Core Lightning
+            </Link>{" "}
+            and{" "}
+            <Link
+              target="_blank"
+              rel="noopener"
+              className="text-orange underline"
+              href="https://github.com/ACINQ/eclair"
+            >
+              Eclair
+            </Link>{" "}
+            are backed by core teams. Lightning protocol development moves
+            faster than the bitcoin protocol. Given that Lightning is still
+            young, there are more rough edges to smooth and problems to sort.
+            The best way to get involved is to jump on their slack or discord
+            and start picking up issues. Join in - it&apos;s a striking
+            opportunity!
           </>
         ),
         items: [],
