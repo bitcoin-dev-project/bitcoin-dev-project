@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <div className="flex justify-between md:flex-col gap-4 md:gap-y-10">
         <div className="flex basis-1/2 flex-grow flex-col justify-end px-14 md:px-7">
-          <div className="flex flex-col gap-y-[40px] pl-14 md:pl-0">
+          <div className="flex flex-col gap-y-8 sm:gap-y-5">
             <h1 className="mt-10 md:mt-6 text-[62px] sm:text-center lg:text-[36px] md:text-[30px] font-bold leading-normal">
               Learn and contribute to{" "}
               <span className="text-orange">bitcoin</span> and{" "}
@@ -19,11 +19,11 @@ export default function Home() {
               <span className="text-green">lightning</span> FOSS
             </h1>
             <div className="md:flex md:flex-col md:items-center">
-              <h2 className="text-[32px] lg:text-[26px] md:text-[20px] font-medium leading-normal">
+              <h2 className="text-[32px] lg:text-[26px] md:text-[20px] sm:text-center font-medium leading-normal">
                 Build the future of money
               </h2>
             </div>
-            <div className="flex justify-between gap-x-3 lg:flex-col lg:gap-y-3 md:items-center">
+            <div className="flex gap-x-5 lg:flex-col lg:gap-y-3 md:items-center">
               {pointers.map((pointer) => (
                 <Pointer key={pointer.btnText} {...pointer} />
               ))}
@@ -65,7 +65,7 @@ export default function Home() {
           <h2 className="text-5xl md:text-3xl font-semibold">
             Tools to Explore
           </h2>
-          <p className="text-xl md:text-base leading-[140%] mx-20 my-6">
+          <p className="text-xl md:text-base leading-[140%] mx-20 sm:mx-0 my-6">
             Bitcoin and Lightning aim to solve some of the world&apos;s most
             difficult problems. While we recognize the enormity of the task, the
             Bitcoin Dev Project also aims to make Bitcoin and Lightning
