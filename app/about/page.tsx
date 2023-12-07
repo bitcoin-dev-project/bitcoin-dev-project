@@ -1,29 +1,61 @@
+type Props = {
+  content: string;
+  title: string;
+};
+
+const Item = ({ content, title }: Props) => (
+  <div className="gap-2">
+    <li className="list-disc font-medium text-xl md:text-base">{title}</li>
+    <p className="text-lg md:text-sm">{content}</p>
+  </div>
+);
+
 export default function About() {
   return (
     <main className="p-14 sm:p-7 mx-auto my-0">
       <div className="flex flex-col md:items-center mb-24 gap-y-10">
-        <h1 className="text-[62px] lg:text-[36px] md:text-center font-bold leading-normal">
-          About Bitcoin Dev Project
+        <h1 className="text-5xl md:text-lg md:text-center font-bold leading-normal">
+          About The Bitcoin Dev Project
         </h1>
-        <p className="text-2xl md:text-base md:text-center max-w-[60vw]">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
-          aliquam distinctio excepturi laudantium exercitationem ipsa voluptate?
-          Maiores ipsum vero possimus commodi fuga quae reprehenderit non
-          dolores autem dolor. Magni, temporibus. Consequatur vel numquam
-          facere. Velit sequi nam odit, ex vitae optio sit vero quo explicabo
-          consectetur minima porro numquam accusantium aut fugit repellat error
-          inventore. Quod laudantium assumenda velit dolorem! Eveniet soluta
-          quam repellendus ex veniam sint id fugit iste, qui nobis libero, sunt
-          sapiente vel placeat, deserunt inventore obcaecati sequi repudiandae
-          ut provident reprehenderit! Quidem eos debitis obcaecati esse?
-          Perspiciatis optio rerum incidunt saepe quis? Provident libero eum
-          error ab debitis deleniti molestias sapiente ratione aspernatur
-          commodi neque, reiciendis repellat vero, fuga dolorum hic? Odio
-          pariatur quaerat voluptatem earum. Libero est qui laborum numquam
-          deserunt, quas tenetur beatae at deleniti animi nobis cumque aliquid
-          error quo officia molestiae pariatur quis totam veniam consequatur
-          necessitatibus minus commodi ut esse? Atque?
-        </p>
+        <ul className="flex flex-col gap-5">
+          <Item
+            content="The Bitcoin Dev Project is a collaborative and
+          open-source initiative that aims to demystify and advance Bitcoin and
+          Lightning Network technologies. By focusing on Free and Open Source
+          Software (FOSS), we are building a community where developers and
+          enthusiasts can learn, contribute, and create a solid foundation for
+          the future of money."
+            title="Empowering Innovation"
+          />
+          <Item
+            content="We believe in a future where financial systems are open,
+            transparent, and accessible to everyone. The Bitcoin Dev Project
+            serves as a hub for education and development, fostering a space where
+            individuals can dive into the complexities of the bitcoin technology
+            and emerge as innovators in the field."
+            title="Our Vision"
+          />
+          <Item
+            content="Our journey is
+            about continuous learning, building, and sharing knowledge with a
+            growing global community."
+            title="Our Journey"
+          />
+          <Item
+            content="Whether you're a seasoned
+            developer or just starting, there's a place for you in The Bitcoin Dev
+            Project. Explore our projects, interact with educational content, and
+            join the journey toward a decentralized financial future."
+            title="Get Involved"
+          />
+          <Item
+            content="Join our efforts to shape the financial technology landscape. Dive
+            into our resources, contribute to our projects, and take part in
+            discussions that push the boundaries of what's possible with Bitcoin
+            and the Lightning Network."
+            title="Connect with Us"
+          />
+        </ul>
       </div>
     </main>
   );
