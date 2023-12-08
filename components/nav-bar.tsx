@@ -15,12 +15,21 @@ export default function NavBar() {
           </Link>
           <Drawer />
           <div className="sm:hidden flex items-center gap-x-[24px]">
+            <div className="dropdown">
+              <div className="dropdown-content">
+                <Link href="/bitcoin-core">Bitcoin Core</Link>
+                <Link href="/lightning-foss">Lightning FOSS</Link>
+              </div>
+            </div>
             {learnSection.data.map((item) => (
               <Link key={item.slug} href={`/${item.slug}`}>
                 {item.shortTitle}
               </Link>
             ))}
-            <Link key="About" href="/about">
+            <Link href="/tools">
+              Tools
+            </Link>
+            <Link href="/about">
               About
             </Link>
           </div>
