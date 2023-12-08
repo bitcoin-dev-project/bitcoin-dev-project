@@ -20,6 +20,9 @@ export default function NavBar() {
                 {item.shortTitle}
               </Link>
             ))}
+            <Link key="About" href="/about">
+              About
+            </Link>
           </div>
         </div>
       </div>

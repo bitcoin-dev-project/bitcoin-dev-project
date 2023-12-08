@@ -74,20 +74,20 @@ export const learnSection = createSection({
   slug: "explore",
   data: [
     {
-      description: "Discover Bitcoin and Lightning FOSS Projects",
+      description: "Discover bitcoin and lightning FOSS Projects",
       btnText: "Explore",
       src: "/bitcoin-infra-development.jpg",
       title: "Projects",
-      shortTitle: "FOSS Projects",
+      shortTitle: "Projects",
       slug: "/projects",
     },
     {
-      description: "What is the Bitcoin Dev Project?",
-      btnText: "Discover",
+      description: "Start your career in FOSS",
+      btnText: "Career",
       src: "/lighting-infra-development.jpg",
-      title: "About",
-      shortTitle: "About",
-      slug: "/about",
+      title: "Career",
+      shortTitle: "Career",
+      slug: "/career",
     },
   ],
 });
