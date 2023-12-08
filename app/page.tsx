@@ -1,4 +1,3 @@
-import Accordion from "@/components/accordion";
 import Button from "@/components/button";
 import Pointer from "@/components/pointer";
 import SectionCard from "@/components/section-card";
@@ -116,15 +115,6 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="my-32 flex flex-col self-center text-center mb-8 gap-y-5">
-          <h2 className="text-5xl font-semibold md:text-3xl">FAQs</h2>
-          <div className="flex flex-col gap-y-8">
-            {faqs.map((faq) => (
-              <Accordion key={faq.title} {...faq} />
-            ))}
           </div>
         </div>
       </div>

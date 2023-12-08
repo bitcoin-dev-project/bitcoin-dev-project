@@ -1,3 +1,6 @@
+import Accordion from "@/components/accordion";
+import { faqs } from "@/content/data";
+
 type Props = {
   content: string;
   title: string;
@@ -56,6 +59,15 @@ export default function About() {
             title="Connect with Us"
           />
         </ul>
+      </div>
+
+      <div className="my-32 flex flex-col self-center text-center mb-8 gap-y-5">
+        <h2 className="text-5xl font-semibold md:text-3xl">FAQs</h2>
+        <div className="flex flex-col gap-y-8">
+          {faqs.map((faq) => (
+            <Accordion key={faq.title} {...faq} />
+          ))}
+        </div>
       </div>
     </main>
   );
