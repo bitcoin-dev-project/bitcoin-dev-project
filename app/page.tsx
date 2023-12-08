@@ -110,7 +110,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-[12px] w-[212px] md:w-[50vw] self-center it">
-                <Button href="/explore" className="w-full">
+                <Button href="/tools" className="w-full">
                   Explore
                 </Button>
               </div>
