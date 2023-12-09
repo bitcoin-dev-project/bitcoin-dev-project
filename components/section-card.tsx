@@ -24,7 +24,7 @@ export default function SectionCard({
   return (
     <div
       className={clsx(
-        `flex flex-col bg-pale-orange rounded-xl shadow-normal hover:shadow-raised transition-[box-shadow] duration-500 ease-in-out overflow-hidden w-[48%] md:w-full`,
+        `flex flex-col bg-pale-orange rounded-xl shadow-normal hover:shadow-raised transition-[box-shadow] duration-500 ease-in-out overflow-hidden`,
         className
       )}
     >

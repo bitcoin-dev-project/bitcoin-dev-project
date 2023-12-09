@@ -11,7 +11,7 @@ type Props = React.ComponentProps<typeof Link> & {
 export default function ToolsCard({ alt, name, src, ...rest }: Props) {
   return (
     <Link {...rest}>
-      <div className="relative h-[184px] overflow-hidden w-[184px] rounded-[18px] xl:w-[25vw] md:w-[50vw] md:h-[200px] hover:scale-105 transition-all duration-500 ease-in-out">
+      <div className="relative h-[240px] w-[240px] md:h-[280px] md:w-[280px] xs:w-[180px] xs:h-[180px] flex-shrink overflow-hidden rounded-[18px] hover:scale-105 transition-transform duration-500 ease-in-out">
         <Image
           fill
           src={src}
