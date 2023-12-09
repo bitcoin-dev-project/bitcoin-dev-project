@@ -52,6 +52,7 @@ const config: Config = {
       // => @media (max-width: 767px) { ... }
 
       sm: { max: "639px" },
+      // => @media (max-width: 639px) { ... }
 
       xs: { max: "500px" },
       // => @media (max-width: 500px) { ... }
