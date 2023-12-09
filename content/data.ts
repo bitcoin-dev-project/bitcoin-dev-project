@@ -92,6 +92,25 @@ export const learnSection = createSection({
   ],
 });
 
+export const links = [
+  {
+    text: "Projects",
+    linkTo: "/projects",
+  },
+  {
+    text: "Career",
+    linkTo: "/career",
+  },
+  {
+    text: "Tools",
+    linkTo: "/tools",
+  },
+  {
+    text: "About",
+    linkTo: "/about",
+  },
+];
+
 export const contributeSection = createSection({
   title: "Projects",
   slug: "projects",

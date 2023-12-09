@@ -23,7 +23,7 @@ export default function Accordion({ content, title }: Props) {
           {title}
         </h3>
         <svg
-          className={`${iconStyle} transition-all ease-linear  md:w-[16px] md:h-[16px]`}
+          className={`${iconStyle} transition-transform ease-linear md:w-[16px] md:h-[16px]`}
           width="24"
           height="14"
           viewBox="0 0 24 14"

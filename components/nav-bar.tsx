@@ -1,6 +1,7 @@
-import { learnSection } from "@/content/data";
+import { links } from "@/content/data";
 import Link from "next/link";
 import Drawer from "./drawer";
+import { Desktop, LearnDropDown } from "./learn-dropdown";
 
 export default function NavBar() {
   return (
@@ -14,24 +15,13 @@ export default function NavBar() {
             </h1>
           </Link>
           <Drawer />
-          <div className="sm:hidden flex items-center gap-x-[24px]">
-            <div className="dropdown">
-              <div className="dropdown-content">
-                <Link href="/bitcoin-core">Bitcoin Core</Link>
-                <Link href="/lightning-foss">Lightning FOSS</Link>
-              </div>
-            </div>
-            {learnSection.data.map((item) => (
-              <Link key={item.slug} href={`/${item.slug}`}>
-                {item.shortTitle}
+          <div className="sm:hidden flex items-center gap-x-[24px] text-base">
+            <LearnDropDown />
+            {links.map((link) => (
+              <Link key={link.text} href={link.linkTo}>
+                {link.text}
               </Link>
             ))}
-            <Link href="/tools">
-              Tools
-            </Link>
-            <Link href="/about">
-              About
-            </Link>
           </div>
         </div>
       </div>

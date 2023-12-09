@@ -18,7 +18,7 @@ export default function Explore() {
           <SectionCard
             key={section.title}
             alt={section.title}
-            className="lg:w-[48%]"
+            className="w-[30%] lg:w-[48%]"
             {...section}
             target="_blank"
             rel="noopener"

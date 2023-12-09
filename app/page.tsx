@@ -2,7 +2,7 @@ import Button from "@/components/button";
 import Pointer from "@/components/pointer";
 import SectionCard from "@/components/section-card";
 import ToolsCard from "@/components/tools-card";
-import { faqs, learnSection, pointers, toolsData } from "@/content/data";
+import { learnSection, pointers, toolsData } from "@/content/data";
 import Image from "next/image";
 
 export default function Home() {
@@ -23,8 +23,14 @@ export default function Home() {
               </h2>
             </div>
             <div className="flex gap-x-5 lg:flex-col lg:gap-y-3 md:items-center">
-              {pointers.map((pointer) => (
-                <Pointer key={pointer.btnText} {...pointer} />
+              {pointers.map((pointer, index) => (
+                <Pointer
+                  className={
+                    index === 1 ? "from-green !to-bright-cyan" : undefined
+                  }
+                  key={pointer.btnText}
+                  {...pointer}
+                />
               ))}
             </div>
           </div>

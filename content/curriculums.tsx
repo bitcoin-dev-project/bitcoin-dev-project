@@ -200,7 +200,7 @@ export const curriculums = {
             <Link
               target="_blank"
               rel="noopener"
-              className="text-orange underline"
+              className="text-green underline"
               href="https://github.com/lightningdevkit"
             >
               LDK
@@ -209,7 +209,7 @@ export const curriculums = {
             <Link
               target="_blank"
               rel="noopener"
-              className="text-orange underline"
+              className="text-green underline"
               href="https://github.com/lightningnetwork/lnd"
             >
               LND
@@ -218,7 +218,7 @@ export const curriculums = {
             <Link
               target="_blank"
               rel="noopener"
-              className="text-orange underline"
+              className="text-green underline"
               href="https://github.com/ElementsProject/lightning"
             >
               Core Lightning
@@ -227,7 +227,7 @@ export const curriculums = {
             <Link
               target="_blank"
               rel="noopener"
-              className="text-orange underline"
+              className="text-green underline"
               href="https://github.com/ACINQ/eclair"
             >
               Eclair

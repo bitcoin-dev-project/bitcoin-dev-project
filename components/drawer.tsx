@@ -1,12 +1,15 @@
 "use client";
 
-import { learnSection } from "@/content/data";
+import { links } from "@/content/data";
 import clsx from "clsx";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { LearnDropDown } from "./learn-dropdown";
 
 export default function Drawer() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const hideDrawer = () => setIsOpen(false);
 
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", isOpen);
@@ -68,14 +71,15 @@ export default function Drawer() {
           </svg>
         </button>
         <div className="flex flex-col flex-1 gap-6 bg-white h-full">
-          {learnSection.data.map((item) => (
+          <LearnDropDown.Mobile hideDrawer={hideDrawer} />
+          {links.map((link) => (
             <Link
-              onClick={() => setIsOpen(false)}
+              onClick={hideDrawer}
               className="font-semibold text-lg"
-              key={item.slug}
-              href={`/${item.slug}/curriculum`}
+              key={link.text}
+              href={link.linkTo}
             >
-              {item.shortTitle}
+              {link.text}
             </Link>
           ))}
         </div>
