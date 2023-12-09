@@ -2,6 +2,11 @@ import { slugify } from "@/utils/slugify";
 
 export const toolsData = [
   {
+    name: "Transcript Review",
+    href: "https://review.btctranscripts.com/",
+    src: "/btc-transcript-editor.jpg",
+  },
+  {
     name: "Chat BTC",
     href: "https://chat.bitcoinsearch.xyz",
     src: "/chat-btc.jpg",
@@ -13,8 +18,13 @@ export const toolsData = [
   },
   {
     name: "Bitcoin Transcripts",
-    href: "https://review.btctranscripts.com/",
+    href: "https://btctranscripts.com/",
     src: "/bitcoin-transcript.jpg",
+  },
+  {
+    name: "Bitcoin TLDR",
+    href: "https://tldr.bitcoinsearch.xyz/",
+    src: "/tldr.jpg",
   },
   {
     name: "Bitcoin Search",
