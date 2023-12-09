@@ -10,15 +10,15 @@ export default function Home() {
   return (
     <main>
       <div className="flex justify-between md:flex-col gap-4 md:gap-y-10">
-        <div className="flex basis-1/2 flex-grow flex-col justify-end px-14 md:px-7 md:order-2">
+        <div className="flex basis-1/2 flex-grow flex-col justify-center px-14 md:px-7 md:order-2">
           <div className="flex flex-col gap-y-8 sm:gap-y-5">
-            <h1 className="mt-10 md:mt-6 text-[62px] sm:text-center lg:text-[36px] md:text-[30px] font-bold leading-normal">
+            <h1 className="md:mt-6 text-[62px] sm:text-center lg:text-[36px] md:text-[30px] font-bold leading-normal">
               Learn and contribute to{" "}
               <span className="text-orange">bitcoin</span> and{" "}
               <br className="md:hidden"></br>
               <span className="text-green">lightning</span> FOSS
             </h1>
-            <div className="md:flex md:flex-col md:items-center">
+            <div className="mt-4 md:mt-0 md:flex md:flex-col md:items-center">
               <h2 className="text-[32px] lg:text-[26px] md:text-[20px] sm:text-center font-medium leading-normal">
                 Build the future of money
               </h2>
