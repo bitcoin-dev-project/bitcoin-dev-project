@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import NavBar from "@/components/nav-bar";
 import type { Metadata } from "next";
 import "./globals.css";
+import { Banner } from "@/components/banner";
 
 export const metadata: Metadata = {
   title: "The Bitcoin Dev Project",
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={barlow.className}>
         <Fonts />
         <NavBar />
+        <Banner headingText="Hello" bodyText="Temporary Banner" />
         <div className="flex flex-grow flex-col min-h-screen max-w-7xl m-auto">
           {children}
         </div>

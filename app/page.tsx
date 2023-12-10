@@ -1,4 +1,3 @@
-import { Banner } from "@/components/banner";
 import Button from "@/components/button";
 import Pointer from "@/components/pointer";
 import SectionCard from "@/components/section-card";
@@ -105,7 +104,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Banner headingText="Hello" bodyText="Temporary Banner" />
     </main>
   );
 }

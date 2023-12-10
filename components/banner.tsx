@@ -14,24 +14,26 @@ export function Banner({ bodyText, headingText }: Props) {
   return (
     <div
       className={clsx(
-        "flex items-center justify-between fixed top-28 left-1/2 transform -translate-x-1/2 w-4/5 bg-bg-color p-2 px-8 rounded-md shadow-md transition-transform duration-200 ease-in-out",
+        "flex items-center justify-between w-full bg-bg-color px-8 shadow-md transition-all duration-200 ease-in-out",
         {
-          "translate-y-0": showBanner,
-          "translate-y-[-200px]": !showBanner,
+          "h-16 sm:h-12": showBanner && !!headingText,
+          "h-12 sm:h-8": showBanner && !headingText,
+          "h-0 overflow-hidden": !showBanner,
         }
       )}
     >
       <div className="flex flex-col">
         {!!headingText && (
-          <h3 className="font-semibold text-lg">{headingText}</h3>
+          <h3 className="font-semibold text-lg sm:text-sm">{headingText}</h3>
         )}
-        <p>{bodyText}</p>
+        <p className="sm:text-xs">{bodyText}</p>
       </div>
       <button
         onClick={() => setShowBanner(false)}
         className="text-orange hover:text-bright-orange"
       >
         <svg
+          className="h-6 w-6 sm:h-4 sm:w-4"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
