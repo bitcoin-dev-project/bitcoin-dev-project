@@ -9,10 +9,10 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <div className="flex justify-between md:flex-col gap-4 md:gap-y-10">
+      <div className="flex justify-between md:flex-col gap-4 md:gap-y-6">
         <div className="flex basis-1/2 flex-grow flex-col justify-center px-14 md:px-7 md:order-2">
           <div className="flex flex-col gap-y-8 sm:gap-y-5">
-            <h1 className="md:mt-6 text-[62px] sm:text-center lg:text-[36px] md:text-[30px] font-bold leading-normal">
+            <h1 className="text-[62px] md:text-[30px] sm:text-2xl sm:text-center lg:text-[36px] font-bold leading-normal">
               Learn and contribute to{" "}
               <span className="text-orange">bitcoin</span> and{" "}
               <br className="md:hidden"></br>
@@ -51,7 +51,7 @@ export default function Home() {
       <div className="flex flex-col px-14 sm:px-7">
         <h2
           id={learnSection.slug}
-          className="mt-32 md:mt-10 text-5xl md:text-3xl font-semibold text-center self-center mb-6"
+          className="mt-32 md:mt-10 text-5xl md:text-2xl font-semibold text-center self-center mb-6"
         >
           {learnSection.title}
         </h2>
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
 
         <div className="mt-32 md:mt-10 flex flex-col self-center text-center gap-y-2">
-          <h2 className="text-5xl md:text-3xl font-semibold">
+          <h2 className="text-5xl md:text-2xl font-semibold">
             Tools to Explore
           </h2>
           <p className="text-xl md:text-base leading-[140%] mx-20 sm:mx-0 my-6">
