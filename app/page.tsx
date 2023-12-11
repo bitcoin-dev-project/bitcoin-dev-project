@@ -1,9 +1,8 @@
 import Button from "@/components/button";
+import HomeCarousel from "@/components/home-carousel";
 import Pointer from "@/components/pointer";
 import SectionCard from "@/components/section-card";
-import ToolsCard from "@/components/tools-card";
-import { learnSection, pointers, toolsData } from "@/content/data";
-import clsx from "clsx";
+import { learnSection, pointers } from "@/content/data";
 import Image from "next/image";
 
 export default function Home() {
@@ -80,21 +79,7 @@ export default function Home() {
           </p>
           <div className="relative flex flex-col w-full md:h-[1200px] h-[700px] md:pt-5 bg-pale-orange">
             <div className="overflow-hidden pb-28 md:pb-5 absolute bottom-0 left-0 right-0 flex flex-col md:relative">
-              <div className="flex md:flex-col md:items-center gap-10 py-20 md:py-6 overflow-x-auto md:overflow-y-auto whitespace-nowrap no-scrollbar">
-                {toolsData.map((data, index) => (
-                  <ToolsCard
-                    className={clsx({
-                      "ml-10 md:ml-0": index === 0,
-                      "mr-10 md:mr-0": index === toolsData.length - 1,
-                    })}
-                    target="_blank"
-                    rel="noopener"
-                    key={data.name}
-                    alt={data.name}
-                    {...data}
-                  />
-                ))}
-              </div>
+              <HomeCarousel />
               <div className="mt-[10px] w-[212px] md:w-[50vw] self-center it">
                 <Button href="/tools" className="w-full">
                   Explore
