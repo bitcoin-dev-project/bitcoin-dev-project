@@ -7,7 +7,18 @@ import { Banner } from "@/components/banner";
 
 export const metadata: Metadata = {
   title: "The Bitcoin Dev Project",
-  description: "A place to learn about bitcoin development",
+  description: "Find your way in bitcoin FOSS",
+  openGraph: {
+    images: ["https://bitcoindevs.xyz/landscape.jpg"],
+    title: "The Bitcoin Dev Project",
+    url: "https://bitcoindevs.xyz",
+    description: "Find your way in bitcoin FOSS",
+  },
+  twitter: {
+    images: ["https://bitcoindevs.xyz/landscape.jpg"],
+    card: "summary_large_image",
+  },
+  keywords: "bitcoin, lightning, bitcoin development, bitcoin FOSS, bitcoin career, free open source software, open source, bitcoin development, bitcoin development community, bitcoin development resources, bitcoin development tools, bitcoin development guides, bitcoin development courses"
 };
 
 export default function RootLayout({
