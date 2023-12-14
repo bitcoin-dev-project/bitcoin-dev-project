@@ -199,12 +199,12 @@ export const exploreSection = createSection({
 
 export const pointers = [
   {
-    btnText: "Learn Bitcoin FOSS",
+    btnText: "Explore Bitcoin Core",
     description: "",
     jumpTo: `/bitcoin-foss`,
   },
   {
-    btnText: "Learn Lightning FOSS",
+    btnText: "Explore Lightning FOSS",
     description: "",
     jumpTo: `/lightning-foss`,
   },
