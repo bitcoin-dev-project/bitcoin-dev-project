@@ -68,7 +68,7 @@ export default function Home() {
 
         <div className="mt-32 md:mt-10 flex flex-col self-center text-center gap-y-2">
           <h2 className="text-5xl md:text-2xl font-semibold">
-            Tools to Explore
+            Tools
           </h2>
           <p className="text-xl md:text-base leading-[140%] mx-20 sm:mx-0 my-6">
             Bitcoin and Lightning aim to solve some of the world&apos;s most
@@ -77,12 +77,12 @@ export default function Home() {
             development enjoyable and approachable. Check out some of the tools
             and educational content made by us and our friends.
           </p>
-          <div className="relative flex flex-col w-full md:h-[1200px] h-[700px] md:pt-5 bg-pale-orange">
-            <div className="overflow-hidden pb-28 md:pb-5 absolute bottom-0 left-0 right-0 flex flex-col md:relative">
+          <div className="relative flex flex-col w-full md:h-[1200px] h-[530px] md:pt-5 bg-pale-orange rounded-xl">
+            <div className="overflow-hidden pb-20 md:pb-5 absolute bottom-0 left-0 right-0 flex flex-col md:relative">
               <HomeCarousel />
               <div className="mt-[10px] w-[212px] md:w-[50vw] self-center it">
                 <Button href="/tools" className="w-full">
-                  Explore
+                  Discover
                 </Button>
               </div>
             </div>

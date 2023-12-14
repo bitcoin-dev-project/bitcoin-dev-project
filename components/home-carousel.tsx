@@ -47,7 +47,7 @@ export default function HomeCarousel() {
       </button>
       <div
         ref={ref}
-        className="flex md:flex-col md:items-center gap-10 py-20 md:py-6 overflow-x-auto scroll-smooth md:overflow-y-auto whitespace-nowrap no-scrollbar"
+        className="flex md:flex-col md:items-center gap-10 py-10 md:py-6 overflow-x-auto scroll-smooth md:overflow-y-auto whitespace-nowrap no-scrollbar"
       >
         {toolsData.map((data, index) => (
           <ToolsCard
