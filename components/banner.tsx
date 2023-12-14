@@ -14,7 +14,7 @@ export function Banner({ bodyText, headingText }: Props) {
   return (
     <div
       className={clsx(
-        "flex items-center justify-between w-full bg-bg-color px-8 shadow-md transition-all duration-200 ease-in-out",
+        "flex items-center justify-between w-full bg-bg-color px-8 shadow-md transition-all duration-200 ease-in-out text-center",
         {
           "h-16 sm:h-12": showBanner && !!headingText,
           "h-12 sm:h-8": showBanner && !headingText,
@@ -24,9 +24,9 @@ export function Banner({ bodyText, headingText }: Props) {
     >
       <div className="flex flex-col">
         {!!headingText && (
-          <h3 className="font-semibold text-lg sm:text-sm">{headingText}</h3>
+          <h3 className="font-semibold text-lg sm:text-sm">Start your career in bitcoin foss with Chaincode Labs</h3>
         )}
-        <p className="sm:text-xs">{bodyText}</p>
+        <a className="text-orange underline font-semibold" href="https://learning.chaincode.com/#FOSS">APPLY TODAY!</a>
       </div>
       <button
         onClick={() => setShowBanner(false)}

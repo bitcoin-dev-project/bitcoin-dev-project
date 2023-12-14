@@ -31,7 +31,10 @@ export default function RootLayout({
       <body className={barlow.className}>
         <Fonts />
         <NavBar />
-        <Banner headingText="Hello" bodyText="Temporary Banner" />
+        <Banner
+          headingText="Start your career in bitcoin foss with Chaincode Labs"
+          bodyText="APPLY TODAY!"
+        />
         <div className="flex flex-grow flex-col min-h-screen max-w-7xl m-auto">
           {children}
         </div>
