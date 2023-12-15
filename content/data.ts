@@ -136,67 +136,6 @@ export const contributeSection = createSection({
   ],
 });
 
-export const exploreSection = createSection({
-  title: "Explore tools and resources",
-  description:
-    "Explore tools built by the Bitcoin Dev Project in addition to some others we cannot live without.",
-  slug: "learn",
-  data: [
-    {
-      description: "Chat with your favorite bitcoin sources and authors",
-      btnText: "Chat",
-      src: "/chat-btc.jpg",
-      title: "Chat BTC",
-      slug: "",
-      href: "https://chat.bitcoinsearch.xyz",
-    },
-    {
-      description: "The technical bitcoin search engine we deserve",
-      btnText: "Search",
-      src: "/bitcoin-search.jpg",
-      title: "Bitcoin Search",
-      slug: "",
-      href: "https://bitcoinsearch.xyz",
-    },
-    {
-      description:
-        "Bitcoin-dev and Lightning-dev mailing list, summaries and discovery",
-      btnText: "Read",
-      src: "/tldr.jpg",
-      title: "Bitcoin TLDR",
-      slug: "",
-      href: "https://tldr.bitcoinsearch.xyz/",
-    },
-    {
-      description:
-        "Peruse archives of transcribed talks, podcasts and lectures",
-      btnText: "Read",
-      src: "/bitcoin-transcript.jpg",
-      title: "Bitcoin Transcripts",
-      slug: "",
-      href: "https://btctranscripts.com/",
-    },
-    {
-      description:
-        "Contribute to BTC transcripts by reviewing AI-generated copy",
-      btnText: "Contribute",
-      src: "/btc-transcript-editor.jpg",
-      title: "Transcript Review",
-      slug: "",
-      href: "https://review.btctranscripts.com/",
-    },
-    {
-      description:
-        "An interactive science fiction story designed to inspire a generation to fall in love with bitcoin",
-      btnText: "Play",
-      src: "/saving-satoshi.jpg",
-      title: "Saving Satoshi",
-      slug: "",
-      href: "https://savingsatoshi.com",
-    },
-  ],
-});
-
 export const pointers = [
   {
     btnText: "Explore Bitcoin Core",
