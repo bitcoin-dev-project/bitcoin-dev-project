@@ -17,14 +17,6 @@ export default function Projects() {
         {projects.levels.map((level, index) => (
           <PageLevel
             key={level.title}
-            colorClass={clsx({
-              "text-orange": index === 0,
-              "text-green": index === 1,
-            })}
-            gradientClass={clsx({
-              "from-orange to-yellow": index === 0,
-              "from-green to-bright-cyan": index === 1,
-            })}
             pageTitle={`${index + 1}. ${level.title}`}
             showHeader={false}
             {...level}
