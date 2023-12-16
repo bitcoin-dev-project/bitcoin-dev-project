@@ -3,34 +3,56 @@
 import clsx from "clsx";
 import { useState } from "react";
 
-type Props = {
-  bodyText: string;
+type Links =
+  | {
+      linkText?: undefined;
+    }
+  | {
+      linkText: string;
+      linkTo: string;
+    };
+type Props = Links & {
+  bodyText?: string;
   headingText?: string;
 };
 
-export function Banner({ bodyText, headingText }: Props) {
+export function Banner({ bodyText, headingText, ...rest }: Props) {
   const [showBanner, setShowBanner] = useState(true);
 
   return (
     <div
       className={clsx(
-        "flex items-center justify-between w-full bg-bg-color px-8 shadow-md transition-all duration-200 ease-in-out text-center",
+        "flex items-center justify-between w-full bg-bg-color px-8 sm:px-2 shadow-md transition-all duration-200 ease-in-out text-center",
         {
-          "h-16 sm:h-12": showBanner && !!headingText,
-          "h-12 sm:h-8": showBanner && !headingText,
+          "h-16": showBanner && !!headingText,
+          "h-12": showBanner && !headingText,
           "h-0 overflow-hidden": !showBanner,
         }
       )}
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col flex-1 px-8 sm:px-2">
         {!!headingText && (
-          <h3 className="font-semibold text-lg sm:text-sm">Start your career in bitcoin foss with Chaincode Labs</h3>
+          <h3 className="font-semibold text-lg sm:text-sm">{headingText}</h3>
         )}
-        <a className="text-orange underline font-semibold" href="https://learning.chaincode.com/#FOSS">APPLY TODAY!</a>
+        {!!bodyText && <p className="sm:text-xs">{bodyText}</p>}
+        {!!rest.linkText && (
+          <a
+            className="text-orange underline font-semibold md:text-sm sm:text-xs"
+            href={rest.linkTo}
+          >
+            {rest.linkText}
+          </a>
+        )}
       </div>
       <button
         onClick={() => setShowBanner(false)}
-        className="text-orange hover:text-bright-orange"
+        className={clsx(
+          "text-orange hover:text-bright-orange absolute right-0 mx-8 sm:mx-2 transition-all duration-200 ease-in-out",
+          {
+            "opacity-1": showBanner,
+            "opacity-0": !showBanner,
+          }
+        )}
       >
         <svg
           className="h-6 w-6 sm:h-4 sm:w-4"

@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     images: ["https://bitcoindevs.xyz/landscape.jpg"],
     card: "summary_large_image",
   },
-  keywords: "bitcoin, lightning, bitcoin development, bitcoin FOSS, bitcoin career, free open source software, open source, bitcoin development, bitcoin development community, bitcoin development resources, bitcoin development tools, bitcoin development guides, bitcoin development courses"
+  keywords:
+    "bitcoin, lightning, bitcoin development, bitcoin FOSS, bitcoin career, free open source software, open source, bitcoin development, bitcoin development community, bitcoin development resources, bitcoin development tools, bitcoin development guides, bitcoin development courses",
 };
 
 export default function RootLayout({
@@ -33,7 +34,8 @@ export default function RootLayout({
         <NavBar />
         <Banner
           headingText="Start your career in bitcoin foss with Chaincode Labs"
-          bodyText="APPLY TODAY!"
+          linkText="APPLY TODAY!"
+          linkTo="https://learning.chaincode.com/#FOSS"
         />
         <div className="flex flex-grow flex-col min-h-screen max-w-7xl m-auto">
           {children}
