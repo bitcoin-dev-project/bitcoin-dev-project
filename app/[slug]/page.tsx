@@ -1,8 +1,7 @@
-import Button from "@/components/button";
 import PageLevel from "@/components/page-level";
 import { curriculums, type KnownCurriculums } from "@/content/curriculums";
 import { slugify } from "@/utils/slugify";
-import clsx from "clsx";
+import Link from "next/link";
 
 export default function Curriculum({
   params,
@@ -20,46 +19,26 @@ export default function Curriculum({
         <p className="text-2xl md:text-base md:text-center max-w-[60vw]">
           {curriculum.description}
         </p>
-        <div className="flex gap-x-6 md:flex-col md:gap-y-6 md:py-8">
-          {curriculum.levels.map((item, index) => (
-            <Button
-              href={`#${slugify(item.title)}`}
-              key={item.title}
-              className={clsx(
-                `w-[165px] bg-gradient-130 from-[0%] to-[104%] rounded-[10px]`,
-                {
-                  "from-orange to-yellow": index === 0,
-                  "from-yellow to-light-orange": index === 1,
-                  "from-green !to-bright-cyan": index === 2,
-                  "from-light-orange to-bright-orange": index === 3,
-                }
-              )}
-            >
-              {item.title}
-            </Button>
-          ))}
+        <div className="flex flex-col gap-y-1 md:text-center md:gap-y-3">
+          <h3 className="font-medium text-2xl md:text-base text-[#858585]">
+            Navigation
+          </h3>
+          <div className="flex gap-x-8 md:flex-wrap md:gap-y-3 md:items-center md:justify-center">
+            {curriculum.levels.map((item) => (
+              <Link
+                className="font-semibold text-2xl md:text-base underline"
+                href={`#${slugify(item.title)}`}
+                key={item.title}
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
-
       <div className="flex flex-col gap-y-24">
         {curriculum.levels.map((level, index) => (
-          <PageLevel
-            key={level.title}
-            colorClass={clsx({
-              "text-orange": index === 0,
-              "text-yellow": index === 1,
-              "text-green": index === 2,
-              "text-light-orange": index === 3,
-            })}
-            gradientClass={clsx({
-              "from-orange to-yellow": index === 0,
-              "from-yellow to-light-orange": index === 1,
-              "from-green to-bright-cyan": index === 2,
-              "from-light-orange to-bright-orange": index === 3,
-            })}
-            pageTitle={`${index + 1}. ${level.title}`}
-            {...level}
-          />
+          <PageLevel key={level.title} pageTitle={level.title} {...level} />
         ))}
       </div>
     </main>

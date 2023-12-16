@@ -5,16 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 type PageLevelProps = Page["levels"][number] & {
-  colorClass: string;
-  gradientClass: string;
   pageTitle: string;
   showHeader?: boolean;
 };
 
 export default function PageLevel({
-  colorClass,
   description,
-  gradientClass,
   pageTitle,
   showHeader = true,
   ...level
@@ -32,12 +28,6 @@ export default function PageLevel({
           })}
         >
           <div className="flex items-center gap-x-6 md:gap-x-2">
-            <div
-              className={clsx(
-                `min-w-[80px] h-[80px] border-[#D9D9D9] border md:border-0 rounded-2xl overflow-hidden bg-gradient-130 from-[0%] to-[104%]`,
-                gradientClass
-              )}
-            />
             <h2 className="text-5xl md:text-2xl font-semibold">{pageTitle}</h2>
           </div>
           {!!description && <p>{description}</p>}
@@ -65,12 +55,7 @@ export default function PageLevel({
               <h3 className="text-4xl md:text-2xl font-semibold">
                 {item.title}
               </h3>
-              <p
-                className={clsx(
-                  `text-2xl md:text-lg font-semibold`,
-                  colorClass
-                )}
-              >
+              <p className="text-2xl md:text-lg font-semibold text-green">
                 {item.subTitle}
               </p>
               <p className="flex flex-shrink-1 text-sm md:text-xs leading-[140%]">
