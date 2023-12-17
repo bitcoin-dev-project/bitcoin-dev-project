@@ -148,3 +148,16 @@ export const pointers = [
     jumpTo: `/lightning-foss`,
   },
 ];
+
+export const navPointers = [
+  {
+    btnText: "Bitcoin Core",
+    description: "",
+    jumpTo: `/bitcoin-foss`,
+  },
+  {
+    btnText: "Lightning FOSS",
+    description: "",
+    jumpTo: `/lightning-foss`,
+  },
+];

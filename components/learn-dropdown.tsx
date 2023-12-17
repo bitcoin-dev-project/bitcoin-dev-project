@@ -1,6 +1,6 @@
 "use client";
 
-import { pointers } from "@/content/data";
+import { navPointers } from "@/content/data";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,7 +40,7 @@ export function Desktop() {
           aria-labelledby="menu-button"
         >
           <div className="py-1" role="none">
-            {pointers.map((link) => (
+            {navPointers.map((link) => (
               <Link
                 onClick={() => setShowDropDown(false)}
                 key={link.btnText}
@@ -93,7 +93,7 @@ export function Mobile({ hideDrawer }: { hideDrawer: () => void }) {
           role="menu"
         >
           <div className="py-1" role="none">
-            {pointers.map((link) => (
+            {navPointers.map((link) => (
               <Link
                 onClick={hideDrawer}
                 key={link.btnText}
