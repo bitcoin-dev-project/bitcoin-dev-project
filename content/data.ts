@@ -84,7 +84,7 @@ export const learnSection = createSection({
   slug: "explore",
   data: [
     {
-      description: "Discover bitcoin and lightning FOSS Projects",
+      description: "Discover bitcoin and lightning FOSS projects",
       btnText: "Explore",
       src: "/bitcoin-infra-development.jpg",
       title: "Projects",
@@ -92,8 +92,8 @@ export const learnSection = createSection({
       slug: "/projects",
     },
     {
-      description: "Start your career in FOSS",
-      btnText: "Career",
+      description: "Begin your career in Bitcoin Free Open Source Software",
+      btnText: "Start",
       src: "/lighting-infra-development.jpg",
       title: "Career",
       shortTitle: "Career",
