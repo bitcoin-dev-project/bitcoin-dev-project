@@ -12,7 +12,7 @@ export const curriculums = {
       {
         title: "Level 1",
         description:
-          "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
+          "",
         items: [
           {
             image:
@@ -37,7 +37,7 @@ export const curriculums = {
       {
         title: "Level 2",
         description:
-          "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
+          "",
         items: [
           {
             image:
@@ -98,7 +98,7 @@ export const curriculums = {
       {
         title: "Level 3",
         description:
-          "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
+          "",
         items: [
           {
             image:
@@ -122,7 +122,7 @@ export const curriculums = {
       {
         title: "What's Next",
         description:
-          "Contributing to Bitcoin Core requires a stoic patience to onboard to a C++ codebase now in its teenage years. But since 99% of the nodes on the network run Bitcoin Core, it is the backbone of the ecosystem and if you've read Bitcoin Development Philosophy, then it is obvious that it is a philosophically driven project.",
+          "Contributing to Bitcoin Core requires a stoic patience to onboard to a C++ codebase now in its teenage years. 99% of the nodes on the network run Bitcoin Core making it the bedrock of the ecosystem. If you are looking for a project that moves fast and breaks things, this is NOT the right fit for you. There are ~30 full-time contributors to Bitcoin Core and only a few newcomers join their ranks each year. Are you up for the challenge?",
         items: [],
       },
     ],
@@ -135,7 +135,7 @@ export const curriculums = {
       {
         title: "Level 1",
         description:
-          "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
+          "",
         items: [
           {
             image:
@@ -153,7 +153,7 @@ export const curriculums = {
             subTitle:
               "Gain a deeper understanding of lightning's development philosophy",
             description:
-              "Gain a deeper understanding of Lightning’s design trade-offs and philosophy, offering insights into over a decade of Bitcoin development and public debate. This resource provides a critical framework for evaluating and innovating within the Bitcoin ecosystem.",
+              "Gain a deeper understanding of Lightning's design trade-offs and philosophy, offering insights into over a decade of Bitcoin development and public debate. This resource provides a critical framework for evaluating and innovating within the Bitcoin ecosystem.",
             link: "https://bitcoindevphilosophy.com/",
           },
           {
@@ -170,7 +170,7 @@ export const curriculums = {
       {
         title: "Level 2",
         description:
-          "Proof-of-work mempool cryptocurrency block height genesis block decentralized whitepaper difficulty blocksize. Segwit sats, wallet peer-to-peer, stacking sats electronic cash UTXO public key.",
+          "",
         items: [
           {
             image:
@@ -236,8 +236,7 @@ export const curriculums = {
             faster than the bitcoin protocol. Given that Lightning is still
             young, there are more rough edges to smooth and problems to sort.
             The best way to get involved is to jump on their slack or discord
-            and start picking up issues. Join in - it&apos;s a striking
-            opportunity!
+            and start picking up issues.
           </>
         ),
         items: [],
