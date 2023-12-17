@@ -4,32 +4,32 @@ export const toolsData = [
   {
     name: "Transcript Review",
     href: "https://review.btctranscripts.com/",
-    src: "/btc-transcript-editor.jpg",
+    src: "/tools/bitcoin-transcripts-review.jpg",
   },
   {
     name: "Chat BTC",
     href: "https://chat.bitcoinsearch.xyz",
-    src: "/chat-btc.jpg",
+    src: "/tools/chat-btc.jpg",
   },
   {
     name: "Saving Satoshi",
     href: "https://savingsatoshi.com",
-    src: "/saving-satoshi.jpg",
+    src: "/tools/saving-satoshi.jpg",
   },
   {
     name: "Bitcoin Transcripts",
     href: "https://btctranscripts.com/",
-    src: "/bitcoin-transcript.jpg",
+    src: "/tools/bitcoin-transcripts.jpg",
   },
   {
     name: "Bitcoin TLDR",
     href: "https://tldr.bitcoinsearch.xyz/",
-    src: "/tldr.jpg",
+    src: "/tools/bitcoin-tldr.jpg",
   },
   {
     name: "Bitcoin Search",
     href: "https://bitcoinsearch.xyz",
-    src: "/bitcoin-search.jpg",
+    src: "/tools/bitcoin-search.jpg",
   },
 ];
 

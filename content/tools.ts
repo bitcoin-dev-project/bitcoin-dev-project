@@ -11,13 +11,13 @@ export const tools = {
       items: [
         {
           description: "Chat with your favorite bitcoin sources and authors",
-          image: "/chat-btc.jpg",
+          image: "/tools/chat-btc.jpg",
           title: "Chat BTC",
           subTitle: "",
           link: "https://chat.bitcoinsearch.xyz",
         },
         {
-          image: "/bitcoin-search.jpg",
+          image: "/tools/bitcoin-search.jpg",
           description: "The technical bitcoin search engine we deserve",
           title: "Bitcoin Search",
           subTitle: "",
@@ -25,7 +25,7 @@ export const tools = {
         },
         {
           description: "Bitcoin-dev and Lightning-dev mailing list, summaries and discovery",
-          image: "/tldr.jpg",
+          image: "/tools/bitcoin-tldr.jpg",
           title: "Bitcoin TLDR",
           subTitle: "",
           link: "https://tldr.bitcoinsearch.xyz/",
@@ -33,21 +33,21 @@ export const tools = {
         {
           
           description: "Peruse archives of transcribed talks, podcasts and lectures",
-          image: "/bitcoin-transcript.jpg",
+          image: "/tools/bitcoin-transcripts.jpg",
           title: "Bitcoin Transcripts",
           subTitle: "",
           link: "https://btctranscripts.com/",
         },
         {
           description: "Contribute to BTC transcripts by reviewing AI-generated copy",
-          image: "/btc-transcript-editor.jpg",
+          image: "/tools/bitcoin-transcripts-review.jpg",
           title: "Transcript Review",
           subTitle: "",
           link: "https://review.btctranscripts.com/",
         },
         {
           description: "An interactive science fiction story designed to inspire a generation to fall in love with bitcoin",
-          image: "/saving-satoshi.jpg",
+          image: "/tools/saving-satoshi.jpg",
           title: "Saving Satoshi",
           subTitle: "",
           link: "https://savingsatoshi.com",
