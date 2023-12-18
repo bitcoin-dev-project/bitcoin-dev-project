@@ -4,11 +4,32 @@ import { navPointers } from "@/content/data";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function Desktop() {
+  const dropDownRef = useRef<HTMLDivElement>(null);
   const [showDropDown, setShowDropDown] = useState(false);
   const iconStyle = showDropDown ? "rotate-180" : "";
+
+  useEffect(() => {
+    document.addEventListener("mousedown", (event) => {
+      if (
+        dropDownRef.current &&
+        !dropDownRef.current.contains(event.target as Node)
+      ) {
+        setShowDropDown((value) => {
+          if (value) return !value;
+
+          return value;
+        });
+      }
+    });
+    return () => {
+      document.removeEventListener("mousedown", () => {
+        setShowDropDown(false);
+      });
+    };
+  }, []);
 
   return (
     <div className="relative inline-block text-left">
@@ -39,7 +60,7 @@ export function Desktop() {
           aria-orientation="vertical"
           aria-labelledby="menu-button"
         >
-          <div className="py-1" role="none">
+          <div ref={dropDownRef} className="py-1" role="none">
             {navPointers.map((link) => (
               <Link
                 onClick={() => setShowDropDown(false)}
