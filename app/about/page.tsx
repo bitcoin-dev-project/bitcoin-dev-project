@@ -20,71 +20,74 @@ export default function About() {
         <Item
           content={
             <>
-              The Bitcoin Dev Project is a{" "}
-              <a
-                className="text-orange"
-                href="https://chaincode.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Chaincode Labs
-              </a>{" "}
-              sponsored initiative geared towards developers at the beginning of
-              their bitcoin journey. Chaincode has a{" "}
-              <a
-                className="text-orange"
-                href="https://bluematt.bitcoin.ninja/2016/08/08/chaincode/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                long history
-              </a>{" "}
-              of providing technical education through its{" "}
-              <a
-                className="text-orange"
-                href="https://residency.chaincode.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                in-person residencies
-              </a>{" "}
-              and started offering online programs via the{" "}
-              <a
-                className="text-orange"
-                href="https://chaincode.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                seminars
-              </a>{" "}
-              in 2020.
-              <br />
-              <br />
-              There is an oft-repeated sentiment in the community that bitcoin
-              does not need you. While bitcoin is designed to be resilient, we
-              do need you. Bitcoin needs all the talent and energy it can gather
-              to solve some of the most difficult technical problems of our
-              time. Bitcoin in your hands changes everything.
-              <br />
-              <br />
-              Our goal is to provide newcomers with the resources and support
-              your bitcoin free open source software (FOSS) development journey.
-              Make no mistake, the goal of this project is to convince you to
-              contribute to{" "}
-              <a className="text-orange" href="/projects">
-                bitcoin FOSS projects
-              </a>
-              . We measure our success by action, not passive consumption of
-              educational materials.
+              <></>
+              <p className="my-4">
+                Our goal is to provide newcomers with the resources and support
+                your bitcoin free open source software (FOSS) development journey.
+                We are here to convince you to contribute to{" "}
+                <a className="text-orange" href="/projects">
+                  bitcoin FOSS projects
+                </a>
+                . We measure our success by action, not passive consumption of
+                educational materials.
+              </p>
+              <p>
+                There is an oft-repeated sentiment in the community that bitcoin
+                does not need you. While bitcoin is designed to be resilient, we{" "}
+                <span className="font-style: italic">do</span>
+                {" "}need you. Bitcoin needs all the talent and energy it can gather
+                to solve some of the most difficult technical problems of our
+                time. Bitcoin in your hands changes everything.
+              </p>
             </>
           }
-          title="What"
+          title="Why"
         />
         <Item
           content={
             <>
               <></>
+              <p className="my-4">
+                The Bitcoin Dev Project is a{" "}
+                <a
+                  className="text-orange"
+                  href="https://chaincode.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Chaincode Labs
+                </a>{" "}
+                sponsored initiative geared towards developers at the beginning of
+                their bitcoin journey. Chaincode has a{" "}
+                <a
+                  className="text-orange"
+                  href="https://bluematt.bitcoin.ninja/2016/08/08/chaincode/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  long history
+                </a>{" "}
+                of providing technical education through its{" "}
+                <a
+                  className="text-orange"
+                  href="https://residency.chaincode.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  in-person residencies
+                </a>{" "}
+                and started offering online programs via the{" "}
+                <a
+                  className="text-orange"
+                  href="https://chaincode.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  seminars
+                </a>{" "}
+                in 2020.
+              </p>
               <ul>
                 <li>
                   Design by{" "}
@@ -110,7 +113,7 @@ export default function About() {
                   Product by{" "}
                   <a
                     className="text-orange"
-                    href="https://twitter.com/aassoiants"
+                    href="https://www.artassoiants.com"
                     target="_blank"
                     rel="noopener"
                   >
@@ -132,7 +135,7 @@ export default function About() {
                   Ideas by{" "}
                   <a
                     className="text-orange"
-                    href="https://twitter.com/adamcjonas"
+                    href="https://adamjonas.com"
                     target="_blank"
                     rel="noopener"
                   >
