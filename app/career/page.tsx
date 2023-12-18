@@ -133,23 +133,22 @@ export default function Career() {
         />
         <Item
           content={
-            <>
-              <></>
+            <div className="flex flex-col">
               <p className="my-4">
                 If you are ready to begin a career in Bitcoin FOSS, Chaincode
                 Labs is hosting a three-month program to put you in the best
-                position to acheive your goals.{" "}
+                position to achieve your goals.{" "}
                 <span className="font-bold">
                   DEADLINE TO APPLY IS DECEMBER 31st, 2023.
                 </span>
               </p>
               <Button
                 href="https://learning.chaincode.com/#FOSS"
-                className="w-full"
+                className="w-[55%] self-center mt-5"
               >
                 APPLY
               </Button>
-            </>
+            </div>
           }
           title="Change your life in 2024"
         />
