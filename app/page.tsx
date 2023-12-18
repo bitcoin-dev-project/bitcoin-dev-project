@@ -15,7 +15,7 @@ export default function Home() {
               Learn and contribute to{" "}
               <span className="text-orange">bitcoin</span> and{" "}
               <br className="md:hidden"></br>
-              <span className="text-green">lightning</span> FOSS
+              <span className="text-green">lightning</span> open source
             </h1>
             <div className="mt-4 md:mt-0 md:flex md:flex-col md:items-center">
               <h2 className="text-[32px] lg:text-[26px] md:text-[20px] sm:text-center font-medium leading-normal">

@@ -39,21 +39,6 @@ export const faqs = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum nemo necessitatibus quaerat rerum officiis nesciunt praesentium, id, itaque voluptatibus a tempora fuga laboriosam modi blanditiis incidunt earum. Tempore, deserunt?",
     title: "I'm not a dev but I want to learn more about bitcoin",
   },
-  {
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum nemo necessitatibus quaerat rerum officiis nesciunt praesentium, id, itaque voluptatibus a tempora fuga laboriosam modi blanditiis incidunt earum. Tempore, deserunt?",
-    title: "I'd like to learn how to become a dev",
-  },
-  {
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum nemo necessitatibus quaerat rerum officiis nesciunt praesentium, id, itaque voluptatibus a tempora fuga laboriosam modi blanditiis incidunt earum. Tempore, deserunt?",
-    title: "Where do I learn about funding in bitcoin and FOSS?",
-  },
-  {
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum nemo necessitatibus quaerat rerum officiis nesciunt praesentium, id, itaque voluptatibus a tempora fuga laboriosam modi blanditiis incidunt earum. Tempore, deserunt?",
-    title: "What is the meaning of life?",
-  },
 ];
 
 type Section = {
@@ -80,7 +65,7 @@ const createSection = (section: Section) => ({
 });
 
 export const learnSection = createSection({
-  title: "Start Your FOSS Journey",
+  title: "Start Your Open Source Journey",
   slug: "explore",
   data: [
     {
@@ -126,7 +111,7 @@ export const contributeSection = createSection({
   slug: "projects",
   data: [
     {
-      description: "Discover Bitcoin FOSS projects",
+      description: "Discover Bitcoin Open Source Projects",
       btnText: "Discover",
       src: "/contribute.jpg",
       title: "Contribute by reviewing PR's",
@@ -140,12 +125,12 @@ export const pointers = [
   {
     btnText: "Explore Bitcoin Core",
     description: "",
-    jumpTo: `/bitcoin-foss`,
+    jumpTo: `/bitcoin-core`,
   },
   {
-    btnText: "Explore Lightning FOSS",
+    btnText: "Explore Lightning Open Source",
     description: "",
-    jumpTo: `/lightning-foss`,
+    jumpTo: `/lightning-open-source`,
   },
 ];
 
@@ -153,11 +138,11 @@ export const navPointers = [
   {
     btnText: "Bitcoin Core",
     description: "",
-    jumpTo: `/bitcoin-foss`,
+    jumpTo: `/bitcoin-core`,
   },
   {
-    btnText: "Lightning FOSS",
+    btnText: "Lightning Open Source",
     description: "",
-    jumpTo: `/lightning-foss`,
+    jumpTo: `/lightning-open-source`,
   },
 ];

@@ -23,11 +23,11 @@ export default function Career() {
           content={
             <>
               <p className="my-4">
-                Financial Support for bitcoin FOSS work typically comes through the form of a grant. Grants usually last for one year and many are renewed.
+                Financial Support for bitcoin open source work typically comes through the form of a grant. Grants usually last for one year and many are renewed.
               </p>
             </>
           }
-          title="Financial Support for bitcoin FOSS"
+          title="Financial Support for bitcoin open source"
         />
         <Item
           content={
@@ -78,7 +78,7 @@ export default function Career() {
               </p>
             </>
           }
-          title="Earning a grant for full-time bitcoin FOSS work"
+          title="Earning a grant for full-time bitcoin open source work"
         />
         <Item
           content={

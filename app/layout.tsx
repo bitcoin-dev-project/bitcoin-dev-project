@@ -7,12 +7,12 @@ import { Banner } from "@/components/banner";
 
 export const metadata: Metadata = {
   title: "The Bitcoin Dev Project",
-  description: "Find your way in bitcoin FOSS",
+  description: "Find your way in bitcoin open source",
   openGraph: {
-    images: ["https://bitcoindevs.xyz/landscape.jpg"],
+    images: ["https://bitcoindevs.xyz/hero.jpg"],
     title: "The Bitcoin Dev Project",
     url: "https://bitcoindevs.xyz",
-    description: "Find your way in bitcoin FOSS",
+    description: "Find your way in bitcoin open source",
   },
   twitter: {
     images: ["https://bitcoindevs.xyz/landscape.jpg"],
@@ -33,7 +33,7 @@ export default function RootLayout({
         <Fonts />
         <NavBar />
         <Banner
-          headingText="Start your career in bitcoin FOSS in 2024"
+          headingText="Start your career in bitcoin open source in 2024"
           linkText="APPLY TODAY!"
           linkTo="https://learning.chaincode.com/#FOSS"
         />

@@ -1,9 +1,9 @@
 import { Page } from "./types";
 
 export const projects = {
-  title: "Discover Bitcoin & Lightning FOSS",
+  title: "Discover Bitcoin & Lightning Open Source",
   description:
-    "It takes some work to go from curiosity to contribution. But that path isn't often laid out clearly. Below are some stepping stones that will help you make your first FOSS contribution - whether in the form of comments, reviews, or writing your own PRs.",
+    "It takes some work to go from curiosity to contribution. But that path is not often laid out clearly. Below are some stepping stones that will help you make your first open source contribution - whether in the form of comments, reviews, or writing your own PRs.",
   levels: [
     {
       title: "",
