@@ -33,7 +33,7 @@ export default function RootLayout({
         <Fonts />
         <NavBar />
         <Banner
-          headingText="Start your career in bitcoin foss with Chaincode Labs"
+          headingText="Start your career in bitcoin FOSS in 2024"
           linkText="APPLY TODAY!"
           linkTo="https://learning.chaincode.com/#FOSS"
         />
