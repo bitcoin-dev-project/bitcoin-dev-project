@@ -23,6 +23,16 @@ export default function Career() {
           content={
             <>
               <p className="my-4">
+                Financial Support for bitcoin FOSS work typically comes through the form of a grant. Grants usually last for one year and many are renewed.
+              </p>
+            </>
+          }
+          title="Financial Support for bitcoin FOSS"
+        />
+        <Item
+          content={
+            <>
+              <p className="my-4">
                 Funding for Free Open Source Software (FOSS) projects is a
                 historical problem that goes back to the beginning of FOSS.
                 Bitcoin funding is different from other open-source and other
@@ -43,7 +53,7 @@ export default function Career() {
               <p className="my-4">
                 Doing the work also means demonstrating your work. Not all work
                 in open-source work is as visible as writing code. The less
-                visible work is not less valuable, but it is in your best
+                visible work is no less valuable, but it is in your best
                 interest to create artifacts of your effort. Transparency is
                 your friend. If you learn something, it is helpful to codify it
                 by writing a blog post or keeping a running log. I have seen
@@ -58,7 +68,7 @@ export default function Career() {
                 (Excerpt from{" "}
                 <a
                   className="text-orange"
-                  href="https://chaincode.com"
+                  href="https://adamjonas.com/bitcoin/funding/grants/grants-bitcoin-open-source/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -68,7 +78,7 @@ export default function Career() {
               </p>
             </>
           }
-          title="Do the work and good things will happen"
+          title="Earning a grant for full-time bitcoin FOSS work"
         />
         <Item
           content={
