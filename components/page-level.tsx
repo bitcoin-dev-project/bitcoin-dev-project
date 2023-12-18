@@ -19,7 +19,7 @@ export default function PageLevel({
     <div
       id={slugify(level.title)}
       key={level.title}
-      className="flex flex-col gap-y-16"
+      className="flex flex-col gap-y-16 md:gap-y-6"
     >
       {showHeader && (
         <div
@@ -30,17 +30,17 @@ export default function PageLevel({
           <div className="flex items-center gap-x-6 md:gap-x-2">
             <h2 className="text-5xl md:text-2xl font-semibold">{pageTitle}</h2>
           </div>
-          {!!description && <p>{description}</p>}
+          {!!description && <p className="text-xl md:text-lg">{description}</p>}
         </div>
       )}
-      <div className="flex w-full justify-between gap-y-5 flex-wrap lg:flex-col">
+      <div className="flex w-full justify-between gap-y-5 md:gap-y-12 flex-wrap lg:flex-col">
         {level.items.map((item) => (
           <Link
             target="_blank"
             rel="noopener"
             href={item.link}
             key={item.title}
-            className="flex p-6 gap-x-6 w-[48%] lg:w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline hover:bg-[#FCFCFC] md:flex-col"
+            className="flex p-6 md:p-0 gap-x-6 w-[48%] lg:w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline md:hover:outline-none hover:bg-[#FCFCFC] md:hover:bg-none md:flex-col"
           >
             <div className="relative min-w-[160px] h-[160px] md:w-full md:min-w-min md:h-[200px] border-[#D9D9D9] border rounded-2xl overflow-hidden">
               <Image
@@ -55,10 +55,10 @@ export default function PageLevel({
               <h3 className="text-4xl md:text-2xl font-semibold">
                 {item.title}
               </h3>
-              <p className="text-2xl md:text-lg font-semibold text-green">
+              <p className="text-3xl md:text-xl font-semibold text-green">
                 {item.subTitle}
               </p>
-              <p className="flex flex-shrink-1 text-sm md:text-xs leading-[140%]">
+              <p className="flex flex-shrink-1 text-xl md:text-lg leading-[140%]">
                 {item.description}
               </p>
             </div>
