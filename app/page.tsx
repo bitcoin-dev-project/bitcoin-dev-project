@@ -54,12 +54,12 @@ export default function Home() {
         >
           {learnSection.title}
         </h2>
-        <div className="flex justify-between gap-y-7 flex-wrap md:flex-col md:gap-y-4">
+        <div className="flex justify-between gap-y-7 flex-wrap md:flex-col md:gap-y-4 md:items-center">
           {learnSection.data.map(({ shortTitle: _, ...section }) => (
             <SectionCard
               key={section.title}
               alt={section.title}
-              className="w-[48%] md:w-full"
+              className="w-[48%] md:w-10/12"
               {...section}
               href={`/${section.slug}`}
             />
@@ -67,9 +67,7 @@ export default function Home() {
         </div>
 
         <div className="mt-32 md:mt-10 flex flex-col self-center text-center gap-y-2">
-          <h2 className="text-5xl md:text-2xl font-semibold">
-            Tools
-          </h2>
+          <h2 className="text-5xl md:text-2xl font-semibold">Tools</h2>
           <p className="text-xl md:text-base leading-[140%] mx-20 sm:mx-0 my-6">
             Bitcoin and Lightning aim to solve some of the world&apos;s most
             difficult problems. While we recognize the enormity of the task, the

@@ -28,7 +28,7 @@ export default function SectionCard({
         className
       )}
     >
-      <div className={`relative h-[250px] w-full`}>
+      <div className={`relative h-[250px] w-full md:h-[150px]`}>
         <Image
           className="object-cover"
           src={src}
@@ -38,7 +38,7 @@ export default function SectionCard({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <div className="p-6 md:p-4 flex flex-col items-center gap-y-4 text-center">
+      <div className="p-6 md:p-3 flex flex-col items-center gap-y-4 md:gap-y-2 text-center">
         <h2 className="text-[38px] md:text-xl font-semibold leading-[100%]">
           {title}
         </h2>
