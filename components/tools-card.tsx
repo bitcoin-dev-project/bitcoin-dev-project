@@ -18,11 +18,6 @@ export default function ToolsCard({ alt, name, src, ...rest }: Props) {
           alt={alt}
           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute flex justify-center bottom-0 right-0 left-0">
-          <p className="mb-3 rounded-[12px] bg-[#FDF8F0] w-[155px] py-1 self-center text-[15px] font-semibold">
-            {name}
-          </p>
-        </div>
       </div>
     </Link>
   );

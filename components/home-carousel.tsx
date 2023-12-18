@@ -26,7 +26,7 @@ export default function HomeCarousel() {
   };
 
   return (
-    <div className="flex md:flex-col overflow-y-hidden md:overflow-y-scroll">
+    <div className="flex md:flex-col">
       <button
         onClick={() => handleScroll("left")}
         className="h-10 w-10 rounded-[20px] bg-bright-orange absolute self-center flex items-center justify-center z-10 ml-4 md:hidden"
