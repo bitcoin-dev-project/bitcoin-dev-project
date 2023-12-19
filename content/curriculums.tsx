@@ -5,19 +5,19 @@ export type Curriculums = Record<string, Page>;
 
 export const curriculums = {
   "bitcoin-core": {
-    title: "Bitcoin Open Source Development",
+    title: "Bitcoin Core Development",
     description:
       "Originally written by Satoshi Nakamoto, bitcoin proved that purely peer-to-peer electronic cash, one of the hardest computing problems, was possible. Becoming a Bitcoin Core developer is not for everyone but those that do the work to summit the mountain contribute to a legendary codebase designed to span generations.",
     levels: [
       {
         title: "Level 1",
         description:
-          "",
+          "Get started with these text based sources to firm up your technical foundation and learn about the philosophy behind Bitcoin Core development.",
         items: [
           {
             image:
               "/curriculums/bitcoin-infra-development/mastering-bitcoin.jpg",
-            title: "Programming the Open Blockchain",
+            title: "Mastering Bitcoin",
             subTitle: "",
             description:
               "The canonical primer on understanding the technical side of bitcoin. The 3rd edition promises to be the best release yet.",
@@ -37,7 +37,7 @@ export const curriculums = {
       {
         title: "Level 2",
         description:
-          "",
+          "Get your hands dirty with some more advances topics, exercises and simulations. These are more advanced and will move you closer to your goal of contributing to Bitcoin Core.",
         items: [
           {
             image:
@@ -54,7 +54,7 @@ export const curriculums = {
             title: "Learn Bitcoin from the command line",
             subTitle: "",
             description:
-              "Use your own Bitcoin node to execute transactions, script Bitcoin operations, integrate with hardware wallets and hidden services with this step by step guide.",
+              "Use your own bitcoin node to execute transactions, script bitcoin operations, integrate with hardware wallets and hidden services with this step by step guide.",
             link: "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line",
           },
           {
@@ -80,7 +80,7 @@ export const curriculums = {
             title: "Tinybitcoinpeer",
             subTitle: "",
             description:
-              "TinyBitcoinPeer offers a unique and playful way to understand Bitcoin's network dynamics by connecting to live nodes on the network with 150 lines of Python.",
+              "This exercise offers a unique and playful way to understand Bitcoin's network dynamics by connecting to live nodes on the network with 150 lines of Python.",
             link: "https://github.com/willcl-ark/tinybitcoinpeer",
           },
           {
@@ -97,7 +97,7 @@ export const curriculums = {
       {
         title: "Level 3",
         description:
-          "",
+          "By now you have leveled up in the safety of reading and tutorials. It is now time to start doing the work you came to do. Explore the codebase and start building your review skills.",
         items: [
           {
             image:
@@ -129,12 +129,12 @@ export const curriculums = {
   "lightning-open-source": {
     title: "Lightning Open Source Development",
     description:
-      "Lightning Network provides fast and inexpensive payments, addressing some of the scalability issues that bitcoin faces at the base layer. Lightning much younger than bitcoin and technical challenges remain. But for those that are ready to jump into the fast-paced development of the protocol, Lightning presents a unique learning opportunity to contribute to a maturing protocol.",
+      "The lightning network provides fast and inexpensive payments, addressing some of the scalability issues that bitcoin faces at the base layer. Lightning much younger than bitcoin and technical challenges remain. But for those that are ready to jump into the fast-paced development of the protocol, lightning presents a unique learning opportunity to contribute to a maturing protocol.",
     levels: [
       {
         title: "Level 1",
         description:
-          "",
+          "Dive into the intricate world of lightning protocol development. Meet fellow learners, delve into the lightning development philosophy and start interacting with the network.",
         items: [
           {
             image:
@@ -142,7 +142,7 @@ export const curriculums = {
             title: "Chaincode LN Seminar",
             subTitle: "",
             description:
-              "This program is curated to cover key aspects of Lightning Network protocol development, offering discussion questions and hands-on sessions to be completed solo or with a cohort of fellow learners.",
+              "This program is curated to cover key aspects of lightning network protocol development, offering discussion questions and hands-on sessions to be completed solo or with a cohort of fellow learners.",
             link: "https://learning.chaincode.com/#seminars",
           },
           {
@@ -151,7 +151,7 @@ export const curriculums = {
             title: "Bitcoin Development Philosophy",
             subTitle: "",
             description:
-              "Gain a deeper understanding of Lightning's design trade-offs and philosophy, offering insights into over a decade of Bitcoin development and public debate.",
+              "Gain a deeper understanding of lightning's design trade-offs and philosophy, offering insights into over a decade of bitcoin development and public debate.",
             link: "https://bitcoindevphilosophy.com/",
           },
           {
@@ -159,7 +159,7 @@ export const curriculums = {
             title: "Building on LN",
             subTitle: "",
             description:
-              "Build a Lightning graph visualizer, construct a simple game of ownership using paid invoices and dip your toes into advanced Lightning Network topics all using Typescript.",
+              "Build a lightning graph visualizer, construct a simple game of ownership using paid invoices and dip your toes into advanced lightning network topics all using Typescript.",
             link: "https://buildonln.com",
           },
         ],
@@ -167,7 +167,7 @@ export const curriculums = {
       {
         title: "Level 2",
         description:
-          "",
+          "Explore some of the stickier details of lightning with code review and further reading. After this, it is time to begin contributing to the lightning network implementation of your choice.",
         items: [
           {
             image:
@@ -184,7 +184,7 @@ export const curriculums = {
             title: "Mastering Lightning",
             subTitle: "",
             description:
-              "The most comprehensive book on the technical side of the Lightning Network. Lightning is not simple so prepare to dive into some complexity.",
+              "The most comprehensive book on the technical side of the lightning network. Lightning is not simple so prepare to dive into some complexity.",
             link: "https://github.com/lnbook/lnbook",
           },
         ],
@@ -230,7 +230,7 @@ export const curriculums = {
               Eclair
             </Link>{" "}
             are backed by core teams. Lightning protocol development moves
-            faster than the bitcoin protocol. Given that Lightning is still
+            faster than the bitcoin protocol. Given that lightning is still
             young, there are more rough edges to smooth and problems to sort.
             The best way to get involved is to jump on their slack or discord
             and start picking up issues.
