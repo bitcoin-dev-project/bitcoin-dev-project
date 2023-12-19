@@ -10,7 +10,14 @@ export const tools = {
       description: "",
       items: [
         {
-          description: "Chat with your favorite bitcoin sources and authors",
+          description: "Bitcoin Optech is the best source to stay up to date with technical developments.",
+          image: "/tools/optech.jpg",
+          title: "Bitcoin Optech",
+          subTitle: "",
+          link: "https://bitcoinops.org",
+        },
+        {
+          description: "Chat with your favorite bitcoin sources and authors.",
           image: "/tools/chat-btc.jpg",
           title: "Chat BTC",
           subTitle: "",
@@ -18,13 +25,13 @@ export const tools = {
         },
         {
           image: "/tools/bitcoin-search.jpg",
-          description: "The technical bitcoin search engine we deserve",
+          description: "The technical bitcoin search engine we deserve.",
           title: "Bitcoin Search",
           subTitle: "",
           link: "https://bitcoinsearch.xyz",
         },
         {
-          description: "Bitcoin-dev and Lightning-dev mailing list, summaries and discovery",
+          description: "Bitcoin-dev and Lightning-dev mailing list summaries and discovery.",
           image: "/tools/bitcoin-tldr.jpg",
           title: "Bitcoin TLDR",
           subTitle: "",
@@ -32,21 +39,21 @@ export const tools = {
         },
         {
           
-          description: "Peruse archives of transcribed talks, podcasts and lectures",
+          description: "Peruse archives of transcribed talks, podcasts and lectures.",
           image: "/tools/bitcoin-transcripts.jpg",
           title: "Bitcoin Transcripts",
           subTitle: "",
           link: "https://btctranscripts.com/",
         },
         {
-          description: "Contribute to BTC transcripts by reviewing AI-generated copy",
+          description: "Contribute to BTC transcripts by reviewing AI-generated copy.",
           image: "/tools/bitcoin-transcripts-review.jpg",
           title: "Transcript Review",
           subTitle: "",
           link: "https://review.btctranscripts.com/",
         },
         {
-          description: "An interactive science fiction story designed to inspire a generation to fall in love with bitcoin",
+          description: "An interactive science fiction game designed to inspire a generation to fall in love with bitcoin.",
           image: "/tools/saving-satoshi.jpg",
           title: "Saving Satoshi",
           subTitle: "",

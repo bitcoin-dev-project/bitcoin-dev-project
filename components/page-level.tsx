@@ -51,14 +51,14 @@ export default function PageLevel({
                 sizes="(max-width: 768px) 100vw, (min-width: 769px) 20vw"
               />
             </div>
-            <div className="flex flex-col gap-y-[6px] flex-shrink">
+            <div className="flex flex-col gap-y-[6px] my-4 flex-shrink">
               <h3 className="text-4xl md:text-2xl font-semibold">
                 {item.title}
               </h3>
               <p className="text-3xl md:text-xl font-semibold text-green">
                 {item.subTitle}
               </p>
-              <p className="flex flex-shrink-1 text-xl md:text-lg leading-[140%]">
+              <p className="flex flex-shrink-1 text-lg leading-[140%]">
                 {item.description}
               </p>
             </div>

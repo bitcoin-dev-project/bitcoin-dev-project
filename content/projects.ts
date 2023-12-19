@@ -49,9 +49,9 @@ export const projects = {
           link: "https://github.com/ACINQ/eclair",
         },
         {
-          title: "Bitcoin Wallet Devlopment Kit",
+          title: "Bitcoin Wallet Development Kit",
           subTitle: "",
-          description: "Seamlessly build cross platform mobile wallets",
+          description: "Seamlessly build cross platform wallets",
           image: "/projects/bdk.png",
           link: "https://bitcoindevkit.org",
         },

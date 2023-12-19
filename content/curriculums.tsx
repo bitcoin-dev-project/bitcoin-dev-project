@@ -18,7 +18,7 @@ export const curriculums = {
             image:
               "/curriculums/bitcoin-infra-development/mastering-bitcoin.jpg",
             title: "Programming the Open Blockchain",
-            subTitle: "The de-facto book on Bitcoin development",
+            subTitle: "",
             description:
               "The canonical primer on understanding the technical side of bitcoin. The 3rd edition promises to be the best release yet.",
             link: "https://github.com/bitcoinbook/bitcoinbook",
@@ -27,9 +27,9 @@ export const curriculums = {
             image:
               "/curriculums/bitcoin-infra-development/bitcoin-development-philosophy.jpg",
             title: "Bitcoin Development Philosophy",
-            subTitle: "A Study of the Philosophy of Bitcoin Development",
+            subTitle: "",
             description:
-              "Gain a deeper understanding of Bitcoin's design trade-offs and philosophy, offering insights into over a decade of Bitcoin development and public debate. This resource provides a critical framework for evaluating and innovating within the Bitcoin ecosystem.",
+              "Gain a deeper understanding of Bitcoin's design trade-offs and philosophy, offering insights into over a decade of Bitcoin development and public debate.",
             link: "https://bitcoindevphilosophy.com/",
           },
         ],
@@ -43,17 +43,16 @@ export const curriculums = {
             image:
               "/curriculums/bitcoin-infra-development/chaincode-bitcoin-seminar.jpg",
             title: "Chaincode Bitcoin Seminar",
-            subTitle: "A Curated Dive into Bitcoin Protocol Development",
+            subTitle: "",
             description:
-              "Take the program at your own pace or through a cohort of other keen explorers. By the end, you'll have a stronger grasp of the decisions that went into bitcoin and what that means for development moving forward.",
+              "This program offers a curated curriculum and hands-on sessions to complete at your own pace or with a cohort of other keen explorers.",
             link: "https://learning.chaincode.com/#seminars",
           },
           {
             image:
               "/curriculums/bitcoin-infra-development/learn-bitcoin-from-command-line.jpg",
             title: "Learn Bitcoin from the command line",
-            subTitle:
-              "Hands-on Tutorial That Teaches Direct Interaction with Your Bitcoin Node",
+            subTitle: "",
             description:
               "Use your own Bitcoin node to execute transactions, script Bitcoin operations, integrate with hardware wallets and hidden services with this step by step guide.",
             link: "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line",
@@ -62,7 +61,7 @@ export const curriculums = {
             image:
               "/curriculums/bitcoin-infra-development/transaction-tutorial.jpg",
             title: "Transaction Tutorial",
-            subTitle: "Bitcoin Transactions from the Inside Out",
+            subTitle: "",
             description:
               "Get on a first name basis with SegWit and Taproot transactions. Add sighashes and timelocks to your list of friends by creating and signing Bitcoin transactions using a local bitcoind instance via Jupyter notebooks.",
             link: "https://github.com/chaincodelabs/bitcoin-tx-tutorial",
@@ -70,27 +69,27 @@ export const curriculums = {
           {
             image: "/curriculums/bitcoin-infra-development/minesim.jpg",
             title: "Minesim",
-            subTitle: "Master Bitcoin Mining with Minesim Simulator",
+            subTitle: "",
             description:
-              "Dive into the intricate world of Bitcoin mining with Minesim, a comprehensive POW mining simulator. This tool offers a hands-on experience in simulating various aspects of mining networks, including block discovery, peer node configuration, and chain splits, using realistic Poisson distribution models.",
+              "A comprehensive POW mining simulator offering a hands-on experience to explore block discovery, peer node configuration, and chain splits using realistic Poisson distribution models.",
             link: "https://github.com/LarryRuane/minesim",
           },
           {
             image:
               "/curriculums/bitcoin-infra-development/tiny-bitcoin-peer.jpg",
             title: "Tinybitcoinpeer",
-            subTitle: "Explore the Permissionless Bitcoin Networking",
+            subTitle: "",
             description:
-              "TinyBitcoinPeer offers a unique and playful way to understand Bitcoin's network dynamics. Connect to live nodes on the network, engage in basic network interactions like handshakes, and respond to pings with 150 lines of Python.",
+              "TinyBitcoinPeer offers a unique and playful way to understand Bitcoin's network dynamics by connecting to live nodes on the network with 150 lines of Python.",
             link: "https://github.com/willcl-ark/tinybitcoinpeer",
           },
           {
             image:
               "/curriculums/bitcoin-infra-development/schnorr-taproot-workshop.jpg",
             title: "Schnorr Taproot Workshop",
-            subTitle: "Unlock Bitcoin's Future with Schnorr/Taproot Workshop",
+            subTitle: "",
             description:
-              "The Schnorr/Taproot Workshop by Bitcoin Optech is an invaluable resource for delving into Bitcoin's latest softfork. Featuring interactive Jupyter notebooks, the workshop covers Schnorr signatures, MuSig aggregation, and Taproot applications.",
+              "The Schnorr/Taproot Workshop by Bitcoin Optech is an interactive walk through to learn about Schnorr signatures, MuSig aggregation, and Taproot applications via Jupyter notebooks.",
             link: "https://bitcoinops.org/en/schorr-taproot-workshop/",
           },
         ],
@@ -104,17 +103,17 @@ export const curriculums = {
             image:
               "/curriculums/bitcoin-infra-development/onboarding-to-bitcoin-core.jpg",
             title: "Onboarding to Bitcoin Core",
-            subTitle: "Discover Bitcoin Core's Missing Onboarding Guide",
+            subTitle: "",
             description:
-              "This guide covers both the technical components such as, architecture, consensus, validation, the wallet, P2P, and script, but also introduces the under-documented social aspects like PR etiquette and understanding the decentralized development process.",
+              "This guide covers both the technical components such as, architecture, consensus, validation, the wallet, P2P, and script, but also introduces the under-documented social aspects like PR etiquette and the decentralized development process.",
             link: "https://bitcoincore.academy",
           },
           {
             image: "/curriculums/bitcoin-infra-development/pr-review-club.jpg",
             title: "Bitcoin Core PR Review Club",
-            subTitle: "Review real Bitcoin Core PRs with the Crew",
+            subTitle: "",
             description:
-              "The Bitcoin Core PR Review Club is a monthly meetup for discussing Bitcoin Core PRs and boosting your understanding of the codebase. It's an open invitation for anyone eager to learn and contribute, with hands-on guidance through the PR review process.",
+              "The Bitcoin Core PR Review Club is a monthly online meetup for discussing PRs and boosting your understanding of the codebase.",
             link: "https://bitcoincore.reviews",
           },
         ],
@@ -141,28 +140,26 @@ export const curriculums = {
             image:
               "/curriculums/lighting-infra-development/chaincode-ln-seminar.jpg",
             title: "Chaincode LN Seminar",
-            subTitle: "Dive Deep into Lightning Network Development",
+            subTitle: "",
             description:
-              "Experience a comprehensive learning journey with the Chaincode LN Seminar. This curriculum is curated to cover key aspects of Lightning Network protocol development, offering study groups, extensive syllabus, and hands-on sessions.",
+              "This program is curated to cover key aspects of Lightning Network protocol development, offering discussion questions and hands-on sessions to be completed solo or with a cohort of fellow learners.",
             link: "https://learning.chaincode.com/#seminars",
           },
           {
             image:
               "/curriculums/lighting-infra-development/bitcoin-development-philosophy.jpg",
             title: "Bitcoin Development Philosophy",
-            subTitle:
-              "Gain a deeper understanding of lightning's development philosophy",
+            subTitle: "",
             description:
-              "Gain a deeper understanding of Lightning's design trade-offs and philosophy, offering insights into over a decade of Bitcoin development and public debate. This resource provides a critical framework for evaluating and innovating within the Bitcoin ecosystem.",
+              "Gain a deeper understanding of Lightning's design trade-offs and philosophy, offering insights into over a decade of Bitcoin development and public debate.",
             link: "https://bitcoindevphilosophy.com/",
           },
           {
             image: "/curriculums/lighting-app-development/building-on-ln.jpg",
             title: "Building on LN",
-            subTitle:
-              "Create applications that interact with the Lightning Network",
+            subTitle: "",
             description:
-              "Get comfortable building an application that connects to a Lightning Network node. Build a Lightning graph visualizer, construct a simple game of ownership using paid invoices and dip your toes into advanced Lightning Network topics all using Typescript.",
+              "Build a Lightning graph visualizer, construct a simple game of ownership using paid invoices and dip your toes into advanced Lightning Network topics all using Typescript.",
             link: "https://buildonln.com",
           },
         ],
@@ -176,7 +173,7 @@ export const curriculums = {
             image:
               "/curriculums/lighting-infra-development/ldk-pr-review-club.jpg",
             title: "LDK PR Review Club",
-            subTitle: "Your Gateway to LDK Contribution",
+            subTitle: "",
             description:
               "Navigate the world of LDK with an every-other-Friday session aimed at mentoring newcomers to become full fledged contributors.",
             link: "https://ldk.reviews",
@@ -185,7 +182,7 @@ export const curriculums = {
             image:
               "/curriculums/lighting-infra-development/mastering-lightning.jpg",
             title: "Mastering Lightning",
-            subTitle: "Dive into the details of the Lightning Network",
+            subTitle: "",
             description:
               "The most comprehensive book on the technical side of the Lightning Network. Lightning is not simple so prepare to dive into some complexity.",
             link: "https://github.com/lnbook/lnbook",
