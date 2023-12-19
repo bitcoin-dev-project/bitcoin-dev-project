@@ -16,7 +16,7 @@ export default function Pointer({
   jumpTo,
 }: Props) {
   return (
-    <div className="flex flex-col min-w-[186px] gap-y-2 text-center md:flex-col-reverse">
+    <div className="flex flex-col min-w-[230px] gap-y-2 text-center md:flex-col-reverse">
       <Button href={`${jumpTo}`} className={clsx("w-full px-3", className)}>
         {btnText}
       </Button>

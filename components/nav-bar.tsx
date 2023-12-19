@@ -9,7 +9,7 @@ export default function NavBar() {
       <div className="w-full flex flex-col max-w-7xl">
         <div className="flex items-center justify-between p-6">
           <Link href="/">
-            <h1 className="text-xl font-bold sm:text-base">
+            <h1 className="text-xl font-bold">
               The&nbsp;<span className="text-orange">Bitcoin</span>&nbsp;Dev
               Project
             </h1>

@@ -12,10 +12,10 @@ export default function Home() {
         <div className="flex basis-1/2 flex-grow flex-col justify-center px-14 md:px-7 md:order-2">
           <div className="flex flex-col gap-y-5 sm:gap-y-3">
             <h1 className="text-[52px] md:text-[30px] sm:text-2xl sm:text-center lg:text-[36px] font-semibold leading-tight">
-              Learn and contribute to{" "}
+              Contribute to{" "}
               <span className="text-orange">bitcoin</span> and{" "}
-              <br className="md:hidden"></br>
-              <span className="text-green">lightning</span> FOSS
+              <span className="text-green">lightning</span>{" "}open source
+              <span className="md:hidden">{" "}development</span>
             </h1>
             <div className="mt-0 md:mt-0 md:flex md:flex-col md:items-center">
               <h2 className="text-[32px] lg:text-[26px] md:text-[20px] sm:text-center font-medium leading-normal">
@@ -75,12 +75,12 @@ export default function Home() {
             development enjoyable and approachable. Check out some of the tools
             and educational content made by us and our friends.
           </p>
-          <div className="relative flex flex-col w-full md:h-[1200px] h-[530px] md:pt-5 bg-pale-orange rounded-xl">
+          <div className="relative flex flex-col w-full md:h-[1450px] h-[530px] md:pt-5 bg-pale-orange rounded-xl">
             <div className="overflow-hidden pb-20 md:pb-5 absolute bottom-0 left-0 right-0 flex flex-col md:relative">
               <HomeCarousel />
               <div className="mt-[10px] w-[212px] md:w-[50vw] self-center it">
                 <Button href="/tools" className="w-full">
-                  Discover
+                  See More
                 </Button>
               </div>
             </div>

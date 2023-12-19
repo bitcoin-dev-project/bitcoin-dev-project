@@ -69,15 +69,15 @@ export const learnSection = createSection({
   slug: "explore",
   data: [
     {
-      description: "Discover bitcoin and lightning FOSS projects",
-      btnText: "Explore",
+      description: "Discover bitcoin and lightning open source projects",
+      btnText: "Dive In",
       src: "/bitcoin-infra-development.jpg",
       title: "Projects",
       shortTitle: "Projects",
       slug: "/projects",
     },
     {
-      description: "Begin your career in Bitcoin Free Open Source Software",
+      description: "Begin your career in bitcoin open source development",
       btnText: "Start",
       src: "/lighting-infra-development.jpg",
       title: "Career",
@@ -128,7 +128,7 @@ export const pointers = [
     jumpTo: `/bitcoin-core`,
   },
   {
-    btnText: "Explore Lightning Open Source",
+    btnText: "Explore Lightning",
     description: "",
     jumpTo: `/lightning-open-source`,
   },
