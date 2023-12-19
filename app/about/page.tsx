@@ -23,10 +23,10 @@ export default function About() {
               <></>
               <p className="my-4">
                 Our goal is to provide newcomers with the resources and support
-                your bitcoin free open source software (FOSS) development journey.
+                your bitcoin free open source software development journey.
                 We are here to convince you to contribute to{" "}
                 <a className="text-orange" href="/projects">
-                  bitcoin FOSS projects
+                  bitcoin open source projects
                 </a>
                 . We measure our success by action, not passive consumption of
                 educational materials.
