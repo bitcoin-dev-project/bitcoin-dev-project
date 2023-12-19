@@ -3,6 +3,7 @@ export default function Footer() {
     <footer className="mt-10 relative bottom-0 text-center bg-pale-orange flex items-center justify-center p-[24px] text-black">
       <p>
         Built with ❤️ by{" "}
+        <br/>
         <a
           className="text-orange"
           href="https://chaincode.com"
