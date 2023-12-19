@@ -23,36 +23,38 @@ export default function Career() {
           content={
             <>
               <p className="my-4">
-                Financial Support for bitcoin open source work typically comes through the form of a grant. Grants usually last for one year and many are renewed.
+                If you aspire to have professional freedom, work on something that will impact the lives of countless people across the world, write code that will span generations, and collaborate with some of the most gifted developers on the planet to solve some of the hardest technical problems of our age, then you are in the right place.
               </p>
             </>
           }
-          title="Financial Support for bitcoin open source"
+          title="Why consider a career in bitcoin open source development?"
         />
         <Item
           content={
             <>
               <p className="my-4">
-                Funding for Free Open Source Software (FOSS) projects is a
-                historical problem that goes back to the beginning of FOSS.
-                Bitcoin funding is different from other open-source and other
+                Financial Support for bitcoin open source work typically comes in
+                the form of a grant. Grants usually last for one year and many are renewed.
+              </p>
+              <p className="my-4">
+                Bitcoin funding is different from other open source and other
                 cryptocurrency projects. Getting a grant in bitcoin is pretty
                 straightforward. You either need someone to vouch for you or you
                 need to do work - ideally both. While grant programs often have
                 open applications, the secret to getting funding is not much of
                 a secret. Start doing the job for free. It establishes you as a
-                contributor and proves your motivation to do the work. It shows
+                contributor and proves your motivation. It shows
                 that you are a good investment. Applicants will have much more
                 success if they do the work and then apply. For most jobs, the
                 applicant is trying to convince the employer that they are
                 capable of doing the job. But the job-seeker has no idea what
-                the work or environment is actually like. In open-source, one
+                the work or environment is actually like. In open source, one
                 does not have to guess. Do the work. Demonstrate capability.
                 Then ask for support.
               </p>
               <p className="my-4">
                 Doing the work also means demonstrating your work. Not all work
-                in open-source work is as visible as writing code. The less
+                in open source work is as visible as writing code. The less
                 visible work is no less valuable, but it is in your best
                 interest to create artifacts of your effort. Transparency is
                 your friend. If you learn something, it is helpful to codify it
@@ -94,7 +96,7 @@ export default function Career() {
                   >
                     Spiral
                   </a>{" "}
-                  is the Bitcoin/LN R&D arm of Block who have been distributing
+                  is the bitcoin R&D arm of Block who have been distributing
                   grants since 2019.
                 </li>
                 <li>
@@ -145,12 +147,12 @@ export default function Career() {
           content={
             <div className="flex flex-col">
               <p className="my-4">
-                If you are ready to begin a career in Bitcoin FOSS, Chaincode
+                If you are ready to begin a career in bitcoin open source, Chaincode
                 Labs is hosting a three-month program to put you in the best
                 position to achieve your goals.{" "}
-                <span className="font-bold">
+              </p>
+              <p className="font-bold text-center">
                   DEADLINE TO APPLY IS DECEMBER 31st, 2023.
-                </span>
               </p>
               <Button
                 href="https://learning.chaincode.com/#FOSS"
