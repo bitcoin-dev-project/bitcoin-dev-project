@@ -59,6 +59,14 @@ export const tools = {
           subTitle: "",
           link: "https://savingsatoshi.com",
         },
+        {
+          title: "Polar",
+          subTitle: "",
+          description:
+            "One-click lightning networks for local app development and testing",
+          image: "/projects/polar.jpg",
+          link: "https://lightningpolar.com",
+        },
       ],
     },
   ],

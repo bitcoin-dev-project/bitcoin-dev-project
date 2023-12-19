@@ -75,7 +75,7 @@ export const projects = {
           title: "Polar",
           subTitle: "",
           description:
-            "One-click Bitcoin Lightning networks for local app development & testing",
+            "One-click lightning networks for local app development and testing",
           image: "/projects/polar.jpg",
           link: "https://lightningpolar.com",
         },
