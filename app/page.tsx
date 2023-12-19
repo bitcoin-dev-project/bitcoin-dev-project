@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex basis-1/2 flex-grow flex-col justify-center px-14 md:px-7 md:order-2">
           <div className="flex flex-col gap-y-5 sm:gap-y-3">
             <h1 className="text-[52px] md:text-[30px] sm:text-2xl sm:text-center lg:text-[36px] font-semibold leading-tight">
-              Learn & Contribute to{" "}
+              Learn & contribute to{" "}
               <span className="text-orange">bitcoin</span> and{" "}
               <span className="text-green">lightning</span>{" "}open source
             </h1>
@@ -49,7 +49,7 @@ export default function Home() {
       <div className="flex flex-col px-14 sm:px-7">
         <h2
           id={learnSection.slug}
-          className="mt-32 md:mt-10 text-5xl md:text-2xl font-semibold text-center self-center mb-6"
+          className="mt-32 md:mt-10 text-5xl md:text-2xl font-semibold text-center self-center mb-10"
         >
           {learnSection.title}
         </h2>
@@ -67,11 +67,8 @@ export default function Home() {
 
         <div className="mt-32 md:mt-10 flex flex-col self-center text-center gap-y-2">
           <h2 className="text-5xl md:text-2xl font-semibold">Tools</h2>
-          <p className="text-xl md:text-base leading-[140%] mx-20 sm:mx-0 my-6">
-            Bitcoin and Lightning aim to solve some of the world&apos;s most
-            difficult problems. While we recognize the enormity of the task, the
-            Bitcoin Dev Project also aims to make Bitcoin and Lightning
-            development enjoyable and approachable. Check out some of the tools
+          <p className="text-xl md:text-base leading-[140%] mx-20 sm:mx-0 my-4">
+            Check out some of the tools
             and educational content made by us and our friends.
           </p>
           <div className="relative flex flex-col w-full md:h-[1450px] h-[530px] md:pt-5 bg-pale-orange rounded-xl">

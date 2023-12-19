@@ -37,7 +37,7 @@ export function Desktop() {
         <button
           onClick={() => setShowDropDown((value) => !value)}
           type="button"
-          className="flex items-center w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-gray-900 hover:shadow-md transition-shadow duration-200"
+          className="flex items-center w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-gray-900"
           id="menu-button"
           aria-expanded="true"
           aria-haspopup="true"
@@ -55,7 +55,7 @@ export function Desktop() {
 
       {showDropDown && (
         <div
-          className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition-opacity duration-200"
+          className="absolute right-0 z-10 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition-opacity duration-200"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
@@ -119,7 +119,7 @@ export function Mobile({ hideDrawer }: { hideDrawer: () => void }) {
                 onClick={hideDrawer}
                 key={link.btnText}
                 href={link.jumpTo}
-                className="text-gray-700 block px-4 py-2 text-sm"
+                className="text-gray-700 block px-4 py-2 text-md"
                 role="menuitem"
                 id="menu-item-0"
               >

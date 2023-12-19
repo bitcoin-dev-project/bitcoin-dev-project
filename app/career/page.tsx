@@ -16,7 +16,7 @@ export default function Career() {
   return (
     <main className="flex flex-col p-14 sm:p-7 mx-auto my-0">
       <div className="flex flex-col mb-24 gap-y-10 w-3/5 md:w-full self-center">
-        <h1 className="text-[62px] lg:text-[36px] md:text-center font-bold leading-normal">
+        <h1 className="text-[62px] lg:text-[32px] md:text-center font-bold leading-tight">
           Start Your Career in Bitcoin Open Source Development
         </h1>
         <Item

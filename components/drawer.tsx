@@ -70,7 +70,7 @@ export default function Drawer() {
             ></path>
           </svg>
         </button>
-        <div className="flex flex-col flex-1 gap-6 bg-white h-full">
+        <div className="flex flex-col flex-1 gap-4 bg-white h-full">
           <LearnDropDown.Mobile hideDrawer={hideDrawer} />
           {links.map((link) => (
             <Link

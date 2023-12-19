@@ -34,8 +34,8 @@ export default function PageLevel({
           {!!description && (
             <p
               className={clsx({
-                "text-xl md:text-lg": level.items.length > 0,
-                "text-2xl md:text-xl": level.items.length === 0,
+                "text-xl md:text-lg md:text-justify": level.items.length > 0,
+                "text-xl md:text-lg md:text-justify max-w-[60vw] md:max-w-full": level.items.length === 0,
               })}
             >
               {description}
@@ -68,7 +68,7 @@ export default function PageLevel({
               <p className="text-3xl md:text-xl font-semibold text-green">
                 {item.subTitle}
               </p>
-              <p className="flex flex-shrink-1 text-lg leading-[140%]">
+              <p className="flex flex-shrink-1 text-lg leading-[140%] md:text-justify">
                 {item.description}
               </p>
             </div>

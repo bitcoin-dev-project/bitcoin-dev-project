@@ -5,9 +5,9 @@ export type Curriculums = Record<string, Page>;
 
 export const curriculums = {
   "bitcoin-core": {
-    title: "Bitcoin Core Development",
+    title: "Learn Bitcoin Core Development",
     description:
-      "Originally written by Satoshi Nakamoto, bitcoin proved that purely peer-to-peer electronic cash, one of the hardest computing problems, was possible. Becoming a Bitcoin Core developer is not for everyone but those that do the work to summit the mountain contribute to a legendary codebase designed to span generations.",
+      "Originally written by Satoshi Nakamoto, bitcoin proved that purely peer-to-peer electronic cash, one of the hardest computing problems, was possible. Becoming a Bitcoin Core developer is not for everyone, but for those that are willing to do the work will contribute to a legendary codebase designed to span generations.",
     levels: [
       {
         title: "Level 1",
@@ -127,7 +127,7 @@ export const curriculums = {
     ],
   },
   "lightning-open-source": {
-    title: "Lightning Open Source Development",
+    title: "Learn Lightning Open Source Development",
     description:
       "The lightning network provides fast and inexpensive payments, addressing some of the scalability issues that bitcoin faces at the base layer. Lightning much younger than bitcoin and technical challenges remain. But for those that are ready to jump into the fast-paced development of the protocol, lightning presents a unique learning opportunity to contribute to a maturing protocol.",
     levels: [
