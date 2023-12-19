@@ -14,7 +14,7 @@ export default function About() {
   return (
     <main className="flex flex-col p-14 sm:p-7 mx-auto my-0">
       <div className="flex flex-col mb-24 gap-y-10 w-3/5 md:w-full self-center">
-        <h1 className="text-5xl md:text-lg md:text-center font-bold leading-normal">
+        <h1 className="text-[62px] lg:text-[36px] md:text-center font-bold leading-normal">
           About The Bitcoin Dev Project
         </h1>
         <Item
@@ -23,8 +23,8 @@ export default function About() {
               <></>
               <p className="my-4">
                 Our goal is to provide newcomers with the resources and support
-                your bitcoin free open source software development journey.
-                We are here to convince you to contribute to{" "}
+                your bitcoin free open source software development journey. We
+                are here to convince you to contribute to{" "}
                 <a className="text-orange" href="/projects">
                   bitcoin open source projects
                 </a>
@@ -34,10 +34,10 @@ export default function About() {
               <p>
                 There is an oft-repeated sentiment in the community that bitcoin
                 does not need you. While bitcoin is designed to be resilient, we{" "}
-                <span className="font-style: italic">do</span>
-                {" "}need you. Bitcoin needs all the talent and energy it can gather
-                to solve some of the most difficult technical problems of our
-                time. Bitcoin in your hands changes everything.
+                <span className="font-style: italic">do</span> need you. Bitcoin
+                needs all the talent and energy it can gather to solve some of
+                the most difficult technical problems of our time. Bitcoin in
+                your hands changes everything.
               </p>
             </>
           }
@@ -57,8 +57,8 @@ export default function About() {
                 >
                   Chaincode Labs
                 </a>{" "}
-                sponsored initiative geared towards developers at the beginning of
-                their bitcoin journey. Chaincode has a{" "}
+                sponsored initiative geared towards developers at the beginning
+                of their bitcoin journey. Chaincode has a{" "}
                 <a
                   className="text-orange"
                   href="https://bluematt.bitcoin.ninja/2016/08/08/chaincode/"

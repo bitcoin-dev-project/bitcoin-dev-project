@@ -25,12 +25,22 @@ export default function PageLevel({
         <div
           className={clsx("flex flex-col gap-y-6 w-[50%] pb-4 md:w-full", {
             "border-b-8 border-b-orange md:border-b-4": level.items.length > 0,
+            "w-full": level.items.length === 0,
           })}
         >
           <div className="flex items-center gap-x-6 md:gap-x-2">
             <h2 className="text-5xl md:text-2xl font-semibold">{pageTitle}</h2>
           </div>
-          {!!description && <p className="text-xl md:text-lg">{description}</p>}
+          {!!description && (
+            <p
+              className={clsx({
+                "text-xl md:text-lg": level.items.length > 0,
+                "text-2xl md:text-xl": level.items.length === 0,
+              })}
+            >
+              {description}
+            </p>
+          )}
         </div>
       )}
       <div className="flex w-full justify-between gap-y-5 md:gap-y-12 flex-wrap lg:flex-col">

@@ -16,14 +16,19 @@ export default function Career() {
   return (
     <main className="flex flex-col p-14 sm:p-7 mx-auto my-0">
       <div className="flex flex-col mb-24 gap-y-10 w-3/5 md:w-full self-center">
-        <h1 className="text-5xl md:text-lg md:text-center font-bold leading-normal">
+        <h1 className="text-[62px] lg:text-[36px] md:text-center font-bold leading-normal">
           Start Your Career in Bitcoin Open Source Development
         </h1>
         <Item
           content={
             <>
               <p className="my-4">
-                If you aspire to have professional freedom, work on something that will impact the lives of countless people across the world, write code that will span generations, and collaborate with some of the most gifted developers on the planet to solve some of the hardest technical problems of our age, then you are in the right place.
+                If you aspire to have professional freedom, work on something
+                that will impact the lives of countless people across the world,
+                write code that will span generations, and collaborate with some
+                of the most gifted developers on the planet to solve some of the
+                hardest technical problems of our age, then you are in the right
+                place.
               </p>
             </>
           }
@@ -33,8 +38,9 @@ export default function Career() {
           content={
             <>
               <p className="my-4">
-                Financial Support for bitcoin open source work typically comes in
-                the form of a grant. Grants usually last for one year and many are renewed.
+                Financial Support for bitcoin open source work typically comes
+                in the form of a grant. Grants usually last for one year and
+                many are renewed.
               </p>
               <p className="my-4">
                 Bitcoin funding is different from other open source and other
@@ -43,14 +49,14 @@ export default function Career() {
                 need to do work - ideally both. While grant programs often have
                 open applications, the secret to getting funding is not much of
                 a secret. Start doing the job for free. It establishes you as a
-                contributor and proves your motivation. It shows
-                that you are a good investment. Applicants will have much more
-                success if they do the work and then apply. For most jobs, the
-                applicant is trying to convince the employer that they are
-                capable of doing the job. But the job-seeker has no idea what
-                the work or environment is actually like. In open source, one
-                does not have to guess. Do the work. Demonstrate capability.
-                Then ask for support.
+                contributor and proves your motivation. It shows that you are a
+                good investment. Applicants will have much more success if they
+                do the work and then apply. For most jobs, the applicant is
+                trying to convince the employer that they are capable of doing
+                the job. But the job-seeker has no idea what the work or
+                environment is actually like. In open source, one does not have
+                to guess. Do the work. Demonstrate capability. Then ask for
+                support.
               </p>
               <p className="my-4">
                 Doing the work also means demonstrating your work. Not all work
@@ -147,12 +153,12 @@ export default function Career() {
           content={
             <div className="flex flex-col">
               <p className="my-4">
-                If you are ready to begin a career in bitcoin open source, Chaincode
-                Labs is hosting a three-month program to put you in the best
-                position to achieve your goals.{" "}
+                If you are ready to begin a career in bitcoin open source,
+                Chaincode Labs is hosting a three-month program to put you in
+                the best position to achieve your goals.{" "}
               </p>
               <p className="font-bold text-center">
-                  DEADLINE TO APPLY IS DECEMBER 31st, 2023.
+                DEADLINE TO APPLY IS DECEMBER 31st, 2023.
               </p>
               <Button
                 href="https://learning.chaincode.com/#FOSS"
