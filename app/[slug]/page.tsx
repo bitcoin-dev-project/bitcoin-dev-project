@@ -33,7 +33,7 @@ export default function Curriculum({
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-y-24 md:gap-y-10">
+      <div className="flex flex-col gap-y-16 md:gap-y-10">
         {curriculum.levels.map((level) => (
           <PageLevel key={level.title} pageTitle={level.title} {...level} />
         ))}

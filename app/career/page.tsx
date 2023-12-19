@@ -7,7 +7,7 @@ type Props = {
 
 const Item = ({ content, title }: Props) => (
   <div className="gap-2">
-    <h2 className="text-2xl md:text-lg font-medium leading-normal">{title}</h2>
+    <h2 className="text-2xl md:text-xl font-medium leading-normal">{title}</h2>
     <p className="text-lg md:text-md">{content}</p>
   </div>
 );
