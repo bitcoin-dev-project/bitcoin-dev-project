@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function Desktop() {
   const dropDownRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const [showDropDown, setShowDropDown] = useState(false);
   const iconStyle = showDropDown ? "rotate-180" : "";
 
@@ -15,13 +16,11 @@ export function Desktop() {
     document.addEventListener("mousedown", (event) => {
       if (
         dropDownRef.current &&
-        !dropDownRef.current.contains(event.target as Node)
+        !dropDownRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
       ) {
-        setShowDropDown((value) => {
-          if (value) return !value;
-
-          return value;
-        });
+        setShowDropDown(false);
       }
     });
     return () => {
@@ -35,6 +34,7 @@ export function Desktop() {
     <div className="relative inline-block text-left">
       <div>
         <button
+          ref={buttonRef}
           onClick={() => setShowDropDown((value) => !value)}
           type="button"
           className="flex items-center w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-gray-900"
