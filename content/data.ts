@@ -79,7 +79,7 @@ export const learnSection = createSection({
     {
       description: "Begin your career in bitcoin open source development",
       btnText: "Start",
-      src: "/lighting-infra-development.jpg",
+      src: "/lightning-infra-development.jpg",
       title: "Career",
       shortTitle: "Career",
       slug: "/career",

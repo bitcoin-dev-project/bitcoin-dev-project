@@ -138,16 +138,16 @@ export const curriculums = {
         items: [
           {
             image:
-              "/curriculums/lighting-infra-development/chaincode-ln-seminar.jpg",
+              "/curriculums/lightning-infra-development/chaincode-ln-seminar.jpg",
             title: "Chaincode LN Seminar",
             subTitle: "",
             description:
-              "This program is curated to cover key aspects of lightning network protocol development, offering discussion questions and hands-on sessions to be completed solo or with a cohort of fellow learners.",
+              "This program is curated to cover key aspects of lightning protocol development, offering discussion questions and hands-on sessions to be completed solo or with a cohort of fellow learners.",
             link: "https://learning.chaincode.com/#seminars",
           },
           {
             image:
-              "/curriculums/lighting-infra-development/bitcoin-development-philosophy.jpg",
+              "/curriculums/lightning-infra-development/bitcoin-development-philosophy.jpg",
             title: "Bitcoin Development Philosophy",
             subTitle: "",
             description:
@@ -155,7 +155,7 @@ export const curriculums = {
             link: "https://bitcoindevphilosophy.com/",
           },
           {
-            image: "/curriculums/lighting-app-development/building-on-ln.jpg",
+            image: "/curriculums/lightning-infra-development/building-on-ln.jpg",
             title: "Building on LN",
             subTitle: "",
             description:
@@ -171,7 +171,7 @@ export const curriculums = {
         items: [
           {
             image:
-              "/curriculums/lighting-infra-development/ldk-pr-review-club.jpg",
+              "/curriculums/lightning-infra-development/ldk-pr-review-club.jpg",
             title: "LDK PR Review Club",
             subTitle: "",
             description:
@@ -180,7 +180,7 @@ export const curriculums = {
           },
           {
             image:
-              "/curriculums/lighting-infra-development/mastering-lightning.jpg",
+              "/curriculums/lightning-infra-development/mastering-lightning.jpg",
             title: "Mastering Lightning",
             subTitle: "",
             description:
@@ -193,7 +193,7 @@ export const curriculums = {
         title: "What's Next",
         description: (
           <>
-            The four major Lightning implementations -{" "}
+            The four major lightning implementations -{" "}
             <Link
               target="_blank"
               rel="noopener"
