@@ -16,7 +16,7 @@ export default function Curriculum({
         <h1 className="text-[58px] lg:text-[32px] md:text-center font-bold leading-normal">
           {curriculum.title}
         </h1>
-        <p className="text-2xl md:text-xl md:text-justify max-w-[60vw] md:max-w-full">
+        <p className="text-2xl md:text-xl md:text-justify w-4/5 md:max-w-full">
           {curriculum.description}
         </p>
         <div className="flex flex-col md:text-center">

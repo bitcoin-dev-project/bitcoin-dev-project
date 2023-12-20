@@ -46,7 +46,7 @@ export const tools = {
           link: "https://btctranscripts.com/",
         },
         {
-          description: "Contribute to BTC transcripts by reviewing AI-generated copy.",
+          description: "Earn sats and contribute to BTC transcripts by reviewing AI-generated copy.",
           image: "/tools/bitcoin-transcripts-review.jpg",
           title: "Transcript Review",
           subTitle: "",

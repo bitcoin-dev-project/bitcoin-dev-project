@@ -38,7 +38,7 @@ export default function Career() {
           content={
             <>
               <p className="my-4">
-                Financial Support for bitcoin open source work typically comes
+                Financial support for bitcoin open source work typically comes
                 in the form of a grant. Grants usually last for one year and
                 many are renewed.
               </p>

@@ -51,7 +51,7 @@ export const curriculums = {
           {
             image:
               "/curriculums/bitcoin-infra-development/learn-bitcoin-from-command-line.jpg",
-            title: "Learn Bitcoin from the command line",
+            title: "Learn Bitcoin from the Command Line",
             subTitle: "",
             description:
               "Use your own bitcoin node to execute transactions, script bitcoin operations, integrate with hardware wallets and hidden services with this step by step guide.",
@@ -129,7 +129,7 @@ export const curriculums = {
   "lightning-open-source": {
     title: "Learn Lightning Open Source Development",
     description:
-      "The lightning network provides fast and inexpensive payments, addressing some of the scalability issues that bitcoin faces at the base layer. Lightning much younger than bitcoin and technical challenges remain. But for those that are ready to jump into the fast-paced development of the protocol, lightning presents a unique learning opportunity to contribute to a maturing protocol.",
+      "The lightning network provides fast and inexpensive payments, addressing some of the scalability issues that bitcoin faces at the base layer. Lightning is much younger than bitcoin and technical challenges remain. But for those that are ready to jump into the fast-paced development of the protocol, lightning presents a unique learning opportunity to contribute to a maturing protocol.",
     levels: [
       {
         title: "Level 1",
@@ -184,7 +184,7 @@ export const curriculums = {
             title: "Mastering Lightning",
             subTitle: "",
             description:
-              "The most comprehensive book on the technical side of the lightning network. Lightning is not simple so prepare to dive into some complexity.",
+              "The most comprehensive book on the technical side of the lightning network. Lightning is not simple, so prepare to dive into some complexity.",
             link: "https://github.com/lnbook/lnbook",
           },
         ],

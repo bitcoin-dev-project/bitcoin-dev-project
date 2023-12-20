@@ -22,7 +22,7 @@ export default function About() {
             <>
               <></>
               <p className="my-4">
-                Our goal is to provide newcomers with the resources and support
+                Our goal is to provide newcomers with resources and support
                 for your bitcoin open source development journey. We
                 are here to convince you to contribute to{" "}
                 <a className="text-orange" href="/projects">
