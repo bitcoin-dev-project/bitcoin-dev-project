@@ -13,7 +13,7 @@ export const projects = {
           title: "Bitcoin Core",
           subTitle: "",
           description: "The reference implementation of the bitcoin protocol",
-          image: "/projects/bitcoin-core.png",
+          image: "/projects/bitcoin-core-logo.png",
           link: "https://github.com/bitcoin/bitcoin",
         },
         {
@@ -45,7 +45,7 @@ export const projects = {
           subTitle: "",
           description:
             "A scala implementation of the lightning network, focusing on the mobile use case",
-          image: "/projects/eclair.jpg",
+          image: "/projects/eclair-logo.png",
           link: "https://github.com/ACINQ/eclair",
         },
         {
@@ -107,7 +107,7 @@ export const projects = {
           subTitle: "",
           description:
             "A series of projects to implement various bitcoin protocols in Rust",
-          image: "/projects/rust-bitcoin.png",
+          image: "/projects/rust-btc-logo.png",
           link: "https://github.com/rust-bitcoin",
         },
         {
