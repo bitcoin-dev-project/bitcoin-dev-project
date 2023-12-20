@@ -1,7 +1,7 @@
 import { Page } from "./types";
 
 export const projects = {
-  title: "Discover Bitcoin & Lightning Open Source",
+  title: "Discover Open Source Projects",
   description:
     "It takes some work to go from curiosity to contribution. But that path is not often laid out clearly. Below are some stepping stones that will help you make your first open source contribution - whether in the form of comments, reviews, or writing your own PRs.",
   levels: [
@@ -20,7 +20,7 @@ export const projects = {
           title: "Lightning Development Kit",
           subTitle: "",
           description:
-            "The Lightning Development Kit (LDK) is a library that allows you to build a lightning node without worrying about implementing low-level logic",
+            "A complete lightning implementation packaged as an SDK",
           image: "/projects/ldk.png",
           link: "https://github.com/lightningdevkit",
         },
@@ -28,7 +28,7 @@ export const projects = {
           title: "Lightning Network Daemon",
           subTitle: "",
           description:
-            "Lightning Network Daemon (LND) is a Golang implementation and the most widely run full node on the Lightning Network. ",
+            "A Golang implementation and the most widely run full node on the lightning network",
           image: "/projects/lnd.png",
           link: "https://github.com/lightningnetwork/lnd",
         },
@@ -36,7 +36,7 @@ export const projects = {
           title: "Core Lightning",
           subTitle: "",
           description:
-            "The Core Lightning project is lightweight, highly customizable and standard compliant implementation of the Lightning protocol implementation written in C",
+            "A lightweight, highly customizable and standard compliant implementation of the lightning protocol implementation written in C",
           image: "/projects/core-lightning.png",
           link: "https://github.com/ElementsProject/lightning",
         },
@@ -44,12 +44,12 @@ export const projects = {
           title: "Eclair",
           subTitle: "",
           description:
-            "A scala implementation of the Lightning Network, focusing on the mobile use case",
+            "A scala implementation of the lightning network, focusing on the mobile use case",
           image: "/projects/eclair.jpg",
           link: "https://github.com/ACINQ/eclair",
         },
         {
-          title: "Bitcoin Wallet Development Kit",
+          title: "Bitcoin Development Kit",
           subTitle: "",
           description: "Seamlessly build cross platform wallets",
           image: "/projects/bdk.png",
@@ -59,7 +59,7 @@ export const projects = {
           title: "Libsecp256k1",
           subTitle: "",
           description:
-            "Optimized C library for EC operations on curve secp256k1",
+            "Optimized C library for elliptic curve operations on secp256k1",
           image: "/projects/secp256k1.png",
           link: "https://github.com/bitcoin-core/secp256k1",
         },
@@ -67,7 +67,7 @@ export const projects = {
           title: "Validating Lightning Signer",
           subTitle: "",
           description:
-            "Improve your Lightning node security by protecting your keys separately",
+            "Improve your lightning node security by protecting your keys separately",
           image: "/projects/vls.png",
           link: "https://vls.tech",
         },
@@ -83,7 +83,7 @@ export const projects = {
           title: "BTCPayserver",
           subTitle: "",
           description:
-            "Free, open-source & self-hosted, Bitcoin payment processor",
+            "Free, open-source and self-hosted, bitcoin payment processor",
           image: "/projects/btc-pay.png",
           link: "https://github.com/btcpayserver",
         },
@@ -91,7 +91,7 @@ export const projects = {
           title: "Fedimint",
           subTitle: "",
           description:
-            "A modular open source protocol to custody and transact bitcoin in a community context, built on a strong foundation of privacy",
+            "A modular protocol to custody and transact bitcoin in a community context",
           image: "/projects/fedimint.png",
           link: "https://fedimint.org",
         },
@@ -106,7 +106,7 @@ export const projects = {
           title: "Rust Bitcoin Library",
           subTitle: "",
           description:
-            "A Series of Projects to implement various Bitcoin Protocols in Rust",
+            "A series of projects to implement various bitcoin protocols in Rust",
           image: "/projects/rust-bitcoin.png",
           link: "https://github.com/rust-bitcoin",
         },
@@ -114,7 +114,7 @@ export const projects = {
           title: "Warnet",
           subTitle: "",
           description:
-            "Monitor and analyze the emergent behaviors of P2P networks",
+            "Monitor and analyze emergent behaviors of P2P networks",
           image: "/projects/warnet.jpg",
           link: "https://github.com/rust-bitcoin",
         },
@@ -122,7 +122,7 @@ export const projects = {
           title: "SimLN",
           subTitle: "",
           description:
-            "Instantly simulate real-world Lightning network activity",
+            "Instantly simulate real-world lightning network activity",
           image: "/projects/simln.jpg",
           link: "https://github.com/rust-bitcoin",
         },

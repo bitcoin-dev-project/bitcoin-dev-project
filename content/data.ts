@@ -77,7 +77,7 @@ export const learnSection = createSection({
       slug: "/projects",
     },
     {
-      description: "Begin your career in bitcoin open source development",
+      description: " Begin a career in bitcoin open source development ",
       btnText: "Start",
       src: "/lightning-infra-development.jpg",
       title: "Career",
