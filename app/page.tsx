@@ -11,7 +11,7 @@ export default function Home() {
       <div className="flex justify-between md:flex-col gap-4 md:gap-y-6">
         <div className="flex basis-1/2 flex-grow flex-col justify-center px-14 md:px-7 md:order-2">
           <div className="flex flex-col gap-y-5 sm:gap-y-3">
-            <h1 className="text-[52px] md:text-[30px] sm:text-2xl sm:text-center lg:text-[36px] font-semibold leading-tight">Build the future of money
+            <h1 className="text-[72px] md:text-[30px] sm:text-2xl sm:text-center lg:text-[36px] font-semibold leading-tight">Build the future of money
             </h1>
             <div className="mt-0 md:mt-0 md:flex md:flex-col md:items-center">
               <h2 className="text-[32px] lg:text-[26px] md:text-[20px] sm:text-center font-medium leading-normal">
