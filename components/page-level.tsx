@@ -52,7 +52,7 @@ export default function PageLevel({
             key={item.title}
             className="flex p-6 md:p-0 gap-x-6 w-[48%] lg:w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline md:hover:outline-none hover:bg-[#FCFCFC] md:hover:bg-none md:flex-col"
           >
-            <div className="relative min-w-[160px] h-[160px] md:w-full md:min-w-min md:h-[200px] border-[#D9D9D9] border rounded-2xl overflow-hidden">
+            <div className="relative min-w-[160px] h-[160px] md:w-full md:min-w-min md:h-[250px] border-[#D9D9D9] border rounded-2xl overflow-hidden">
               <Image
                 alt={item.title}
                 className="object-fill md:object-cover w-full"

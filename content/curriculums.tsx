@@ -16,7 +16,7 @@ export const curriculums = {
         items: [
           {
             image:
-              "/curriculums/bitcoin-infra-development/mastering-bitcoin.jpg",
+              "/curriculums/bitcoin-infra-development/mastering-btc.jpg",
             title: "Mastering Bitcoin",
             subTitle: "",
             description:
@@ -25,7 +25,7 @@ export const curriculums = {
           },
           {
             image:
-              "/curriculums/bitcoin-infra-development/bitcoin-development-philosophy.jpg",
+              "/curriculums/dev-philosophy.jpg",
             title: "Bitcoin Development Philosophy",
             subTitle: "",
             description:
@@ -41,7 +41,7 @@ export const curriculums = {
         items: [
           {
             image:
-              "/curriculums/bitcoin-infra-development/chaincode-bitcoin-seminar.jpg",
+              "/curriculums/seminar-logo.png",
             title: "Chaincode Bitcoin Seminar",
             subTitle: "",
             description:
@@ -109,7 +109,7 @@ export const curriculums = {
             link: "https://bitcoincore.academy",
           },
           {
-            image: "/curriculums/bitcoin-infra-development/pr-review-club.jpg",
+            image: "/curriculums/bitcoin-infra-development/bitcoin-pr-review-club.jpg",
             title: "Bitcoin Core PR Review Club",
             subTitle: "",
             description:
@@ -138,7 +138,7 @@ export const curriculums = {
         items: [
           {
             image:
-              "/curriculums/lightning-infra-development/chaincode-ln-seminar.jpg",
+              "/curriculums/seminar-logo.png",
             title: "Chaincode LN Seminar",
             subTitle: "",
             description:
@@ -147,7 +147,7 @@ export const curriculums = {
           },
           {
             image:
-              "/curriculums/lightning-infra-development/bitcoin-development-philosophy.jpg",
+              "/curriculums/dev-philosophy.jpg",
             title: "Bitcoin Development Philosophy",
             subTitle: "",
             description:
