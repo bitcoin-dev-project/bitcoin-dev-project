@@ -10,7 +10,7 @@ export const tools = {
       description: "",
       items: [
         {
-          description: "Bitcoin Optech is the best source to stay up to date with technical developments.",
+          description: "The best source to stay up to date with technical developments.",
           image: "/tools/optech.jpg",
           title: "Bitcoin Optech",
           subTitle: "",
