@@ -72,14 +72,6 @@ export const projects = {
           link: "https://vls.tech",
         },
         {
-          title: "Polar",
-          subTitle: "",
-          description:
-            "One-click lightning networks for local app development and testing",
-          image: "/projects/polar.jpg",
-          link: "https://lightningpolar.com",
-        },
-        {
           title: "BTCPayserver",
           subTitle: "",
           description:
@@ -111,12 +103,20 @@ export const projects = {
           link: "https://github.com/rust-bitcoin",
         },
         {
+          title: "Polar",
+          subTitle: "",
+          description:
+            "One-click lightning networks for local app development and testing",
+          image: "/projects/polar.jpg",
+          link: "https://lightningpolar.com",
+        },
+        {
           title: "Warnet",
           subTitle: "",
           description:
             "Monitor and analyze emergent behaviors of P2P networks",
           image: "/projects/warnet.jpg",
-          link: "https://github.com/rust-bitcoin",
+          link: "https://warnet.dev",
         },
         {
           title: "SimLN",
@@ -124,7 +124,7 @@ export const projects = {
           description:
             "Instantly simulate real-world lightning network activity",
           image: "/projects/simln.jpg",
-          link: "https://github.com/rust-bitcoin",
+          link: "https://simln.dev",
         },
       ],
     },
