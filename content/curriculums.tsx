@@ -37,7 +37,7 @@ export const curriculums = {
       {
         title: "Level 2",
         description:
-          "Get your hands dirty with some more advances topics, exercises and simulations. These are more advanced and will move you closer to your goal of contributing to Bitcoin Core.",
+          "Get your hands dirty with some more advanced topics, exercises and simulations.",
         items: [
           {
             image:
@@ -97,7 +97,7 @@ export const curriculums = {
       {
         title: "Level 3",
         description:
-          "By now you have leveled up in the safety of reading and tutorials. It is now time to start doing the work you came to do. Explore the codebase and start building your review skills.",
+          "By now you have leveled up in the safety of reading and tutorials. It is time to start doing the work you came to do. Explore the codebase and start building your review skills.",
         items: [
           {
             image:
