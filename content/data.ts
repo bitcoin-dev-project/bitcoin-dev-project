@@ -123,12 +123,12 @@ export const contributeSection = createSection({
 
 export const pointers = [
   {
-    btnText: "Explore Bitcoin Core",
+    btnText: "Learn Bitcoin Core",
     description: "",
     jumpTo: `/bitcoin-core`,
   },
   {
-    btnText: "Explore Lightning",
+    btnText: "Learn Lightning",
     description: "",
     jumpTo: `/lightning-open-source`,
   },

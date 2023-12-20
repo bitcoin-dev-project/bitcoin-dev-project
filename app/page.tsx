@@ -11,14 +11,13 @@ export default function Home() {
       <div className="flex justify-between md:flex-col gap-4 md:gap-y-6">
         <div className="flex basis-1/2 flex-grow flex-col justify-center px-14 md:px-7 md:order-2">
           <div className="flex flex-col gap-y-5 sm:gap-y-3">
-            <h1 className="text-[52px] md:text-[30px] sm:text-2xl sm:text-center lg:text-[36px] font-semibold leading-tight">
-              Learn & contribute to{" "}
-              <span className="text-orange">bitcoin</span> and{" "}
-              <span className="text-green">lightning</span>{" "}open source
+            <h1 className="text-[52px] md:text-[30px] sm:text-2xl sm:text-center lg:text-[36px] font-semibold leading-tight">Build the future of money
             </h1>
             <div className="mt-0 md:mt-0 md:flex md:flex-col md:items-center">
               <h2 className="text-[32px] lg:text-[26px] md:text-[20px] sm:text-center font-medium leading-normal">
-                Build the future of money
+                Study & contribute to{" "}
+                <span className="text-orange">bitcoin</span> and{" "}
+                <span className="text-green">lightning</span>{" "}open source
               </h2>
             </div>
             <div className="flex gap-x-5 lg:flex-col lg:gap-y-3 md:items-center">
@@ -49,7 +48,7 @@ export default function Home() {
       <div className="flex flex-col px-14 sm:px-7">
         <h2
           id={learnSection.slug}
-          className="mt-32 md:mt-10 text-5xl md:text-2xl font-semibold text-center self-center mb-10"
+          className="mt-24 md:mt-10 text-5xl md:text-2xl font-semibold text-center self-center mb-10"
         >
           {learnSection.title}
         </h2>
@@ -65,7 +64,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-32 md:mt-10 flex flex-col self-center text-center gap-y-2">
+        <div className="mt-24 md:mt-10 flex flex-col self-center text-center gap-y-2">
           <h2 className="text-5xl md:text-2xl font-semibold">Tools</h2>
           <p className="text-xl md:text-base leading-[140%] mx-20 sm:mx-0 my-4">
             Check out some of the tools
