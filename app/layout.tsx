@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   keywords:
-    "bitcoin, lightning, bitcoin development, bitcoin FOSS, bitcoin career, free open source software, open source, bitcoin development, bitcoin development community, bitcoin development resources, bitcoin development tools, bitcoin development guides, bitcoin development courses",
+    "bitcoin, lightning, bitcoin development, bitcoin open source, bitcoin FOSS, bitcoin career, free open source software, open source, bitcoin development, bitcoin development community, bitcoin development resources, bitcoin development tools, bitcoin development guides, bitcoin development courses",
 };
 
 export default function RootLayout({
