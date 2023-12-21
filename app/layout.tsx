@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     description: "Find your way in bitcoin open source",
   },
   twitter: {
-    images: ["https://bitcoindevs.xyz/landscape.jpg"],
-    card: "summary_large_image",
+    images: ["https://bitcoindevs.xyz/hero.jpg"],
+    card: "summary",
   },
   keywords:
     "bitcoin, lightning, bitcoin development, bitcoin open source, bitcoin FOSS, bitcoin career, free open source software, open source, bitcoin development, bitcoin development community, bitcoin development resources, bitcoin development tools, bitcoin development guides, bitcoin development courses",
