@@ -7,12 +7,12 @@ import { Banner } from "@/components/banner";
 
 export const metadata: Metadata = {
   title: "The Bitcoin Dev Project",
-  description: "Find your way in bitcoin open source",
+  description: "Find your way in bitcoin open source development",
   openGraph: {
     images: ["https://bitcoindevs.xyz/hero.jpg"],
     title: "The Bitcoin Dev Project",
     url: "https://bitcoindevs.xyz",
-    description: "Find your way in bitcoin open source",
+    description: "Find your way in bitcoin open source development",
   },
   twitter: {
     images: ["https://bitcoindevs.xyz/square-hero.jpg"],
