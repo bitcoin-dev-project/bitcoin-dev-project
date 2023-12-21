@@ -35,7 +35,7 @@ export default function PageLevel({
             <p
               className={clsx({
                 "text-xl md:text-lg md:text-justify": level.items.length > 0,
-                "text-xl md:text-lg md:text-justify w-4/5 md:max-w-full": level.items.length === 0,
+                "text-xl md:text-lg md:text-justify w-4/5 md:w-full": level.items.length === 0,
               })}
             >
               {description}
