@@ -29,6 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <script async src="https://visits.bitcoindevs.xyz/script.js" data-website-id="4ee856e4-582c-4a9c-a1c5-10757123803e"></script>
       <body className={barlow.className}>
         <Fonts />
         <NavBar />
