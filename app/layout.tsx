@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: "Find your way in bitcoin open source",
   },
   twitter: {
-    images: ["https://bitcoindevs.xyz/hero.jpg"],
+    images: ["https://bitcoindevs.xyz/square-hero.jpg"],
     card: "summary",
   },
   keywords:
