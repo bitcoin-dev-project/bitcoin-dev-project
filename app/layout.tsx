@@ -3,7 +3,6 @@ import Footer from "@/components/footer";
 import NavBar from "@/components/nav-bar";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Banner } from "@/components/banner";
 
 export const metadata: Metadata = {
   title: "The Bitcoin Dev Project",
@@ -29,15 +28,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <script async src="https://visits.bitcoindevs.xyz/script.js" data-website-id="4ee856e4-582c-4a9c-a1c5-10757123803e"></script>
+      <script
+        async
+        src="https://visits.bitcoindevs.xyz/script.js"
+        data-website-id="4ee856e4-582c-4a9c-a1c5-10757123803e"
+      />
       <body className={barlow.className}>
         <Fonts />
         <NavBar />
-        <Banner
-          headingText="Start your career in bitcoin open source in 2024"
-          linkText="APPLY TODAY!"
-          linkTo="https://learning.chaincode.com/#FOSS"
-        />
         <div className="flex flex-grow flex-col min-h-screen max-w-7xl m-auto">
           {children}
         </div>
