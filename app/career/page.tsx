@@ -149,27 +149,6 @@ export default function Career() {
           }
           title="Funding Organizations"
         />
-        <Item
-          content={
-            <div className="flex flex-col">
-              <p className="my-4">
-                If you are ready to begin a career in bitcoin open source,
-                Chaincode Labs is hosting a three-month program to put you in
-                the best position to achieve your goals.{" "}
-              </p>
-              <p className="font-bold text-center">
-                DEADLINE TO APPLY IS DECEMBER 31st, 2023.
-              </p>
-              <Button
-                href="https://learning.chaincode.com/#FOSS"
-                className="w-[55%] self-center mt-5"
-              >
-                APPLY
-              </Button>
-            </div>
-          }
-          title="Change your life in 2024"
-        />
       </div>
     </main>
   );
