@@ -411,7 +411,7 @@
     "repo_url": "https://github.com/bitcoinsearch/bitcoinsearch-app",
     "name": "bitcoinsearch-app",
     "org": "bitcoinsearch",
-    "tags": ["bitcoin", "web", "react", "search-engine"],
+    "tags": ["bitcoin", "lightning", "web", "react", "search-engine"],
     "lang": ["Typescript"],
     "issue": "https://github.com/bitcoinsearch/bitcoinsearch-app/issues"
   },
@@ -435,7 +435,7 @@
     "repo_url": "https://github.com/bitcoin-dev-project/sim-ln",
     "name": "sim-ln",
     "org": "bitcoin-dev-project",
-    "tags": ["lightning", "simulator"],
+    "tags": ["lightning", "simulator", "cli"],
     "lang": ["Rust", "Shell"],
     "issue": "https://github.com/bitcoin-dev-project/sim-ln/issues"
   },
