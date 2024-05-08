@@ -3,36 +3,15 @@
     "repo_url": "https://github.com/btcpayserver/btcpayserver",
     "name": "btcpayserver",
     "org": "BTCPay Server",
-    "tags": [
-      "bitcoin",
-      "crowdfunding",
-      "payment-gateway",
-      "lightning-network",
-      "point-of-sale",
-      "bitcoin-payment-gateway",
-      "bitcoin-payment-processor",
-      "payment-gateway"
-    ],
-    "lang": ["C#", "Shell"],
+    "tags": ["bitcoin", "payment-gateway", "point-of-sale", "bitcoin-payment-processor"],
+    "lang": ["C#", "Javascript", "Shell"],
     "issue": "https://github.com/btcpayserver/btcpayserver/issues"
   },
   "wasabi": {
     "repo_url": "https://github.com/zkSNACKs/WalletWasabi",
     "name": "WalletWasabi",
     "org": "zkSNACKs",
-    "tags": [
-      "privacy",
-      "cross-platform",
-      "tor",
-      "wallet",
-      "bitcoin",
-      "bitcoin-wallet",
-      "coinjoin",
-      "wasabi",
-      "nbitcoin",
-      "wabisabi",
-      "wasabi-wallet"
-    ],
+    "tags": ["cross-platform", "tor", "wallet", "bitcoin", "coinjoin", "web"],
     "lang": ["C#"],
     "issue": "https://github.com/zkSNACKs/WalletWasabi/issues"
   },
@@ -40,23 +19,23 @@
     "repo_url": "https://github.com/fedimint/fedimint",
     "name": "fedimint",
     "org": "fedimint",
-    "tags": ["lightning", "bitcoin", "p2p", "lightning-network", "e-cash", "gateways", "protocol"],
+    "tags": ["lightning", "bitcoin", "p2p", "e-cash", "gateways", "protocol"],
     "lang": ["Rust", "Shell", "Nix"],
     "issue": "https://github.com/fedimint/fedimint/issues"
   },
-  "ui": {
+  "fedimint-ui": {
     "repo_url": "https://github.com/fedimint/ui",
-    "name": "ui",
+    "name": "fedimint-ui",
     "org": "fedimint",
-    "tags": ["lightning", "bitcoin", "p2p", "lightning-network", "e-cash", "gateways"],
-    "lang": ["Typescript"],
+    "tags": ["lightning", "bitcoin", "p2p", "e-cash", "gateways", "react", "web"],
+    "lang": ["Typescript", "Shell"],
     "issue": "https://github.com/fedimint/ui/issues"
   },
   "polar": {
     "repo_url": "https://github.com/jamaljsr/polar",
     "name": "polar",
-    "org": "",
-    "tags": ["lightning", "bitcoin", "lightning-network", "polar", "bitcoin-d", "c-lightning"],
+    "org": "jamaljsr",
+    "tags": ["lightning", "bitcoin", "c-lightning", "web", "react"],
     "lang": ["Typescript", "Docker"],
     "issue": "https://github.com/jamaljsr/polar/issues"
   },
@@ -68,19 +47,11 @@
     "lang": ["C++", "Python", "C"],
     "issue": "https://github.com/bitcoin/bitcoin/issues"
   },
-  "xpub-converter": {
-    "repo_url": "https://github.com/jlopp/xpub-converter",
-    "name": "xpub-converter",
-    "org": "jlopp",
-    "tags": ["bitcoin"],
-    "lang": ["Javascript"],
-    "issue": "https://github.com/jlopp/xpub-converter/issues"
-  },
   "bitcoinjs-lib": {
     "repo_url": "https://github.com/bitcoinjs/bitcoinjs-lib",
     "name": "bitcoinjs-lib",
     "org": "bitcoinjs",
-    "tags": ["bitcoin", "bitcoinjs", "bitcoinjs-lib", "library"],
+    "tags": ["bitcoin", "library"],
     "lang": ["Typescript", "Javascript"],
     "issue": "https://github.com/bitcoinjs/bitcoinjs-lib/issues"
   },
@@ -88,15 +59,15 @@
     "repo_url": "https://github.com/spesmilo/electrum",
     "name": "electrum",
     "org": "spesmilo",
-    "tags": ["lightning", "bitcoin", "wallet", "bitcoin-wallet", "lightning-network"],
-    "lang": ["Python", "QML"],
+    "tags": ["lightning", "bitcoin", "wallet"],
+    "lang": ["Python", "QML", "Shell"],
     "issue": "https://github.com/spesmilo/electrum/issues"
   },
   "bluewallet": {
     "repo_url": "https://github.com/bluewallet/bluewallet",
     "name": "bluewallet",
     "org": "BlueWallet",
-    "tags": ["bitcoin", "blockchain", "cryptocurrency", "bitcoinjs", "electrum", "wallet"],
+    "tags": ["bitcoin", "blockchain", "cryptocurrency", "wallet", "mobile", "react-native"],
     "lang": ["Javascript", "Typescript"],
     "issue": "https://github.com/bluewallet/bluewallet/issues"
   },
@@ -104,7 +75,7 @@
     "repo_url": "https://github.com/BlueWallet/LndHub",
     "name": "LndHub",
     "org": "BlueWallet",
-    "tags": ["bitcoin", "lightning", "lightning-network"],
+    "tags": ["bitcoin", "lightning", "api"],
     "lang": ["Javascript"],
     "issue": "https://github.com/BlueWallet/LndHub/issues"
   },
@@ -112,7 +83,7 @@
     "repo_url": "https://github.com/BlueWallet/rn-ldk",
     "name": "rn-ldk",
     "org": "BlueWallet",
-    "tags": ["bitcoin", "lightning", "lightning-network", "react-native"],
+    "tags": ["bitcoin", "lightning", "react-native", "mobile"],
     "lang": ["C++", "Typescript"],
     "issue": "https://github.com/BlueWallet/rn-ldk/issues"
   },
@@ -120,15 +91,15 @@
     "repo_url": "https://github.com/ACINQ/phoenix",
     "name": "pheonix",
     "org": "ACINQ",
-    "tags": ["lightning", "bitcoin", "lightning-network", "wallet", "self-custody", "bitcoin-wallet"],
-    "lang": ["C", "Kotlin"],
+    "tags": ["lightning", "bitcoin", "wallet", "self-custody", "mobile"],
+    "lang": ["C", "Kotlin", "Swift"],
     "issue": "https://github.com/ACINQ/phoenix/issues"
   },
   "eclair": {
     "repo_url": "https://github.com/ACINQ/eclair",
     "name": "eclair",
     "org": "ACINQ",
-    "tags": ["lightning", "bitcoin", "blockchain", "payments", "cryptocurrency", "lightning-network"],
+    "tags": ["lightning", "bitcoin", "blockchain", "payments", "cryptocurrency", "api"],
     "lang": ["Scala"],
     "issue": "https://github.com/ACINQ/eclair/issues"
   },
@@ -136,7 +107,7 @@
     "repo_url": "https://github.com/ACINQ/lightning-kmp",
     "name": "lightning-kmp",
     "org": "ACINQ",
-    "tags": ["lightning", "bitcoin", "blockchain", "lightning-network"],
+    "tags": ["lightning", "bitcoin", "blockchain", "library"],
     "lang": ["Kotlin"],
     "issue": "https://github.com/ACINQ/lightning-kmp/issues"
   },
@@ -144,7 +115,7 @@
     "repo_url": "https://github.com/lightninglabs/loop",
     "name": "loop",
     "org": "Lightning labs",
-    "tags": ["bitcoin", "lightning"],
+    "tags": ["bitcoin", "lightning", "swaps", "daemon"],
     "lang": ["Go"],
     "issue": "https://github.com/lightninglabs/loop/issues"
   },
@@ -152,7 +123,7 @@
     "repo_url": "https://github.com/Ride-The-Lightning/RTL",
     "name": "RTL",
     "org": "Ride-The-Lightning",
-    "tags": ["bitcoin", "lightning", "browser", "micropayments", "eclair", "lnd", "lightning-network", "nodemanager", "core-lightning"],
+    "tags": ["bitcoin", "lightning", "web", "micropayments", "nodemanager"],
     "lang": ["Javascript", "Typescript"],
     "issue": "https://github.com/Ride-The-Lightning/RTL/issues"
   },
@@ -161,7 +132,7 @@
     "name": "mempool",
     "org": "mempool",
     "tags": ["bitcoin", "explorer", "fees", "mempool"],
-    "lang": ["Typescript"],
+    "lang": ["Typescript", "Rust"],
     "issue": "https://github.com/mempool/mempool/issues"
   },
   "elements": {
@@ -169,22 +140,22 @@
     "name": "elements",
     "org": "ElementsProject",
     "tags": ["bitcoin", "blockchain", "protocol"],
-    "lang": ["C++", "Python"],
+    "lang": ["C++", "Python", "C"],
     "issue": "https://github.com/elementsproject/elements/issues"
   },
   "pyblock": {
     "repo_url": "https://github.com/curly60e/pyblock",
     "name": "pyblock",
-    "org": "",
+    "org": "curly60e",
     "tags": ["bitcoin"],
-    "lang": ["C++", "Python"],
+    "lang": ["Python"],
     "issue": "https://github.com/curly60e/pyblock/issues"
   },
   "bitcoinj": {
     "repo_url": "https://github.com/bitcoinj/bitcoinj",
     "name": "bitcoinj",
     "org": "bitcoinj",
-    "tags": ["bitcoin", "library", "blockchain", "bitcoinj", "taproot"],
+    "tags": ["bitcoin", "library", "blockchain"],
     "lang": ["Java"],
     "issue": "https://github.com/bitcoinj/bitcoinj/issues"
   },
@@ -192,8 +163,8 @@
     "repo_url": "https://github.com/digitalbitbox/bitbox-wallet-app",
     "name": "bitbox-wallet-app",
     "org": "digital-bit-box",
-    "tags": ["bitcoin", "hardware-wallet", "wallet", "segwit"],
-    "lang": ["Go", "Typescript"],
+    "tags": ["bitcoin", "wallet", "web", "mobile"],
+    "lang": ["Go", "Typescript", "Java"],
     "issue": "https://github.com/digitalbitbox/bitbox-wallet-app/issues"
   },
   "trezor-firmware": {
@@ -201,38 +172,38 @@
     "name": "trezor-firmware",
     "org": "Trezor",
     "tags": ["cryptography", "bitcoin", "firmware", "cryptocurrency", "wallet"],
-    "lang": ["C", "Python"],
+    "lang": ["C", "Python", "Rust"],
     "issue": "https://github.com/trezor/trezor-firmware/issues"
   },
   "joinmarket-clientserver": {
     "repo_url": "https://github.com/JoinMarket-Org/joinmarket-clientserver",
     "name": "joinmarket-clientserver",
     "org": "JoinMarket-Org",
-    "tags": ["privacy", "bitcoin", "coinjoin", "joinmarket"],
-    "lang": ["Python"],
+    "tags": ["bitcoin", "coinjoin"],
+    "lang": ["Python", "Shell"],
     "issue": "https://github.com/JoinMarket-Org/joinmarket-clientserver/issues"
   },
-  "lightning": {
+  "c-lightning": {
     "repo_url": "https://github.com/ElementsProject/lightning",
     "name": "lightning",
     "org": "ElementsProject",
-    "tags": ["lightning", "bitcoin", "p2p", "lightning-network"],
-    "lang": ["C", "Python"],
+    "tags": ["lightning", "bitcoin", "p2p"],
+    "lang": ["C", "Python", "Rust"],
     "issue": "https://github.com/ElementsProject/lightning/issues"
   },
   "pool": {
     "repo_url": "https://github.com/lightninglabs/pool",
     "name": "pool",
     "org": "Lightning labs",
-    "tags": ["lightning", "lightning-network"],
+    "tags": ["lightning", "cryptography", "p2p"],
     "lang": ["Go"],
     "issue": "https://github.com/lightninglabs/pool/issues"
   },
   "warden_terminal": {
     "repo_url": "https://github.com/pxsocs/warden_terminal",
     "name": "warden_terminal",
-    "org": "",
-    "tags": ["bitcoin", "mempool"],
+    "org": "pxsocs",
+    "tags": ["bitcoin", "cli"],
     "lang": ["Javascript", "Python"],
     "issue": "https://github.com/pxsocs/warden_terminal/issues"
   },
@@ -240,16 +211,288 @@
     "repo_url": "https://github.com/RoboSats/robosats",
     "name": "robosats",
     "org": "RoboSats",
-    "tags": ["bitcoin", "privacy", "lightning", "p2p", "tor", "exchange", "i2p"],
+    "tags": ["bitcoin", "lightning", "p2p", "tor", "exchange", "i2p", "web"],
     "lang": ["Typescript", "Python"],
     "issue": "https://github.com/RoboSats/robosats/issues"
   },
   "thunderhub": {
     "repo_url": "https://github.com/apotdevin/thunderhub",
     "name": "thunderhub",
-    "org": "",
-    "tags": ["lightning", "lightning-network"],
+    "org": "apotdevin",
+    "tags": ["lightning", "nodemanager", "react", "web"],
     "lang": ["Typescript"],
     "issue": "https://github.com/apotdevin/thunderhub/issues"
+  },
+  "galoy-client": {
+    "repo_url": "https://github.com/GaloyMoney/galoy-client",
+    "name": "galoy-client",
+    "org": "GaloyMoney",
+    "tags": ["lightning", "bitcoin", "wallet", "web", "mobile", "react", "point-of-sale"],
+    "lang": ["Typescript", "Javascript", "Shell"],
+    "issue": "https://github.com/GaloyMoney/galoy-client/issues"
+  },
+  "blink": {
+    "repo_url": "https://github.com/GaloyMoney/blink",
+    "name": "blink",
+    "org": "GaloyMoney",
+    "tags": ["lightning", "bitcoin", "payments", "cryptocurrency", "community-banking", "api"],
+    "lang": ["Typescript", "Starlark", "Javascript", "Python", "Erlang", "Shell"],
+    "issue": "https://github.com/GaloyMoney/blink/issues"
+  },
+  "cala": {
+    "repo_url": "https://github.com/GaloyMoney/cala",
+    "name": "cala",
+    "org": "GaloyMoney",
+    "tags": ["library", "bitcoin"],
+    "lang": ["Rust", "Javascript", "Shell", "PlgpSql"],
+    "issue": "https://github.com/GaloyMoney/cala/issues"
+  },
+  "blink-mobile": {
+    "repo_url": "https://github.com/GaloyMoney/blink-mobile",
+    "name": "blink-mobile",
+    "org": "GaloyMoney",
+    "tags": ["bitcoin", "wallet", "mobile", "react-native", "lightning"],
+    "lang": ["Typescript", "Javascript", "Shell"],
+    "issue": "https://github.com/GaloyMoney/blink-mobile/issues"
+  },
+  "bria": {
+    "repo_url": "https://github.com/GaloyMoney/bria",
+    "name": "bria",
+    "org": "GaloyMoney",
+    "tags": ["bitcoin"],
+    "lang": ["Rust", "Shell", "PlgpSql"],
+    "issue": "https://github.com/GaloyMoney/bria/issues"
+  },
+  "stablesats-rs": {
+    "repo_url": "https://github.com/GaloyMoney/stablesats-rs",
+    "name": "stablesats-rs",
+    "org": "GaloyMoney",
+    "tags": ["bitcoin", "cryptocurrency"],
+    "lang": ["Rust", "Shell", "PlgpSql"],
+    "issue": "https://github.com/GaloyMoney/stablesats-rs/issues"
+  },
+  "blink-cli": {
+    "repo_url": "https://github.com/GaloyMoney/blink-cli",
+    "name": "blink-cli",
+    "org": "GaloyMoney",
+    "tags": ["bitcoin", "cli"],
+    "lang": ["Rust", "Shell"],
+    "issue": "https://github.com/GaloyMoney/blink-cli/issues"
+  },
+  "sphinx-nav-fiber": {
+    "repo_url": "https://github.com/stakwork/sphinx-nav-fiber",
+    "name": "sphinx-nav-fiber",
+    "org": "stakwork",
+    "tags": ["bitcoin", "lightning", "bounty"],
+    "lang": ["Typescript", "Javascript"],
+    "issue": "https://github.com/stakwork/sphinx-nav-fiber/issues"
+  },
+  "sphinx-tribes-frontend": {
+    "repo_url": "https://github.com/stakwork/sphinx-tribes-frontend",
+    "name": "sphinx-tribes-frontend",
+    "org": "stakwork",
+    "tags": ["bitcoin", "lightning", "react", "bounty", "react", "web"],
+    "lang": ["Typescript"],
+    "issue": "https://github.com/stakwork/sphinx-tribes-frontend/issues"
+  },
+  "sphinx-ios": {
+    "repo_url": "https://github.com/stakwork/sphinx-ios",
+    "name": "sphinx-ios",
+    "org": "stakwork",
+    "tags": ["bitcoin", "lightning", "mobile", "bounty"],
+    "lang": ["Swift"],
+    "issue": "https://github.com/stakwork/sphinx-ios/issues"
+  },
+  "sphinx-swarm": {
+    "repo_url": "https://github.com/stakwork/sphinx-swarm",
+    "name": "sphinx-swarm",
+    "org": "stakwork",
+    "tags": ["lightning", "svelte", "bounty", "web"],
+    "lang": ["Rust", "Svelte", "Typescript", "Javascript"],
+    "issue": "https://github.com/stakwork/sphinx-swarm/issues"
+  },
+  "sphinx-mac": {
+    "repo_url": "https://github.com/stakwork/sphinx-mac",
+    "name": "sphinx-mac",
+    "org": "stakwork",
+    "tags": ["lightning", "bitcoin", "bounty", "web"],
+    "lang": ["Swift"],
+    "issue": "https://github.com/stakwork/sphinx-mac/issues"
+  },
+  "sphinx-tribes": {
+    "repo_url": "https://github.com/stakwork/sphinx-tribes",
+    "name": "sphinx-tribes",
+    "org": "stakwork",
+    "tags": ["lightning", "bitcoin", "bounty", "api"],
+    "lang": ["Go", "Typescript"],
+    "issue": "https://github.com/stakwork/sphinx-tribes/issues"
+  },
+  "sphinx-kotlin": {
+    "repo_url": "https://github.com/stakwork/sphinx-kotlin",
+    "name": "sphinx-kotlin",
+    "org": "stakwork",
+    "tags": ["lightning", "bitcoin", "bounty", "mobile"],
+    "lang": ["Kotlin", "Java"],
+    "issue": "https://github.com/stakwork/sphinx-kotlin/issues"
+  },
+  "sphinx-relay": {
+    "repo_url": "https://github.com/stakwork/sphinx-relay",
+    "name": "sphinx-relay",
+    "org": "stakwork",
+    "tags": ["lightning", "bounty"],
+    "lang": ["Typescript", "Javascript"],
+    "issue": "https://github.com/stakwork/sphinx-relay/issues"
+  },
+  "sphinx-kotlin-ui": {
+    "repo_url": "https://github.com/stakwork/sphinx-kotlin-ui",
+    "name": "sphinx-kotlin-ui",
+    "org": "stakwork",
+    "tags": ["lightning", "mobile", "web"],
+    "lang": ["Kotlin"],
+    "issue": "https://github.com/stakwork/sphinx-kotlin-ui/issues"
+  },
+  "sphinx-key": {
+    "repo_url": "https://github.com/stakwork/sphinx-key",
+    "name": "sphinx-key",
+    "org": "stakwork",
+    "tags": ["lightning", "wallet"],
+    "lang": ["Rust", "Shell"],
+    "issue": "https://github.com/stakwork/sphinx-key/issues"
+  },
+  "stratum": {
+    "repo_url": "https://github.com/stratum-mining/stratum",
+    "name": "stratum",
+    "org": "stratum-mining",
+    "tags": ["mining", "bitcoin", "protocol"],
+    "lang": ["Rust"],
+    "issue": "https://github.com/stratum-mining/stratum/issues"
+  },
+  "bdk": {
+    "repo_url": "https://github.com/bitcoindevkit/bdk",
+    "name": "bdk",
+    "org": "bitcoindevkit",
+    "tags": ["bitcoin", "wallet", "descriptors", "miniscript", "library"],
+    "lang": ["Rust"],
+    "issue": "https://github.com/bitcoindevkit/bdk/issues"
+  },
+  "bdk-ffi": {
+    "repo_url": "https://github.com/bitcoindevkit/bdk-ffi",
+    "name": "bdk-ffi",
+    "org": "bitcoindevkit",
+    "tags": ["language-bindings"],
+    "lang": ["Rust", "Kotlin", "Swift", "Python", "Shell"],
+    "issue": "https://github.com/bitcoindevkit/bdk-ffi/issues"
+  },
+  "rust-lightning": {
+    "repo_url": "https://github.com/lightningdevkit/rust-lightning",
+    "name": "rust-lightning",
+    "org": "lightningdevkit",
+    "tags": ["bitcoin", "lightning", "library"],
+    "lang": ["Rust"],
+    "issue": "https://github.com/lightningdevkit/rust-lightning/issues"
+  },
+  "ldk-node": {
+    "repo_url": "https://github.com/lightningdevkit/ldk-node",
+    "name": "ldk-node",
+    "org": "lightningdevkit",
+    "tags": ["bitcoin", "lightning", "library"],
+    "lang": ["Rust", "Swift", "Shell", "Kotlin", "Python"],
+    "issue": "https://github.com/lightningdevkit/ldk-node/issues"
+  },
+  "tldr": {
+    "repo_url": "https://github.com/bitcoinsearch/tldr",
+    "name": "tldr",
+    "org": "bitcoinsearch",
+    "tags": ["bitcoin", "web", "react", "blog"],
+    "lang": ["Typescript"],
+    "issue": "https://github.com/bitcoinsearch/tldr/issues"
+  },
+  "bitcoinsearch-app": {
+    "repo_url": "https://github.com/bitcoinsearch/bitcoinsearch-app",
+    "name": "bitcoinsearch-app",
+    "org": "bitcoinsearch",
+    "tags": ["bitcoin", "web", "react", "search-engine"],
+    "lang": ["Typescript"],
+    "issue": "https://github.com/bitcoinsearch/bitcoinsearch-app/issues"
+  },
+  "scraper": {
+    "repo_url": "https://github.com/bitcoinsearch/scraper",
+    "name": "scraper",
+    "org": "bitcoinsearch",
+    "tags": ["bitcoin"],
+    "lang": ["Python", "Javascript", "Typescript"],
+    "issue": "https://github.com/bitcoinsearch/scraper/issues"
+  },
+  "chat-btc": {
+    "repo_url": "https://github.com/bitcoinsearch/chat-btc",
+    "name": "chat-btc",
+    "org": "bitcoinsearch",
+    "tags": ["bitcoin", "chatbot", "react", "web"],
+    "lang": ["Typescript"],
+    "issue": "https://github.com/bitcoinsearch/chat-btc/issues"
+  },
+  "sim-ln": {
+    "repo_url": "https://github.com/bitcoin-dev-project/sim-ln",
+    "name": "sim-ln",
+    "org": "bitcoin-dev-project",
+    "tags": ["lightning", "simulator"],
+    "lang": ["Rust", "Shell"],
+    "issue": "https://github.com/bitcoin-dev-project/sim-ln/issues"
+  },
+  "warnet": {
+    "repo_url": "https://github.com/bitcoin-dev-project/warnet",
+    "name": "warnet",
+    "org": "bitcoin-dev-project",
+    "tags": ["bitcoin", "lightning", "simulator", "cli"],
+    "lang": ["Python", "Shell"],
+    "issue": "https://github.com/bitcoin-dev-project/warnet/issues"
+  },
+  "gh-stats": {
+    "repo_url": "https://github.com/bitcoin-dev-project/gh-stats",
+    "name": "gh-stats",
+    "org": "bitcoin-dev-project",
+    "tags": ["web", "react", "code-review"],
+    "lang": ["Typescript"],
+    "issue": "https://github.com/bitcoin-dev-project/gh-stats/issues"
+  },
+  "fresh-eyes": {
+    "repo_url": "https://github.com/bitcoin-dev-project/fresh-eyes",
+    "name": "fresh-eyes",
+    "org": "bitcoin-dev-project",
+    "tags": ["web", "react", "code-review", "cli", "api"],
+    "lang": ["Rust", "Typescript"],
+    "issue": "https://github.com/bitcoin-dev-project/fresh-eyes/issues"
+  },
+  "transcription-review-front-end": {
+    "repo_url": "https://github.com/bitcointranscripts/transcription-review-front-end",
+    "name": "transcription-review-front-end",
+    "org": "bitcointranscripts",
+    "tags": ["bitcoin", "web", "react", "trasnscription"],
+    "lang": ["Typescript"],
+    "issue": "https://github.com/bitcointranscripts/transcription-review-front-end/issues"
+  },
+  "transcription-review-backend": {
+    "repo_url": "https://github.com/bitcointranscripts/transcription-review-backend",
+    "name": "transcription-review-backend",
+    "org": "bitcointranscripts",
+    "tags": ["api", "trasnscription"],
+    "lang": ["Typescript", "Javascript"],
+    "issue": "https://github.com/bitcointranscripts/transcription-review-backend/issues"
+  },
+  "tstbtc": {
+    "repo_url": "https://github.com/bitcointranscripts/tstbtc",
+    "name": "tstbtc",
+    "org": "bitcointranscripts",
+    "tags": ["cli", "trasnscription", "bitcoin"],
+    "lang": ["Python", "Shell"],
+    "issue": "https://github.com/bitcointranscripts/tstbtc/issues"
+  },
+  "saving-satoshi": {
+    "repo_url": "https://github.com/saving-satoshi/saving-satoshi",
+    "name": "saving-satoshi",
+    "org": "saving-satoshi",
+    "tags": ["web", "game", "bitcoin", "react"],
+    "lang": ["Typescript"],
+    "issue": "https://github.com/saving-satoshi/saving-satoshi/issues"
   }
 }
