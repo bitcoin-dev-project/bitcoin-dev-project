@@ -1,6 +1,5 @@
 import PageLevel from "@/components/page-level";
 import { projects } from "@/content/projects";
-import clsx from "clsx";
 
 export default function Projects() {
   return (

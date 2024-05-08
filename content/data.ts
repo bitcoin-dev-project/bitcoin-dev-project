@@ -33,14 +33,6 @@ export const toolsData = [
   },
 ];
 
-export const faqs = [
-  {
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum nemo necessitatibus quaerat rerum officiis nesciunt praesentium, id, itaque voluptatibus a tempora fuga laboriosam modi blanditiis incidunt earum. Tempore, deserunt?",
-    title: "I'm not a dev but I want to learn more about bitcoin",
-  },
-];
-
 type Section = {
   title: string;
   description?: string;

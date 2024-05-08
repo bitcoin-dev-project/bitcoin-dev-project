@@ -1,5 +1,3 @@
-import Button from "@/components/button";
-
 type Props = {
   content: string | React.ReactNode;
   title: string;

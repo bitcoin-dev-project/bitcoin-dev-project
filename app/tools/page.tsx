@@ -1,6 +1,5 @@
 import PageLevel from "@/components/page-level";
 import { tools } from "@/content/tools";
-import clsx from "clsx";
 
 export default function Explore() {
   return (
