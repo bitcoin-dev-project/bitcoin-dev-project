@@ -8,7 +8,9 @@ const Contribute = async () => {
 
     return (
         <AuthProvider>
-            <main className="p-14 sm:p-7 mx-auto my-0">logged in user: {session?.user.login}</main>
+            <main className="p-14 sm:p-7 mx-auto my-0">
+                logged in user: {session?.user.login}
+            </main>
             <div className="flex max-w-5xl xl:w-3/4 w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 py-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static rounded-xl lg:border lg:bg-gray-200 p-4 lg:dark:bg-zinc-800/30">
                 <p className="w-full text-base">
                     Welcome {session?.user.name}!
