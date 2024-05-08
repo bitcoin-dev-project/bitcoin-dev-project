@@ -93,6 +93,10 @@ export const links = [
         linkTo: "/tools"
     },
     {
+        text: "Contribute",
+        linkTo: "/contribute"
+    },
+    {
         text: "About",
         linkTo: "/about"
     }
