@@ -1,0 +1,5 @@
+# ignore text that looks like a bitcoin address or a lightning invoice or a jwt token
+# as they are likely to be false positives
+default.extend-ignore-identifiers-re = ["^bc1\\w+", "^lnbc1\\w+"]
+
+default.extend-ignore-re = ["\"eyJ[a-zA-Z0-9_\\-\\.]+\""]
