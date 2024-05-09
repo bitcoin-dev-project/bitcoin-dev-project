@@ -5,13 +5,13 @@ import NextAuth, {
     NextAuthOptions,
     Session
 } from "next-auth"
-import { CLIENTID, CLIENTSECRET } from "@/utils/configs"
+import { CLIENT_ID, CLIENT_SECRET } from "@/utils/configs"
 
 export const authOptions: NextAuthOptions = {
     providers: [
         GithubProvider({
-            clientId: CLIENTID,
-            clientSecret: CLIENTSECRET
+            clientId: CLIENT_ID,
+            clientSecret: CLIENT_SECRET
         })
     ],
     pages: {
@@ -28,9 +28,8 @@ export const authOptions: NextAuthOptions = {
         async session({ session, token }: { session: Session; token: JWT }) {
             if (token.accessToken) {
                 session.accessToken = token.accessToken as string
-                const { login, html_url } = token.profile as GhExtendedProfile
+                const { login } = token.profile as GhExtendedProfile
                 session.user.login = login
-                session.user.html_url = html_url
             }
             return session
         }

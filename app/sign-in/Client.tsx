@@ -31,7 +31,7 @@ export default function Client() {
             <p className="text-2xl md:text-xl text-center">
                 Take ownership, refine your expertise...{" "}
                 <span className=" italic underline text-nowrap">
-                    start with you good first issue
+                    start with a good first issue
                 </span>
             </p>
             <section>

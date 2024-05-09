@@ -1,2 +1,2 @@
-export const CLIENTID = process.env.GITHUB_ID ?? ""
-export const CLIENTSECRET = process.env.GITHUB_SECRET ?? ""
+export const CLIENT_ID = process.env.GITHUB_ID ?? ""
+export const CLIENT_SECRET = process.env.GITHUB_SECRET ?? ""
