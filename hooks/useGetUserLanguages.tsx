@@ -1,4 +1,4 @@
-import { GET_USER_REPOS } from "@/graphql/query"
+import { GET_USER_REPOS } from "@/graphql/queries/get-user-repos"
 import { useQuery } from "@apollo/client"
 import { useSession } from "next-auth/react"
 

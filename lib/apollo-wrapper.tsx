@@ -28,7 +28,42 @@ function makeClient() {
     })
 
     return new NextSSRApolloClient({
-        cache: new NextSSRInMemoryCache(),
+        cache: new NextSSRInMemoryCache({
+            typePolicies: {
+                Query: {
+                    fields: {
+                        repository: {
+                            // keyArgs: ["__ref", "__typename"],
+                            merge(existing = {}, incoming) {
+                                return {
+                                    ...existing,
+                                    ...incoming
+                                }
+                            }
+                        }
+                    }
+                },
+                Repository: {
+                    fields: {
+                        issues: {
+                            keyArgs: false,
+                            merge(existing = { edges: [] }, incoming) {
+                                return {
+                                    ...existing,
+                                    edges: [
+                                        ...existing.edges,
+                                        ...incoming.edges
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            possibleTypes: {
+                Repository: ["Repository"]
+            }
+        }),
         link: authLink.concat(httpLink)
     })
 }

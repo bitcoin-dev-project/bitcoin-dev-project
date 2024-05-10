@@ -2,7 +2,7 @@
     "btcpayserver": {
         "repo_url": "https://github.com/btcpayserver/btcpayserver",
         "name": "btcpayserver",
-        "org": "BTCPay Server",
+        "org": "btcpayserver",
         "tags": [
             "bitcoin",
             "payment-gateway",
@@ -29,7 +29,7 @@
     },
     "fedimint-ui": {
         "repo_url": "https://github.com/fedimint/ui",
-        "name": "fedimint-ui",
+        "name": "ui",
         "org": "fedimint",
         "tags": [
             "lightning",
