@@ -1,12 +1,23 @@
 "use client"
 
+import Link from "next/link"
 import React from "react"
+
 import { useGetRepositoryIssues } from "@/hooks/useGetRepositoryIssues"
 import { Issue } from "@/types"
-import Link from "next/link"
+
+import Badge from "./badge"
 import Skeleton from "./skeleton"
 
-const RepositoryIssues = ({ owner, name }: { owner: string; name: string }) => {
+const RepositoryIssues = ({
+    owner,
+    name,
+    languages
+}: {
+    owner: string
+    name: string
+    languages: string[]
+}) => {
     const { issues, loading, error } = useGetRepositoryIssues({ owner, name })
     console.log({ issues, loading, error })
 
@@ -32,7 +43,7 @@ const RepositoryIssues = ({ owner, name }: { owner: string; name: string }) => {
                     <div className="flex flex-col justify-between">
                         <div className="flex items-center justify-between">
                             <span className="text-sm font-medium text-gray-500">
-                                #{issue.number}
+                                {`${name}/${owner}`}
                             </span>
                             <span className="text-xs text-gray-500">
                                 {new Date(issue.publishedAt).toLocaleDateString(
@@ -46,12 +57,17 @@ const RepositoryIssues = ({ owner, name }: { owner: string; name: string }) => {
                             </span>
                         </div>
                         <h3 className="mt-2 text-lg md:text-base font-medium text-gray-900">
+                            <span className="text-gray-500">
+                                #{issue.number}
+                            </span>{" "}
                             {issue.title}
                         </h3>
                     </div>
-                    <p className="mt-1 text-sm text-gray-500">
-                        {`${name}/${owner}`}
-                    </p>
+                    <div className="flex flex-wrap mt-2">
+                        {languages.map((lang) => (
+                            <Badge key={lang} name={lang} className="mr-2" />
+                        ))}
+                    </div>
                 </Link>
             ))}
         </>

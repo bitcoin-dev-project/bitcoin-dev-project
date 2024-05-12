@@ -42,6 +42,7 @@ const Contribute = async () => {
                                         key={key}
                                         owner={project.org}
                                         name={project.name}
+                                        languages={project.lang}
                                     />
                                 )
                             )}
