@@ -63,7 +63,7 @@
         "name": "polar",
         "org": "jamaljsr",
         "tags": ["lightning", "bitcoin", "c-lightning", "web", "react"],
-        "lang": ["Typescript", "Docker"],
+        "lang": ["Typescript"],
         "issue": "https://github.com/jamaljsr/polar/issues"
     },
     "bitcoin": {
@@ -159,5 +159,13 @@
         "tags": ["bitcoin", "lightning", "simulator", "cli"],
         "lang": ["Python", "Shell"],
         "issue": "https://github.com/bitcoin-dev-project/warnet/issues"
+    },
+    "libsecp256k1": {
+        "repo_url": "https://github.com/bitcoin-core/secp256k1",
+        "name": "secp256k1",
+        "org": "bitcoin-core",
+        "tags": ["bitcoin", "cryptography", "library"],
+        "lang": ["C"],
+        "issue": "https://github.com/bitcoin-core/secp256k1/issues"
     }
 }
