@@ -4,10 +4,6 @@ import React from "react"
 import { auth } from "@/auth"
 import RepositoryIssues from "@/components/repository-issues"
 import AuthProvider from "@/context/auth-provider"
-import { Project } from "@/types"
-
-import Projects from "../../public/opensource-projects/index.json"
-import ShowLang from "./client"
 
 const Contribute = async () => {
     const session = await auth()
@@ -32,21 +28,9 @@ const Contribute = async () => {
                             />
                         </picture>
                     </div>
-                    {/* <ShowLang /> */}
 
                     <div className="container mx-auto py-8">
-                        <div className="grid gap-4 sm:grid-cols-1 grid-cols-3">
-                            {Object.entries(Projects as Project).map(
-                                ([key, project]) => (
-                                    <RepositoryIssues
-                                        key={key}
-                                        owner={project.org}
-                                        name={project.name}
-                                        languages={project.lang}
-                                    />
-                                )
-                            )}
-                        </div>
+                        <RepositoryIssues />
                     </div>
                 </div>
             </main>

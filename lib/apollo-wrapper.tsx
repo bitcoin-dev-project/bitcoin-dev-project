@@ -6,7 +6,7 @@
     See https://github.com/apollographql/apollo-client-nextjs?tab=readme-ov-file#in-ssr
 */
 import React from "react"
-import { ApolloLink, HttpLink, useApolloClient } from "@apollo/client"
+import { HttpLink, useApolloClient } from "@apollo/client"
 import {
     ApolloNextAppProvider,
     NextSSRApolloClient,

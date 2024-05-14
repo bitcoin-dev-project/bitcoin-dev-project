@@ -7,7 +7,7 @@ export type ProjectProperties = {
     lang: string[]
 }
 
-export type Project = {
+export type Projects = {
     [key: string]: ProjectProperties
 }
 
