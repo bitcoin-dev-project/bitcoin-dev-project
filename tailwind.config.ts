@@ -7,23 +7,6 @@ const config: Config = {
         "./app/**/*.{js,ts,jsx,tsx,mdx}"
     ],
     theme: {
-        colors: {
-            "bg-color": "#f8f5ee",
-            orange: "#e77429",
-            green: "#24b292",
-            "bright-cyan": "#30f6ca",
-            "dark-orange": "#e77429",
-            brown: "#b47235",
-            yellow: "#fab544",
-            "light-orange": "#ffd796",
-            "pale-orange": "#fff2e4",
-            "bright-orange": "#f7a940",
-            grey: "dimgrey",
-            dark: "#333",
-            black: "#212529",
-            white: "#FFFFFF",
-            "light-grey": "#898989"
-        },
         extend: {
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -41,6 +24,23 @@ const config: Config = {
             fontFamily: {
                 brawler: ["var(--brawler-font)"],
                 inter: ["var(--inter-font)"]
+            },
+            colors: {
+                "bg-color": "#f8f5ee",
+                orange: "#e77429",
+                green: "#24b292",
+                "bright-cyan": "#30f6ca",
+                "dark-orange": "#e77429",
+                brown: "#b47235",
+                yellow: "#fab544",
+                "light-orange": "#ffd796",
+                "pale-orange": "#fff2e4",
+                "bright-orange": "#f7a940",
+                grey: "dimgrey",
+                dark: "#333",
+                black: "#212529",
+                white: "#FFFFFF",
+                "light-grey": "#898989"
             }
         },
         screens: {
