@@ -10,7 +10,6 @@ import Skeleton from "./skeleton"
 
 const RepositoryIssues = () => {
     const { error, issues, loading } = useGetRepositoryIssues()
-    console.log({ loading })
 
     if (loading || !issues.length || issues.length === 0) {
         return (
