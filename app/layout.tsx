@@ -36,7 +36,7 @@ export default function RootLayout({
             <body className={barlow.className}>
                 <Fonts />
                 <NavBar />
-                <div className="flex flex-grow flex-col min-h-screen max-w-7xl m-auto">
+                <div className="">
                     {children}
                 </div>
                 <Footer />
