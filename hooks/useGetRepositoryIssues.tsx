@@ -2,7 +2,7 @@ import { Issue, Projects } from "@/types"
 import { useQuery } from "@apollo/client"
 
 import { constructRepoQueries } from "../graphql/queries/get-issues"
-import projects from "../public/opensource-projects/index.json"
+import projects from "../public/open-source-projects/index.json"
 
 const labels = ["good first issue", "bug", "help wanted"]
 const states = ["OPEN"]

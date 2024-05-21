@@ -40,7 +40,7 @@ export default function Home() {
                 <div className="relative flex-grow basis-1/2 object-cover pb-[50%] md:mx-14 sm:mx-7  md:order-1">
                     <Image
                         className="object-cover"
-                        src="/hero.jpg"
+                        src="/images/hero.jpg"
                         alt="Hero"
                         fill
                         priority

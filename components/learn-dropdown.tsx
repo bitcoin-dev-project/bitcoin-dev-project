@@ -45,7 +45,7 @@ export function Desktop() {
                     Learn
                     <Image
                         className={`${iconStyle} transition-transform ease-linear `}
-                        src={"/arrow-down.svg"}
+                        src={"/images/arrow-down.svg"}
                         alt="arrow down"
                         width={12}
                         height={12}
@@ -98,7 +98,7 @@ export function Mobile({ hideDrawer }: { hideDrawer: () => void }) {
                     Learn
                     <Image
                         className={`${iconStyle} transition-transform ease-linear `}
-                        src={"/arrow-down.svg"}
+                        src={"/images/arrow-down.svg"}
                         alt="arrow down"
                         width={12}
                         height={12}

@@ -14,7 +14,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "The reference implementation of the bitcoin protocol",
-                    image: "/projects/bitcoin-core-logo.png",
+                    image: "/images/projects/bitcoin-core-logo.png",
                     link: "https://github.com/bitcoin/bitcoin"
                 },
                 {
@@ -22,7 +22,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A complete lightning implementation packaged as an SDK",
-                    image: "/projects/ldk.png",
+                    image: "/images/projects/ldk.png",
                     link: "https://github.com/lightningdevkit"
                 },
                 {
@@ -30,7 +30,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A Golang implementation and the most widely run full node on the lightning network",
-                    image: "/projects/lnd.png",
+                    image: "/images/projects/lnd.png",
                     link: "https://github.com/lightningnetwork/lnd"
                 },
                 {
@@ -38,7 +38,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A lightweight, highly customizable and standard compliant implementation of the lightning protocol implementation written in C",
-                    image: "/projects/core-lightning.png",
+                    image: "/images/projects/core-lightning.png",
                     link: "https://github.com/ElementsProject/lightning"
                 },
                 {
@@ -46,14 +46,14 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A scala implementation of the lightning network, focusing on the mobile use case",
-                    image: "/projects/eclair-logo.png",
+                    image: "/images/projects/eclair-logo.png",
                     link: "https://github.com/ACINQ/eclair"
                 },
                 {
                     title: "Bitcoin Development Kit",
                     subTitle: "",
                     description: "Seamlessly build cross platform wallets",
-                    image: "/projects/bdk.png",
+                    image: "/images/projects/bdk.png",
                     link: "https://bitcoindevkit.org"
                 },
                 {
@@ -61,7 +61,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Optimized C library for elliptic curve operations on secp256k1",
-                    image: "/projects/secp256k1.png",
+                    image: "/images/projects/secp256k1.png",
                     link: "https://github.com/bitcoin-core/secp256k1"
                 },
                 {
@@ -69,7 +69,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Improve your lightning node security by protecting your keys separately",
-                    image: "/projects/vls.png",
+                    image: "/images/projects/vls.png",
                     link: "https://vls.tech"
                 },
                 {
@@ -77,7 +77,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Free, open-source and self-hosted, bitcoin payment processor",
-                    image: "/projects/btc-pay.png",
+                    image: "/images/projects/btc-pay.png",
                     link: "https://github.com/btcpayserver"
                 },
                 {
@@ -85,7 +85,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A modular protocol to custody and transact bitcoin in a community context",
-                    image: "/projects/fedimint.png",
+                    image: "/images/projects/fedimint.png",
                     link: "https://fedimint.org"
                 },
                 {
@@ -93,7 +93,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "The next generation protocol for pooled mining",
-                    image: "/projects/stratum-v2.png",
+                    image: "/images/projects/stratum-v2.png",
                     link: "https://github.com/stratum-mining"
                 },
                 {
@@ -101,7 +101,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A series of projects to implement various bitcoin protocols in Rust",
-                    image: "/projects/rust-btc-logo.png",
+                    image: "/images/projects/rust-btc-logo.png",
                     link: "https://github.com/rust-bitcoin"
                 },
                 {
@@ -109,7 +109,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "One-click lightning networks for local app development and testing",
-                    image: "/projects/polar.jpg",
+                    image: "/images/projects/polar.jpg",
                     link: "https://lightningpolar.com"
                 },
                 {
@@ -117,7 +117,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Monitor and analyze emergent behaviors of P2P networks",
-                    image: "/projects/warnet.jpg",
+                    image: "/images/projects/warnet.jpg",
                     link: "https://warnet.dev"
                 },
                 {
@@ -125,7 +125,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Instantly simulate real-world lightning network activity",
-                    image: "/projects/simln.jpg",
+                    image: "/images/projects/simln.jpg",
                     link: "https://simln.dev"
                 }
             ]

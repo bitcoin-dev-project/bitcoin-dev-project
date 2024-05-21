@@ -12,7 +12,7 @@ export const tools = {
                 {
                     description:
                         "The best source to stay up to date with technical developments.",
-                    image: "/tools/optech.jpg",
+                    image: "/images/tools/optech.jpg",
                     title: "Bitcoin Optech",
                     subTitle: "",
                     link: "https://bitcoinops.org"
@@ -20,13 +20,13 @@ export const tools = {
                 {
                     description:
                         "Chat with your favorite bitcoin sources and authors.",
-                    image: "/tools/chat-btc.jpg",
+                    image: "/images/tools/chat-btc.jpg",
                     title: "Chat BTC",
                     subTitle: "",
                     link: "https://chat.bitcoinsearch.xyz"
                 },
                 {
-                    image: "/tools/bitcoin-search.jpg",
+                    image: "/images/tools/bitcoin-search.jpg",
                     description:
                         "The technical bitcoin search engine we deserve.",
                     title: "Bitcoin Search",
@@ -36,7 +36,7 @@ export const tools = {
                 {
                     description:
                         "Bitcoin-dev and Lightning-dev mailing list summaries and discovery.",
-                    image: "/tools/bitcoin-tldr.jpg",
+                    image: "/images/tools/bitcoin-tldr.jpg",
                     title: "Bitcoin TLDR",
                     subTitle: "",
                     link: "https://tldr.bitcoinsearch.xyz/"
@@ -44,7 +44,7 @@ export const tools = {
                 {
                     description:
                         "Peruse archives of transcribed talks, podcasts and lectures.",
-                    image: "/tools/bitcoin-transcripts.jpg",
+                    image: "/images/tools/bitcoin-transcripts.jpg",
                     title: "Bitcoin Transcripts",
                     subTitle: "",
                     link: "https://btctranscripts.com/"
@@ -52,7 +52,7 @@ export const tools = {
                 {
                     description:
                         "Earn sats and contribute to BTC transcripts by reviewing AI-generated copy.",
-                    image: "/tools/bitcoin-transcripts-review.jpg",
+                    image: "/images/tools/bitcoin-transcripts-review.jpg",
                     title: "Transcript Review",
                     subTitle: "",
                     link: "https://review.btctranscripts.com/"
@@ -60,7 +60,7 @@ export const tools = {
                 {
                     description:
                         "An interactive science fiction game designed to inspire a generation to fall in love with bitcoin.",
-                    image: "/tools/saving-satoshi.jpg",
+                    image: "/images/tools/saving-satoshi.jpg",
                     title: "Saving Satoshi",
                     subTitle: "",
                     link: "https://savingsatoshi.com"
@@ -70,7 +70,7 @@ export const tools = {
                     subTitle: "",
                     description:
                         "One-click lightning networks for local app development and testing",
-                    image: "/projects/polar.jpg",
+                    image: "/images/projects/polar.jpg",
                     link: "https://lightningpolar.com"
                 }
             ]

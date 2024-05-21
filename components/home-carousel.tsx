@@ -2,7 +2,7 @@
 
 import { toolsData } from "@/content/data"
 import clsx from "clsx"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import ToolsCard from "./tools-card"
 
 export default function HomeCarousel() {
