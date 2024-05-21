@@ -17,6 +17,30 @@ export const useUrlManager = () => {
         router.push(`${pathname}?${urlParams.toString()}`)
     }
 
+    const addSortParam = (key: string, value: string) => {
+        const filterGroup = urlParams.getAll(key)
+        if (filterGroup.includes(value)) return
+        if (key) {
+            urlParams.set(key, value)
+        }
+
+        router.push(`${pathname}?${urlParams.toString()}`)
+    }
+
+    const sortKey = urlParams.get("sort")
+
+    const searchQuery = urlParams.get("search")
+
+    const addSearchQuery = (value: string) => {
+        if (value) {
+            urlParams.set("search", value)
+        } else {
+            urlParams.delete("search")
+        }
+
+        router.push(`${pathname}?${urlParams.toString()}`)
+    }
+
     const deleteFilterParam = (key: string, value: string) => {
         const filterGroup = urlParams.getAll(key)
         if (!filterGroup.includes(value)) return
@@ -59,6 +83,11 @@ export const useUrlManager = () => {
         currentFilterValues,
         currentFilterValuesAndKeys,
         deleteFilterParam,
-        clearAllFilters
+        clearAllFilters,
+        addSortParam,
+        sortKey,
+        searchQuery,
+        addSearchQuery,
+        urlParams
     }
 }
