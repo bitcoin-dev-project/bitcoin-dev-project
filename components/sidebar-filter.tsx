@@ -5,7 +5,12 @@ import SortIcon from "../public/sort-icon.svg"
 import CrossIcon from "../public/cross-icon.svg"
 import CloseSidebarIcon from "../public/close-sidebar.svg"
 import { useUrlManager } from "@/hooks/useUrlManager"
-import { getValues, SORTOPTIONS, ISSUETYPEOPTIONS } from "@/utils"
+import {
+    getValues,
+    SORTOPTIONS,
+    ISSUETYPEOPTIONS,
+    createSortKeys
+} from "@/utils"
 
 const SidebarFilter = ({ toggle }: { toggle: () => void }) => {
     const { currentFilterValuesAndKeys } = useUrlManager()
@@ -32,7 +37,7 @@ const SidebarFilter = ({ toggle }: { toggle: () => void }) => {
                     <h5 className="text-base font-bold">Sort by</h5>
                 </div>
                 <div className=" flex gap-3 flex-wrap">
-                    <CustomSelect args={SORTOPTIONS} />
+                    <CustomSortSelect args={SORTOPTIONS} />
                 </div>
             </section>
 
@@ -94,6 +99,7 @@ const FilterMenu = React.memo(function FilterMenu({
     toggle: () => void
 }) {
     const { deleteFilterParam, clearAllFilters } = useUrlManager()
+    filterFields = filterFields.filter((v) => v.key !== "search")
 
     return (
         <>
@@ -201,6 +207,38 @@ const CustomSelect = React.memo(function CustomSelect({
                 {args.slice(1).map((val) => (
                     <option key={val} value={val.toLowerCase()}>
                         {val}
+                    </option>
+                ))}
+            </select>
+        </form>
+    )
+})
+
+const CustomSortSelect = React.memo(function CustomSortSelect({
+    args
+}: {
+    args: string[]
+}): JSX.Element {
+    const { addSortParam } = useUrlManager()
+    const { sortKeys } = createSortKeys()
+    const [value, setValue] = React.useState("")
+
+    const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        event.preventDefault()
+        setValue(event.target.value)
+        addSortParam(args[0].toLowerCase(), event.target.value)
+    }
+
+    return (
+        <form className="w-full">
+            <select
+                value={value}
+                onChange={handleChange}
+                className="w-full bg-white border-[1.2px] border-gray-300 rounded-lg cursor-pointer p-3 before:absolute capitalize font-medium"
+            >
+                {sortKeys.map(({ key, sort }) => (
+                    <option key={key} value={key.toLowerCase()}>
+                        {sort}
                     </option>
                 ))}
             </select>

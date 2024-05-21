@@ -1,9 +1,19 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import FilterIcon from "../public/filter.svg"
 import SidebarFilter from "./sidebar-filter"
+import { useUrlManager } from "@/hooks/useUrlManager"
 
 const SearchInput = ({ filtersCount }: { filtersCount: number | null }) => {
+    const { searchQuery, addSearchQuery } = useUrlManager()
+    const [value, setValue] = useState(searchQuery ?? "")
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        event.preventDefault()
+        setValue(event.target.value)
+        addSearchQuery(event.target.value)
+    }
+
     return (
         <div className="flex items-center justify-center w-full max-w-3xl pt-6 pr-[7px]">
             <div className="flex gap-4 items-center w-full">
@@ -13,6 +23,8 @@ const SearchInput = ({ filtersCount }: { filtersCount: number | null }) => {
                         "text-black border-[1.5px] bg-secondary-gray text-base rounded-md placeholder:font-rebond placeholder:font-light outline-gray-600 border-gray-500 px-4 placeholder:text-gray-500 h-12 w-full"
                     }
                     placeholder="Search for good first issues"
+                    onChange={handleChange}
+                    value={value}
                 />
 
                 <section className="hidden md:block relative">
@@ -31,10 +43,10 @@ const SearchInput = ({ filtersCount }: { filtersCount: number | null }) => {
 export default SearchInput
 
 export const Menu = () => {
-    const [open, setOpen] = React.useState(false)
+    const [open, setOpen] = useState(false)
     const toggle = () => setOpen(!open)
 
-    React.useEffect(() => {
+    useEffect(() => {
         document.body.classList.toggle("overflow-hidden", open)
     }, [open])
 
