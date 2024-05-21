@@ -15,17 +15,24 @@ import { filterIssues } from "@/utils"
 
 const RepositoryIssues = () => {
     const { error, issues, loading } = useGetRepositoryIssues()
-    const { currentFilterValues, currentFilterValuesAndKeys } = useUrlManager()
+    const {
+        currentFilterValues,
+        currentFilterValuesAndKeys,
+        sortKey,
+        searchQuery
+    } = useUrlManager()
 
     const memoizedIssues = React.useMemo(
         () =>
             filterIssues(
-                currentFilterValues,
                 currentFilterValuesAndKeys,
-                issues
+                issues,
+                sortKey,
+                searchQuery
             ),
-        [currentFilterValues, currentFilterValuesAndKeys, issues]
+        [currentFilterValuesAndKeys, issues, sortKey, searchQuery]
     )
+
     if (error) return <div>Error: {error.message}</div>
 
     return (
@@ -56,9 +63,15 @@ const RepositoryIssues = () => {
                         </div>
                     ) : (
                         <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3">
-                            {issues.map((issue, index) => (
+                            {memoizedIssues.map((issue, index) => (
                                 <section key={`issue-${index}-${issue.number}`}>
-                                    <IssueCard issue={issue} index={index} />
+                                    <IssueCard
+                                        issue={
+                                            issue as unknown as IssueCardElement
+                                        }
+                                        index={index}
+                                        keys={currentFilterValues}
+                                    />
                                 </section>
                             ))}
                         </div>
@@ -71,12 +84,20 @@ const RepositoryIssues = () => {
 
 export default RepositoryIssues
 
+type IssueCardElement = Issue & {
+    owner: string
+    languages: string[]
+    repo: string
+}
+
 const IssueCard = React.memo(function IssueCard({
     issue,
-    index
+    index,
+    keys
 }: {
-    issue: Issue & { owner: string; languages: string[]; repo: string }
+    issue: IssueCardElement
     index: number
+    keys: string[]
 }): JSX.Element {
     return (
         <Link
@@ -107,9 +128,14 @@ const IssueCard = React.memo(function IssueCard({
                     {issue.title}
                 </h3>
             </div>
-            <div className="flex flex-wrap mt-2">
+            <div className="flex flex-wrap mt-2 gap-2">
                 {issue.languages.map((lang) => (
-                    <Badge key={lang} name={lang} className="mr-2" />
+                    <Badge
+                        key={lang}
+                        name={lang}
+                        className="mr-2"
+                        keys={keys}
+                    />
                 ))}
             </div>
         </Link>
