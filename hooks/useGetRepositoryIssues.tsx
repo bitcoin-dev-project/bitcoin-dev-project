@@ -11,7 +11,8 @@ const projectRepoMetadata = Object.entries(projects as Projects).map(
     ([_, project]) => ({
         name: project.name,
         owner: project.org,
-        languages: project.lang
+        languages: project.lang,
+        tags: project.tags
     })
 )
 const repoWithLabelsAndStates = projectRepoMetadata.map((repo) => ({
@@ -36,12 +37,12 @@ export function useGetRepositoryIssues() {
                       ...edge.node,
                       owner: projectRepoMetadata[index].owner,
                       languages: projectRepoMetadata[index].languages,
-                      repo: projectRepoMetadata[index].name
+                      repo: projectRepoMetadata[index].name,
+                      tags: projectRepoMetadata[index].tags
                   })
               )
           })
         : []
-
     return {
         issues,
         loading,
