@@ -36,9 +36,7 @@ export default function RootLayout({
             <body className={barlow.className}>
                 <Fonts />
                 <NavBar />
-                <div className="">
-                    {children}
-                </div>
+                <div className="">{children}</div>
                 <Footer />
             </body>
         </html>
