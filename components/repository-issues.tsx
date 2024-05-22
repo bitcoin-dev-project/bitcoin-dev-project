@@ -15,6 +15,13 @@ import { filterIssues } from "@/utils"
 
 const RepositoryIssues = () => {
     const { error, issues, loading } = useGetRepositoryIssues()
+    const [open, setOpen] = React.useState(false)
+    const toggle = () => setOpen(!open)
+
+    React.useEffect(() => {
+        document.body.classList.toggle("overflow-hidden", open)
+    }, [open])
+
     const {
         currentFilterValues,
         currentFilterValuesAndKeys,
@@ -33,6 +40,10 @@ const RepositoryIssues = () => {
         [currentFilterValuesAndKeys, issues, sortKey, searchQuery]
     )
 
+    const filterCount = currentFilterValuesAndKeys.filter(
+        (v) => v.key !== "search" && v.key !== "sort"
+    )
+
     if (error) return <div>Error: {error.message}</div>
 
     return (
@@ -45,10 +56,9 @@ const RepositoryIssues = () => {
                 <section className="flex w-full flex-col items-center gap-6 px-10 lg:px-4 pl-0 md:pl-4">
                     <SearchInput
                         filtersCount={
-                            currentFilterValues.length === 0
-                                ? null
-                                : currentFilterValues.length
+                            filterCount.length === 0 ? null : filterCount.length
                         }
+                        toggle={toggle}
                     />
                     {loading || !issues.length || issues.length === 0 ? (
                         <div className="grid gap-4 sm:grid-cols-1 grid-cols-3 w-full">
@@ -78,6 +88,11 @@ const RepositoryIssues = () => {
                     )}
                 </section>
             </div>
+            {open ? (
+                <div className="w-full bg-white absolute top-[78px] bottom-0 opacity-100 z-40 p-4 pt-3 pb-8 overflow-scroll">
+                    <SidebarFilter toggle={() => setOpen(!open)} />
+                </div>
+            ) : null}
         </main>
     )
 }
@@ -123,7 +138,7 @@ const IssueCard = React.memo(function IssueCard({
                         )}{" "}
                     </span>
                 </div>
-                <h3 className="mt-2 text-lg md:text-base font-medium text-gray-900">
+                <h3 className="mt-2 text-lg md:text-base font-medium text-gray-900 text-wrap break-words">
                     <span className="text-gray-500">#{issue.number}</span>{" "}
                     {issue.title}
                 </h3>

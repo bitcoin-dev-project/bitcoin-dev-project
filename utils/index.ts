@@ -3,7 +3,7 @@ import projects from "../public/opensource-projects/index.json"
 
 export const SORTOPTIONS = ["sort", "relevance", "newest first", "oldest first"]
 
-export const ISSUETYPEOPTIONS = [
+export const ISSUEOPTIONS = [
     "issue_type",
     "good-first-issue",
     "bugs",
@@ -39,7 +39,7 @@ export function getValues(key: keyof ProjectProperties) {
 export const createSortKeys = () => {
     const sortKeys = SORTOPTIONS.slice(1).map((key) => {
         const dashed_key = key.split(" ").join("-")
-        return { key: dashed_key, sort: key }
+        return { key: dashed_key, label: key }
     })
 
     return { sortKeys }
@@ -75,7 +75,7 @@ export function filterIssues(
 }
 
 // applies sort to the dataset or result
-// Sorts according to newest-isssues, oldest-issues and relevance which is the default state
+// Sorts according to newest-issues, oldest-issues and relevance which is the default state
 export const applySort = (
     sortKey: string | null,
     result: Array<Record<string, string | string[] | number>>
@@ -161,9 +161,36 @@ export const applySearch = (
             (item?.owner as string)
                 .toLowerCase()
                 .includes(nullableSearchTerm) ||
+            (item?.repo as string).toLowerCase().includes(nullableSearchTerm) ||
             (item?.languages as string[]).some((val) =>
                 val.toLowerCase().includes(nullableSearchTerm)
             )
         )
     })
 }
+
+const { properties: languages } = getValues("lang")
+const { properties: tags } = getValues("tags")
+const { properties: repos } = getValues("name")
+const { properties: orgs } = getValues("org")
+
+export const filterPropertiesDataSet = [
+    // keeping these here until some issues are clarified
+    // { title: "Issue type", placeholder: "Search issues", args: ISSUEOPTIONS },
+    {
+        title: "Language",
+        placeholder: "Search languages",
+        args: languages
+    },
+    { title: "Tags", placeholder: "Search Tags", args: tags },
+    {
+        title: "Repositories",
+        placeholder: "Search Repositories",
+        args: repos
+    },
+    {
+        title: "Organisations",
+        placeholder: "Search Organisations",
+        args: orgs
+    }
+]

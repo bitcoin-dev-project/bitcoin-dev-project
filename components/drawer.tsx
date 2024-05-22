@@ -16,7 +16,7 @@ export default function Drawer() {
     }, [isOpen])
 
     return (
-        <div className="hidden sm:flex">
+        <div className="hidden md:flex">
             <button
                 type="button"
                 className="cursor-pointer"
