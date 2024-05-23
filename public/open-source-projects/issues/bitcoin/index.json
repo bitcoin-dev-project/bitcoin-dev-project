@@ -1,0 +1,809 @@
+[
+  {
+    "title": "Transactions in TCP FIN packets appear to be ignored",
+    "url": "https://github.com/bitcoin/bitcoin/issues/4432",
+    "number": 4432,
+    "publishedAt": "2014-06-27T18:46:58Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Initial connection management",
+    "url": "https://github.com/bitcoin/bitcoin/issues/5299",
+    "number": 5299,
+    "publishedAt": "2014-11-18T06:40:59Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "listrecievedbyaddress with include_empty not filtering out \"send\" side of address book",
+    "url": "https://github.com/bitcoin/bitcoin/issues/16159",
+    "number": 16159,
+    "publishedAt": "2019-06-06T18:31:28Z",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Assertion `setBlockIndexCandidates.count(pindex)' failed",
+    "url": "https://github.com/bitcoin/bitcoin/issues/16444",
+    "number": 16444,
+    "publishedAt": "2019-07-23T19:44:51Z",
+    "labels": [
+      "Bug",
+      "Validation"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "contrib: makeseeds.py improvements",
+    "url": "https://github.com/bitcoin/bitcoin/issues/17020",
+    "number": 17020,
+    "publishedAt": "2019-10-02T11:46:27Z",
+    "labels": [
+      "P2P",
+      "Scripts and tools",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "GUI event loop should be block free",
+    "url": "https://github.com/bitcoin/bitcoin/issues/17145",
+    "number": 17145,
+    "publishedAt": "2019-10-15T05:11:34Z",
+    "labels": [
+      "Brainstorming",
+      "GUI",
+      "Refactoring",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "contrib: Autogenerate bash completion",
+    "url": "https://github.com/bitcoin/bitcoin/issues/17289",
+    "number": 17289,
+    "publishedAt": "2019-10-28T19:51:28Z",
+    "labels": [
+      "Feature",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "gen-manpages output depends on build options, so needs to check them",
+    "url": "https://github.com/bitcoin/bitcoin/issues/17506",
+    "number": 17506,
+    "publishedAt": "2019-11-18T14:04:12Z",
+    "labels": [
+      "Scripts and tools",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Improve documentation of estimatesmartfee",
+    "url": "https://github.com/bitcoin/bitcoin/issues/18217",
+    "number": 18217,
+    "publishedAt": "2020-02-28T00:17:47Z",
+    "labels": [
+      "Bug",
+      "Docs",
+      "RPC/REST/ZMQ"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "untrust vs unsafe ?",
+    "url": "https://github.com/bitcoin/bitcoin/issues/18625",
+    "number": 18625,
+    "publishedAt": "2020-04-13T15:02:01Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Improve minimum file descriptor accounting and documentation",
+    "url": "https://github.com/bitcoin/bitcoin/issues/18911",
+    "number": 18911,
+    "publishedAt": "2020-05-08T01:55:53Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Small memory leak when BerkeleyEnvironment::Open fails",
+    "url": "https://github.com/bitcoin/bitcoin/issues/19034",
+    "number": 19034,
+    "publishedAt": "2020-05-20T22:38:22Z",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Inconsistent RPC error handling",
+    "url": "https://github.com/bitcoin/bitcoin/issues/19087",
+    "number": 19087,
+    "publishedAt": "2020-05-28T07:18:06Z",
+    "labels": [
+      "Bug",
+      "RPC/REST/ZMQ"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Use of C++ undefined behavior in various `IteratorComparators`",
+    "url": "https://github.com/bitcoin/bitcoin/issues/19496",
+    "number": 19496,
+    "publishedAt": "2020-07-11T20:24:40Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "noban permission probably shouldn't give additional permissions implcitly",
+    "url": "https://github.com/bitcoin/bitcoin/issues/19886",
+    "number": 19886,
+    "publishedAt": "2020-09-05T17:57:44Z",
+    "labels": [
+      "Brainstorming",
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Small unspent can get removed from OutputGroup for being uneconomical probably leading to later partial spending",
+    "url": "https://github.com/bitcoin/bitcoin/issues/20287",
+    "number": 20287,
+    "publishedAt": "2020-11-02T20:14:35Z",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "duplicate wallet warning after closing and reopening wallet",
+    "url": "https://github.com/bitcoin/bitcoin/issues/20840",
+    "number": 20840,
+    "publishedAt": "2021-01-03T16:58:25Z",
+    "labels": [
+      "Bug",
+      "GUI",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "wallet: balance gone when tx broadcast failed",
+    "url": "https://github.com/bitcoin/bitcoin/issues/20943",
+    "number": 20943,
+    "publishedAt": "2021-01-15T09:39:20Z",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "RPC `getblock` resulted in 500 and ReadBlockFromDisk: OpenBlockFile failed for FlatFilePos(nFile=-1, nPos=0)",
+    "url": "https://github.com/bitcoin/bitcoin/issues/20978",
+    "number": 20978,
+    "publishedAt": "2021-01-21T17:47:35Z",
+    "labels": [
+      "Bug",
+      "RPC/REST/ZMQ"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "ci: ccache does not work for macOS cross-compiling builds",
+    "url": "https://github.com/bitcoin/bitcoin/issues/21552",
+    "number": 21552,
+    "publishedAt": "2021-03-30T04:25:43Z",
+    "labels": [
+      "Bug",
+      "macOS",
+      "Tests"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Potential data race on fHavePruned flag",
+    "url": "https://github.com/bitcoin/bitcoin/issues/21627",
+    "number": 21627,
+    "publishedAt": "2021-04-06T20:58:58Z",
+    "labels": [
+      "Bug",
+      "Block storage"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Duplicate coinbase transaction space reservation in CreateNewBlock",
+    "url": "https://github.com/bitcoin/bitcoin/issues/21950",
+    "number": 21950,
+    "publishedAt": "2021-05-14T19:07:22Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Optional late, block submission, difficulty test",
+    "url": "https://github.com/bitcoin/bitcoin/issues/22119",
+    "number": 22119,
+    "publishedAt": "2021-06-01T12:56:51Z",
+    "labels": [
+      "Bug",
+      "RPC/REST/ZMQ",
+      "Mining"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "0.21.1 native descriptor wallet showing incorrect value for `spendable`",
+    "url": "https://github.com/bitcoin/bitcoin/issues/22518",
+    "number": 22518,
+    "publishedAt": "2021-07-21T14:22:02Z",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "build, android: `make apk` fails if depends source cache is in a non-default location",
+    "url": "https://github.com/bitcoin/bitcoin/issues/22522",
+    "number": 22522,
+    "publishedAt": "2021-07-22T00:24:58Z",
+    "labels": [
+      "Bug",
+      "Build system"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "net: redundant connections with a single peer",
+    "url": "https://github.com/bitcoin/bitcoin/issues/22559",
+    "number": 22559,
+    "publishedAt": "2021-07-26T21:35:29Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Net code contains some UB -- violations of strict aliasing rules in C++",
+    "url": "https://github.com/bitcoin/bitcoin/issues/22613",
+    "number": 22613,
+    "publishedAt": "2021-08-03T00:01:22Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "It is impossible to switch off binding for Tor",
+    "url": "https://github.com/bitcoin/bitcoin/issues/22726",
+    "number": 22726,
+    "publishedAt": "2021-08-17T13:33:17Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "No check is done whether the binding for Tor succeeded before using it for ADD_ONION",
+    "url": "https://github.com/bitcoin/bitcoin/issues/22727",
+    "number": 22727,
+    "publishedAt": "2021-08-17T13:33:24Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "test: replace bare asserts with assertion helpers (assert_equal() etc.)",
+    "url": "https://github.com/bitcoin/bitcoin/issues/23119",
+    "number": 23119,
+    "publishedAt": "2021-09-28T13:06:17Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Failed assertion during shutdown",
+    "url": "https://github.com/bitcoin/bitcoin/issues/23186",
+    "number": 23186,
+    "publishedAt": "2021-10-05T13:29:20Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Shutdown during reindex-chainstate can block forever",
+    "url": "https://github.com/bitcoin/bitcoin/issues/23234",
+    "number": 23234,
+    "publishedAt": "2021-10-08T23:23:26Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "CI failure: `ThreadSanitizer: data race /usr/lib/llvm-12/bin/../include/c++/v1/ios:523:12 in std::__1::ios_base::width() const`",
+    "url": "https://github.com/bitcoin/bitcoin/issues/23366",
+    "number": 23366,
+    "publishedAt": "2021-10-27T04:43:14Z",
+    "labels": [
+      "Bug",
+      "Tests",
+      "CI failed"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "init: torcontrol argument should be validated",
+    "url": "https://github.com/bitcoin/bitcoin/issues/23589",
+    "number": 23589,
+    "publishedAt": "2021-11-25T10:11:19Z",
+    "labels": [
+      "P2P",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "test: C++ debugger interferes with functional tests that quickly stop/start nodes",
+    "url": "https://github.com/bitcoin/bitcoin/issues/23651",
+    "number": 23651,
+    "publishedAt": "2021-12-02T14:22:00Z",
+    "labels": [
+      "Bug",
+      "macOS",
+      "Tests"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "net: signed-integer-overflow in LocalServiceInfo",
+    "url": "https://github.com/bitcoin/bitcoin/issues/24049",
+    "number": 24049,
+    "publishedAt": "2022-01-12T16:12:37Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Apparently CJDNS network does not work with Tor on mainnet.",
+    "url": "https://github.com/bitcoin/bitcoin/issues/24450",
+    "number": 24450,
+    "publishedAt": "2022-02-28T06:28:16Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "[flatpak]  - I cannot choose or change datadir when running from flatpak",
+    "url": "https://github.com/bitcoin/bitcoin/issues/24612",
+    "number": 24612,
+    "publishedAt": "2022-03-18T14:35:49Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Hidden service created by `--torcontrol` does not accept connections (General SOCKS server failure)",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25094",
+    "number": 25094,
+    "publishedAt": "2022-05-09T15:16:14Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "p2p_filter intermittent failure (assert not filter_peer.tx_received)",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25128",
+    "number": 25128,
+    "publishedAt": "2022-05-13T14:38:00Z",
+    "labels": [
+      "Brainstorming",
+      "Bug",
+      "Linux/Unix",
+      "Tests",
+      "Upstream"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Setting torcontrol overrides proxy address",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25265",
+    "number": 25265,
+    "publishedAt": "2022-06-01T23:28:24Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Onlynet=ipv4 disables Tor advertisements",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25336",
+    "number": 25336,
+    "publishedAt": "2022-06-11T03:08:31Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "`externalip=...onion` ignored when onion/prox not set",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25669",
+    "number": 25669,
+    "publishedAt": "2022-07-21T18:43:24Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "-proxy does not work for addresses like 10.x.y.z",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25684",
+    "number": 25684,
+    "publishedAt": "2022-07-23T12:57:40Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "test: failure in rpc_getdescriptorinfo.py  (OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted)",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25765",
+    "number": 25765,
+    "publishedAt": "2022-08-01T14:22:22Z",
+    "labels": [
+      "Bug",
+      "Windows",
+      "Tests",
+      "CI failed"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Error: specified data directory \"\\\\IP.Ad.re.ss\\release\\Folder\"does not exist",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25868",
+    "number": 25868,
+    "publishedAt": "2022-08-18T19:33:30Z",
+    "labels": [
+      "Bug",
+      "Windows"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "importdescriptors hanging on importing/updating descriptor with large range",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25895",
+    "number": 25895,
+    "publishedAt": "2022-08-21T17:05:59Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "combinerawtransaction confusing with distinct transactions",
+    "url": "https://github.com/bitcoin/bitcoin/issues/25980",
+    "number": 25980,
+    "publishedAt": "2022-09-01T21:21:36Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Finding peers to connect to after -onlynet changes may be problematic",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26035",
+    "number": 26035,
+    "publishedAt": "2022-09-07T12:19:09Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "`listtransactions` fails to list self-send transactions (for imported descriptor wallet)",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26096",
+    "number": 26096,
+    "publishedAt": "2022-09-14T20:52:21Z",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Header inconsistency after invalidate/reconsider block",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26245",
+    "number": 26245,
+    "publishedAt": "2022-10-04T12:59:27Z",
+    "labels": [
+      "Bug",
+      "Validation"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "avoid_reuse=true is incorrectly skipping one of my UXTOs",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26317",
+    "number": 26317,
+    "publishedAt": "2022-10-15T04:02:21Z",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "signed overflow in coinstats index",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26362",
+    "number": 26362,
+    "publishedAt": "2022-10-21T11:52:40Z",
+    "labels": [
+      "Brainstorming",
+      "Bug",
+      "UTXO Db and Indexes",
+      "RPC/REST/ZMQ"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Use of undocumented/undefined boost::signals2 behavior in wallet",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26442",
+    "number": 26442,
+    "publishedAt": "2022-11-01T19:52:36Z",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Error: Cannot resolve -bind address: 'bitcoind:8334=onion'",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26484",
+    "number": 26484,
+    "publishedAt": "2022-11-10T17:07:02Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "make check errors on big endian OpenBSD 7.2",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26492",
+    "number": 26492,
+    "publishedAt": "2022-11-13T12:29:37Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "listreceivedbyaddress is empty for descriptor (but not legacy) wallets",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26813",
+    "number": 26813,
+    "publishedAt": "2023-01-04T17:13:42Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "bump: ignore WALLET_INCREMENTAL_RELAY_FEE when user specifies fee rate",
+    "url": "https://github.com/bitcoin/bitcoin/issues/26973",
+    "number": 26973,
+    "publishedAt": "2023-01-26T09:43:00Z",
+    "labels": [
+      "Bug",
+      "Wallet",
+      "RPC/REST/ZMQ"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "listunspent, fundrawtransaction, getwalletinfo locks wallet for any other operation",
+    "url": "https://github.com/bitcoin/bitcoin/issues/27002",
+    "number": 27002,
+    "publishedAt": "2023-01-30T23:31:39Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Failing to fetch `cfheader` corresponding to block header in `headers` message",
+    "url": "https://github.com/bitcoin/bitcoin/issues/27085",
+    "number": 27085,
+    "publishedAt": "2023-02-11T16:26:17Z",
+    "labels": [
+      "Bug",
+      "P2P"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "`combinepsbt` RPC does not work with P2TR inputs",
+    "url": "https://github.com/bitcoin/bitcoin/issues/27219",
+    "number": 27219,
+    "publishedAt": "2023-03-07T11:14:10Z",
+    "labels": [
+      "Bug",
+      "PSBT"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "wallet: Data race in GetOrCreateLegacyScriptPubKeyMan vs IsMine",
+    "url": "https://github.com/bitcoin/bitcoin/issues/27354",
+    "number": 27354,
+    "publishedAt": "2023-03-28T12:52:16Z",
+    "labels": [
+      "Bug",
+      "Wallet",
+      "CI failed"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Use different datadirs for different signets",
+    "url": "https://github.com/bitcoin/bitcoin/issues/27494",
+    "number": 27494,
+    "publishedAt": "2023-04-19T15:26:58Z",
+    "labels": [
+      "Feature",
+      "Tests",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "fuzz: Use-of-uninitialized-value in evutil_inet_pton",
+    "url": "https://github.com/bitcoin/bitcoin/issues/27975",
+    "number": 27975,
+    "publishedAt": "2023-06-26T09:14:38Z",
+    "labels": [
+      "Bug",
+      "Tests",
+      "Upstream"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "test: 999 of 999 multisig",
+    "url": "https://github.com/bitcoin/bitcoin/issues/28179",
+    "number": 28179,
+    "publishedAt": "2023-07-28T10:56:14Z",
+    "labels": [
+      "Tests",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "test: Write assumeutxo tests",
+    "url": "https://github.com/bitcoin/bitcoin/issues/28648",
+    "number": 28648,
+    "publishedAt": "2023-10-13T10:24:00Z",
+    "labels": [
+      "Wallet",
+      "Tests",
+      "Consensus",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "build: Configuring with `-mno-sse4.1` does not fail the sse4.1 instrinsics check",
+    "url": "https://github.com/bitcoin/bitcoin/issues/28864",
+    "number": 28864,
+    "publishedAt": "2023-11-13T16:59:09Z",
+    "labels": [
+      "Bug",
+      "Build system"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "ci: failure in `wallet_multiwallet.py --legacy-wallet`",
+    "url": "https://github.com/bitcoin/bitcoin/issues/29073",
+    "number": 29073,
+    "publishedAt": "2023-12-13T12:52:28Z",
+    "labels": [
+      "Bug",
+      "Wallet",
+      "CI failed"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Internal bug detected: Fee needed > fee paid",
+    "url": "https://github.com/bitcoin/bitcoin/issues/29398",
+    "number": 29398,
+    "publishedAt": "2024-02-07T09:47:49Z",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Assertion chainman().ActiveChain()[height] fails on startup on memory-constrained system",
+    "url": "https://github.com/bitcoin/bitcoin/issues/29422",
+    "number": 29422,
+    "publishedAt": "2024-02-11T18:07:52Z",
+    "labels": [
+      "Bug",
+      "UTXO Db and Indexes",
+      "Data corruption"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Wallet: Nondescript error message for 502nd unconfirmed transaction",
+    "url": "https://github.com/bitcoin/bitcoin/issues/29711",
+    "number": 29711,
+    "publishedAt": "2024-03-23T17:58:53Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "test: SegFault in `ismine_tests` on SunOS / illumos",
+    "url": "https://github.com/bitcoin/bitcoin/issues/29908",
+    "number": 29908,
+    "publishedAt": "2024-04-18T22:00:51Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "LevelDB error: Corruption: block checksum mismatch didn't trigger reindex.",
+    "url": "https://github.com/bitcoin/bitcoin/issues/30138",
+    "number": 30138,
+    "publishedAt": "2024-05-18T04:34:07Z",
+    "labels": [
+      "Bug",
+      "Data corruption",
+      "Questions and Help"
+    ],
+    "__typename": "Issue"
+  }
+]

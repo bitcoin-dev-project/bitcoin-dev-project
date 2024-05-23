@@ -1,0 +1,243 @@
+[
+  {
+    "title": "BOLT 10 DNS",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/58",
+    "number": 58,
+    "publishedAt": "2018-07-20T01:33:53Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Add Test for same-payment_hash-different-CLTV HTLC sorting",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/324",
+    "number": 324,
+    "publishedAt": "2019-03-25T18:13:21Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Add assumevalid option for channel announcements",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/484",
+    "number": 484,
+    "publishedAt": "2020-02-10T00:57:48Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Rewrite unit tests for peer_handler module",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/528",
+    "number": 528,
+    "publishedAt": "2020-03-03T18:30:23Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "ChannelManager public interface tests",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/529",
+    "number": 529,
+    "publishedAt": "2020-03-03T19:00:43Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Add test case: stale ChannelManager --> force closes (+ preimage claim still OK)",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/744",
+    "number": 744,
+    "publishedAt": "2020-10-20T17:48:57Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Randomize `PendingHTLCsForwardable::time_forwardable` internally",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1101",
+    "number": 1101,
+    "publishedAt": "2021-09-29T19:24:57Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Create fresh destination/shutdown scripts for each channel in `KeysManager`",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1139",
+    "number": 1139,
+    "publishedAt": "2021-10-25T20:16:17Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Break `ClosureReason::CommitmentTxConfirmed` Up Somewhat",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1488",
+    "number": 1488,
+    "publishedAt": "2022-05-18T01:39:54Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Don't Always Broadcast latest state on startup if we'd previously closed-without-broadcast",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1563",
+    "number": 1563,
+    "publishedAt": "2022-06-23T21:35:17Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "do performance benchmarking of LDK",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1667",
+    "number": 1667,
+    "publishedAt": "2022-08-13T21:40:16Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Set the new `dont_forward` bit in channel_update messages",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1672",
+    "number": 1672,
+    "publishedAt": "2022-08-15T21:27:22Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Provide local balance msat value in `ChannelForceClosed`",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1898",
+    "number": 1898,
+    "publishedAt": "2022-12-04T00:49:40Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": " Refuse new updates after the ChannelMonitor has seen a funding spend confirmed",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2013",
+    "number": 2013,
+    "publishedAt": "2023-02-06T19:36:04Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Expose HTLCs in `ChannelDetails`",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2087",
+    "number": 2087,
+    "publishedAt": "2023-03-08T20:31:49Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Expose current dust exposure",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2264",
+    "number": 2264,
+    "publishedAt": "2023-05-04T19:01:06Z",
+    "labels": [
+      "good first issue",
+      "Take a Friday Leave a Friday"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Log all sent + received onion messages",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2346",
+    "number": 2346,
+    "publishedAt": "2023-06-08T23:37:51Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Improve block connection logging",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2348",
+    "number": 2348,
+    "publishedAt": "2023-06-09T17:46:58Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "add probing code",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2720",
+    "number": 2720,
+    "publishedAt": "2023-11-09T01:37:38Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "`test_restored_packages_retry` is brittle",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2827",
+    "number": 2827,
+    "publishedAt": "2024-01-12T22:33:31Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Allow for user-specified error message to `force_close_with*_broadcasting_txn`",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2840",
+    "number": 2840,
+    "publishedAt": "2024-01-21T20:23:14Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Change max_value_in_flight based on channel being public",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2851",
+    "number": 2851,
+    "publishedAt": "2024-01-24T22:44:50Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Rename `payment_parameters_from_zero_amount_invoice` to imply amount-less, not 0-amount",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2879",
+    "number": 2879,
+    "publishedAt": "2024-02-06T22:38:46Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Move tests in `channelmanager.rs` into more appropriate test files",
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2958",
+    "number": 2958,
+    "publishedAt": "2024-03-21T07:10:11Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  }
+]

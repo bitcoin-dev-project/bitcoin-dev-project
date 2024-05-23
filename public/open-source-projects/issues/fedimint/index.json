@@ -1,0 +1,495 @@
+[
+  {
+    "title": "Define maximum message sizes to avoid DoS on the network layer",
+    "url": "https://github.com/fedimint/fedimint/issues/162",
+    "number": 162,
+    "publishedAt": "2022-06-21T18:33:04Z",
+    "labels": [
+      "bug",
+      "network stack"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Look into deduplicating dependencies",
+    "url": "https://github.com/fedimint/fedimint/issues/630",
+    "number": 630,
+    "publishedAt": "2022-09-23T18:29:20Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Change Debug/Display on BlindingKey / SpendingKey etc. to output a fingerprint or something",
+    "url": "https://github.com/fedimint/fedimint/issues/1098",
+    "number": 1098,
+    "publishedAt": "2022-12-10T23:19:07Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Gateway CLI should be able to spend / reissue ecash",
+    "url": "https://github.com/fedimint/fedimint/issues/1178",
+    "number": 1178,
+    "publishedAt": "2022-12-30T21:11:20Z",
+    "labels": [
+      "good first issue",
+      "lightning"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Upstream HtlcAccepted, Onion, and Htlc structs to cln_plugin",
+    "url": "https://github.com/fedimint/fedimint/issues/1245",
+    "number": 1245,
+    "publishedAt": "2023-01-08T22:37:47Z",
+    "labels": [
+      "good first issue",
+      "lightning"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "`__api_endpoint` can't handle params arity",
+    "url": "https://github.com/fedimint/fedimint/issues/1336",
+    "number": 1336,
+    "publishedAt": "2023-01-15T20:59:21Z",
+    "labels": [
+      "good first issue",
+      "api"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "1-click deployments",
+    "url": "https://github.com/fedimint/fedimint/issues/1344",
+    "number": 1344,
+    "publishedAt": "2023-01-16T17:35:13Z",
+    "labels": [
+      "good first issue",
+      "deployment"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Contract offers malleability",
+    "url": "https://github.com/fedimint/fedimint/issues/1397",
+    "number": 1397,
+    "publishedAt": "2023-01-18T21:19:03Z",
+    "labels": [
+      "bug",
+      "lightning",
+      "crypto"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Review and avoid use of locks (`Mutex`, `RwLock`)",
+    "url": "https://github.com/fedimint/fedimint/issues/1576",
+    "number": 1576,
+    "publishedAt": "2023-02-03T19:55:15Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Tests shouldn't be included in code coverage stats",
+    "url": "https://github.com/fedimint/fedimint/issues/1728",
+    "number": 1728,
+    "publishedAt": "2023-02-21T16:57:36Z",
+    "labels": [
+      "good first issue",
+      "testing"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Grpc type reflection : Support jump to definitions",
+    "url": "https://github.com/fedimint/fedimint/issues/1906",
+    "number": 1906,
+    "publishedAt": "2023-03-14T10:17:21Z",
+    "labels": [
+      "good first issue",
+      "lightning",
+      "dev env"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Allow bitcoind configuration change in Admin UI",
+    "url": "https://github.com/fedimint/fedimint/issues/2014",
+    "number": 2014,
+    "publishedAt": "2023-03-23T18:23:20Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "notification endpoints cleanup",
+    "url": "https://github.com/fedimint/fedimint/issues/2190",
+    "number": 2190,
+    "publishedAt": "2023-04-11T14:45:18Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Deduplicate database transaction raw-to-typed functions",
+    "url": "https://github.com/fedimint/fedimint/issues/2247",
+    "number": 2247,
+    "publishedAt": "2023-04-18T09:33:53Z",
+    "labels": [
+      "good first issue",
+      "db"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Convert (most) logging statements to use pre-defined logging targets",
+    "url": "https://github.com/fedimint/fedimint/issues/2257",
+    "number": 2257,
+    "publishedAt": "2023-04-19T21:00:18Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "E-cash note was replaced in DB, this should never happen!",
+    "url": "https://github.com/fedimint/fedimint/issues/2543",
+    "number": 2543,
+    "publishedAt": "2023-05-16T22:22:08Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Improve tutorial in our docs",
+    "url": "https://github.com/fedimint/fedimint/issues/2836",
+    "number": 2836,
+    "publishedAt": "2023-07-25T14:13:08Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Transitively replace `webpki` with `rustls-webpki`",
+    "url": "https://github.com/fedimint/fedimint/issues/3049",
+    "number": 3049,
+    "publishedAt": "2023-08-29T07:05:06Z",
+    "labels": [
+      "bug",
+      "security"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Investigate running some tests on ios simulator / android emulator",
+    "url": "https://github.com/fedimint/fedimint/issues/3121",
+    "number": 3121,
+    "publishedAt": "2023-09-07T02:09:09Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "`fedimintd` must check `consensus.json.version` against its current consensus version.",
+    "url": "https://github.com/fedimint/fedimint/issues/3299",
+    "number": 3299,
+    "publishedAt": "2023-09-27T19:32:01Z",
+    "labels": [
+      "good first issue",
+      "consensus"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "On start print consensus versions",
+    "url": "https://github.com/fedimint/fedimint/issues/3300",
+    "number": 3300,
+    "publishedAt": "2023-09-27T19:50:26Z",
+    "labels": [
+      "good first issue",
+      "consensus"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Issues on client/server while paying on AlephBFT",
+    "url": "https://github.com/fedimint/fedimint/issues/3500",
+    "number": 3500,
+    "publishedAt": "2023-11-01T22:33:54Z",
+    "labels": [
+      "bug",
+      "consensus"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Properly handle lagging broadcast channel in SM notifier",
+    "url": "https://github.com/fedimint/fedimint/issues/3557",
+    "number": 3557,
+    "publishedAt": "2023-11-09T15:24:07Z",
+    "labels": [
+      "bug",
+      "client"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Gateway: withdrawal to address from wrong network results in 500 error",
+    "url": "https://github.com/fedimint/fedimint/issues/3575",
+    "number": 3575,
+    "publishedAt": "2023-11-10T23:25:09Z",
+    "labels": [
+      "bug",
+      "api"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Setting gateway password with & character has undesired effects in CLI",
+    "url": "https://github.com/fedimint/fedimint/issues/3784",
+    "number": 3784,
+    "publishedAt": "2023-11-29T06:12:55Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Add license and README link to each `Cargo.toml`",
+    "url": "https://github.com/fedimint/fedimint/issues/3924",
+    "number": 3924,
+    "publishedAt": "2023-12-12T16:47:55Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Database overwriting element when expecting insertion of new entry",
+    "url": "https://github.com/fedimint/fedimint/issues/3937",
+    "number": 3937,
+    "publishedAt": "2023-12-13T19:29:33Z",
+    "labels": [
+      "good first issue",
+      "lightning",
+      "consensus",
+      "mint"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Cancelled LN payment update stream doesn't yield `Cancelled` state",
+    "url": "https://github.com/fedimint/fedimint/issues/4014",
+    "number": 4014,
+    "publishedAt": "2024-01-05T13:39:25Z",
+    "labels": [
+      "bug",
+      "lightning",
+      "client",
+      "backport releases/v0.2"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "LN: can reach pending refund state if payment succeeded",
+    "url": "https://github.com/fedimint/fedimint/issues/4021",
+    "number": 4021,
+    "publishedAt": "2024-01-09T02:01:14Z",
+    "labels": [
+      "bug",
+      "lightning",
+      "client"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "setup restart when some peers have consensus running",
+    "url": "https://github.com/fedimint/fedimint/issues/4124",
+    "number": 4124,
+    "publishedAt": "2024-01-24T17:50:39Z",
+    "labels": [
+      "help wanted",
+      "api"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Client becomes slow if one guardian is down",
+    "url": "https://github.com/fedimint/fedimint/issues/4130",
+    "number": 4130,
+    "publishedAt": "2024-01-25T03:53:18Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "`fedimintd` fails to catch up with peers",
+    "url": "https://github.com/fedimint/fedimint/issues/4131",
+    "number": 4131,
+    "publishedAt": "2024-01-25T04:03:25Z",
+    "labels": [
+      "bug",
+      "alephbft"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Investtigate why re-joining a federation every time the client is started works",
+    "url": "https://github.com/fedimint/fedimint/issues/4265",
+    "number": 4265,
+    "publishedAt": "2024-02-07T13:23:40Z",
+    "labels": [
+      "bug",
+      "client"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Improve `gateway-cli info` command",
+    "url": "https://github.com/fedimint/fedimint/issues/4365",
+    "number": 4365,
+    "publishedAt": "2024-02-19T18:41:09Z",
+    "labels": [
+      "good first issue",
+      "lightning"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Versions support tracking",
+    "url": "https://github.com/fedimint/fedimint/issues/4584",
+    "number": 4584,
+    "publishedAt": "2024-03-16T15:01:57Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "opentelemetry deprecated call warning ",
+    "url": "https://github.com/fedimint/fedimint/issues/4591",
+    "number": 4591,
+    "publishedAt": "2024-03-17T00:56:01Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Refactoring ideas",
+    "url": "https://github.com/fedimint/fedimint/issues/4691",
+    "number": 4691,
+    "publishedAt": "2024-03-23T05:04:25Z",
+    "labels": [
+      "good first issue",
+      "refactor"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Automate nix flake update PRs",
+    "url": "https://github.com/fedimint/fedimint/issues/4817",
+    "number": 4817,
+    "publishedAt": "2024-04-03T20:56:57Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Include our ./docs/ files in documentaiton generated on https://docs.fedimint.org/",
+    "url": "https://github.com/fedimint/fedimint/issues/4847",
+    "number": 4847,
+    "publishedAt": "2024-04-05T18:02:16Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Fedimintd getting stuck if bitcoind was initializing",
+    "url": "https://github.com/fedimint/fedimint/issues/4886",
+    "number": 4886,
+    "publishedAt": "2024-04-09T01:55:51Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Module-specific endpoint constants should live in their respective modules",
+    "url": "https://github.com/fedimint/fedimint/issues/4936",
+    "number": 4936,
+    "publishedAt": "2024-04-11T20:22:06Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Panic on Wallet startup",
+    "url": "https://github.com/fedimint/fedimint/issues/5013",
+    "number": 5013,
+    "publishedAt": "2024-04-18T20:44:02Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Remove tracing chrome",
+    "url": "https://github.com/fedimint/fedimint/issues/5253",
+    "number": 5253,
+    "publishedAt": "2024-05-10T20:14:35Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Lightning payment can go into refund state when it actually succeeded",
+    "url": "https://github.com/fedimint/fedimint/issues/5276",
+    "number": 5276,
+    "publishedAt": "2024-05-13T14:48:34Z",
+    "labels": [
+      "bug",
+      "lightning",
+      "client"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Support `watch_script_history` for bitcoind backends",
+    "url": "https://github.com/fedimint/fedimint/issues/5329",
+    "number": 5329,
+    "publishedAt": "2024-05-21T02:28:30Z",
+    "labels": [
+      "bug",
+      "wallet"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "in wild: overwritting a OperationLogKey",
+    "url": "https://github.com/fedimint/fedimint/issues/5334",
+    "number": 5334,
+    "publishedAt": "2024-05-21T15:38:33Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  }
+]

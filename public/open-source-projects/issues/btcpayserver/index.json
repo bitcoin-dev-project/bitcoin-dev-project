@@ -1,0 +1,93 @@
+[
+  {
+    "title": "RTL Language Support",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/444",
+    "number": 444,
+    "publishedAt": "2018-12-10T23:29:17Z",
+    "labels": [
+      "Enhancement",
+      "Translation",
+      "good first issue",
+      "Invoice"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Accessibility Testing: Paid Invoice, Pull Payment, Create Invoice: Tested on Windows",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/4986",
+    "number": 4986,
+    "publishedAt": "2023-05-18T13:31:36Z",
+    "labels": [
+      "Enhancement",
+      "UI / UX",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "[Invoices] Improved filter iteration",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5156",
+    "number": 5156,
+    "publishedAt": "2023-07-05T21:05:41Z",
+    "labels": [
+      "Bug",
+      "UI / UX",
+      "Invoice"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "[Dashboard] Support for Custom Ordering of Dashboard widgets",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5191",
+    "number": 5191,
+    "publishedAt": "2023-07-25T17:42:56Z",
+    "labels": [
+      "Bug",
+      "UI / UX",
+      "Plugin"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "[Bug]: Problems with login into BTCPay Server after updating Raspiblitz / Umbrel deployments",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5666",
+    "number": 5666,
+    "publishedAt": "2024-01-17T14:19:03Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Amount column on dashboard goes out of the layout on mobile",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5721",
+    "number": 5721,
+    "publishedAt": "2024-02-03T07:05:05Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Failed to import a Multisig Bitcoin wallet -with any of the available options-",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5797",
+    "number": 5797,
+    "publishedAt": "2024-02-28T17:01:06Z",
+    "labels": [
+      "Bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "[Bug]: Error LNURL payment link on creating invoices over API",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5898",
+    "number": 5898,
+    "publishedAt": "2024-04-03T20:19:12Z",
+    "labels": [
+      "Bug",
+      "Lightning",
+      "API"
+    ],
+    "__typename": "Issue"
+  }
+]

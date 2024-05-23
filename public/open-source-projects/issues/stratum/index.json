@@ -1,0 +1,278 @@
+[
+  {
+    "title": "Use `shrink` for prop tests",
+    "url": "https://github.com/stratum-mining/stratum/issues/33",
+    "number": 33,
+    "publishedAt": "2021-08-20T16:12:09Z",
+    "labels": [
+      "documentation",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "refactor all the repetitive code in roles-logic-sv2 parsers file into macros",
+    "url": "https://github.com/stratum-mining/stratum/issues/67",
+    "number": 67,
+    "publishedAt": "2021-11-17T15:43:36Z",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "backlog"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "refactor the proxy in order to take advantage of the new roles-logic-sv2 interface",
+    "url": "https://github.com/stratum-mining/stratum/issues/69",
+    "number": 69,
+    "publishedAt": "2021-11-17T15:43:45Z",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "sv2 proxy"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "add test for interop cpp (it should try to build it and run the example)",
+    "url": "https://github.com/stratum-mining/stratum/issues/70",
+    "number": 70,
+    "publishedAt": "2021-11-17T15:49:45Z",
+    "labels": [
+      "good first issue",
+      "test"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "add test for the other examples",
+    "url": "https://github.com/stratum-mining/stratum/issues/71",
+    "number": 71,
+    "publishedAt": "2021-11-17T15:49:49Z",
+    "labels": [
+      "good first issue",
+      "test"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "when test use the various compilation flag",
+    "url": "https://github.com/stratum-mining/stratum/issues/72",
+    "number": 72,
+    "publishedAt": "2021-11-17T15:49:54Z",
+    "labels": [
+      "good first issue",
+      "test"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Use message-generator to perform integration tests on atypical configuration(s)",
+    "url": "https://github.com/stratum-mining/stratum/issues/81",
+    "number": 81,
+    "publishedAt": "2021-11-17T15:57:53Z",
+    "labels": [
+      "good first issue",
+      "test",
+      "message-generator"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Add SV2 Proxy Unit Tests",
+    "url": "https://github.com/stratum-mining/stratum/issues/104",
+    "number": 104,
+    "publishedAt": "2021-11-17T16:29:36Z",
+    "labels": [
+      "help wanted",
+      "test",
+      "sv2 proxy"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Fix broken fuzz test in test.yaml GHA for macos",
+    "url": "https://github.com/stratum-mining/stratum/issues/243",
+    "number": 243,
+    "publishedAt": "2022-09-21T23:18:17Z",
+    "labels": [
+      "bug",
+      "test",
+      "important"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": " Fix broken interop-test in test.yaml GHA for macos",
+    "url": "https://github.com/stratum-mining/stratum/issues/244",
+    "number": 244,
+    "publishedAt": "2022-09-21T23:21:28Z",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "test",
+      "important"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Fix broken interop-no-cargo-test in test.yaml GHA for macos",
+    "url": "https://github.com/stratum-mining/stratum/issues/245",
+    "number": 245,
+    "publishedAt": "2022-09-21T23:24:15Z",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "test",
+      "important"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Fix broken test.yaml GitHub Actions for macos",
+    "url": "https://github.com/stratum-mining/stratum/issues/246",
+    "number": 246,
+    "publishedAt": "2022-09-21T23:25:44Z",
+    "labels": [
+      "help wanted",
+      "tracker"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Rm 3rd-party `hex` crate dependency",
+    "url": "https://github.com/stratum-mining/stratum/issues/375",
+    "number": 375,
+    "publishedAt": "2022-12-11T16:23:22Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Create config option for backup Template Providers",
+    "url": "https://github.com/stratum-mining/stratum/issues/427",
+    "number": 427,
+    "publishedAt": "2023-01-31T22:46:33Z",
+    "labels": [
+      "help wanted",
+      "sv2 pool",
+      "template provider"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "make safe look safer",
+    "url": "https://github.com/stratum-mining/stratum/issues/476",
+    "number": 476,
+    "publishedAt": "2023-03-05T11:37:21Z",
+    "labels": [
+      "good first issue",
+      "help wanted"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "mining-proxy needs graceful death instead of panic",
+    "url": "https://github.com/stratum-mining/stratum/issues/484",
+    "number": 484,
+    "publishedAt": "2023-03-09T17:00:21Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Feature flag to write logs to files instead of just stdout",
+    "url": "https://github.com/stratum-mining/stratum/issues/677",
+    "number": 677,
+    "publishedAt": "2023-11-21T17:29:11Z",
+    "labels": [
+      "help wanted",
+      "log"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "address todos in the jds added PR761",
+    "url": "https://github.com/stratum-mining/stratum/issues/782",
+    "number": 782,
+    "publishedAt": "2024-03-04T13:30:18Z",
+    "labels": [
+      "good first issue",
+      "job-declarator-server"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "`invalid-job-id` errors on `tProxy` don't result in rejection of shares",
+    "url": "https://github.com/stratum-mining/stratum/issues/791",
+    "number": 791,
+    "publishedAt": "2024-03-12T18:41:22Z",
+    "labels": [
+      "bug",
+      "good first issue",
+      "help wanted",
+      "translation proxy"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "JDC is not doing fallback to solo-mining",
+    "url": "https://github.com/stratum-mining/stratum/issues/844",
+    "number": 844,
+    "publishedAt": "2024-04-12T16:16:49Z",
+    "labels": [
+      "bug",
+      "job-declarator-client"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "JDC is not logging any error on wrong TP configuration",
+    "url": "https://github.com/stratum-mining/stratum/issues/863",
+    "number": 863,
+    "publishedAt": "2024-04-19T14:24:55Z",
+    "labels": [
+      "bug",
+      "good first issue",
+      "job-declarator-client"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "undeterministic connection between JDC and pool",
+    "url": "https://github.com/stratum-mining/stratum/issues/874",
+    "number": 874,
+    "publishedAt": "2024-04-29T17:54:18Z",
+    "labels": [
+      "bug",
+      "important",
+      "sv2 pool",
+      "job-declarator-client"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "IdentifyTransactions message not implemented",
+    "url": "https://github.com/stratum-mining/stratum/issues/902",
+    "number": 902,
+    "publishedAt": "2024-05-09T13:40:27Z",
+    "labels": [
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "JDC does not receive shares anymore from Translator if two new blocks are found in few seconds",
+    "url": "https://github.com/stratum-mining/stratum/issues/920",
+    "number": 920,
+    "publishedAt": "2024-05-21T12:24:49Z",
+    "labels": [
+      "bug",
+      "job-declarator-client"
+    ],
+    "__typename": "Issue"
+  }
+]

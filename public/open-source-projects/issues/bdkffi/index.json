@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Custom Signer ",
+    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/222",
+    "number": 222,
+    "publishedAt": "2022-11-03T21:42:31Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Add miniscript policy compiler function",
+    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/294",
+    "number": 294,
+    "publishedAt": "2023-01-12T04:27:51Z",
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "using Concurrency in EsploraConfig resulting in errors ",
+    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/378",
+    "number": 378,
+    "publishedAt": "2023-06-20T15:22:30Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  },
+  {
+    "title": "Question: Finalizing a fully signed PSBT",
+    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/469",
+    "number": 469,
+    "publishedAt": "2024-03-14T15:59:37Z",
+    "labels": [
+      "bug"
+    ],
+    "__typename": "Issue"
+  }
+]
