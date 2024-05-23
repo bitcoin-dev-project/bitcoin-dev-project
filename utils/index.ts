@@ -10,8 +10,8 @@ export const FILTERTAGS = [
     "labels",
     "languages",
     "tags",
-    "name",
-    "org"
+    "repo",
+    "owner"
 ]
 
 export function getValues({
