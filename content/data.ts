@@ -4,32 +4,32 @@ export const toolsData = [
     {
         name: "Transcript Review",
         href: "https://review.btctranscripts.com/",
-        src: "/tools/bitcoin-transcripts-review.jpg"
+        src: "/images/tools/bitcoin-transcripts-review.jpg"
     },
     {
         name: "Chat BTC",
         href: "https://chat.bitcoinsearch.xyz",
-        src: "/tools/chat-btc.jpg"
+        src: "/images/tools/chat-btc.jpg"
     },
     {
         name: "Saving Satoshi",
         href: "https://savingsatoshi.com",
-        src: "/tools/saving-satoshi.jpg"
+        src: "/images/tools/saving-satoshi.jpg"
     },
     {
         name: "Bitcoin Transcripts",
         href: "https://btctranscripts.com/",
-        src: "/tools/bitcoin-transcripts.jpg"
+        src: "/images/tools/bitcoin-transcripts.jpg"
     },
     {
         name: "Bitcoin TLDR",
         href: "https://tldr.bitcoinsearch.xyz/",
-        src: "/tools/bitcoin-tldr.jpg"
+        src: "/images/tools/bitcoin-tldr.jpg"
     },
     {
         name: "Bitcoin Search",
         href: "https://bitcoinsearch.xyz",
-        src: "/tools/bitcoin-search.jpg"
+        src: "/images/tools/bitcoin-search.jpg"
     }
 ]
 
@@ -63,7 +63,7 @@ export const learnSection = createSection({
         {
             description: "Discover bitcoin and lightning open source projects",
             btnText: "Dive In",
-            src: "/projects.jpg",
+            src: "/images/projects.jpg",
             title: "Projects",
             shortTitle: "Projects",
             slug: "/projects"
@@ -71,7 +71,7 @@ export const learnSection = createSection({
         {
             description: " Begin a career in bitcoin open source development ",
             btnText: "Start",
-            src: "/lightning-infra-development.jpg",
+            src: "/images/lightning-infra-development.jpg",
             title: "Career",
             shortTitle: "Career",
             slug: "/career"
