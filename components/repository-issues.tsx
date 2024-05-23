@@ -37,7 +37,6 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
             filterIssues(
                 currentFilterValuesAndKeys,
                 paginatedResult,
-
                 sortKey,
                 searchQuery
             ),
@@ -81,7 +80,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                             ))}
                         </div>
                     ) : (
-                        <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3">
+                        <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3  border-2 border-green">
                             {memoizedIssues.map((issue, index) => (
                                 <section key={`issue-${index}-${issue.number}`}>
                                     <IssueCard
@@ -95,6 +94,13 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                             ))}
                         </div>
                     )}
+                    <div className="bg-white flex flex-wrap overflow-x-scroll overflow-scroll max-w-2xl">
+                        <Pagination
+                            currentPage={currentPage}
+                            pages={pages}
+                            setCurrentPage={setCurrentPage}
+                        />
+                    </div>
                 </section>
             </div>
             {open ? (
@@ -105,13 +111,13 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                     />
                 </div>
             ) : null}
-            <div className="absolute right-0 left-0 bottom-0 bg-white z-50">
+            {/* <div className="absolute right-0 left-0 bottom-0 bg-white z-50 border-2 border-red-500">
                 <Pagination
                     currentPage={currentPage}
                     pages={pages}
                     setCurrentPage={setCurrentPage}
                 />
-            </div>
+            </div> */}
         </main>
     )
 }
