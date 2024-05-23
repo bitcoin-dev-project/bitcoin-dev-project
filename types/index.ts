@@ -16,4 +16,11 @@ export type Issue = {
     url: string
     number: number
     publishedAt: string
+    labels: {
+        edges: {
+            node: {
+                name: string
+            }
+        }[]
+    }
 }

@@ -5,14 +5,57 @@
 */
 
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client"
-import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rsc"
+import fetch from "cross-fetch"
+import dotenv from "dotenv"
 
-export const { getClient } = registerApolloClient(() => {
+dotenv.config()
+
+export const getClient = () => {
+    const authToken =
+        dotenv.config()?.parsed?.GITHUB_TOKEN || process.env.GITHUB_TOKEN
+    if (!authToken) {
+        console.error("GITHUB_TOKEN is not set in the environment variables")
+        process.exit(1)
+    }
+
     return new ApolloClient({
-        cache: new InMemoryCache(),
+        cache: new InMemoryCache({
+            typePolicies: {
+                Query: {
+                    fields: {
+                        repository: {
+                            merge(existing = {}, incoming) {
+                                return {
+                                    ...existing,
+                                    ...incoming
+                                }
+                            }
+                        }
+                    }
+                },
+                Repository: {
+                    fields: {
+                        issues: {
+                            merge(existing = { edges: [] }, incoming) {
+                                return {
+                                    ...existing,
+                                    edges: [
+                                        ...existing.edges,
+                                        ...incoming.edges
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }),
         link: new HttpLink({
             uri: "https://api.github.com/graphql",
-            fetchOptions: { cache: "cache-and-network" }
+            fetch,
+            headers: {
+                authorization: `bearer ${authToken}`
+            }
         })
     })
-})
+}
