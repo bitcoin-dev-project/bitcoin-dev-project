@@ -6,6 +6,7 @@ on:
     push:
         branches:
             - master
+            - staging
 
 jobs:
     fetch-and-save-issues:
@@ -14,6 +15,13 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v3
+
+            - name: Check branch is staging or master
+              run: |
+                  if [[ "${{ github.ref }}" != "refs/heads/master" || "${{ github.ref }}" != "refs/heads/staging" ]]; then
+                    echo "This workflow run is not on master or staging branch, cancelling..."
+                    exit 1
+                  fi
 
             - name: Set up Node.js
               uses: actions/setup-node@v2
@@ -29,4 +37,11 @@ jobs:
             - name: Fetch Issues from GitHub and Update Files
               env:
                   SFIGS_TOKEN: ${{ secrets.SFIGS_TOKEN }}
-              run: npm run fetch-isssues
+              run: npm run fetch-issues
+
+            - name: Commit and Push Changes
+              run: |
+                  git config --global user.email "${{secrets.EMAIL}}"
+                  git config --global user.name "${{secrets.NAME}}"
+                  git commit -am "chore: update issues" || echo "No changes to commit"
+                  git push
