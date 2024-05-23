@@ -1,14 +1,52 @@
-import React, { useState, useRef, useEffect, useMemo } from "react"
 import Image from "next/image"
+import React, { useEffect, useMemo, useRef, useState } from "react"
+
+import { useUrlManager } from "@/hooks/useUrlManager"
+import { IssueCardElement } from "@/types"
+import { createSortKeys, getValues, ISSUEOPTIONS, SORTOPTIONS } from "@/utils"
+
+import CloseSidebarIcon from "../public/close-sidebar.svg"
+import CrossIcon from "../public/cross-icon.svg"
 import FilterIcon from "../public/filter.svg"
 import SortIcon from "../public/sort-icon.svg"
-import CrossIcon from "../public/cross-icon.svg"
-import CloseSidebarIcon from "../public/close-sidebar.svg"
-import { useUrlManager } from "@/hooks/useUrlManager"
-import { SORTOPTIONS, createSortKeys, filterPropertiesDataSet } from "@/utils"
 
-const SidebarFilter = ({ toggle }: { toggle: () => void }) => {
+const SidebarFilter = ({
+    toggle,
+    issues
+}: {
+    toggle: () => void
+    issues: IssueCardElement[]
+}) => {
     const { currentFilterValuesAndKeys } = useUrlManager()
+
+    const { properties: languages } = getValues({ key: "languages", issues })
+    const { properties: tags } = getValues({ key: "tags", issues })
+    const { properties: repos } = getValues({ key: "repo", issues })
+    const { properties: orgs } = getValues({ key: "owner", issues })
+
+    const filterPropertiesDataSet = [
+        {
+            title: "Issue type",
+            placeholder: "Search issues",
+            args: ISSUEOPTIONS
+        },
+        {
+            title: "Language",
+            placeholder: "Search languages",
+            args: languages
+        },
+        { title: "Tags", placeholder: "Search Tags", args: tags },
+        {
+            title: "Repositories",
+            placeholder: "Search Repositories",
+            args: repos
+        },
+        {
+            title: "Organisations",
+            placeholder: "Search Organisations",
+            args: orgs
+        }
+    ]
 
     return (
         <div className="w-[300px] lg:w-[250px] md:w-full flex flex-col gap-5">
@@ -147,6 +185,7 @@ const CustomSortSelect = React.memo(function CustomSortSelect({
     const { addSortParam, sortKey } = useUrlManager()
     const { sortKeys } = createSortKeys()
     const [isOpen, setOpen] = useState(false)
+    const wrapperRef = useRef<HTMLFormElement>(null)
     const toggle = () => setOpen(!isOpen)
 
     const handleChange = (value: string) => {
@@ -160,8 +199,25 @@ const CustomSortSelect = React.memo(function CustomSortSelect({
         (sort_key) => sort_key.key === url_sort_key
     ) ?? { key: "relevance", label: "relevance" }
 
+    useEffect(() => {
+        const handleFocusOut = (e: MouseEvent) => {
+            if (
+                wrapperRef.current &&
+                !wrapperRef.current.contains(e.target as Node)
+            ) {
+                setOpen(false)
+            }
+        }
+
+        document.addEventListener("mousedown", handleFocusOut)
+
+        return () => {
+            document.removeEventListener("mousedown", handleFocusOut)
+        }
+    }, [isOpen])
+
     return (
-        <form className="w-full relative">
+        <form className="w-full relative" ref={wrapperRef}>
             <section className="group/menuBtn">
                 <div
                     className="w-full bg-white border-[1.2px] border-gray-300 rounded-lg cursor-pointer p-3 before:absolute capitalize font-medium flex items-center justify-between"
@@ -183,35 +239,35 @@ const CustomSortSelect = React.memo(function CustomSortSelect({
                 </div>
             </section>
 
-            {isOpen && (
-                <section className="focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400">
-                    {sortKeys.map((item, index) => (
-                        <div
-                            key={`${item.label}_${index}`}
-                            onClick={() => handleChange(item.key)}
-                            data-selected={currentSortKey.key === item.key}
-                            className="group"
-                        >
-                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
-                                <Image
-                                    className="group-data-[selected=false]:invisible"
-                                    src="./lightning_icon_filled.svg"
-                                    height={16}
-                                    width={16}
-                                    alt=""
-                                />
-                                <span
-                                    className={
-                                        "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
-                                    }
-                                >
-                                    {item.label}
-                                </span>
-                            </div>
+            <section
+                className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 ${isOpen ? "block" : "hidden"}`}
+            >
+                {sortKeys.map((item, index) => (
+                    <div
+                        key={`${item.label}_${index}`}
+                        onClick={() => handleChange(item.key)}
+                        data-selected={currentSortKey.key === item.key}
+                        className="group"
+                    >
+                        <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
+                            <Image
+                                className="group-data-[selected=false]:invisible"
+                                src="./lightning_icon_filled.svg"
+                                height={16}
+                                width={16}
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
+                                }
+                            >
+                                {item.label}
+                            </span>
                         </div>
-                    ))}
-                </section>
-            )}
+                    </div>
+                ))}
+            </section>
         </form>
     )
 })
@@ -230,21 +286,32 @@ const CustomMultiCheckBox = React.memo(function CustomMultiCheckBox({
 
     const [searchTerm, setSearchTerm] = useState("")
     const searchRef = useRef<HTMLInputElement>(null)
+    const wrapperRef = useRef<HTMLDivElement>(null)
 
     const toggle = () => setOpen(!isOpen)
 
     useEffect(() => {
         const handleFocusIn = () => setOpen(true)
+        const handleFocusOut = (e: MouseEvent) => {
+            if (
+                wrapperRef.current &&
+                !wrapperRef.current.contains(e.target as Node)
+            ) {
+                setOpen(false)
+            }
+        }
 
+        document.addEventListener("mousedown", handleFocusOut)
         let searchRefInput = searchRef.current
-        if (!searchRefInput) return
-        searchRefInput.addEventListener("focusin", () => handleFocusIn())
+        searchRefInput &&
+            searchRefInput.addEventListener("focusin", () => handleFocusIn())
 
         return () => {
             searchRefInput &&
                 searchRefInput.removeEventListener("focusin", () =>
                     handleFocusIn()
                 )
+            document.removeEventListener("mousedown", handleFocusOut)
         }
     }, [isOpen])
 
@@ -255,14 +322,16 @@ const CustomMultiCheckBox = React.memo(function CustomMultiCheckBox({
     const isSelected = (value: string) => currentFilterValues.includes(value)
 
     const filterArgs = useMemo(() => {
-        if (searchTerm === "") return args
-        return args.filter((arg) =>
-            arg.toLowerCase().includes(searchTerm.toLowerCase())
-        )
+        if (searchTerm === "") return args.slice(1)
+        return args
+            .map((arg) => arg.toLowerCase())
+            .filter((arg) =>
+                arg.toLowerCase().includes(searchTerm.toLowerCase())
+            )
     }, [args, searchTerm])
 
     return (
-        <div className="w-full flex flex-col gap-4">
+        <div className="w-full flex flex-col gap-4" ref={wrapperRef}>
             <h5 className="text-base font-bold">{title}</h5>
             <form className="w-full relative">
                 <section className="group/menuBtn">
@@ -303,40 +372,47 @@ const CustomMultiCheckBox = React.memo(function CustomMultiCheckBox({
                     </div>
                 </section>
 
-                {isOpen && (
-                    <section className="focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400">
-                        {filterArgs.length < 1 && (
-                            <p className="w-full text-sm 2xl:text-base text-center px-2">
-                                No matching options
-                            </p>
-                        )}
-                        {filterArgs.slice(1).map((item, index) => (
-                            <div
-                                key={`${item}_${index}`}
-                                onClick={() => addFilter(item)}
-                                data-selected={isSelected(item)}
-                                className="group"
-                            >
-                                <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
-                                    <Image
-                                        className="group-data-[selected=false]:invisible"
-                                        src="./lightning_icon_filled.svg"
-                                        height={16}
-                                        width={16}
-                                        alt=""
-                                    />
-                                    <span
-                                        className={
-                                            "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
-                                        }
-                                    >
-                                        {item}
-                                    </span>
-                                </div>
+                <section
+                    onBlur={(e) => {
+                        e.stopPropagation()
+                        console.log("blur")
+                        setOpen(false)
+                    }}
+                    id="filter-section-dropdown"
+                    data-is-open={isOpen}
+                    className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 ${isOpen ? "block" : "hidden"}`}
+                >
+                    {filterArgs.length < 1 && (
+                        <p className="w-full text-sm 2xl:text-base text-center px-2">
+                            No matching options
+                        </p>
+                    )}
+                    {filterArgs.map((item, index) => (
+                        <div
+                            key={`${item}_${index}`}
+                            onClick={() => addFilter(item)}
+                            data-selected={isSelected(item)}
+                            className="group"
+                        >
+                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
+                                <Image
+                                    className="group-data-[selected=false]:invisible"
+                                    src="./lightning_icon_filled.svg"
+                                    height={16}
+                                    width={16}
+                                    alt=""
+                                />
+                                <span
+                                    className={
+                                        "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
+                                    }
+                                >
+                                    {item}
+                                </span>
                             </div>
-                        ))}
-                    </section>
-                )}
+                        </div>
+                    ))}
+                </section>
             </form>
         </div>
     )

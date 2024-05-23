@@ -1,29 +1,29 @@
-import { ProjectProperties, Projects } from "@/types"
-import projects from "../public/opensource-projects/index.json"
+import { IssueCardElement } from "@/types"
 
 export const SORTOPTIONS = ["sort", "relevance", "newest first", "oldest first"]
 
-export const ISSUEOPTIONS = [
-    "issue_type",
-    "good-first-issue",
-    "bugs",
-    "help-wanted"
-]
+export const ISSUEOPTIONS = ["labels", "good first issue", "bug", "help wanted"]
 
 export const FILTERTAGS = [
     "search",
     "sort",
-    "issue_type",
-    "lang",
+    "labels",
+    "languages",
     "tags",
     "name",
     "org"
 ]
 
-export function getValues(key: keyof ProjectProperties) {
+export function getValues({
+    key,
+    issues
+}: {
+    key: keyof IssueCardElement
+    issues: IssueCardElement[]
+}) {
     let properties: string[] = []
 
-    Object.values(projects as Projects).map((project) => {
+    issues.map((project) => {
         if (Array.isArray(project[key])) {
             properties.push(...(project[key] as string[]))
         } else {
@@ -47,11 +47,11 @@ export const createSortKeys = () => {
 
 export function filterIssues(
     filterArgNkey: { key: string; filter: string }[],
-    dataSet: Array<Record<string, string | string[] | number>>,
+    dataSet: IssueCardElement[],
     sortKey: string | null,
     searchQuery: string | null
 ) {
-    let result: Array<Record<string, string | string[] | number>> = []
+    let result: IssueCardElement[] = []
 
     if (!filterArgNkey.length || filterArgNkey.length === 0) {
         return dataSet
@@ -78,7 +78,7 @@ export function filterIssues(
 // Sorts according to newest-issues, oldest-issues and relevance which is the default state
 export const applySort = (
     sortKey: string | null,
-    result: Array<Record<string, string | string[] | number>>
+    result: IssueCardElement[]
 ) => {
     switch (sortKey) {
         case "relevance":
@@ -103,9 +103,9 @@ export const applySort = (
 // applies filter to the dataset or result
 // filter searhes each item in the dataset based on filter key selected and returns results as expected
 export const applyFilter = (
-    dataSet: Array<Record<string, string | string[] | number>>,
+    dataSet: IssueCardElement[],
     filterArgNkey: { key: string; filter: string }[],
-    result: Array<Record<string, string | string[] | number>>
+    result: IssueCardElement[]
 ) => {
     const rename_keys = filterArgNkey.map(({ key, filter }) => {
         switch (key) {
@@ -126,7 +126,7 @@ export const applyFilter = (
             const isPresent = result.some(
                 (val) => val.number === resultValue.number
             )
-            let valueInCheck = resultValue?.[key]
+            let valueInCheck = resultValue?.[key as keyof IssueCardElement]
 
             if (Array.isArray(valueInCheck)) {
                 valueInCheck = valueInCheck.map((val) => val.toLowerCase())
@@ -149,7 +149,7 @@ export const applyFilter = (
 // Search is based on title, repository and language
 export const applySearch = (
     searchQuery: string | null,
-    result: Array<Record<string, string | string[] | number>>
+    result: IssueCardElement[]
 ) => {
     const nullableSearchTerm = searchQuery?.toLocaleLowerCase() ?? ""
 
@@ -168,29 +168,3 @@ export const applySearch = (
         )
     })
 }
-
-const { properties: languages } = getValues("lang")
-const { properties: tags } = getValues("tags")
-const { properties: repos } = getValues("name")
-const { properties: orgs } = getValues("org")
-
-export const filterPropertiesDataSet = [
-    // keeping these here until some issues are clarified
-    // { title: "Issue type", placeholder: "Search issues", args: ISSUEOPTIONS },
-    {
-        title: "Language",
-        placeholder: "Search languages",
-        args: languages
-    },
-    { title: "Tags", placeholder: "Search Tags", args: tags },
-    {
-        title: "Repositories",
-        placeholder: "Search Repositories",
-        args: repos
-    },
-    {
-        title: "Organisations",
-        placeholder: "Search Organisations",
-        args: orgs
-    }
-]

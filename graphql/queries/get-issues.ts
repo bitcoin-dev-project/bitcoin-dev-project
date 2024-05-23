@@ -1,3 +1,4 @@
+import { sanitize } from "@/utils/sanitize"
 import { gql } from "@apollo/client"
 
 type Repository = {
@@ -6,12 +7,9 @@ type Repository = {
     labels: string[]
     states: string[]
 }
-function sanitize(name: string) {
-    return name.replace(/[^a-zA-Z0-9_]/g, "")
-}
 
 export function constructRepoQueries(inputs: Repository[]) {
-    const queryParts = inputs.map((input, index) => {
+    const queryParts = inputs.map((input) => {
         const labelsFormatted = JSON.stringify(input.labels)
         const statesFormatted = input.states
             .map((state) => state.toUpperCase())

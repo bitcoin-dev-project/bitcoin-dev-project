@@ -1,19 +1,14 @@
 import React from "react"
 
-import { auth } from "@/auth"
 import RepositoryIssues from "@/components/repository-issues"
-import AuthProvider from "@/context/auth-provider"
+import { getRepoIssues } from "@/lib/get-repo-issues"
 
 const Contribute = async () => {
-    const session = await auth()
-    const token = session?.accessToken || ""
-
+    const issues = await getRepoIssues()
     return (
-        <AuthProvider token={token}>
-            <main className="container mx-auto">
-                <RepositoryIssues />
-            </main>
-        </AuthProvider>
+        <main className="container mx-auto">
+            <RepositoryIssues issues={issues} />
+        </main>
     )
 }
 

@@ -3,18 +3,17 @@
 import Link from "next/link"
 import React from "react"
 
-import { useGetRepositoryIssues } from "@/hooks/useGetRepositoryIssues"
-
-import Badge from "./badge"
-import Skeleton from "./skeleton"
-import { Issue } from "@/types"
-import SearchInput from "./search-input"
-import SidebarFilter from "./sidebar-filter"
 import { useUrlManager } from "@/hooks/useUrlManager"
+import { IssueCardElement } from "@/types"
 import { filterIssues } from "@/utils"
 
-const RepositoryIssues = () => {
-    const { error, issues, loading } = useGetRepositoryIssues()
+import Badge from "./badge"
+import SearchInput from "./search-input"
+import SidebarFilter from "./sidebar-filter"
+import Skeleton from "./skeleton"
+
+const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
+    const loading = !issues.length
     const [open, setOpen] = React.useState(false)
     const toggle = () => setOpen(!open)
 
@@ -44,13 +43,13 @@ const RepositoryIssues = () => {
         (v) => v.key !== "search" && v.key !== "sort"
     )
 
-    if (error) return <div>Error: {error.message}</div>
+    // if (error) return <div>Error: {error.message}</div>
 
     return (
         <main className="w-full min-h-[calc(100vh-88px)]">
-            <div className="flex w-full gap-6 lg:gap-2">
-                <section className="md:w-full block md:hidden py-6 px-14 lg:px-5">
-                    <SidebarFilter toggle={() => {}} />
+            <div className="flex w-full gap-6 lg:gap-2 relative">
+                <section className="md:w-full block md:hidden py-6 px-14 lg:px-5 sticky inset-0">
+                    <SidebarFilter issues={issues} toggle={() => {}} />
                 </section>
 
                 <section className="flex w-full flex-col items-center gap-6 px-10 lg:px-4 pl-0 md:pl-4">
@@ -90,7 +89,10 @@ const RepositoryIssues = () => {
             </div>
             {open ? (
                 <div className="w-full bg-white absolute top-[78px] bottom-0 opacity-100 z-40 p-4 pt-3 pb-8 overflow-scroll">
-                    <SidebarFilter toggle={() => setOpen(!open)} />
+                    <SidebarFilter
+                        issues={issues}
+                        toggle={() => setOpen(!open)}
+                    />
                 </div>
             ) : null}
         </main>
@@ -98,12 +100,6 @@ const RepositoryIssues = () => {
 }
 
 export default RepositoryIssues
-
-type IssueCardElement = Issue & {
-    owner: string
-    languages: string[]
-    repo: string
-}
 
 const IssueCard = React.memo(function IssueCard({
     issue,

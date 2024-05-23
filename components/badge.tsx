@@ -10,7 +10,9 @@ const Badge = ({
     className?: string
     keys: string[]
 }) => {
-    const isSelected = keys.includes(name.toLowerCase())
+    const isSelected = keys
+        ?.map((value) => value.toLowerCase())
+        .includes(name.toLowerCase())
 
     return (
         <div
