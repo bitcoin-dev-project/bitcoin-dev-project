@@ -329,16 +329,6 @@
     ]
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1374",
-    "publishedAt": "2024-03-15T04:15:43Z",
-    "title": "RBF API is awkward (remove allow_shrinking)",
-    "labels": [
-      "bug",
-      "module-wallet",
-      "api"
-    ]
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1407",
     "publishedAt": "2024-04-18T13:45:33Z",
     "title": "`Wallet::create_signers` should return the `KeychainTxOutIndex` changeset",

@@ -659,5 +659,15 @@
       "Data corruption",
       "Questions and Help"
     ]
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/30159",
+    "publishedAt": "2024-05-23T15:22:09Z",
+    "title": "LevelDB read failure: Corruption: block checksum mismatch",
+    "labels": [
+      "Bug",
+      "UTXO Db and Indexes",
+      "Data corruption"
+    ]
   }
 ]
