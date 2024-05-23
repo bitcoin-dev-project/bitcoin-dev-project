@@ -11,17 +11,11 @@ on:
 jobs:
     fetch-and-save-issues:
         runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/staging'
 
         steps:
             - name: Checkout repository
               uses: actions/checkout@v3
-
-            - name: Check branch is staging or master
-              run: |
-                  if [[ "${{ github.ref }}" != "refs/heads/master" || "${{ github.ref }}" != "refs/heads/staging" ]]; then
-                    echo "This workflow run is not on master or staging branch, cancelling..."
-                    exit 1
-                  fi
 
             - name: Set up Node.js
               uses: actions/setup-node@v2
