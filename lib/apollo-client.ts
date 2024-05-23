@@ -12,9 +12,9 @@ dotenv.config()
 
 export const getClient = () => {
     const authToken =
-        dotenv.config()?.parsed?.GITHUB_TOKEN || process.env.GITHUB_TOKEN
+        dotenv.config()?.parsed?.SFIGS_TOKEN || process.env.SFIGS_TOKEN
     if (!authToken) {
-        console.error("GITHUB_TOKEN is not set in the environment variables")
+        console.error("SFIGS_TOKEN is not set in the environment variables")
         process.exit(1)
     }
 
