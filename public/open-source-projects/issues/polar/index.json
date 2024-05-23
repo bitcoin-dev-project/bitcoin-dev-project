@@ -1,135 +1,111 @@
 [
   {
-    "title": "Feature Request: Rename nodes",
     "url": "https://github.com/jamaljsr/polar/issues/388",
-    "number": 388,
     "publishedAt": "2020-10-19T15:06:09Z",
+    "title": "Feature Request: Rename nodes",
     "labels": [
       "enhancement",
       "good first issue",
       "up for grabs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Bug: Issue interacting with Sparrow using Bitcoind backend",
     "url": "https://github.com/jamaljsr/polar/issues/517",
-    "number": 517,
     "publishedAt": "2021-11-30T04:49:34Z",
+    "title": "Bug: Issue interacting with Sparrow using Bitcoind backend",
     "labels": [
       "bug",
       "up for grabs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Bug: Logos not rendering correctly",
     "url": "https://github.com/jamaljsr/polar/issues/534",
-    "number": 534,
     "publishedAt": "2022-02-27T19:20:43Z",
+    "title": "Bug: Logos not rendering correctly",
     "labels": [
       "bug",
       "up for grabs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Docker Not Detected",
     "url": "https://github.com/jamaljsr/polar/issues/553",
-    "number": 553,
     "publishedAt": "2022-05-03T00:10:25Z",
+    "title": "Docker Not Detected",
     "labels": [
       "bug",
       "up for grabs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Bug: balances for Core Lightning nodes are not updated correctly sometimes",
     "url": "https://github.com/jamaljsr/polar/issues/575",
-    "number": 575,
     "publishedAt": "2022-07-29T15:15:12Z",
+    "title": "Bug: balances for Core Lightning nodes are not updated correctly sometimes",
     "labels": [
       "bug",
       "up for grabs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Bug: 'Unable to connect to terminal'",
     "url": "https://github.com/jamaljsr/polar/issues/636",
-    "number": 636,
     "publishedAt": "2022-12-11T16:34:22Z",
+    "title": "Bug: 'Unable to connect to terminal'",
     "labels": [
       "bug",
       "up for grabs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Bug: Viewing terminals on Linux just gives a loading animated icon",
     "url": "https://github.com/jamaljsr/polar/issues/642",
-    "number": 642,
     "publishedAt": "2023-01-02T02:54:04Z",
+    "title": "Bug: Viewing terminals on Linux just gives a loading animated icon",
     "labels": [
       "bug",
       "up for grabs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Unable to connect to c-lightning node",
     "url": "https://github.com/jamaljsr/polar/issues/682",
-    "number": 682,
     "publishedAt": "2023-02-21T14:25:15Z",
+    "title": "Unable to connect to c-lightning node",
     "labels": [
       "bug",
       "up for grabs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Bug: clightning docker images fails because of cert generation error",
     "url": "https://github.com/jamaljsr/polar/issues/754",
-    "number": 754,
     "publishedAt": "2023-08-04T12:19:00Z",
+    "title": "Bug: clightning docker images fails because of cert generation error",
     "labels": [
       "bug",
       "wip"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Bug: Unable to run CLN on macOS Vetura (13.5.2)",
     "url": "https://github.com/jamaljsr/polar/issues/779",
-    "number": 779,
     "publishedAt": "2023-09-15T18:55:19Z",
+    "title": "Bug: Unable to run CLN on macOS Vetura (13.5.2)",
     "labels": [
       "bug",
       "wip"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Feature Request: add a description field for each network",
     "url": "https://github.com/jamaljsr/polar/issues/836",
-    "number": 836,
     "publishedAt": "2024-02-21T21:47:41Z",
+    "title": "Feature Request: add a description field for each network",
     "labels": [
       "enhancement",
       "good first issue",
       "up for grabs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Bug: Update instructions to create CLN custom node",
     "url": "https://github.com/jamaljsr/polar/issues/863",
-    "number": 863,
     "publishedAt": "2024-03-21T18:00:03Z",
+    "title": "Bug: Update instructions to create CLN custom node",
     "labels": [
       "bug"
-    ],
-    "__typename": "Issue"
+    ]
   }
 ]

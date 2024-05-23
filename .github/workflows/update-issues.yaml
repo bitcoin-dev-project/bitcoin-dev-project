@@ -2,7 +2,7 @@ name: Fetch and Update Issues
 
 on:
     schedule:
-        - cron: "0 */2 * * *"
+        - cron: "0 */2 * * *" # every 2 hours
     push:
         branches:
             - master
@@ -23,10 +23,10 @@ jobs:
             - name: Install dependencies
               run: npm install
 
-            - name: Compile TypeScript scripts
+            - name: Compile TypeScript to JavaScript
               run: npm run compile:scripts
 
             - name: Fetch Issues from GitHub and Update Files
               env:
                   SFIGS_TOKEN: ${{ secrets.SFIGS_TOKEN }}
-              run: node scriptsOut/helpers/fetch-issues.js
+              run: npm run fetch-isssues

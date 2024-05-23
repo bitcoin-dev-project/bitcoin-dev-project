@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-        "target": "es2017",
+        "target": "ES2020",
         "module": "commonjs",
-        "outDir": "scriptsOut",
+        "outDir": "scripts",
         "strict": true,
         "esModuleInterop": true,
         "resolveJsonModule": true

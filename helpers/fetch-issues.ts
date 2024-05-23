@@ -41,7 +41,9 @@ const fetchAndSaveIssues = async () => {
             const projectIssues: ProjectIssue[] = []
             issues.map((edge: { node: Issue }) => {
                 projectIssues.push({
-                    ...edge.node,
+                    url: edge.node.url,
+                    publishedAt: edge.node.publishedAt,
+                    title: edge.node.title,
                     labels: edge.node.labels.edges.map(
                         (label: { node: { name: string } }) => label.node.name
                     )

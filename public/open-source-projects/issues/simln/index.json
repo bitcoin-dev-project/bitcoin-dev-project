@@ -1,133 +1,111 @@
 [
   {
-    "title": "Docs: Example config that is checked against parsing",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/84",
-    "number": 84,
     "publishedAt": "2023-08-29T08:39:49Z",
+    "title": "Docs: Example config that is checked against parsing",
     "labels": [
       "documentation",
       "help wanted",
       "Low Priority"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Feature: Optional name for activity descriptions",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/127",
-    "number": 127,
     "publishedAt": "2023-10-05T17:19:22Z",
+    "title": "Feature: Optional name for activity descriptions",
     "labels": [
       "feature",
       "good first issue",
       "help wanted",
       "Medium Priority"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Remove trailing full stop from log lines ",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/134",
-    "number": 134,
     "publishedAt": "2023-10-10T15:53:05Z",
+    "title": "Remove trailing full stop from log lines ",
     "labels": [
       "feature",
       "good first issue",
       "nit",
       "Low Priority"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "docker setup-volume script flexibilty",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/136",
-    "number": 136,
     "publishedAt": "2023-10-10T19:04:28Z",
+    "title": "docker setup-volume script flexibilty",
     "labels": [
       "bug",
       "help wanted",
       "High Priority"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Do not require `https` in `address` fields on the simulation file",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/154",
-    "number": 154,
     "publishedAt": "2023-10-26T20:49:33Z",
+    "title": "Do not require `https` in `address` fields on the simulation file",
     "labels": [
       "feature",
       "good first issue",
       "Low Priority"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Refactor: Create config struct for simulator",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/157",
-    "number": 157,
     "publishedAt": "2023-11-06T15:44:07Z",
+    "title": "Refactor: Create config struct for simulator",
     "labels": [
       "feature",
       "good first issue",
       "Code Health"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Repo is unnecessarily large ",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/158",
-    "number": 158,
     "publishedAt": "2023-11-07T17:55:34Z",
+    "title": "Repo is unnecessarily large ",
     "labels": [
       "bug"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Feature: Run random activity generation with fixed seed",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/171",
-    "number": 171,
     "publishedAt": "2024-03-12T19:18:19Z",
+    "title": "Feature: Run random activity generation with fixed seed",
     "labels": [
       "feature",
       "help wanted"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Refactor: Use From<PaymentPreimage> when constructing PaymentHash",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/172",
-    "number": 172,
     "publishedAt": "2024-03-12T19:50:27Z",
+    "title": "Refactor: Use From<PaymentPreimage> when constructing PaymentHash",
     "labels": [
       "good first issue",
       "help wanted",
       "Code Health"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Validation: Do not allow defined activity with zero amount",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/176",
-    "number": 176,
     "publishedAt": "2024-03-25T15:41:33Z",
+    "title": "Validation: Do not allow defined activity with zero amount",
     "labels": [
       "good first issue",
       "Robustness"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Robustness: Improve Test Coverage of Repo",
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/185",
-    "number": 185,
     "publishedAt": "2024-04-26T19:30:26Z",
+    "title": "Robustness: Improve Test Coverage of Repo",
     "labels": [
       "help wanted",
       "Code Health",
       "Robustness",
       "High Priority"
-    ],
-    "__typename": "Issue"
+    ]
   }
 ]

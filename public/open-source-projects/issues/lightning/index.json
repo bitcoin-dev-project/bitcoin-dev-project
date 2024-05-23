@@ -1,388 +1,318 @@
 [
   {
-    "title": "Not all commands have man pages, or complete descriptions of input/output fields",
     "url": "https://github.com/ElementsProject/lightning/issues/1877",
-    "number": 1877,
     "publishedAt": "2018-08-26T04:51:29Z",
+    "title": "Not all commands have man pages, or complete descriptions of input/output fields",
     "labels": [
       "bug",
       "docs"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "python plugin lib removes line breaks from doc string for help function",
     "url": "https://github.com/ElementsProject/lightning/issues/2216",
-    "number": 2216,
     "publishedAt": "2019-01-03T10:21:51Z",
+    "title": "python plugin lib removes line breaks from doc string for help function",
     "labels": [
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Unable to connect to peer : Bad file descriptor",
     "url": "https://github.com/ElementsProject/lightning/issues/2482",
-    "number": 2482,
     "publishedAt": "2019-03-18T14:53:30Z",
+    "title": "Unable to connect to peer : Bad file descriptor",
     "labels": [
       "bug",
       "state::needinfo"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "HTLC Claim TX being rejected for too low of feerate",
     "url": "https://github.com/ElementsProject/lightning/issues/2530",
-    "number": 2530,
     "publishedAt": "2019-04-04T21:26:52Z",
+    "title": "HTLC Claim TX being rejected for too low of feerate",
     "labels": [
       "bug",
       "onchaind",
       "fee",
       "testnet"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Crashing when withdrawing funds",
     "url": "https://github.com/ElementsProject/lightning/issues/2763",
-    "number": 2763,
     "publishedAt": "2019-06-21T02:34:06Z",
+    "title": "Crashing when withdrawing funds",
     "labels": [
       "bug",
       "wallet",
       "crash"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Proposal: `routetricks` plugin",
     "url": "https://github.com/ElementsProject/lightning/issues/3001",
-    "number": 3001,
     "publishedAt": "2019-08-27T14:58:44Z",
+    "title": "Proposal: `routetricks` plugin",
     "labels": [
       "help wanted",
       "routing",
       "plugin",
       "pay-plugin"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Plugin notification for when UTXOs are spent?",
     "url": "https://github.com/ElementsProject/lightning/issues/3207",
-    "number": 3207,
     "publishedAt": "2019-10-25T18:58:14Z",
+    "title": "Plugin notification for when UTXOs are spent?",
     "labels": [
       "feature",
       "good first issue",
       "plugin"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Pass daemon errors back to RPC handler",
     "url": "https://github.com/ElementsProject/lightning/issues/3209",
-    "number": 3209,
     "publishedAt": "2019-10-25T19:03:25Z",
+    "title": "Pass daemon errors back to RPC handler",
     "labels": [
       "json-rpc",
       "feature",
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Setting manual channel closure fee (question)",
     "url": "https://github.com/ElementsProject/lightning/issues/3270",
-    "number": 3270,
     "publishedAt": "2019-11-18T14:47:18Z",
+    "title": "Setting manual channel closure fee (question)",
     "labels": [
       "feature",
       "closingd",
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "cleanup: Use the `-rpcwait` when waiting for bitcoind to warm up",
     "url": "https://github.com/ElementsProject/lightning/issues/3505",
-    "number": 3505,
     "publishedAt": "2020-02-11T15:17:46Z",
+    "title": "cleanup: Use the `-rpcwait` when waiting for bitcoind to warm up",
     "labels": [
       "cleanup",
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "feature request: config option to change default fundchannel feerate",
     "url": "https://github.com/ElementsProject/lightning/issues/3542",
-    "number": 3542,
     "publishedAt": "2020-02-21T19:01:42Z",
+    "title": "feature request: config option to change default fundchannel feerate",
     "labels": [
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Add new notifications for plugins",
     "url": "https://github.com/ElementsProject/lightning/issues/3662",
-    "number": 3662,
     "publishedAt": "2020-04-23T17:00:08Z",
+    "title": "Add new notifications for plugins",
     "labels": [
       "feature",
       "good first issue",
       "plugin",
       "Feature Request"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Expose a Channel's Routing Fee Setting via `listpeers`",
     "url": "https://github.com/ElementsProject/lightning/issues/3683",
-    "number": 3683,
     "publishedAt": "2020-04-30T22:56:16Z",
+    "title": "Expose a Channel's Routing Fee Setting via `listpeers`",
     "labels": [
       "json-rpc",
       "feature",
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Time out on non-responsive opens",
     "url": "https://github.com/ElementsProject/lightning/issues/4043",
-    "number": 4043,
     "publishedAt": "2020-09-12T00:54:35Z",
+    "title": "Time out on non-responsive opens",
     "labels": [
       "good first issue",
       "funding"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "channel leases: restrict channel fee updates for leased channels to be less than committed rates",
     "url": "https://github.com/ElementsProject/lightning/issues/4720",
-    "number": 4720,
     "publishedAt": "2021-08-16T16:39:42Z",
+    "title": "channel leases: restrict channel fee updates for leased channels to be less than committed rates",
     "labels": [
       "good first issue",
       "channel-lease"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "plugin-bcli returning \"\\n\" instead of line break in the logfile",
     "url": "https://github.com/ElementsProject/lightning/issues/4912",
-    "number": 4912,
     "publishedAt": "2021-11-09T01:01:50Z",
+    "title": "plugin-bcli returning \"\\n\" instead of line break in the logfile",
     "labels": [
       "logging",
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Allow setting fee limits on offerout",
     "url": "https://github.com/ElementsProject/lightning/issues/5127",
-    "number": 5127,
     "publishedAt": "2022-03-24T10:36:46Z",
+    "title": "Allow setting fee limits on offerout",
     "labels": [
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Turn on strict tables for SQLITE3 when running integration tests",
     "url": "https://github.com/ElementsProject/lightning/issues/5390",
-    "number": 5390,
     "publishedAt": "2022-07-08T22:38:09Z",
+    "title": "Turn on strict tables for SQLITE3 when running integration tests",
     "labels": [
       "testing",
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "`invoice_payment` hook doesn't get replayed when lightningd is restarted",
     "url": "https://github.com/ElementsProject/lightning/issues/5603",
-    "number": 5603,
     "publishedAt": "2022-09-18T17:27:56Z",
+    "title": "`invoice_payment` hook doesn't get replayed when lightningd is restarted",
     "labels": [
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "pip deploy insie the CI fails",
     "url": "https://github.com/ElementsProject/lightning/issues/6093",
-    "number": 6093,
     "publishedAt": "2023-03-14T08:04:20Z",
+    "title": "pip deploy insie the CI fails",
     "labels": [
       "bug"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Peer transient failure in CLOSINGD_SIGEXCHANGE: closingd WARNING: Bad closing_signed signature",
     "url": "https://github.com/ElementsProject/lightning/issues/6163",
-    "number": 6163,
     "publishedAt": "2023-04-08T10:27:53Z",
+    "title": "Peer transient failure in CLOSINGD_SIGEXCHANGE: closingd WARNING: Bad closing_signed signature",
     "labels": [
       "bug",
       "lnd-compat"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Broadcast failure on 0 conf channel still considers the channel okay.",
     "url": "https://github.com/ElementsProject/lightning/issues/6291",
-    "number": 6291,
     "publishedAt": "2023-05-29T23:15:06Z",
+    "title": "Broadcast failure on 0 conf channel still considers the channel okay.",
     "labels": [
       "bug"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "For an invoice generated via an offer, decodepay isn't working anymore, while pay still is",
     "url": "https://github.com/ElementsProject/lightning/issues/6419",
-    "number": 6419,
     "publishedAt": "2023-07-21T06:03:43Z",
+    "title": "For an invoice generated via an offer, decodepay isn't working anymore, while pay still is",
     "labels": [
       "bug",
       "good first issue",
       "UX ✨"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Hodlinvoice fail",
     "url": "https://github.com/ElementsProject/lightning/issues/6571",
-    "number": 6571,
     "publishedAt": "2023-08-16T05:19:16Z",
+    "title": "Hodlinvoice fail",
     "labels": [
       "bug",
       "plugin",
       "in diagnostic"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "cln_plugin panicking on 23.08 block_added subscription",
     "url": "https://github.com/ElementsProject/lightning/issues/6626",
-    "number": 6626,
     "publishedAt": "2023-08-27T00:49:00Z",
+    "title": "cln_plugin panicking on 23.08 block_added subscription",
     "labels": [
       "bug",
       "rust"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Python path dependency crashing on NixOS",
     "url": "https://github.com/ElementsProject/lightning/issues/6637",
-    "number": 6637,
     "publishedAt": "2023-08-29T21:59:45Z",
+    "title": "Python path dependency crashing on NixOS",
     "labels": [
       "bug",
       "build"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "cln restart loop caused by fee overflow",
     "url": "https://github.com/ElementsProject/lightning/issues/6716",
-    "number": 6716,
     "publishedAt": "2023-09-24T09:23:41Z",
+    "title": "cln restart loop caused by fee overflow",
     "labels": [
       "bug"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "bug: `cln-plugin` cannot properly parse IP addresses",
     "url": "https://github.com/ElementsProject/lightning/issues/6795",
-    "number": 6795,
     "publishedAt": "2023-10-18T19:13:06Z",
+    "title": "bug: `cln-plugin` cannot properly parse IP addresses",
     "labels": [
       "bug"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Status is saying to wait 8000 years. ",
     "url": "https://github.com/ElementsProject/lightning/issues/6799",
-    "number": 6799,
     "publishedAt": "2023-10-21T23:13:56Z",
+    "title": "Status is saying to wait 8000 years. ",
     "labels": [
       "bug"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Dual-funded channel opening issues",
     "url": "https://github.com/ElementsProject/lightning/issues/6891",
-    "number": 6891,
     "publishedAt": "2023-11-22T17:17:12Z",
+    "title": "Dual-funded channel opening issues",
     "labels": [
       "bug"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Documentation of listsendpays",
     "url": "https://github.com/ElementsProject/lightning/issues/6909",
-    "number": 6909,
     "publishedAt": "2023-11-30T08:44:16Z",
+    "title": "Documentation of listsendpays",
     "labels": [
       "docs",
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "CoreLN not properly detecting force close UTXOs",
     "url": "https://github.com/ElementsProject/lightning/issues/6929",
-    "number": 6929,
     "publishedAt": "2023-12-09T15:12:19Z",
+    "title": "CoreLN not properly detecting force close UTXOs",
     "labels": [
       "bug",
       "wallet"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "Minor issue/question: Trailing spaces in Config file parameter make CLN fail to start",
     "url": "https://github.com/ElementsProject/lightning/issues/7132",
-    "number": 7132,
     "publishedAt": "2024-03-07T18:02:42Z",
+    "title": "Minor issue/question: Trailing spaces in Config file parameter make CLN fail to start",
     "labels": [
       "good first issue"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "bitcoind: bad-txns-inputs-missingorspent on sendrawtransaction",
     "url": "https://github.com/ElementsProject/lightning/issues/7172",
-    "number": 7172,
     "publishedAt": "2024-03-25T14:09:39Z",
+    "title": "bitcoind: bad-txns-inputs-missingorspent on sendrawtransaction",
     "labels": [
       "bug"
-    ],
-    "__typename": "Issue"
+    ]
   },
   {
-    "title": "HTLC timeout transaction sweep is never run due to integer underflow",
     "url": "https://github.com/ElementsProject/lightning/issues/7305",
-    "number": 7305,
     "publishedAt": "2024-05-13T12:58:39Z",
+    "title": "HTLC timeout transaction sweep is never run due to integer underflow",
     "labels": [
       "bug",
       "component::onchaind"
-    ],
-    "__typename": "Issue"
+    ]
   }
 ]
