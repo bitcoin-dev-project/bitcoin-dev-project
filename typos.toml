@@ -13,7 +13,7 @@ extend-ignore-re = [
 ]
 
 [files]
-exclude = [
+extend-exclude = [
     "**/node_modules/**",      # Exclude all node_modules directories
     "**/dist/**",              # Exclude all dist directories
     "**/*.json",               # Exclude all JSON files
