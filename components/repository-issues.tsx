@@ -11,11 +11,15 @@ import Badge from "./badge"
 import SearchInput from "./search-input"
 import SidebarFilter from "./sidebar-filter"
 import Skeleton from "./skeleton"
+import { usePaginatedResult } from "@/hooks/usePagination"
+import Pagination from "./Pagination"
 
 const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
     const loading = !issues.length
     const [open, setOpen] = React.useState(false)
     const toggle = () => setOpen(!open)
+    const { currentPage, paginatedResult, setCurrentPage } =
+        usePaginatedResult(issues)
 
     React.useEffect(() => {
         document.body.classList.toggle("overflow-hidden", open)
@@ -32,24 +36,30 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
         () =>
             filterIssues(
                 currentFilterValuesAndKeys,
-                issues,
+                paginatedResult,
+
                 sortKey,
                 searchQuery
             ),
-        [currentFilterValuesAndKeys, issues, sortKey, searchQuery]
+        [currentFilterValuesAndKeys, paginatedResult, sortKey, searchQuery]
     )
 
     const filterCount = currentFilterValuesAndKeys.filter(
         (v) => v.key !== "search" && v.key !== "sort"
     )
 
-    // if (error) return <div>Error: {error.message}</div>
+    const pageSize = 15
+
+    const pages = React.useMemo(
+        () => Math.ceil((issues?.length ?? 0) / pageSize),
+        [issues?.length]
+    )
 
     return (
         <main className="w-full min-h-[calc(100vh-88px)]">
             <div className="flex w-full gap-6 lg:gap-2 relative">
                 <section className="md:w-full block md:hidden py-6 px-14 lg:px-5 sticky inset-0">
-                    <SidebarFilter issues={issues} toggle={() => {}} />
+                    <SidebarFilter issues={paginatedResult} toggle={() => {}} />
                 </section>
 
                 <section className="flex w-full flex-col items-center gap-6 px-10 lg:px-4 pl-0 md:pl-4">
@@ -90,11 +100,18 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
             {open ? (
                 <div className="w-full bg-white absolute top-[78px] bottom-0 opacity-100 z-40 p-4 pt-3 pb-8 overflow-scroll">
                     <SidebarFilter
-                        issues={issues}
+                        issues={paginatedResult}
                         toggle={() => setOpen(!open)}
                     />
                 </div>
             ) : null}
+            <div className="absolute right-0 left-0 bottom-0 bg-white z-50">
+                <Pagination
+                    currentPage={currentPage}
+                    pages={pages}
+                    setCurrentPage={setCurrentPage}
+                />
+            </div>
         </main>
     )
 }

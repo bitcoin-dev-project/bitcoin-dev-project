@@ -43,6 +43,10 @@ export const getRepoIssues = async () => {
         })
     )
 
-    const randomisedIssues = result.sort(() => Math.random() - 0.55)
+    const randomisedIssues = result.sort(
+        (a, b) =>
+            new Date(b.publishedAt).getTime() -
+            new Date(a.publishedAt).getTime()
+    )
     return randomisedIssues
 }
