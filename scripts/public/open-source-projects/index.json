@@ -1,0 +1,155 @@
+{
+    "btcpayserver": {
+        "repo_url": "https://github.com/btcpayserver/btcpayserver",
+        "name": "btcpayserver",
+        "org": "btcpayserver",
+        "tags": [
+            "bitcoin",
+            "payment-gateway",
+            "point-of-sale",
+            "bitcoin-payment-processor"
+        ],
+        "lang": ["C#", "Javascript", "Shell"],
+        "issue": "https://github.com/btcpayserver/btcpayserver/issues"
+    },
+    "fedimint": {
+        "repo_url": "https://github.com/fedimint/fedimint",
+        "name": "fedimint",
+        "org": "fedimint",
+        "tags": [
+            "lightning",
+            "bitcoin",
+            "p2p",
+            "e-cash",
+            "gateways",
+            "protocol"
+        ],
+        "lang": ["Rust", "Shell", "Nix"],
+        "issue": "https://github.com/fedimint/fedimint/issues"
+    },
+    "fedimint-ui": {
+        "repo_url": "https://github.com/fedimint/ui",
+        "name": "ui",
+        "org": "fedimint",
+        "tags": [
+            "lightning",
+            "bitcoin",
+            "p2p",
+            "e-cash",
+            "gateways",
+            "react",
+            "web"
+        ],
+        "lang": ["Typescript", "Shell"],
+        "issue": "https://github.com/fedimint/ui/issues"
+    },
+    "lnd": {
+        "repo_url": "https://github.com/lightningnetwork/lnd",
+        "name": "lnd",
+        "org": "lightningnetwork",
+        "tags": [
+            "lightning",
+            "bitcoin",
+            "payments",
+            "cryptocurrency",
+            "api",
+            "protocol"
+        ],
+        "lang": ["Go"],
+        "issue": "https://github.com/lightningnetwork/lnd/issues"
+    },
+    "polar": {
+        "repo_url": "https://github.com/jamaljsr/polar",
+        "name": "polar",
+        "org": "jamaljsr",
+        "tags": ["lightning", "bitcoin", "c-lightning", "web", "react"],
+        "lang": ["Typescript"],
+        "issue": "https://github.com/jamaljsr/polar/issues"
+    },
+    "bitcoin": {
+        "repo_url": "https://github.com/bitcoin/bitcoin",
+        "name": "bitcoin",
+        "org": "Bitcoin",
+        "tags": [
+            "cryptography",
+            "bitcoin",
+            "p2p",
+            "cryptocurrency",
+            "blockchain",
+            "protocol"
+        ],
+        "lang": ["C++", "Python", "C"],
+        "issue": "https://github.com/bitcoin/bitcoin/issues"
+    },
+    "eclair": {
+        "repo_url": "https://github.com/ACINQ/eclair",
+        "name": "eclair",
+        "org": "ACINQ",
+        "tags": [
+            "lightning",
+            "bitcoin",
+            "blockchain",
+            "payments",
+            "cryptocurrency",
+            "api"
+        ],
+        "lang": ["Scala"],
+        "issue": "https://github.com/ACINQ/eclair/issues"
+    },
+    "c-lightning": {
+        "repo_url": "https://github.com/ElementsProject/lightning",
+        "name": "lightning",
+        "org": "ElementsProject",
+        "tags": ["lightning", "bitcoin", "p2p"],
+        "lang": ["C", "Python", "Rust"],
+        "issue": "https://github.com/ElementsProject/lightning/issues"
+    },
+    "stratum": {
+        "repo_url": "https://github.com/stratum-mining/stratum",
+        "name": "stratum",
+        "org": "stratum-mining",
+        "tags": ["mining", "bitcoin", "protocol"],
+        "lang": ["Rust"],
+        "issue": "https://github.com/stratum-mining/stratum/issues"
+    },
+    "bdk": {
+        "repo_url": "https://github.com/bitcoindevkit/bdk",
+        "name": "bdk",
+        "org": "bitcoindevkit",
+        "tags": ["bitcoin", "wallet", "descriptors", "miniscript", "library"],
+        "lang": ["Rust"],
+        "issue": "https://github.com/bitcoindevkit/bdk/issues"
+    },
+    "bdk-ffi": {
+        "repo_url": "https://github.com/bitcoindevkit/bdk-ffi",
+        "name": "bdk-ffi",
+        "org": "bitcoindevkit",
+        "tags": ["language-bindings"],
+        "lang": ["Rust", "Kotlin", "Swift", "Python", "Shell"],
+        "issue": "https://github.com/bitcoindevkit/bdk-ffi/issues"
+    },
+    "rust-lightning": {
+        "repo_url": "https://github.com/lightningdevkit/rust-lightning",
+        "name": "rust-lightning",
+        "org": "lightningdevkit",
+        "tags": ["bitcoin", "lightning", "library"],
+        "lang": ["Rust"],
+        "issue": "https://github.com/lightningdevkit/rust-lightning/issues"
+    },
+    "sim-ln": {
+        "repo_url": "https://github.com/bitcoin-dev-project/sim-ln",
+        "name": "sim-ln",
+        "org": "bitcoin-dev-project",
+        "tags": ["lightning", "simulator", "cli"],
+        "lang": ["Rust", "Shell"],
+        "issue": "https://github.com/bitcoin-dev-project/sim-ln/issues"
+    },
+    "warnet": {
+        "repo_url": "https://github.com/bitcoin-dev-project/warnet",
+        "name": "warnet",
+        "org": "bitcoin-dev-project",
+        "tags": ["bitcoin", "lightning", "simulator", "cli"],
+        "lang": ["Python", "Shell"],
+        "issue": "https://github.com/bitcoin-dev-project/warnet/issues"
+    }
+}

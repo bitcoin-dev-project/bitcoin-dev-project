@@ -1,0 +1,41 @@
+name: Fetch and Update Issues
+
+on:
+    schedule:
+        - cron: "0 */2 * * *" # every 2 hours
+    push:
+        branches:
+            - master
+            - staging
+
+jobs:
+    fetch-and-save-issues:
+        runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/staging'
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "20"
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Compile TypeScript to JavaScript
+              run: npm run compile:scripts
+
+            - name: Fetch Issues from GitHub and Update Files
+              env:
+                  SFIGS_TOKEN: ${{ secrets.SFIGS_TOKEN }}
+              run: npm run fetch-issues
+
+            - name: Commit and Push Changes
+              run: |
+                  git config --global user.email "${{secrets.EMAIL}}"
+                  git config --global user.name "${{secrets.NAME}}"
+                  git commit -am "chore: update issues" || echo "No changes to commit"
+                  git push

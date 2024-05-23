@@ -1,0 +1,3 @@
+# Ignore artifacts
+scripts/*
+public/open-source-projects/issues/*

@@ -1,0 +1,357 @@
+[
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/66",
+    "publishedAt": "2020-07-27T03:58:39Z",
+    "title": "Integrated TOR proxy",
+    "labels": [
+      "documentation",
+      "good first issue",
+      "module-blockchain"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/175",
+    "publishedAt": "2020-11-18T00:44:45Z",
+    "title": "Tests fail to compile for WASM target",
+    "labels": [
+      "bug",
+      "tests"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/253",
+    "publishedAt": "2020-12-23T09:59:10Z",
+    "title": "Redeposit should check address reuse",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/357",
+    "publishedAt": "2021-05-31T02:33:13Z",
+    "title": "Esplora blockchain fails reorg test",
+    "labels": [
+      "good first issue",
+      "module-blockchain"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/524",
+    "publishedAt": "2022-01-11T23:59:46Z",
+    "title": "Feerate should be returned from Transaction construction",
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/534",
+    "publishedAt": "2022-01-26T19:17:05Z",
+    "title": "Remove BIP 69 sorting",
+    "labels": [
+      "bug",
+      "good first issue"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/559",
+    "publishedAt": "2022-03-07T12:47:11Z",
+    "title": "`maybe_async` complicates isomorphic use-cases",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/598",
+    "publishedAt": "2022-05-05T17:08:10Z",
+    "title": "The `rpc` blockchain tests don't work with Bitcoin Core 23.0",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/618",
+    "publishedAt": "2022-06-03T01:11:23Z",
+    "title": "Use `srcipthash_subscribe` when syncing `ElectrumBlockchain`",
+    "labels": [
+      "bug",
+      "discussion"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/642",
+    "publishedAt": "2022-06-28T02:38:54Z",
+    "title": "timestamp timelocks are not satisfied",
+    "labels": [
+      "bug",
+      "module-wallet"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/650",
+    "publishedAt": "2022-07-02T19:05:21Z",
+    "title": "CI: `blockchain::esplora::bdk_blockchain_tests::test_sync_stop_gap_20` occationally fails",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/655",
+    "publishedAt": "2022-07-06T12:40:08Z",
+    "title": "Test which xpubs in PSBTs are needed for HW to sign correctly",
+    "labels": [
+      "good first issue"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/658",
+    "publishedAt": "2022-07-07T19:03:54Z",
+    "title": "`ElectrumBlockchain` requires a special check to not decrement index on sync. ",
+    "labels": [
+      "bug",
+      "module-blockchain"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/673",
+    "publishedAt": "2022-07-18T19:38:38Z",
+    "title": "Add an example showing how to open a pre-existing wallet",
+    "labels": [
+      "documentation",
+      "good first issue"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/699",
+    "publishedAt": "2022-08-03T09:09:49Z",
+    "title": "Write tests to improve code coverage ",
+    "labels": [
+      "good first issue",
+      "tests"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/702",
+    "publishedAt": "2022-08-04T08:44:39Z",
+    "title": "REDB backend",
+    "labels": [
+      "good first issue",
+      "discussion"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/706",
+    "publishedAt": "2022-08-09T03:07:50Z",
+    "title": "Coin selection should include checks to avoid creating ambiguous transaction history.",
+    "labels": [
+      "bug",
+      "discussion",
+      "module-coinselection"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/715",
+    "publishedAt": "2022-08-12T22:32:54Z",
+    "title": "Large `importdescriptors` call slow, possible to reduce number of watched addresses?",
+    "labels": [
+      "bug",
+      "module-blockchain"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/749",
+    "publishedAt": "2022-09-10T20:35:14Z",
+    "title": "Error syncing wallet via RPC client on macOS system",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/771",
+    "publishedAt": "2022-10-01T03:40:51Z",
+    "title": "We may overshoot `nLockTime` and `nSequence` values when building a transaction.",
+    "labels": [
+      "bug",
+      "module-wallet"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/778",
+    "publishedAt": "2022-10-07T03:04:40Z",
+    "title": "Reqwest to Esplora panics in WASM",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/791",
+    "publishedAt": "2022-10-31T13:59:06Z",
+    "title": "Substitute `enable_rbf` in `TxBuilder` with `disable_rbf`",
+    "labels": [
+      "good first issue",
+      "module-wallet",
+      "api"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/797",
+    "publishedAt": "2022-11-14T09:43:15Z",
+    "title": "misleading spendable balance",
+    "labels": [
+      "bug",
+      "module-wallet",
+      "api"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/826",
+    "publishedAt": "2022-12-24T17:25:02Z",
+    "title": "There's no way to set connect timeout for the Esplora backend client",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/856",
+    "publishedAt": "2023-02-09T13:45:03Z",
+    "title": "Improving the documentation for TxBuilder",
+    "labels": [
+      "documentation",
+      "good first issue",
+      "module-wallet"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/859",
+    "publishedAt": "2023-02-10T09:20:42Z",
+    "title": "RPC sync failure ",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/915",
+    "publishedAt": "2023-03-20T18:06:43Z",
+    "title": "Sqlite db race condition",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/998",
+    "publishedAt": "2023-05-29T08:02:32Z",
+    "title": "Feature imcompatibility of `rpc` and `async-interface`",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/999",
+    "publishedAt": "2023-05-29T08:49:23Z",
+    "title": "`error::MissingCachedScripts` and `error::MiniscriptPsbtError` are not exported",
+    "labels": [
+      "bug"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1113",
+    "publishedAt": "2023-09-06T02:06:13Z",
+    "title": "test: consolidate esplora blocking and async test code",
+    "labels": [
+      "good first issue",
+      "tests"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1120",
+    "publishedAt": "2023-09-12T14:34:01Z",
+    "title": "`wallet_esplora_async` returns error 429 while scanning",
+    "labels": [
+      "bug",
+      "module-blockchain"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1125",
+    "publishedAt": "2023-09-14T14:31:46Z",
+    "title": "Calling `example_electrum sync` on an unconfirmed tx may result in the tx being stuck as unconfirmed eternally (according to the cli))",
+    "labels": [
+      "bug",
+      "module-blockchain"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1134",
+    "publishedAt": "2023-09-28T06:58:14Z",
+    "title": "BIP 326 Anti Fee Sniping",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "module-wallet"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1173",
+    "publishedAt": "2023-10-12T11:11:44Z",
+    "title": "Merge `tx_data_traits.rs` into `chain_data.rs`.",
+    "labels": [
+      "good first issue",
+      "module-blockchain",
+      "api"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1313",
+    "publishedAt": "2024-02-01T15:07:41Z",
+    "title": "\"Missing non_witness_utxo on foreign utxo <utxo>\"",
+    "labels": [
+      "bug",
+      "module-wallet"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1342",
+    "publishedAt": "2024-02-13T01:06:24Z",
+    "title": "allow_shrinking not working as expected",
+    "labels": [
+      "bug",
+      "documentation",
+      "api"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1362",
+    "publishedAt": "2024-02-28T00:09:03Z",
+    "title": "Update CI to prevent merging any prints to stdout ",
+    "labels": [
+      "bug",
+      "module-blockchain"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1374",
+    "publishedAt": "2024-03-15T04:15:43Z",
+    "title": "RBF API is awkward (remove allow_shrinking)",
+    "labels": [
+      "bug",
+      "module-wallet",
+      "api"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1407",
+    "publishedAt": "2024-04-18T13:45:33Z",
+    "title": "`Wallet::create_signers` should return the `KeychainTxOutIndex` changeset",
+    "labels": [
+      "good first issue"
+    ]
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1440",
+    "publishedAt": "2024-05-13T07:25:38Z",
+    "title": "InsufficientFunds is duplicated within coin_selection::Error and CreateTxError enums",
+    "labels": [
+      "bug"
+    ]
+  }
+]
