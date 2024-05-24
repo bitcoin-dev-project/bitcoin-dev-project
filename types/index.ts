@@ -24,3 +24,18 @@ export type Issue = {
         }[]
     }
 }
+
+export type RepositoryIssues = {
+    url: string
+    publishedAt: string
+    title: string
+    labels: string[]
+    tags: string[]
+}
+
+export type IssueCardElement = RepositoryIssues & {
+    owner: string
+    languages: string[]
+    repo: string
+    number: number
+}
