@@ -59,11 +59,11 @@ const Pagination = ({ pages, currentPage, setCurrentPage }: IPagination) => {
 
     return (
         <>
-            <div className="flex justify-center items-center gap-2">
+            <div className="flex justify-center items-center gap-2 md:gap-1">
                 {currentPage > 1 && (
                     <button
                         onClick={() => handleNextPage(currentPage - 1)}
-                        className="border border-gray-400 rounded-md h-10 w-10"
+                        className="border border-gray-400 rounded-md h-10 w-10 md:h-7 md:w-7  flex items-center justify-center"
                         aria-label="Previous Page"
                     >
                         {"<"}
@@ -82,7 +82,7 @@ const Pagination = ({ pages, currentPage, setCurrentPage }: IPagination) => {
                         <button
                             onClick={() => handleNextPage(Number(item))}
                             key={Number(item) * Math.random() * 3.142}
-                            className={`rounded-md h-12 w-12 cursor-pointer ${currentPage === item ? "font-bold bg-gray-10 bg-[#2d2d2d] text-white cursor-none" : "font-normal bg-transparent hover:border hover:border-gray-400 cursor-pointer"}`}
+                            className={`rounded-md h-12 w-12 md:h-8 md:w-8 cursor-pointer ${currentPage === item ? "font-bold bg-gray-10 bg-[#2d2d2d] text-white cursor-none" : "font-normal bg-transparent hover:border hover:border-gray-400 cursor-pointer"}`}
                         >
                             {item}
                         </button>
@@ -92,7 +92,7 @@ const Pagination = ({ pages, currentPage, setCurrentPage }: IPagination) => {
                 {currentPage < pages && (
                     <button
                         onClick={() => handleNextPage(currentPage + 1)}
-                        className="flex items-center justify-center rounded-md h-12 w-12 hover:border hover:border-gray-400"
+                        className="flex items-center justify-center rounded-md h-12 w-12 md:h-7 md:w-7 hover:border hover:border-gray-400"
                         aria-label="Next Page"
                     >
                         {">"}

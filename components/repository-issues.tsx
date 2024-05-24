@@ -61,7 +61,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                     <SidebarFilter issues={paginatedResult} toggle={() => {}} />
                 </section>
 
-                <section className="flex w-full flex-col items-center gap-6 px-10 lg:px-4 pl-0 md:pl-4">
+                <section className="flex w-full flex-col items-center gap-6 px-10 lg:px-2 pl-0 md:pl-2 min-h-[calc(100vh-112px)] md:min-h-[calc(100vh-100px)]">
                     <SearchInput
                         filtersCount={
                             filterCount.length === 0 ? null : filterCount.length
@@ -80,7 +80,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                             ))}
                         </div>
                     ) : (
-                        <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3">
+                        <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3 flex-1">
                             {memoizedIssues.map((issue, index) => (
                                 <section key={`issue-${index}-${issue.number}`}>
                                     <IssueCard
@@ -94,7 +94,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                             ))}
                         </div>
                     )}
-                    <div className="bg-white flex flex-wrap overflow-x-scroll overflow-scroll max-w-2xl">
+                    <div className="bg-white flex flex-wrap overflow-x-scroll overflow-scroll max-w-2xl md:max-w-full">
                         <Pagination
                             currentPage={currentPage}
                             pages={pages}
