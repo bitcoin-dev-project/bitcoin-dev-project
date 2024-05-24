@@ -53,6 +53,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
         () => Math.ceil((issues?.length ?? 0) / pageSize),
         [issues?.length]
     )
+    const noIssuesFound = memoizedIssues.length === 0
 
     return (
         <div className="w-full min-h-[calc(100vh-88px)]">
@@ -80,18 +81,30 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                             ))}
                         </div>
                     ) : (
-                        <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3 flex-1">
-                            {memoizedIssues.map((issue, index) => (
-                                <section key={`issue-${index}-${issue.number}`}>
-                                    <IssueCard
-                                        issue={
-                                            issue as unknown as IssueCardElement
-                                        }
-                                        index={index}
-                                        keys={currentFilterValues}
-                                    />
-                                </section>
-                            ))}
+                        <div
+                            className={`grid gap-4  ${noIssuesFound ? "grid-col-1" : "sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3"} flex-1`}
+                        >
+                            {noIssuesFound ? (
+                                <div className="w-full flex justify-center items-center">
+                                    <p className="text-center text-lg text-gray-900">
+                                        No issues found for this page.
+                                    </p>
+                                </div>
+                            ) : (
+                                memoizedIssues.map((issue, index) => (
+                                    <section
+                                        key={`issue-${index}-${issue.number}`}
+                                    >
+                                        <IssueCard
+                                            issue={
+                                                issue as unknown as IssueCardElement
+                                            }
+                                            index={index}
+                                            keys={currentFilterValues}
+                                        />
+                                    </section>
+                                ))
+                            )}
                         </div>
                     )}
                     <div className="bg-white flex flex-wrap overflow-x-scroll overflow-scroll max-w-2xl md:max-w-full">
@@ -129,7 +142,7 @@ function IssueCard({
     return (
         <Link
             key={`issue-${index}-${issue.number}`}
-            className="flex flex-col justify-between min-h-[180px] md:min-h-36 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md"
+            className="flex flex-col justify-between min-h-[216px] md:min-h-36 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md"
             href={issue.url}
             rel="noopener noreferrer"
             target="_blank"

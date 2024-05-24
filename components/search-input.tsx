@@ -27,7 +27,7 @@ const SearchInput = ({
                     className={
                         "text-black border-[1.5px] bg-secondary-gray text-base rounded-md placeholder:font-rebond placeholder:font-light outline-gray-600 border-gray-500 px-4 placeholder:text-gray-500 h-12 w-full"
                     }
-                    placeholder="Search for good first issues"
+                    placeholder="Search by title, repository, or language"
                     onChange={handleChange}
                     value={value}
                 />
