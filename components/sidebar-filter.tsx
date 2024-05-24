@@ -80,7 +80,7 @@ const SidebarFilter = ({
 
 export default SidebarFilter
 
-const FilterMenu = React.memo(function FilterMenu({
+function FilterMenu({
     filterFields,
     toggle
 }: {
@@ -153,15 +153,15 @@ const FilterMenu = React.memo(function FilterMenu({
             ) : null}
         </>
     )
-})
+}
 
-const FilterPill = React.memo(function FilterPill({
+function FilterPill({
     text,
     onClick
 }: {
     text: string
     onClick: (text: string) => void
-}): JSX.Element {
+}) {
     return (
         <button
             onClick={() => onClick(text)}
@@ -175,13 +175,9 @@ const FilterPill = React.memo(function FilterPill({
             />
         </button>
     )
-})
+}
 
-const CustomSortSelect = React.memo(function CustomSortSelect({
-    args
-}: {
-    args: string[]
-}): JSX.Element {
+function CustomSortSelect({ args }: { args: string[] }) {
     const { addSortParam, sortKey } = useUrlManager()
     const { sortKeys } = createSortKeys()
     const [isOpen, setOpen] = useState(false)
@@ -270,9 +266,9 @@ const CustomSortSelect = React.memo(function CustomSortSelect({
             </section>
         </form>
     )
-})
+}
 
-const CustomMultiCheckBox = React.memo(function CustomMultiCheckBox({
+function CustomMultiCheckBox({
     title,
     placeholder,
     args
@@ -416,4 +412,4 @@ const CustomMultiCheckBox = React.memo(function CustomMultiCheckBox({
             </form>
         </div>
     )
-})
+}

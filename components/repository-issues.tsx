@@ -55,7 +55,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
     )
 
     return (
-        <main className="w-full min-h-[calc(100vh-88px)]">
+        <div className="w-full min-h-[calc(100vh-88px)]">
             <div className="flex w-full gap-6 lg:gap-2 relative">
                 <section className="md:w-full block md:hidden py-6 px-14 lg:px-5 max-h-[calc(100vh-88px)] sticky top-[88px] min-w-fit overflow-y-scroll">
                     <SidebarFilter issues={paginatedResult} toggle={() => {}} />
@@ -111,13 +111,13 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                     />
                 </div>
             ) : null}
-        </main>
+        </div>
     )
 }
 
 export default RepositoryIssues
 
-const IssueCard = React.memo(function IssueCard({
+function IssueCard({
     issue,
     index,
     keys
@@ -125,7 +125,7 @@ const IssueCard = React.memo(function IssueCard({
     issue: IssueCardElement
     index: number
     keys: string[]
-}): JSX.Element {
+}) {
     return (
         <Link
             key={`issue-${index}-${issue.number}`}
@@ -167,4 +167,4 @@ const IssueCard = React.memo(function IssueCard({
             </div>
         </Link>
     )
-})
+}

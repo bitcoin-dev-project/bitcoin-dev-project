@@ -17,7 +17,7 @@ const Item = ({ content, title }: Props) => (
 export default function About() {
     return (
         <Wrapper>
-            <main className="flex flex-col p-14 sm:p-7 mx-auto my-0">
+            <div className="flex flex-col p-14 sm:p-7 mx-auto my-0">
                 <div className="flex flex-col mb-24 gap-y-10 w-2/3 md:w-full self-center">
                     <h1 className="text-[58px] lg:text-[36px] md:text-center font-bold leading-tight">
                         About The Bitcoin Dev Project
@@ -162,7 +162,7 @@ export default function About() {
                         title="Who"
                     />
                 </div>
-            </main>
+            </div>
         </Wrapper>
     )
 }

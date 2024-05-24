@@ -9,7 +9,7 @@ import Image from "next/image"
 export default function Home() {
     return (
         <Wrapper>
-            <main>
+            <div>
                 <div className="flex justify-between md:flex-col gap-4 md:gap-y-6">
                     <div className="flex basis-1/2 flex-grow flex-col justify-center px-14 md:px-7 md:order-2">
                         <div className="flex flex-col gap-y-5 sm:gap-y-3">
@@ -95,7 +95,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
         </Wrapper>
     )
 }
