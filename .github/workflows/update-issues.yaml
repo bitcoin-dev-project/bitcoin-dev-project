@@ -15,13 +15,17 @@ permissions:
 jobs:
     fetch-and-save-issues:
         runs-on: ubuntu-latest
-        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/staging'
+        strategy:
+            matrix:
+                node-version: [20]
+                branch: [master, staging]
 
         steps:
             - name: Checkout repository
               uses: actions/checkout@v3
               with:
                   persist-credentials: true
+                  ref: ${{ matrix.branch }}
 
             - name: Set up Node.js
               uses: actions/setup-node@v2
