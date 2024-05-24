@@ -1,14 +1,5 @@
 [
   {
-    "url": "https://github.com/fedimint/fedimint/issues/162",
-    "publishedAt": "2022-06-21T18:33:04Z",
-    "title": "Define maximum message sizes to avoid DoS on the network layer",
-    "labels": [
-      "bug",
-      "network stack"
-    ]
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/630",
     "publishedAt": "2022-09-23T18:29:20Z",
     "title": "Look into deduplicating dependencies",
@@ -390,14 +381,6 @@
     "labels": [
       "bug",
       "wallet"
-    ]
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/5334",
-    "publishedAt": "2024-05-21T15:38:33Z",
-    "title": "in wild: overwritting a OperationLogKey",
-    "labels": [
-      "bug"
     ]
   }
 ]
