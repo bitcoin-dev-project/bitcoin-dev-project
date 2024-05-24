@@ -1,6 +1,8 @@
 import { Wrapper } from "@/components/Wrapper"
+import Button from "@/components/button"
 import PageLevel from "@/components/page-level"
 import { projects } from "@/content/projects"
+import Link from "next/link"
 
 export default function Projects() {
     return (
@@ -14,7 +16,7 @@ export default function Projects() {
                         {projects.description}
                     </p>
                 </div>
-                <div className="flex flex-col gap-y-24">
+                <div className="flex flex-col gap-y-24 mb-12">
                     {projects.levels.map((level, index) => (
                         <PageLevel
                             key={level.title}
@@ -23,6 +25,14 @@ export default function Projects() {
                             {...level}
                         />
                     ))}
+                </div>
+                <div className="flex flex-col gap-y-24 pt-6">
+                    <Button
+                        href="/contribute"
+                        className="w-fit mx-auto text-center py-4 px-8"
+                    >
+                        Start contributing
+                    </Button>
                 </div>
             </div>
         </Wrapper>
