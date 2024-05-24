@@ -1,4 +1,4 @@
-import { IssueCardElement } from "@/types"
+import { IssueCardElement } from "../types"
 
 export const SORTOPTIONS = ["sort", "relevance", "newest first", "oldest first"]
 

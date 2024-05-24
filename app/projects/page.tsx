@@ -2,7 +2,6 @@ import { Wrapper } from "@/components/Wrapper"
 import Button from "@/components/button"
 import PageLevel from "@/components/page-level"
 import { projects } from "@/content/projects"
-import Link from "next/link"
 
 export default function Projects() {
     return (
