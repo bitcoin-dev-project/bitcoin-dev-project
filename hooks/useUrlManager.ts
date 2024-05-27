@@ -50,33 +50,33 @@ export const useUrlManager = () => {
     }
 
     const clearAllFilters = () => {
-        const allKeys = FILTERTAGS.map((key) => {
+        const allKeys = FILTERTAGS.flatMap((key) => {
             if (!urlParams.has(key)) {
                 return []
             }
 
             return urlParams.getAll(key).map((val) => ({ key, filter: val }))
-        }).flat()
+        })
 
         allKeys.map((val) => urlParams.delete(val.key, val.filter))
         router.push(`${pathname}?${urlParams.toString()}`)
     }
 
-    const currentFilterValuesAndKeys = FILTERTAGS.map((key) => {
+    const currentFilterValuesAndKeys = FILTERTAGS.flatMap((key) => {
         if (!urlParams.has(key)) {
             return []
         }
 
         return urlParams.getAll(key).map((val) => ({ key, filter: val }))
-    }).flat()
+    })
 
-    const currentFilterValues = FILTERTAGS.map((key) => {
+    const currentFilterValues = FILTERTAGS.flatMap((key) => {
         if (!urlParams.has(key)) {
             return []
         }
 
         return urlParams.getAll(key)
-    }).flat()
+    })
 
     return {
         addFilterParam,
