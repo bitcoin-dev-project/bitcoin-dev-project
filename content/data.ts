@@ -81,20 +81,12 @@ export const learnSection = createSection({
 
 export const links = [
     {
-        text: "Projects",
-        linkTo: "/projects"
-    },
-    {
         text: "Career",
         linkTo: "/career"
     },
     {
         text: "Tools",
         linkTo: "/tools"
-    },
-    {
-        text: "Contribute",
-        linkTo: "/contribute"
     },
     {
         text: "About",
@@ -140,5 +132,18 @@ export const navPointers = [
         btnText: "Lightning Open Source",
         description: "",
         jumpTo: `/lightning-open-source`
+    }
+]
+
+export const ContributeNavPointers = [
+    {
+        btnText: "Good First Issues",
+        description: "",
+        jumpTo: `/good-first-issues`
+    },
+    {
+        btnText: "Projects",
+        description: "",
+        jumpTo: `/projects`
     }
 ]
