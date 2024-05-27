@@ -1,12 +1,21 @@
 "use client"
 
-import { navPointers } from "@/content/data"
 import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 
-export function Desktop() {
+export function Desktop({
+    menuItem,
+    subMenus
+}: {
+    menuItem: string
+    subMenus: {
+        btnText: string
+        description: string
+        jumpTo: string
+    }[]
+}) {
     const dropDownRef = useRef<HTMLDivElement>(null)
     const buttonRef = useRef<HTMLButtonElement>(null)
     const [showDropDown, setShowDropDown] = useState(false)
@@ -42,7 +51,7 @@ export function Desktop() {
                     aria-expanded="true"
                     aria-haspopup="true"
                 >
-                    Learn
+                    {menuItem}
                     <Image
                         className={`${iconStyle} transition-transform ease-linear `}
                         src={"/images/arrow-down.svg"}
@@ -61,7 +70,7 @@ export function Desktop() {
                     aria-labelledby="menu-button"
                 >
                     <div ref={dropDownRef} className="py-1" role="none">
-                        {navPointers.map((link) => (
+                        {subMenus.map((link) => (
                             <Link
                                 onClick={() => setShowDropDown(false)}
                                 key={link.btnText}
@@ -80,7 +89,19 @@ export function Desktop() {
     )
 }
 
-export function Mobile({ hideDrawer }: { hideDrawer: () => void }) {
+export function Mobile({
+    hideDrawer,
+    menuItem,
+    subMenus
+}: {
+    hideDrawer: () => void
+    menuItem: string
+    subMenus: {
+        btnText: string
+        description: string
+        jumpTo: string
+    }[]
+}) {
     const [showDropDown, setShowDropDown] = useState(false)
     const iconStyle = showDropDown ? "rotate-180" : ""
 
@@ -95,7 +116,7 @@ export function Mobile({ hideDrawer }: { hideDrawer: () => void }) {
                     aria-expanded="true"
                     aria-haspopup="true"
                 >
-                    Learn
+                    {menuItem}
                     <Image
                         className={`${iconStyle} transition-transform ease-linear `}
                         src={"/images/arrow-down.svg"}
@@ -114,7 +135,7 @@ export function Mobile({ hideDrawer }: { hideDrawer: () => void }) {
                     role="menu"
                 >
                     <div className="py-1" role="none">
-                        {navPointers.map((link) => (
+                        {subMenus.map((link) => (
                             <Link
                                 onClick={hideDrawer}
                                 key={link.btnText}

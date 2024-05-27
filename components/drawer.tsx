@@ -1,6 +1,6 @@
 "use client"
 
-import { links } from "@/content/data"
+import { ContributeNavPointers, links, navPointers } from "@/content/data"
 import clsx from "clsx"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -71,7 +71,16 @@ export default function Drawer() {
                     </svg>
                 </button>
                 <div className="flex flex-col flex-1 gap-4 bg-white h-full">
-                    <LearnDropDown.Mobile hideDrawer={hideDrawer} />
+                    <LearnDropDown.Mobile
+                        hideDrawer={hideDrawer}
+                        menuItem="Learn"
+                        subMenus={navPointers}
+                    />
+                    <LearnDropDown.Mobile
+                        hideDrawer={hideDrawer}
+                        menuItem="Contribute"
+                        subMenus={ContributeNavPointers}
+                    />
                     {links.map((link) => (
                         <Link
                             onClick={hideDrawer}

@@ -1,4 +1,4 @@
-import { links } from "@/content/data"
+import { ContributeNavPointers, links, navPointers } from "@/content/data"
 import Link from "next/link"
 import Drawer from "./drawer"
 import { LearnDropDown } from "./learn-dropdown"
@@ -17,7 +17,14 @@ export default function NavBar() {
                     </Link>
                     <Drawer />
                     <div className="md:hidden flex items-center gap-x-[24px] text-base">
-                        <LearnDropDown />
+                        <LearnDropDown
+                            menuItem="Learn"
+                            subMenus={navPointers}
+                        />
+                        <LearnDropDown
+                            menuItem="Contribute"
+                            subMenus={ContributeNavPointers}
+                        />
                         {links.map((link) => (
                             <Link key={link.text} href={link.linkTo}>
                                 {link.text}
