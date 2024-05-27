@@ -137,13 +137,13 @@ export const navPointers = [
 
 export const ContributeNavPointers = [
     {
-        btnText: "Good First Issues",
-        description: "",
-        jumpTo: `/good-first-issues`
-    },
-    {
         btnText: "Projects",
         description: "",
         jumpTo: `/projects`
+    },
+    {
+        btnText: "Good First Issues",
+        description: "",
+        jumpTo: `/good-first-issues`
     }
 ]
