@@ -1,4 +1,4 @@
-import { IssueCardElement } from "../types"
+import type { IssueCardElement } from "../types"
 
 export const SORTOPTIONS = ["sort", "relevance", "newest first", "oldest first"]
 
@@ -21,19 +21,20 @@ export function getValues({
     key: keyof IssueCardElement
     issues: IssueCardElement[]
 }) {
-    let properties: string[] = []
+    const properties = issues.reduce(
+        (acc, issue) => {
+            const project = issue[key]
+            if (Array.isArray(project)) {
+                return acc.concat(project)
+            }
+            acc.push(project as string)
+            return acc
+        },
+        [key] as string[]
+    )
+    const uniqueProperties = Array.from(new Set(properties).values())
 
-    issues.map((project) => {
-        if (Array.isArray(project[key])) {
-            properties.push(...(project[key] as string[]))
-        } else {
-            properties.push(project[key] as string)
-        }
-    })
-
-    properties = Array.from(new Set([key, ...properties]).values())
-
-    return { properties }
+    return { properties: uniqueProperties }
 }
 
 export const createSortKeys = () => {
