@@ -18,6 +18,7 @@ export function constructRepoQueries(inputs: Repository[]) {
 
         return `
             ${alias}: repository(owner: "${input.owner}", name: "${input.name}") {
+                openGraphImageUrl
                 issues(first: 99, labels: ${labelsFormatted}, states: ${statesFormatted}) {
                     edges {
                         node {

@@ -12,6 +12,7 @@ function constructRepoQueries(inputs) {
         const alias = `${(0, sanitize_1.sanitize)(input.name)}`;
         return `
             ${alias}: repository(owner: "${input.owner}", name: "${input.name}") {
+                openGraphImageUrl
                 issues(first: 99, labels: ${labelsFormatted}, states: ${statesFormatted}) {
                     edges {
                         node {

@@ -30,11 +30,14 @@ const fetchAndSaveIssues = async () => {
             if (!issuesData)
                 continue;
             const issues = issuesData?.issues?.edges;
+            const repositoryImage = issuesData
+                ?.openGraphImageUrl;
             const projectIssues = issues.map((edge) => ({
                 url: edge.node.url,
                 publishedAt: edge.node.publishedAt,
                 title: edge.node.title,
-                labels: edge.node.labels.edges.map((label) => label.node.name)
+                labels: edge.node.labels.edges.map((label) => label.node.name),
+                    imageUrl: repositoryImage
             }));
             const repoPath = `public/open-source-projects/issues/${key}/index.json`;
             const dir = node_path_1.default.dirname(repoPath);

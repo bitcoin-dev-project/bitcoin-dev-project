@@ -11,6 +11,7 @@ type ProjectIssue = {
     publishedAt: string
     title: string
     labels: string[]
+    imageUrl: string
 }
 
 const labels = ["good first issue", "bug", "help wanted"]
@@ -38,6 +39,8 @@ const fetchAndSaveIssues = async () => {
         for (const [key, issuesData] of Object.entries(data)) {
             if (!issuesData) continue
             const issues = (issuesData as any)?.issues?.edges as any[]
+            const repositoryImage = (issuesData as any)
+                ?.openGraphImageUrl as string
             const projectIssues: ProjectIssue[] = issues.map(
                 (edge: { node: Issue }) => ({
                     url: edge.node.url,
@@ -45,7 +48,8 @@ const fetchAndSaveIssues = async () => {
                     title: edge.node.title,
                     labels: edge.node.labels.edges.map(
                         (label: { node: { name: string } }) => label.node.name
-                    )
+                    ),
+                    imageUrl: repositoryImage
                 })
             )
             const repoPath = `public/open-source-projects/issues/${key}/index.json`
