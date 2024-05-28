@@ -13,17 +13,16 @@ exports.FILTERTAGS = [
     "owner"
 ];
 function getValues({ key, issues }) {
-    let properties = [];
-    issues.map((project) => {
-        if (Array.isArray(project[key])) {
-            properties.push(...project[key]);
+    const properties = issues.reduce((acc, issue) => {
+        const project = issue[key];
+        if (Array.isArray(project)) {
+            return acc.concat(project);
         }
-        else {
-            properties.push(project[key]);
-        }
-    });
-    properties = Array.from(new Set([key, ...properties]).values());
-    return { properties };
+        acc.push(project);
+        return acc;
+    }, [key]);
+    const uniqueProperties = Array.from(new Set(properties).values());
+    return { properties: uniqueProperties };
 }
 exports.getValues = getValues;
 const createSortKeys = () => {

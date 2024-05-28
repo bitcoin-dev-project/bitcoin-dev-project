@@ -3,8 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs_1 = __importDefault(require("fs"));
-const path_1 = __importDefault(require("path"));
+const node_fs_1 = __importDefault(require("node:fs"));
+const node_path_1 = __importDefault(require("node:path"));
 const get_issues_1 = require("../graphql/queries/get-issues");
 const apollo_client_1 = require("../lib/apollo-client");
 const index_json_1 = __importDefault(require("../public/open-source-projects/index.json"));
@@ -30,23 +30,20 @@ const fetchAndSaveIssues = async () => {
             if (!issuesData)
                 continue;
             const issues = issuesData?.issues?.edges;
-            const projectIssues = [];
-            issues.map((edge) => {
-                projectIssues.push({
-                    url: edge.node.url,
-                    publishedAt: edge.node.publishedAt,
-                    title: edge.node.title,
-                    labels: edge.node.labels.edges.map((label) => label.node.name)
-                });
-            });
+            const projectIssues = issues.map((edge) => ({
+                url: edge.node.url,
+                publishedAt: edge.node.publishedAt,
+                title: edge.node.title,
+                labels: edge.node.labels.edges.map((label) => label.node.name)
+            }));
             const repoPath = `public/open-source-projects/issues/${key}/index.json`;
-            const dir = path_1.default.dirname(repoPath);
-            if (!fs_1.default.existsSync(dir)) {
-                fs_1.default.mkdirSync(dir, {
+            const dir = node_path_1.default.dirname(repoPath);
+            if (!node_fs_1.default.existsSync(dir)) {
+                await node_fs_1.default.promises.mkdir(dir, {
                     recursive: true
                 });
             }
-            fs_1.default.writeFileSync(repoPath, JSON.stringify(projectIssues, null, 2));
+            await node_fs_1.default.promises.writeFile(repoPath, JSON.stringify(projectIssues, null, 2));
             console.log(`Saved issues for ${key} in ${repoPath} successfully!`);
         }
         return data;
