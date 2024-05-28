@@ -39,8 +39,8 @@ const fetchAndSaveIssues = async () => {
         for (const [key, issuesData] of Object.entries(data)) {
             if (!issuesData) continue
             const issues = (issuesData as any)?.issues?.edges as any[]
-            const repositoryImage = (issuesData as any)
-                ?.openGraphImageUrl as string
+            const repositoryImage = (issuesData as any)?.owner
+                ?.avatarUrl as string
             const projectIssues: ProjectIssue[] = issues.map(
                 (edge: { node: Issue }) => ({
                     url: edge.node.url,
