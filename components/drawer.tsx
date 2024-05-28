@@ -1,10 +1,10 @@
 "use client"
 
-import { ContributeNavPointers, links, navPointers } from "@/content/data"
+import { links } from "@/content/data"
 import clsx from "clsx"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { LearnDropDown } from "./learn-dropdown"
+import { NavbarDropDown } from "./navbar-dropdown"
 
 export default function Drawer() {
     const [isOpen, setIsOpen] = useState(false)
@@ -14,6 +14,11 @@ export default function Drawer() {
     useEffect(() => {
         document.body.classList.toggle("overflow-hidden", isOpen)
     }, [isOpen])
+
+    const NavbarDropDownItems = [
+        { hideDrawer, menuItem: "Learn", isMobile: true },
+        { hideDrawer, menuItem: "Contribute", isMobile: true }
+    ]
 
     return (
         <div className="hidden md:flex">
@@ -70,17 +75,12 @@ export default function Drawer() {
                         ></path>
                     </svg>
                 </button>
-                <div className="flex flex-col flex-1 gap-4 bg-white h-full">
-                    <LearnDropDown.Mobile
-                        hideDrawer={hideDrawer}
-                        menuItem="Learn"
-                        subMenus={navPointers}
-                    />
-                    <LearnDropDown.Mobile
-                        hideDrawer={hideDrawer}
-                        menuItem="Contribute"
-                        subMenus={ContributeNavPointers}
-                    />
+                <div className="flex flex-col flex-1 gap-4 h-full">
+                    {NavbarDropDownItems.map((navItem) => (
+                        <section key={navItem.menuItem}>
+                            <NavbarDropDown {...navItem} />
+                        </section>
+                    ))}
                     {links.map((link) => (
                         <Link
                             onClick={hideDrawer}

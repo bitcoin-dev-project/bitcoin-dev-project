@@ -9,6 +9,7 @@ import CloseSidebarIcon from "../public/close-sidebar.svg"
 import CrossIcon from "../public/cross-icon.svg"
 import FilterIcon from "../public/filter.svg"
 import SortIcon from "../public/sort-icon.svg"
+import useOnclickOut from "@/hooks/useOnclickOut"
 
 const SidebarFilter = ({
     toggle,
@@ -96,7 +97,7 @@ function FilterMenu({
     return (
         <>
             <div className="pb-2">
-                <div className="py-3 border-b border-b-gray-400 flex justify-between pr-[7p]">
+                <div className="py-3 border-b border-b-gray-400 flex justify-between">
                     <section className="flex items-center gap-2">
                         <Image
                             src={FilterIcon}
@@ -278,26 +279,15 @@ function CustomMultiCheckBox({
     args: string[]
 }) {
     const { addFilterParam, currentFilterValues } = useUrlManager()
-    const [isOpen, setOpen] = useState(false)
-
     const [searchTerm, setSearchTerm] = useState("")
     const searchRef = useRef<HTMLInputElement>(null)
-    const wrapperRef = useRef<HTMLDivElement>(null)
+    const { wrapperRef, contentRef, isOpen, setOpen } = useOnclickOut()
 
     const toggle = () => setOpen(!isOpen)
 
     useEffect(() => {
         const handleFocusIn = () => setOpen(true)
-        const handleFocusOut = (e: MouseEvent) => {
-            if (
-                wrapperRef.current &&
-                !wrapperRef.current.contains(e.target as Node)
-            ) {
-                setOpen(false)
-            }
-        }
 
-        document.addEventListener("mousedown", handleFocusOut)
         let searchRefInput = searchRef.current
         searchRefInput &&
             searchRefInput.addEventListener("focusin", () => handleFocusIn())
@@ -307,9 +297,8 @@ function CustomMultiCheckBox({
                 searchRefInput.removeEventListener("focusin", () =>
                     handleFocusIn()
                 )
-            document.removeEventListener("mousedown", handleFocusOut)
         }
-    }, [isOpen])
+    }, [isOpen, setOpen])
 
     const addFilter = (value: string) => {
         addFilterParam(args[0].toLowerCase(), value)
@@ -327,11 +316,11 @@ function CustomMultiCheckBox({
     }, [args, searchTerm])
 
     return (
-        <div className="w-full flex flex-col gap-4" ref={wrapperRef}>
+        <div className="w-full flex flex-col gap-4">
             <h5 className="text-base font-bold">{title}</h5>
-            <form className="w-full relative">
+            <div className="w-full relative" ref={wrapperRef}>
                 <section className="group/menuBtn">
-                    <div className="relative">
+                    <div className="relative" ref={contentRef}>
                         <input
                             className="text-base font-medium w-full pl-12 pr-10 py-4 rounded-xl border-[1px] border-gray-300 focus:outline-none focus:outline-offset-0 leading-none placeholder:text-gray-400 placeholder:font-medium"
                             type="text"
@@ -409,7 +398,7 @@ function CustomMultiCheckBox({
                         </div>
                     ))}
                 </section>
-            </form>
+            </div>
         </div>
     )
 }
