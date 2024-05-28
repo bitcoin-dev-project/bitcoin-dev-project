@@ -151,7 +151,7 @@ function IssueCard({
             <div className="flex flex-col justify-between">
                 <div className="flex items-center justify-between gap-2 flex-wrap">
                     <section className="flex gap-2 items-center">
-                        {issue.imageUrl?.length ? (
+                        {issue.imageUrl ? (
                             <Image
                                 src={issue?.imageUrl}
                                 alt={`${issue.repo}-repository-image`}
