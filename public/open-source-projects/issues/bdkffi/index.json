@@ -5,7 +5,8 @@
     "title": "Custom Signer ",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/294",
@@ -14,7 +15,8 @@
     "labels": [
       "enhancement",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/378",
@@ -22,7 +24,8 @@
     "title": "using Concurrency in EsploraConfig resulting in errors ",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/469",
@@ -30,6 +33,7 @@
     "title": "Question: Finalizing a fully signed PSBT",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]

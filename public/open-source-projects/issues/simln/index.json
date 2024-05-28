@@ -7,7 +7,8 @@
       "documentation",
       "help wanted",
       "Low Priority"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/127",
@@ -18,7 +19,8 @@
       "good first issue",
       "help wanted",
       "Medium Priority"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/134",
@@ -29,7 +31,8 @@
       "good first issue",
       "nit",
       "Low Priority"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/136",
@@ -39,7 +42,8 @@
       "bug",
       "help wanted",
       "High Priority"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/154",
@@ -49,7 +53,8 @@
       "feature",
       "good first issue",
       "Low Priority"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/157",
@@ -59,7 +64,8 @@
       "feature",
       "good first issue",
       "Code Health"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/158",
@@ -67,7 +73,8 @@
     "title": "Repo is unnecessarily large ",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/171",
@@ -76,7 +83,8 @@
     "labels": [
       "feature",
       "help wanted"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/172",
@@ -86,7 +94,8 @@
       "good first issue",
       "help wanted",
       "Code Health"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/176",
@@ -95,7 +104,8 @@
     "labels": [
       "good first issue",
       "Robustness"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/185",
@@ -106,6 +116,7 @@
       "Code Health",
       "Robustness",
       "High Priority"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]

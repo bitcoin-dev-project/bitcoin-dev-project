@@ -6,7 +6,8 @@
     "labels": [
       "enhancement",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/27",
@@ -16,7 +17,8 @@
       "enhancement",
       "good first issue",
       "backlog"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/29",
@@ -25,7 +27,8 @@
     "labels": [
       "good first issue",
       "backlog"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/36",
@@ -35,7 +38,8 @@
       "enhancement",
       "good first issue",
       "backlog"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/78",
@@ -45,7 +49,8 @@
       "enhancement",
       "good first issue",
       "help wanted"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/100",
@@ -54,7 +59,8 @@
     "labels": [
       "good first issue",
       "backlog"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/134",
@@ -64,7 +70,8 @@
       "enhancement",
       "good first issue",
       "needs conceptual review"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/184",
@@ -74,7 +81,8 @@
       "enhancement",
       "help wanted",
       "needs conceptual review"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/191",
@@ -84,7 +92,8 @@
       "documentation",
       "good first issue",
       "help wanted"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/210",
@@ -93,7 +102,8 @@
     "labels": [
       "enhancement",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/253",
@@ -101,6 +111,7 @@
     "title": "tank IPs are still 100.0.0.0/8 in K8s",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]

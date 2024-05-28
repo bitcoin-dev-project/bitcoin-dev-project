@@ -6,7 +6,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/5299",
@@ -15,7 +16,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/16159",
@@ -24,7 +26,8 @@
     "labels": [
       "Bug",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/16444",
@@ -33,7 +36,8 @@
     "labels": [
       "Bug",
       "Validation"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/17020",
@@ -43,7 +47,8 @@
       "P2P",
       "Scripts and tools",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/17145",
@@ -54,7 +59,8 @@
       "GUI",
       "Refactoring",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/17289",
@@ -63,7 +69,8 @@
     "labels": [
       "Feature",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/17506",
@@ -72,7 +79,8 @@
     "labels": [
       "Scripts and tools",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/18217",
@@ -82,7 +90,8 @@
       "Bug",
       "Docs",
       "RPC/REST/ZMQ"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/18625",
@@ -90,7 +99,8 @@
     "title": "untrust vs unsafe ?",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/18911",
@@ -98,7 +108,8 @@
     "title": "Improve minimum file descriptor accounting and documentation",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/19034",
@@ -107,7 +118,8 @@
     "labels": [
       "Bug",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/19087",
@@ -116,7 +128,8 @@
     "labels": [
       "Bug",
       "RPC/REST/ZMQ"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/19496",
@@ -124,7 +137,8 @@
     "title": "Use of C++ undefined behavior in various `IteratorComparators`",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/19886",
@@ -133,7 +147,8 @@
     "labels": [
       "Brainstorming",
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/20287",
@@ -142,7 +157,8 @@
     "labels": [
       "Bug",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/20840",
@@ -152,7 +168,8 @@
       "Bug",
       "GUI",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/20943",
@@ -161,7 +178,8 @@
     "labels": [
       "Bug",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/20978",
@@ -170,7 +188,8 @@
     "labels": [
       "Bug",
       "RPC/REST/ZMQ"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/21552",
@@ -180,7 +199,8 @@
       "Bug",
       "macOS",
       "Tests"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/21627",
@@ -189,7 +209,8 @@
     "labels": [
       "Bug",
       "Block storage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/21950",
@@ -197,7 +218,8 @@
     "title": "Duplicate coinbase transaction space reservation in CreateNewBlock",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/22119",
@@ -207,7 +229,8 @@
       "Bug",
       "RPC/REST/ZMQ",
       "Mining"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/22518",
@@ -216,7 +239,8 @@
     "labels": [
       "Bug",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/22522",
@@ -225,7 +249,8 @@
     "labels": [
       "Bug",
       "Build system"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/22559",
@@ -233,7 +258,8 @@
     "title": "net: redundant connections with a single peer",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/22613",
@@ -242,7 +268,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/22726",
@@ -251,7 +278,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/22727",
@@ -260,7 +288,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/23119",
@@ -268,7 +297,8 @@
     "title": "test: replace bare asserts with assertion helpers (assert_equal() etc.)",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/23186",
@@ -276,7 +306,8 @@
     "title": "Failed assertion during shutdown",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/23234",
@@ -284,7 +315,8 @@
     "title": "Shutdown during reindex-chainstate can block forever",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/23366",
@@ -294,7 +326,8 @@
       "Bug",
       "Tests",
       "CI failed"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/23589",
@@ -303,7 +336,8 @@
     "labels": [
       "P2P",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/23651",
@@ -313,7 +347,8 @@
       "Bug",
       "macOS",
       "Tests"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/24049",
@@ -322,7 +357,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/24450",
@@ -330,7 +366,8 @@
     "title": "Apparently CJDNS network does not work with Tor on mainnet.",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/24612",
@@ -338,7 +375,8 @@
     "title": "[flatpak]  - I cannot choose or change datadir when running from flatpak",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25094",
@@ -347,7 +385,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25128",
@@ -359,7 +398,8 @@
       "Linux/Unix",
       "Tests",
       "Upstream"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25265",
@@ -368,7 +408,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25336",
@@ -376,7 +417,8 @@
     "title": "Onlynet=ipv4 disables Tor advertisements",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25669",
@@ -384,7 +426,8 @@
     "title": "`externalip=...onion` ignored when onion/prox not set",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25684",
@@ -392,7 +435,8 @@
     "title": "-proxy does not work for addresses like 10.x.y.z",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25765",
@@ -403,7 +447,8 @@
       "Windows",
       "Tests",
       "CI failed"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25868",
@@ -412,7 +457,8 @@
     "labels": [
       "Bug",
       "Windows"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25895",
@@ -420,7 +466,8 @@
     "title": "importdescriptors hanging on importing/updating descriptor with large range",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/25980",
@@ -428,7 +475,8 @@
     "title": "combinerawtransaction confusing with distinct transactions",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26035",
@@ -437,7 +485,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26096",
@@ -446,7 +495,8 @@
     "labels": [
       "Bug",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26245",
@@ -455,7 +505,8 @@
     "labels": [
       "Bug",
       "Validation"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26317",
@@ -464,7 +515,8 @@
     "labels": [
       "Bug",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26362",
@@ -475,7 +527,8 @@
       "Bug",
       "UTXO Db and Indexes",
       "RPC/REST/ZMQ"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26442",
@@ -484,7 +537,8 @@
     "labels": [
       "Bug",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26484",
@@ -492,7 +546,8 @@
     "title": "Error: Cannot resolve -bind address: 'bitcoind:8334=onion'",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26492",
@@ -500,7 +555,8 @@
     "title": "make check errors on big endian OpenBSD 7.2",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26813",
@@ -508,7 +564,8 @@
     "title": "listreceivedbyaddress is empty for descriptor (but not legacy) wallets",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/26973",
@@ -518,7 +575,8 @@
       "Bug",
       "Wallet",
       "RPC/REST/ZMQ"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/27002",
@@ -526,7 +584,8 @@
     "title": "listunspent, fundrawtransaction, getwalletinfo locks wallet for any other operation",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/27085",
@@ -535,7 +594,8 @@
     "labels": [
       "Bug",
       "P2P"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/27219",
@@ -544,7 +604,8 @@
     "labels": [
       "Bug",
       "PSBT"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/27354",
@@ -554,7 +615,8 @@
       "Bug",
       "Wallet",
       "CI failed"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/27494",
@@ -564,7 +626,8 @@
       "Feature",
       "Tests",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/27975",
@@ -574,7 +637,8 @@
       "Bug",
       "Tests",
       "Upstream"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/28179",
@@ -583,7 +647,8 @@
     "labels": [
       "Tests",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/28648",
@@ -594,7 +659,8 @@
       "Tests",
       "Consensus",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/28864",
@@ -603,7 +669,8 @@
     "labels": [
       "Bug",
       "Build system"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/29073",
@@ -613,7 +680,8 @@
       "Bug",
       "Wallet",
       "CI failed"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/29398",
@@ -622,7 +690,8 @@
     "labels": [
       "Bug",
       "Wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/29422",
@@ -632,7 +701,8 @@
       "Bug",
       "UTXO Db and Indexes",
       "Data corruption"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/29711",
@@ -640,7 +710,8 @@
     "title": "Wallet: Nondescript error message for 502nd unconfirmed transaction",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/29908",
@@ -648,7 +719,8 @@
     "title": "test: SegFault in `ismine_tests` on SunOS / illumos",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/30138",
@@ -658,7 +730,8 @@
       "Bug",
       "Data corruption",
       "Questions and Help"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/30159",
@@ -668,6 +741,7 @@
       "Bug",
       "UTXO Db and Indexes",
       "Data corruption"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]

@@ -31,6 +31,7 @@ export type RepositoryIssues = {
     title: string
     labels: string[]
     tags: string[]
+    imageUrl: string
 }
 
 export type IssueCardElement = RepositoryIssues & {

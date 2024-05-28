@@ -8,7 +8,8 @@
       "Translation",
       "good first issue",
       "Invoice"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/4986",
@@ -18,7 +19,8 @@
       "Enhancement",
       "UI / UX",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/5156",
@@ -28,7 +30,8 @@
       "Bug",
       "UI / UX",
       "Invoice"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/5191",
@@ -38,7 +41,8 @@
       "Bug",
       "UI / UX",
       "Plugin"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/5666",
@@ -46,7 +50,8 @@
     "title": "[Bug]: Problems with login into BTCPay Server after updating Raspiblitz / Umbrel deployments",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/5797",
@@ -54,7 +59,8 @@
     "title": "Failed to import a Multisig Bitcoin wallet -with any of the available options-",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/5898",
@@ -64,7 +70,8 @@
       "Bug",
       "Lightning",
       "API"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6003",
@@ -72,6 +79,7 @@
     "title": "[Bug]: Refund crashes when the invoice is settled qith no payment",
     "labels": [
       "Bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]

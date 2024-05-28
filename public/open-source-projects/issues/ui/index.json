@@ -6,7 +6,8 @@
     "labels": [
       "good first issue",
       "refactor"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/156",
@@ -14,7 +15,8 @@
     "title": "Follower prematurely shows message that all have approved after approving",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/162",
@@ -23,7 +25,8 @@
     "labels": [
       "enhancement",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/181",
@@ -32,7 +35,8 @@
     "labels": [
       "good first issue",
       "guardian-ui"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/182",
@@ -40,7 +44,8 @@
     "title": "Tests for utility functions for millit-sat math",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/186",
@@ -48,7 +53,8 @@
     "title": "Add the abillity to specify your own `FM_TEST_DIR`",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/212",
@@ -57,7 +63,8 @@
     "labels": [
       "bug",
       "question"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/219",
@@ -66,7 +73,8 @@
     "labels": [
       "bug",
       "gateway-ui"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/297",
@@ -75,7 +83,8 @@
     "labels": [
       "bug",
       "development"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/343",
@@ -84,7 +93,8 @@
     "labels": [
       "bug",
       "guardian-ui"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/ui/issues/358",
@@ -92,6 +102,7 @@
     "title": "leader should not restart after peers have moved to consensus running",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]

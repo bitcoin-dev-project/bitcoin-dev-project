@@ -13,6 +13,7 @@ import SidebarFilter from "./sidebar-filter"
 import Skeleton from "./skeleton"
 import { usePaginatedResult } from "@/hooks/usePagination"
 import Pagination from "./Pagination"
+import Image from "next/image"
 
 const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
     const loading = !issues.length
@@ -148,10 +149,23 @@ function IssueCard({
             target="_blank"
         >
             <div className="flex flex-col justify-between">
-                <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-500">
-                        {`${issue.repo}/${issue.owner}`}
-                    </span>
+                <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <section className="flex gap-2 items-center">
+                        {issue.imageUrl ? (
+                            <Image
+                                src={issue?.imageUrl}
+                                alt={`${issue.repo}-repository-image`}
+                                className="w-6 h-6 rounded-md"
+                                width={24}
+                                height={24}
+                            />
+                        ) : (
+                            <div className="w-6 h-6 bg-gray-100 rounded-md"></div>
+                        )}
+                        <span className="text-sm font-medium text-gray-500">
+                            {`${issue.repo}/${issue.owner}`}
+                        </span>
+                    </section>
                     <span className="text-xs text-gray-500">
                         {new Date(issue.publishedAt).toLocaleDateString(
                             "en-US",

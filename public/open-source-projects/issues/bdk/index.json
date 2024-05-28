@@ -7,7 +7,8 @@
       "documentation",
       "good first issue",
       "module-blockchain"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/175",
@@ -16,7 +17,8 @@
     "labels": [
       "bug",
       "tests"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/253",
@@ -24,7 +26,8 @@
     "title": "Redeposit should check address reuse",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/357",
@@ -33,7 +36,8 @@
     "labels": [
       "good first issue",
       "module-blockchain"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/524",
@@ -42,7 +46,8 @@
     "labels": [
       "enhancement",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/534",
@@ -51,7 +56,8 @@
     "labels": [
       "bug",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/559",
@@ -59,7 +65,8 @@
     "title": "`maybe_async` complicates isomorphic use-cases",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/598",
@@ -67,7 +74,8 @@
     "title": "The `rpc` blockchain tests don't work with Bitcoin Core 23.0",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/618",
@@ -76,7 +84,8 @@
     "labels": [
       "bug",
       "discussion"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/642",
@@ -85,7 +94,8 @@
     "labels": [
       "bug",
       "module-wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/650",
@@ -93,7 +103,8 @@
     "title": "CI: `blockchain::esplora::bdk_blockchain_tests::test_sync_stop_gap_20` occationally fails",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/655",
@@ -101,7 +112,8 @@
     "title": "Test which xpubs in PSBTs are needed for HW to sign correctly",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/658",
@@ -110,7 +122,8 @@
     "labels": [
       "bug",
       "module-blockchain"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/673",
@@ -119,7 +132,8 @@
     "labels": [
       "documentation",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/699",
@@ -128,7 +142,8 @@
     "labels": [
       "good first issue",
       "tests"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/702",
@@ -137,7 +152,8 @@
     "labels": [
       "good first issue",
       "discussion"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/706",
@@ -147,7 +163,8 @@
       "bug",
       "discussion",
       "module-coinselection"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/715",
@@ -156,7 +173,8 @@
     "labels": [
       "bug",
       "module-blockchain"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/749",
@@ -164,7 +182,8 @@
     "title": "Error syncing wallet via RPC client on macOS system",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/771",
@@ -173,7 +192,8 @@
     "labels": [
       "bug",
       "module-wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/778",
@@ -181,7 +201,8 @@
     "title": "Reqwest to Esplora panics in WASM",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/791",
@@ -191,7 +212,8 @@
       "good first issue",
       "module-wallet",
       "api"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/797",
@@ -201,7 +223,8 @@
       "bug",
       "module-wallet",
       "api"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/826",
@@ -209,7 +232,8 @@
     "title": "There's no way to set connect timeout for the Esplora backend client",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/856",
@@ -219,7 +243,8 @@
       "documentation",
       "good first issue",
       "module-wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/859",
@@ -227,7 +252,8 @@
     "title": "RPC sync failure ",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/915",
@@ -235,7 +261,8 @@
     "title": "Sqlite db race condition",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/998",
@@ -243,7 +270,8 @@
     "title": "Feature imcompatibility of `rpc` and `async-interface`",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/999",
@@ -251,7 +279,8 @@
     "title": "`error::MissingCachedScripts` and `error::MiniscriptPsbtError` are not exported",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1113",
@@ -260,7 +289,8 @@
     "labels": [
       "good first issue",
       "tests"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1120",
@@ -269,7 +299,8 @@
     "labels": [
       "bug",
       "module-blockchain"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1125",
@@ -278,7 +309,8 @@
     "labels": [
       "bug",
       "module-blockchain"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1134",
@@ -288,7 +320,8 @@
       "enhancement",
       "good first issue",
       "module-wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1173",
@@ -298,7 +331,8 @@
       "good first issue",
       "module-blockchain",
       "api"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1313",
@@ -307,7 +341,8 @@
     "labels": [
       "bug",
       "module-wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1342",
@@ -317,7 +352,8 @@
       "bug",
       "documentation",
       "api"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1362",
@@ -326,7 +362,8 @@
     "labels": [
       "bug",
       "module-blockchain"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1407",
@@ -334,7 +371,8 @@
     "title": "`Wallet::create_signers` should return the `KeychainTxOutIndex` changeset",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1440",
@@ -342,6 +380,7 @@
     "title": "InsufficientFunds is duplicated within coin_selection::Error and CreateTxError enums",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
