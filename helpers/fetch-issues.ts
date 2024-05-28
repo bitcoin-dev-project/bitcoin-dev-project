@@ -1,10 +1,10 @@
-import fs from "fs"
-import path from "path"
+import fs from "node:fs"
+import path from "node:path"
 
 import { constructRepoQueries } from "../graphql/queries/get-issues"
 import { getClient } from "../lib/apollo-client"
 import projects from "../public/open-source-projects/index.json"
-import { Issue, Projects } from "../types"
+import type { Issue, Projects } from "../types"
 
 type ProjectIssue = {
     url: string
@@ -38,9 +38,8 @@ const fetchAndSaveIssues = async () => {
         for (const [key, issuesData] of Object.entries(data)) {
             if (!issuesData) continue
             const issues = (issuesData as any)?.issues?.edges as any[]
-            const projectIssues: ProjectIssue[] = []
-            issues.map((edge: { node: Issue }) => {
-                projectIssues.push({
+            const projectIssues: ProjectIssue[] = issues.map(
+                (edge: { node: Issue }) => ({
                     url: edge.node.url,
                     publishedAt: edge.node.publishedAt,
                     title: edge.node.title,
@@ -48,15 +47,18 @@ const fetchAndSaveIssues = async () => {
                         (label: { node: { name: string } }) => label.node.name
                     )
                 })
-            })
+            )
             const repoPath = `public/open-source-projects/issues/${key}/index.json`
             const dir = path.dirname(repoPath)
             if (!fs.existsSync(dir)) {
-                fs.mkdirSync(dir, {
+                await fs.promises.mkdir(dir, {
                     recursive: true
                 })
             }
-            fs.writeFileSync(repoPath, JSON.stringify(projectIssues, null, 2))
+            await fs.promises.writeFile(
+                repoPath,
+                JSON.stringify(projectIssues, null, 2)
+            )
             console.log(`Saved issues for ${key} in ${repoPath} successfully!`)
         }
         return data

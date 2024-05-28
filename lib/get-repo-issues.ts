@@ -1,8 +1,8 @@
-import fs from "fs"
+import fs from "node:fs"
+import path from "node:path"
 
-import { IssueCardElement, Projects, RepositoryIssues } from "@/types"
+import type { IssueCardElement, Projects, RepositoryIssues } from "@/types"
 import { sanitize } from "@/utils/sanitize"
-
 import projects from "../public/open-source-projects/index.json"
 
 const projectRepoMetadata = Object.entries(projects as Projects).map(
@@ -14,39 +14,47 @@ const projectRepoMetadata = Object.entries(projects as Projects).map(
     })
 )
 
-export const getRepoIssues = async () => {
-    const result: IssueCardElement[] = []
-    Promise.all(
-        projectRepoMetadata.map((repo) => {
+export const getRepoIssues = async (): Promise<IssueCardElement[]> => {
+    try {
+        const issuesPromises = projectRepoMetadata.map(async (repo) => {
             // remove special characters from repo name
             const repoName = sanitize(repo.name)
-            const repoPath = `public/open-source-projects/issues/${repoName}/index.json`
-            if (!fs.existsSync(repoPath)) {
-                console.log("No issues found")
-                return []
-            }
-            const rawIssuesData = JSON.parse(
-                fs.readFileSync(`${process.cwd()}/${repoPath}`, "utf-8")
-            ) as RepositoryIssues[]
-            const issues = rawIssuesData.map((issue) => {
-                const issueNumber = issue.url?.split("/").pop() || ""
-                return {
-                    ...issue,
-                    owner: repo.owner,
-                    languages: repo.languages,
-                    repo: repo.name,
-                    tags: repo.tags,
-                    number: parseInt(issueNumber)
-                }
-            })
-            result.push(...issues)
-        })
-    )
+            const repoPath = path.join(
+                "public",
+                "open-source-projects",
+                "issues",
+                repoName,
+                "index.json"
+            )
 
-    const randomisedIssues = result.sort(
-        (a, b) =>
-            new Date(b.publishedAt).getTime() -
-            new Date(a.publishedAt).getTime()
-    )
-    return randomisedIssues
+            return fs.promises
+                .readFile(path.join(process.cwd(), repoPath), "utf-8")
+                .then<RepositoryIssues[]>(JSON.parse)
+                .then((res) =>
+                    res.map((issue) => ({
+                        ...issue,
+                        owner: repo.owner,
+                        languages: repo.languages,
+                        repo: repo.name,
+                        tags: repo.tags,
+                        number: parseInt(issue.url?.split("/").pop() || "")
+                    }))
+                )
+                .catch((error) => {
+                    console.log("No issues found", error)
+                    return []
+                })
+        })
+
+        const issuesArrays = await Promise.all(issuesPromises)
+        const allIssues = issuesArrays.flat()
+        return allIssues.sort(
+            (a, b) =>
+                new Date(b.publishedAt).getTime() -
+                new Date(a.publishedAt).getTime()
+        )
+    } catch (error) {
+        console.error("Error processing repository issues:", error)
+        return []
+    }
 }
