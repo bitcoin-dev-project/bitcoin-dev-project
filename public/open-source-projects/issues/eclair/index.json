@@ -6,7 +6,8 @@
     "labels": [
       "help wanted",
       "feature request"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
   },
   {
     "url": "https://github.com/ACINQ/eclair/issues/1437",
@@ -15,7 +16,8 @@
     "labels": [
       "help wanted",
       "feature request"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
   },
   {
     "url": "https://github.com/ACINQ/eclair/issues/1640",
@@ -24,7 +26,8 @@
     "labels": [
       "enhancement",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
   },
   {
     "url": "https://github.com/ACINQ/eclair/issues/1652",
@@ -32,7 +35,8 @@
     "title": "Add an option to disable server ",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
   },
   {
     "url": "https://github.com/ACINQ/eclair/issues/1858",
@@ -42,7 +46,8 @@
       "enhancement",
       "help wanted",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
   },
   {
     "url": "https://github.com/ACINQ/eclair/issues/2728",
@@ -50,6 +55,7 @@
     "title": "Mutual close gets stuck if an `UpdateFee` arrives at a bad time",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
   }
 ]

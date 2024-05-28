@@ -9,7 +9,8 @@
       "documentation",
       "good first issue",
       "P4"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/2936",
@@ -21,7 +22,8 @@
       "rpc",
       "wallet",
       "backend"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/3866",
@@ -33,7 +35,8 @@
       "feature request",
       "good first issue",
       "cli"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/4135",
@@ -43,7 +46,8 @@
       "bug",
       "REST",
       "P3"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/4520",
@@ -55,7 +59,8 @@
       "beginner",
       "routing",
       "payments"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/4796",
@@ -67,7 +72,8 @@
       "intermediate",
       "routing",
       "mission control"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/4870",
@@ -79,7 +85,8 @@
       "notifications",
       "neutrino",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/4910",
@@ -90,7 +97,8 @@
       "htlcswitch",
       "P4",
       "accounting"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/4916",
@@ -101,7 +109,8 @@
       "P3",
       "v0.13",
       "shachain"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5062",
@@ -111,7 +120,8 @@
       "bug",
       "routing",
       "path finding"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5169",
@@ -123,7 +133,8 @@
       "config",
       "cli",
       "lncli"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5203",
@@ -135,7 +146,8 @@
       "wallet",
       "beginner",
       "feature request"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5262",
@@ -147,7 +159,8 @@
       "channel closing",
       "P2",
       "backups"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5324",
@@ -158,7 +171,8 @@
       "beginner",
       "channels",
       "logging"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5575",
@@ -169,7 +183,8 @@
       "rpc",
       "beginner",
       "P3"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5584",
@@ -181,7 +196,8 @@
       "good first issue",
       "parsing",
       "lncli"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5586",
@@ -193,7 +209,8 @@
       "good first issue",
       "P3",
       "error codes"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5625",
@@ -205,7 +222,8 @@
       "bitcoind",
       "P3",
       "error codes"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5739",
@@ -216,7 +234,8 @@
       "wallet",
       "P3",
       "psbt"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5932",
@@ -228,7 +247,8 @@
       "beginner",
       "feature request",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/5972",
@@ -239,7 +259,8 @@
       "good first issue",
       "logging",
       "P3"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6137",
@@ -251,7 +272,8 @@
       "beginner",
       "intermediate",
       "P3"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6210",
@@ -261,7 +283,8 @@
       "bug",
       "resource usage",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6290",
@@ -273,7 +296,8 @@
       "channel closing",
       "notifications",
       "channel management"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6337",
@@ -285,7 +309,8 @@
       "discovery",
       "good first issue",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6584",
@@ -296,7 +321,8 @@
       "beginner",
       "documentation",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6601",
@@ -307,7 +333,8 @@
       "payments",
       "good first issue",
       "lncli"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6603",
@@ -319,7 +346,8 @@
       "routing",
       "good first issue",
       "spec"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6693",
@@ -330,7 +358,8 @@
       "safety",
       "good first issue",
       "logging"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6704",
@@ -339,7 +368,8 @@
     "labels": [
       "bug",
       "safety"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6720",
@@ -350,7 +380,8 @@
       "safety",
       "good first issue",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6729",
@@ -362,7 +393,8 @@
       "beginner",
       "good first issue",
       "middleware"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6834",
@@ -373,7 +405,8 @@
       "payments",
       "P2",
       "itest case"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6870",
@@ -384,7 +417,8 @@
       "funding",
       "graph",
       "gossip"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6952",
@@ -394,7 +428,8 @@
       "bug",
       "wallet",
       "config"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/6989",
@@ -404,7 +439,8 @@
       "bug",
       "multi-hop",
       "channel closing"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7037",
@@ -414,7 +450,8 @@
       "bug",
       "htlcswitch",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7071",
@@ -424,7 +461,8 @@
       "bug",
       "database",
       "invoices"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7091",
@@ -433,7 +471,8 @@
     "labels": [
       "bug",
       "channel closing"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7104",
@@ -443,7 +482,8 @@
       "bug",
       "P3",
       "utxo sweeping"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7107",
@@ -454,7 +494,8 @@
       "database",
       "htlcswitch",
       "P1"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7111",
@@ -464,7 +505,8 @@
       "bug",
       "wallet",
       "recovery"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7123",
@@ -476,7 +518,8 @@
       "config",
       "good first issue",
       "bug fix"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7160",
@@ -488,7 +531,8 @@
       "fees",
       "P2",
       "itest case"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7165",
@@ -499,7 +543,8 @@
       "beginner",
       "good first issue",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7181",
@@ -510,7 +555,8 @@
       "P1",
       "utxo sweeping",
       "mempool"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7208",
@@ -520,7 +566,8 @@
       "bug",
       "funding",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7220",
@@ -530,7 +577,8 @@
       "enhancement",
       "rpc",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7222",
@@ -540,7 +588,8 @@
       "bug",
       "routing",
       "path finding"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7229",
@@ -550,7 +599,8 @@
       "bug",
       "missing reproduction",
       "zero conf"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7247",
@@ -560,7 +610,8 @@
       "bug",
       "channel closing",
       "channels"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7261",
@@ -571,7 +622,8 @@
       "graph",
       "P2",
       "gossip"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7300",
@@ -582,7 +634,8 @@
       "recovery",
       "P2",
       "mempool"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7311",
@@ -593,7 +646,8 @@
       "payments",
       "mpp",
       "path finding"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7316",
@@ -604,7 +658,8 @@
       "rpc",
       "good first issue",
       "P3"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7328",
@@ -614,7 +669,8 @@
       "bug",
       "HTLC",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7342",
@@ -625,7 +681,8 @@
       "graph",
       "P2",
       "gossip"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7349",
@@ -636,7 +693,8 @@
       "neutrino",
       "networking",
       "dns"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7371",
@@ -647,7 +705,8 @@
       "P2",
       "gossip",
       "zero conf"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7397",
@@ -656,7 +715,8 @@
     "labels": [
       "bug",
       "utxo sweeping"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7440",
@@ -667,7 +727,8 @@
       "feature request",
       "good first issue",
       "lncli"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7463",
@@ -679,7 +740,8 @@
       "htlcswitch",
       "P2",
       "itests"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7487",
@@ -689,7 +751,8 @@
       "bug",
       "routing",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7502",
@@ -698,7 +761,8 @@
     "labels": [
       "bug",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7515",
@@ -707,7 +771,8 @@
     "labels": [
       "bug",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7530",
@@ -716,7 +781,8 @@
     "labels": [
       "bug",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7547",
@@ -725,7 +791,8 @@
     "labels": [
       "bug",
       "gossip"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7551",
@@ -734,7 +801,8 @@
     "labels": [
       "bug",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7555",
@@ -744,7 +812,8 @@
       "bug",
       "documentation",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7573",
@@ -754,7 +823,8 @@
       "bug",
       "P1",
       "zero conf"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7621",
@@ -764,7 +834,8 @@
       "bug",
       "P2",
       "hodl-invoices"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7628",
@@ -774,7 +845,8 @@
       "bug",
       "interop",
       "shutdown"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7656",
@@ -783,7 +855,8 @@
     "labels": [
       "bug",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7664",
@@ -792,7 +865,8 @@
     "labels": [
       "bug",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7671",
@@ -801,7 +875,8 @@
     "labels": [
       "bug",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7679",
@@ -812,7 +887,8 @@
       "neutrino",
       "gossip",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7694",
@@ -822,7 +898,8 @@
       "bug",
       "graph",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7738",
@@ -833,7 +910,8 @@
       "funding",
       "channels",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7749",
@@ -845,7 +923,8 @@
       "beginner",
       "up for grabs",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7784",
@@ -855,7 +934,8 @@
       "bug",
       "payments",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7786",
@@ -865,7 +945,8 @@
       "bug",
       "routing",
       "P3"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7829",
@@ -875,7 +956,8 @@
       "bug",
       "resource usage",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7832",
@@ -885,7 +967,8 @@
       "bug",
       "rpc",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7835",
@@ -894,7 +977,8 @@
     "labels": [
       "bug",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7848",
@@ -904,7 +988,8 @@
       "bug",
       "contracts",
       "shutdown"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7868",
@@ -915,7 +1000,8 @@
       "funding",
       "P1",
       "utxo sweeping"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7899",
@@ -924,7 +1010,8 @@
     "labels": [
       "bug",
       "mobile"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7933",
@@ -934,7 +1021,8 @@
       "bug",
       "HTLC",
       "utxo sweeping"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7959",
@@ -944,7 +1032,8 @@
       "bug",
       "P1",
       "force closes"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7964",
@@ -956,7 +1045,8 @@
       "config",
       "privacy",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7969",
@@ -967,7 +1057,8 @@
       "P1",
       "needs triage",
       "force closes"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7971",
@@ -978,7 +1069,8 @@
       "P2",
       "coin selection",
       "rbf"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7973",
@@ -987,7 +1079,8 @@
     "labels": [
       "bug",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/7975",
@@ -998,7 +1091,8 @@
       "wallet",
       "lncli",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/8001",
@@ -1008,7 +1102,8 @@
       "bug",
       "utxo sweeping",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/8018",
@@ -1018,7 +1113,8 @@
       "bug",
       "fees",
       "P2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/8023",
@@ -1030,7 +1126,8 @@
       "refactoring",
       "concurrency",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/8080",
@@ -1039,7 +1136,8 @@
     "labels": [
       "bug",
       "needs triage"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
     "url": "https://github.com/lightningnetwork/lnd/issues/8108",
@@ -1049,6 +1147,7 @@
       "bug",
       "notifications",
       "chain handling"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
 ]

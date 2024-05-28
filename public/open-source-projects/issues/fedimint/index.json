@@ -5,7 +5,8 @@
     "title": "Look into deduplicating dependencies",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/1098",
@@ -13,7 +14,8 @@
     "title": "Change Debug/Display on BlindingKey / SpendingKey etc. to output a fingerprint or something",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/1178",
@@ -22,7 +24,8 @@
     "labels": [
       "good first issue",
       "lightning"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/1245",
@@ -31,7 +34,8 @@
     "labels": [
       "good first issue",
       "lightning"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/1336",
@@ -40,7 +44,8 @@
     "labels": [
       "good first issue",
       "api"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/1344",
@@ -49,7 +54,8 @@
     "labels": [
       "good first issue",
       "deployment"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/1397",
@@ -59,7 +65,8 @@
       "bug",
       "lightning",
       "crypto"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/1576",
@@ -67,7 +74,8 @@
     "title": "Review and avoid use of locks (`Mutex`, `RwLock`)",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/1728",
@@ -76,7 +84,8 @@
     "labels": [
       "good first issue",
       "testing"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/1906",
@@ -86,7 +95,8 @@
       "good first issue",
       "lightning",
       "dev env"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/2014",
@@ -94,7 +104,8 @@
     "title": "Allow bitcoind configuration change in Admin UI",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/2190",
@@ -102,7 +113,8 @@
     "title": "notification endpoints cleanup",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/2247",
@@ -111,7 +123,8 @@
     "labels": [
       "good first issue",
       "db"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/2257",
@@ -119,7 +132,8 @@
     "title": "Convert (most) logging statements to use pre-defined logging targets",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/2543",
@@ -127,7 +141,8 @@
     "title": "E-cash note was replaced in DB, this should never happen!",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/2836",
@@ -135,7 +150,8 @@
     "title": "Improve tutorial in our docs",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3049",
@@ -144,7 +160,8 @@
     "labels": [
       "bug",
       "security"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3121",
@@ -152,7 +169,8 @@
     "title": "Investigate running some tests on ios simulator / android emulator",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3299",
@@ -161,7 +179,8 @@
     "labels": [
       "good first issue",
       "consensus"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3300",
@@ -170,7 +189,8 @@
     "labels": [
       "good first issue",
       "consensus"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3500",
@@ -179,7 +199,8 @@
     "labels": [
       "bug",
       "consensus"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3557",
@@ -188,7 +209,8 @@
     "labels": [
       "bug",
       "client"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3575",
@@ -197,7 +219,8 @@
     "labels": [
       "bug",
       "api"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3784",
@@ -205,7 +228,8 @@
     "title": "Setting gateway password with & character has undesired effects in CLI",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3924",
@@ -213,7 +237,8 @@
     "title": "Add license and README link to each `Cargo.toml`",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/3937",
@@ -224,7 +249,8 @@
       "lightning",
       "consensus",
       "mint"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4014",
@@ -235,7 +261,8 @@
       "lightning",
       "client",
       "backport releases/v0.2"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4021",
@@ -245,7 +272,8 @@
       "bug",
       "lightning",
       "client"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4124",
@@ -254,7 +282,8 @@
     "labels": [
       "help wanted",
       "api"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4130",
@@ -262,7 +291,8 @@
     "title": "Client becomes slow if one guardian is down",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4131",
@@ -271,7 +301,8 @@
     "labels": [
       "bug",
       "alephbft"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4265",
@@ -280,7 +311,8 @@
     "labels": [
       "bug",
       "client"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4365",
@@ -289,7 +321,8 @@
     "labels": [
       "good first issue",
       "lightning"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4584",
@@ -297,7 +330,8 @@
     "title": "Versions support tracking",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4591",
@@ -305,7 +339,8 @@
     "title": "opentelemetry deprecated call warning ",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4691",
@@ -314,7 +349,8 @@
     "labels": [
       "good first issue",
       "refactor"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4817",
@@ -322,7 +358,8 @@
     "title": "Automate nix flake update PRs",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4847",
@@ -330,7 +367,8 @@
     "title": "Include our ./docs/ files in documentaiton generated on https://docs.fedimint.org/",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4886",
@@ -338,7 +376,8 @@
     "title": "Fedimintd getting stuck if bitcoind was initializing",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/4936",
@@ -346,7 +385,8 @@
     "title": "Module-specific endpoint constants should live in their respective modules",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/5013",
@@ -354,7 +394,8 @@
     "title": "Panic on Wallet startup",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/5253",
@@ -362,7 +403,8 @@
     "title": "Remove tracing chrome",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/5276",
@@ -372,7 +414,8 @@
       "bug",
       "lightning",
       "client"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
     "url": "https://github.com/fedimint/fedimint/issues/5329",
@@ -381,6 +424,7 @@
     "labels": [
       "bug",
       "wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]

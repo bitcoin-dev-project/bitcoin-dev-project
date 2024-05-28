@@ -6,7 +6,8 @@
     "labels": [
       "documentation",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/67",
@@ -16,7 +17,8 @@
       "good first issue",
       "help wanted",
       "backlog"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/69",
@@ -26,7 +28,8 @@
       "good first issue",
       "help wanted",
       "sv2 proxy"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/70",
@@ -35,7 +38,8 @@
     "labels": [
       "good first issue",
       "test"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/71",
@@ -44,7 +48,8 @@
     "labels": [
       "good first issue",
       "test"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/72",
@@ -53,7 +58,8 @@
     "labels": [
       "good first issue",
       "test"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/81",
@@ -63,7 +69,8 @@
       "good first issue",
       "test",
       "message-generator"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/104",
@@ -73,7 +80,8 @@
       "help wanted",
       "test",
       "sv2 proxy"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/243",
@@ -83,7 +91,8 @@
       "bug",
       "test",
       "important"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/244",
@@ -94,7 +103,8 @@
       "help wanted",
       "test",
       "important"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/245",
@@ -105,7 +115,8 @@
       "help wanted",
       "test",
       "important"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/246",
@@ -114,7 +125,8 @@
     "labels": [
       "help wanted",
       "tracker"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/375",
@@ -122,7 +134,8 @@
     "title": "Rm 3rd-party `hex` crate dependency",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/427",
@@ -132,7 +145,8 @@
       "help wanted",
       "sv2 pool",
       "template provider"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/476",
@@ -141,7 +155,8 @@
     "labels": [
       "good first issue",
       "help wanted"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/484",
@@ -149,7 +164,8 @@
     "title": "mining-proxy needs graceful death instead of panic",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/677",
@@ -158,7 +174,8 @@
     "labels": [
       "help wanted",
       "log"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/782",
@@ -167,7 +184,8 @@
     "labels": [
       "good first issue",
       "job-declarator-server"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/791",
@@ -178,7 +196,8 @@
       "good first issue",
       "help wanted",
       "translation proxy"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/844",
@@ -187,7 +206,8 @@
     "labels": [
       "bug",
       "job-declarator-client"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/863",
@@ -197,7 +217,8 @@
       "bug",
       "good first issue",
       "job-declarator-client"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/874",
@@ -208,7 +229,8 @@
       "important",
       "sv2 pool",
       "job-declarator-client"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/902",
@@ -216,7 +238,8 @@
     "title": "IdentifyTransactions message not implemented",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
     "url": "https://github.com/stratum-mining/stratum/issues/920",
@@ -225,6 +248,7 @@
     "labels": [
       "bug",
       "job-declarator-client"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]

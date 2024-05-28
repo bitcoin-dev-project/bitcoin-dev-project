@@ -6,7 +6,8 @@
     "labels": [
       "bug",
       "docs"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/2216",
@@ -14,7 +15,8 @@
     "title": "python plugin lib removes line breaks from doc string for help function",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/2482",
@@ -23,7 +25,8 @@
     "labels": [
       "bug",
       "state::needinfo"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/2530",
@@ -34,7 +37,8 @@
       "onchaind",
       "fee",
       "testnet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/2763",
@@ -44,7 +48,8 @@
       "bug",
       "wallet",
       "crash"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/3001",
@@ -55,7 +60,8 @@
       "routing",
       "plugin",
       "pay-plugin"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/3207",
@@ -65,7 +71,8 @@
       "feature",
       "good first issue",
       "plugin"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/3209",
@@ -75,7 +82,8 @@
       "json-rpc",
       "feature",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/3270",
@@ -85,7 +93,8 @@
       "feature",
       "closingd",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/3505",
@@ -94,7 +103,8 @@
     "labels": [
       "cleanup",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/3542",
@@ -102,7 +112,8 @@
     "title": "feature request: config option to change default fundchannel feerate",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/3662",
@@ -113,7 +124,8 @@
       "good first issue",
       "plugin",
       "Feature Request"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/3683",
@@ -123,7 +135,8 @@
       "json-rpc",
       "feature",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/4043",
@@ -132,7 +145,8 @@
     "labels": [
       "good first issue",
       "funding"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/4720",
@@ -141,7 +155,8 @@
     "labels": [
       "good first issue",
       "channel-lease"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/4912",
@@ -150,7 +165,8 @@
     "labels": [
       "logging",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/5127",
@@ -158,7 +174,8 @@
     "title": "Allow setting fee limits on offerout",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/5390",
@@ -167,7 +184,8 @@
     "labels": [
       "testing",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/5603",
@@ -175,7 +193,8 @@
     "title": "`invoice_payment` hook doesn't get replayed when lightningd is restarted",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6093",
@@ -183,7 +202,8 @@
     "title": "pip deploy insie the CI fails",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6163",
@@ -192,7 +212,8 @@
     "labels": [
       "bug",
       "lnd-compat"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6291",
@@ -200,7 +221,8 @@
     "title": "Broadcast failure on 0 conf channel still considers the channel okay.",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6419",
@@ -210,7 +232,8 @@
       "bug",
       "good first issue",
       "UX ✨"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6571",
@@ -220,7 +243,8 @@
       "bug",
       "plugin",
       "in diagnostic"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6626",
@@ -229,7 +253,8 @@
     "labels": [
       "bug",
       "rust"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6637",
@@ -238,7 +263,8 @@
     "labels": [
       "bug",
       "build"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6716",
@@ -246,7 +272,8 @@
     "title": "cln restart loop caused by fee overflow",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6795",
@@ -254,7 +281,8 @@
     "title": "bug: `cln-plugin` cannot properly parse IP addresses",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6799",
@@ -262,7 +290,8 @@
     "title": "Status is saying to wait 8000 years. ",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6891",
@@ -270,7 +299,8 @@
     "title": "Dual-funded channel opening issues",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6909",
@@ -279,7 +309,8 @@
     "labels": [
       "docs",
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/6929",
@@ -288,7 +319,8 @@
     "labels": [
       "bug",
       "wallet"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/7132",
@@ -296,7 +328,8 @@
     "title": "Minor issue/question: Trailing spaces in Config file parameter make CLN fail to start",
     "labels": [
       "good first issue"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/7172",
@@ -304,7 +337,8 @@
     "title": "bitcoind: bad-txns-inputs-missingorspent on sendrawtransaction",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/7305",
@@ -313,7 +347,8 @@
     "labels": [
       "bug",
       "component::onchaind"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
     "url": "https://github.com/ElementsProject/lightning/issues/7333",
@@ -321,6 +356,7 @@
     "title": "Schemas use msat where parameter is actually sat",
     "labels": [
       "bug"
-    ]
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
