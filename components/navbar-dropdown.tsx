@@ -50,7 +50,7 @@ export function NavbarDropDown({
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="menu-button"
-                    ref={wrapperRef}
+                    ref={isMobile ? null : wrapperRef}
                 >
                     <div className="py-1" role="none">
                         {subMenus.map((link) => (
