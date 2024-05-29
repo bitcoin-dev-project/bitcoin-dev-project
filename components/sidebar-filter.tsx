@@ -292,6 +292,12 @@ function CustomMultiCheckBox({
         searchRefInput &&
             searchRefInput.addEventListener("focusin", () => handleFocusIn())
 
+        searchRefInput &&
+            searchRefInput.addEventListener("focus", () => {
+                window.scrollTo(0, 0)
+                document.body.scrollTop = 0
+            })
+
         return () => {
             searchRefInput &&
                 searchRefInput.removeEventListener("focusin", () =>

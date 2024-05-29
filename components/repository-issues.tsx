@@ -94,7 +94,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                         </div>
                     ) : (
                         <div
-                            className={`grid gap-4  ${noIssuesFound ? "grid-col-1" : "sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3"} flex-1`}
+                            className={`grid auto-rows-max gap-4  ${noIssuesFound ? "grid-col-1" : "sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3"} flex-1`}
                         >
                             {noIssuesFound ? (
                                 <div className="w-full flex justify-center items-center">
