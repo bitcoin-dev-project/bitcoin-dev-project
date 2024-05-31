@@ -94,7 +94,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                         </div>
                     ) : (
                         <div
-                            className={`grid gap-4  ${noIssuesFound ? "grid-col-1" : "sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3"} flex-1`}
+                            className={`grid auto-rows-max gap-4  ${noIssuesFound ? "grid-col-1" : "sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-3"} flex-1`}
                         >
                             {noIssuesFound ? (
                                 <div className="w-full flex justify-center items-center">
@@ -129,7 +129,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                 </section>
             </div>
             {open ? (
-                <div className="w-full bg-white absolute top-[78px] bottom-0 opacity-100 z-40 p-4 pt-3 pb-8 overflow-scroll">
+                <div className="w-full bg-white fixed top-[78px] bottom-0 opacity-100 z-40 p-4 pt-3 pb-8 overflow-scroll">
                     <SidebarFilter
                         issues={paginatedResult}
                         toggle={() => setOpen(!open)}
