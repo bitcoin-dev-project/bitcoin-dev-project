@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import React from "react"
+import React, { useState } from "react"
 
 import { useUrlManager } from "@/hooks/useUrlManager"
 import { IssueCardElement } from "@/types"
@@ -14,10 +14,11 @@ import Skeleton from "./skeleton"
 import { usePaginatedResult } from "@/hooks/usePagination"
 import Pagination from "./Pagination"
 import Image from "next/image"
+import useOnclickOut from "@/hooks/useOnclickOut"
 
 const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
     const loading = !issues.length
-    const [open, setOpen] = React.useState(false)
+    const [open, setOpen] = useState(false)
     const toggle = () => setOpen(!open)
     const { currentPage, paginatedResult, setCurrentPage } =
         usePaginatedResult(issues)
@@ -60,16 +61,26 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
         <div className="w-full min-h-[calc(100vh-88px)]">
             <div className="flex w-full gap-6 lg:gap-2 relative">
                 <section className="md:w-full block md:hidden py-6 px-14 lg:px-5 max-h-[calc(100vh-88px)] sticky top-[88px] min-w-fit overflow-y-scroll">
+                    <section className="pb-4 w-full">
+                        <InfoTab />
+                    </section>
                     <SidebarFilter issues={paginatedResult} toggle={() => {}} />
                 </section>
 
                 <section className="flex w-full flex-col items-center gap-6 px-10 lg:px-2 pl-0 md:pl-2 min-h-[calc(100vh-112px)] md:min-h-[calc(100vh-100px)]">
-                    <SearchInput
-                        filtersCount={
-                            filterCount.length === 0 ? null : filterCount.length
-                        }
-                        toggle={toggle}
-                    />
+                    <div className=" w-full">
+                        <section className="hidden md:block pt-6">
+                            <InfoTab />
+                        </section>
+                        <SearchInput
+                            filtersCount={
+                                filterCount.length === 0
+                                    ? null
+                                    : filterCount.length
+                            }
+                            toggle={toggle}
+                        />
+                    </div>
                     {loading || !issues.length || issues.length === 0 ? (
                         <div className="grid gap-4 sm:grid-cols-1 grid-cols-3 w-full">
                             {Array.from({ length: 13 }).map((_, index) => (
@@ -193,5 +204,47 @@ function IssueCard({
                 ))}
             </div>
         </Link>
+    )
+}
+
+function InfoTab() {
+    const { isOpen, wrapperRef, contentRef, toggle } = useOnclickOut()
+
+    return (
+        <div>
+            <div className="w-[300px] lg:w-[250px] md:w-full flex flex-col gap-4 relative">
+                <div
+                    ref={contentRef}
+                    className="bg-gray-100 p-4 rounded-xl flex justify-between gap-4 w-full cursor-pointer"
+                    onClick={toggle}
+                    data-is-open={isOpen}
+                >
+                    <button>
+                        About{" "}
+                        <span className="font-bold">Good first issues</span>
+                    </button>
+                    <span
+                        data-is-open={isOpen}
+                        onClick={toggle}
+                        className="absolute p-2 cursor-pointer top-1/2 -translate-y-1/2 right-[18px] data-[is-open=false]:rotate-180 transition-transform"
+                    >
+                        <Image
+                            src="./up_arrow.svg"
+                            alt="arrow"
+                            width={11}
+                            height={7}
+                        />
+                    </span>
+                </div>
+                <div
+                    ref={wrapperRef}
+                    className={`text-wrap text-[15px] bg-white shadow-md rounded-xl p-4 border-gray-400 border absolute top-16 z-50 ${isOpen ? "block" : "hidden"}`}
+                >
+                    <p>
+                        {`It can be hard to know which bitcoin Free Open Source Software (FOSS) projects to contribute to. This tool lets your search, filter, and sort good first issues from vetted FOSS bitcoin projects. Let's kickstart your journey as a contributor.`}
+                    </p>
+                </div>
+            </div>
+        </div>
     )
 }

@@ -1,7 +1,7 @@
 import { links } from "@/content/data"
 import Link from "next/link"
 import Drawer from "./drawer"
-import { LearnDropDown } from "./learn-dropdown"
+import { NavbarDropDown } from "./navbar-dropdown"
 
 export default function NavBar() {
     return (
@@ -17,7 +17,11 @@ export default function NavBar() {
                     </Link>
                     <Drawer />
                     <div className="md:hidden flex items-center gap-x-[24px] text-base">
-                        <LearnDropDown />
+                        <NavbarDropDown menuItem="Learn" isMobile={false} />
+                        <NavbarDropDown
+                            menuItem="Contribute"
+                            isMobile={false}
+                        />
                         {links.map((link) => (
                             <Link key={link.text} href={link.linkTo}>
                                 {link.text}
