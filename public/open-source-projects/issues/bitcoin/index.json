@@ -301,15 +301,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/23186",
-    "publishedAt": "2021-10-05T13:29:20Z",
-    "title": "Failed assertion during shutdown",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/23234",
     "publishedAt": "2021-10-08T23:23:26Z",
     "title": "Shutdown during reindex-chainstate can block forever",
@@ -719,6 +710,17 @@
     "title": "test: SegFault in `ismine_tests` on SunOS / illumos",
     "labels": [
       "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/30077",
+    "publishedAt": "2024-05-10T03:15:00Z",
+    "title": "RPC: Internal bug in `walletprocesspsbt` when non_witness_utxo is not provided and a witness signature is invalid",
+    "labels": [
+      "Bug",
+      "Wallet",
+      "RPC/REST/ZMQ"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
