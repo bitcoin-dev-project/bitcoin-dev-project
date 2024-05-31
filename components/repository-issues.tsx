@@ -129,7 +129,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                 </section>
             </div>
             {open ? (
-                <div className="w-full bg-white absolute top-[78px] bottom-0 opacity-100 z-40 p-4 pt-3 pb-8 overflow-scroll">
+                <div className="w-full bg-white fixed top-[78px] bottom-0 opacity-100 z-40 p-4 pt-3 pb-8 overflow-scroll">
                     <SidebarFilter
                         issues={paginatedResult}
                         toggle={() => setOpen(!open)}

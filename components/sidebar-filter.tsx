@@ -332,7 +332,7 @@ function CustomMultiCheckBox({
                             type="text"
                             placeholder={placeholder}
                             onChange={(e) => {
-                                e.preventDefault
+                                e.preventDefault()
                                 setSearchTerm(e.target.value)
                             }}
                             value={searchTerm}
