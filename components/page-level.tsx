@@ -53,10 +53,7 @@ export default function PageLevel({
             )}
             <div className="flex w-full justify-between gap-y-5 md:gap-y-12 flex-wrap lg:flex-col">
                 {level.items.map((item) => (
-                    <Link
-                        target="_blank"
-                        rel="noopener"
-                        href={item.link}
+                    <div
                         key={item.title}
                         className="flex p-6 md:p-0 gap-x-6 w-[48%] lg:w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline md:hover:outline-none hover:bg-[#FCFCFC] md:hover:bg-none md:flex-col"
                     >
@@ -69,18 +66,50 @@ export default function PageLevel({
                                 sizes="(max-width: 768px) 100vw, (min-width: 769px) 20vw"
                             />
                         </div>
-                        <div className="flex flex-col gap-y-[6px] my-4 flex-shrink">
-                            <h3 className="text-4xl md:text-2xl font-semibold">
-                                {item.title}
-                            </h3>
-                            <p className="text-3xl md:text-xl font-semibold text-green">
-                                {item.subTitle}
-                            </p>
-                            <p className="flex flex-shrink-1 text-lg leading-[140%] md:text-justify">
-                                {item.description}
-                            </p>
+                        <div>
+                            <div className="flex flex-col gap-y-[6px] my-4 flex-shrink">
+                                <h3 className="text-4xl md:text-2xl font-semibold">
+                                    {item.title}
+                                </h3>
+                                <p className="text-3xl md:text-xl font-semibold text-green">
+                                    {item.subTitle}
+                                </p>
+                                <p className="flex flex-shrink-1 text-lg leading-[140%] md:text-justify">
+                                    {item.description}
+                                </p>
+                            </div>
+                            <div className="flex gap-3">
+                                <Link
+                                    href={item.link}
+                                    rel="noopener"
+                                    target="_blank"
+                                    className="w-fit flex gap-2 text-nowrap whitespace-nowrap"
+                                >
+                                    <Image
+                                        alt={"github icon"}
+                                        src={"./github-icon.svg"}
+                                        width={24}
+                                        height={24}
+                                    />
+                                    GitHub
+                                </Link>
+                                {item.repo ? (
+                                    <Link
+                                        href={`good-first-issues/?repo=${item.repo ?? ""}`}
+                                        className="w-fit flex gap-1.5 text-nowrap whitespace-nowrap"
+                                    >
+                                        <Image
+                                            alt={"github icon"}
+                                            src={"./issues-icon.svg"}
+                                            width={24}
+                                            height={24}
+                                        />
+                                        Good first Issues
+                                    </Link>
+                                ) : null}
+                            </div>
                         </div>
-                    </Link>
+                    </div>
                 ))}
             </div>
         </div>
