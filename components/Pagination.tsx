@@ -30,11 +30,11 @@ const Pagination = ({ pages, currentPage, setCurrentPage }: IPagination) => {
         let pagesArray = []
         let start, end
 
+        if (pages === 0) {
+            return []
+        }
         // Always show the first page
         pagesArray.push(1)
-        if (currentPage === pages) {
-            pagesArray.push(2)
-        }
 
         // Calculate the dynamic window of pages around the current page
         start = Math.max(2, currentPage - 2)
@@ -50,7 +50,7 @@ const Pagination = ({ pages, currentPage, setCurrentPage }: IPagination) => {
         if (end < pages - 1) {
             pagesArray.push("...")
         }
-        if (end < pages) {
+        if (end < pages && pages >= 2) {
             pagesArray.push(pages)
         }
 
