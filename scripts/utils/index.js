@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.swapImageUrl = exports.applySearch = exports.applyFilter = exports.applySort = exports.filterIssues = exports.createSortKeys = exports.getValues = exports.FILTERTAGS = exports.ISSUEOPTIONS = exports.SORTOPTIONS = void 0;
-exports.SORTOPTIONS = ["sort", "relevance", "newest first", "oldest first"];
+exports.shuffle = exports.swapImageUrl = exports.applySearch = exports.applyFilter = exports.applySort = exports.filterIssues = exports.createSortKeys = exports.getValues = exports.FILTERTAGS = exports.ISSUEOPTIONS = exports.SORTOPTIONS = void 0;
+exports.SORTOPTIONS = ["sort", "randomn", "newest first", "oldest first"];
 exports.ISSUEOPTIONS = ["labels", "good first issue", "bug", "help wanted"];
 exports.FILTERTAGS = [
     "search",
@@ -56,7 +56,7 @@ exports.filterIssues = filterIssues;
 // Sorts according to newest-issues, oldest-issues and relevance which is the default state
 const applySort = (sortKey, result) => {
     switch (sortKey) {
-        case "relevance":
+        case "randomn":
             return result;
         case "newest-first":
             return result.sort((a, b) => new Date(b.publishedAt).getTime() -
@@ -123,6 +123,19 @@ const applySearch = (searchQuery, result) => {
     });
 };
 exports.applySearch = applySearch;
+function shuffle(data) {
+    let currIndex = data.length;
+    while (currIndex !== 0) {
+        let randomIndex = Math.floor(Math.random() * currIndex);
+        currIndex--;
+        [data[currIndex], data[randomIndex]] = [
+            data[randomIndex],
+            data[currIndex]
+        ];
+    }
+    return data;
+}
+exports.shuffle = shuffle;
 const swapImageUrl = (name, imageUrl) => {
     switch (name) {
         case "polar":

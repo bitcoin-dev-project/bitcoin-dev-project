@@ -20,8 +20,6 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
     const loading = !issues.length
     const [open, setOpen] = useState(false)
     const toggle = () => setOpen(!open)
-    const { currentPage, paginatedResult, setCurrentPage } =
-        usePaginatedResult(issues)
 
     React.useEffect(() => {
         document.body.classList.toggle("overflow-hidden", open)
@@ -31,19 +29,23 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
         currentFilterValues,
         currentFilterValuesAndKeys,
         sortKey,
-        searchQuery
+        searchQuery,
+        addFilterParam
     } = useUrlManager()
 
     const memoizedIssues = React.useMemo(
         () =>
             filterIssues(
                 currentFilterValuesAndKeys,
-                paginatedResult,
+                issues,
                 sortKey,
                 searchQuery
             ),
-        [currentFilterValuesAndKeys, paginatedResult, sortKey, searchQuery]
+        [currentFilterValuesAndKeys, issues, sortKey, searchQuery]
     )
+
+    const { currentPage, paginatedResult, setCurrentPage } =
+        usePaginatedResult(memoizedIssues)
 
     const filterCount = currentFilterValuesAndKeys.filter(
         (v) => v.key !== "search" && v.key !== "sort"
@@ -52,10 +54,10 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
     const pageSize = 15
 
     const pages = React.useMemo(
-        () => Math.ceil((issues?.length ?? 0) / pageSize),
-        [issues?.length]
+        () => Math.ceil((memoizedIssues?.length ?? 0) / pageSize),
+        [memoizedIssues?.length]
     )
-    const noIssuesFound = memoizedIssues.length === 0
+    const noIssuesFound = paginatedResult.length === 0
 
     return (
         <div className="w-full min-h-[calc(100vh-88px)]">
@@ -64,7 +66,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                     <section className="pb-4 w-full">
                         <InfoTab />
                     </section>
-                    <SidebarFilter issues={paginatedResult} toggle={() => {}} />
+                    <SidebarFilter issues={issues} toggle={() => {}} />
                 </section>
 
                 <section className="flex w-full flex-col items-center gap-6 px-10 lg:px-2 pl-0 md:pl-2 min-h-[calc(100vh-112px)] md:min-h-[calc(100vh-100px)]">
@@ -103,7 +105,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                                     </p>
                                 </div>
                             ) : (
-                                memoizedIssues.map((issue, index) => (
+                                paginatedResult.map((issue, index) => (
                                     <section
                                         key={`issue-${index}-${issue.number}`}
                                     >
@@ -113,6 +115,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                                             }
                                             index={index}
                                             keys={currentFilterValues}
+                                            addFilterParam={addFilterParam}
                                         />
                                     </section>
                                 ))
@@ -131,7 +134,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
             {open ? (
                 <div className="w-full bg-white fixed top-[78px] bottom-0 opacity-100 z-40 p-4 pt-3 pb-8 overflow-scroll">
                     <SidebarFilter
-                        issues={paginatedResult}
+                        issues={issues}
                         toggle={() => setOpen(!open)}
                     />
                 </div>
@@ -145,23 +148,27 @@ export default RepositoryIssues
 function IssueCard({
     issue,
     index,
-    keys
+    keys,
+    addFilterParam
 }: {
     issue: IssueCardElement
     index: number
     keys: string[]
+    addFilterParam: (key: string, value: string) => void
 }) {
     return (
-        <Link
+        <div
             key={`issue-${index}-${issue.number}`}
-            className="flex flex-col justify-between min-h-[216px] md:min-h-36 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md"
-            href={issue.url}
-            rel="noopener noreferrer"
-            target="_blank"
+            className="flex flex-col justify-between min-h-[216px] md:min-h-36 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-all hover:shadow-md"
         >
             <div className="flex flex-col justify-between">
                 <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <section className="flex gap-2 items-center">
+                    <section
+                        className="flex gap-2 items-center cursor-pointer"
+                        onClick={() =>
+                            addFilterParam("repo", issue.repo.toLowerCase())
+                        }
+                    >
                         {issue.imageUrl ? (
                             <Image
                                 src={issue?.imageUrl}
@@ -173,7 +180,7 @@ function IssueCard({
                         ) : (
                             <div className="w-6 h-6 bg-gray-100 rounded-md"></div>
                         )}
-                        <span className="text-sm font-medium text-gray-500">
+                        <span className="text-sm font-medium text-gray-500 capitalize">
                             {`${issue.repo}/${issue.owner}`}
                         </span>
                     </section>
@@ -188,10 +195,15 @@ function IssueCard({
                         )}{" "}
                     </span>
                 </div>
-                <h3 className="mt-2 text-lg md:text-base font-medium text-gray-900 text-wrap break-words">
+                <Link
+                    href={issue.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="mt-2 text-lg md:text-base font-medium text-gray-900 text-wrap break-words"
+                >
                     <span className="text-gray-500">#{issue.number}</span>{" "}
                     {issue.title}
-                </h3>
+                </Link>
             </div>
             <div className="flex flex-wrap mt-2 gap-2">
                 {issue.languages.map((lang) => (
@@ -200,10 +212,11 @@ function IssueCard({
                         name={lang}
                         className="mr-2"
                         keys={keys}
+                        addFilterParam={addFilterParam}
                     />
                 ))}
             </div>
-        </Link>
+        </div>
     )
 }
 
