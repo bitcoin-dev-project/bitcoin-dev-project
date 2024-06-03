@@ -194,7 +194,7 @@ function CustomSortSelect({ args }: { args: string[] }) {
 
     const currentSortKey = sortKeys.find(
         (sort_key) => sort_key.key === url_sort_key
-    ) ?? { key: "relevance", label: "relevance" }
+    ) ?? { key: "randomn", label: "randomn" }
 
     useEffect(() => {
         const handleFocusOut = (e: MouseEvent) => {
@@ -315,6 +315,7 @@ function CustomMultiCheckBox({
     const filterArgs = useMemo(() => {
         if (searchTerm === "") return args.slice(1)
         return args
+            .slice(1)
             .map((arg) => arg.toLowerCase())
             .filter((arg) =>
                 arg.toLowerCase().includes(searchTerm.toLowerCase())
@@ -366,7 +367,6 @@ function CustomMultiCheckBox({
                 <section
                     onBlur={(e) => {
                         e.stopPropagation()
-                        console.log("blur")
                         setOpen(false)
                     }}
                     id="filter-section-dropdown"
