@@ -278,7 +278,7 @@ function CustomMultiCheckBox({
     placeholder: string
     args: string[]
 }) {
-    const { addFilterParam, currentFilterValues } = useUrlManager()
+    const { addFilterParam, currentFilterValues, urlParams } = useUrlManager()
     const [searchTerm, setSearchTerm] = useState("")
     const searchRef = useRef<HTMLInputElement>(null)
     const { wrapperRef, contentRef, isOpen, setOpen } = useOnclickOut()
@@ -307,20 +307,33 @@ function CustomMultiCheckBox({
     }, [isOpen, setOpen])
 
     const addFilter = (value: string) => {
+        urlParams.set("page", String(1))
         addFilterParam(args[0].toLowerCase(), value)
     }
 
     const isSelected = (value: string) => currentFilterValues.includes(value)
 
     const filterArgs = useMemo(() => {
-        if (searchTerm === "") return args.slice(1)
+        const getBooleanValue = (value: string) =>
+            currentFilterValues.includes(value)
+
+        if (searchTerm === "")
+            return args
+                .map((val) => ({
+                    title: val,
+                    isSelected: getBooleanValue(val)
+                }))
+                .slice(1)
         return args
             .slice(1)
-            .map((arg) => arg.toLowerCase())
+            .map((arg) => ({
+                title: arg.toLowerCase(),
+                isSelected: getBooleanValue(arg)
+            }))
             .filter((arg) =>
-                arg.toLowerCase().includes(searchTerm.toLowerCase())
+                arg.title.toLowerCase().includes(searchTerm.toLowerCase())
             )
-    }, [args, searchTerm])
+    }, [args, searchTerm, currentFilterValues])
 
     return (
         <div className="w-full flex flex-col gap-4">
@@ -378,31 +391,39 @@ function CustomMultiCheckBox({
                             No matching options
                         </p>
                     )}
-                    {filterArgs.map((item, index) => (
-                        <div
-                            key={`${item}_${index}`}
-                            onClick={() => addFilter(item)}
-                            data-selected={isSelected(item)}
-                            className="group"
-                        >
-                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
-                                <Image
-                                    className="group-data-[selected=false]:invisible"
-                                    src="./lightning_icon_filled.svg"
-                                    height={16}
-                                    width={16}
-                                    alt=""
-                                />
-                                <span
-                                    className={
-                                        "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
-                                    }
-                                >
-                                    {item}
-                                </span>
+                    {filterArgs
+                        .sort((a, b) => {
+                            return a.isSelected === b.isSelected
+                                ? 0
+                                : a.isSelected
+                                  ? -1
+                                  : 1
+                        })
+                        .map((item, index) => (
+                            <div
+                                key={`${item}_${index}`}
+                                onClick={() => addFilter(item.title)}
+                                data-selected={isSelected(item.title)}
+                                className="group"
+                            >
+                                <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
+                                    <Image
+                                        className="group-data-[selected=false]:invisible"
+                                        src="./lightning_icon_filled.svg"
+                                        height={16}
+                                        width={16}
+                                        alt=""
+                                    />
+                                    <span
+                                        className={
+                                            "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
+                                        }
+                                    >
+                                        {item.title}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                 </section>
             </div>
         </div>
