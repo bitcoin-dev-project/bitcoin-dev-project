@@ -1,5 +1,6 @@
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import React from "react"
 import { FILTERTAGS } from "@/utils"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 export const useUrlManager = () => {
     const router = useRouter()
@@ -7,8 +8,30 @@ export const useUrlManager = () => {
     const searchParams = useSearchParams()
     const urlParams = new URLSearchParams(searchParams)
 
+    const currentFilterValuesAndKeys = FILTERTAGS.flatMap((key) => {
+        if (!urlParams.has(key)) {
+            return []
+        }
+
+        return urlParams.getAll(key).map((val) => ({ key, filter: val }))
+    })
+
     const addFilterParam = (key: string, value: string) => {
+        const onlyFilterValues = currentFilterValuesAndKeys.filter(
+            (v) => v.key !== "search" && v.key !== "sort"
+        )
+
+        const isFilterValuePresent = onlyFilterValues.some(
+            (val) => val.filter === value
+        )
+
+        if (isFilterValuePresent) {
+            deleteFilterParam(key, value)
+            return
+        }
+
         const filterGroup = urlParams.getAll(key)
+
         if (filterGroup.includes(value)) return
         if (key) {
             urlParams.append(key, value)
@@ -50,6 +73,8 @@ export const useUrlManager = () => {
     }
 
     const clearAllFilters = () => {
+        urlParams.set("page", String(1))
+
         const allKeys = FILTERTAGS.flatMap((key) => {
             if (!urlParams.has(key)) {
                 return []
@@ -62,14 +87,6 @@ export const useUrlManager = () => {
         router.push(`${pathname}?${urlParams.toString()}`)
     }
 
-    const currentFilterValuesAndKeys = FILTERTAGS.flatMap((key) => {
-        if (!urlParams.has(key)) {
-            return []
-        }
-
-        return urlParams.getAll(key).map((val) => ({ key, filter: val }))
-    })
-
     const currentFilterValues = FILTERTAGS.flatMap((key) => {
         if (!urlParams.has(key)) {
             return []
@@ -77,6 +94,17 @@ export const useUrlManager = () => {
 
         return urlParams.getAll(key)
     })
+
+    const pageNumber = urlParams.get("page")
+
+    const handleNextPage = (
+        page: number,
+        setCurrentPage: React.Dispatch<React.SetStateAction<number>>
+    ) => {
+        urlParams.set("page", String(page))
+        setCurrentPage(page)
+        router.replace(`${pathname}?${urlParams.toString()}`)
+    }
 
     return {
         addFilterParam,
@@ -88,6 +116,9 @@ export const useUrlManager = () => {
         sortKey,
         searchQuery,
         addSearchQuery,
-        urlParams
+        urlParams,
+        pageNumber,
+        router,
+        handleNextPage
     }
 }
