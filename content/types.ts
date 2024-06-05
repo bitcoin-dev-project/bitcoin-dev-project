@@ -10,6 +10,7 @@ export type Page = {
             subTitle: string
             description: string
             link: string
+            repo?: string
         }>
     }>
 }
