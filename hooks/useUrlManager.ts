@@ -16,24 +16,52 @@ export const useUrlManager = () => {
         return urlParams.getAll(key).map((val) => ({ key, filter: val }))
     })
 
+    const onlyFilterValues = currentFilterValuesAndKeys.filter(
+        (v) => v.key !== "search" && v.key !== "sort"
+    )
+
+    const extractFilterValues = () => {
+        let filterValues: typeof onlyFilterValues = []
+
+        onlyFilterValues.map((val) => {
+            const splitValues = val.filter
+                .split(",")
+                .map((filter) => ({ key: val.key, filter }))
+            filterValues.push(...splitValues)
+        })
+        return { filterValues }
+    }
+
     const addFilterParam = (key: string, value: string) => {
-        const onlyFilterValues = currentFilterValuesAndKeys.filter(
-            (v) => v.key !== "search" && v.key !== "sort"
-        )
+        value = value.toLowerCase()
+        // if the urlParams already have the filter key
+        if (urlParams.has(key)) {
+            const isFilterPresent = urlParams
+                .get(key)
+                ?.split(",")
+                .includes(value)
 
-        const isFilterValuePresent = onlyFilterValues.some(
-            (val) => val.filter === value
-        )
+            // if the urlParams already have the filter key and the filter value is present
+            if (isFilterPresent) {
+                // delete key and filter param
+                const valueInCheck = urlParams
+                    .get(key)
+                    ?.split(",")
+                    .find((params) => params === value)
 
-        if (isFilterValuePresent) {
-            deleteFilterParam(key, value)
-            return
-        }
+                if (valueInCheck) {
+                    deleteFilterParam(key, valueInCheck)
+                }
+            } else {
+                // if urlParam already have the filter key and the filter value is not present
+                const getKeysAndJoin = [...urlParams.getAll(key), value].join(
+                    ","
+                )
 
-        const filterGroup = urlParams.getAll(key)
-
-        if (filterGroup.includes(value)) return
-        if (key) {
+                urlParams.set(key, getKeysAndJoin)
+            }
+        } else {
+            // if urlParams doesn't have the key
             urlParams.append(key, value)
         }
 
@@ -65,10 +93,21 @@ export const useUrlManager = () => {
     }
 
     const deleteFilterParam = (key: string, value: string) => {
-        const filterGroup = urlParams.getAll(key)
-        if (!filterGroup.includes(value)) return
+        const filterGroup = urlParams.get(key)?.split(",")
 
-        urlParams.delete(key, value)
+        if (filterGroup) {
+            if (!filterGroup.includes(value)) return
+
+            const valueToDelete = filterGroup
+                ?.filter((val) => val !== value)
+                .join(",")
+
+            if (filterGroup?.length === 1) urlParams.delete(key, value)
+            else {
+                urlParams.set(key, valueToDelete)
+            }
+        }
+
         router.push(`${pathname}?${urlParams.toString()}`)
     }
 
@@ -119,6 +158,7 @@ export const useUrlManager = () => {
         urlParams,
         pageNumber,
         router,
-        handleNextPage
+        handleNextPage,
+        extractFilterValues
     }
 }
