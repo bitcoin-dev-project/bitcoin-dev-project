@@ -243,16 +243,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/22522",
-    "publishedAt": "2021-07-22T00:24:58Z",
-    "title": "build, android: `make apk` fails if depends source cache is in a non-default location",
-    "labels": [
-      "Bug",
-      "Build system"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/22559",
     "publishedAt": "2021-07-26T21:35:29Z",
     "title": "net: redundant connections with a single peer",
@@ -699,15 +689,6 @@
     "url": "https://github.com/bitcoin/bitcoin/issues/29711",
     "publishedAt": "2024-03-23T17:58:53Z",
     "title": "Wallet: Nondescript error message for 502nd unconfirmed transaction",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/29908",
-    "publishedAt": "2024-04-18T22:00:51Z",
-    "title": "test: SegFault in `ismine_tests` on SunOS / illumos",
     "labels": [
       "Bug"
     ],
