@@ -56,7 +56,7 @@ exports.filterIssues = filterIssues;
 // Sorts according to newest-issues, oldest-issues and relevance which is the default state
 const applySort = (sortKey, result) => {
     switch (sortKey) {
-        case "randomn":
+        case "random":
             return result;
         case "newest-first":
             return result.sort((a, b) => new Date(b.publishedAt).getTime() -

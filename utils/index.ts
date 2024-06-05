@@ -1,6 +1,6 @@
 import type { IssueCardElement } from "../types"
 
-export const SORTOPTIONS = ["sort", "randomn", "newest first", "oldest first"]
+export const SORTOPTIONS = ["sort", "random", "newest first", "oldest first"]
 
 export const ISSUEOPTIONS = ["labels", "good first issue", "bug", "help wanted"]
 
@@ -82,7 +82,7 @@ export const applySort = (
     result: IssueCardElement[]
 ) => {
     switch (sortKey) {
-        case "randomn":
+        case "random":
             return result
         case "newest-first":
             return result.sort(

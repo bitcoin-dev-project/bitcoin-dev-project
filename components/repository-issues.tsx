@@ -25,31 +25,16 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
         document.body.classList.toggle("overflow-hidden", open)
     }, [open])
 
-    const {
-        currentFilterValues,
-        currentFilterValuesAndKeys,
-        sortKey,
-        searchQuery,
-        addFilterParam
-    } = useUrlManager()
-
+    const { extractFilterValues, sortKey, searchQuery, addFilterParam } =
+        useUrlManager()
+    const { filterValues } = extractFilterValues()
     const memoizedIssues = React.useMemo(
-        () =>
-            filterIssues(
-                currentFilterValuesAndKeys,
-                issues,
-                sortKey,
-                searchQuery
-            ),
-        [currentFilterValuesAndKeys, issues, sortKey, searchQuery]
+        () => filterIssues(filterValues, issues, sortKey, searchQuery),
+        [filterValues, issues, sortKey, searchQuery]
     )
 
     const { currentPage, paginatedResult, setCurrentPage } =
         usePaginatedResult(memoizedIssues)
-
-    const filterCount = currentFilterValuesAndKeys.filter(
-        (v) => v.key !== "search" && v.key !== "sort"
-    )
 
     const pageSize = 15
 
@@ -76,9 +61,9 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                         </section>
                         <SearchInput
                             filtersCount={
-                                filterCount.length === 0
+                                filterValues.length === 0
                                     ? null
-                                    : filterCount.length
+                                    : filterValues.length
                             }
                             toggle={toggle}
                         />
@@ -114,7 +99,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                                                 issue as unknown as IssueCardElement
                                             }
                                             index={index}
-                                            keys={currentFilterValues}
+                                            keys={filterValues}
                                             addFilterParam={addFilterParam}
                                         />
                                     </section>
@@ -153,7 +138,7 @@ function IssueCard({
 }: {
     issue: IssueCardElement
     index: number
-    keys: string[]
+    keys: Array<{ [key: string]: string }>
     addFilterParam: (key: string, value: string) => void
 }) {
     return (

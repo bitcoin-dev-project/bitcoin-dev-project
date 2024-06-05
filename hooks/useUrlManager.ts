@@ -32,6 +32,18 @@ export const useUrlManager = () => {
         return { filterValues }
     }
 
+    const addBadgeFilterParam = (key: string, value: string) => {
+        value = value.toLowerCase()
+
+        if (urlParams.get(key) === value) {
+            urlParams.delete(key, value)
+        } else {
+            urlParams.set(key, value)
+        }
+
+        router.push(`${pathname}?${urlParams.toString()}`)
+    }
+
     const addFilterParam = (key: string, value: string) => {
         value = value.toLowerCase()
         // if the urlParams already have the filter key
@@ -147,6 +159,7 @@ export const useUrlManager = () => {
 
     return {
         addFilterParam,
+        addBadgeFilterParam,
         currentFilterValues,
         currentFilterValuesAndKeys,
         deleteFilterParam,

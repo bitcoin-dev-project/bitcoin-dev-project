@@ -1,5 +1,5 @@
 import Image from "next/image"
-import React, { useEffect, useMemo, useRef, useState } from "react"
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 
 import { useUrlManager } from "@/hooks/useUrlManager"
 import { IssueCardElement } from "@/types"
@@ -18,8 +18,6 @@ const SidebarFilter = ({
     toggle: () => void
     issues: IssueCardElement[]
 }) => {
-    const { currentFilterValuesAndKeys } = useUrlManager()
-
     const { properties: languages } = getValues({ key: "languages", issues })
     const { properties: tags } = getValues({ key: "tags", issues })
     const { properties: repos } = getValues({ key: "repo", issues })
@@ -51,10 +49,7 @@ const SidebarFilter = ({
 
     return (
         <div className="w-[300px] lg:w-[250px] md:w-full flex flex-col gap-5">
-            <FilterMenu
-                filterFields={currentFilterValuesAndKeys}
-                toggle={toggle}
-            />
+            <FilterMenu toggle={toggle} />
 
             <section className="flex flex-col gap-4 w-full">
                 <div className="flex items-center gap-2">
@@ -81,18 +76,10 @@ const SidebarFilter = ({
 
 export default SidebarFilter
 
-function FilterMenu({
-    filterFields,
-    toggle
-}: {
-    filterFields: Array<{ [key: string]: string }>
-    toggle: () => void
-}) {
-    const { deleteFilterParam, clearAllFilters } = useUrlManager()
-
-    filterFields = filterFields.filter(
-        (v) => v.key !== "search" && v.key !== "sort"
-    )
+function FilterMenu({ toggle }: { toggle: () => void }) {
+    const { deleteFilterParam, clearAllFilters, extractFilterValues } =
+        useUrlManager()
+    const { filterValues } = extractFilterValues()
 
     return (
         <>
@@ -120,7 +107,7 @@ function FilterMenu({
                     </button>
                 </div>
             </div>
-            {filterFields.length ? (
+            {filterValues.length ? (
                 <div className="flex flex-col gap-4 border-b-gray-400 border-b pb-7">
                     <section className="flex items-center justify-between">
                         <p className="text-base font-bold">Applied Filters</p>
@@ -139,7 +126,7 @@ function FilterMenu({
                         </button>
                     </section>
                     <div className="flex flex-wrap gap-2">
-                        {filterFields?.map((v) => (
+                        {filterValues?.map((v) => (
                             <section key={v.filter}>
                                 <FilterPill
                                     text={v.filter}
@@ -194,7 +181,7 @@ function CustomSortSelect({ args }: { args: string[] }) {
 
     const currentSortKey = sortKeys.find(
         (sort_key) => sort_key.key === url_sort_key
-    ) ?? { key: "randomn", label: "randomn" }
+    ) ?? { key: "random", label: "random" }
 
     useEffect(() => {
         const handleFocusOut = (e: MouseEvent) => {
@@ -278,7 +265,8 @@ function CustomMultiCheckBox({
     placeholder: string
     args: string[]
 }) {
-    const { addFilterParam, currentFilterValues, urlParams } = useUrlManager()
+    const { addFilterParam, urlParams, extractFilterValues } = useUrlManager()
+    const { filterValues } = extractFilterValues()
     const [searchTerm, setSearchTerm] = useState("")
     const searchRef = useRef<HTMLInputElement>(null)
     const { wrapperRef, contentRef, isOpen, setOpen } = useOnclickOut()
@@ -311,29 +299,32 @@ function CustomMultiCheckBox({
         addFilterParam(args[0].toLowerCase(), value)
     }
 
-    const isSelected = (value: string) => currentFilterValues.includes(value)
+    const isSelected = useCallback(
+        (value: string) =>
+            filterValues.some(
+                (val) => val.filter.toLowerCase() === value.toLowerCase()
+            ),
+        [filterValues]
+    )
 
     const filterArgs = useMemo(() => {
-        const getBooleanValue = (value: string) =>
-            currentFilterValues.includes(value)
-
         if (searchTerm === "")
             return args
                 .map((val) => ({
                     title: val,
-                    isSelected: getBooleanValue(val)
+                    isSelected: isSelected(val)
                 }))
                 .slice(1)
         return args
             .slice(1)
             .map((arg) => ({
                 title: arg.toLowerCase(),
-                isSelected: getBooleanValue(arg)
+                isSelected: isSelected(arg)
             }))
             .filter((arg) =>
                 arg.title.toLowerCase().includes(searchTerm.toLowerCase())
             )
-    }, [args, searchTerm, currentFilterValues])
+    }, [args, searchTerm, isSelected])
 
     return (
         <div className="w-full flex flex-col gap-4">
