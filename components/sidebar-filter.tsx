@@ -77,9 +77,13 @@ const SidebarFilter = ({
 export default SidebarFilter
 
 function FilterMenu({ toggle }: { toggle: () => void }) {
-    const { deleteFilterParam, clearAllFilters, extractFilterValues } =
-        useUrlManager()
-    const { filterValues } = extractFilterValues()
+    const {
+        deleteFilterParam,
+        clearAllFilters,
+        extractFilterValues,
+        onlyFilterValues
+    } = useUrlManager()
+    const { filterValues } = extractFilterValues(onlyFilterValues)
 
     return (
         <>
@@ -265,8 +269,9 @@ function CustomMultiCheckBox({
     placeholder: string
     args: string[]
 }) {
-    const { addFilterParam, urlParams, extractFilterValues } = useUrlManager()
-    const { filterValues } = extractFilterValues()
+    const { addFilterParam, urlParams, extractFilterValues, onlyFilterValues } =
+        useUrlManager()
+    const { filterValues } = extractFilterValues(onlyFilterValues)
     const [searchTerm, setSearchTerm] = useState("")
     const searchRef = useRef<HTMLInputElement>(null)
     const { wrapperRef, contentRef, isOpen, setOpen } = useOnclickOut()

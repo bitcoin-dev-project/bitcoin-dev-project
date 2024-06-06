@@ -25,12 +25,24 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
         document.body.classList.toggle("overflow-hidden", open)
     }, [open])
 
-    const { extractFilterValues, sortKey, searchQuery, addFilterParam } =
-        useUrlManager()
-    const { filterValues } = extractFilterValues()
+    const {
+        extractFilterValues,
+        currentFilterValuesAndKeys,
+        onlyFilterValues,
+        sortKey,
+        searchQuery,
+        addFilterParam
+    } = useUrlManager()
+
+    const { filterValues: filterSortSearchValues } = extractFilterValues(
+        currentFilterValuesAndKeys
+    )
+    const { filterValues } = extractFilterValues(onlyFilterValues)
+
     const memoizedIssues = React.useMemo(
-        () => filterIssues(filterValues, issues, sortKey, searchQuery),
-        [filterValues, issues, sortKey, searchQuery]
+        () =>
+            filterIssues(filterSortSearchValues, issues, sortKey, searchQuery),
+        [filterSortSearchValues, issues, sortKey, searchQuery]
     )
 
     const { currentPage, paginatedResult, setCurrentPage } =
@@ -165,7 +177,7 @@ function IssueCard({
                         ) : (
                             <div className="w-6 h-6 bg-gray-100 rounded-md"></div>
                         )}
-                        <span className="text-sm font-medium text-gray-500 capitalize">
+                        <span className="text-sm font-medium text-gray-500 capitalize hover:text-black hover:font-semibold">
                             {`${issue.repo}/${issue.owner}`}
                         </span>
                     </section>

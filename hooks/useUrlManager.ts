@@ -20,15 +20,16 @@ export const useUrlManager = () => {
         (v) => v.key !== "search" && v.key !== "sort"
     )
 
-    const extractFilterValues = () => {
+    const extractFilterValues = (args: typeof onlyFilterValues) => {
         let filterValues: typeof onlyFilterValues = []
 
-        onlyFilterValues.map((val) => {
+        args.map((val) => {
             const splitValues = val.filter
                 .split(",")
                 .map((filter) => ({ key: val.key, filter }))
             filterValues.push(...splitValues)
         })
+
         return { filterValues }
     }
 
@@ -162,6 +163,7 @@ export const useUrlManager = () => {
         addBadgeFilterParam,
         currentFilterValues,
         currentFilterValuesAndKeys,
+        onlyFilterValues,
         deleteFilterParam,
         clearAllFilters,
         addSortParam,
