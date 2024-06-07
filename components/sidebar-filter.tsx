@@ -1,5 +1,5 @@
 import Image from "next/image"
-import React, { useEffect, useMemo, useRef, useState } from "react"
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 
 import { useUrlManager } from "@/hooks/useUrlManager"
 import { IssueCardElement } from "@/types"
@@ -18,8 +18,6 @@ const SidebarFilter = ({
     toggle: () => void
     issues: IssueCardElement[]
 }) => {
-    const { currentFilterValuesAndKeys } = useUrlManager()
-
     const { properties: languages } = getValues({ key: "languages", issues })
     const { properties: tags } = getValues({ key: "tags", issues })
     const { properties: repos } = getValues({ key: "repo", issues })
@@ -51,10 +49,7 @@ const SidebarFilter = ({
 
     return (
         <div className="w-[300px] lg:w-[250px] md:w-full flex flex-col gap-5">
-            <FilterMenu
-                filterFields={currentFilterValuesAndKeys}
-                toggle={toggle}
-            />
+            <FilterMenu toggle={toggle} />
 
             <section className="flex flex-col gap-4 w-full">
                 <div className="flex items-center gap-2">
@@ -81,18 +76,14 @@ const SidebarFilter = ({
 
 export default SidebarFilter
 
-function FilterMenu({
-    filterFields,
-    toggle
-}: {
-    filterFields: Array<{ [key: string]: string }>
-    toggle: () => void
-}) {
-    const { deleteFilterParam, clearAllFilters } = useUrlManager()
-
-    filterFields = filterFields.filter(
-        (v) => v.key !== "search" && v.key !== "sort"
-    )
+function FilterMenu({ toggle }: { toggle: () => void }) {
+    const {
+        deleteFilterParam,
+        clearAllFilters,
+        extractFilterValues,
+        onlyFilterValues
+    } = useUrlManager()
+    const { filterValues } = extractFilterValues(onlyFilterValues)
 
     return (
         <>
@@ -120,7 +111,7 @@ function FilterMenu({
                     </button>
                 </div>
             </div>
-            {filterFields.length ? (
+            {filterValues.length ? (
                 <div className="flex flex-col gap-4 border-b-gray-400 border-b pb-7">
                     <section className="flex items-center justify-between">
                         <p className="text-base font-bold">Applied Filters</p>
@@ -139,7 +130,7 @@ function FilterMenu({
                         </button>
                     </section>
                     <div className="flex flex-wrap gap-2">
-                        {filterFields?.map((v) => (
+                        {filterValues?.map((v) => (
                             <section key={v.filter}>
                                 <FilterPill
                                     text={v.filter}
@@ -194,7 +185,7 @@ function CustomSortSelect({ args }: { args: string[] }) {
 
     const currentSortKey = sortKeys.find(
         (sort_key) => sort_key.key === url_sort_key
-    ) ?? { key: "relevance", label: "relevance" }
+    ) ?? { key: "random", label: "random" }
 
     useEffect(() => {
         const handleFocusOut = (e: MouseEvent) => {
@@ -278,7 +269,9 @@ function CustomMultiCheckBox({
     placeholder: string
     args: string[]
 }) {
-    const { addFilterParam, currentFilterValues } = useUrlManager()
+    const { addFilterParam, urlParams, extractFilterValues, onlyFilterValues } =
+        useUrlManager()
+    const { filterValues } = extractFilterValues(onlyFilterValues)
     const [searchTerm, setSearchTerm] = useState("")
     const searchRef = useRef<HTMLInputElement>(null)
     const { wrapperRef, contentRef, isOpen, setOpen } = useOnclickOut()
@@ -307,19 +300,36 @@ function CustomMultiCheckBox({
     }, [isOpen, setOpen])
 
     const addFilter = (value: string) => {
+        urlParams.set("page", String(1))
         addFilterParam(args[0].toLowerCase(), value)
     }
 
-    const isSelected = (value: string) => currentFilterValues.includes(value)
+    const isSelected = useCallback(
+        (value: string) =>
+            filterValues.some(
+                (val) => val.filter.toLowerCase() === value.toLowerCase()
+            ),
+        [filterValues]
+    )
 
     const filterArgs = useMemo(() => {
-        if (searchTerm === "") return args.slice(1)
+        if (searchTerm === "")
+            return args
+                .map((val) => ({
+                    title: val,
+                    isSelected: isSelected(val)
+                }))
+                .slice(1)
         return args
-            .map((arg) => arg.toLowerCase())
+            .slice(1)
+            .map((arg) => ({
+                title: arg.toLowerCase(),
+                isSelected: isSelected(arg)
+            }))
             .filter((arg) =>
-                arg.toLowerCase().includes(searchTerm.toLowerCase())
+                arg.title.toLowerCase().includes(searchTerm.toLowerCase())
             )
-    }, [args, searchTerm])
+    }, [args, searchTerm, isSelected])
 
     return (
         <div className="w-full flex flex-col gap-4">
@@ -366,7 +376,6 @@ function CustomMultiCheckBox({
                 <section
                     onBlur={(e) => {
                         e.stopPropagation()
-                        console.log("blur")
                         setOpen(false)
                     }}
                     id="filter-section-dropdown"
@@ -378,31 +387,39 @@ function CustomMultiCheckBox({
                             No matching options
                         </p>
                     )}
-                    {filterArgs.map((item, index) => (
-                        <div
-                            key={`${item}_${index}`}
-                            onClick={() => addFilter(item)}
-                            data-selected={isSelected(item)}
-                            className="group"
-                        >
-                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
-                                <Image
-                                    className="group-data-[selected=false]:invisible"
-                                    src="./lightning_icon_filled.svg"
-                                    height={16}
-                                    width={16}
-                                    alt=""
-                                />
-                                <span
-                                    className={
-                                        "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
-                                    }
-                                >
-                                    {item}
-                                </span>
+                    {filterArgs
+                        .sort((a, b) => {
+                            return a.isSelected === b.isSelected
+                                ? 0
+                                : a.isSelected
+                                  ? -1
+                                  : 1
+                        })
+                        .map((item, index) => (
+                            <div
+                                key={`${item}_${index}`}
+                                onClick={() => addFilter(item.title)}
+                                data-selected={isSelected(item.title)}
+                                className="group"
+                            >
+                                <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
+                                    <Image
+                                        className="group-data-[selected=false]:invisible"
+                                        src="./lightning_icon_filled.svg"
+                                        height={16}
+                                        width={16}
+                                        alt=""
+                                    />
+                                    <span
+                                        className={
+                                            "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
+                                        }
+                                    >
+                                        {item.title}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                 </section>
             </div>
         </div>

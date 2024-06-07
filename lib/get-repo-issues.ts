@@ -4,6 +4,7 @@ import path from "node:path"
 import type { IssueCardElement, Projects, RepositoryIssues } from "@/types"
 import { sanitize } from "@/utils/sanitize"
 import projects from "../public/open-source-projects/index.json"
+import { shuffle } from "@/utils"
 import { swapImageUrl } from "@/utils"
 
 const projectRepoMetadata = Object.entries(projects as Projects).map(
@@ -52,12 +53,8 @@ export const getRepoIssues = async (): Promise<IssueCardElement[]> => {
         })
 
         const issuesArrays = await Promise.all(issuesPromises)
-        const allIssues = issuesArrays.flat()
-        return allIssues.sort(
-            (a, b) =>
-                new Date(b.publishedAt).getTime() -
-                new Date(a.publishedAt).getTime()
-        )
+        const allIssues = shuffle(issuesArrays.flat())
+        return allIssues
     } catch (error) {
         console.error("Error processing repository issues:", error)
         return []

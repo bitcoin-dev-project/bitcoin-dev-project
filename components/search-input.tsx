@@ -10,10 +10,12 @@ const SearchInput = ({
     filtersCount: number | null
     toggle: () => void
 }) => {
-    const { searchQuery, addSearchQuery } = useUrlManager()
+    const { searchQuery, addSearchQuery, urlParams } = useUrlManager()
     const [value, setValue] = useState(searchQuery ?? "")
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        urlParams.set("page", String(1))
+
         event.preventDefault()
         setValue(event.target.value)
         addSearchQuery(event.target.value)

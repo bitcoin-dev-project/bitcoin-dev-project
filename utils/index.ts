@@ -1,6 +1,6 @@
 import type { IssueCardElement } from "../types"
 
-export const SORTOPTIONS = ["sort", "relevance", "newest first", "oldest first"]
+export const SORTOPTIONS = ["sort", "random", "newest first", "oldest first"]
 
 export const ISSUEOPTIONS = ["labels", "good first issue", "bug", "help wanted"]
 
@@ -82,7 +82,7 @@ export const applySort = (
     result: IssueCardElement[]
 ) => {
     switch (sortKey) {
-        case "relevance":
+        case "random":
             return result
         case "newest-first":
             return result.sort(
@@ -168,6 +168,21 @@ export const applySearch = (
             )
         )
     })
+}
+
+export function shuffle(data: IssueCardElement[]) {
+    let currIndex = data.length
+
+    while (currIndex !== 0) {
+        let randomIndex = Math.floor(Math.random() * currIndex)
+        currIndex--
+        ;[data[currIndex], data[randomIndex]] = [
+            data[randomIndex],
+            data[currIndex]
+        ]
+    }
+
+    return data
 }
 
 export const swapImageUrl = (name: string, imageUrl: string) => {
