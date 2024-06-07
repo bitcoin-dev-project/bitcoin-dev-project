@@ -114,7 +114,7 @@ export const projects = {
                         "A series of projects to implement various bitcoin protocols in Rust",
                     image: "/images/projects/rust-btc-logo.png",
                     link: "https://github.com/rust-bitcoin",
-                    repo: ""
+                    repo: "rust-bitcoin"
                 },
                 {
                     title: "Polar",

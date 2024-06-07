@@ -375,20 +375,31 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1440",
-    "publishedAt": "2024-05-13T07:25:38Z",
-    "title": "InsufficientFunds is duplicated within coin_selection::Error and CreateTxError enums",
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1459",
+    "publishedAt": "2024-06-05T09:00:21Z",
+    "title": "`KeychainTxOutIndex` range-based methods are broken",
     "labels": [
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1459",
-    "publishedAt": "2024-06-05T09:00:21Z",
-    "title": "`KeychainTxOutIndex` range-based methods are broken",
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1461",
+    "publishedAt": "2024-06-05T22:05:25Z",
+    "title": "wallet: `finalize_psbt` should clear BIP32 derivations",
     "labels": [
       "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1462",
+    "publishedAt": "2024-06-06T03:02:19Z",
+    "title": "Examples don't show how to properly initialize a IndexedTxGraph etc from disk",
+    "labels": [
+      "bug",
+      "good first issue",
+      "invalid"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }

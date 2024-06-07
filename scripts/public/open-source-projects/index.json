@@ -128,6 +128,22 @@
         "lang": ["Rust", "Kotlin", "Swift", "Python", "Shell"],
         "issue": "https://github.com/bitcoindevkit/bdk-ffi/issues"
     },
+    "rust-bitcoin": {
+        "repo_url": "https://github.com/rust-bitcoin/rust-bitcoin/",
+        "name": "rust-bitcoin",
+        "org": "rust-bitcoin",
+        "tags": ["bitcoin", "library"],
+        "lang": ["Rust"],
+        "issue": "https://github.com/rust-bitcoin/rust-bitcoin/issues"
+    },
+    "rust-miniscript": {
+        "repo_url": "https://github.com/rust-bitcoin/rust-miniscript/",
+        "name": "rust-miniscript",
+        "org": "rust-bitcoin",
+        "tags": ["bitcoin", "library"],
+        "lang": ["Rust"],
+        "issue": "https://github.com/rust-bitcoin/rust-miniscript/issues"
+    },
     "rust-lightning": {
         "repo_url": "https://github.com/lightningdevkit/rust-lightning",
         "name": "rust-lightning",
