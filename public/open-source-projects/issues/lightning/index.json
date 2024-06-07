@@ -349,14 +349,5 @@
       "component::onchaind"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/7333",
-    "publishedAt": "2024-05-24T00:47:29Z",
-    "title": "Schemas use msat where parameter is actually sat",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]

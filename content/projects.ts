@@ -16,6 +16,7 @@ export const projects = {
                         "The reference implementation of the bitcoin protocol",
                     image: "/images/projects/bitcoin-core-logo.png",
                     link: "https://github.com/bitcoin/bitcoin",
+                    github: "https://github.com/bitcoin/bitcoin",
                     repo: "bitcoin"
                 },
                 {
@@ -25,6 +26,7 @@ export const projects = {
                         "A complete lightning implementation packaged as an SDK",
                     image: "/images/projects/ldk.png",
                     link: "https://github.com/lightningdevkit",
+                    github: "https://github.com/lightningdevkit",
                     repo: "rust-lightning"
                 },
                 {
@@ -34,6 +36,7 @@ export const projects = {
                         "A Golang implementation and the most widely run full node on the lightning network",
                     image: "/images/projects/lnd.png",
                     link: "https://github.com/lightningnetwork/lnd",
+                    github: "https://github.com/lightningnetwork/lnd",
                     repo: "lnd"
                 },
                 {
@@ -43,6 +46,7 @@ export const projects = {
                         "A lightweight, highly customizable and standard compliant implementation of the lightning protocol implementation written in C",
                     image: "/images/projects/core-lightning.png",
                     link: "https://github.com/ElementsProject/lightning",
+                    github: "https://github.com/ElementsProject/lightning",
                     repo: "lightning"
                 },
                 {
@@ -52,6 +56,7 @@ export const projects = {
                         "A scala implementation of the lightning network, focusing on the mobile use case",
                     image: "/images/projects/eclair-logo.png",
                     link: "https://github.com/ACINQ/eclair",
+                    github: "https://github.com/ACINQ/eclair",
                     repo: "eclair"
                 },
                 {
@@ -60,6 +65,7 @@ export const projects = {
                     description: "Seamlessly build cross platform wallets",
                     image: "/images/projects/bdk.png",
                     link: "https://bitcoindevkit.org",
+                    github: "https://github.com/bitcoindevkit",
                     repo: "bdk"
                 },
                 {
@@ -69,7 +75,7 @@ export const projects = {
                         "Optimized C library for elliptic curve operations on secp256k1",
                     image: "/images/projects/secp256k1.png",
                     link: "https://github.com/bitcoin-core/secp256k1",
-                    repo: ""
+                    github: "https://github.com/bitcoin-core/secp256k1"
                 },
                 {
                     title: "Validating Lightning Signer",
@@ -77,8 +83,7 @@ export const projects = {
                     description:
                         "Improve your lightning node security by protecting your keys separately",
                     image: "/images/projects/vls.png",
-                    link: "https://vls.tech",
-                    repo: ""
+                    link: "https://vls.tech"
                 },
                 {
                     title: "BTCPayserver",
@@ -87,6 +92,7 @@ export const projects = {
                         "Free, open-source and self-hosted, bitcoin payment processor",
                     image: "/images/projects/btc-pay.png",
                     link: "https://github.com/btcpayserver",
+                    github: "https://github.com/btcpayserver",
                     repo: "btcpayserver"
                 },
                 {
@@ -96,6 +102,7 @@ export const projects = {
                         "A modular protocol to custody and transact bitcoin in a community context",
                     image: "/images/projects/fedimint.png",
                     link: "https://fedimint.org",
+                    github: "https://github.com/fedimint",
                     repo: "fedimint"
                 },
                 {
@@ -105,6 +112,7 @@ export const projects = {
                         "The next generation protocol for pooled mining",
                     image: "/images/projects/stratum-v2.png",
                     link: "https://github.com/stratum-mining",
+                    github: "https://github.com/stratum-mining",
                     repo: "stratum"
                 },
                 {
@@ -114,7 +122,8 @@ export const projects = {
                         "A series of projects to implement various bitcoin protocols in Rust",
                     image: "/images/projects/rust-btc-logo.png",
                     link: "https://github.com/rust-bitcoin",
-                    repo: ""
+                    github: "https://github.com/rust-bitcoin",
+                    repo: "rust-bitcoin"
                 },
                 {
                     title: "Polar",
@@ -123,6 +132,7 @@ export const projects = {
                         "One-click lightning networks for local app development and testing",
                     image: "/images/projects/polar.jpg",
                     link: "https://lightningpolar.com",
+                    github: "https://github.com/jamaljsr/polar",
                     repo: "polar"
                 },
                 {
@@ -132,6 +142,7 @@ export const projects = {
                         "Monitor and analyze emergent behaviors of P2P networks",
                     image: "/images/projects/warnet.jpg",
                     link: "https://warnet.dev",
+                    github: "https://github.com/bitcoin-dev-project/warnet",
                     repo: "warnet"
                 },
                 {
@@ -141,6 +152,7 @@ export const projects = {
                         "Instantly simulate real-world lightning network activity",
                     image: "/images/projects/simln.jpg",
                     link: "https://simln.dev",
+                    github: "https://github.com/bitcoin-dev-project/sim-ln",
                     repo: "sim-ln"
                 }
             ]
