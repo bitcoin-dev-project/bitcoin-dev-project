@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.shuffle = exports.swapImageUrl = exports.applySearch = exports.applyFilter = exports.applySort = exports.filterIssues = exports.createSortKeys = exports.getValues = exports.FILTERTAGS = exports.ISSUEOPTIONS = exports.SORTOPTIONS = void 0;
-exports.SORTOPTIONS = ["sort", "randomn", "newest first", "oldest first"];
+exports.swapImageUrl = exports.shuffle = exports.applySearch = exports.applyFilter = exports.applySort = exports.filterIssues = exports.createSortKeys = exports.getValues = exports.FILTERTAGS = exports.ISSUEOPTIONS = exports.SORTOPTIONS = void 0;
+exports.SORTOPTIONS = ["sort", "random", "newest first", "oldest first"];
 exports.ISSUEOPTIONS = ["labels", "good first issue", "bug", "help wanted"];
 exports.FILTERTAGS = [
     "search",
