@@ -142,6 +142,12 @@ const swapImageUrl = (name, imageUrl) => {
             return "/images/projects/polar.jpg";
         case "lnd":
             return "/images/projects/lnd.png";
+        case "eclair":
+            return "/images/projects/eclair-logo.png";
+        case "warnet":
+            return "/images/projects/warnet.jpg";
+        case "sim-ln":
+            return "/images/projects/simln.jpg";
         default:
             return imageUrl;
     }
