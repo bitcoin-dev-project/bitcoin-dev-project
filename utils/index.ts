@@ -169,3 +169,14 @@ export const applySearch = (
         )
     })
 }
+
+export const swapImageUrl = (name: string, imageUrl: string) => {
+    switch (name) {
+        case "polar":
+            return "/images/projects/polar.jpg"
+        case "lnd":
+            return "/images/projects/lnd.png"
+        default:
+            return imageUrl
+    }
+}
