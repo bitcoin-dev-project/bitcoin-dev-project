@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.applySearch = exports.applyFilter = exports.applySort = exports.filterIssues = exports.createSortKeys = exports.getValues = exports.FILTERTAGS = exports.ISSUEOPTIONS = exports.SORTOPTIONS = void 0;
+exports.swapImageUrl = exports.applySearch = exports.applyFilter = exports.applySort = exports.filterIssues = exports.createSortKeys = exports.getValues = exports.FILTERTAGS = exports.ISSUEOPTIONS = exports.SORTOPTIONS = void 0;
 exports.SORTOPTIONS = ["sort", "relevance", "newest first", "oldest first"];
 exports.ISSUEOPTIONS = ["labels", "good first issue", "bug", "help wanted"];
 exports.FILTERTAGS = [
@@ -123,3 +123,14 @@ const applySearch = (searchQuery, result) => {
     });
 };
 exports.applySearch = applySearch;
+const swapImageUrl = (name, imageUrl) => {
+    switch (name) {
+        case "polar":
+            return "/images/projects/polar.jpg";
+        case "lnd":
+            return "/images/projects/lnd.png";
+        default:
+            return imageUrl;
+    }
+};
+exports.swapImageUrl = swapImageUrl;
