@@ -39,7 +39,10 @@ export const getRepoIssues = async (): Promise<IssueCardElement[]> => {
                         repo: repo.name,
                         tags: repo.tags,
                         number: parseInt(issue.url?.split("/").pop() || ""),
-                        imageUrl: swapImageUrl(repo.name, issue.imageUrl)
+                        imageUrl: swapImageUrl(
+                            repo.name.toLowerCase(),
+                            issue.imageUrl
+                        )
                     }))
                 )
                 .catch((error) => {
