@@ -11,6 +11,7 @@ export type Page = {
             description: string
             link: string
             repo?: string
+            github?: string
         }>
     }>
 }

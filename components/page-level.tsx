@@ -85,13 +85,13 @@ export default function PageLevel({
                                     {item.description}
                                 </p>
                             </div>
-                            {item.repo ? (
+                            {item.github ? (
                                 <div className="flex gap-3">
                                     <Link
-                                        href={item.link}
+                                        href={item.github}
                                         rel="noopener"
                                         target="_blank"
-                                        className="w-fit flex gap-2 text-nowrap whitespace-nowrap"
+                                        className="w-fit flex gap-2 text-nowrap whitespace-nowrap hover:underline"
                                     >
                                         <Image
                                             alt={"github icon"}
@@ -103,7 +103,7 @@ export default function PageLevel({
                                     </Link>
                                     <Link
                                         href={`good-first-issues/?repo=${item.repo ?? ""}`}
-                                        className="w-fit flex gap-1.5 text-nowrap whitespace-nowrap"
+                                        className={`w-fit gap-1.5 text-nowrap whitespace-nowrap hover:underline ${item.repo ? "flex" : "hidden"}`}
                                     >
                                         <Image
                                             alt={"github icon"}
