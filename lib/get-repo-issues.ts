@@ -4,6 +4,7 @@ import path from "node:path"
 import type { IssueCardElement, Projects, RepositoryIssues } from "@/types"
 import { sanitize } from "@/utils/sanitize"
 import projects from "../public/open-source-projects/index.json"
+import { swapImageUrl } from "@/utils"
 
 const projectRepoMetadata = Object.entries(projects as Projects).map(
     ([_, project]) => ({
@@ -37,7 +38,8 @@ export const getRepoIssues = async (): Promise<IssueCardElement[]> => {
                         languages: repo.languages,
                         repo: repo.name,
                         tags: repo.tags,
-                        number: parseInt(issue.url?.split("/").pop() || "")
+                        number: parseInt(issue.url?.split("/").pop() || ""),
+                        imageUrl: swapImageUrl(repo.name, issue.imageUrl)
                     }))
                 )
                 .catch((error) => {
