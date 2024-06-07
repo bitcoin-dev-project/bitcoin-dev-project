@@ -334,15 +334,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/4591",
-    "publishedAt": "2024-03-17T00:56:01Z",
-    "title": "opentelemetry deprecated call warning ",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/4691",
     "publishedAt": "2024-03-23T05:04:25Z",
     "title": "Refactoring ideas",
