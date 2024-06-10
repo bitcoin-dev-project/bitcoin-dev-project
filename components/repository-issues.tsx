@@ -218,40 +218,14 @@ function IssueCard({
 }
 
 function InfoTab() {
-    const { isOpen, wrapperRef, contentRef, toggle } = useOnclickOut()
-
     return (
         <div>
             <div className="w-[300px] lg:w-[250px] md:w-full flex flex-col gap-4 relative">
-                <div
-                    ref={contentRef}
-                    className="bg-gray-100 p-4 rounded-xl flex justify-between gap-4 w-full cursor-pointer"
-                    onClick={toggle}
-                    data-is-open={isOpen}
-                >
-                    <button>
-                        About{" "}
-                        <span className="font-bold">Good first issues</span>
-                    </button>
-                    <span
-                        data-is-open={isOpen}
-                        onClick={toggle}
-                        className="absolute p-2 cursor-pointer top-1/2 -translate-y-1/2 right-[18px] data-[is-open=false]:rotate-180 transition-transform"
-                    >
-                        <Image
-                            src="./up_arrow.svg"
-                            alt="arrow"
-                            width={11}
-                            height={7}
-                        />
-                    </span>
-                </div>
-                <div
-                    ref={wrapperRef}
-                    className={`text-wrap text-[15px] bg-white shadow-md rounded-xl p-4 border-gray-400 border absolute top-16 z-50 ${isOpen ? "block" : "hidden"}`}
-                >
-                    <p>
-                        {`It can be hard to know which bitcoin Free Open Source Software (FOSS) projects to contribute to. This tool lets your search, filter, and sort good first issues from vetted FOSS bitcoin projects. Let's kickstart your journey as a contributor.`}
+                <div className="bg-gray-100 border border-gray-400 p-4 md:p-3 rounded-xl">
+                    <p className="md:text-[15px]">
+                        Use this tool to explore vetted Free Open Source
+                        Software (FOSS) projects and begin your contribution
+                        journey.
                     </p>
                 </div>
             </div>

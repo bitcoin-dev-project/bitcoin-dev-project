@@ -99,7 +99,6 @@ export default function PageLevel({
                                             width={24}
                                             height={24}
                                         />
-                                        GitHub
                                     </Link>
                                     <Link
                                         href={`good-first-issues/?repo=${item.repo ?? ""}`}
