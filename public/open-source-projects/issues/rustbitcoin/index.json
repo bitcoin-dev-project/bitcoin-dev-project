@@ -110,11 +110,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   },
   {
-    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/2835",
-    "publishedAt": "2024-06-04T22:48:44Z",
-    "title": "Fix bug in `pow.rs`",
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/2849",
+    "publishedAt": "2024-06-10T12:48:55Z",
+    "title": "Change `PushBytes::read_scriptint(x)` to `x.read_scriptint()`",
     "labels": [
-      "bug"
+      "good first issue",
+      "trivial"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
