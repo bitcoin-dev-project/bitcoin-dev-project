@@ -57,7 +57,12 @@ export default function PageLevel({
                         key={item.title}
                         className="flex p-6 md:p-0 gap-x-6 w-[48%] lg:w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline md:hover:outline-none hover:bg-[#FCFCFC] md:hover:bg-none md:flex-col"
                     >
-                        <Link href={item.link} rel="noopener" target="_blank">
+                        <Link
+                            href={item.link}
+                            rel="noopener"
+                            target="_blank"
+                            data-umami-event={`${item.title}-card-clicked`}
+                        >
                             <div className="relative min-w-[160px] h-[160px] md:w-full md:min-w-min md:h-[270px] border-[#D9D9D9] border rounded-2xl overflow-hidden">
                                 <Image
                                     alt={item.title}
@@ -75,6 +80,7 @@ export default function PageLevel({
                                     rel="noopener"
                                     target="_blank"
                                     className="text-4xl md:text-2xl font-semibold"
+                                    data-umami-event={`${item.title}-card-clicked`}
                                 >
                                     {item.title}
                                 </Link>

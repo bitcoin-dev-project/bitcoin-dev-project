@@ -165,6 +165,7 @@ function IssueCard({
                         onClick={() =>
                             addFilterParam("repo", issue.repo.toLowerCase())
                         }
+                        data-umami-event={`${issue.repo}-repo-filter-clicked`}
                     >
                         {issue.imageUrl ? (
                             <Image
@@ -197,6 +198,7 @@ function IssueCard({
                     rel="noopener noreferrer"
                     target="_blank"
                     className="mt-2 text-lg md:text-base font-medium text-gray-900 text-wrap break-words"
+                    data-umami-event={`${issue.repo}-issue-url-clicked`}
                 >
                     <span className="text-gray-500">#{issue.number}</span>{" "}
                     {issue.title}

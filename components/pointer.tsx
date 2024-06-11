@@ -20,6 +20,7 @@ export default function Pointer({
             <Button
                 href={`${jumpTo}`}
                 className={clsx("w-full px-3", className)}
+                data-umami-event={`hero-section-cta-${btnText}`}
             >
                 {btnText}
             </Button>

@@ -10,7 +10,7 @@ type Props = React.ComponentProps<typeof Link> & {
 
 export default function ToolsCard({ alt, name, src, ...rest }: Props) {
     return (
-        <Link {...rest}>
+        <Link {...rest} data-umami-event={`${name}-tools-card-clicked`}>
             <div className="relative h-[240px] w-[240px] md:h-[280px] md:w-[280px] xs:w-[180px] xs:h-[180px] flex-shrink overflow-hidden rounded-[18px] hover:scale-105 transition-transform duration-500 ease-in-out">
                 <Image
                     fill

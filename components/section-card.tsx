@@ -43,7 +43,11 @@ export default function SectionCard({
                     {title}
                 </h2>
                 <p className="text-xl md:text-sm">{description}</p>
-                <Button className="w-[55%]" {...rest}>
+                <Button
+                    className="w-[55%]"
+                    {...rest}
+                    data-umami-event={`landing-page-${btnText}-btn-clicked`}
+                >
                     {btnText}
                 </Button>
             </div>

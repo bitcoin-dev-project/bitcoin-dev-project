@@ -87,7 +87,11 @@ export default function Home() {
                             <div className="overflow-hidden pb-20 md:pb-5 absolute bottom-0 left-0 right-0 flex flex-col md:relative">
                                 <HomeCarousel />
                                 <div className="mt-[10px] w-[212px] md:w-[50vw] self-center it">
-                                    <Button href="/tools" className="w-full">
+                                    <Button
+                                        href="/tools"
+                                        className="w-full"
+                                        data-umami-event={`see-more-btn-clicked`}
+                                    >
                                         See More
                                     </Button>
                                 </div>
