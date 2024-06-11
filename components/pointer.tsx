@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "./button"
 import clsx from "clsx"
+import { slugify } from "@/utils/slugify"
 
 type Props = {
     btnText: string
@@ -20,7 +21,7 @@ export default function Pointer({
             <Button
                 href={`${jumpTo}`}
                 className={clsx("w-full px-3", className)}
-                data-umami-event={`hero-section-cta-${btnText}`}
+                data-umami-event={`hero-section-cta-${slugify(btnText)}`}
             >
                 {btnText}
             </Button>

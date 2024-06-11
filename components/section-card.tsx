@@ -2,6 +2,7 @@ import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
 import Button from "./button"
+import { slugify } from "@/utils/slugify"
 
 type Props = React.ComponentProps<typeof Link> & {
     alt: string
@@ -46,7 +47,7 @@ export default function SectionCard({
                 <Button
                     className="w-[55%]"
                     {...rest}
-                    data-umami-event={`landing-page-${btnText}-btn-clicked`}
+                    data-umami-event={`landing-page-${slugify(btnText)}-btn-clicked`}
                 >
                     {btnText}
                 </Button>

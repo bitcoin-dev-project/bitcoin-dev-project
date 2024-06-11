@@ -61,7 +61,7 @@ export default function PageLevel({
                             href={item.link}
                             rel="noopener"
                             target="_blank"
-                            data-umami-event={`${item.title}-card-clicked`}
+                            data-umami-event={`${slugify(item.title)}-card-clicked`}
                         >
                             <div className="relative min-w-[160px] h-[160px] md:w-full md:min-w-min md:h-[270px] border-[#D9D9D9] border rounded-2xl overflow-hidden">
                                 <Image
@@ -80,7 +80,7 @@ export default function PageLevel({
                                     rel="noopener"
                                     target="_blank"
                                     className="text-4xl md:text-2xl font-semibold"
-                                    data-umami-event={`${item.title}-card-clicked`}
+                                    data-umami-event={`${slugify(item.title)}-card-clicked`}
                                 >
                                     {item.title}
                                 </Link>
