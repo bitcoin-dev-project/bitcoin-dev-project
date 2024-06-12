@@ -726,5 +726,15 @@
       "Data corruption"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/30269",
+    "publishedAt": "2024-06-11T17:09:29Z",
+    "title": "Improve description of the `filename` parameter of `loadwallet` RPC",
+    "labels": [
+      "Docs",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
