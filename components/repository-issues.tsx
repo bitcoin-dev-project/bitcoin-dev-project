@@ -15,6 +15,7 @@ import { usePaginatedResult } from "@/hooks/usePagination"
 import Pagination from "./Pagination"
 import Image from "next/image"
 import useOnclickOut from "@/hooks/useOnclickOut"
+import { slugify } from "@/utils/slugify"
 
 const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
     const loading = !issues.length
@@ -165,6 +166,7 @@ function IssueCard({
                         onClick={() =>
                             addFilterParam("repo", issue.repo.toLowerCase())
                         }
+                        data-umami-event={`${slugify(issue.repo)}-repo-filter-clicked`}
                     >
                         {issue.imageUrl ? (
                             <Image
@@ -197,6 +199,7 @@ function IssueCard({
                     rel="noopener noreferrer"
                     target="_blank"
                     className="mt-2 text-lg md:text-base font-medium text-gray-900 text-wrap break-words"
+                    data-umami-event={`${slugify(issue.repo)}-issue-url-clicked`}
                 >
                     <span className="text-gray-500">#{issue.number}</span>{" "}
                     {issue.title}

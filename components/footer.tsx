@@ -20,6 +20,15 @@ export default function Footer() {
                 >
                     Bitcoin Design Community
                 </a>
+                <br />
+                <a
+                    href="https://visits.bitcoindevs.xyz/share/El4tCqIKLIhJIq9y/bitcoin-dev-project"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline"
+                >
+                    View our public visitor counts
+                </a>
             </p>
         </footer>
     )

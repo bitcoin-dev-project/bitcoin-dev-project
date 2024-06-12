@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ContributeNavPointers, navPointers } from "@/content/data"
 import useOnclickOut from "@/hooks/useOnclickOut"
+import { slugify } from "@/utils/slugify"
 
 export function NavbarDropDown({
     menuItem,
@@ -63,6 +64,7 @@ export function NavbarDropDown({
                                 className="text-gray-700 block px-4 py-2 text-sm"
                                 role="menuitem"
                                 id="menu-item-0"
+                                data-umami-event={`nav-${slugify(link.btnText)}-clicked`}
                             >
                                 {link.btnText}
                             </Link>

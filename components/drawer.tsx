@@ -87,6 +87,7 @@ export default function Drawer() {
                             className="font-semibold text-lg"
                             key={link.text}
                             href={link.linkTo}
+                            data-umami-event={`nav-${link.text}-clicked`}
                         >
                             {link.text}
                         </Link>

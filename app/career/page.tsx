@@ -117,6 +117,7 @@ export default function Career() {
                                             href="https://spiral.xyz/#grants"
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            data-umami-event={`funding-org-spiral-clicked`}
                                         >
                                             Spiral
                                         </a>{" "}
@@ -129,6 +130,7 @@ export default function Career() {
                                             href="https://brink.homerun.co/grants"
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            data-umami-event={`funding-org-brink-clicked`}
                                         >
                                             Brink
                                         </a>{" "}
@@ -142,6 +144,7 @@ export default function Career() {
                                             href="https://opensats.org/apply"
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            data-umami-event={`funding-org-opensats-clicked`}
                                         >
                                             OpenSats
                                         </a>{" "}
@@ -153,6 +156,7 @@ export default function Career() {
                                             href="https://forms.monday.com/forms/57019f8829449d9e729d9e3545a237ea"
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            data-umami-event={`funding-org-human-rights-foundation-clicked`}
                                         >
                                             Human Rights Foundation
                                         </a>{" "}

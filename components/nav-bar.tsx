@@ -23,7 +23,11 @@ export default function NavBar() {
                             isMobile={false}
                         />
                         {links.map((link) => (
-                            <Link key={link.text} href={link.linkTo}>
+                            <Link
+                                key={link.text}
+                                href={link.linkTo}
+                                data-umami-event={`nav-${link.text}-clicked`}
+                            >
                                 {link.text}
                             </Link>
                         ))}

@@ -25,6 +25,7 @@ const Badge = ({
                 className
             )}
             onClick={() => addBadgeFilterParam("languages", name)}
+            data-umami-event={`${name}-badge-filter-clicked`}
         >
             {name}
         </div>
