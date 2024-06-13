@@ -85,7 +85,8 @@
     "publishedAt": "2022-06-23T21:35:17Z",
     "title": "Don't Always Broadcast latest state on startup if we'd previously closed-without-broadcast",
     "labels": [
-      "good first issue"
+      "good first issue",
+      "Take a Friday Leave a Friday"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
@@ -203,7 +204,8 @@
     "publishedAt": "2024-02-06T22:38:46Z",
     "title": "Rename `payment_parameters_from_zero_amount_invoice` to imply amount-less, not 0-amount",
     "labels": [
-      "good first issue"
+      "good first issue",
+      "Take a Friday Leave a Friday"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
