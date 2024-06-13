@@ -331,6 +331,19 @@ function CustomMultiCheckBox({
             )
     }, [args, searchTerm, isSelected])
 
+    type SortObject = { title: string; isSelected: boolean }
+
+    function customSort(a: SortObject, b: SortObject) {
+        const alphabeticalSort = a.title
+            .toLowerCase()
+            .localeCompare(b.title.toLowerCase())
+
+        const isSelectedSort =
+            a.isSelected === b.isSelected ? 0 : a.isSelected ? -1 : 1
+
+        return isSelectedSort || alphabeticalSort
+    }
+
     return (
         <div className="w-full flex flex-col gap-4">
             <h5 className="text-base font-bold">{title}</h5>
@@ -387,39 +400,31 @@ function CustomMultiCheckBox({
                             No matching options
                         </p>
                     )}
-                    {filterArgs
-                        .sort((a, b) => {
-                            return a.isSelected === b.isSelected
-                                ? 0
-                                : a.isSelected
-                                  ? -1
-                                  : 1
-                        })
-                        .map((item, index) => (
-                            <div
-                                key={`${item}_${index}`}
-                                onClick={() => addFilter(item.title)}
-                                data-selected={isSelected(item.title)}
-                                className="group"
-                            >
-                                <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
-                                    <Image
-                                        className="group-data-[selected=false]:invisible"
-                                        src="./lightning_icon_filled.svg"
-                                        height={16}
-                                        width={16}
-                                        alt=""
-                                    />
-                                    <span
-                                        className={
-                                            "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
-                                        }
-                                    >
-                                        {item.title}
-                                    </span>
-                                </div>
+                    {filterArgs.sort(customSort).map((item, index) => (
+                        <div
+                            key={`${item}_${index}`}
+                            onClick={() => addFilter(item.title)}
+                            data-selected={isSelected(item.title)}
+                            className="group"
+                        >
+                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
+                                <Image
+                                    className="group-data-[selected=false]:invisible"
+                                    src="./lightning_icon_filled.svg"
+                                    height={16}
+                                    width={16}
+                                    alt=""
+                                />
+                                <span
+                                    className={
+                                        "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
+                                    }
+                                >
+                                    {item.title}
+                                </span>
                             </div>
-                        ))}
+                        </div>
+                    ))}
                 </section>
             </div>
         </div>
