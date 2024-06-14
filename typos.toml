@@ -1,0 +1,25 @@
+# ignore text that looks like a bitcoin address or a lightning invoice or a jwt token
+# as they are likely to be false positives
+[default]
+extend-ignore-identifiers-re = [
+  "^bc1[a-zA-Z0-9]{39,59}$",  # Enhanced to specify length for Bitcoin bech32 addresses
+  "^lnbc1[a-zA-Z0-9]{71,}$",   # Start for Lightning invoices; adjusted for potential longer starts
+  "\"eyJ[a-zA-Z0-9_\\-\\.]+\"" # JWT token pattern
+]
+
+extend-ignore-re = [
+  "^public/",                  # Ignore paths starting with 'public/'
+  "\\/\\/[^\n]*"               # Ignore double slash comments in code
+]
+
+[files]
+extend-exclude = [
+    "**/node_modules/**",      # Exclude all node_modules directories
+    "**/dist/**",              # Exclude all dist directories
+    "**/*.json",               # Exclude all JSON files
+    "scripts/**",              # Exclude the scriptsOut directory
+    "public/open-source-projects/issues/**", # Exclude issues within the public open-source-projects
+    "**/*.min.js",             # Exclude minified JS files
+    "**/*.bundle.js",          # Exclude bundled JS files
+    "**/*.d.ts"                # Exclude TypeScript definition files if not needed
+]

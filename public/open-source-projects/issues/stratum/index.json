@@ -1,0 +1,324 @@
+[
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/33",
+    "publishedAt": "2021-08-20T16:12:09Z",
+    "title": "Use `shrink` for prop tests",
+    "labels": [
+      "documentation",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/67",
+    "publishedAt": "2021-11-17T15:43:36Z",
+    "title": "refactor all the repetitive code in roles-logic-sv2 parsers file into macros",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "backlog"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/69",
+    "publishedAt": "2021-11-17T15:43:45Z",
+    "title": "refactor the proxy in order to take advantage of the new roles-logic-sv2 interface",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "sv2 proxy"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/70",
+    "publishedAt": "2021-11-17T15:49:45Z",
+    "title": "add test for interop cpp (it should try to build it and run the example)",
+    "labels": [
+      "good first issue",
+      "test"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/71",
+    "publishedAt": "2021-11-17T15:49:49Z",
+    "title": "add test for the other examples",
+    "labels": [
+      "good first issue",
+      "test"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/72",
+    "publishedAt": "2021-11-17T15:49:54Z",
+    "title": "when test use the various compilation flag",
+    "labels": [
+      "good first issue",
+      "test"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/81",
+    "publishedAt": "2021-11-17T15:57:53Z",
+    "title": "Use message-generator to perform integration tests on atypical configuration(s)",
+    "labels": [
+      "good first issue",
+      "test",
+      "message-generator"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/104",
+    "publishedAt": "2021-11-17T16:29:36Z",
+    "title": "Add SV2 Proxy Unit Tests",
+    "labels": [
+      "help wanted",
+      "test",
+      "sv2 proxy"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/243",
+    "publishedAt": "2022-09-21T23:18:17Z",
+    "title": "Fix broken fuzz test in test.yaml GHA for macos",
+    "labels": [
+      "bug",
+      "test",
+      "important"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/244",
+    "publishedAt": "2022-09-21T23:21:28Z",
+    "title": " Fix broken interop-test in test.yaml GHA for macos",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "test",
+      "important"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/245",
+    "publishedAt": "2022-09-21T23:24:15Z",
+    "title": "Fix broken interop-no-cargo-test in test.yaml GHA for macos",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "test",
+      "important"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/246",
+    "publishedAt": "2022-09-21T23:25:44Z",
+    "title": "Fix broken test.yaml GitHub Actions for macos",
+    "labels": [
+      "help wanted",
+      "tracker"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/375",
+    "publishedAt": "2022-12-11T16:23:22Z",
+    "title": "Rm 3rd-party `hex` crate dependency",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/427",
+    "publishedAt": "2023-01-31T22:46:33Z",
+    "title": "Create config option for backup Template Providers",
+    "labels": [
+      "help wanted",
+      "sv2 pool",
+      "template provider"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/476",
+    "publishedAt": "2023-03-05T11:37:21Z",
+    "title": "make safe look safer",
+    "labels": [
+      "good first issue",
+      "help wanted"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/484",
+    "publishedAt": "2023-03-09T17:00:21Z",
+    "title": "mining-proxy needs graceful death instead of panic",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/677",
+    "publishedAt": "2023-11-21T17:29:11Z",
+    "title": "Feature flag to write logs to files instead of just stdout",
+    "labels": [
+      "help wanted",
+      "log"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/782",
+    "publishedAt": "2024-03-04T13:30:18Z",
+    "title": "address todos in the jds added PR761",
+    "labels": [
+      "good first issue",
+      "job-declarator-server"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/791",
+    "publishedAt": "2024-03-12T18:41:22Z",
+    "title": "`invalid-job-id` errors on `tProxy` don't result in rejection of shares",
+    "labels": [
+      "bug",
+      "good first issue",
+      "help wanted",
+      "translation proxy"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/844",
+    "publishedAt": "2024-04-12T16:16:49Z",
+    "title": "JDC is not doing fallback to solo-mining",
+    "labels": [
+      "bug",
+      "job-declarator-client"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/863",
+    "publishedAt": "2024-04-19T14:24:55Z",
+    "title": "JDC is not logging any error on wrong TP configuration",
+    "labels": [
+      "bug",
+      "good first issue",
+      "job-declarator-client"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/874",
+    "publishedAt": "2024-04-29T17:54:18Z",
+    "title": "undeterministic connection between JDC and pool",
+    "labels": [
+      "bug",
+      "important",
+      "sv2 pool",
+      "job-declarator-client"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/902",
+    "publishedAt": "2024-05-09T13:40:27Z",
+    "title": "IdentifyTransactions message not implemented",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/912",
+    "publishedAt": "2024-05-18T13:04:13Z",
+    "title": "JDS can't submit block if some transactions are missing",
+    "labels": [
+      "bug",
+      "job declarator",
+      "job-declarator-server"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/920",
+    "publishedAt": "2024-05-21T12:24:49Z",
+    "title": "JDC does not receive shares anymore from Translator if two new blocks are found in few seconds",
+    "labels": [
+      "bug",
+      "job-declarator-client"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/936",
+    "publishedAt": "2024-05-27T12:44:22Z",
+    "title": "TryFrom(u8,&mut[u8]) for PoolMessages is broken",
+    "labels": [
+      "bug",
+      "good first issue",
+      "help wanted",
+      "sv2 pool"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/951",
+    "publishedAt": "2024-06-02T14:20:27Z",
+    "title": "`StandardChannel` support on JDC",
+    "labels": [
+      "good first issue",
+      "help wanted",
+      "job-declarator-client"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/953",
+    "publishedAt": "2024-06-03T20:51:04Z",
+    "title": "MG test templates",
+    "labels": [
+      "help wanted",
+      "test",
+      "important",
+      "message-generator"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/954",
+    "publishedAt": "2024-06-03T21:05:50Z",
+    "title": "MG message library",
+    "labels": [
+      "help wanted",
+      "important",
+      "message-generator"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/955",
+    "publishedAt": "2024-06-04T15:13:51Z",
+    "title": "MG tests reproducing #840",
+    "labels": [
+      "bug",
+      "help wanted",
+      "test",
+      "important",
+      "message-generator"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  }
+]

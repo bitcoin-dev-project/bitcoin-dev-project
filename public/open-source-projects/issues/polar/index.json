@@ -1,0 +1,123 @@
+[
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/388",
+    "publishedAt": "2020-10-19T15:06:09Z",
+    "title": "Feature Request: Rename nodes",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "up for grabs"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/517",
+    "publishedAt": "2021-11-30T04:49:34Z",
+    "title": "Bug: Issue interacting with Sparrow using Bitcoind backend",
+    "labels": [
+      "bug",
+      "up for grabs"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/534",
+    "publishedAt": "2022-02-27T19:20:43Z",
+    "title": "Bug: Logos not rendering correctly",
+    "labels": [
+      "bug",
+      "up for grabs"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/553",
+    "publishedAt": "2022-05-03T00:10:25Z",
+    "title": "Docker Not Detected",
+    "labels": [
+      "bug",
+      "up for grabs"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/575",
+    "publishedAt": "2022-07-29T15:15:12Z",
+    "title": "Bug: balances for Core Lightning nodes are not updated correctly sometimes",
+    "labels": [
+      "bug",
+      "up for grabs"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/636",
+    "publishedAt": "2022-12-11T16:34:22Z",
+    "title": "Bug: 'Unable to connect to terminal'",
+    "labels": [
+      "bug",
+      "up for grabs"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/642",
+    "publishedAt": "2023-01-02T02:54:04Z",
+    "title": "Bug: Viewing terminals on Linux just gives a loading animated icon",
+    "labels": [
+      "bug",
+      "up for grabs"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/682",
+    "publishedAt": "2023-02-21T14:25:15Z",
+    "title": "Unable to connect to c-lightning node",
+    "labels": [
+      "bug",
+      "up for grabs"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/754",
+    "publishedAt": "2023-08-04T12:19:00Z",
+    "title": "Bug: clightning docker images fails because of cert generation error",
+    "labels": [
+      "bug",
+      "wip"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/779",
+    "publishedAt": "2023-09-15T18:55:19Z",
+    "title": "Bug: Unable to run CLN on macOS Vetura (13.5.2)",
+    "labels": [
+      "bug",
+      "wip"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/836",
+    "publishedAt": "2024-02-21T21:47:41Z",
+    "title": "Feature Request: add a description field for each network",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "up for grabs"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/863",
+    "publishedAt": "2024-03-21T18:00:03Z",
+    "title": "Bug: Update instructions to create CLN custom node",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  }
+]

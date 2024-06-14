@@ -1,28 +1,42 @@
 {
-  "name": "bitcoin-dev-project",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "clsx": "^2.0.0",
-    "next": "14.0.1",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.1"
-  }
+    "name": "bitcoin-dev-project",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "prettier:check": "prettier --check .",
+        "prettier:fix": "prettier --write .",
+        "lint:fix": "eslint --fix .",
+        "check-code": "npm run prettier:check && eslint .",
+        "compile:scripts": "rm -rf scripts && tsc --project tsconfig.scripts.json",
+        "fetch-issues": "node scripts/helpers/fetch-issues.js",
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@apollo/client": "^3.10.3",
+        "@apollo/experimental-nextjs-app-support": "^0.10.1",
+        "clsx": "^2.0.0",
+        "cross-fetch": "^4.0.0",
+        "dotenv": "^16.4.5",
+        "graphql": "^16.8.1",
+        "next": "14.0.1",
+        "next-auth": "^4.24.4",
+        "react": "^18",
+        "react-dom": "^18",
+        "ts-node": "^10.9.2"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "autoprefixer": "^10.0.1",
+        "eslint": "^8",
+        "eslint-config-next": "14.0.1",
+        "postcss": "^8",
+        "prettier": "^3.2.5",
+        "tailwindcss": "^3.3.0",
+        "typescript": "^5.4.5"
+    }
 }

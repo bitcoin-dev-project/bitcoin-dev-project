@@ -1,0 +1,85 @@
+[
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/444",
+    "publishedAt": "2018-12-10T23:29:17Z",
+    "title": "RTL Language Support",
+    "labels": [
+      "Enhancement",
+      "Translation",
+      "good first issue",
+      "Invoice"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/4986",
+    "publishedAt": "2023-05-18T13:31:36Z",
+    "title": "Accessibility Testing: Paid Invoice, Pull Payment, Create Invoice: Tested on Windows",
+    "labels": [
+      "Enhancement",
+      "UI / UX",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5156",
+    "publishedAt": "2023-07-05T21:05:41Z",
+    "title": "[Invoices] Improved filter iteration",
+    "labels": [
+      "Bug",
+      "UI / UX",
+      "Invoice"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5191",
+    "publishedAt": "2023-07-25T17:42:56Z",
+    "title": "[Dashboard] Support for Custom Ordering of Dashboard widgets",
+    "labels": [
+      "Bug",
+      "UI / UX",
+      "Plugin"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5666",
+    "publishedAt": "2024-01-17T14:19:03Z",
+    "title": "[Bug]: Problems with login into BTCPay Server after updating Raspiblitz / Umbrel deployments",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5797",
+    "publishedAt": "2024-02-28T17:01:06Z",
+    "title": "Failed to import a Multisig Bitcoin wallet -with any of the available options-",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5898",
+    "publishedAt": "2024-04-03T20:19:12Z",
+    "title": "[Bug]: Error LNURL payment link on creating invoices over API",
+    "labels": [
+      "Bug",
+      "Lightning",
+      "API"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6003",
+    "publishedAt": "2024-05-23T21:27:26Z",
+    "title": "[Bug]: Refund crashes when the invoice is settled qith no payment",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  }
+]

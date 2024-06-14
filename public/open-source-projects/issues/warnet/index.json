@@ -1,0 +1,117 @@
+[
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/25",
+    "publishedAt": "2023-08-15T18:13:28Z",
+    "title": "Load and run scenarios at startup",
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/27",
+    "publishedAt": "2023-08-15T18:19:12Z",
+    "title": "Create a `PyNode` agent",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "backlog"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/29",
+    "publishedAt": "2023-08-15T18:20:47Z",
+    "title": "scenario/persona: preload a chain / wallet ",
+    "labels": [
+      "good first issue",
+      "backlog"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/36",
+    "publishedAt": "2023-08-15T20:29:39Z",
+    "title": "extend test framework functions",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "backlog"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/78",
+    "publishedAt": "2023-08-26T13:22:23Z",
+    "title": "get p2p messages from non-tank peers (e.g. onion addrs)",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "help wanted"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/100",
+    "publishedAt": "2023-09-11T15:57:32Z",
+    "title": "RPC, other commands can throw errors if docker-compose isnt done building yet",
+    "labels": [
+      "good first issue",
+      "backlog"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/134",
+    "publishedAt": "2023-09-29T17:17:57Z",
+    "title": "\"Pool overlaps with other one on this address space\"",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "needs conceptual review"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/184",
+    "publishedAt": "2023-10-31T22:57:56Z",
+    "title": "Explore alternatives to patching `IsRoutable`",
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "needs conceptual review"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/191",
+    "publishedAt": "2023-11-02T18:31:14Z",
+    "title": "add fork observer to docs",
+    "labels": [
+      "documentation",
+      "good first issue",
+      "help wanted"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/210",
+    "publishedAt": "2023-11-24T12:44:04Z",
+    "title": "Add copy file command to warcli",
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/warnet/issues/253",
+    "publishedAt": "2024-02-05T18:56:21Z",
+    "title": "tank IPs are still 100.0.0.0/8 in K8s",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  }
+]

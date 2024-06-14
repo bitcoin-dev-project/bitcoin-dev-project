@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://github.com/rust-bitcoin/rust-miniscript/issues/114",
+    "publishedAt": "2020-07-23T16:54:39Z",
+    "title": "Bug: `thresh(k, pubkeys[21])` policy does not compile for `k < 3`",
+    "labels": [
+      "bug",
+      "wontfix"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-miniscript/issues/258",
+    "publishedAt": "2021-07-28T17:49:53Z",
+    "title": "Renable CI descriptorpublic test",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-miniscript/issues/320",
+    "publishedAt": "2022-03-22T15:41:50Z",
+    "title": "Support for sortedmulti_a",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  }
+]

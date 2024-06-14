@@ -1,0 +1,122 @@
+[
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/792",
+    "publishedAt": "2022-01-17T09:26:53Z",
+    "title": "Support signature verification of non-standard transactions",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/811",
+    "publishedAt": "2022-01-26T15:47:48Z",
+    "title": "New tool to make releases less painful",
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "doc"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/827",
+    "publishedAt": "2022-02-10T19:05:18Z",
+    "title": "Audit serde impls for uses of custom error",
+    "labels": [
+      "good first issue",
+      "1.0",
+      "error handling"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/1263",
+    "publishedAt": "2022-09-12T23:34:40Z",
+    "title": "sighash_ecdsa mishandles taproot output",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/1307",
+    "publishedAt": "2022-10-03T15:07:59Z",
+    "title": "Fuzz error in `deserialize_psbt` target",
+    "labels": [
+      "bug",
+      "Tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/1327",
+    "publishedAt": "2022-10-19T01:15:23Z",
+    "title": "Review all data structures to ensure that they maintain invariants while deserializing from serde",
+    "labels": [
+      "bug",
+      "P-high"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/1458",
+    "publishedAt": "2022-12-11T05:25:39Z",
+    "title": "Fixed-size consensus types should have `from_consensus_bytes(bytes: &[u8; N])`",
+    "labels": [
+      "minor API Change",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/1494",
+    "publishedAt": "2022-12-20T21:31:13Z",
+    "title": "CI: Test every commit ",
+    "labels": [
+      "bug",
+      "ci"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/1802",
+    "publishedAt": "2023-04-17T01:40:05Z",
+    "title": "Types that implement `FromStr` should implement `TryFrom<&str>` and friends",
+    "labels": [
+      "good first issue",
+      "1.0"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/2136",
+    "publishedAt": "2023-10-21T17:38:25Z",
+    "title": "Shouldn't `Amount` handle decimals formatting with `{:.8}` ?",
+    "labels": [
+      "bug",
+      "C-units"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/2250",
+    "publishedAt": "2023-12-05T10:08:16Z",
+    "title": "Auto cfg doc on `PushBytesError` is broken",
+    "labels": [
+      "bug",
+      "doc"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/2849",
+    "publishedAt": "2024-06-10T12:48:55Z",
+    "title": "Change `PushBytes::read_scriptint(x)` to `x.read_scriptint()`",
+    "labels": [
+      "good first issue",
+      "trivial"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  }
+]

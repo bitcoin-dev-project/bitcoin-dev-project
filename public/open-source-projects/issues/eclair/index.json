@@ -1,0 +1,61 @@
+[
+  {
+    "url": "https://github.com/ACINQ/eclair/issues/1001",
+    "publishedAt": "2019-05-12T23:34:03Z",
+    "title": "Feature request: Support query string authentication on API WebSocket endpoint",
+    "labels": [
+      "help wanted",
+      "feature request"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
+  },
+  {
+    "url": "https://github.com/ACINQ/eclair/issues/1437",
+    "publishedAt": "2020-05-25T16:36:48Z",
+    "title": "Feature request: implement cookie authentication for eclair RPC",
+    "labels": [
+      "help wanted",
+      "feature request"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
+  },
+  {
+    "url": "https://github.com/ACINQ/eclair/issues/1640",
+    "publishedAt": "2020-12-15T16:41:16Z",
+    "title": "Replace Json API with (Kotlin?) plugin",
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
+  },
+  {
+    "url": "https://github.com/ACINQ/eclair/issues/1652",
+    "publishedAt": "2020-12-18T16:58:18Z",
+    "title": "Add an option to disable server ",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
+  },
+  {
+    "url": "https://github.com/ACINQ/eclair/issues/1858",
+    "publishedAt": "2021-07-02T12:09:16Z",
+    "title": "Update API responses to specify BtcAmount unit",
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
+  },
+  {
+    "url": "https://github.com/ACINQ/eclair/issues/2728",
+    "publishedAt": "2023-08-23T11:16:45Z",
+    "title": "Mutual close gets stuck if an `UpdateFee` arrives at a bad time",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
+  }
+]
