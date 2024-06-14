@@ -108,14 +108,8 @@ export default function PageLevel({
                                     </Link>
                                     <Link
                                         href={`good-first-issues/?repo=${item.repo ?? ""}`}
-                                        className={`w-fit gap-1.5 text-nowrap whitespace-nowrap hover:underline ${item.repo ? "flex" : "hidden"}`}
+                                        className={`w-fit gap-1.5 text-nowrap whitespace-nowrap underline ${item.repo ? "flex" : "hidden"}`}
                                     >
-                                        <Image
-                                            alt={"github icon"}
-                                            src={"./issues-icon.svg"}
-                                            width={24}
-                                            height={24}
-                                        />
                                         Good first Issues
                                     </Link>
                                 </div>

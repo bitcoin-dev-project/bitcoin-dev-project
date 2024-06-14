@@ -14,7 +14,6 @@ import Skeleton from "./skeleton"
 import { usePaginatedResult } from "@/hooks/usePagination"
 import Pagination from "./Pagination"
 import Image from "next/image"
-import useOnclickOut from "@/hooks/useOnclickOut"
 import { slugify } from "@/utils/slugify"
 
 const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
@@ -179,7 +178,7 @@ function IssueCard({
                         ) : (
                             <div className="w-6 h-6 bg-gray-100 rounded-md"></div>
                         )}
-                        <span className="text-sm font-medium text-gray-500 capitalize hover:text-black hover:font-semibold">
+                        <span className="text-sm font-medium text-gray-500 hover:text-black hover:font-semibold">
                             {`${issue.repo}/${issue.owner}`}
                         </span>
                     </section>
@@ -198,7 +197,7 @@ function IssueCard({
                     href={issue.url}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="mt-2 text-lg md:text-base font-medium text-gray-900 text-wrap break-words"
+                    className="mt-2 text-lg md:text-base font-medium text-gray-900 text-wrap break-words hover:underline"
                     data-umami-event={`${slugify(issue.repo)}-issue-url-clicked`}
                 >
                     <span className="text-gray-500">#{issue.number}</span>{" "}
@@ -212,7 +211,6 @@ function IssueCard({
                         name={lang}
                         className="mr-2"
                         keys={keys}
-                        addFilterParam={addFilterParam}
                     />
                 ))}
             </div>

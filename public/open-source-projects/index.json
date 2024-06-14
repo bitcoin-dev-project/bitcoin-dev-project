@@ -69,7 +69,7 @@
     "bitcoin": {
         "repo_url": "https://github.com/bitcoin/bitcoin",
         "name": "bitcoin",
-        "org": "Bitcoin",
+        "org": "bitcoin",
         "tags": [
             "cryptography",
             "bitcoin",
