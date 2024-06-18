@@ -330,5 +330,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
+  },
+  {
+    "url": "https://github.com/ElementsProject/lightning/issues/7172",
+    "publishedAt": "2024-03-25T14:09:39Z",
+    "title": "bitcoind: bad-txns-inputs-missingorspent on sendrawtransaction",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
