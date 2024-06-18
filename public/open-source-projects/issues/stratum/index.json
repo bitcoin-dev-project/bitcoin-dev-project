@@ -263,18 +263,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/936",
-    "publishedAt": "2024-05-27T12:44:22Z",
-    "title": "TryFrom(u8,&mut[u8]) for PoolMessages is broken",
-    "labels": [
-      "bug",
-      "good first issue",
-      "help wanted",
-      "sv2 pool"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/951",
     "publishedAt": "2024-06-02T14:20:27Z",
     "title": "`StandardChannel` support on JDC",
