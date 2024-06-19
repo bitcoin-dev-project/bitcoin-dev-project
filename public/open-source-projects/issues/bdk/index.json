@@ -335,16 +335,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1313",
-    "publishedAt": "2024-02-01T15:07:41Z",
-    "title": "\"Missing non_witness_utxo on foreign utxo <utxo>\"",
-    "labels": [
-      "bug",
-      "module-wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1342",
     "publishedAt": "2024-02-13T01:06:24Z",
     "title": "allow_shrinking not working as expected",
