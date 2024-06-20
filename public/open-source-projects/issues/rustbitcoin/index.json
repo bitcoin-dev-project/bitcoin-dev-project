@@ -108,5 +108,14 @@
       "doc"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/2891",
+    "publishedAt": "2024-06-20T10:15:01Z",
+    "title": "`psbt::raw::Key`'s `type_value` field should be serialized as `VarInt`",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
