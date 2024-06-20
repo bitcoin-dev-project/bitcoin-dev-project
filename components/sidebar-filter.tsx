@@ -9,6 +9,7 @@ import CloseSidebarIcon from "../public/close-sidebar.svg"
 import CrossIcon from "../public/cross-icon.svg"
 import FilterIcon from "../public/filter.svg"
 import SortIcon from "../public/sort-icon.svg"
+import LightningIcon from "../public/lightning_icon_filled.svg"
 import useOnclickOut from "@/hooks/useOnclickOut"
 
 const SidebarFilter = ({
@@ -237,13 +238,11 @@ function CustomSortSelect({ args }: { args: string[] }) {
                         data-selected={currentSortKey.key === item.key}
                         className="group"
                     >
-                        <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
+                        <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer items-center">
                             <Image
-                                className="group-data-[selected=false]:invisible"
-                                src="./lightning_icon_filled.svg"
-                                height={16}
-                                width={16}
-                                alt=""
+                                className="group-data-[selected=false]:invisible w-4 h-4"
+                                src={LightningIcon}
+                                alt="lightning icon"
                             />
                             <span
                                 className={
@@ -407,13 +406,11 @@ function CustomMultiCheckBox({
                             data-selected={isSelected(item.title)}
                             className="group"
                         >
-                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer">
+                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer items-center">
                                 <Image
-                                    className="group-data-[selected=false]:invisible"
-                                    src="./lightning_icon_filled.svg"
-                                    height={16}
-                                    width={16}
-                                    alt=""
+                                    className="group-data-[selected=false]:invisible w-4 h-4"
+                                    src={LightningIcon}
+                                    alt="lightning icon"
                                 />
                                 <span
                                     className={

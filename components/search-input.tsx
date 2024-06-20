@@ -23,11 +23,11 @@ const SearchInput = ({
 
     return (
         <div className="flex items-center justify-center w-full max-w-3xl pt-6 pr-[7px]">
-            <div className="flex gap-4 items-center w-full">
+            <div className="flex gap-4 md:gap-2 items-center w-full">
                 <input
                     type="text"
                     className={
-                        "text-black border-[1.5px] bg-secondary-gray text-base rounded-md placeholder:font-rebond placeholder:font-light outline-gray-600 border-gray-500 px-4 placeholder:text-gray-500 h-12 w-full"
+                        "text-black border-[1.5px] bg-secondary-gray text-base rounded-md placeholder:font-rebond placeholder:font-light outline-gray-600 border-gray-500 px-4 sm:px-2 sm:placeholder:text-[13px] placeholder:text-gray-500 h-12 w-full"
                     }
                     placeholder="Search by title, repository, or language"
                     onChange={handleChange}

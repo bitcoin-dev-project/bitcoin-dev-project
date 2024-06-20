@@ -225,8 +225,8 @@ function InfoTab() {
                 <div className="bg-gray-100 border border-gray-400 p-4 md:p-3 rounded-xl">
                     <p className="md:text-[15px]">
                         Use this tool to explore vetted Free Open Source
-                        Software (FOSS) projects and begin your contribution
-                        journey.
+                        Software (FOSS) projects and find your way in bitcoin
+                        open source.
                     </p>
                 </div>
             </div>

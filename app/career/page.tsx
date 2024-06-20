@@ -10,7 +10,7 @@ const Item = ({ content, title }: Props) => (
         <h2 className="text-2xl md:text-xl font-medium leading-normal">
             {title}
         </h2>
-        <p className="text-lg md:text-md">{content}</p>
+        <section className="text-lg md:text-md">{content}</section>
     </div>
 )
 

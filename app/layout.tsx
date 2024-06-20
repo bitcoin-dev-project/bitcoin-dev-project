@@ -1,4 +1,4 @@
-import Fonts, { barlow } from "@/components/font"
+import { Barlow } from "next/font/google"
 import Footer from "@/components/footer"
 import NavBar from "@/components/nav-bar"
 import type { Metadata } from "next"
@@ -21,6 +21,14 @@ export const metadata: Metadata = {
         "bitcoin, lightning, bitcoin development, bitcoin open source, bitcoin FOSS, bitcoin career, free open source software, open source, bitcoin development, bitcoin development community, bitcoin development resources, bitcoin development tools, bitcoin development guides, bitcoin development courses"
 }
 
+export const barlow = Barlow({
+    weight: ["100", "300", "400", "500", "600", "700"],
+    variable: "--barlow-font",
+    preload: true,
+    display: "swap",
+    subsets: ["latin"]
+})
+
 export default function RootLayout({
     children
 }: {
@@ -35,7 +43,6 @@ export default function RootLayout({
                 data-domains="bitcoindevs.xyz"
             />
             <body className={barlow.className}>
-                <Fonts />
                 <NavBar />
                 <div>{children}</div>
                 <Footer />
