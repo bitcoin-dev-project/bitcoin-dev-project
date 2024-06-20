@@ -10,16 +10,23 @@ export const metadata: Metadata = {
     description:
         "Explore Good First Issues from vetted Bitcoin open-source projects and start making impactful contributions today!",
     openGraph: {
-        images: ["https://bitcoindevs.xyz/good-first-issues.png"],
+        images: [
+            {
+                url: "https://bitcoindevs.xyz/images/good-first-issues.png",
+                alt: "Good First Issues"
+            }
+        ],
         title: "Good First Issues",
         url: "https://bitcoindevs.xyz/good-first-issues",
+        type: "website",
         description:
             "Explore Good First Issues from vetted Bitcoin open-source projects and start making impactful contributions today!"
     },
     twitter: {
-        images: ["https://bitcoindevs.xyz/good-first-issues.png?v1"],
+        images: ["https://bitcoindevs.xyz/images/good-first-issues.png"],
         card: "summary_large_image",
-        title: "Good First Issues",
+        title: "Good First Issues | Bitcoin Dev Project",
+        creator: "@Bitcoin_Devs",
         description:
             "Explore Good First Issues from vetted Bitcoin open-source projects and start making impactful contributions today!"
     }
