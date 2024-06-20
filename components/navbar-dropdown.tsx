@@ -5,6 +5,7 @@ import Image from "next/image"
 import { ContributeNavPointers, navPointers } from "@/content/data"
 import useOnclickOut from "@/hooks/useOnclickOut"
 import { slugify } from "@/utils/slugify"
+import ArrowDownIcon from "../public/images/arrow-down.svg"
 
 export function NavbarDropDown({
     menuItem,
@@ -32,11 +33,9 @@ export function NavbarDropDown({
                 >
                     {menuItem}
                     <Image
-                        className={`${iconStyle} transition-transform ease-linear `}
-                        src={"/images/arrow-down.svg"}
+                        className={`${iconStyle} transition-transform ease-linear w-3 h-3`}
+                        src={ArrowDownIcon}
                         alt="arrow down"
-                        width={12}
-                        height={12}
                     />
                 </button>
             </div>
