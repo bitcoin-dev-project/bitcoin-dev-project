@@ -365,15 +365,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1461",
-    "publishedAt": "2024-06-05T22:05:25Z",
-    "title": "wallet: `finalize_psbt` should clear BIP32 derivations",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1462",
     "publishedAt": "2024-06-06T03:02:19Z",
     "title": "Examples don't show how to properly initialize a IndexedTxGraph etc from disk",
