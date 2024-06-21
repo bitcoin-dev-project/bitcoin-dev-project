@@ -383,5 +383,15 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1483",
+    "publishedAt": "2024-06-21T03:02:05Z",
+    "title": "`DescriptorId` is not unique enough",
+    "labels": [
+      "bug",
+      "discussion"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
