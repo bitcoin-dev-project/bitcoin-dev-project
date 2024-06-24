@@ -27,7 +27,7 @@ export default function Projects() {
                 </div>
                 <div className="flex flex-col gap-y-24 pt-6">
                     <Button
-                        href="/contribute"
+                        href="/good-first-issues"
                         className="w-fit mx-auto text-center py-4 px-8"
                     >
                         Start contributing
