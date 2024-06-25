@@ -408,15 +408,5 @@
       "wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/5453",
-    "publishedAt": "2024-06-13T00:13:19Z",
-    "title": "RBF withdrawal causes failed audit",
-    "labels": [
-      "bug",
-      "wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
