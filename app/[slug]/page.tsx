@@ -1,4 +1,5 @@
 import { Wrapper } from "@/components/Wrapper"
+import Button from "@/components/button"
 import PageLevel from "@/components/page-level"
 import { curriculums, type KnownCurriculums } from "@/content/curriculums"
 import { slugify } from "@/utils/slugify"
@@ -10,6 +11,29 @@ export default function Curriculum({
     params: { slug: KnownCurriculums }
 }) {
     const curriculum = curriculums[params.slug]
+    if (!curriculum) {
+        return (
+            <section className="flex h-[calc(100vh-250px)] flex-col items-center justify-center">
+                <div className="container mx-auto max-w-md space-y-6 text-center">
+                    <div className="space-y-2">
+                        <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
+                            Oops, looks like you&apos;ve taken a wrong turn!
+                        </h1>
+                        <p className="text-gray-900">
+                            The page you&apos;re looking for doesn&apos;t exist
+                            or has been moved.
+                        </p>
+                    </div>
+                    <Button
+                        href="/"
+                        className="w-fit mx-auto text-center py-4 px-8"
+                    >
+                        Go back home
+                    </Button>
+                </div>
+            </section>
+        )
+    }
 
     return (
         <Wrapper>
