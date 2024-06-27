@@ -16,7 +16,7 @@ module.exports = () => {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
     images: {
-      domains: ['avatars.githubusercontent.com'], // Add your desired domains here
+      domains: ['avatars.githubusercontent.com'],
     },
   })
 }
