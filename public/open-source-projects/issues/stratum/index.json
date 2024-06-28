@@ -198,17 +198,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/863",
-    "publishedAt": "2024-04-19T14:24:55Z",
-    "title": "JDC is not logging any error on wrong TP configuration",
-    "labels": [
-      "bug",
-      "good first issue",
-      "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/874",
     "publishedAt": "2024-04-29T17:54:18Z",
     "title": "undeterministic connection between JDC and pool",
@@ -325,17 +314,6 @@
     "labels": [
       "bug",
       "translation proxy"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1018",
-    "publishedAt": "2024-06-28T00:45:03Z",
-    "title": "`GetSize` implementation for `SubmitSolutionJd` is incomplete",
-    "labels": [
-      "bug",
-      "binary-sv2",
-      "codec-sv2"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
