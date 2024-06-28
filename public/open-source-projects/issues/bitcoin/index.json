@@ -531,15 +531,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/26492",
-    "publishedAt": "2022-11-13T12:29:37Z",
-    "title": "make check errors on big endian OpenBSD 7.2",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/26813",
     "publishedAt": "2023-01-04T17:13:42Z",
     "title": "listreceivedbyaddress is empty for descriptor (but not legacy) wallets",
