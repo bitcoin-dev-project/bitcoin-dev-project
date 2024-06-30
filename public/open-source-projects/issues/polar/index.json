@@ -50,16 +50,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   },
   {
-    "url": "https://github.com/jamaljsr/polar/issues/642",
-    "publishedAt": "2023-01-02T02:54:04Z",
-    "title": "Bug: Viewing terminals on Linux just gives a loading animated icon",
-    "labels": [
-      "bug",
-      "up for grabs"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
-  },
-  {
     "url": "https://github.com/jamaljsr/polar/issues/682",
     "publishedAt": "2023-02-21T14:25:15Z",
     "title": "Unable to connect to c-lightning node",
