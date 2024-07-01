@@ -35,14 +35,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/567",
-    "publishedAt": "2024-07-01T13:27:50Z",
-    "title": "Use bdk_electrum upstream",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
