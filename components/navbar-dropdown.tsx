@@ -26,7 +26,7 @@ export function NavbarDropDown({
             <div className="w-fit" ref={contentRef} onClick={toggle}>
                 <button
                     type="button"
-                    className={`flex items-center justify-center rounded-md ${isMobile ? `gap-x-3 font-semibold text-lg w-fit` : `w-full gap-x-1.5 px-3 py-2 text-gray-900`}`}
+                    className={`flex items-center justify-center rounded-md ${isMobile ? `gap-x-3 font-semibold text-lg w-fit` : `w-full gap-x-1.5 px-3 py-2 text-gray-800 dark:text-gray-100 dark:text-gray-100`}`}
                     id="menu-button"
                     aria-expanded="true"
                     aria-haspopup="true"
@@ -45,7 +45,7 @@ export function NavbarDropDown({
                     className={
                         isMobile
                             ? ""
-                            : "absolute right-0 z-10 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition-opacity duration-200"
+                            : "absolute right-0 z-10 w-48 origin-top-right rounded-md bg-white dark:bg-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition-opacity duration-200"
                     }
                     role="menu"
                     aria-orientation="vertical"
@@ -60,7 +60,7 @@ export function NavbarDropDown({
                                 }
                                 key={link.btnText}
                                 href={link.jumpTo}
-                                className="text-gray-700 block px-4 py-2 text-sm"
+                                className="text-gray-700 dark:text-gray-300 block px-4 py-2 text-sm"
                                 role="menuitem"
                                 id="menu-item-0"
                                 data-umami-event={`nav-${slugify(link.btnText)}-clicked`}
