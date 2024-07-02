@@ -93,7 +93,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                         </div>
                     ) : (
                         <div
-                                className={`grid auto-rows-max gap-4  ${noIssuesFound ? "grid-col-1" : "max-sm:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2 grid-cols-3"} flex-1`}
+                            className={`grid auto-rows-max gap-4  ${noIssuesFound ? "grid-col-1" : "max-sm:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2 grid-cols-3"} flex-1`}
                         >
                             {noIssuesFound ? (
                                 <div className="w-full flex justify-center items-center">
@@ -200,7 +200,9 @@ function IssueCard({
                     className="mt-2 text-lg max-md:text-base font-medium text-gray-800 dark:text-gray-100 dark:text-gray-100 text-wrap break-words hover:underline"
                     data-umami-event={`${slugify(issue.repo)}-issue-url-clicked`}
                 >
-                    <span className="text-gray-500 dark:text-gray-500">#{issue.number}</span>{" "}
+                    <span className="text-gray-500 dark:text-gray-500">
+                        #{issue.number}
+                    </span>{" "}
                     {issue.title}
                 </Link>
             </div>

@@ -1,10 +1,10 @@
-import { Barlow } from "next/font/google";
-import Footer from "@/components/footer";
-import NavBar from "@/components/nav-bar";
-import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "@/components/header";
-import { ThemeProvider } from 'next-themes'
+import { Barlow } from "next/font/google"
+import Footer from "@/components/footer"
+import NavBar from "@/components/nav-bar"
+import type { Metadata } from "next"
+import "./globals.css"
+import { Header } from "@/components/header"
+import { ThemeProvider } from "next-themes"
 
 export const metadata: Metadata = {
     title: "The Bitcoin Dev Project",
@@ -46,16 +46,16 @@ export default function RootLayout({
                     data-domains="bitcoindevs.xyz"
                 />
             </head>
-            <body className={`${barlow.className} dark:bg-black dark:text-gray-50 bg-white`}>
+            <body
+                className={`${barlow.className} dark:bg-black dark:text-gray-50 bg-white`}
+            >
                 <ThemeProvider attribute="class">
                     {/* <NavBar /> */}
                     <Header />
                     <main>{children}</main>
                     <Footer />
                 </ThemeProvider>
-
             </body>
-
         </html>
     )
 }
