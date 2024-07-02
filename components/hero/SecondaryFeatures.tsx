@@ -8,13 +8,13 @@ import clsx from 'clsx'
 import { Container } from './Container'
 import screenshotBitcoinSearch from '@/public/hero/screenshots/bitcoin_search.png'
 import screenshotBitcoinTLDR from '@/public/hero/screenshots/bitcoin_tldr.png'
-import screenshotBitcoinTranscrit from '@/public/hero/screenshots/bitcoin_transcript.png'
+import screenshotBitcoinTranscript from '@/public/hero/screenshots/bitcoin_transcript.png'
 import screenshotChatBTC from '@/public/hero/screenshots/chatBTC.png'
 import screenshotSavingSatoshi from '@/public/hero/screenshots/saving_satoshi.png'
 
 import logoBitcoinSearch from '@/public/hero/logos/bitcoin-search.png'
 import logoBitcoinTLDR from '@/public/hero/logos/bitcoin-tldr.png'
-import logoBitcoinTranscrit from '@/public/hero/logos/bitcoin-transcripts.png'
+import logoBitcoinTranscript from '@/public/hero/logos/bitcoin-transcripts.png'
 import logoChatBTC from '@/public/hero/logos/chat-btc.png'
 import logoSavingSatoshi from '@/public/hero/logos/bitcoin-transcripts-review.png'
 import { useRouter } from 'next/router'
@@ -35,8 +35,8 @@ const features: Array<Feature> = [
       'Peruse archives of transcribed talks, podcasts and lectures.',
     summary:
       '',
-    image: screenshotBitcoinTranscrit,
-    icon: logoBitcoinTranscrit,
+    image: screenshotBitcoinTranscript,
+    icon: logoBitcoinTranscript,
   },
 
   {
