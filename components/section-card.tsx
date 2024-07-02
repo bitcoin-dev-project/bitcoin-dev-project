@@ -25,11 +25,11 @@ export default function SectionCard({
     return (
         <div
             className={clsx(
-                `flex flex-col bg-pale-orange rounded-xl shadow-normal hover:shadow-raised transition-[box-shadow] duration-500 ease-in-out overflow-hidden`,
+                `flex flex-col bg-orange-100 dark:bg-orange-900 rounded-xl shadow-normal hover:shadow-raised transition-[box-shadow] duration-500 ease-in-out overflow-hidden`,
                 className
             )}
         >
-            <div className={`relative h-[250px] w-full md:h-[150px]`}>
+            <div className={`relative h-[250px] w-full max-md:h-[150px]`}>
                 <Image
                     className="object-cover"
                     src={src}
@@ -39,11 +39,11 @@ export default function SectionCard({
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
-            <div className="p-6 md:p-3 flex flex-col items-center gap-y-4 md:gap-y-2 text-center">
-                <h2 className="text-[38px] md:text-xl font-semibold leading-[100%]">
+            <div className="p-6 max-md:p-3 flex flex-col items-center gap-y-4 max-md:gap-y-2 text-center">
+                <h2 className="text-[38px] max-md:text-xl font-semibold leading-[100%]">
                     {title}
                 </h2>
-                <p className="text-xl md:text-sm">{description}</p>
+                <p className="text-xl max-md:text-sm">{description}</p>
                 <Button
                     className="w-[55%]"
                     {...rest}

@@ -23,20 +23,20 @@ const SearchInput = ({
 
     return (
         <div className="flex items-center justify-center w-full max-w-3xl pt-6 pr-[7px]">
-            <div className="flex gap-4 md:gap-2 items-center w-full">
+            <div className="flex gap-4 max-md:gap-2 items-center w-full">
                 <input
                     type="text"
                     className={
-                        "text-black border-[1.5px] bg-secondary-gray text-base rounded-md placeholder:font-rebond placeholder:font-light outline-gray-600 border-gray-500 px-4 sm:px-2 sm:placeholder:text-[13px] placeholder:text-gray-500 h-12 w-full"
+                        "text-black dark:text-white border-[1.5px] bg-white dark:bg-black text-base rounded-md placeholder:font-rebond placeholder:font-light outline-gray-600 border-gray-500 px-4 max-sm:px-2 max-sm:placeholder:text-[13px] placeholder:text-gray-500 dark:text-gray-500 h-12 w-full"
                     }
                     placeholder="Search by title, repository, or language"
                     onChange={handleChange}
                     value={value}
                 />
 
-                <section className="hidden md:block relative">
+                <section className="hidden max-md:block relative">
                     <button
-                        className="cursor-pointer w-fit border border-gray-400 bg-gray-100 p-3 rounded-lg relative z-40"
+                        className="cursor-pointer w-fit border border-gray-400 bg-gray-100 dark:bg-gray-800 p-3 rounded-lg relative z-40"
                         onClick={toggle}
                     >
                         <Image

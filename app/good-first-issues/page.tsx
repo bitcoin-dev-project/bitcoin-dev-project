@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const Contribute = async () => {
     const issues = await getRepoIssues()
     return (
-        <main className="container mx-auto">
+        <main className="mx-auto">
             <RepositoryIssues issues={issues} />
         </main>
     )

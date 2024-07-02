@@ -19,30 +19,30 @@ export default function PageLevel({
         <div
             id={slugify(level.title)}
             key={level.title}
-            className="flex flex-col gap-y-16 md:gap-y-6"
+            className="flex flex-col gap-y-16 max-md:gap-y-6"
         >
             {showHeader && (
                 <div
                     className={clsx(
-                        "flex flex-col gap-y-6 w-[50%] pb-4 md:w-full",
+                        "flex flex-col gap-y-6 w-[50%] pb-4 max-md:w-full",
                         {
-                            "border-b-8 border-b-orange md:border-b-4":
+                            "border-b-8 border-b-orange max-md:border-b-4":
                                 level.items.length > 0,
                             "w-full": level.items.length === 0
                         }
                     )}
                 >
-                    <div className="flex items-center gap-x-6 md:gap-x-2">
-                        <h2 className="text-5xl md:text-2xl font-semibold">
+                    <div className="flex items-center gap-x-6 max-md:gap-x-2">
+                        <h2 className="text-5xl max-md:text-2xl font-semibold">
                             {pageTitle}
                         </h2>
                     </div>
                     {!!description && (
                         <p
                             className={clsx({
-                                "text-xl md:text-lg md:text-justify":
+                                "text-xl max-md:text-max-lg max-md:text-justify":
                                     level.items.length > 0,
-                                "text-xl md:text-lg md:text-justify w-4/5 md:w-full":
+                                "text-xl max-md:text-max-lg max-md:text-justify w-4/5 max-md:w-full":
                                     level.items.length === 0
                             })}
                         >
@@ -51,11 +51,11 @@ export default function PageLevel({
                     )}
                 </div>
             )}
-            <div className="flex w-full justify-between gap-y-5 md:gap-y-12 flex-wrap lg:flex-col">
+            <div className="flex w-full justify-between gap-y-5 max-md:gap-y-12 flex-wrap max-lg:flex-col">
                 {level.items.map((item) => (
                     <div
                         key={item.title}
-                        className="flex p-6 md:p-0 gap-x-6 w-[48%] lg:w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline md:hover:outline-none hover:bg-[#FCFCFC] md:hover:bg-none md:flex-col"
+                        className="flex p-6 max-md:p-0 gap-x-6 w-[48%] max-lg:w-full rounded-2xl outline-[#D9D9D9] hover:outline-1 hover:outline max-md:hover:outline-none hover:bg-[#FCFCFC] dark:hover:bg-gray-950 max-md:hover:bg-none max-md:flex-col"
                     >
                         <Link
                             href={item.link}
@@ -63,10 +63,10 @@ export default function PageLevel({
                             target="_blank"
                             data-umami-event={`${slugify(item.title)}-card-clicked`}
                         >
-                            <div className="relative min-w-[160px] h-[160px] md:w-full md:min-w-min md:h-[270px] border-[#D9D9D9] border rounded-2xl overflow-hidden">
+                            <div className="relative min-w-[160px] h-[160px] max-md:w-full max-md:min-w-min max-md:h-[270px] border-[#D9D9D9] border rounded-2xl overflow-hidden">
                                 <Image
                                     alt={item.title}
-                                    className="object-fill md:object-cover w-full"
+                                    className="object-fill max-md:object-cover w-full"
                                     src={item.image}
                                     fill
                                     sizes="(max-width: 768px) 100vw, (min-width: 769px) 20vw"
@@ -79,15 +79,15 @@ export default function PageLevel({
                                     href={item.link}
                                     rel="noopener"
                                     target="_blank"
-                                    className="text-4xl md:text-2xl font-semibold"
+                                    className="text-4xl max-md:text-2xl font-semibold"
                                     data-umami-event={`${slugify(item.title)}-card-clicked`}
                                 >
                                     {item.title}
                                 </Link>
-                                <p className="text-3xl md:text-xl font-semibold text-green">
+                                <p className="text-3xl max-md:text-xl font-semibold text-green">
                                     {item.subTitle}
                                 </p>
-                                <p className="flex flex-shrink-1 text-lg leading-[140%] md:text-justify">
+                                <p className="flex flex-shrink-1 text-max-lg leading-[140%] max-md:text-justify">
                                     {item.description}
                                 </p>
                             </div>
