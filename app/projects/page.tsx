@@ -22,7 +22,6 @@ export default function Projects() {
                             pageTitle={`${index + 1}. ${level.title}`}
                             showHeader={false}
                             {...level}
-                            // Ensure PageLevel also supports very dark mode
                         />
                     ))}
                 </div>

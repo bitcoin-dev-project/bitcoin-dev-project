@@ -26,39 +26,6 @@ export function ThemeToggle() {
   );
 };
 
-// export default ThemeToggle;
-
-
-// export function ThemeToggle() {
-//   let { resolvedTheme, setTheme } = useTheme()
-//   const [darkMode, setDarkMode] = useState(true);
-
-//   useEffect(() => {
-//     const isDark = localStorage.getItem('theme') === 'dark';
-//     setDarkMode(isDark);
-//     document.documentElement.classList.toggle('dark', isDark);
-//   }, [])
-
-//     const toggleDarkMode = () => {
-//     const isDark = !darkMode;
-//     setDarkMode(isDark);
-//     localStorage.setItem('theme', isDark ? 'dark' : 'light');
-//     document.documentElement.classList.toggle('dark', isDark);
-//   };
-  
-//   return (
-//     <button
-//       type="button"
-//       className="group rounded-full bg-white/90 px-3 py-1.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-black dark:ring-white/10 dark:hover:ring-white/20"
-//       onClick={toggleDarkMode}
-//     >
-//       <SunIcon className="h-5 w-5 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-orange-50 [@media(prefers-color-scheme:dark)]:stroke-orange-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-orange-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-orange-600" />
-//       <MoonIcon className="hidden h-5 w-5 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-orange-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-orange-500" />
-//     </button>
-//   )
-// }
-
-
 function SunIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg

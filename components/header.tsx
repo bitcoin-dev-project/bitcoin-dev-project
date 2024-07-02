@@ -29,7 +29,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon, RectangleGroupIcon } from '@heroicons/react/20/solid'
 import { ThemeToggle } from './dark-mode-toggle'
-// import DarkModeToggle from './dark-mode-toggle'
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -75,13 +74,6 @@ function MobileNavLink(
 export function Header() {
 
   const products = [
-    // {
-    //   name: 'Articles',
-    //   description: 'Explore vetted Free Open Source Software (FOSS) projects and begin your contribution journey.',
-    //   href: '#',
-    //   icon: ChartPieIcon,
-    //   released: false
-    // },
     {
       name: 'Bitcoin Topics',
       description: 'Learning bitcoin is hard, but we make it easy for you to get started.',
@@ -103,12 +95,7 @@ export function Header() {
       icon: FingerPrintIcon,
       released: true
     },
-    // {
-    //   name: 'Tools',
-    //   description: 'Explore tools that will help you in your journey to becoming a bitcoin developer.',
-    //   href: '#',
-    //   icon: SquaresPlusIcon,
-    // },
+
   ]
 
   const contributions = [
