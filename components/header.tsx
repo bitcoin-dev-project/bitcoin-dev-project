@@ -181,7 +181,7 @@ export function Header() {
                                                         aria-hidden="true"
                                                     />
                                                 </div>
-                                                <Link href={item.href}>
+                                                <a href={item.href}>
                                                     <div className="mt-6 block font-semibold text-gray-800 dark:text-gray-100 relative">
                                                         {item.name}
                                                         {!item.released && (
@@ -194,7 +194,7 @@ export function Header() {
                                                     <p className="mt-1 text-gray-600 dark:text-gray-400">
                                                         {item.description}
                                                     </p>
-                                                </Link>
+                                                </a>
                                             </div>
                                         ))}
                                     </div>
@@ -251,7 +251,7 @@ export function Header() {
                                                         aria-hidden="true"
                                                     />
                                                 </div>
-                                                <Link href={item.href}>
+                                                <a href={item.href}>
                                                     <div className="mt-6 block font-semibold text-gray-800 dark:text-gray-100">
                                                         {item.name}
                                                         <span className="absolute inset-0" />
@@ -259,7 +259,7 @@ export function Header() {
                                                     <p className="mt-1 text-gray-600 dark:text-gray-400">
                                                         {item.description}
                                                     </p>
-                                                </Link>
+                                                </a>
                                             </div>
                                         ))}
                                     </div>
