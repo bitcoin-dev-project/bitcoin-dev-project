@@ -75,7 +75,7 @@ export default function Footer() {
             <div>
               <h3 className="text-sm font-semibold leading-6 text-black-800 dark:text-black-100">Subscribe to our TLDR newsletter</h3>
               <p className="mt-2 text-sm leading-6 text-black-600 dark:text-black-400">
-                Keep you up to date with the latest development in the bitcoin space
+                Keep up to date with the latest developments in the Bitcoin space
               </p>
             </div>
             <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
@@ -111,7 +111,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="mt-8 text-sm leading-5 text-black-500 md:order-1 md:mt-0">
-              &copy; 2024 Built with ❤️  by Chaincode Labs x Bitcoin Dev Project
+              &copy; 2024 Built with 🧡 by Chaincode Labs x Bitcoin Dev Project
             </p>
           </div>
         </div>

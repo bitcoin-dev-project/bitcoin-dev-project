@@ -16,7 +16,7 @@ export default function Mission() {
       badge: 'CONTRIBUTION',
       name: '02 - Contribute',
       description:
-        "Explore vetted Free Open Source Software (FOSS) projects and find your way in bitcoin open source.",
+        "Put your knowledge to test. Explore vetted Free Open Source Software (FOSS) projects and find your way in bitcoin open source.",
       href: '/good-first-issues',
       cta: 'Start Contribute',
       icon: BitcoinIcon,
@@ -26,7 +26,7 @@ export default function Mission() {
       badge: 'TOOLS',
       name: '03 - Build',
       description:
-        "Explore tools built by the Bitcoin Dev Project in addition to some others we cannot live without.",
+        "Explore a suite of tools crafted to support your learning, building, and contributions in the Bitcoin ecosystem.",
       href: '/tools',
       cta: 'Check Tools',
       icon: BitcoinIcon,

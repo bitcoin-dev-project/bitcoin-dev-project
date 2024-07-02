@@ -209,10 +209,10 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display font-bold text-3xl tracking-tight text-black-800 dark:text-black-100 sm:text-5xl">
-            Everything you need to start !
+              From Learning to Action: Dive Into Bitcoin Development
           </h2>
           <p className="mt-4 text-lg tracking-tight text-black-700 dark:text-black-300">
-            Explore tools built by the Bitcoin Dev Project in addition to some others we cannot live without.
+            Explore tools crafted to support your learning, building, and contributions in the Bitcoin ecosystem.
           </p>
         </div>
         <FeaturesMobile />

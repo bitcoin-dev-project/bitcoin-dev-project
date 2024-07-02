@@ -15,7 +15,7 @@ const features = [
   {
     title: 'Bitcoin Topics',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "Breaking complex Bitcoin topics in a simple way. A resource rich with Visuals and animations to simplify complex technical Bitcoin concepts",
     image: screenshotTopics,
     released: false,
     checks: [
@@ -68,7 +68,7 @@ export function PrimaryFeatures() {
             Feeling <span className='text-orange'>Lost</span> about where to start ?
           </h2>
           <p className="mt-6 text-lg tracking-tight text-gray-800 dark:text-gray-200">
-            Well everything you need if you want to get started on your bitcoin journey
+            Well, we have everything you need to get started on your Bitcoin journey
           </p>
         </div>
         <TabGroup

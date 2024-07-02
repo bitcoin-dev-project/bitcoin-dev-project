@@ -9,7 +9,7 @@ export default function Newsletter() {
             <div className="max-w-xl lg:max-w-lg">
               <h2 className="text-3xl font-bold tracking-tight dark:text-white text-black sm:text-4xl">Subscribe to TLDR newsletter.</h2>
               <p className="mt-4 text-lg leading-8 text-black-500 dark:text-black-500">
-              Keep you up to date with the latest development in the bitcoin space. We summarize every post on  bitcoin-dev, lightning-dev and delving bitcoin mailing lists.
+              Keep up to date with the latest developments in the Bitcoin space. We summarize every post on  bitcoin-dev, lightning-dev and delving bitcoin mailing lists.
               </p>
               <div className="mt-6 flex max-w-md gap-x-4">
                 <label htmlFor="email-address" className="sr-only">
@@ -39,7 +39,7 @@ export default function Newsletter() {
                 </div>
                 <dt className="mt-4 font-semibold text-black dark:text-white">Weekly Posts</dt>
                 <dd className="mt-2 leading-7 text-black-500 dark:text-black-500">
-                  Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.
+                Receive curated weekly updates on the most important Bitcoin and Lightning Network developments.
                 </dd>
               </div>
               <div className="flex flex-col items-start">
@@ -48,7 +48,7 @@ export default function Newsletter() {
                 </div>
                 <dt className="mt-4 font-semibold text-black dark:text-white">No spam</dt>
                 <dd className="mt-2 leading-7 text-black-500  dark:text-black-500">
-                  Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.
+                  We respect your privacy. You'll only receive high-quality content relevant to Bitcoin development.
                 </dd>
             </div>
             </dl>

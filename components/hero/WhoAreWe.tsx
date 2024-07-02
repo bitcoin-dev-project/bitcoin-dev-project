@@ -7,7 +7,7 @@ export default function WhoAreWe() {
     {
       name: 'BITCOIN ONLY',
       description:
-        "Open sourced tools, 100% focused on bitcoin and it's ecosystem",
+        "We are 100% focused on Bitcoin and its ecosystem.",
       href: '#',
       icon: BitcoinIcon,
     },
@@ -21,7 +21,7 @@ export default function WhoAreWe() {
     {
       name: 'COMMUNITY',
       description:
-        "Bridge the gap between experienced developers and newcomers",
+        "Bridge the gap between experienced developers and newcomers.",
       href: '#',
       icon: UsersIcon,
     },
