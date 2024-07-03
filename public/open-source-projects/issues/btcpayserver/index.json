@@ -58,7 +58,8 @@
     "publishedAt": "2024-02-28T17:01:06Z",
     "title": "Failed to import a Multisig Bitcoin wallet -with any of the available options-",
     "labels": [
-      "Bug"
+      "Bug",
+      "blocked"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
