@@ -84,6 +84,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6015",
+    "publishedAt": "2024-05-29T16:46:15Z",
+    "title": "Default printing template for Keypad now produces extra whitespace on Bitcoinize POS",
+    "labels": [
+      "Bug",
+      "Receipt"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6076",
     "publishedAt": "2024-07-02T12:31:23Z",
     "title": "[Bug]: Can't save email settings on store level",
