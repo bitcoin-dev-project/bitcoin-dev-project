@@ -1,6 +1,5 @@
 import { Barlow } from "next/font/google"
 import Footer from "@/components/footer"
-import NavBar from "@/components/nav-bar"
 import type { Metadata } from "next"
 import "./globals.css"
 import { Header } from "@/components/header"
@@ -50,7 +49,6 @@ export default function RootLayout({
                 className={`${barlow.className} dark:bg-black dark:text-gray-50 bg-white`}
             >
                 <ThemeProvider attribute="class">
-                    {/* <NavBar /> */}
                     <Header />
                     <main>{children}</main>
                     <Footer />

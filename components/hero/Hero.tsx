@@ -1,14 +1,12 @@
 import Image from "next/image"
 
-import { Button } from "./Button"
-import { Container } from "./Container"
-
-import logoBS from "@/public/hero/logos/bitcoin-search.png"
-import logoTLDR from "@/public/hero/logos/bitcoin-tldr.png"
-import logoTrRev from "@/public/hero/logos/bitcoin-transcripts-review.png"
-import logoChatBTC from "@/public/hero/logos/chat-btc.png"
-import logoBitcTran from "@/public/hero/logos/bitcoin-transcripts.png"
+import logoBS from "@/public/images/hero/logos/bitcoin-search.png"
+import logoTLDR from "@/public/images/hero/logos/bitcoin-tldr.png"
+import logoTrRev from "@/public/images/hero/logos/bitcoin-transcripts-review.png"
+import logoChatBTC from "@/public/images/hero/logos/chat-btc.png"
+import logoBitcTran from "@/public/images/hero/logos/bitcoin-transcripts.png"
 import Link from "next/link"
+import { Container } from "./Container"
 export function Hero() {
     return (
         <Container className="pb-16 pt-20 text-center lg:pt-32 bg-white dark:bg-black">

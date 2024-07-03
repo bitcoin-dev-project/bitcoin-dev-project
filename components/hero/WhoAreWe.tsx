@@ -43,7 +43,7 @@ export default function WhoAreWe() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center">
                     <h2 className="text-base font-semibold leading-7 text-orange-600">
-                        Who are we ?
+                        Who are we?
                     </h2>
                     <p className="mt-2 text-4xl font-bold tracking-tight text-black-800 dark:text-black-100 sm:text-5xl">
                         About The Bitcoin Dev Project

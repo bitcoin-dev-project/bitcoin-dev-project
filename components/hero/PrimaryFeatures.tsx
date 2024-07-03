@@ -7,8 +7,8 @@ import clsx from "clsx"
 
 import { Container } from "./Container"
 
-import screenshotTopics from "@/public/hero/screenshots/topics.png"
-import screenshotGoodFirstIssues from "@/public/hero/screenshots/good-first-issues.png"
+import screenshotTopics from "@/public/images/hero/screenshots/topics.png"
+import screenshotGoodFirstIssues from "@/public/images/hero/screenshots/good-first-issues.png"
 
 const features = [
     {

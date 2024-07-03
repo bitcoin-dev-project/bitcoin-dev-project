@@ -2,11 +2,11 @@ import { BitcoinIcon, EyeOffIcon } from "lucide-react"
 import Link from "next/link"
 
 export default function Mission() {
-    const features2 = [
+    const features = [
         {
             badge: "EDUCATION",
             name: "01 - Study",
-            description: "Learning Bitcoin is Hard we make it easy for you.",
+            description: "Learning bitcoin is Hard we make it easy for you.",
             href: "/bitcoin-core",
             cta: "Check out topics",
             icon: BitcoinIcon
@@ -25,7 +25,7 @@ export default function Mission() {
             badge: "TOOLS",
             name: "03 - Build",
             description:
-                "Explore a suite of tools crafted to support your learning, building, and contributions in the Bitcoin ecosystem.",
+                "Explore a suite of tools crafted to support your learning, building, and contributions in the bitcoin ecosystem.",
             href: "/tools",
             cta: "Check Tools",
             icon: BitcoinIcon
@@ -63,7 +63,7 @@ export default function Mission() {
 
                 <div className="mx-auto max-w-2xl  lg:max-w-none">
                     <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-                        {features2.map((feature) => (
+                        {features.map((feature) => (
                             <div
                                 key={feature.name}
                                 className="flex flex-col items-center p-6 bg-white dark:bg-black rounded-lg border border-black-300 dark:border-black-800"

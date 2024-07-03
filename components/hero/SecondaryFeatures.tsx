@@ -6,18 +6,17 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react"
 import clsx from "clsx"
 
 import { Container } from "./Container"
-import screenshotBitcoinSearch from "@/public/hero/screenshots/bitcoin_search.png"
-import screenshotBitcoinTLDR from "@/public/hero/screenshots/bitcoin_tldr.png"
-import screenshotBitcoinTranscript from "@/public/hero/screenshots/bitcoin_transcript.png"
-import screenshotChatBTC from "@/public/hero/screenshots/chatBTC.png"
-import screenshotSavingSatoshi from "@/public/hero/screenshots/saving_satoshi.png"
+import screenshotBitcoinSearch from "@/public/images/hero/screenshots/bitcoin_search.png"
+import screenshotBitcoinTLDR from "@/public/images/hero/screenshots/bitcoin_tldr.png"
+import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoin_transcript.png"
+import screenshotChatBTC from "@/public/images/hero/screenshots/chatBTC.png"
+import screenshotSavingSatoshi from "@/public/images/hero/screenshots/saving_satoshi.png"
 
-import logoBitcoinSearch from "@/public/hero/logos/bitcoin-search.png"
-import logoBitcoinTLDR from "@/public/hero/logos/bitcoin-tldr.png"
-import logoBitcoinTranscript from "@/public/hero/logos/bitcoin-transcripts.png"
-import logoChatBTC from "@/public/hero/logos/chat-btc.png"
-import logoSavingSatoshi from "@/public/hero/logos/bitcoin-transcripts-review.png"
-import { useRouter } from "next/router"
+import logoBitcoinSearch from "@/public/images/hero/logos/bitcoin-search.png"
+import logoBitcoinTLDR from "@/public/images/hero/logos/bitcoin-tldr.png"
+import logoBitcoinTranscript from "@/public/images/hero/logos/bitcoin-transcripts.png"
+import logoChatBTC from "@/public/images/hero/logos/chat-btc.png"
+import logoSavingSatoshi from "@/public/images/hero/logos/bitcoin-transcripts-review.png"
 
 interface Feature {
     name: React.ReactNode
