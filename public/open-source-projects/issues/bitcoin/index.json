@@ -410,18 +410,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/25765",
-    "publishedAt": "2022-08-01T14:22:22Z",
-    "title": "test: failure in rpc_getdescriptorinfo.py  (OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted)",
-    "labels": [
-      "Bug",
-      "Windows",
-      "Tests",
-      "CI failed"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/25868",
     "publishedAt": "2022-08-18T19:33:30Z",
     "title": "Error: specified data directory \"\\\\IP.Ad.re.ss\\release\\Folder\"does not exist",
