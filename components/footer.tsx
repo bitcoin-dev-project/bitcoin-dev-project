@@ -1,52 +1,6 @@
-import discordIcon from "@/public/images/hero/socials/discord.svg"
-import githubIcon from "@/public/images/hero/socials/github.svg"
-import xIcon from "@/public/images/hero/socials/x.svg"
-import Image from "next/image"
+import { navigation } from "@/content/landing"
 
 export default function Footer() {
-    const navigation = {
-        social: [
-            {
-                name: "X",
-                href: "https://x.com/Bitcoin_Devs",
-                icon: (props: any) => (
-                    <Image
-                        src={xIcon}
-                        alt="Discord"
-                        width={20}
-                        height={20}
-                        {...props}
-                    />
-                )
-            },
-            {
-                name: "GitHub",
-                href: "https://github.com/bitcoin-dev-project/",
-                icon: (props: any) => (
-                    <Image
-                        src={githubIcon}
-                        alt="Discord"
-                        width={20}
-                        height={20}
-                        {...props}
-                    />
-                )
-            },
-            {
-                name: "Discord",
-                href: "https://discord.gg/EAy9XMufbY",
-                icon: (props: any) => (
-                    <Image
-                        src={discordIcon}
-                        alt="Discord"
-                        width={20}
-                        height={20}
-                        {...props}
-                    />
-                )
-            }
-        ]
-    }
     return (
         <footer
             className="bg-white dark:bg-black"

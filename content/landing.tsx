@@ -18,10 +18,13 @@ import logoBS from "@/public/images/hero/logos/bitcoin-search.png"
 import logoTLDR from "@/public/images/hero/logos/bitcoin-tldr.png"
 import logoTrRev from "@/public/images/hero/logos/bitcoin-transcripts-review.png"
 import logoBitcTran from "@/public/images/hero/logos/bitcoin-transcripts.png"
-
+import discordIcon from "@/public/images/hero/socials/discord.svg"
+import githubIcon from "@/public/images/hero/socials/github.svg"
+import xIcon from "@/public/images/hero/socials/x.svg"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 
 import { ImageProps } from "next/image"
+import Image from "next/image"
 
 export const learningPath = [
     {
@@ -170,7 +173,49 @@ export const hero = [
         { name: "Bitcoin TLDR", logo: logoTLDR }
     ]
 ]
-
+export const navigation = {
+    social: [
+        {
+            name: "X",
+            href: "https://x.com/Bitcoin_Devs",
+            icon: (props: any) => (
+                <Image
+                    src={xIcon}
+                    alt="Discord"
+                    width={20}
+                    height={20}
+                    {...props}
+                />
+            )
+        },
+        {
+            name: "GitHub",
+            href: "https://github.com/bitcoin-dev-project/",
+            icon: (props: any) => (
+                <Image
+                    src={githubIcon}
+                    alt="Discord"
+                    width={20}
+                    height={20}
+                    {...props}
+                />
+            )
+        },
+        {
+            name: "Discord",
+            href: "https://discord.gg/EAy9XMufbY",
+            icon: (props: any) => (
+                <Image
+                    src={discordIcon}
+                    alt="Discord"
+                    width={20}
+                    height={20}
+                    {...props}
+                />
+            )
+        }
+    ]
+}
 export interface IFeature {
     name: React.ReactNode
     summary: string
