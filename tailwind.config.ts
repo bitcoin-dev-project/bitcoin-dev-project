@@ -6,53 +6,72 @@ const config: Config = {
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
         "./app/**/*.{js,ts,jsx,tsx,mdx}"
     ],
+    darkMode: "class",
     theme: {
         extend: {
-            backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-                "gradient-conic":
-                    "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-                "gradient-94":
-                    "linear-gradient(94deg, var(--tw-gradient-stops))",
-                "gradient-130":
-                    "linear-gradient(130deg, var(--tw-gradient-stops))"
-            },
-            boxShadow: {
-                normal: "0px 4px 8px 0px rgba(0, 0, 0, 0.08)",
-                raised: "0px 4px 16px 4px rgba(	249, 206, 159, 0.8)"
+            colors: {
+                orange: {
+                    DEFAULT: "#ff440b",
+                    "50": "#fff3ea",
+                    "100": "#ffe4d1",
+                    "200": "#ffc5a3",
+                    "300": "#ff9c6b",
+                    "400": "#ff6a33",
+                    "500": "#ff440b",
+                    "600": "#ff2700",
+                    "700": "#ca1601",
+                    "800": "#a3150b",
+                    "900": "#83140b",
+                    "950": "#490504"
+                },
+                white: {
+                    DEFAULT: "#f4f4f5",
+                    "50": "#f4f4f5",
+                    "100": "#f4f4f5",
+                    "200": "#f4f4f5",
+                    "300": "#f4f4f5",
+                    "400": "#f4f4f5",
+                    "500": "#f4f4f5",
+                    "600": "#f4f4f5",
+                    "700": "#f4f4f5",
+                    "800": "#f4f4f5",
+                    "900": "#f4f4f5",
+                    "950": "#f4f4f5"
+                },
+
+                gray: {
+                    DEFAULT: "#71717a",
+                    "50": "#fafafa",
+                    "100": "#f4f4f5",
+                    "200": "#e4e4e7",
+                    "300": "#d4d4d8",
+                    "400": "#a1a1aa",
+                    "500": "#71717a",
+                    "600": "#52525b",
+                    "700": "#3f3f46",
+                    "800": "#27272a",
+                    "900": "#18181b",
+                    "950": "#09090b"
+                },
+                black: {
+                    DEFAULT: "#18181b",
+                    "50": "#fafafa",
+                    "100": "#f4f4f5",
+                    "200": "#e4e4e7",
+                    "300": "#d4d4d8",
+                    "400": "#a1a1aa",
+                    "500": "#71717a",
+                    "600": "#52525b",
+                    "700": "#3f3f46",
+                    "800": "#27272a",
+                    "900": "#18181b",
+                    "950": "#09090b"
+                }
             },
             fontFamily: {
                 brawler: ["var(--brawler-font)"],
                 inter: ["var(--inter-font)"]
-            },
-            colors: {
-                "bg-color": "#f8f5ee",
-                orange: "#e77429",
-                green: "#24b292",
-                "bright-cyan": "#30f6ca",
-                "dark-orange": "#e77429",
-                brown: "#b47235",
-                yellow: "#fab544",
-                "light-orange": "#ffd796",
-                "pale-orange": "#fff2e4",
-                "bright-orange": "#f7a940",
-                grey: "dimgrey",
-                dark: "#333",
-                black: "#212529",
-                white: "#FFFFFF",
-                "light-grey": "#898989"
             }
-        },
-        screens: {
-            xl: { max: "1279px" },
-
-            lg: { max: "1023px" },
-
-            md: { max: "767px" },
-
-            sm: { max: "639px" },
-
-            xs: { max: "500px" }
         }
     },
     plugins: []
