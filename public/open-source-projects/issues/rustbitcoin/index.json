@@ -90,16 +90,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   },
   {
-    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/2136",
-    "publishedAt": "2023-10-21T17:38:25Z",
-    "title": "Shouldn't `Amount` handle decimals formatting with `{:.8}` ?",
-    "labels": [
-      "bug",
-      "C-units"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
-  },
-  {
     "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/2250",
     "publishedAt": "2023-12-05T10:08:16Z",
     "title": "Auto cfg doc on `PushBytesError` is broken",
