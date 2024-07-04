@@ -49,7 +49,7 @@ const SidebarFilter = ({
     ]
 
     return (
-        <div className="w-[300px] lg:w-[250px] md:w-full flex flex-col gap-5">
+        <div className="w-[300px] max-lg:w-[250px] max-md:w-full flex flex-col gap-5">
             <FilterMenu toggle={toggle} />
 
             <section className="flex flex-col gap-4 w-full">
@@ -57,7 +57,7 @@ const SidebarFilter = ({
                     <Image
                         src={SortIcon}
                         alt="filter"
-                        className="w-[20px] 2xl:w-[25px]"
+                        className="w-[20px] max-2xl:w-[25px]"
                     />
                     <h5 className="text-base font-bold">Sort by</h5>
                 </div>
@@ -94,14 +94,14 @@ function FilterMenu({ toggle }: { toggle: () => void }) {
                         <Image
                             src={FilterIcon}
                             alt="filter"
-                            className="w-[20px] 2xl:w-[25px]"
+                            className="w-[20px] max-2xl:w-[25px]"
                         />
-                        <p className="text-base md:text-xl font-bold">
+                        <p className="text-base max-md:text-xl font-bold">
                             Filters
                         </p>
                     </section>
                     <button
-                        className="self-end rsor-pointer w- border border-gray-400 bg-gray-100 p-3 rounded-lg hidden md:block h-[46px] w-[41.68px]"
+                        className="self-end rsor-pointer w- border border-gray-400 bg-gray-100 dark:bg-gray-800 p-3 rounded-lg hidden max-md:block h-[46px] w-[41.68px]"
                         onClick={toggle}
                     >
                         <Image
@@ -121,7 +121,7 @@ function FilterMenu({ toggle }: { toggle: () => void }) {
                             onClick={clearAllFilters}
                         >
                             Clear all
-                            <span className="p-[6px] 2xl:p-2 rounded-md bg-[#a4a4a8] text-white">
+                            <span className="p-[6px] max-2xl:p-2 rounded-md bg-[#a4a4a8] text-white">
                                 <Image
                                     src={CrossIcon}
                                     alt="filter icon"
@@ -158,7 +158,7 @@ function FilterPill({
     return (
         <button
             onClick={() => onClick(text)}
-            className="border border-gray-400 px-3 py-2.5 rounded-md text-sm leading-[100%] hover:bg-gray-100 flex gap-2 items-center font-semibold capitalize bg-gray-200"
+            className="border border-gray-400 px-3 py-2.5 rounded-md text-sm leading-[100%] hover:bg-gray-100 dark:hover:bg-gray-800  flex gap-2 items-center font-semibold capitalize bg-gray-200 dark:bg-gray-800"
         >
             {text}
             <Image
@@ -209,7 +209,7 @@ function CustomSortSelect({ args }: { args: string[] }) {
         <form className="w-full relative" ref={wrapperRef}>
             <section className="group/menuBtn">
                 <div
-                    className="w-full bg-white border-[1.2px] border-gray-300 rounded-lg cursor-pointer p-3 before:absolute capitalize font-medium flex items-center justify-between"
+                    className="w-full bg-white dark:bg-black border-[1.2px] border-gray-300 rounded-lg cursor-pointer p-3 before:absolute capitalize font-medium flex items-center justify-between"
                     onClick={toggle}
                 >
                     <p className="font-semibold text-custom-primary-text">
@@ -229,7 +229,7 @@ function CustomSortSelect({ args }: { args: string[] }) {
             </section>
 
             <section
-                className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 ${isOpen ? "block" : "hidden"}`}
+                className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white dark:bg-black max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 ${isOpen ? "block" : "hidden"}`}
             >
                 {sortKeys.map((item, index) => (
                     <div
@@ -238,7 +238,7 @@ function CustomSortSelect({ args }: { args: string[] }) {
                         data-selected={currentSortKey.key === item.key}
                         className="group"
                     >
-                        <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer items-center">
+                        <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 dark:hover:bg-gray-800  cursor-pointer items-center">
                             <Image
                                 className="group-data-[selected=false]:invisible w-4 h-4"
                                 src={LightningIcon}
@@ -350,7 +350,7 @@ function CustomMultiCheckBox({
                 <section className="group/menuBtn">
                     <div className="relative" ref={contentRef}>
                         <input
-                            className="text-base font-medium w-full pl-12 pr-10 py-4 rounded-xl border-[1px] border-gray-300 focus:outline-none focus:outline-offset-0 leading-none placeholder:text-gray-400 placeholder:font-medium"
+                            className="text-base bg-white dark:bg-black font-medium w-full pl-12 pr-10 py-4 rounded-xl border-[1px] border-gray-300 focus:outline-none focus:outline-offset-0 leading-none placeholder:text-gray-400 dark:text-gray-600 dark:text-gray-400 placeholder:font-medium"
                             type="text"
                             placeholder={placeholder}
                             onChange={(e) => {
@@ -392,10 +392,10 @@ function CustomMultiCheckBox({
                     }}
                     id="filter-section-dropdown"
                     data-is-open={isOpen}
-                    className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 ${isOpen ? "block" : "hidden"}`}
+                    className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white dark:bg-black max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 ${isOpen ? "block" : "hidden"}`}
                 >
                     {filterArgs.length < 1 && (
-                        <p className="w-full text-sm 2xl:text-base text-center px-2">
+                        <p className="w-full text-sm max-2xl:text-base text-center px-2">
                             No matching options
                         </p>
                     )}
@@ -406,7 +406,7 @@ function CustomMultiCheckBox({
                             data-selected={isSelected(item.title)}
                             className="group"
                         >
-                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer items-center">
+                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 dark:hover:bg-gray-800  cursor-pointer items-center">
                                 <Image
                                     className="group-data-[selected=false]:invisible w-4 h-4"
                                     src={LightningIcon}

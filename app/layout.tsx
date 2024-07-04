@@ -1,8 +1,9 @@
 import { Barlow } from "next/font/google"
 import Footer from "@/components/footer"
-import NavBar from "@/components/nav-bar"
 import type { Metadata } from "next"
 import "./globals.css"
+import { Header } from "@/components/header"
+import { ThemeProvider } from "next-themes"
 
 export const metadata: Metadata = {
     title: "The Bitcoin Dev Project",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 }
 
 export const barlow = Barlow({
-    weight: ["100", "300", "400", "500", "600", "700"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
     variable: "--barlow-font",
     preload: true,
     display: "swap",
@@ -36,16 +37,22 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <script
-                async
-                src="https://visits.bitcoindevs.xyz/script.js"
-                data-website-id="4ee856e4-582c-4a9c-a1c5-10757123803e"
-                data-domains="bitcoindevs.xyz"
-            />
-            <body className={barlow.className}>
-                <NavBar />
-                <div>{children}</div>
-                <Footer />
+            <head>
+                <script
+                    async
+                    src="https://visits.bitcoindevs.xyz/script.js"
+                    data-website-id="4ee856e4-582c-4a9c-a1c5-10757123803e"
+                    data-domains="bitcoindevs.xyz"
+                />
+            </head>
+            <body
+                className={`${barlow.className} dark:bg-black dark:text-gray-50 bg-white`}
+            >
+                <ThemeProvider attribute="class">
+                    <Header />
+                    <main>{children}</main>
+                    <Footer />
+                </ThemeProvider>
             </body>
         </html>
     )
