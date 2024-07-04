@@ -8,16 +8,13 @@ import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoi
 import screenshotChatBTC from "@/public/images/hero/screenshots/chatBTC.png"
 import screenshotSavingSatoshi from "@/public/images/hero/screenshots/saving_satoshi.png"
 
-import logoBitcoinSearch from "@/public/images/hero/logos/bitcoin-search.png"
-import logoBitcoinTLDR from "@/public/images/hero/logos/bitcoin-tldr.png"
-import logoBitcoinTranscript from "@/public/images/hero/logos/bitcoin-transcripts.png"
-import logoChatBTC from "@/public/images/hero/logos/chat-btc.png"
-import logoSavingSatoshi from "@/public/images/hero/logos/bitcoin-transcripts-review.png"
+import logoBitcoinSearch from "@/public/images/tools/bitcoin-search.jpg"
+import logoBitcoinTLDR from "@/public/images/tools/bitcoin-tldr.jpg"
+import logoBitcoinTranscript from "@/public/images/tools/bitcoin-transcripts.jpg"
+import logoTrRev from "@/public/images/tools/bitcoin-transcripts-review.jpg"
+import logoChatBTC from "@/public/images/tools/chat-btc.jpg"
+import logoSavingSatoshi from "@/public/images/tools/saving-satoshi.jpg"
 import { UsersIcon } from "@heroicons/react/24/outline"
-import logoBS from "@/public/images/hero/logos/bitcoin-search.png"
-import logoTLDR from "@/public/images/hero/logos/bitcoin-tldr.png"
-import logoTrRev from "@/public/images/hero/logos/bitcoin-transcripts-review.png"
-import logoBitcTran from "@/public/images/hero/logos/bitcoin-transcripts.png"
 import discordIcon from "@/public/images/hero/socials/discord.svg"
 import githubIcon from "@/public/images/hero/socials/github.svg"
 import xIcon from "@/public/images/hero/socials/x.svg"
@@ -162,15 +159,15 @@ export const values = [
 export const hero = [
     [
         { name: "ChatBTC", logo: logoChatBTC },
-        { name: "Bitcoin Search", logo: logoBS },
+        { name: "Bitcoin Search", logo: logoBitcoinSearch },
         {
             name: "Transcript Review",
             logo: logoTrRev,
             className: "hidden xl:block"
         },
 
-        { name: "Trsanscript", logo: logoBitcTran },
-        { name: "Bitcoin TLDR", logo: logoTLDR }
+        { name: "Trsanscript", logo: logoBitcoinTranscript },
+        { name: "Bitcoin TLDR", logo: logoBitcoinTLDR }
     ]
 ]
 export const navigation = {

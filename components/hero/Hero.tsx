@@ -78,7 +78,7 @@ export function Hero() {
                                             src={company.logo}
                                             alt={company.name}
                                             unoptimized
-                                            className="rounded-lg h-16 w-16"
+                                            className="rounded-lg h-16 w-16 filter grayscale"
                                         />
                                     </li>
                                 ))}
