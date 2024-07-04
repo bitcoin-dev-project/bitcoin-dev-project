@@ -1,10 +1,7 @@
 import Image from "next/image"
 
-import logoBS from "@/public/images/hero/logos/bitcoin-search.png"
-import logoTLDR from "@/public/images/hero/logos/bitcoin-tldr.png"
-import logoTrRev from "@/public/images/hero/logos/bitcoin-transcripts-review.png"
-import logoChatBTC from "@/public/images/hero/logos/chat-btc.png"
-import logoBitcTran from "@/public/images/hero/logos/bitcoin-transcripts.png"
+import { hero } from "@/content/landing"
+
 import Link from "next/link"
 import { Container } from "./Container"
 export function Hero() {
@@ -69,20 +66,7 @@ export function Hero() {
                     role="list"
                     className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
                 >
-                    {[
-                        [
-                            { name: "ChatBTC", logo: logoChatBTC },
-                            { name: "Bitcoin Search", logo: logoBS },
-                            {
-                                name: "Transcript Review",
-                                logo: logoTrRev,
-                                className: "hidden xl:block"
-                            },
-
-                            { name: "Trsanscript", logo: logoBitcTran },
-                            { name: "Bitcoin TLDR", logo: logoTLDR }
-                        ]
-                    ].map((group, groupIndex) => (
+                    {hero.map((group, groupIndex) => (
                         <li key={groupIndex}>
                             <ul
                                 role="list"

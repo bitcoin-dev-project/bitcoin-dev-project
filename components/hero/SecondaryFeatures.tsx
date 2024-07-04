@@ -4,67 +4,9 @@ import { useId } from "react"
 import Image, { type ImageProps } from "next/image"
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react"
 import clsx from "clsx"
+import { tools, IFeature } from "@/content/landing"
 
 import { Container } from "./Container"
-import screenshotBitcoinSearch from "@/public/images/hero/screenshots/bitcoin_search.png"
-import screenshotBitcoinTLDR from "@/public/images/hero/screenshots/bitcoin_tldr.png"
-import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoin_transcript.png"
-import screenshotChatBTC from "@/public/images/hero/screenshots/chatBTC.png"
-import screenshotSavingSatoshi from "@/public/images/hero/screenshots/saving_satoshi.png"
-
-import logoBitcoinSearch from "@/public/images/hero/logos/bitcoin-search.png"
-import logoBitcoinTLDR from "@/public/images/hero/logos/bitcoin-tldr.png"
-import logoBitcoinTranscript from "@/public/images/hero/logos/bitcoin-transcripts.png"
-import logoChatBTC from "@/public/images/hero/logos/chat-btc.png"
-import logoSavingSatoshi from "@/public/images/hero/logos/bitcoin-transcripts-review.png"
-
-interface Feature {
-    name: React.ReactNode
-    summary: string
-    description: string
-    image: ImageProps["src"]
-    icon: ImageProps["src"]
-}
-
-const features: Array<Feature> = [
-    {
-        name: "Bitcoin Transcript",
-        description:
-            "Peruse archives of transcribed talks, podcasts and lectures.",
-        summary: "",
-        image: screenshotBitcoinTranscript,
-        icon: logoBitcoinTranscript
-    },
-
-    {
-        name: "Bitcoin TLDR",
-        description: "Bitcoin-dev and Lightning-dev mailing list summaries",
-        summary: "",
-        image: screenshotBitcoinTLDR,
-        icon: logoBitcoinTLDR
-    },
-    {
-        name: "Bitcoin Search",
-        description: "The technical bitcoin search engine we deserve.",
-        summary: "",
-        image: screenshotBitcoinSearch,
-        icon: logoBitcoinSearch
-    },
-    {
-        name: "ChatBTC",
-        description: "Chat with your favorite bitcoin sources and authors.",
-        summary: "",
-        image: screenshotChatBTC,
-        icon: logoChatBTC
-    },
-    {
-        name: "Saving Satoshi",
-        description: "Game designed to inspire you fall in love with bitcoin",
-        summary: "",
-        image: screenshotSavingSatoshi,
-        icon: logoSavingSatoshi
-    }
-]
 
 function Feature({
     feature,
@@ -72,7 +14,7 @@ function Feature({
     className,
     ...props
 }: React.ComponentPropsWithoutRef<"div"> & {
-    feature: Feature
+    feature: IFeature
     isActive: boolean
 }) {
     return (
@@ -107,7 +49,7 @@ function Feature({
 function FeaturesMobile() {
     return (
         <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
-            {features.map((feature) => (
+            {tools.map((feature) => (
                 <div key={feature.summary}>
                     <Feature
                         feature={feature}
@@ -137,7 +79,7 @@ function FeaturesDesktop() {
             {({ selectedIndex }) => (
                 <>
                     <TabList className="grid grid-cols-5 divide-x divide-gray-300 ">
-                        {features.map((feature, featureIndex) => (
+                        {tools.map((feature, featureIndex) => (
                             <Feature
                                 key={feature.summary}
                                 feature={{
@@ -161,7 +103,7 @@ function FeaturesDesktop() {
 
                     <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-gray-200 dark:bg-gray-800 px-14 py-16 xl:px-16">
                         <div className="-mx-5 flex">
-                            {features.map((feature, featureIndex) => (
+                            {tools.map((feature, featureIndex) => (
                                 <TabPanel
                                     static
                                     key={feature.summary}
