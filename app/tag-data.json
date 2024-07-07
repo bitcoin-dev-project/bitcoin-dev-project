@@ -1,5 +1,5 @@
 {
-    "bitcoin": 14,
+    "bitcoin": 15,
     "development": 1,
     "protocol": 1,
     "hd-wallets": 2,
@@ -13,7 +13,7 @@
     "wallet": 1,
     "op_return": 1,
     "scripting": 2,
-    "privacy": 4,
+    "privacy": 5,
     "p2sh": 1,
     "transaction": 2
 }

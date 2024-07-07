@@ -11,7 +11,7 @@ import type { Authors, Blog } from "contentlayer/generated"
 import { notFound } from "next/navigation"
 import PostBDP from "@/components/topics/topics/glossary/layouts/PostBDP"
 import { components } from "@/components/topics/topics/glossary/markdown-ui/MDXComponents"
-import { Hero } from "@/components/topics/Hero"
+import { Hero } from "@/components/glossary/hero/Hero"
 
 export default async function Page() {
     let slug = "segwit"

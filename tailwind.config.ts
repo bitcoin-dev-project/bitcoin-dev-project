@@ -7,7 +7,7 @@ const config: Config = {
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
         "./node_modules/pliny/**/*.js",
         "./layouts/**/*.{js,ts,tsx}",
-        "./data/**/*.mdx"
+        "./public/glossary/**/*.mdx"
     ],
     theme: {
         extend: {
@@ -83,12 +83,6 @@ const config: Config = {
             }
         }
     },
-    plugins: [
-        require("@tailwindcss/forms"),
-        require("@tailwindcss/typography"),
-        require("tailwindcss-animate"),
-        require("tailwindcss-animate"),
-        require("tailwindcss-animate")
-    ]
+    plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")]
 }
 export default config
