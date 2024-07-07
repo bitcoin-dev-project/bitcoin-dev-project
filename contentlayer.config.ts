@@ -1,6 +1,6 @@
 import { defineDocumentType, ComputedFields } from "contentlayer2/source-files"
 import { spawn } from "node:child_process"
-import { makeSource } from "contentlayer2/source-remote-files"
+import { makeSource } from "contentlayer2/source-files"
 
 import { writeFileSync } from "fs"
 import readingTime from "reading-time"
@@ -23,7 +23,6 @@ import rehypeCitation from "rehype-citation"
 import rehypePrismPlus from "rehype-prism-plus"
 import rehypePresetMinify from "rehype-preset-minify"
 import siteMetadata from "./data/siteMetadata"
-import { allCoreContent, sortPosts } from "pliny/utils/contentlayer.js"
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === "production"
@@ -104,60 +103,6 @@ export const Authors = defineDocumentType(() => ({
     computedFields
 }))
 
-const syncContentFromGit = async (contentDir: string) => {
-    const syncRun = async () => {
-        const gitUrl = "https://github.com/jrakibi/glossary"
-        await runBashCommand(`
-      if [ -d  "${contentDir}" ];
-        then
-          cd "${contentDir}"; git pull;
-        else
-          git clone --depth 1 --single-branch ${gitUrl} ${contentDir};
-      fi
-    `)
-    }
-
-    let wasCancelled = false
-    let syncInterval: any
-
-    const syncLoop = async () => {
-        console.log("Syncing content files from git")
-
-        await syncRun()
-
-        if (wasCancelled) return
-
-        syncInterval = setTimeout(syncLoop, 1000 * 60)
-    }
-
-    // Block until the first sync is done
-    await syncLoop()
-
-    return () => {
-        wasCancelled = true
-        clearTimeout(syncInterval)
-    }
-}
-
-const runBashCommand = (command: string) =>
-    new Promise((resolve, reject) => {
-        const child = spawn(command, [], { shell: true })
-
-        child.stdout.setEncoding("utf8")
-        child.stdout.on("data", (data) => process.stdout.write(data))
-
-        child.stderr.setEncoding("utf8")
-        child.stderr.on("data", (data) => process.stderr.write(data))
-
-        child.on("close", function (code) {
-            if (code === 0) {
-                resolve(void 0)
-            } else {
-                reject(new Error(`Command failed with exit code ${code}`))
-            }
-        })
-    })
-
 /**
  * Count the occurrences of all tags across blog posts and write to json file
  */
@@ -179,22 +124,8 @@ function createTagCount(allBlogs: any[]) {
     writeFileSync("./app/tag-data.json", JSON.stringify(tagCount))
 }
 
-// function createSearchIndex(allBlogs: any[]) {
-//   if (
-//     siteMetadata?.search?.provider === 'kbar' &&
-//     siteMetadata.search.kbarConfig.searchDocumentsPath
-//   ) {
-//     writeFileSync(
-//       `public/${siteMetadata.search.kbarConfig.searchDocumentsPath}`,
-//       JSON.stringify(allCoreContent(sortPosts(allBlogs)))
-//     )
-//     console.log('Local search index generated...')
-//   }
-// }
-
 export default makeSource({
-    syncFiles: syncContentFromGit,
-    contentDirPath: "public/glossary-repo",
+    contentDirPath: "public/glossary",
     contentDirInclude: ["topics", "authors"],
     documentTypes: [Blog, Authors],
     disableImportAliasWarning: true,
@@ -219,7 +150,7 @@ export default makeSource({
                 }
             ],
             rehypeKatex,
-            [rehypeCitation, { path: path.join(root, "data") }],
+            [rehypeCitation, { path: path.join(root, "public/glossary") }],
             [rehypePrismPlus, { defaultLanguage: "js", ignoreMissing: true }],
             rehypePresetMinify
         ]
@@ -227,6 +158,5 @@ export default makeSource({
     onSuccess: async (importData) => {
         const { allBlogs } = await importData()
         createTagCount(allBlogs)
-        // createSearchIndex(allBlogs)
     }
 })
