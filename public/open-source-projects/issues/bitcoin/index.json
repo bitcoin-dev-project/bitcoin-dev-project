@@ -112,16 +112,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/19034",
-    "publishedAt": "2020-05-20T22:38:22Z",
-    "title": "Small memory leak when BerkeleyEnvironment::Open fails",
-    "labels": [
-      "Bug",
-      "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/19087",
     "publishedAt": "2020-05-28T07:18:06Z",
     "title": "Inconsistent RPC error handling",
@@ -420,18 +410,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/25765",
-    "publishedAt": "2022-08-01T14:22:22Z",
-    "title": "test: failure in rpc_getdescriptorinfo.py  (OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted)",
-    "labels": [
-      "Bug",
-      "Windows",
-      "Tests",
-      "CI failed"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/25868",
     "publishedAt": "2022-08-18T19:33:30Z",
     "title": "Error: specified data directory \"\\\\IP.Ad.re.ss\\release\\Folder\"does not exist",
@@ -525,15 +503,6 @@
     "url": "https://github.com/bitcoin/bitcoin/issues/26484",
     "publishedAt": "2022-11-10T17:07:02Z",
     "title": "Error: Cannot resolve -bind address: 'bitcoind:8334=onion'",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/26492",
-    "publishedAt": "2022-11-13T12:29:37Z",
-    "title": "make check errors on big endian OpenBSD 7.2",
     "labels": [
       "Bug"
     ],
@@ -700,8 +669,7 @@
     "title": "LevelDB error: Corruption: block checksum mismatch didn't trigger reindex.",
     "labels": [
       "Bug",
-      "Data corruption",
-      "Questions and Help"
+      "Data corruption"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },

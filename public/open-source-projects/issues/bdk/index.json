@@ -50,16 +50,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/534",
-    "publishedAt": "2022-01-26T19:17:05Z",
-    "title": "Remove BIP 69 sorting",
-    "labels": [
-      "bug",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/559",
     "publishedAt": "2022-03-07T12:47:11Z",
     "title": "`maybe_async` complicates isomorphic use-cases",
@@ -382,16 +372,6 @@
     "labels": [
       "good first issue",
       "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1483",
-    "publishedAt": "2024-06-21T03:02:05Z",
-    "title": "`DescriptorId` is not unique enough",
-    "labels": [
-      "bug",
-      "discussion"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }

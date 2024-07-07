@@ -53,27 +53,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/warnet/issues/100",
-    "publishedAt": "2023-09-11T15:57:32Z",
-    "title": "RPC, other commands can throw errors if docker-compose isnt done building yet",
-    "labels": [
-      "good first issue",
-      "backlog"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin-dev-project/warnet/issues/134",
-    "publishedAt": "2023-09-29T17:17:57Z",
-    "title": "\"Pool overlaps with other one on this address space\"",
-    "labels": [
-      "enhancement",
-      "good first issue",
-      "needs conceptual review"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/184",
     "publishedAt": "2023-10-31T22:57:56Z",
     "title": "Explore alternatives to patching `IsRoutable`",
