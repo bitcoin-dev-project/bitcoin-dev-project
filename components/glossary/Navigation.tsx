@@ -32,8 +32,7 @@ export function Navigation({
     ]
 
     return (
-        // <nav className={clsx('text-base lg:text-sm', className)}>
-        <nav className={clsx("text-base lg:text-sm", className, "w-64")}>
+        <nav className={clsx("text-base lg:text-sm", className, "w-64 m-10")}>
             <a
                 className="mb-6 flex flex-row items-center space-x-3 hover:no-underline"
                 href="/topics"
