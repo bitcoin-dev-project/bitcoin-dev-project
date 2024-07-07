@@ -1,0 +1,3 @@
+[submodule "public/glossary"]
+	path = public/glossary
+	url = https://github.com/jrakibi/glossary.git
