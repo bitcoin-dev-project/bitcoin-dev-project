@@ -23,6 +23,17 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/131",
+    "publishedAt": "2023-10-06T14:22:06Z",
+    "title": "Update `lightning` crate to anything over 0.0.17 when available ",
+    "labels": [
+      "feature",
+      "good first issue",
+      "Medium Priority"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/134",
     "publishedAt": "2023-10-10T15:53:05Z",
     "title": "Remove trailing full stop from log lines ",
@@ -77,16 +88,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/171",
-    "publishedAt": "2024-03-12T19:18:19Z",
-    "title": "Feature: Run random activity generation with fixed seed",
-    "labels": [
-      "feature",
-      "help wanted"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/172",
     "publishedAt": "2024-03-12T19:50:27Z",
     "title": "Refactor: Use From<PaymentPreimage> when constructing PaymentHash",
@@ -116,15 +117,6 @@
       "Code Health",
       "Robustness",
       "High Priority"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/189",
-    "publishedAt": "2024-06-27T12:56:50Z",
-    "title": "Use payment delay for offset if no start_secs is specified",
-    "labels": [
-      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }

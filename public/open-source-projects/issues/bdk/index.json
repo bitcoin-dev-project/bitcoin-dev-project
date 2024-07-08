@@ -374,5 +374,15 @@
       "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1504",
+    "publishedAt": "2024-07-08T14:59:11Z",
+    "title": "The `url` dependency does not prevent URL homograph attacks",
+    "labels": [
+      "bug",
+      "module-blockchain"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
