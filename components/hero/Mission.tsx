@@ -7,31 +7,29 @@ export default function Mission() {
         <div className="bg-white dark:bg-black py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl mb-20 lg:text-center">
-                    <h2 className="text-base font-semibold leading-7 text-orange-600">
-                        Why you need this ?
+                    <h2 className="text-base font-semibold leading-7 text-orange-500">
+                        Why Bitcoin Dev Project?
                     </h2>
                     <p className="mt-2 text-4xl font-bold tracking-tight text-black-800 dark:text-black-100 sm:text-5xl">
-                        Becoming a Bitcoin developer is
+                        Bitcoin is better
                     </p>
                     <p className="mt-2 text-4xl font-bold tracking-tight text-orange sm:text-5xl">
-                        <span className="line-through">NOT</span> FOR EVERYONE !
+                        WHEN YOU CONTRIBUTE
                     </p>
                     <p className="mt-6 text-lg leading-8 text-black-600 dark:text-black-400">
-                        Our goal is to provide you with resources and support
-                        for your bitcoin open source development journey. We are
-                        here to convince you to contribute to bitcoin open
-                        source projects.
+                        The Bitcoin Dev Project exists to inspire the next
+                        generation of bitcoin open source contributors. We
+                        provide you with resources and support for your journey
                     </p>
                 </div>
-
-                <div className="mx-auto max-w-2xl  lg:max-w-none">
-                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+                <div className="mx-auto max-w-2xl lg:max-w-none">
+                    <dl className="grid max-w-xl grid-cols-1 gap-x-16 gap-y-24 lg:max-w-none lg:grid-cols-3">
                         {learningPath.map((step) => (
                             <div
                                 key={step.name}
                                 className="flex flex-col items-center p-6 bg-white dark:bg-black rounded-lg border border-black-300 dark:border-black-800"
                             >
-                                <span className="inline-flex items-center gap-x-1.5 rounded-md bg-black-100 dark:bg-black px-2 py-1 text-xs font-light text-black-600 dark:text-black-400 mb-4  border border-black-300 dark:border-black-800">
+                                {/* <span className="inline-flex items-center gap-x-1.5 rounded-md bg-black-100 dark:bg-black px-2 py-1 text-xs font-light text-black-600 dark:text-black-400 mb-4  border border-black-300 dark:border-black-800">
                                     <svg
                                         className="h-2 w-2 fill-orange-400 "
                                         viewBox="0 0 6 6"
@@ -40,7 +38,7 @@ export default function Mission() {
                                         <circle cx={3} cy={3} r={3} />
                                     </svg>
                                     {step.badge}
-                                </span>
+                                </span> */}
                                 <dt className="mt-5 text-2xl uppercase font-medium leading-7 text-orange-500 flex flex-col items-center text-center">
                                     {step.name}
                                 </dt>

@@ -177,7 +177,7 @@ export function Header() {
                                             >
                                                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange group-hover:bg-white dark:group-hover:bg-black-900">
                                                     <item.icon
-                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-600"
+                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-500"
                                                         aria-hidden="true"
                                                     />
                                                 </div>
@@ -247,7 +247,7 @@ export function Header() {
                                             >
                                                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange group-hover:bg-white dark:group-hover:bg-black-900">
                                                     <item.icon
-                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-600"
+                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-500"
                                                         aria-hidden="true"
                                                     />
                                                 </div>
