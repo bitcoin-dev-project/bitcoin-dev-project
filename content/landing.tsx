@@ -32,7 +32,7 @@ export const learningPath = [
         badge: "EDUCATION",
         name: "STUDY",
         description:
-            "Simplifying bitcoin tech to help you learn as efficiently as possiblel",
+            "Simplifying bitcoin tech to help you learn as efficiently as possible",
         href: "/bitcoin-core",
         cta: "Check out Topics",
         icon: BitcoinIcon

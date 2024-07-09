@@ -22,8 +22,8 @@ export default function Home() {
 
             <Mission />
             {/* <PrimaryFeatures /> */}
-            <WhoAreWe />
             <SecondaryFeatures />
+            <WhoAreWe />
             <Newsletter />
             <CTA />
         </div>
