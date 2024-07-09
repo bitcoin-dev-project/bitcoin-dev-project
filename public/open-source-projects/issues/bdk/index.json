@@ -384,5 +384,14 @@
       "module-blockchain"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1507",
+    "publishedAt": "2024-07-09T13:02:02Z",
+    "title": "Remove `Anchor` trait and make anchors unique to `(Txid, BlockId)`",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
