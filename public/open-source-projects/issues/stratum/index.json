@@ -240,18 +240,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/928",
-    "publishedAt": "2024-05-23T18:28:39Z",
-    "title": "MG CI issues",
-    "labels": [
-      "bug",
-      "test",
-      "message-generator",
-      "ci/cd"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/951",
     "publishedAt": "2024-06-02T14:20:27Z",
     "title": "`StandardChannel` support on JDC",
@@ -326,6 +314,17 @@
     "labels": [
       "bug",
       "translation proxy"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1028",
+    "publishedAt": "2024-07-03T08:57:34Z",
+    "title": "MG CI is too slow",
+    "labels": [
+      "good first issue",
+      "message-generator",
+      "ci/cd"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
