@@ -266,5 +266,3 @@ export const contributions = [
 export const callsToAction = [
     { name: "View all products", href: "/tools", icon: RectangleGroupIcon }
 ]
-
-// remove and declare inside types folder

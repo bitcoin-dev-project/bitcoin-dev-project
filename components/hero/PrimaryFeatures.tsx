@@ -72,7 +72,7 @@ export function PrimaryFeatures() {
                                                             selectedIndex ===
                                                                 featureIndex
                                                                 ? "text-black dark:text-white"
-                                                                : "text-gray-800 dark:text-gray-100 hover:text-black dark:hover:text-white lg:text-black dark:lg:text-white"
+                                                                : "text-gray-800 dark:text-gray-100 hover:text-black dark:hover:text-white lg:text-black dark:lg:text-white border-b pb-1"
                                                         )}
                                                     >
                                                         {feature.title}
