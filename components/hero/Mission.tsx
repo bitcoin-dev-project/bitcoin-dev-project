@@ -1,4 +1,3 @@
-import { BitcoinIcon, EyeOffIcon } from "lucide-react"
 import Link from "next/link"
 import { learningPath } from "@/content/landing"
 
@@ -24,7 +23,7 @@ export default function Mission() {
                     </p>
                 </div>
 
-                <div className="mx-auto max-w-2xl  lg:max-w-none">
+                <div className="mx-auto max-w-2xl lg:max-w-none flex  flex-col items-center">
                     <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
                         {learningPath.map((step) => (
                             <div
@@ -52,7 +51,7 @@ export default function Mission() {
                                     <Link href={step.href}>
                                         <button
                                             type="button"
-                                            className="pl-4 pr-2 gap-6  duration-200 hover:border-orange-500 border-zinc-800 h-12 text-white justify-between  border-2 rounded-full inline-flex items-center bg-zinc-800"
+                                            className="pl-4 pr-2 gap-6  duration-200 hover:border-orange-500 border-zinc-800 h-12 text-white justify-between  border-2 rounded-full inline-flex items-center bg-zinc-800 text-nowrap"
                                         >
                                             {step.cta}
                                             <div className="bg-white h-8 w-8 text-black inline-flex items-center justify-center rounded-full">

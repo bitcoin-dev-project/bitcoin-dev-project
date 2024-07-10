@@ -1,3 +1,5 @@
+import { ImageProps } from "next/image"
+
 export type ProjectProperties = {
     name: string
     repo_url: string
@@ -39,4 +41,12 @@ export type IssueCardElement = RepositoryIssues & {
     languages: string[]
     repo: string
     number: number
+}
+
+export interface IFeature {
+    name: React.ReactNode
+    summary: string
+    description: string
+    image: ImageProps["src"]
+    icon: ImageProps["src"]
 }
