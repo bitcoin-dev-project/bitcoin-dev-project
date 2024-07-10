@@ -87,7 +87,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                                     key={`skeleton-${index}`}
                                     className="w-full"
                                 >
-                                    <Skeleton className="block rounded-lg border border-gray-200 bg-white dark:bg-black p-6 h-48 shadow-sm transition-all hover:shadow-md dark:border-gray-300 dark:bg-gray-400 opacity-10" />
+                                    <Skeleton className="block rounded-lg border border-gray-200 bg-white p-6 h-48 shadow-sm transition-all hover:shadow-md dark:border-gray-300 dark:bg-gray-400 opacity-10" />
                                 </div>
                             ))}
                         </div>
@@ -97,7 +97,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                         >
                             {noIssuesFound ? (
                                 <div className="w-full flex justify-center items-center">
-                                    <p className="text-center text-lg text-gray-800 dark:text-gray-100 dark:text-gray-100">
+                                    <p className="text-center text-lg text-gray-800 dark:text-gray-100">
                                         No issues found for this page.
                                     </p>
                                 </div>
@@ -119,7 +119,7 @@ const RepositoryIssues = ({ issues }: { issues: IssueCardElement[] }) => {
                             )}
                         </div>
                     )}
-                    <div className="bg-white dark:bg-black flex flex-wrap overflow-x-scroll overflow-scroll max-w-2xl max-md:max-w-full">
+                    <div className="bg-white dark:bg-black flex flex-wrap overflow-x-auto no-scrollbar max-w-2xl max-md:max-w-full">
                         <Pagination
                             currentPage={currentPage}
                             pages={pages}
@@ -156,7 +156,7 @@ function IssueCard({
     return (
         <div
             key={`issue-${index}-${issue.number}`}
-            className="flex flex-col justify-between min-h-[216px] max-md:min-h-36 rounded-lg border border-gray-200 bg-white dark:bg-black p-4 shadow-sm transition-all hover:shadow-md"
+            className="flex flex-col justify-between min-h-[216px] max-md:min-h-36 rounded-lg border border-gray-200 dark:border-black-800 bg-white dark:bg-black p-4 shadow-sm transition-all hover:shadow-md"
         >
             <div className="flex flex-col justify-between">
                 <div className="flex items-center justify-between gap-2 flex-wrap">
@@ -197,7 +197,7 @@ function IssueCard({
                     href={issue.url}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="mt-2 text-lg max-md:text-base font-medium text-gray-800 dark:text-gray-100 dark:text-gray-100 text-wrap break-words hover:underline"
+                    className="mt-2 text-base font-medium text-gray-800 dark:text-gray-300 text-wrap break-words hover:underline"
                     data-umami-event={`${slugify(issue.repo)}-issue-url-clicked`}
                 >
                     <span className="text-gray-500 dark:text-gray-500">
@@ -224,7 +224,7 @@ function InfoTab() {
     return (
         <div>
             <div className="w-[300px] max-lg:w-[250px] max-md:w-full flex flex-col gap-4 relative">
-                <div className="bg-gray-100 dark:bg-gray-900 border border-gray-400 p-4 max-md:p-3 rounded-xl">
+                <div className="bg-gray-100 dark:bg-gray-900 border dark:border-black-700 border-gray-400 p-4 max-md:p-3 rounded-xl">
                     <p className="max-md:text-[15px]">
                         Use this tool to explore vetted Free Open Source
                         Software (FOSS) projects and find your way in bitcoin
