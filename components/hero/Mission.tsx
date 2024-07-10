@@ -29,16 +29,6 @@ export default function Mission() {
                                 key={step.name}
                                 className="flex flex-col items-center p-6 bg-white dark:bg-black rounded-lg border border-black-300 dark:border-black-800"
                             >
-                                {/* <span className="inline-flex items-center gap-x-1.5 rounded-md bg-black-100 dark:bg-black px-2 py-1 text-xs font-light text-black-600 dark:text-black-400 mb-4  border border-black-300 dark:border-black-800">
-                                    <svg
-                                        className="h-2 w-2 fill-orange-400 "
-                                        viewBox="0 0 6 6"
-                                        aria-hidden="true"
-                                    >
-                                        <circle cx={3} cy={3} r={3} />
-                                    </svg>
-                                    {step.badge}
-                                </span> */}
                                 <dt className="mt-5 text-2xl uppercase font-medium leading-7 text-orange-500 flex flex-col items-center text-center">
                                     {step.name}
                                 </dt>
