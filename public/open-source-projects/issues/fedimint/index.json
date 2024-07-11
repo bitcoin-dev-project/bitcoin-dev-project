@@ -408,5 +408,14 @@
       "wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/5602",
+    "publishedAt": "2024-07-11T16:46:25Z",
+    "title": "Upgrade tests fail for 0.3.2 -> 0.4.0-rc.0",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
