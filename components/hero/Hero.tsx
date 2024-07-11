@@ -4,9 +4,10 @@ import { hero } from "@/content/landing"
 
 import Link from "next/link"
 import { Container } from "./Container"
+
 export function Hero() {
     return (
-        <Container className="pb-16 pt-20 text-center lg:pt-32 bg-white dark:bg-black">
+        <Container className="pb-16 pt-20 max-sm:pb-0 text-center lg:pt-32 bg-white dark:bg-black">
             <h1 className="mx-auto max-w-4xl font-display text-6xl font-semibold tracking-tight text-black-800 dark:text-black-100 sm:text-7xl lg:text-8xl">
                 <span className="relative text-orange-500">
                     <span className="relative"> BUILD </span>
@@ -15,7 +16,7 @@ export function Hero() {
                 <span className="block whitespace-nowrap">of money</span>
             </h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-2xl tracking-tight text-black-700 dark:text-black-300">
+            <p className="mx-auto mt-6 max-w-2xl text-2xl max-sm:text-base tracking-tight text-black-700 dark:text-black-300">
                 Study and contribute to Bitcoin open-source development
             </p>
             <div className="mt-10 flex justify-center gap-x-6">
@@ -44,34 +45,30 @@ export function Hero() {
                     </button>
                 </Link>
             </div>
-            <div className="mt-36 lg:mt-44">
+            <div className="max-sm:mt-0 mt-36 lg:mt-44">
                 <p className="font-display text-base text-black-800 dark:text-black-100">
                     We're building products for Bitcoiners
                 </p>
-                <ul
-                    role="list"
-                    className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
-                >
-                    {hero.map((group, groupIndex) => (
-                        <li key={groupIndex}>
-                            <ul
-                                role="list"
-                                className="flex flex-col items-center gap-y-10 sm:flex-row sm:gap-x-16 sm:gap-y-0"
-                            >
-                                {group.map((company) => (
-                                    <li key={company.name} className="flex">
-                                        <Image
-                                            src={company.logo}
-                                            alt={company.name}
-                                            unoptimized
-                                            className="rounded-lg h-16 w-16 filter grayscale"
-                                        />
-                                    </li>
-                                ))}
-                            </ul>
-                        </li>
-                    ))}
-                </ul>
+
+                {hero.map((group, groupIndex) => (
+                    <section key={groupIndex}>
+                        <ul
+                            role="list"
+                            className="flex items-center justify-center gap-10 max-sm:gap-4 mt-8"
+                        >
+                            {group.map((company) => (
+                                <li key={company.name} className="flex">
+                                    <Image
+                                        src={company.logo}
+                                        alt={company.name}
+                                        unoptimized
+                                        className="rounded-lg h-16 w-16 max-md:w-12 max-md:h-12 filter grayscale"
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                ))}
             </div>
         </Container>
     )

@@ -1,4 +1,5 @@
 import { navigation } from "@/content/landing"
+import MailchimpSubscribeForm from "./subscribe-to-newsletter"
 
 export default function Footer() {
     return (
@@ -20,28 +21,7 @@ export default function Footer() {
                             Bitcoin space
                         </p>
                     </div>
-                    <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
-                        <label htmlFor="email-address" className="sr-only">
-                            Email address
-                        </label>
-                        <input
-                            type="email"
-                            name="email-address"
-                            id="email-address"
-                            autoComplete="email"
-                            required
-                            className="w-full min-w-0 appearance-none rounded-md border-0 bg-white dark:bg-black px-3 py-1.5 text-base text-black-800 dark:text-black-100 shadow-sm ring-1 ring-inset ring-black-300 placeholder:text-black-400 dark:text-black-600 dark:text-black-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:w-56 sm:text-sm sm:leading-6"
-                            placeholder="Enter your email"
-                        />
-                        <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-                            <button
-                                type="submit"
-                                className="flex w-full items-center justify-center rounded-md bg-orange-500 px-3 py-2 text-sm font-semibold text-white dark:text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
-                            >
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
+                    <MailchimpSubscribeForm />
                 </div>
                 <div className="mt-8 border-t border-black-800/10 pt-8 md:flex md:items-center md:justify-between">
                     <div className="flex space-x-6 md:order-2">
@@ -49,7 +29,7 @@ export default function Footer() {
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="text-black-400 dark:text-black-600 dark:text-black-400 hover:text-black-500"
+                                className="text-black-400 dark:text-black-400 hover:text-black-500"
                             >
                                 <span className="sr-only">{item.name}</span>
                                 <item.icon

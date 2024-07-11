@@ -23,8 +23,15 @@ import githubIcon from "@/public/images/hero/socials/github.svg"
 import xIcon from "@/public/images/hero/socials/x.svg"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 
-import { ImageProps } from "next/image"
+import {
+    ChartPieIcon,
+    CursorArrowRaysIcon,
+    FingerPrintIcon
+} from "@heroicons/react/24/outline"
+import { RectangleGroupIcon } from "@heroicons/react/20/solid"
+
 import Image from "next/image"
+import { IFeature } from "@/types"
 import { CodeBracketIcon } from "@heroicons/react/20/solid"
 
 export const learningPath = [
@@ -34,7 +41,7 @@ export const learningPath = [
         description:
             "Simplifying bitcoin tech to help you learn as efficiently as possible",
         href: "/bitcoin-core",
-        cta: "Check out Topics",
+        cta: "Check Out",
         icon: BitcoinIcon
     },
     {
@@ -160,6 +167,7 @@ export const hero = [
         { name: "Bitcoin TLDR", logo: logoBitcoinTLDR }
     ]
 ]
+
 export const navigation = {
     social: [
         {
@@ -203,10 +211,48 @@ export const navigation = {
         }
     ]
 }
-export interface IFeature {
-    name: React.ReactNode
-    summary: string
-    description: string
-    image: ImageProps["src"]
-    icon: ImageProps["src"]
-}
+
+export const products = [
+    {
+        name: "Bitcoin Topics",
+        description:
+            "Learning bitcoin is hard, but we make it easy for you to get started.",
+        href: "/topics",
+        icon: CursorArrowRaysIcon,
+        released: false
+    },
+    {
+        name: "Bitcoin Core Development",
+        description: "Learn how to contribute to the bitcoin core software.",
+        href: "/bitcoin-core",
+        icon: ChartPieIcon,
+        released: true
+    },
+    {
+        name: "Lightning Development",
+        description: "Learn how to contribute to the lightning network.",
+        href: "/lightning-open-source",
+        icon: FingerPrintIcon,
+        released: true
+    }
+]
+
+export const contributions = [
+    {
+        name: "Good First Issue",
+        description: "Find your way in bitcoin open source.",
+        href: "/good-first-issues",
+        icon: CursorArrowRaysIcon,
+        released: true
+    },
+    {
+        name: "FOSS Projects",
+        description: "Learn how to contribute to the bitcoin core software.",
+        href: "/projects",
+        icon: ChartPieIcon,
+        released: true
+    }
+]
+export const callsToAction = [
+    { name: "View all products", href: "/tools", icon: RectangleGroupIcon }
+]

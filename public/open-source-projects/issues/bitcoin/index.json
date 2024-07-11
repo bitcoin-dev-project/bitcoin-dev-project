@@ -693,5 +693,16 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/30424",
+    "publishedAt": "2024-07-10T17:21:41Z",
+    "title": "intermittent issue in feature_reindex.py: Reindex fails to continue after restart; `initload` thread hangs forever",
+    "labels": [
+      "Bug",
+      "Block storage",
+      "CI failed"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]

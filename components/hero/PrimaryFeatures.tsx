@@ -46,22 +46,22 @@ export function PrimaryFeatures() {
                     </p>
                 </div>
                 <TabGroup
-                    className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
+                    className="mt-16 max-md:mt-0 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 lg:grid-cols-12 lg:pt-0"
                     vertical={tabOrientation === "vertical"}
                 >
                     {({ selectedIndex }) => (
                         <>
-                            <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                                <TabList className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
+                            <div className="-mx-4 flex max-sm:flex-col overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+                                <TabList className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal max-sm:flex-col">
                                     {primaryFeatures.map(
                                         (feature, featureIndex) => (
                                             <div
                                                 key={feature.title}
                                                 className={clsx(
-                                                    "group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6",
+                                                    "group relative rounded-xl lg:rounded-l-xl lg:rounded-r-none p-6 max-md:p-4",
                                                     selectedIndex ===
                                                         featureIndex
-                                                        ? "bg-white dark:bg-black lg:dark:bg-black/10 lg:ring-1 lg:ring-inset lg:ring-white/10"
+                                                        ? "bg-white dark:bg-black dark:bg-black/10 ring-1 ring-inset ring-white/10"
                                                         : "hover:dark:bg-black/10 lg:hover:dark:bg-black/5"
                                                 )}
                                             >
@@ -71,11 +71,10 @@ export function PrimaryFeatures() {
                                                             "font-display text-xl font-medium ui-not-focus-visible:outline-none",
                                                             selectedIndex ===
                                                                 featureIndex
-                                                                ? "text-gray-400 dark:text-gray-600 lg:text-black dark:lg:text-white"
-                                                                : "text-gray-800 dark:text-gray-100 hover:text-black dark:hover:text-white lg:text-black dark:lg:text-white"
+                                                                ? "text-black dark:text-white"
+                                                                : "text-gray-800 dark:text-gray-100 hover:text-black dark:hover:text-white lg:text-black dark:lg:text-white border-b pb-1"
                                                         )}
                                                     >
-                                                        <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
                                                         {feature.title}
                                                     </Tab>
                                                     {feature.released ? null : (
@@ -125,7 +124,7 @@ export function PrimaryFeatures() {
                                                                         key={
                                                                             check
                                                                         }
-                                                                        className="flex py-2"
+                                                                        className="flex py-2 items-center"
                                                                     >
                                                                         <CheckIcon
                                                                             className={clsx(
@@ -135,7 +134,7 @@ export function PrimaryFeatures() {
                                                                                     : "text-cyan-500"
                                                                             )}
                                                                         />
-                                                                        <span className="ml-4">
+                                                                        <span className="ml-4 text-wrap">
                                                                             {
                                                                                 check
                                                                             }
@@ -158,7 +157,7 @@ export function PrimaryFeatures() {
                                         unmount={false}
                                     >
                                         <div className="relative sm:px-6 lg:hidden">
-                                            <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] dark:bg-black/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
+                                            <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] dark:bg-black/10 ring-1 max-lg:ring-0 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
                                             <p className="relative mx-auto max-w-2xl text-base text-black dark:text-white sm:text-center">
                                                 {feature.description}
                                             </p>
