@@ -1,5 +1,8 @@
 import { BitcoinIcon, EyeOffIcon } from "lucide-react"
 
+import screenshotBitcoinCore from "@/public/images/hero/screenshots/bitcoin-core.png"
+import screenshotLightning from "@/public/images/hero/screenshots/lightning.png"
+
 import screenshotTopics from "@/public/images/hero/screenshots/topics.png"
 import screenshotGoodFirstIssues from "@/public/images/hero/screenshots/good-first-issues.png"
 import screenshotBitcoinSearch from "@/public/images/hero/screenshots/bitcoin_search.png"
@@ -29,42 +32,35 @@ import { RectangleGroupIcon } from "@heroicons/react/20/solid"
 
 import Image from "next/image"
 import { IFeature } from "@/types"
+import { CodeBracketIcon } from "@heroicons/react/20/solid"
 
 export const learningPath = [
     {
         badge: "EDUCATION",
-        name: "01 - Study",
-        description: "Learning bitcoin is Hard we make it easy for you.",
+        name: "STUDY",
+        description:
+            "Simplifying bitcoin tech to help you learn as efficiently as possible",
         href: "/bitcoin-core",
-        cta: "Check out topics",
+        cta: "Check Out",
         icon: BitcoinIcon
     },
     {
         badge: "CONTRIBUTION",
-        name: "02 - Contribute",
+        name: "CONTRIBUTE",
         description:
-            "Put your knowledge to test. Explore vetted Free Open Source Software (FOSS) projects and find your way in bitcoin open source.",
+            "Get to work on open issues. Put your knowledge to the test. Explore vetted Free Open Source Software (FOSS) projects. And find your way in bitcoin open source.",
         href: "/good-first-issues",
-        cta: "Start Contribute",
+        cta: "Start Contributing",
         icon: BitcoinIcon
     },
 
     {
-        badge: "TOOLS",
-        name: "03 - Build",
+        badge: "EXPLORE",
+        name: "EXPLORE",
         description:
             "Explore a suite of tools crafted to support your learning, building, and contributions in the bitcoin ecosystem.",
         href: "/tools",
-        cta: "Check Tools",
-        icon: BitcoinIcon
-    },
-    {
-        badge: "FUNDING",
-        name: "04 - Get Funded",
-        description:
-            "Do the work. Demonstrate capability and earn a grant for full-time bitcoin open source work",
-        href: "/career",
-        cta: "Learn More",
+        cta: "See Our Tools",
         icon: BitcoinIcon
     }
 ]
@@ -136,30 +132,24 @@ export const tools: Array<IFeature> = [
 
 export const values = [
     {
-        name: "BITCOIN ONLY",
-        description: "We are 100% focused on Bitcoin and its ecosystem.",
+        name: "FOCUSED ON BITCOIN",
+        description: "100% concentrated on bitcoin and related technologies",
         href: "#",
         icon: BitcoinIcon
     },
     {
-        name: "ONBOARD",
+        name: "OPEN SOURCE",
         description:
-            "Encourage more developers to be part of creating a new financial order",
+            "Everything we do is open source. We want your reviews and contributions",
         href: "#",
         icon: GitHubLogoIcon
     },
     {
-        name: "COMMUNITY",
+        name: "BITCOIN TECH",
         description:
-            "Bridge the gap between experienced developers and newcomers.",
+            "We focus on enabling devs to learn, practice, and build with bitcoin.",
         href: "#",
-        icon: UsersIcon
-    },
-    {
-        name: "INNOVATION",
-        description: "Make it easy for anyone with a Bitcoin idea to build it",
-        href: "#",
-        icon: EyeOffIcon
+        icon: CodeBracketIcon
     }
 ]
 
@@ -224,14 +214,6 @@ export const navigation = {
 
 export const products = [
     {
-        name: "Bitcoin Topics",
-        description:
-            "Learning bitcoin is hard, but we make it easy for you to get started.",
-        href: "/topics",
-        icon: CursorArrowRaysIcon,
-        released: false
-    },
-    {
         name: "Bitcoin Core Development",
         description: "Learn how to contribute to the bitcoin core software.",
         href: "/bitcoin-core",
@@ -244,6 +226,14 @@ export const products = [
         href: "/lightning-open-source",
         icon: FingerPrintIcon,
         released: true
+    },
+    {
+        name: "Bitcoin Topics",
+        description:
+            "Learning bitcoin is hard, but we make it easy for you to get started.",
+        href: "/topics",
+        icon: CursorArrowRaysIcon,
+        released: false
     }
 ]
 
