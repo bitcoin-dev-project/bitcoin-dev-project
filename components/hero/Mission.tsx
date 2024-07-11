@@ -3,7 +3,7 @@ import { learningPath } from "@/content/landing"
 
 export default function Mission() {
     return (
-        <div className="bg-white dark:bg-black py-24 sm:py-32">
+        <div className="bg-white dark:bg-black py-12 sm:py-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl mb-20 lg:text-center">
                     <h2 className="text-base font-semibold leading-7 text-orange-500">
