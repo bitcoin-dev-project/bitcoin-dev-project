@@ -214,14 +214,6 @@ export const navigation = {
 
 export const products = [
     {
-        name: "Bitcoin Topics",
-        description:
-            "Learning bitcoin is hard, but we make it easy for you to get started.",
-        href: "/topics",
-        icon: CursorArrowRaysIcon,
-        released: false
-    },
-    {
         name: "Bitcoin Core Development",
         description: "Learn how to contribute to the bitcoin core software.",
         href: "/bitcoin-core",
@@ -234,6 +226,14 @@ export const products = [
         href: "/lightning-open-source",
         icon: FingerPrintIcon,
         released: true
+    },
+    {
+        name: "Bitcoin Topics",
+        description:
+            "Learning bitcoin is hard, but we make it easy for you to get started.",
+        href: "/topics",
+        icon: CursorArrowRaysIcon,
+        released: false
     }
 ]
 
