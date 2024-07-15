@@ -75,38 +75,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6104",
-    "publishedAt": "2024-07-12T18:21:01Z",
-    "title": "[Bug]: Shopify Integration allows user to generate invoice after order is cancelled",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6105",
-    "publishedAt": "2024-07-12T19:23:39Z",
-    "title": "[Bug]: Shopify Integration: BTCPay invoice not generated until user clicks the button ",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6106",
     "publishedAt": "2024-07-13T18:25:41Z",
     "title": "Add Exchange Rate Spread apparently doesn't work as it's suposed to (to be investigated)",
     "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6107",
-    "publishedAt": "2024-07-15T09:28:38Z",
-    "title": "[BUG] Shopify - expired invoice should restock the order",
-    "labels": [
-      "Bug"
+      "Bug",
+      "need-info"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
