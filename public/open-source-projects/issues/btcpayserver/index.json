@@ -73,15 +73,5 @@
       "API"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6106",
-    "publishedAt": "2024-07-13T18:25:41Z",
-    "title": "Add Exchange Rate Spread apparently doesn't work as it's suposed to (to be investigated)",
-    "labels": [
-      "Bug",
-      "need-info"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
