@@ -79,14 +79,5 @@
       "up for grabs"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
-  },
-  {
-    "url": "https://github.com/jamaljsr/polar/issues/935",
-    "publishedAt": "2024-07-08T14:00:56Z",
-    "title": "Bug: Unable to close channel initiated by Core Lightning node",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   }
 ]
