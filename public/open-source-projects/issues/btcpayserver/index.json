@@ -100,5 +100,14 @@
       "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6107",
+    "publishedAt": "2024-07-15T09:28:38Z",
+    "title": "[BUG] Shopify - expired invoice should restock the order",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
