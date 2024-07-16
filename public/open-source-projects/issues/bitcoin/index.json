@@ -281,15 +281,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/23234",
-    "publishedAt": "2021-10-08T23:23:26Z",
-    "title": "Shutdown during reindex-chainstate can block forever",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/23366",
     "publishedAt": "2021-10-27T04:43:14Z",
     "title": "CI failure: `ThreadSanitizer: data race /usr/lib/llvm-12/bin/../include/c++/v1/ios:523:12 in std::__1::ios_base::width() const`",
@@ -695,13 +686,13 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/30424",
-    "publishedAt": "2024-07-10T17:21:41Z",
-    "title": "intermittent issue in feature_reindex.py: Reindex fails to continue after restart; `initload` thread hangs forever",
+    "url": "https://github.com/bitcoin/bitcoin/issues/30458",
+    "publishedAt": "2024-07-16T17:12:10Z",
+    "title": "Fuzz coverage for wallet RPCs is zero",
     "labels": [
-      "Bug",
-      "Block storage",
-      "CI failed"
+      "Wallet",
+      "Tests",
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
