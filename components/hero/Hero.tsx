@@ -20,7 +20,7 @@ export function Hero() {
                 <Link href="/bitcoin-core">
                     <button
                         type="button"
-                        className="py-1 pl-4 pr-2 duration-200 border-orange-500 bg-orange-500 hover:text-black h-12 hover:bg-white text-white justify-between uppercase border-2 hover:border-white rounded-full inline-flex items-center gap-12"
+                        className="py-1 pl-4 pr-2 duration-200 border-orange-500 bg-orange-500 hover:text-black h-12 hover:bg-white text-white justify-between border-2 hover:border-white rounded-full inline-flex items-center gap-12"
                     >
                         Learn Bitcoin
                         <div className="bg-black h-8 w-8 text-white inline-flex items-center justify-center rounded-full">
@@ -42,7 +42,7 @@ export function Hero() {
                 <Link href="/good-first-issues">
                     <button
                         type="button"
-                        className="py-1 pl-4 pr-4 duration-200 border-orange-500 bg-transparent text-orange-500 hover:bg-orange-500 hover:text-white h-12 uppercase border rounded-full inline-flex items-center justify-center transition-colors duration-200"
+                        className="py-1 pl-4 pr-4 duration-200 border-orange-500 bg-transparent text-orange-500 hover:bg-orange-500 hover:text-white h-12 border rounded-full inline-flex items-center justify-center transition-colors duration-200"
                     >
                         Contribute to Open Source
                     </button>
