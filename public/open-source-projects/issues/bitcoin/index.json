@@ -252,26 +252,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/22726",
-    "publishedAt": "2021-08-17T13:33:17Z",
-    "title": "It is impossible to switch off binding for Tor",
-    "labels": [
-      "Bug",
-      "P2P"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/22727",
-    "publishedAt": "2021-08-17T13:33:24Z",
-    "title": "No check is done whether the binding for Tor succeeded before using it for ADD_ONION",
-    "labels": [
-      "Bug",
-      "P2P"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/23119",
     "publishedAt": "2021-09-28T13:06:17Z",
     "title": "test: replace bare asserts with assertion helpers (assert_equal() etc.)",
@@ -640,17 +620,6 @@
     "title": "Wallet: Nondescript error message for 502nd unconfirmed transaction",
     "labels": [
       "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/30077",
-    "publishedAt": "2024-05-10T03:15:00Z",
-    "title": "RPC: Internal bug in `walletprocesspsbt` when non_witness_utxo is not provided and a witness signature is invalid",
-    "labels": [
-      "Bug",
-      "Wallet",
-      "RPC/REST/ZMQ"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
