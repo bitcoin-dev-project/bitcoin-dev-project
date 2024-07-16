@@ -327,5 +327,25 @@
       "ci/cd"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1053",
+    "publishedAt": "2024-07-16T09:14:31Z",
+    "title": "Pool is not properly checking the SetCustomMiningJob message received",
+    "labels": [
+      "bug",
+      "sv2 pool"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1054",
+    "publishedAt": "2024-07-16T09:22:21Z",
+    "title": "JDS is missing checks on DeclaredMiningJobs",
+    "labels": [
+      "bug",
+      "job-declarator-server"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
