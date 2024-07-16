@@ -8,7 +8,7 @@ export default function Newsletter() {
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
                     <div className="max-w-xl lg:max-w-lg">
                         <h2 className="text-3xl font-bold tracking-tight dark:text-white text-black sm:text-4xl">
-                            Subscribe to TLDR newsletter.
+                            Subscribe to the TLDR newsletter.
                         </h2>
                         <p className="mt-4 text-lg leading-8 text-black-500 dark:text-black-500">
                             Keep up to date with the latest developments in the

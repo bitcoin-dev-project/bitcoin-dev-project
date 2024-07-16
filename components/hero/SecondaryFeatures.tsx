@@ -77,30 +77,35 @@ function FeaturesDesktop() {
         <TabGroup className="hidden lg:mt-20 lg:block">
             {({ selectedIndex }) => (
                 <>
-                    <TabList className="grid grid-cols-5 divide-x divide-gray-300 ">
-                        {tools.map((feature, featureIndex) => (
-                            <section key={feature.description}>
-                                <Feature
-                                    feature={{
-                                        ...feature,
-                                        name: (
-                                            <Tab className="ui-not-focus-visible:outline-none">
-                                                <span className="absolute inset-0" />
-                                                {feature.name}
-                                            </Tab>
-                                        )
-                                    }}
-                                    isActive={featureIndex === selectedIndex}
-                                    className={`relative p-4 ${
+                    <div className="overflow-x-auto">
+                        <TabList className="flex divide-x divide-gray-300">
+                            {tools.map((feature, featureIndex) => (
+                                <section
+                                    key={feature.description}
+                                    className={`min-w-[260px] relative p-4 ${
                                         featureIndex === selectedIndex
                                             ? "bg-gray-200 dark:bg-gray-800"
                                             : "hover:bg-gray-200 dark:hover:bg-gray-800"
                                     }`}
-                                />
-                            </section>
-                        ))}
-                    </TabList>
-
+                                >
+                                    <Feature
+                                        feature={{
+                                            ...feature,
+                                            name: (
+                                                <Tab className="ui-not-focus-visible:outline-none">
+                                                    <span className="absolute inset-0" />
+                                                    {feature.name}
+                                                </Tab>
+                                            )
+                                        }}
+                                        isActive={
+                                            featureIndex === selectedIndex
+                                        }
+                                    />
+                                </section>
+                            ))}
+                        </TabList>
+                    </div>
                     <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-gray-200 dark:bg-gray-800 px-14 py-16 xl:px-16">
                         <div className="-mx-5 flex">
                             {tools.map((feature, featureIndex) => (
@@ -148,15 +153,18 @@ export function SecondaryFeatures() {
         >
             <Container>
                 <div className="mx-auto max-w-2xl md:text-center">
+                    <h2 className="text-base font-semibold leading-7 text-orange-500">
+                        Tools and Resources
+                    </h2>
                     <h2 className="font-display font-bold text-3xl tracking-tight text-black-800 dark:text-black-100 sm:text-5xl">
-                        <span className="text-orange">
-                            From Learning to Action:
-                        </span>{" "}
+                        <div className="text-orange">
+                            From Learning to Action
+                        </div>
                         Dive Into Bitcoin Development
                     </h2>
                     <p className="mt-4 text-lg tracking-tight text-black-700 dark:text-black-300">
-                        Explore tools crafted to support your learning,
-                        building, and contributions in the Bitcoin ecosystem.
+                        Explore tools crafted to support you in learning,
+                        building, and contributing to the Bitcoin ecosystem.
                     </p>
                 </div>
                 <FeaturesMobile />

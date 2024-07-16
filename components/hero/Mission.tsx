@@ -13,12 +13,12 @@ export default function Mission() {
                         Bitcoin is better
                     </p>
                     <p className="mt-2 text-4xl font-bold tracking-tight text-orange sm:text-5xl">
-                        WHEN YOU CONTRIBUTE
+                        when you contribute
                     </p>
                     <p className="mt-6 text-lg leading-8 text-black-600 dark:text-black-400">
                         The Bitcoin Dev Project exists to inspire the next
                         generation of bitcoin open source contributors. We
-                        provide you with resources and support for your journey
+                        provide you with resources and support for your journey.
                     </p>
                 </div>
 

@@ -7,7 +7,8 @@ import screenshotTopics from "@/public/images/hero/screenshots/topics.png"
 import screenshotGoodFirstIssues from "@/public/images/hero/screenshots/good-first-issues.png"
 import screenshotBitcoinSearch from "@/public/images/hero/screenshots/bitcoin_search.png"
 import screenshotBitcoinTLDR from "@/public/images/hero/screenshots/bitcoin_tldr.png"
-import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoin_transcript.png"
+import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoin-transacripts.png"
+import screenshotBitcoinTranscriptReview from "@/public/images/hero/screenshots/bitcoin-transcript-review.png"
 import screenshotChatBTC from "@/public/images/hero/screenshots/chatBTC.png"
 import screenshotSavingSatoshi from "@/public/images/hero/screenshots/saving_satoshi.png"
 
@@ -41,7 +42,7 @@ export const learningPath = [
         description:
             "Simplifying bitcoin tech to help you learn as efficiently as possible",
         href: "/bitcoin-core",
-        cta: "Check Out",
+        cta: "Learn Bitcoin Tech",
         icon: BitcoinIcon
     },
     {
@@ -58,7 +59,7 @@ export const learningPath = [
         badge: "EXPLORE",
         name: "EXPLORE",
         description:
-            "Explore a suite of tools crafted to support your learning, building, and contributions in the bitcoin ecosystem.",
+            "Explore a suite of tools crafted to support you in learning, building, and contributing to the bitcoin ecosystem.",
         href: "/tools",
         cta: "See Our Tools",
         icon: BitcoinIcon
@@ -92,27 +93,43 @@ export const primaryFeatures = [
 
 export const tools: Array<IFeature> = [
     {
-        name: "Bitcoin Transcript",
-        description:
-            "Peruse archives of transcribed talks, podcasts and lectures.",
+        name: "Good First Issues",
+        description: "Explore vetted Free Open Source Software (FOSS) projects",
         summary: "",
-        image: screenshotBitcoinTranscript,
+        image: screenshotGoodFirstIssues,
+        icon: logoBitcoinTranscript
+    },
+    {
+        name: "Bitcoin Transcript Review",
+        description:
+            "Earn sats by reviewing and editing AI-generated transcripts",
+        summary: "",
+        image: screenshotBitcoinTranscriptReview,
         icon: logoBitcoinTranscript
     },
 
-    {
-        name: "Bitcoin TLDR",
-        description: "Bitcoin-dev and Lightning-dev mailing list summaries",
-        summary: "",
-        image: screenshotBitcoinTLDR,
-        icon: logoBitcoinTLDR
-    },
     {
         name: "Bitcoin Search",
         description: "The technical bitcoin search engine we deserve.",
         summary: "",
         image: screenshotBitcoinSearch,
         icon: logoBitcoinSearch
+    },
+    {
+        name: "Bitcoin TLDR",
+        description:
+            "Making it easier to engage with Delving Bitcoin, and Bitcoin and Lightning-dev mailing lists",
+        summary: "",
+        image: screenshotBitcoinTLDR,
+        icon: logoBitcoinTLDR
+    },
+    {
+        name: "Bitcoin Transcripts",
+        description:
+            "Historical archives of transcribed talks, podcasts and lectures",
+        summary: "",
+        image: screenshotBitcoinTranscript,
+        icon: logoBitcoinTranscript
     },
     {
         name: "ChatBTC",
@@ -134,21 +151,19 @@ export const values = [
     {
         name: "FOCUSED ON BITCOIN",
         description: "100% concentrated on bitcoin and related technologies",
-        href: "#",
         icon: BitcoinIcon
     },
     {
         name: "OPEN SOURCE",
         description:
             "Everything we do is open source. We want your reviews and contributions",
-        href: "#",
+        href: "https://github.com/bitcoin-dev-project/bitcoin-dev-project",
         icon: GitHubLogoIcon
     },
     {
         name: "BITCOIN TECH",
         description:
             "We focus on enabling devs to learn, practice, and build with bitcoin.",
-        href: "#",
         icon: CodeBracketIcon
     }
 ]
