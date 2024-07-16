@@ -77,37 +77,35 @@ function FeaturesDesktop() {
         <TabGroup className="hidden lg:mt-20 lg:block">
             {({ selectedIndex }) => (
                 <>
-                    <>
-                        <div className="overflow-x-auto">
-                            <TabList className="flex divide-x divide-gray-300">
-                                {tools.map((feature, featureIndex) => (
-                                    <section
-                                        key={feature.description}
-                                        className={`min-w-[260px] relative p-4 ${
+                    <div className="overflow-x-auto">
+                        <TabList className="flex divide-x divide-gray-300">
+                            {tools.map((feature, featureIndex) => (
+                                <section
+                                    key={feature.description}
+                                    className={`min-w-[260px] relative p-4 ${
+                                        featureIndex === selectedIndex
+                                            ? "bg-gray-200 dark:bg-gray-800"
+                                            : "hover:bg-gray-200 dark:hover:bg-gray-800"
+                                    }`}
+                                >
+                                    <Feature
+                                        feature={{
+                                            ...feature,
+                                            name: (
+                                                <Tab className="ui-not-focus-visible:outline-none">
+                                                    <span className="absolute inset-0" />
+                                                    {feature.name}
+                                                </Tab>
+                                            )
+                                        }}
+                                        isActive={
                                             featureIndex === selectedIndex
-                                                ? "bg-gray-200 dark:bg-gray-800"
-                                                : "hover:bg-gray-200 dark:hover:bg-gray-800"
-                                        }`}
-                                    >
-                                        <Feature
-                                            feature={{
-                                                ...feature,
-                                                name: (
-                                                    <Tab className="ui-not-focus-visible:outline-none">
-                                                        <span className="absolute inset-0" />
-                                                        {feature.name}
-                                                    </Tab>
-                                                )
-                                            }}
-                                            isActive={
-                                                featureIndex === selectedIndex
-                                            }
-                                        />
-                                    </section>
-                                ))}
-                            </TabList>
-                        </div>
-                    </>
+                                        }
+                                    />
+                                </section>
+                            ))}
+                        </TabList>
+                    </div>
                     <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-gray-200 dark:bg-gray-800 px-14 py-16 xl:px-16">
                         <div className="-mx-5 flex">
                             {tools.map((feature, featureIndex) => (
