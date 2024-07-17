@@ -573,16 +573,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/28864",
-    "publishedAt": "2023-11-13T16:59:09Z",
-    "title": "build: Configuring with `-mno-sse4.1` does not fail the sse4.1 instrinsics check",
-    "labels": [
-      "Bug",
-      "Build system"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/29073",
     "publishedAt": "2023-12-13T12:52:28Z",
     "title": "ci: failure in `wallet_multiwallet.py --legacy-wallet`",
