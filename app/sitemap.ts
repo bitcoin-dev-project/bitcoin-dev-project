@@ -4,7 +4,6 @@ import siteMetadata from "@/data/siteMetadata"
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const siteUrl = siteMetadata.siteUrl
-    debugger
     const topicRoutes = allTopics
         .filter((post) => !post.draft)
         .map((post) => ({

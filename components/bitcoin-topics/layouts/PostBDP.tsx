@@ -32,7 +32,6 @@ export default function PostLayout({
     prev,
     children
 }: LayoutProps) {
-    debugger
     let pathname = usePathname()
     let isHomePage = pathname === "/topics"
 
