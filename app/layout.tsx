@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     }
 }
 
-export const barlow = Barlow({
+const barlow = Barlow({
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
     variable: "--barlow-font",
     preload: true,
@@ -60,7 +60,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
+        <html lang={siteMetadata.language} suppressHydrationWarning>
             <head>
                 <script
                     async

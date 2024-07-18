@@ -9,7 +9,7 @@
         "check-code": "npm run prettier:check && eslint .",
         "compile:scripts": "rm -rf scripts && tsc --project tsconfig.scripts.json",
         "fetch-issues": "node scripts/helpers/fetch-issues.js",
-        "dev": "next dev",
+        "dev": "git submodule update --init --recursive && next dev",
         "build": "next build",
         "start": "next start",
         "lint": "next lint"
@@ -53,8 +53,6 @@
         "tailwind-merge": "^2.3.0",
         "tailwindcss-animate": "^1.0.7",
         "lucide-react": "^0.390.0",
-        "next": "14.0.1",
-        "next-auth": "^4.24.4",
         "next-themes": "^0.3.0",
         "react": "^18",
         "react-dom": "^18",

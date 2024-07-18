@@ -1,5 +1,4 @@
 import { defineDocumentType, ComputedFields } from "contentlayer2/source-files"
-import { spawn } from "node:child_process"
 import { makeSource } from "contentlayer2/source-files"
 
 import { writeFileSync } from "fs"
@@ -44,8 +43,8 @@ const computedFields: ComputedFields = {
     toc: { type: "string", resolve: (doc) => extractTocHeadings(doc.body.raw) }
 }
 
-export const Blog = defineDocumentType(() => ({
-    name: "Blog",
+export const Topic = defineDocumentType(() => ({
+    name: "Topic",
     filePathPattern: "topics/**/*.mdx",
     contentType: "mdx",
     fields: {
@@ -76,7 +75,7 @@ export const Blog = defineDocumentType(() => ({
                 dateModified: doc.lastmod || doc.date,
                 description: doc.summary,
                 image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
-                url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`
+                url: `${siteMetadata.siteUrl}/topics/${doc._raw.flattenedPath}`
             })
         }
     }
@@ -104,11 +103,11 @@ export const Authors = defineDocumentType(() => ({
 }))
 
 /**
- * Count the occurrences of all tags across blog posts and write to json file
+ * Count the occurrences of all tags across topics and write to json file
  */
-function createTagCount(allBlogs: any[]) {
+function createTagCount(allTopics: any[]) {
     const tagCount: Record<string, number> = {}
-    allBlogs.forEach((file) => {
+    allTopics.forEach((file) => {
         if (file.tags && (!isProduction || file.draft !== true)) {
             file.tags.forEach((tag: string) => {
                 // Explicitly specify the type of 'tag' as 'string'
@@ -125,9 +124,9 @@ function createTagCount(allBlogs: any[]) {
 }
 
 export default makeSource({
-    contentDirPath: "public/glossary",
+    contentDirPath: "public/bitcoin-topics",
     contentDirInclude: ["topics", "authors"],
-    documentTypes: [Blog, Authors],
+    documentTypes: [Topic, Authors],
     disableImportAliasWarning: true,
     mdx: {
         cwd: process.cwd(),
@@ -150,13 +149,16 @@ export default makeSource({
                 }
             ],
             rehypeKatex,
-            [rehypeCitation, { path: path.join(root, "public/glossary") }],
+            [
+                rehypeCitation,
+                { path: path.join(root, "public/bitcoin-topics") }
+            ],
             [rehypePrismPlus, { defaultLanguage: "js", ignoreMissing: true }],
             rehypePresetMinify
         ]
     },
     onSuccess: async (importData) => {
-        const { allBlogs } = await importData()
-        createTagCount(allBlogs)
+        const { allTopics } = await importData()
+        createTagCount(allTopics)
     }
 })

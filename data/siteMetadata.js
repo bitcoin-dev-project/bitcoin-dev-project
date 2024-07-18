@@ -5,9 +5,10 @@ const siteMetadata = {
     headerTitle: "BDP",
     description: "Find your way in bitcoin open source",
     language: "en-us",
-    theme: "system", // system, dark or light
-    siteUrl: "https://bitcoindevs.xyz/glossary",
-    siteRepo: "https://github.com/bitcoin-dev-project/glossary/",
+    theme: "light", // system, dark or light
+    siteUrl: "https://bitcoindevs.xyz",
+    siteRepo: "https://github.com/bitcoin-dev-project/bitcoin-dev-project",
+    topicsRepo: "https://github.com/bitcoin-dev-project/bitcoin-topics",
     siteLogo: "/public/hero.jpg",
     socialBanner: "https://bitcoindevs.xyz/landscape_2_1.jpg?v1",
     github: "https://github.com/bitcoin-dev-project/",
