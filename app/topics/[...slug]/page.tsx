@@ -1,3 +1,4 @@
+import "css/prism.css"
 import "katex/dist/katex.css"
 
 import { MDXLayoutRenderer } from "pliny/mdx-components"

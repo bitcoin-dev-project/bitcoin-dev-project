@@ -1,3 +1,4 @@
+import "css/prism.css"
 import "katex/dist/katex.css"
 
 import { MDXLayoutRenderer } from "pliny/mdx-components"
@@ -44,7 +45,7 @@ export const metadata = genPageMetadata({
 })
 
 // Default page to display in home page for topics
-const slug = "segwit"
+const slug = "welcome"
 
 export default async function Page() {
     // Filter out drafts in production

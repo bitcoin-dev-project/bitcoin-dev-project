@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { ThemeProvider } from "next-themes"
+import "remark-github-blockquote-alert/alert.css"
 import siteMetadata from "@/data/siteMetadata"
 
 export const metadata: Metadata = {

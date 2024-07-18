@@ -21,6 +21,8 @@ import rehypeKatex from "rehype-katex"
 import rehypeCitation from "rehype-citation"
 import rehypePrismPlus from "rehype-prism-plus"
 import rehypePresetMinify from "rehype-preset-minify"
+import { remarkAlert } from "remark-github-blockquote-alert"
+
 import siteMetadata from "./data/siteMetadata"
 
 const root = process.cwd()
@@ -61,7 +63,8 @@ export const Topic = defineDocumentType(() => ({
         layout: { type: "string" },
         bibliography: { type: "string" },
         canonicalUrl: { type: "string" },
-        relatedtopics: { type: "list", of: { type: "string" } }
+        relatedtopics: { type: "list", of: { type: "string" } },
+        category: { type: "string" }
     },
     computedFields: {
         ...computedFields,
@@ -135,7 +138,8 @@ export default makeSource({
             remarkGfm,
             remarkCodeTitles,
             remarkMath,
-            remarkImgToJsx
+            remarkImgToJsx,
+            remarkAlert
         ],
         rehypePlugins: [
             rehypeSlug,

@@ -9,6 +9,24 @@ import {
 } from "pliny/utils/contentlayer"
 import { Topic, allTopics } from "@/.contentlayer/generated"
 
+interface NavigationLink {
+    title: string
+    href: string
+}
+
+interface NavigationCategory {
+    title: string
+    links: NavigationLink[]
+}
+
+const categoryOrder = [
+    "Introduction",
+    "Scripts",
+    "BIPS",
+    "Others",
+    "Contribution"
+]
+
 export function Navigation({
     content,
     className,
@@ -20,15 +38,34 @@ export function Navigation({
 }) {
     let pathname = usePathname()
     const posts = allCoreContent(sortPosts(allTopics))
-    const navigation = [
-        {
-            title: "Key Terms",
-            links: posts.map((post) => ({
+    // Group posts by category
+    const groupedPosts: { [key: string]: Topic[] } = posts.reduce(
+        (acc: { [key: string]: Topic[] }, post: any) => {
+            const category = post.category || "Others"
+            if (!acc[category]) {
+                acc[category] = []
+            }
+            acc[category].push(post)
+            return acc
+        },
+        {}
+    )
+
+    // Sort categories based on predefined order
+    const sortedCategories = Object.keys(groupedPosts).sort((a, b) => {
+        return categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
+    })
+
+    // Build navigation based on sorted categories
+    const navigation: NavigationCategory[] = sortedCategories.map(
+        (category) => ({
+            title: category,
+            links: groupedPosts[category].map((post) => ({
                 title: post.title,
-                href: "/" + post.path
+                href: `/${post.path}`
             }))
-        }
-    ]
+        })
+    )
 
     return (
         <nav className={clsx("text-base lg:text-sm", className)}>
