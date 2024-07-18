@@ -402,5 +402,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1517",
+    "publishedAt": "2024-07-18T11:38:45Z",
+    "title": "Appending changesets to `Store` after opening causes overwriting",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
