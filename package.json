@@ -10,10 +10,11 @@
         "compile:scripts": "rm -rf scripts && tsc --project tsconfig.scripts.json",
         "fetch-issues": "node scripts/helpers/fetch-issues.js",
         "dev": "next dev",
-        "build": "next build",
+        "build": "npm run submodules:update && next build",
         "start": "next start",
         "lint": "next lint",
-        "update-submodule": "git submodule update --init --recursive"
+        "update-submodule": "git submodule update --init --recursive",
+        "submodules:update": "git submodule update --init && git submodule update --remote"
     },
     "dependencies": {
         "@apollo/client": "^3.10.3",
