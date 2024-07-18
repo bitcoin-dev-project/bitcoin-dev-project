@@ -1,5 +1,4 @@
 "use client"
-
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import clsx from "clsx"
@@ -32,7 +31,7 @@ export function Navigation({
     ]
 
     return (
-        <nav className={clsx("text-base lg:text-sm", className, "w-64 m-10")}>
+        <nav className={clsx("text-base lg:text-sm", className)}>
             <a
                 className="mb-6 flex flex-row items-center space-x-3 hover:no-underline"
                 href="/topics"

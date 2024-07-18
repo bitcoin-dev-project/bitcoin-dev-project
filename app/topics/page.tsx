@@ -9,7 +9,6 @@ import {
 import { allTopics, allAuthors } from "contentlayer/generated"
 import type { Authors, Topic } from "contentlayer/generated"
 import { notFound } from "next/navigation"
-import { Hero } from "@/components/bitcoin-topics/hero/Hero"
 import PostBDP from "@/components/bitcoin-topics/layouts/PostBDP"
 import { components } from "@/components/bitcoin-topics/markdown-ui/MDXComponents"
 import { genPageMetadata } from "../seo"
@@ -76,7 +75,6 @@ export default async function Page() {
 
     return (
         <>
-            <Hero />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
