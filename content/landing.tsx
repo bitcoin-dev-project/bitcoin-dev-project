@@ -1,10 +1,14 @@
 import { BitcoinIcon, EyeOffIcon } from "lucide-react"
 
+import screenshotBitcoinCore from "@/public/images/hero/screenshots/bitcoin-core.png"
+import screenshotLightning from "@/public/images/hero/screenshots/lightning.png"
+
 import screenshotTopics from "@/public/images/hero/screenshots/topics.png"
 import screenshotGoodFirstIssues from "@/public/images/hero/screenshots/good-first-issues.png"
 import screenshotBitcoinSearch from "@/public/images/hero/screenshots/bitcoin_search.png"
 import screenshotBitcoinTLDR from "@/public/images/hero/screenshots/bitcoin_tldr.png"
-import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoin_transcript.png"
+import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoin-transacripts.png"
+import screenshotBitcoinTranscriptReview from "@/public/images/hero/screenshots/bitcoin-transcript-review.png"
 import screenshotChatBTC from "@/public/images/hero/screenshots/chatBTC.png"
 import screenshotSavingSatoshi from "@/public/images/hero/screenshots/saving_satoshi.png"
 
@@ -20,44 +24,44 @@ import githubIcon from "@/public/images/hero/socials/github.svg"
 import xIcon from "@/public/images/hero/socials/x.svg"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 
-import { ImageProps } from "next/image"
+import {
+    ChartPieIcon,
+    CursorArrowRaysIcon,
+    FingerPrintIcon
+} from "@heroicons/react/24/outline"
+import { RectangleGroupIcon } from "@heroicons/react/20/solid"
+
 import Image from "next/image"
+import { IFeature } from "@/types"
+import { CodeBracketIcon } from "@heroicons/react/20/solid"
 
 export const learningPath = [
     {
         badge: "EDUCATION",
-        name: "01 - Study",
-        description: "Learning bitcoin is Hard we make it easy for you.",
+        name: "STUDY",
+        description:
+            "Simplifying bitcoin tech to help you learn as efficiently as possible",
         href: "/bitcoin-core",
-        cta: "Check out topics",
+        cta: "Learn Bitcoin Tech",
         icon: BitcoinIcon
     },
     {
         badge: "CONTRIBUTION",
-        name: "02 - Contribute",
+        name: "CONTRIBUTE",
         description:
-            "Put your knowledge to test. Explore vetted Free Open Source Software (FOSS) projects and find your way in bitcoin open source.",
+            "Get to work on open issues. Put your knowledge to the test. Explore vetted Free Open Source Software (FOSS) projects. And find your way in bitcoin open source.",
         href: "/good-first-issues",
-        cta: "Start Contribute",
+        cta: "Start Contributing",
         icon: BitcoinIcon
     },
 
     {
-        badge: "TOOLS",
-        name: "03 - Build",
+        badge: "EXPLORE",
+        name: "EXPLORE",
         description:
-            "Explore a suite of tools crafted to support your learning, building, and contributions in the bitcoin ecosystem.",
+            "Explore a suite of tools crafted to support you in learning, building, and contributing to the bitcoin ecosystem.",
         href: "/tools",
-        cta: "Check Tools",
-        icon: BitcoinIcon
-    },
-    {
-        badge: "FUNDING",
-        name: "04 - Get Funded",
-        description:
-            "Do the work. Demonstrate capability and earn a grant for full-time bitcoin open source work",
-        href: "/career",
-        cta: "Learn More",
+        cta: "See Our Tools",
         icon: BitcoinIcon
     }
 ]
@@ -89,27 +93,43 @@ export const primaryFeatures = [
 
 export const tools: Array<IFeature> = [
     {
-        name: "Bitcoin Transcript",
-        description:
-            "Peruse archives of transcribed talks, podcasts and lectures.",
+        name: "Good First Issues",
+        description: "Explore vetted Free Open Source Software (FOSS) projects",
         summary: "",
-        image: screenshotBitcoinTranscript,
+        image: screenshotGoodFirstIssues,
+        icon: logoBitcoinTranscript
+    },
+    {
+        name: "Bitcoin Transcript Review",
+        description:
+            "Earn sats by reviewing and editing AI-generated transcripts",
+        summary: "",
+        image: screenshotBitcoinTranscriptReview,
         icon: logoBitcoinTranscript
     },
 
-    {
-        name: "Bitcoin TLDR",
-        description: "Bitcoin-dev and Lightning-dev mailing list summaries",
-        summary: "",
-        image: screenshotBitcoinTLDR,
-        icon: logoBitcoinTLDR
-    },
     {
         name: "Bitcoin Search",
         description: "The technical bitcoin search engine we deserve.",
         summary: "",
         image: screenshotBitcoinSearch,
         icon: logoBitcoinSearch
+    },
+    {
+        name: "Bitcoin TLDR",
+        description:
+            "Making it easier to engage with Delving Bitcoin, and Bitcoin and Lightning-dev mailing lists",
+        summary: "",
+        image: screenshotBitcoinTLDR,
+        icon: logoBitcoinTLDR
+    },
+    {
+        name: "Bitcoin Transcripts",
+        description:
+            "Historical archives of transcribed talks, podcasts and lectures",
+        summary: "",
+        image: screenshotBitcoinTranscript,
+        icon: logoBitcoinTranscript
     },
     {
         name: "ChatBTC",
@@ -129,30 +149,22 @@ export const tools: Array<IFeature> = [
 
 export const values = [
     {
-        name: "BITCOIN ONLY",
-        description: "We are 100% focused on Bitcoin and its ecosystem.",
-        href: "#",
+        name: "FOCUSED ON BITCOIN",
+        description: "100% concentrated on bitcoin and related technologies",
         icon: BitcoinIcon
     },
     {
-        name: "ONBOARD",
+        name: "OPEN SOURCE",
         description:
-            "Encourage more developers to be part of creating a new financial order",
-        href: "#",
+            "Everything we do is open source. We want your reviews and contributions",
+        href: "https://github.com/bitcoin-dev-project/bitcoin-dev-project",
         icon: GitHubLogoIcon
     },
     {
-        name: "COMMUNITY",
+        name: "BITCOIN TECH",
         description:
-            "Bridge the gap between experienced developers and newcomers.",
-        href: "#",
-        icon: UsersIcon
-    },
-    {
-        name: "INNOVATION",
-        description: "Make it easy for anyone with a Bitcoin idea to build it",
-        href: "#",
-        icon: EyeOffIcon
+            "We focus on enabling devs to learn, practice, and build with bitcoin.",
+        icon: CodeBracketIcon
     }
 ]
 
@@ -170,6 +182,7 @@ export const hero = [
         { name: "Bitcoin TLDR", logo: logoBitcoinTLDR }
     ]
 ]
+
 export const navigation = {
     social: [
         {
@@ -213,10 +226,48 @@ export const navigation = {
         }
     ]
 }
-export interface IFeature {
-    name: React.ReactNode
-    summary: string
-    description: string
-    image: ImageProps["src"]
-    icon: ImageProps["src"]
-}
+
+export const products = [
+    {
+        name: "Bitcoin Core Development",
+        description: "Learn how to contribute to the bitcoin core software.",
+        href: "/bitcoin-core",
+        icon: ChartPieIcon,
+        released: true
+    },
+    {
+        name: "Lightning Development",
+        description: "Learn how to contribute to the lightning network.",
+        href: "/lightning-open-source",
+        icon: FingerPrintIcon,
+        released: true
+    },
+    {
+        name: "Bitcoin Topics",
+        description:
+            "Learning bitcoin is hard, but we make it easy for you to get started.",
+        href: "/topics",
+        icon: CursorArrowRaysIcon,
+        released: false
+    }
+]
+
+export const contributions = [
+    {
+        name: "Good First Issue",
+        description: "Find your way in bitcoin open source.",
+        href: "/good-first-issues",
+        icon: CursorArrowRaysIcon,
+        released: true
+    },
+    {
+        name: "FOSS Projects",
+        description: "Learn how to contribute to the bitcoin core software.",
+        href: "/projects",
+        icon: ChartPieIcon,
+        released: true
+    }
+]
+export const callsToAction = [
+    { name: "View all products", href: "/tools", icon: RectangleGroupIcon }
+]

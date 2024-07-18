@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react"
 
-import { Fragment, useState } from "react"
+import { useState } from "react"
 import {
     Dialog,
     DialogPanel,
@@ -13,126 +13,27 @@ import {
     PopoverGroup,
     Transition
 } from "@headlessui/react"
-import {
-    Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
-    XMarkIcon
-} from "@heroicons/react/24/outline"
-import {
-    ChevronDownIcon,
-    PhoneIcon,
-    PlayCircleIcon,
-    RectangleGroupIcon
-} from "@heroicons/react/20/solid"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
+import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import { ThemeToggle } from "./dark-mode-toggle"
-
-function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-    return (
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-            <path
-                d="M5 6h14M5 18h14M5 12h14"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
-    )
-}
-
-function ChevronUpIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-    return (
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-            <path
-                d="M17 14l-5-5-5 5"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
-    )
-}
-
-function MobileNavLink(
-    props: Omit<
-        React.ComponentPropsWithoutRef<typeof PopoverButton<typeof Link>>,
-        "as" | "className"
-    >
-) {
-    return (
-        <PopoverButton
-            as={Link}
-            className="block text-base leading-7 tracking-tight text-gray-700 dark:text-gray-300"
-            {...props}
-        />
-    )
-}
+import { callsToAction, contributions, products } from "@/content/landing"
 
 export function Header() {
-    const products = [
-        {
-            name: "Bitcoin Topics",
-            description:
-                "Learning bitcoin is hard, but we make it easy for you to get started.",
-            href: "/topics",
-            icon: CursorArrowRaysIcon,
-            released: false
-        },
-        {
-            name: "Bitcoin Core Development",
-            description:
-                "Learn how to contribute to the bitcoin core software.",
-            href: "/bitcoin-core",
-            icon: ChartPieIcon,
-            released: true
-        },
-        {
-            name: "Lightning Development",
-            description: "Learn how to contribute to the lightning network.",
-            href: "/lightning-open-source",
-            icon: FingerPrintIcon,
-            released: true
-        }
-    ]
-
-    const contributions = [
-        {
-            name: "Good First Issue",
-            description: "Find your way in bitcoin open source.",
-            href: "/good-first-issues",
-            icon: CursorArrowRaysIcon,
-            released: true
-        },
-        {
-            name: "FOSS Projects",
-            description:
-                "Learn how to contribute to the bitcoin core software.",
-            href: "/projects",
-            icon: ChartPieIcon,
-            released: true
-        }
-    ]
-    const callsToAction = [
-        { name: "View all products", href: "/tools", icon: RectangleGroupIcon }
-    ]
-
     function classNames(...classes: any) {
         return classes.filter(Boolean).join(" ")
     }
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="relative isolate z-10">
+        <header className="isolate sticky top-0 dark:bg-black bg-white z-50">
             <div className="border-b-2 border-orange-500">
                 <nav
-                    className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+                    className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
                     aria-label="Global"
                 >
                     <div className="flex lg:flex-1">
                         <Link href="/">
-                            <h1 className="text-2xl md:text-xl font-bold">
+                            <h1 className="text-xl md:text-xl font-bold">
                                 The&nbsp;
                                 <span className="text-orange-500">Bitcoin</span>
                                 &nbsp;Dev Project
@@ -177,7 +78,7 @@ export function Header() {
                                             >
                                                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange group-hover:bg-white dark:group-hover:bg-black-900">
                                                     <item.icon
-                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-600"
+                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-500"
                                                         aria-hidden="true"
                                                     />
                                                 </div>
@@ -247,7 +148,7 @@ export function Header() {
                                             >
                                                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange group-hover:bg-white dark:group-hover:bg-black-900">
                                                     <item.icon
-                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-600"
+                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-500"
                                                         aria-hidden="true"
                                                     />
                                                 </div>
@@ -309,32 +210,29 @@ export function Header() {
                 </nav>
             </div>
             <Dialog
-                className="lg:hidden"
+                className="lg:hidden z-50"
                 open={mobileMenuOpen}
                 onClose={setMobileMenuOpen}
             >
                 <div className="fixed inset-0 z-10" />
                 <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-800/10">
-                    <Link href="/">
-                        <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between">
+                        <Link href="/">
                             <h1 className="text-2xl md:text-xl font-bold">
                                 The&nbsp;
                                 <span className="text-orange-500">Bitcoin</span>
                                 &nbsp;Dev Project
                             </h1>
-                            <button
-                                type="button"
-                                className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-300"
-                                onClick={() => setMobileMenuOpen(false)}
-                            >
-                                <span className="sr-only">Close menu</span>
-                                <XMarkIcon
-                                    className="h-6 w-6"
-                                    aria-hidden="true"
-                                />
-                            </button>
-                        </div>
-                    </Link>
+                        </Link>
+                        <button
+                            type="button"
+                            className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-300"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            <span className="sr-only">Close menu</span>
+                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                        </button>
+                    </div>
 
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">

@@ -210,15 +210,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/902",
-    "publishedAt": "2024-05-09T13:40:27Z",
-    "title": "IdentifyTransactions message not implemented",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/912",
     "publishedAt": "2024-05-18T13:04:13Z",
     "title": "JDS can't submit block if some transactions are missing",
@@ -236,18 +227,6 @@
     "labels": [
       "bug",
       "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/928",
-    "publishedAt": "2024-05-23T18:28:39Z",
-    "title": "MG CI issues",
-    "labels": [
-      "bug",
-      "test",
-      "message-generator",
-      "ci/cd"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
@@ -326,6 +305,37 @@
     "labels": [
       "bug",
       "translation proxy"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1028",
+    "publishedAt": "2024-07-03T08:57:34Z",
+    "title": "MG CI is too slow",
+    "labels": [
+      "good first issue",
+      "message-generator",
+      "ci/cd"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1053",
+    "publishedAt": "2024-07-16T09:14:31Z",
+    "title": "Pool is not properly checking the SetCustomMiningJob message received",
+    "labels": [
+      "bug",
+      "sv2 pool"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1054",
+    "publishedAt": "2024-07-16T09:22:21Z",
+    "title": "JDS is missing checks on DeclaredMiningJobs",
+    "labels": [
+      "bug",
+      "job-declarator-server"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
