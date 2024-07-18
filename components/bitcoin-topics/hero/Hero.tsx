@@ -6,7 +6,7 @@ import { Highlight } from "prism-react-renderer"
 
 import { Button } from "./Button"
 import { HeroBackground } from "./HeroBackground"
-import blurCyanImage from "@/public/images/topics-hero/blur-cyan.png"
+import blurOrangeImage from "@/public/images/topics-hero/blur-orange.png"
 import blurIndigoImage from "@/public/images/topics-hero/blur-indigo.png"
 
 const codeLanguage = "javascript"
@@ -36,13 +36,13 @@ function TrafficLightsIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 export function Hero() {
     return (
-        <div className="overflow-hidden dark:-mb-32 dark:mt-[-4.75rem] dark:pb-32 dark:pt-[4.75rem]">
+        <div className="overflow-hidden -mb-32 mt-[-4.75rem] pb-32 pt-[4.75rem]">
             <div className="py-16 sm:px-2 lg:relative lg:px-0 lg:py-20">
                 <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
                     <div className="relative z-10 md:text-center lg:text-left">
                         <Image
                             className="absolute bottom-full right-full -mb-56 -mr-72 opacity-50"
-                            src={blurCyanImage}
+                            src={blurOrangeImage}
                             alt=""
                             width={530}
                             height={530}
@@ -71,13 +71,13 @@ export function Hero() {
                         </div>
                     </div>
                     <div className="relative lg:static xl:pl-10">
-                        <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(transparent,white,white)] lg:-bottom-32 lg:-top-32 lg:left-[calc(50%+14rem)] lg:right-0 lg:[mask-image:none] dark:[mask-image:linear-gradient(transparent,white,transparent)] lg:dark:[mask-image:linear-gradient(white,white,transparent)]">
+                        <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(transparent,white,white)] lg:-bottom-32 lg:-top-32 lg:left-[calc(50%+14rem)] lg:right-0  [mask-image:linear-gradient(transparent,white,transparent)] lg:[mask-image:linear-gradient(white,white,transparent)]">
                             <HeroBackground className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-0 lg:translate-x-0 lg:translate-y-[-60%]" />
                         </div>
                         <div className="relative">
                             <Image
                                 className="absolute -right-64 -top-64"
-                                src={blurCyanImage}
+                                src={blurOrangeImage}
                                 alt=""
                                 width={530}
                                 height={530}

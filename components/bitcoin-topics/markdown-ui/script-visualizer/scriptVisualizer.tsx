@@ -112,7 +112,7 @@ export default function ScriptStackVisualizer({
         <div className="flex flex-col items-center justify-center py-3">
             {/* <NavBar></NavBar> */}
 
-            <div className="mx-auto flex w-full max-w-6xl space-x-2 rounded-lg bg-gray-100 p-2 shadow-md">
+            <div className="mx-auto flex w-full max-w-6xl space-x-2 rounded-lg bg-gray-50 p-2 shadow-md">
                 <nav aria-label="Progress" className="w-2/5">
                     {/* Control Buttons */}
                     <div className="mb-2 flex justify-center space-x-1">

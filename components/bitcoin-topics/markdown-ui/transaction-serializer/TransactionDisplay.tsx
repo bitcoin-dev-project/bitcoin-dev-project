@@ -72,7 +72,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
 
     return (
         <div className="container mx-auto py-1">
-            <div className="mb-6 rounded-lg bg-gray-100 p-3">
+            <div className="mb-6 rounded-lg bg-gray-50 p-3">
                 <div className="h-full space-y-4 rounded-lg font-mono text-sm">
                     <div className="text-center">
                         {txTitle && (
@@ -166,7 +166,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
             </div>
 
             {selectedDetail && (
-                <div className="rounded-lg bg-gray-100 p-3">
+                <div className="rounded-lg bg-gray-50 p-3">
                     <BitcoinTransactionViewer detail={selectedDetail} />
                 </div>
             )}
