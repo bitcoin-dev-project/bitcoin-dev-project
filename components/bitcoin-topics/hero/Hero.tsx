@@ -50,10 +50,10 @@ export function Hero() {
                             priority
                         />
                         <div className="relative">
-                            <p className="inline bg-gradient-to-r from-orange-200 via-orange-400 to-orange-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+                            <p className="inline bg-gradient-to-r  from-orange-600 via-orange-400 to-orange-600  dark:from-orange-200 dark:via-orange-400 dark:to-orange-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
                                 Learn About Bitcoin
                             </p>
-                            <p className="mt-3 text-2xl tracking-tight text-slate-400">
+                            <p className="mt-3 text-2xl tracking-tight text-gray-400">
                                 From the basics to advanced concepts, BDP Learn
                                 is your all-in-one Bitcoin education center.
                             </p>
@@ -99,7 +99,7 @@ export function Hero() {
                                 <div className="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-orange-300/0 via-orange-300/70 to-orange-300/0" />
                                 <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-orange-400/0 via-orange-400 to-orange-400/0" />
                                 <div className="pl-4 pt-4">
-                                    <TrafficLightsIcon className="h-2.5 w-auto stroke-slate-500/30" />
+                                    <TrafficLightsIcon className="h-2.5 w-auto stroke-gray-500/30" />
                                     <div className="mt-4 flex space-x-2 text-xs">
                                         {tabs.map((tab) => (
                                             <div
@@ -108,14 +108,14 @@ export function Hero() {
                                                     "flex h-6 rounded-full",
                                                     tab.isActive
                                                         ? "bg-gradient-to-r from-orange-400/30 via-orange-400 to-orange-400/30 p-px font-medium text-orange-300"
-                                                        : "text-slate-500"
+                                                        : "text-gray-500"
                                                 )}
                                             >
                                                 <div
                                                     className={clsx(
                                                         "flex items-center rounded-full px-2.5",
                                                         tab.isActive &&
-                                                            "bg-slate-800"
+                                                            "bg-gray-800"
                                                     )}
                                                 >
                                                     {tab.name}
@@ -126,7 +126,7 @@ export function Hero() {
                                     <div className="mt-6 flex items-start px-1 text-sm text-[#fdba74]">
                                         <div
                                             aria-hidden="true"
-                                            className="select-none border-r border-slate-300/5 pr-4 font-mono text-slate-600"
+                                            className="select-none border-r border-gray-300/5 pr-4 font-mono text-gray-600"
                                         >
                                             {Array.from({
                                                 length: code.split("\n").length

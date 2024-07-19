@@ -21,7 +21,7 @@ export default function ExpandableSection({
 
     return (
         <div className="mx-auto mb-4">
-            <div className="border-l-4 border-[#635FC7] bg-[#F7F8FA] p-6 rounded-lg">
+            <div className="border-l-4 border-[#635FC7] bg-[#F7F8FA] p-6 rounded-lg dark:bg-[#635fc717]">
                 <div>
                     <h4 className="mt-0 mb-0" style={{ display: "flex" }}>
                         <BookIcon className="text-[#635FC7] mr-3" /> {title}
