@@ -15,12 +15,7 @@ interface SandpackComponentProps {
 const SandpackComponent: React.FC<SandpackComponentProps> = ({ files }) => {
     return (
         <div>
-            <br />
-            <br />
-            <br />
             {/* <Sandpack theme={nightOwl} template="nextjs" /> */}
-            <br />
-            <br />
             <br />
             <Sandpack
                 template="nextjs"

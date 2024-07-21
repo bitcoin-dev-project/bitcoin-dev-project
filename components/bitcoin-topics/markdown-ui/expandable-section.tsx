@@ -48,14 +48,7 @@ export default function ExpandableSection({
                     )}
                     <span>{isExpanded ? "Show Less" : "Show More"}</span>
                 </button>
-                {/* {isExpanded && <div className="mt-4">{children}</div>}
                 {isExpanded && <div className="mt-4">{children}</div>}
-                <button
-                    className="text-[#635FC7] underline focus:outline-none"
-                    onClick={handleToggle}
-                >
-                    {isExpanded ? "See Less" : "See More"}
-                </button> */}
             </div>
         </div>
     )

@@ -27,7 +27,7 @@ const svgSteps = [
     {
         name: "Step 2",
         description: "Push <pubkey> onto the stack",
-        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-1.svg",
+        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-2.svg",
         status: "current",
         code: "[Public Key]",
         category: "PubKeyScript"
@@ -35,7 +35,7 @@ const svgSteps = [
     {
         name: "Step 3",
         description: "Pop two items (pub-key & sign.) & verify ECDSA signature",
-        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-1.svg",
+        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-3.svg",
         status: "upcoming",
         code: "<OP_CHECKSIG>",
         category: "PubKeyScript"
