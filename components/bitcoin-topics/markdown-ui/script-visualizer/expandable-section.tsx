@@ -1,5 +1,5 @@
 "use client"
-import { BookIcon } from "lucide-react"
+import { BookIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react"
 import React, { useState } from "react"
 
 interface ExpandableContentProps {
@@ -32,13 +32,26 @@ export default function ExpandableSection({
                         <p>{preview}</p>
                     </div>
                 </div>
+                <button
+                    className="text-black font-bold mt-6 focus:outline-none flex items-center"
+                    onClick={handleToggle}
+                    style={{ textDecoration: "none" }}
+                >
+                    {isExpanded ? (
+                        <ChevronUpIcon className="mr-2 w-5 h-5" />
+                    ) : (
+                        <ChevronDownIcon className="mr-2 w-5 h-5" />
+                    )}
+                    <span>{isExpanded ? "Show Less" : "Show More"}</span>
+                </button>
+                {/* {isExpanded && <div className="mt-4">{children}</div>}
                 {isExpanded && <div className="mt-4">{children}</div>}
                 <button
                     className="text-[#635FC7] underline focus:outline-none"
                     onClick={handleToggle}
                 >
                     {isExpanded ? "See Less" : "See More"}
-                </button>
+                </button> */}
             </div>
         </div>
     )

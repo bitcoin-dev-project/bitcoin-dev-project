@@ -9,19 +9,18 @@ import { HeroBackground } from "./HeroBackground"
 import blurOrangeImage from "@/public/images/topics-hero/blur-orange.png"
 import blurIndigoImage from "@/public/images/topics-hero/blur-indigo.png"
 
-const codeLanguage = "javascript"
-const code = `export default {
-  network: 'bitcoin',
-  generateAddress() {
-    const { payments } = require('bitcoinjs-lib');
-    const address = payments.p2wpkh().address;
-    return address;
-  }
-};`
+const codeLanguage = "c"
+const code = `CAmount GetBlockSubsidy(int nHeight, const Consensus) {
+    // Calculate block subsidy based on height
+    int halvings = nHeight / consensusParams.nSubsidy
+    if (halvings >= 64) return 0; 
+    return 50 * COIN >> halvings;
+}`
 
 const tabs = [
-    { name: "bitcoin-address.js", isActive: true },
-    { name: "package.json", isActive: false }
+    { name: "validation.cpp", isActive: true },
+    { name: "base58.cpp", isActive: false },
+    { name: "bip324.h", isActive: false }
 ]
 
 function TrafficLightsIcon(props: React.ComponentPropsWithoutRef<"svg">) {
@@ -95,7 +94,7 @@ export function Hero() {
                             />
                             <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-orange-300 via-orange-300/70 to-orange-300 opacity-10 blur-lg" />
                             <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-orange-300 via-orange-300/70 to-orange-300 opacity-10" />
-                            <div className="relative rounded-2xl bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur">
+                            <div className="relative rounded-2xl bg-[#fefefd] dark:bg-[#0A101F]/80 ring-1 dark:ring-white/10 ring-orange/10 backdrop-blur">
                                 <div className="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-orange-300/0 via-orange-300/70 to-orange-300/0" />
                                 <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-orange-400/0 via-orange-400 to-orange-400/0" />
                                 <div className="pl-4 pt-4">

@@ -57,7 +57,7 @@ function FeaturesMobile() {
                         isActive
                     />
                     <div className="relative mt-10 pb-10">
-                        <div className="absolute -inset-x-4 bottom-0 top-8 bg-gray-200 dark:bg-gray-800 sm:-inset-x-6" />
+                        <div className="absolute -inset-x-4 bottom-0 top-8 bg-gray-200 dark:bg-gray-900 sm:-inset-x-6" />
                         <div className="relative mx-auto overflow-hidden rounded-xl bg-white dark:bg-black shadow-lg shadow-black-800/5 ring-1 ring-black-500/10">
                             <Image
                                 className="object-center w-full h-full"
@@ -84,8 +84,8 @@ function FeaturesDesktop() {
                                     key={feature.description}
                                     className={`min-w-[260px] relative p-4 ${
                                         featureIndex === selectedIndex
-                                            ? "bg-gray-200 dark:bg-gray-800"
-                                            : "hover:bg-gray-200 dark:hover:bg-gray-800"
+                                            ? "bg-[#f7f7f7] dark:bg-gray-900"
+                                            : "hover:bg-[#f7f7f7] dark:hover:bg-gray-900"
                                     }`}
                                 >
                                     <Feature
@@ -106,7 +106,7 @@ function FeaturesDesktop() {
                             ))}
                         </TabList>
                     </div>
-                    <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-gray-200 dark:bg-gray-800 px-14 py-16 xl:px-16">
+                    <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-[#f7f7f7] dark:bg-gray-900 px-14 py-16 xl:px-16">
                         <div className="-mx-5 flex">
                             {tools.map((feature, featureIndex) => (
                                 <section key={feature.description}>

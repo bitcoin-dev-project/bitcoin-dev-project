@@ -1,5 +1,11 @@
 "use client"
-import { BookIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react"
+import { CheckBadgeIcon } from "@heroicons/react/24/outline"
+import {
+    CheckCheckIcon,
+    CheckCircleIcon,
+    ChevronDownIcon,
+    ChevronUpIcon
+} from "lucide-react"
 import React, { useState } from "react"
 
 interface ExpandableContentProps {
@@ -8,7 +14,7 @@ interface ExpandableContentProps {
     children: React.ReactNode
 }
 
-export default function ExpandableSection({
+export default function CodeSolution({
     title,
     preview,
     children
@@ -20,21 +26,16 @@ export default function ExpandableSection({
     }
 
     return (
-        <div className="mx-auto py-3">
-            <div className="rounded-lg border-l-4 border-[#635FC7] bg-[#F7F8FA] p-6">
+        <div className="mx-auto mb-10 mt-10">
+            <div className="border-l-4 border-[#008a39] bg-[#dfede2] p-6 rounded-lg dark:bg-[#dfede2]">
                 <div>
                     <h4
                         className="mt-0 mb-0 text-lg"
                         style={{ display: "flex" }}
                     >
-                        <BookIcon className="text-[#635FC7] mr-3" />
+                        <CheckCircleIcon className="text-[#008a39] mr-3" />
                         <span className="font-bold text-black">{title}</span>
                     </h4>
-                </div>
-                <div className="flex items-start space-x-4">
-                    <div>
-                        <p>{preview}</p>
-                    </div>
                 </div>
                 <button
                     className="text-black font-bold mt-6 focus:outline-none flex items-center"
@@ -48,14 +49,7 @@ export default function ExpandableSection({
                     )}
                     <span>{isExpanded ? "Show Less" : "Show More"}</span>
                 </button>
-                {/* {isExpanded && <div className="mt-4">{children}</div>}
                 {isExpanded && <div className="mt-4">{children}</div>}
-                <button
-                    className="text-[#635FC7] underline focus:outline-none"
-                    onClick={handleToggle}
-                >
-                    {isExpanded ? "See Less" : "See More"}
-                </button> */}
             </div>
         </div>
     )

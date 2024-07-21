@@ -27,7 +27,7 @@ export default function Mission() {
                         {learningPath.map((step) => (
                             <div
                                 key={step.name}
-                                className="flex flex-col items-center p-6 bg-white dark:bg-black rounded-lg border border-black-300 dark:border-black-800"
+                                className="flex flex-col cursor-pointer items-center p-6 bg-white dark:bg-black rounded-lg border border-black-300 dark:border-black-800 hover:bg-[#f7f7f7] hover:border-orange-500 transition duration-500 fadein_element anim-delay-400ms"
                             >
                                 <dt className="mt-5 text-2xl uppercase font-medium leading-7 text-orange-500 flex flex-col items-center text-center">
                                     {step.name}

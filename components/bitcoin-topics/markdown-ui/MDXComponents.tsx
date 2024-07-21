@@ -9,6 +9,8 @@ import ScriptStackVisualizer from "./script-visualizer/scriptVisualizer"
 import TransactionsDisplay from "./transaction-serializer/TransactionDisplay"
 import CodeEditor from "./CodeEditor"
 import { QuickLink, QuickLinks } from "./QuickLinks"
+import CodeSolution from "./code-solution"
+import SandpackComponent from "./sandpack"
 
 export const components: MDXComponents = {
     Image,
@@ -21,5 +23,7 @@ export const components: MDXComponents = {
     CodeEditor,
     TransactionsDisplay,
     QuickLinks,
-    QuickLink
+    QuickLink,
+    CodeSolution,
+    SandpackComponent
 }
