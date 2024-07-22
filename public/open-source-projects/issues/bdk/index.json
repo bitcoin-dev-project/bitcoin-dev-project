@@ -366,16 +366,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1482",
-    "publishedAt": "2024-06-20T00:16:33Z",
-    "title": "KeychainTxOutIndex API inconsistent with respect to references (should be owned)",
-    "labels": [
-      "good first issue",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1504",
     "publishedAt": "2024-07-08T14:59:11Z",
     "title": "The `url` dependency does not prevent URL homograph attacks",
