@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://github.com/fedimint/fedimint/issues/630",
-    "publishedAt": "2022-09-23T18:29:20Z",
-    "title": "Look into deduplicating dependencies",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/1098",
-    "publishedAt": "2022-12-10T23:19:07Z",
-    "title": "Change Debug/Display on BlindingKey / SpendingKey etc. to output a fingerprint or something",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/1178",
     "publishedAt": "2022-12-30T21:11:20Z",
     "title": "Gateway CLI should be able to spend / reissue ecash",
@@ -69,32 +51,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/1576",
-    "publishedAt": "2023-02-03T19:55:15Z",
-    "title": "Review and avoid use of locks (`Mutex`, `RwLock`)",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/1728",
     "publishedAt": "2023-02-21T16:57:36Z",
     "title": "Tests shouldn't be included in code coverage stats",
     "labels": [
       "good first issue",
       "testing"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/1906",
-    "publishedAt": "2023-03-14T10:17:21Z",
-    "title": "Grpc type reflection : Support jump to definitions",
-    "labels": [
-      "good first issue",
-      "lightning",
-      "dev env"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
