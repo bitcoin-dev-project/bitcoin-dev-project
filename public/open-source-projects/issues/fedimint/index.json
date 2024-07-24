@@ -98,15 +98,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/2543",
-    "publishedAt": "2023-05-16T22:22:08Z",
-    "title": "E-cash note was replaced in DB, this should never happen!",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/2836",
     "publishedAt": "2023-07-25T14:13:08Z",
     "title": "Improve tutorial in our docs",
@@ -244,35 +235,6 @@
     "labels": [
       "help wanted",
       "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4130",
-    "publishedAt": "2024-01-25T03:53:18Z",
-    "title": "Client becomes slow if one guardian is down",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4131",
-    "publishedAt": "2024-01-25T04:03:25Z",
-    "title": "`fedimintd` fails to catch up with peers",
-    "labels": [
-      "bug",
-      "alephbft"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4265",
-    "publishedAt": "2024-02-07T13:23:40Z",
-    "title": "Investtigate why re-joining a federation every time the client is started works",
-    "labels": [
-      "bug",
-      "client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
