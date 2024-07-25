@@ -11,10 +11,9 @@ export default function Newsletter() {
                             Subscribe to the TLDR newsletter.
                         </h2>
                         <p className="mt-4 text-lg leading-8 text-black-500 dark:text-black-500">
-                            Keep up to date with the latest developments in the
-                            Bitcoin space. We summarize every post on
-                            bitcoin-dev, lightning-dev and delving bitcoin
-                            mailing lists.
+                            We deliver a summary of every post on bitcoin-dev,
+                            lightning-dev and delving bitcoin mailing lists to
+                            your inbox every Monday.
                         </p>
                         <MailchimpSubscribeForm />
                     </div>

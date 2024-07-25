@@ -1,5 +1,4 @@
 import { values } from "@/content/landing"
-import Link from "next/link"
 
 export default function WhoAreWe() {
     return (
@@ -13,11 +12,11 @@ export default function WhoAreWe() {
                         About The Bitcoin Dev Project
                     </p>
                     <p className="mt-6 text-lg leading-8 text-black-600 dark:text-black-400">
-                        We provide devs with resources and support for their
-                        bitcoin open source development journey. From just
-                        becoming aware of bitcoin tech to scaling the mountain
-                        of reviews, commits, and product building in the
-                        ecosystem.
+                        We support developers throughout their bitcoin open
+                        source development journey, providing the resources and
+                        guidance they need. From that first encounter with
+                        bitcoin tech to finding your fit within the ecosystem,
+                        we are here to inspire, guide, and support you
                     </p>
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
