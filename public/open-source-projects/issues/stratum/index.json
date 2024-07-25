@@ -159,15 +159,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/484",
-    "publishedAt": "2023-03-09T17:00:21Z",
-    "title": "mining-proxy needs graceful death instead of panic",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/677",
     "publishedAt": "2023-11-21T17:29:11Z",
     "title": "Feature flag to write logs to files instead of just stdout",
