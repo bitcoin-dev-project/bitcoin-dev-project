@@ -20,16 +20,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/1336",
-    "publishedAt": "2023-01-15T20:59:21Z",
-    "title": "`__api_endpoint` can't handle params arity",
-    "labels": [
-      "good first issue",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/1344",
     "publishedAt": "2023-01-16T17:35:13Z",
     "title": "1-click deployments",
@@ -61,30 +51,11 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/2014",
-    "publishedAt": "2023-03-23T18:23:20Z",
-    "title": "Allow bitcoind configuration change in Admin UI",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/2190",
     "publishedAt": "2023-04-11T14:45:18Z",
     "title": "notification endpoints cleanup",
     "labels": [
       "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/2247",
-    "publishedAt": "2023-04-18T09:33:53Z",
-    "title": "Deduplicate database transaction raw-to-typed functions",
-    "labels": [
-      "good first issue",
-      "db"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
@@ -141,16 +112,6 @@
     "title": "On start print consensus versions",
     "labels": [
       "good first issue",
-      "consensus"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/3500",
-    "publishedAt": "2023-11-01T22:33:54Z",
-    "title": "Issues on client/server while paying on AlephBFT",
-    "labels": [
-      "bug",
       "consensus"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
