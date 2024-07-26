@@ -201,17 +201,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/912",
-    "publishedAt": "2024-05-18T13:04:13Z",
-    "title": "JDS can't submit block if some transactions are missing",
-    "labels": [
-      "bug",
-      "job declarator",
-      "job-declarator-server"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/920",
     "publishedAt": "2024-05-21T12:24:49Z",
     "title": "JDC does not receive shares anymore from Translator if two new blocks are found in few seconds",
