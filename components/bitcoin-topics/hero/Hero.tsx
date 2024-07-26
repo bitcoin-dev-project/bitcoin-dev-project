@@ -5,7 +5,6 @@ import clsx from "clsx"
 import { Highlight } from "prism-react-renderer"
 
 import { Button } from "./Button"
-import { HeroBackground } from "./HeroBackground"
 import blurOrangeImage from "@/public/images/topics-hero/blur-orange.png"
 import blurIndigoImage from "@/public/images/topics-hero/blur-indigo.png"
 
@@ -22,6 +21,8 @@ const tabs = [
     { name: "base58.cpp", isActive: false },
     { name: "bip324.h", isActive: false }
 ]
+
+import { HeroBackground } from "@/public/images/topics-hero/HeroBackground"
 
 function TrafficLightsIcon(props: React.ComponentPropsWithoutRef<"svg">) {
     return (

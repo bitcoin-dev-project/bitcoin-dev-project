@@ -35,7 +35,7 @@ export function Header() {
                                 The
                                 <span className="text-orange-500">
                                     {" "}
-                                    Bitcoin
+                                    Bitcoin{" "}
                                 </span>
                                 Dev Project
                             </h1>
