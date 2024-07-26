@@ -38,32 +38,30 @@ export function Navigation({
 }) {
     let pathname = usePathname()
     const posts = allCoreContent(sortPosts(allTopics))
-    // Group posts by category
-    const groupedPosts: { [key: string]: Topic[] } = posts.reduce(
-        (acc: { [key: string]: Topic[] }, post: any) => {
+
+    const groupedPosts: { [key: string]: NavigationLink[] } = posts.reduce(
+        (acc: { [key: string]: NavigationLink[] }, post: any) => {
             const category = post.category || "Others"
             if (!acc[category]) {
                 acc[category] = []
             }
-            acc[category].push(post)
+            acc[category].push({
+                title: post.title,
+                href: `/${post.path}`
+            })
             return acc
         },
         {}
     )
 
-    // Sort categories based on predefined order
     const sortedCategories = Object.keys(groupedPosts).sort((a, b) => {
         return categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
     })
 
-    // Build navigation based on sorted categories
     const navigation: NavigationCategory[] = sortedCategories.map(
         (category) => ({
             title: category,
-            links: groupedPosts[category].map((post) => ({
-                title: post.title,
-                href: `/${post.path}`
-            }))
+            links: groupedPosts[category]
         })
     )
 
