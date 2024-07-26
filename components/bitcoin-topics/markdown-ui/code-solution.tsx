@@ -29,18 +29,14 @@ export default function CodeSolution({
         <div className="mx-auto mb-10 mt-10">
             <div className="border-l-4 border-[#008a39] bg-[#dfede2] p-6 rounded-lg dark:bg-[#dfede2]">
                 <div>
-                    <h4
-                        className="mt-0 mb-0 text-lg"
-                        style={{ display: "flex" }}
-                    >
+                    <h4 className="mt-0 mb-0 text-lg flex">
                         <CheckCircleIcon className="text-[#008a39] mr-3" />
                         <span className="font-bold text-black">{title}</span>
                     </h4>
                 </div>
                 <button
-                    className="text-black font-bold mt-6 focus:outline-none flex items-center"
+                    className="text-black font-bold mt-6 focus:outline-none flex items-center no-underline"
                     onClick={handleToggle}
-                    style={{ textDecoration: "none" }}
                 >
                     {isExpanded ? (
                         <ChevronUpIcon className="mr-2 w-5 h-5" />

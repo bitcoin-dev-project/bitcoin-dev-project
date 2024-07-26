@@ -17,11 +17,9 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import { ThemeToggle } from "./dark-mode-toggle"
 import { callsToAction, contributions, products } from "@/content/landing"
+import { classNames } from "@/utils/content-utils"
 
 export function Header() {
-    function classNames(...classes: any) {
-        return classes.filter(Boolean).join(" ")
-    }
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
@@ -34,9 +32,12 @@ export function Header() {
                     <div className="flex lg:flex-1">
                         <Link href="/">
                             <h1 className="text-xl md:text-xl font-bold">
-                                The&nbsp;
-                                <span className="text-orange-500">Bitcoin</span>
-                                &nbsp;Dev Project
+                                The
+                                <span className="text-orange-500">
+                                    {" "}
+                                    Bitcoin
+                                </span>
+                                Dev Project
                             </h1>
                         </Link>
                     </div>
@@ -219,9 +220,12 @@ export function Header() {
                     <div className="flex items-center justify-between">
                         <Link href="/">
                             <h1 className="text-2xl md:text-xl font-bold">
-                                The&nbsp;
-                                <span className="text-orange-500">Bitcoin</span>
-                                &nbsp;Dev Project
+                                The
+                                <span className="text-orange-500">
+                                    {" "}
+                                    Bitcoin{" "}
+                                </span>
+                                Dev Project
                             </h1>
                         </Link>
                         <button

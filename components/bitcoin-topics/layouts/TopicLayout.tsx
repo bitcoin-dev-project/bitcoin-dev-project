@@ -25,7 +25,7 @@ interface LayoutProps {
     children: ReactNode
 }
 
-export default function PostLayout({
+export default function TopicLayout({
     content,
     authorDetails,
     next,

@@ -14,31 +14,31 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 function PageLink({
     title,
     href,
-    dir = "next",
+    direction = "next",
     ...props
-}: Omit<React.ComponentPropsWithoutRef<"div">, "dir" | "title"> & {
+}: Omit<React.ComponentPropsWithoutRef<"div">, "direction" | "title"> & {
     title: string
     href: string
-    dir?: "previous" | "next"
+    direction?: "previous" | "next"
 }) {
     return (
         <div {...props}>
             <dt className="font-display text-sm font-medium text-gray-900 dark:text-white">
-                {dir === "next" ? "Next" : "Previous"}
+                {direction === "next" ? "Next" : "Previous"}
             </dt>
             <dd className="mt-1">
                 <Link
                     href={href}
                     className={clsx(
                         "flex items-center gap-x-1 text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300",
-                        dir === "previous" && "flex-row-reverse"
+                        direction === "previous" && "flex-row-reverse"
                     )}
                 >
                     {title}
                     <ArrowIcon
                         className={clsx(
                             "h-4 w-4 flex-none fill-current",
-                            dir === "previous" && "-scale-x-100"
+                            direction === "previous" && "-scale-x-100"
                         )}
                     />
                 </Link>
@@ -47,7 +47,13 @@ function PageLink({
     )
 }
 
-export function PrevNextLinks({ next, prev }: any) {
+export function PrevNextLinks({
+    next,
+    prev
+}: {
+    next?: { path: string; title: string }
+    prev?: { path: string; title: string }
+}) {
     if (!next && !prev) {
         return null
     }
@@ -56,7 +62,7 @@ export function PrevNextLinks({ next, prev }: any) {
         <dl className="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800">
             {next && next.path && (
                 <PageLink
-                    dir="previous"
+                    direction="previous"
                     title={next.title}
                     href={`/${next.path}`}
                 />

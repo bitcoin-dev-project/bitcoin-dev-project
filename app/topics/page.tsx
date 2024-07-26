@@ -10,15 +10,15 @@ import {
 import { allTopics, allAuthors } from "contentlayer/generated"
 import type { Authors, Topic } from "contentlayer/generated"
 import { notFound } from "next/navigation"
-import PostBDP from "@/components/bitcoin-topics/layouts/PostBDP"
+import TopicLayout from "@/components/bitcoin-topics/layouts/TopicLayout"
 import { components } from "@/components/bitcoin-topics/markdown-ui/MDXComponents"
 import { genPageMetadata } from "../seo"
+import { getAuthorDetails } from "@/utils/content-utils"
 
 export const metadata = genPageMetadata({
     title: "Bitcoin Topics",
     keywords:
         "bitcoin, bitcoin topics, bitcoin privacy, bitcoin grant, open source, tools, bitcoin resources, bitcoin tools, career, good first issues, bitcoin development, bitcoin topics",
-
     description:
         "Simplifying bitcoin tech to help you learn as efficiently as possible",
     openGraph: {
@@ -59,10 +59,7 @@ export default async function Page() {
     const next = sortedCoreContents[postIndex - 1]
     const post = allTopics.find((p) => p.slug === slug) as Topic
     const authorList = post?.authors || ["default"]
-    const authorDetails = authorList.map((author) => {
-        const authorResults = allAuthors.find((p) => p.slug === author)
-        return coreContent(authorResults as Authors)
-    })
+    const authorDetails = getAuthorDetails(authorList)
     const mainContent = coreContent(post)
     const jsonLd = post.structuredData
     jsonLd["author"] = authorDetails.map((author) => {
@@ -72,15 +69,13 @@ export default async function Page() {
         }
     })
 
-    const Layout = PostBDP
-
     return (
         <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <Layout
+            <TopicLayout
                 content={mainContent}
                 authorDetails={authorDetails}
                 next={next}
@@ -91,7 +86,7 @@ export default async function Page() {
                     components={components}
                     toc={post.toc}
                 />
-            </Layout>
+            </TopicLayout>
         </>
     )
 }

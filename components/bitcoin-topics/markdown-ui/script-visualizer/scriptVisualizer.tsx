@@ -88,9 +88,7 @@ export default function ScriptStackVisualizer({
             return newIndex
         })
     }
-    function classNames(...classes: any) {
-        return classes.filter(Boolean).join(" ")
-    }
+
     const getStatusIcon = (index: any) => {
         if (index < svgIndex) {
             return (
@@ -110,8 +108,6 @@ export default function ScriptStackVisualizer({
 
     return (
         <div className="flex flex-col items-center justify-center py-3">
-            {/* <NavBar></NavBar> */}
-
             <div className="mx-auto flex w-full max-w-6xl space-x-2 rounded-lg bg-gray-50 dark:bg-gray-900 p-2 shadow-md">
                 <nav aria-label="Progress" className="w-2/5">
                     {/* Control Buttons */}
@@ -172,10 +168,6 @@ export default function ScriptStackVisualizer({
                             </li>
                         ))}
                     </ol>
-
-                    {/* <div>
-          <CodeWindow activeStep={svgIndex} svgSteps={svgSteps} onCodeClick={handleSvgSelect} />
-        </div> */}
                 </nav>
 
                 <object

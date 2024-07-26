@@ -10,7 +10,6 @@ import TransactionsDisplay from "./transaction-serializer/TransactionDisplay"
 import CodeEditor from "./CodeEditor"
 import { QuickLink, QuickLinks } from "./QuickLinks"
 import CodeSolution from "./code-solution"
-import SandpackComponent from "./sandpack"
 
 export const components: MDXComponents = {
     Image,
@@ -24,6 +23,5 @@ export const components: MDXComponents = {
     TransactionsDisplay,
     QuickLinks,
     QuickLink,
-    CodeSolution,
-    SandpackComponent
+    CodeSolution
 }
