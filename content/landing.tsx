@@ -19,11 +19,13 @@ import discordIcon from "@/public/images/hero/socials/discord.svg"
 import githubIcon from "@/public/images/hero/socials/github.svg"
 import xIcon from "@/public/images/hero/socials/x.svg"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
-
+import { Bitcoin } from "lucide-react"
 import {
+    BoltIcon,
     ChartPieIcon,
     CursorArrowRaysIcon,
-    FingerPrintIcon
+    FingerPrintIcon,
+    ListBulletIcon
 } from "@heroicons/react/24/outline"
 import { RectangleGroupIcon } from "@heroicons/react/20/solid"
 
@@ -228,14 +230,14 @@ export const products = [
         name: "Bitcoin Core Development",
         description: "Learn how to contribute to the bitcoin core software.",
         href: "/bitcoin-core",
-        icon: ChartPieIcon,
+        icon: Bitcoin,
         released: true
     },
     {
         name: "Lightning Development",
         description: "Learn how to contribute to the lightning network.",
         href: "/lightning-open-source",
-        icon: FingerPrintIcon,
+        icon: BoltIcon,
         released: true
     },
     {
@@ -243,7 +245,7 @@ export const products = [
         description:
             "Learning bitcoin is hard, but we make it easy for you to get started.",
         href: "/topics",
-        icon: CursorArrowRaysIcon,
+        icon: ListBulletIcon,
         released: false
     }
 ]
