@@ -3,26 +3,26 @@
 import Link from "next/link"
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react"
 
-import { useState } from "react"
+import React from "react"
 import {
     Dialog,
     DialogPanel,
     Disclosure,
     DisclosureButton,
     DisclosurePanel,
-    PopoverGroup,
-    Transition
+    PopoverGroup
 } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import { ThemeToggle } from "./dark-mode-toggle"
 import { callsToAction, contributions, products } from "@/content/landing"
+import useOnclickOut from "@/hooks/useOnclickOut"
 
 export function Header() {
     function classNames(...classes: any) {
         return classes.filter(Boolean).join(" ")
     }
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
 
     return (
         <header className="isolate sticky top-0 dark:bg-black bg-white z-50">
@@ -52,140 +52,16 @@ export function Header() {
                         </button>
                     </div>
                     <PopoverGroup className="hidden lg:flex lg:gap-x-12 items-center">
-                        <Popover>
-                            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100">
-                                Learn
-                                <ChevronDownIcon
-                                    className="h-5 w-5 flex-none text-gray-400 dark:text-gray-600"
-                                    aria-hidden="true"
-                                />
-                            </PopoverButton>
-
-                            <Transition
-                                enter="transition ease-out duration-200"
-                                enterFrom="opacity-0 -translate-y-1"
-                                enterTo="opacity-100 translate-y-0"
-                                leave="transition ease-in duration-150"
-                                leaveFrom="opacity-100 translate-y-0"
-                                leaveTo="opacity-0 -translate-y-1"
-                            >
-                                <PopoverPanel className="absolute inset-x-0 top-0 -z-10 bg-gray-50 dark:bg-black-800 pt-14 shadow-lg ring-1 ring-gray-800/5">
-                                    <div className="mx-auto grid max-w-7xl grid-cols-3 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
-                                        {products.map((item) => (
-                                            <div
-                                                key={item.name}
-                                                className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-100 dark:hover:bg-black-900 "
-                                            >
-                                                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange group-hover:bg-white dark:group-hover:bg-black-900">
-                                                    <item.icon
-                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-500"
-                                                        aria-hidden="true"
-                                                    />
-                                                </div>
-                                                <a href={item.href}>
-                                                    <div className="mt-6 block font-semibold text-gray-800 dark:text-gray-100 relative">
-                                                        {item.name}
-                                                        {!item.released && (
-                                                            <span className="ml-2 inline-flex items-center rounded-full bg-yellow-50 px-2 py-1 text-xs font-normal text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
-                                                                Coming Soon
-                                                            </span>
-                                                        )}
-                                                        <span className="absolute inset-0" />
-                                                    </div>
-                                                    <p className="mt-1 text-gray-600 dark:text-gray-400">
-                                                        {item.description}
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="bg-gray-100 dark:bg-gray-700">
-                                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                                            <div className="grid grid-cols-1 divide-x divide-gray-800/5 border-x border-gray-800/5">
-                                                {callsToAction.map((item) => (
-                                                    <a
-                                                        key={item.name}
-                                                        href={item.href}
-                                                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 "
-                                                    >
-                                                        <item.icon
-                                                            className="h-5 w-5 flex-none text-gray-400 dark:text-gray-600"
-                                                            aria-hidden="true"
-                                                        />
-                                                        {item.name}
-                                                    </a>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </PopoverPanel>
-                            </Transition>
-                        </Popover>
-
-                        <Popover>
-                            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100">
-                                Contribute
-                                <ChevronDownIcon
-                                    className="h-5 w-5 flex-none text-gray-400 dark:text-gray-600"
-                                    aria-hidden="true"
-                                />
-                            </PopoverButton>
-
-                            <Transition
-                                enter="transition ease-out duration-200"
-                                enterFrom="opacity-0 -translate-y-1"
-                                enterTo="opacity-100 translate-y-0"
-                                leave="transition ease-in duration-150"
-                                leaveFrom="opacity-100 translate-y-0"
-                                leaveTo="opacity-0 -translate-y-1"
-                            >
-                                <PopoverPanel className="absolute inset-x-0 top-0 -z-10 bg-gray-50 dark:bg-black-800 pt-14 shadow-lg ring-1 ring-gray-800/5">
-                                    <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
-                                        {contributions.map((item) => (
-                                            <div
-                                                key={item.name}
-                                                className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-100 dark:hover:bg-black-900 "
-                                            >
-                                                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange group-hover:bg-white dark:group-hover:bg-black-900">
-                                                    <item.icon
-                                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-500"
-                                                        aria-hidden="true"
-                                                    />
-                                                </div>
-                                                <a href={item.href}>
-                                                    <div className="mt-6 block font-semibold text-gray-800 dark:text-gray-100">
-                                                        {item.name}
-                                                        <span className="absolute inset-0" />
-                                                    </div>
-                                                    <p className="mt-1 text-gray-600 dark:text-gray-400">
-                                                        {item.description}
-                                                    </p>
-                                                </a>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="bg-gray-100 dark:bg-gray-700">
-                                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                                            <div className="grid grid-cols-1 divide-x divide-gray-800/5 border-x border-gray-800/5">
-                                                {callsToAction.map((item) => (
-                                                    <a
-                                                        key={item.name}
-                                                        href={item.href}
-                                                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 "
-                                                    >
-                                                        <item.icon
-                                                            className="h-5 w-5 flex-none text-gray-400 dark:text-gray-600"
-                                                            aria-hidden="true"
-                                                        />
-                                                        {item.name}
-                                                    </a>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </PopoverPanel>
-                            </Transition>
-                        </Popover>
+                        <PopoverNavigation
+                            navItem="Learn"
+                            navItemList={products}
+                            navType="LEARN"
+                        />
+                        <PopoverNavigation
+                            navItem="Contribute"
+                            navItemList={contributions}
+                            navType="CONTRIBUTE"
+                        />
                         <a
                             href="/career"
                             className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100"
@@ -330,5 +206,109 @@ export function Header() {
                 </DialogPanel>
             </Dialog>
         </header>
+    )
+}
+
+function PopoverNavigation({
+    navItem,
+    navItemList,
+    navType
+}: {
+    navItem: string
+    navItemList: Array<{
+        name: string
+        description: string
+        href: string
+        icon: React.ForwardRefExoticComponent<
+            Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
+                title?: string | undefined
+                titleId?: string | undefined
+            } & React.RefAttributes<SVGSVGElement>
+        >
+        released: boolean
+    }>
+    navType: "LEARN" | "CONTRIBUTE"
+}) {
+    const { isOpen, setOpen, wrapperRef, contentRef } = useOnclickOut()
+
+    return (
+        <Popover>
+            <PopoverButton
+                as="button"
+                onClick={() => setOpen(!isOpen)}
+                className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100"
+                ref={contentRef}
+            >
+                {navItem}
+                <ChevronDownIcon
+                    className="h-5 w-5 flex-none text-gray-400 dark:text-gray-600"
+                    aria-hidden="true"
+                />
+            </PopoverButton>
+            {isOpen && (
+                <PopoverPanel
+                    className="absolute inset-x-0 top-0 -z-10 bg-gray-50 dark:bg-black-800 pt-14 shadow-lg ring-1 ring-gray-800/5"
+                    ref={wrapperRef}
+                    static
+                >
+                    <div
+                        className={`mx-auto grid max-w-7xl ${navType === "CONTRIBUTE" ? "grid-cols-2" : "grid-cols-3"} gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8`}
+                    >
+                        {navItemList.map((item) => (
+                            <div
+                                key={item.name}
+                                className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-100 dark:hover:bg-black-900 flex gap-4"
+                            >
+                                <div className="flex h-11 w-11 min-h-11 min-w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange group-hover:bg-white dark:group-hover:bg-black-900">
+                                    <item.icon
+                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-500"
+                                        aria-hidden="true"
+                                    />
+                                </div>
+
+                                <a href={item.href}>
+                                    <div className="block font-semibold text-gray-800 dark:text-gray-100 relative">
+                                        {item.name}
+
+                                        {navType === "LEARN" ? (
+                                            <>
+                                                {!item.released && (
+                                                    <span className="ml-2 inline-flex items-center rounded-full bg-yellow-50 px-2 py-1 text-xs font-normal text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                                                        Coming Soon
+                                                    </span>
+                                                )}
+                                            </>
+                                        ) : null}
+                                        <span className="absolute inset-0" />
+                                    </div>
+                                    <p className="mt-1 text-gray-600 dark:text-gray-400">
+                                        {item.description}
+                                    </p>
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="bg-gray-100 dark:bg-gray-700">
+                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                            <div className="grid grid-cols-1 divide-x divide-gray-800/5 border-x border-gray-800/5">
+                                {callsToAction.map((item) => (
+                                    <a
+                                        key={item.name}
+                                        href={item.href}
+                                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 "
+                                    >
+                                        <item.icon
+                                            className="h-5 w-5 flex-none text-gray-400 dark:text-gray-600"
+                                            aria-hidden="true"
+                                        />
+                                        {item.name}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </PopoverPanel>
+            )}
+        </Popover>
     )
 }
