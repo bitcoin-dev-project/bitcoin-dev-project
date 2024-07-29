@@ -106,7 +106,7 @@ function FeaturesDesktop() {
                             ))}
                         </TabList>
                     </div>
-                    <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-[#f7f7f7] dark:bg-gray-900 px-14 py-16 xl:px-16">
+                    <TabPanels className="relative mt-20 overflow-hidden rounded-4xl bg-[#F7F7F7] dark:bg-gray-800 px-14 py-16 xl:px-16">
                         <div className="-mx-5 flex">
                             {tools.map((feature, featureIndex) => (
                                 <section key={feature.description}>

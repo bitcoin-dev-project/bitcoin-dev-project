@@ -1,7 +1,4 @@
-import { BitcoinIcon, EyeOffIcon } from "lucide-react"
-
-import screenshotBitcoinCore from "@/public/images/hero/screenshots/bitcoin-core.png"
-import screenshotLightning from "@/public/images/hero/screenshots/lightning.png"
+import { BitcoinIcon } from "lucide-react"
 
 import screenshotTopics from "@/public/images/hero/screenshots/topics.png"
 import screenshotGoodFirstIssues from "@/public/images/hero/screenshots/good-first-issues.png"
@@ -18,16 +15,17 @@ import logoBitcoinTranscript from "@/public/images/tools/bitcoin-transcripts.jpg
 import logoTrRev from "@/public/images/tools/bitcoin-transcripts-review.jpg"
 import logoChatBTC from "@/public/images/tools/chat-btc.jpg"
 import logoSavingSatoshi from "@/public/images/tools/saving-satoshi.jpg"
-import { UsersIcon } from "@heroicons/react/24/outline"
 import discordIcon from "@/public/images/hero/socials/discord.svg"
 import githubIcon from "@/public/images/hero/socials/github.svg"
 import xIcon from "@/public/images/hero/socials/x.svg"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
-
+import { Bitcoin } from "lucide-react"
 import {
+    BoltIcon,
     ChartPieIcon,
     CursorArrowRaysIcon,
-    FingerPrintIcon
+    FingerPrintIcon,
+    ListBulletIcon
 } from "@heroicons/react/24/outline"
 import { RectangleGroupIcon } from "@heroicons/react/20/solid"
 
@@ -100,7 +98,14 @@ export const tools: Array<IFeature> = [
         icon: logoBitcoinTranscript
     },
     {
-        name: "Bitcoin Transcript Review",
+        name: "Saving Satoshi",
+        description: "Save bitcoin by coding through a sci-fi epic",
+        summary: "",
+        image: screenshotSavingSatoshi,
+        icon: logoSavingSatoshi
+    },
+    {
+        name: "Bitcoin Transcripts Review",
         description:
             "Earn sats by reviewing and editing AI-generated transcripts",
         summary: "",
@@ -137,13 +142,6 @@ export const tools: Array<IFeature> = [
         summary: "",
         image: screenshotChatBTC,
         icon: logoChatBTC
-    },
-    {
-        name: "Saving Satoshi",
-        description: "Game designed to inspire you fall in love with bitcoin",
-        summary: "",
-        image: screenshotSavingSatoshi,
-        icon: logoSavingSatoshi
     }
 ]
 
@@ -232,14 +230,14 @@ export const products = [
         name: "Bitcoin Core Development",
         description: "Learn how to contribute to the bitcoin core software.",
         href: "/bitcoin-core",
-        icon: ChartPieIcon,
+        icon: Bitcoin,
         released: true
     },
     {
         name: "Lightning Development",
         description: "Learn how to contribute to the lightning network.",
         href: "/lightning-open-source",
-        icon: FingerPrintIcon,
+        icon: BoltIcon,
         released: true
     },
     {
@@ -247,7 +245,7 @@ export const products = [
         description:
             "Learning bitcoin is hard, but we make it easy for you to get started.",
         href: "/topics",
-        icon: CursorArrowRaysIcon,
+        icon: ListBulletIcon,
         released: false
     }
 ]

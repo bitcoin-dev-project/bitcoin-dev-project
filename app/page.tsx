@@ -1,5 +1,4 @@
 import { Hero } from "@/components/hero/Hero"
-import { PrimaryFeatures } from "@/components/hero/PrimaryFeatures"
 import { SecondaryFeatures } from "@/components/hero/SecondaryFeatures"
 
 import CTA from "@/components/hero/CTA"

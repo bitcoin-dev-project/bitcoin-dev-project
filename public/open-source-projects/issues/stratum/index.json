@@ -159,15 +159,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/484",
-    "publishedAt": "2023-03-09T17:00:21Z",
-    "title": "mining-proxy needs graceful death instead of panic",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/677",
     "publishedAt": "2023-11-21T17:29:11Z",
     "title": "Feature flag to write logs to files instead of just stdout",
@@ -206,17 +197,6 @@
       "important",
       "sv2 pool",
       "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/912",
-    "publishedAt": "2024-05-18T13:04:13Z",
-    "title": "JDS can't submit block if some transactions are missing",
-    "labels": [
-      "bug",
-      "job declarator",
-      "job-declarator-server"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
@@ -336,6 +316,16 @@
     "labels": [
       "bug",
       "job-declarator-server"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1073",
+    "publishedAt": "2024-07-26T15:53:20Z",
+    "title": " Add fmt an clippy as git hook for commit",
+    "labels": [
+      "good first issue",
+      "backlog"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }

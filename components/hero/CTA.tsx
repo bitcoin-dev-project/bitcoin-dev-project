@@ -7,7 +7,7 @@ export default function CTA() {
                         Learn, Explore, Contribute{" "}
                         <span className="font-light">today.</span>
                     </h2>
-                    <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+                    <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-400 dark:text-gray-200">
                         While bitcoin is designed to be resilient, we do need
                         you. Bitcoin needs all the talent and energy it can
                         gather to solve some of the most difficult problems of

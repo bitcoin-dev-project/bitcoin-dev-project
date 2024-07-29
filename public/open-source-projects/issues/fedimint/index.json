@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://github.com/fedimint/fedimint/issues/630",
-    "publishedAt": "2022-09-23T18:29:20Z",
-    "title": "Look into deduplicating dependencies",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/1098",
-    "publishedAt": "2022-12-10T23:19:07Z",
-    "title": "Change Debug/Display on BlindingKey / SpendingKey etc. to output a fingerprint or something",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/1178",
     "publishedAt": "2022-12-30T21:11:20Z",
     "title": "Gateway CLI should be able to spend / reissue ecash",
@@ -34,16 +16,6 @@
     "labels": [
       "good first issue",
       "lightning"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/1336",
-    "publishedAt": "2023-01-15T20:59:21Z",
-    "title": "`__api_endpoint` can't handle params arity",
-    "labels": [
-      "good first issue",
-      "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
@@ -69,41 +41,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/1576",
-    "publishedAt": "2023-02-03T19:55:15Z",
-    "title": "Review and avoid use of locks (`Mutex`, `RwLock`)",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/1728",
     "publishedAt": "2023-02-21T16:57:36Z",
     "title": "Tests shouldn't be included in code coverage stats",
     "labels": [
       "good first issue",
       "testing"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/1906",
-    "publishedAt": "2023-03-14T10:17:21Z",
-    "title": "Grpc type reflection : Support jump to definitions",
-    "labels": [
-      "good first issue",
-      "lightning",
-      "dev env"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/2014",
-    "publishedAt": "2023-03-23T18:23:20Z",
-    "title": "Allow bitcoind configuration change in Admin UI",
-    "labels": [
-      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
@@ -117,30 +60,11 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/2247",
-    "publishedAt": "2023-04-18T09:33:53Z",
-    "title": "Deduplicate database transaction raw-to-typed functions",
-    "labels": [
-      "good first issue",
-      "db"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/2257",
     "publishedAt": "2023-04-19T21:00:18Z",
     "title": "Convert (most) logging statements to use pre-defined logging targets",
     "labels": [
       "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/2543",
-    "publishedAt": "2023-05-16T22:22:08Z",
-    "title": "E-cash note was replaced in DB, this should never happen!",
-    "labels": [
-      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
@@ -188,16 +112,6 @@
     "title": "On start print consensus versions",
     "labels": [
       "good first issue",
-      "consensus"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/3500",
-    "publishedAt": "2023-11-01T22:33:54Z",
-    "title": "Issues on client/server while paying on AlephBFT",
-    "labels": [
-      "bug",
       "consensus"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
@@ -282,35 +196,6 @@
     "labels": [
       "help wanted",
       "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4130",
-    "publishedAt": "2024-01-25T03:53:18Z",
-    "title": "Client becomes slow if one guardian is down",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4131",
-    "publishedAt": "2024-01-25T04:03:25Z",
-    "title": "`fedimintd` fails to catch up with peers",
-    "labels": [
-      "bug",
-      "alephbft"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4265",
-    "publishedAt": "2024-02-07T13:23:40Z",
-    "title": "Investtigate why re-joining a federation every time the client is started works",
-    "labels": [
-      "bug",
-      "client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
