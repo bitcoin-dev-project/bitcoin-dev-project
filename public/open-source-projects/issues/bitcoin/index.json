@@ -182,17 +182,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/21552",
-    "publishedAt": "2021-03-30T04:25:43Z",
-    "title": "ci: ccache does not work for macOS cross-compiling builds",
-    "labels": [
-      "Bug",
-      "macOS",
-      "Tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/21627",
     "publishedAt": "2021-04-06T20:58:58Z",
     "title": "Potential data race on fHavePruned flag",
