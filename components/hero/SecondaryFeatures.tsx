@@ -124,14 +124,21 @@ function FeaturesDesktop() {
                                             featureIndex !== selectedIndex
                                         }
                                     >
-                                        <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white dark:bg-black shadow-lg shadow-black-800/5 ring-1 ring-black-500/10">
-                                            <Image
-                                                className="w-full"
-                                                src={feature.image}
-                                                alt=""
-                                                sizes="52.75rem"
-                                            />
-                                        </div>
+                                        <a
+                                            href={feature.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="block cursor-pointer overflow-hidden rounded-xl"
+                                        >
+                                            <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white dark:bg-black shadow-lg shadow-black-800/5 ring-1 ring-black-500/10 transition-transform duration-300 ease-in-out hover:scale-105">
+                                                <Image
+                                                    className="w-full transition-transform duration-300 ease-in-out"
+                                                    src={feature.image}
+                                                    alt=""
+                                                    sizes="52.75rem"
+                                                />
+                                            </div>
+                                        </a>
                                     </TabPanel>
                                 </section>
                             ))}
