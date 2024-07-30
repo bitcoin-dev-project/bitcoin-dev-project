@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 
 const useOnclickOut = () => {
-    const contentRef = useRef<HTMLDivElement>(null)
+    const contentRef = useRef<any>(null)
     const wrapperRef = useRef<HTMLDivElement>(null)
 
     const [isOpen, setOpen] = useState(false)
@@ -24,7 +24,7 @@ const useOnclickOut = () => {
                 setOpen(false)
             })
         }
-    }, [])
+    }, [isOpen])
 
     return {
         isOpen,

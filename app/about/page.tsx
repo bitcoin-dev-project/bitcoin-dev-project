@@ -7,19 +7,19 @@ type Props = {
 
 const Item = ({ content, title }: Props) => (
     <div className="gap-2">
-        <h2 className="text-2xl md:text-xl font-medium leading-normal">
+        <h2 className="text-2xl max-md:text-xl font-medium leading-normal">
             {title}
         </h2>
-        <section className="text-lg md:text-md">{content}</section>
+        <section className="text-lg max-md:text-md">{content}</section>
     </div>
 )
 
 export default function About() {
     return (
         <Wrapper>
-            <div className="flex flex-col p-14 sm:p-7 mx-auto my-0">
-                <div className="flex flex-col mb-24 gap-y-10 w-2/3 md:w-full self-center">
-                    <h1 className="text-[58px] lg:text-[36px] md:text-center font-bold leading-tight">
+            <div className="flex flex-col p-14 max-sm:p-7 mx-auto my-0">
+                <div className="flex flex-col mb-24 gap-y-10 w-2/3 max-md:w-full self-center">
+                    <h1 className="text-[58px] max-lg:text-[36px] max-md:text-center font-bold leading-tight">
                         About The Bitcoin Dev Project
                     </h1>
                     <Item

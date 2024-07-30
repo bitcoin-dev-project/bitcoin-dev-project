@@ -1,16 +1,17 @@
-import Image from "next/image"
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 
 import { useUrlManager } from "@/hooks/useUrlManager"
 import { IssueCardElement } from "@/types"
 import { createSortKeys, getValues, ISSUEOPTIONS, SORTOPTIONS } from "@/utils"
 
-import CloseSidebarIcon from "../public/close-sidebar.svg"
-import CrossIcon from "../public/cross-icon.svg"
-import FilterIcon from "../public/filter.svg"
-import SortIcon from "../public/sort-icon.svg"
-import LightningIcon from "../public/lightning_icon_filled.svg"
 import useOnclickOut from "@/hooks/useOnclickOut"
+import { FilterSvgIcon } from "@/public/FilterSvgIcon"
+import { SortSvgIcon } from "@/public/SortSvgIcon"
+import { CrossSvgIcon } from "@/public/CrossSvgIcon"
+import { SearchSvgIcon } from "@/public/SearchSvgIcon"
+import { CloseSidebarSvgIcon } from "@/public/CloseSidebarSvgIcon"
+import { LightningSvgIcon } from "@/public/LightningSvgIcon"
+import { UpArrowSvgIcon } from "@/public/UpArrowSvgIcon"
 
 const SidebarFilter = ({
     toggle,
@@ -49,17 +50,15 @@ const SidebarFilter = ({
     ]
 
     return (
-        <div className="w-[300px] lg:w-[250px] md:w-full flex flex-col gap-5">
+        <div className="w-[300px] max-lg:w-[250px] max-md:w-full flex flex-col gap-5">
             <FilterMenu toggle={toggle} />
 
             <section className="flex flex-col gap-4 w-full">
                 <div className="flex items-center gap-2">
-                    <Image
-                        src={SortIcon}
-                        alt="filter"
-                        className="w-[20px] 2xl:w-[25px]"
-                    />
-                    <h5 className="text-base font-bold">Sort by</h5>
+                    <SortSvgIcon />
+                    <h5 className="text-base font-bold dark:text-white-400 opacity-85">
+                        Sort by
+                    </h5>
                 </div>
                 <div className=" flex gap-3 flex-wrap">
                     <CustomSortSelect args={SORTOPTIONS} />
@@ -91,24 +90,16 @@ function FilterMenu({ toggle }: { toggle: () => void }) {
             <div className="pb-2">
                 <div className="py-3 border-b border-b-gray-400 flex justify-between">
                     <section className="flex items-center gap-2">
-                        <Image
-                            src={FilterIcon}
-                            alt="filter"
-                            className="w-[20px] 2xl:w-[25px]"
-                        />
-                        <p className="text-base md:text-xl font-bold">
+                        <FilterSvgIcon />
+                        <p className="text-base max-md:text-xl font-bold">
                             Filters
                         </p>
                     </section>
                     <button
-                        className="self-end rsor-pointer w- border border-gray-400 bg-gray-100 p-3 rounded-lg hidden md:block h-[46px] w-[41.68px]"
+                        className="self-end rsor-pointer w- border border-gray-400 bg-gray-100 dark:bg-gray-800 p-3 rounded-lg hidden max-md:block h-[46px] w-[41.68px]"
                         onClick={toggle}
                     >
-                        <Image
-                            src={CloseSidebarIcon}
-                            alt="filter icon"
-                            className="h-4 w-4"
-                        />
+                        <CloseSidebarSvgIcon />
                     </button>
                 </div>
             </div>
@@ -121,12 +112,8 @@ function FilterMenu({ toggle }: { toggle: () => void }) {
                             onClick={clearAllFilters}
                         >
                             Clear all
-                            <span className="p-[6px] 2xl:p-2 rounded-md bg-[#a4a4a8] text-white">
-                                <Image
-                                    src={CrossIcon}
-                                    alt="filter icon"
-                                    className="h-2 w-2 fill-white"
-                                />
+                            <span className="p-[6px] max-2xl:p-2 rounded-md bg-[#a4a4a8] text-white">
+                                <CrossSvgIcon className="h-2 w-2 dark:text-black" />
                             </span>
                         </button>
                     </section>
@@ -158,14 +145,10 @@ function FilterPill({
     return (
         <button
             onClick={() => onClick(text)}
-            className="border border-gray-400 px-3 py-2.5 rounded-md text-sm leading-[100%] hover:bg-gray-100 flex gap-2 items-center font-semibold capitalize bg-gray-200"
+            className="border border-gray-400 dark:border-black-800 px-3 py-2.5 rounded-md text-sm leading-[100%] hover:bg-gray-100 dark:hover:bg-gray-800  flex gap-2 items-center font-semibold capitalize bg-gray-200 dark:bg-gray-800"
         >
             {text}
-            <Image
-                src={CrossIcon}
-                alt="filter icon"
-                className="h-2 w-2 fill-white"
-            />
+            <CrossSvgIcon className="h-2 w-2" />
         </button>
     )
 }
@@ -209,7 +192,7 @@ function CustomSortSelect({ args }: { args: string[] }) {
         <form className="w-full relative" ref={wrapperRef}>
             <section className="group/menuBtn">
                 <div
-                    className="w-full bg-white border-[1.2px] border-gray-300 rounded-lg cursor-pointer p-3 before:absolute capitalize font-medium flex items-center justify-between"
+                    className="w-full bg-white dark:bg-black border-[1.2px] dark:border-black-800 border-gray-300 rounded-lg cursor-pointer p-3 before:absolute capitalize font-medium flex items-center justify-between"
                     onClick={toggle}
                 >
                     <p className="font-semibold text-custom-primary-text">
@@ -218,18 +201,13 @@ function CustomSortSelect({ args }: { args: string[] }) {
                     <span
                         className={`group-aria-[expanded=false]/menuBtn:rotate-180 transition-transform ${isOpen && "rotate-180 transition-transform"}`}
                     >
-                        <Image
-                            src="./up_arrow.svg"
-                            width={11}
-                            height={7}
-                            alt="arrow"
-                        />
+                        <UpArrowSvgIcon className="w-[11px] h-[7px]" />
                     </span>
                 </div>
             </section>
 
             <section
-                className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 ${isOpen ? "block" : "hidden"}`}
+                className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white dark:bg-black max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 dark:border-black-800 ${isOpen ? "block" : "hidden"}`}
             >
                 {sortKeys.map((item, index) => (
                     <div
@@ -238,15 +216,11 @@ function CustomSortSelect({ args }: { args: string[] }) {
                         data-selected={currentSortKey.key === item.key}
                         className="group"
                     >
-                        <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer items-center">
-                            <Image
-                                className="group-data-[selected=false]:invisible w-4 h-4"
-                                src={LightningIcon}
-                                alt="lightning icon"
-                            />
+                        <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-200 dark:group-data-[selected=false]:hover:bg-gray-800 dark:hover:bg-gray-800 hover:bg-gray-200 cursor-pointer items-center">
+                            <LightningSvgIcon className="group-data-[selected=false]:invisible w-4 h-4 text-[#2d2d2d] dark:text-inherit" />
                             <span
                                 className={
-                                    "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
+                                    "group-data-[selected=true]:text-[#2d2d2d] dark:group-data-[selected=true]:text-white text-gray-400 group-data-[selected=true]:font-bold capitalize"
                                 }
                             >
                                 {item.label}
@@ -345,12 +319,14 @@ function CustomMultiCheckBox({
 
     return (
         <div className="w-full flex flex-col gap-4">
-            <h5 className="text-base font-bold">{title}</h5>
+            <h5 className="text-base font-bold dark:text-white-400 opacity-85">
+                {title}
+            </h5>
             <div className="w-full relative" ref={wrapperRef}>
                 <section className="group/menuBtn">
                     <div className="relative" ref={contentRef}>
                         <input
-                            className="text-base font-medium w-full pl-12 pr-10 py-4 rounded-xl border-[1px] border-gray-300 focus:outline-none focus:outline-offset-0 leading-none placeholder:text-gray-400 placeholder:font-medium"
+                            className="text-base bg-white dark:bg-black font-medium w-full pl-12 pr-10 py-4 rounded-xl border-[1px] border-gray-300 dark:border-black-800 focus:outline-none focus:outline-offset-0 leading-none placeholder:text-gray-400 dark:text-gray-400 placeholder:font-medium dark:placeholder:text-gray-600"
                             type="text"
                             placeholder={placeholder}
                             onChange={(e) => {
@@ -362,25 +338,14 @@ function CustomMultiCheckBox({
                         />
 
                         <span className="absolute top-1/2 -translate-y-1/2 left-[18px]">
-                            <Image
-                                src="./search_icon.svg"
-                                width={18}
-                                height={18}
-                                alt="search"
-                                className=""
-                            />
+                            <SearchSvgIcon className=" dark:text-gray-500 stroke-red-700" />
                         </span>
                         <span
                             data-is-open={isOpen}
                             onClick={toggle}
                             className="absolute p-2 cursor-pointer top-1/2 -translate-y-1/2 right-[18px] data-[is-open=false]:rotate-180 transition-transform"
                         >
-                            <Image
-                                src="./up_arrow.svg"
-                                alt="arrow"
-                                width={11}
-                                height={7}
-                            />
+                            <UpArrowSvgIcon className="w-[11px] h-[7px]" />
                         </span>
                     </div>
                 </section>
@@ -392,10 +357,10 @@ function CustomMultiCheckBox({
                     }}
                     id="filter-section-dropdown"
                     data-is-open={isOpen}
-                    className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 ${isOpen ? "block" : "hidden"}`}
+                    className={`focus-visible:shadow-none focus-visible:outline-none mt-2 absolute z-50 right-0 left-0 bg-white dark:bg-black max-h-[300px] overflow-scroll font-medium rounded-xl shadow-md py-2 border border-gray-400 dark:border-black-800 ${isOpen ? "block" : "hidden"}`}
                 >
                     {filterArgs.length < 1 && (
-                        <p className="w-full text-sm 2xl:text-base text-center px-2">
+                        <p className="w-full text-sm max-2xl:text-base text-center px-2">
                             No matching options
                         </p>
                     )}
@@ -406,15 +371,11 @@ function CustomMultiCheckBox({
                             data-selected={isSelected(item.title)}
                             className="group"
                         >
-                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 cursor-pointer items-center">
-                                <Image
-                                    className="group-data-[selected=false]:invisible w-4 h-4"
-                                    src={LightningIcon}
-                                    alt="lightning icon"
-                                />
+                            <div className="w-full px-5 py-[8px] flex gap-2 group-data-[selected=false]:hover:bg-gray-100 dark:hover:bg-gray-800 dark:group-data-[selected=false]:hover:bg-gray-800 hover:bg-gray-200  cursor-pointer items-center">
+                                <LightningSvgIcon className="group-data-[selected=false]:invisible w-4 h-4 text-[#2d2d2d] dark:text-inherit" />
                                 <span
                                     className={
-                                        "group-data-[selected=true]:text-[#2d2d2d] group-data-[selected=true]:font-bold capitalize"
+                                        "group-data-[selected=true]:text-[#2d2d2d] dark:group-data-[selected=true]:text-white text-gray-400 group-data-[selected=true]:font-bold capitalize"
                                     }
                                 >
                                     {item.title}
