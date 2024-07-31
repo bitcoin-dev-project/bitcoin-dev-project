@@ -320,19 +320,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/25128",
-    "publishedAt": "2022-05-13T14:38:00Z",
-    "title": "p2p_filter intermittent failure (assert not filter_peer.tx_received)",
-    "labels": [
-      "Brainstorming",
-      "Bug",
-      "Linux/Unix",
-      "Tests",
-      "Upstream"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/25265",
     "publishedAt": "2022-06-01T23:28:24Z",
     "title": "Setting torcontrol overrides proxy address",
@@ -564,7 +551,7 @@
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/29073",
     "publishedAt": "2023-12-13T12:52:28Z",
-    "title": "ci: failure in `wallet_multiwallet.py --legacy-wallet`",
+    "title": "ci: failure in `wallet_multiwallet.py --legacy-wallet` - (`void wallet::UnloadWallet(std::shared_ptr<CWallet> &&): Assertion 'it.second' failed.`)",
     "labels": [
       "Bug",
       "Wallet",
