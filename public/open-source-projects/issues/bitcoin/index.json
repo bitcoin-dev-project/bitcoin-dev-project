@@ -606,7 +606,8 @@
     "labels": [
       "Bug",
       "UTXO Db and Indexes",
-      "Data corruption"
+      "Data corruption",
+      "Resource usage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
