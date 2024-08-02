@@ -620,5 +620,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/30514",
+    "publishedAt": "2024-07-23T19:37:31Z",
+    "title": "implicit-integer-sign-change in ActivateSnapshot",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
