@@ -74,9 +74,6 @@ const config: Config = {
             fontFamily: {
                 brawler: ["var(--brawler-font)"],
                 inter: ["var(--inter-font)"]
-            },
-            maxWidth: {
-                "8xl": "88rem"
             }
         }
     },

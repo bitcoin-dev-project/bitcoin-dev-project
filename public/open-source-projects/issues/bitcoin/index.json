@@ -182,17 +182,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/21552",
-    "publishedAt": "2021-03-30T04:25:43Z",
-    "title": "ci: ccache does not work for macOS cross-compiling builds",
-    "labels": [
-      "Bug",
-      "macOS",
-      "Tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/21627",
     "publishedAt": "2021-04-06T20:58:58Z",
     "title": "Potential data race on fHavePruned flag",
@@ -327,19 +316,6 @@
     "labels": [
       "Bug",
       "P2P"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/25128",
-    "publishedAt": "2022-05-13T14:38:00Z",
-    "title": "p2p_filter intermittent failure (assert not filter_peer.tx_received)",
-    "labels": [
-      "Brainstorming",
-      "Bug",
-      "Linux/Unix",
-      "Tests",
-      "Upstream"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
@@ -575,7 +551,7 @@
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/29073",
     "publishedAt": "2023-12-13T12:52:28Z",
-    "title": "ci: failure in `wallet_multiwallet.py --legacy-wallet`",
+    "title": "ci: failure in `wallet_multiwallet.py --legacy-wallet` - (`void wallet::UnloadWallet(std::shared_ptr<CWallet> &&): Assertion 'it.second' failed.`)",
     "labels": [
       "Bug",
       "Wallet",
@@ -630,7 +606,8 @@
     "labels": [
       "Bug",
       "UTXO Db and Indexes",
-      "Data corruption"
+      "Data corruption",
+      "Resource usage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
@@ -641,6 +618,15 @@
     "labels": [
       "Docs",
       "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/30514",
+    "publishedAt": "2024-07-23T19:37:31Z",
+    "title": "implicit-integer-sign-change in ActivateSnapshot",
+    "labels": [
+      "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }

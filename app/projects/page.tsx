@@ -40,10 +40,10 @@ export default function Projects() {
         <Wrapper>
             <div className="p-10 max-max-sm:p-7 mx-auto my-0 dark:bg-black">
                 <div className="flex flex-col max-md:items-center mb-24 max-md:mb-12 gap-y-10">
-                    <h1 className="text-[58px] max-max-lg:text-[30px] max-md:text-center font-bold leading-tight text-gray-800 dark:text-gray-100 dark:text-gray-100 dark:text-gray-100">
+                    <h1 className="text-[58px] max-max-lg:text-[30px] max-md:text-center font-bold leading-tight text-gray-800 dark:text-gray-100">
                         {projects.title}
                     </h1>
-                    <p className="text-2xl max-md:text-xl max-md:text-justify max-w-[60vw] max-md:max-w-full text-gray-800 dark:text-gray-200 dark:text-gray-200 dark:text-gray-200">
+                    <p className="text-2xl max-md:text-xl max-md:text-justify max-w-[60vw] max-md:max-w-full text-gray-800 dark:text-gray-200">
                         {projects.description}
                     </p>
                 </div>

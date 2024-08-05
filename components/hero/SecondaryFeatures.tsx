@@ -57,7 +57,7 @@ function FeaturesMobile() {
                         isActive
                     />
                     <div className="relative mt-10 pb-10">
-                        <div className="absolute -inset-x-4 bottom-0 top-8 bg-gray-200 dark:bg-gray-900 sm:-inset-x-6" />
+                        <div className="absolute -inset-x-4 bottom-0 top-8 bg-gray-200 dark:bg-gray-800 sm:-inset-x-6" />
                         <div className="relative mx-auto overflow-hidden rounded-xl bg-white dark:bg-black shadow-lg shadow-black-800/5 ring-1 ring-black-500/10">
                             <Image
                                 className="object-center w-full h-full"
@@ -84,8 +84,8 @@ function FeaturesDesktop() {
                                     key={feature.description}
                                     className={`min-w-[260px] relative p-4 ${
                                         featureIndex === selectedIndex
-                                            ? "bg-[#f7f7f7] dark:bg-gray-900"
-                                            : "hover:bg-[#f7f7f7] dark:hover:bg-gray-900"
+                                            ? "bg-gray-200 dark:bg-gray-800"
+                                            : "hover:bg-gray-200 dark:hover:bg-gray-800"
                                     }`}
                                 >
                                     <Feature
@@ -124,14 +124,21 @@ function FeaturesDesktop() {
                                             featureIndex !== selectedIndex
                                         }
                                     >
-                                        <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white dark:bg-black shadow-lg shadow-black-800/5 ring-1 ring-black-500/10">
-                                            <Image
-                                                className="w-full"
-                                                src={feature.image}
-                                                alt=""
-                                                sizes="52.75rem"
-                                            />
-                                        </div>
+                                        <a
+                                            href={feature.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="block cursor-pointer overflow-hidden rounded-xl"
+                                        >
+                                            <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white dark:bg-black shadow-lg shadow-black-800/5 ring-1 ring-black-500/10 transition-transform duration-300 ease-in-out hover:scale-105">
+                                                <Image
+                                                    className="w-full transition-transform duration-300 ease-in-out"
+                                                    src={feature.image}
+                                                    alt=""
+                                                    sizes="52.75rem"
+                                                />
+                                            </div>
+                                        </a>
                                     </TabPanel>
                                 </section>
                             ))}

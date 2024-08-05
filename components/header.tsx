@@ -34,12 +34,9 @@ export function Header() {
                     <div className="flex lg:flex-1">
                         <Link href="/">
                             <h1 className="text-xl md:text-xl font-bold">
-                                The
-                                <span className="text-orange-500">
-                                    {" "}
-                                    Bitcoin{" "}
-                                </span>
-                                Dev Project
+                                The&nbsp;
+                                <span className="text-orange-500">Bitcoin</span>
+                                &nbsp;Dev Project
                             </h1>
                         </Link>
                     </div>
@@ -98,12 +95,9 @@ export function Header() {
                     <div className="flex items-center justify-between">
                         <Link href="/">
                             <h1 className="text-2xl md:text-xl font-bold">
-                                The
-                                <span className="text-orange-500">
-                                    {" "}
-                                    Bitcoin{" "}
-                                </span>
-                                Dev Project
+                                The&nbsp;
+                                <span className="text-orange-500">Bitcoin</span>
+                                &nbsp;Dev Project
                             </h1>
                         </Link>
                         <button
@@ -272,25 +266,36 @@ function PopoverNavigation({
                                     />
                                 </div>
 
-                                <a href={item.href}>
-                                    <div className="block font-semibold text-gray-800 dark:text-gray-100 relative">
-                                        {item.name}
+                                <div
+                                    className={
+                                        item.released
+                                            ? ""
+                                            : "pointer-events-none opacity-50"
+                                    }
+                                >
+                                    <a
+                                        href={
+                                            item.released
+                                                ? item.href
+                                                : undefined
+                                        }
+                                    >
+                                        <div className="block font-semibold text-gray-800 dark:text-gray-100 relative">
+                                            {item.name}
 
-                                        {navType === "LEARN" ? (
-                                            <>
-                                                {!item.released && (
+                                            {navType === "LEARN" &&
+                                                !item.released && (
                                                     <span className="ml-2 inline-flex items-center rounded-full bg-yellow-50 px-2 py-1 text-xs font-normal text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
                                                         Coming Soon
                                                     </span>
                                                 )}
-                                            </>
-                                        ) : null}
-                                        <span className="absolute inset-0" />
-                                    </div>
-                                    <p className="mt-1 text-gray-600 dark:text-gray-400">
-                                        {item.description}
-                                    </p>
-                                </a>
+                                            <span className="absolute inset-0" />
+                                        </div>
+                                        <p className="mt-1 text-gray-600 dark:text-gray-400">
+                                            {item.description}
+                                        </p>
+                                    </a>
+                                </div>
                             </div>
                         ))}
                     </div>

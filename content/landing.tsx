@@ -95,14 +95,16 @@ export const tools: Array<IFeature> = [
         description: "Explore vetted Free Open Source Software (FOSS) projects",
         summary: "",
         image: screenshotGoodFirstIssues,
-        icon: logoBitcoinTranscript
+        icon: logoBitcoinTranscript,
+        link: "https://bitcoindevs.xyz/good-first-issues"
     },
     {
         name: "Saving Satoshi",
         description: "Save bitcoin by coding through a sci-fi epic",
         summary: "",
         image: screenshotSavingSatoshi,
-        icon: logoSavingSatoshi
+        icon: logoSavingSatoshi,
+        link: "https://savingsatoshi.com"
     },
     {
         name: "Bitcoin Transcripts Review",
@@ -110,7 +112,8 @@ export const tools: Array<IFeature> = [
             "Earn sats by reviewing and editing AI-generated transcripts",
         summary: "",
         image: screenshotBitcoinTranscriptReview,
-        icon: logoBitcoinTranscript
+        icon: logoBitcoinTranscript,
+        link: "https://review.btctranscripts.com"
     },
 
     {
@@ -118,7 +121,8 @@ export const tools: Array<IFeature> = [
         description: "The technical bitcoin search engine we deserve.",
         summary: "",
         image: screenshotBitcoinSearch,
-        icon: logoBitcoinSearch
+        icon: logoBitcoinSearch,
+        link: "https://bitcoinsearch.xyz"
     },
     {
         name: "Bitcoin TLDR",
@@ -126,7 +130,8 @@ export const tools: Array<IFeature> = [
             "Making it easier to engage with Delving Bitcoin, and Bitcoin and Lightning-dev mailing lists",
         summary: "",
         image: screenshotBitcoinTLDR,
-        icon: logoBitcoinTLDR
+        icon: logoBitcoinTLDR,
+        link: "https://tldr.bitcoinsearch.xyz"
     },
     {
         name: "Bitcoin Transcripts",
@@ -134,14 +139,16 @@ export const tools: Array<IFeature> = [
             "Historical archives of transcribed talks, podcasts and lectures",
         summary: "",
         image: screenshotBitcoinTranscript,
-        icon: logoBitcoinTranscript
+        icon: logoBitcoinTranscript,
+        link: "https://btctranscripts.com"
     },
     {
         name: "ChatBTC",
         description: "Chat with your favorite bitcoin sources and authors.",
         summary: "",
         image: screenshotChatBTC,
-        icon: logoChatBTC
+        icon: logoChatBTC,
+        link: "https://chat.bitcoinsearch.xyz"
     }
 ]
 
@@ -246,7 +253,7 @@ export const products = [
             "Learning bitcoin is hard, but we make it easy for you to get started.",
         href: "/topics",
         icon: ListBulletIcon,
-        released: false
+        released: true
     }
 ]
 
