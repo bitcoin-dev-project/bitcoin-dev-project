@@ -29,16 +29,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/181",
-    "publishedAt": "2023-09-02T18:11:36Z",
-    "title": "Add `Peer ID` to Federation Admin dashboard",
-    "labels": [
-      "good first issue",
-      "guardian-ui"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/ui/issues/182",
     "publishedAt": "2023-09-02T18:13:32Z",
     "title": "Tests for utility functions for millit-sat math",
