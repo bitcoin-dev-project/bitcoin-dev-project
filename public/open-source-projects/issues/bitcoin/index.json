@@ -629,5 +629,14 @@
       "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/30600",
+    "publishedAt": "2024-08-07T13:35:08Z",
+    "title": "use MiniWallet in functional test `rpc_signrawtransactionwithkey.py` for funding txs",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
