@@ -29,15 +29,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/182",
-    "publishedAt": "2023-09-02T18:13:32Z",
-    "title": "Tests for utility functions for millit-sat math",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/ui/issues/186",
     "publishedAt": "2023-09-07T15:15:11Z",
     "title": "Add the abillity to specify your own `FM_TEST_DIR`",
