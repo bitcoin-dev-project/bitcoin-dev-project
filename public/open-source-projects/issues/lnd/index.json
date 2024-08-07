@@ -397,18 +397,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/6834",
-    "publishedAt": "2022-08-16T15:52:49Z",
-    "title": "LND has some very old inflight payments without associated HTLC ",
-    "labels": [
-      "bug",
-      "payments",
-      "P2",
-      "itest case"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/6870",
     "publishedAt": "2022-08-30T16:08:14Z",
     "title": "Not sending a channel_update for private channels",
@@ -950,17 +938,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7829",
-    "publishedAt": "2023-07-13T10:29:20Z",
-    "title": "[bug]: LND consumes a lot of memory during start up, subsequently releasing when start up is successful.",
-    "labels": [
-      "bug",
-      "resource usage",
-      "P2"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7832",
     "publishedAt": "2023-07-13T16:33:04Z",
     "title": "[bug]: `fee_limit_percent` missing in `SendPaymentV2`",
@@ -1148,6 +1125,30 @@
       "bug",
       "notifications",
       "chain handling"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8120",
+    "publishedAt": "2023-10-27T12:03:57Z",
+    "title": "[bug]: Spend-Output monitoring might have a rare edge case where it misses the spend of an output.",
+    "labels": [
+      "bug",
+      "P1",
+      "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8128",
+    "publishedAt": "2023-10-30T17:56:18Z",
+    "title": "peer: race condition in TestPeerCustomMessage",
+    "labels": [
+      "bug",
+      "P1",
+      "tests",
+      "data-race",
+      "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
