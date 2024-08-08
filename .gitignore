@@ -17,6 +17,9 @@ public/sitemap.xml
 # production
 /build
 
+# rss feed
+/public/feed.xml
+
 # misc
 .DS_Store
 *.pem

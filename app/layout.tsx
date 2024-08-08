@@ -69,6 +69,11 @@ export default function RootLayout({
                     data-website-id="4ee856e4-582c-4a9c-a1c5-10757123803e"
                     data-domains="bitcoindevs.xyz"
                 />
+                <link
+                    rel="alternate"
+                    type="application/rss+xml"
+                    href="/feed.xml"
+                />
             </head>
             <body
                 className={`${barlow.className} dark:bg-black dark:text-gray-50 bg-white`}
