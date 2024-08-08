@@ -24,6 +24,10 @@ export function Header() {
     }
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
 
+    const closeMobileMenu = () => {
+        setMobileMenuOpen(false)
+    }
+
     return (
         <header className="isolate sticky top-0 dark:bg-black bg-white z-50">
             <div className="border-b-2 border-orange-500">
@@ -137,6 +141,9 @@ export function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
+                                                        onClick={
+                                                            closeMobileMenu
+                                                        }
                                                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-950 "
                                                     >
                                                         {item.name}
@@ -170,6 +177,9 @@ export function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
+                                                        onClick={
+                                                            closeMobileMenu
+                                                        }
                                                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-950 "
                                                     >
                                                         {item.name}
