@@ -43,7 +43,7 @@ export function Hero() {
                         <Image
                             className="absolute bottom-full right-full -mb-56 -mr-72 opacity-50"
                             src={blurOrangeImage}
-                            alt=""
+                            alt="Blur orange image"
                             width={530}
                             height={530}
                             unoptimized
@@ -63,6 +63,7 @@ export function Hero() {
                                 </Button>
                                 <Button
                                     href="https://github.com/bitcoin-dev-project/bitcoin-topics"
+                                    target="_blank"
                                     variant="secondary"
                                 >
                                     View on GitHub
@@ -78,7 +79,7 @@ export function Hero() {
                             <Image
                                 className="absolute -right-64 -top-64"
                                 src={blurOrangeImage}
-                                alt=""
+                                alt="Blur orange image"
                                 width={530}
                                 height={530}
                                 unoptimized
@@ -87,7 +88,7 @@ export function Hero() {
                             <Image
                                 className="absolute -bottom-40 -right-44"
                                 src={blurIndigoImage}
-                                alt=""
+                                alt="Blur indigo image"
                                 width={567}
                                 height={567}
                                 unoptimized
@@ -131,12 +132,12 @@ export function Hero() {
                                             {Array.from({
                                                 length: code.split("\n").length
                                             }).map((_, index) => (
-                                                <Fragment key={index}>
+                                                <span key={index}>
                                                     {(index + 1)
                                                         .toString()
                                                         .padStart(2, "0")}
                                                     <br />
-                                                </Fragment>
+                                                </span>
                                             ))}
                                         </div>
                                         <Highlight

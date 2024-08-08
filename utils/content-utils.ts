@@ -1,5 +1,3 @@
-// utils/authorUtils.ts or lib/contentUtils.ts
-
 import { allAuthors } from "contentlayer/generated"
 import { Authors } from "contentlayer/generated"
 import { coreContent } from "pliny/utils/contentlayer"

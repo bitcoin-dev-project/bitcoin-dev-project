@@ -52,7 +52,6 @@ export default function ScriptStackVisualizer({
     children
 }: ScriptStackVisualizerProps) {
     const [svgIndex, setSvgIndex] = useState(0)
-    // Specify the type for useRef, assuming HTMLObjectElement for an embedded SVG
     const svgRef = useRef<HTMLObjectElement>(null)
 
     const handlePlayerAction = (action: string) => {
@@ -71,13 +70,13 @@ export default function ScriptStackVisualizer({
         handlePlayerAction("play")
     }, [svgIndex])
 
-    const handleSvgSelect = (index: any) => {
+    const handleSvgSelect = (index: number) => {
         setSvgIndex(index)
         setTimeout(() => handlePlayerAction("play"), 100)
     }
 
     // Function to handle switching SVGs and autoplay
-    const handleSvgSwitch = (direction: any) => {
+    const handleSvgSwitch = (direction: "next" | "prev") => {
         setSvgIndex((prev) => {
             const newIndex =
                 direction === "next"
@@ -89,7 +88,7 @@ export default function ScriptStackVisualizer({
         })
     }
 
-    const getStatusIcon = (index: any) => {
+    const getStatusIcon = (index: number) => {
         if (index < svgIndex) {
             return (
                 <CheckIcon

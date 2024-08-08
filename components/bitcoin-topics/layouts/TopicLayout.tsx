@@ -3,11 +3,7 @@ import { ReactNode } from "react"
 import { CoreContent } from "pliny/utils/contentlayer"
 import type { Topic, Authors } from "contentlayer/generated"
 import siteMetadata from "@/data/siteMetadata"
-import Summary from "../topic/summary"
-import Metadata from "../topic/metadata"
-import Link from "../markdown-ui/Link"
 import { Navigation } from "../Navigation"
-import clsx from "clsx"
 import { Hero } from "../hero/Hero"
 import { PrevNextLinks } from "../topic/PrevNextLinks"
 import { Prose } from "../topic/Prose"
@@ -27,7 +23,6 @@ interface LayoutProps {
 
 export default function TopicLayout({
     content,
-    authorDetails,
     next,
     prev,
     children
@@ -35,7 +30,7 @@ export default function TopicLayout({
     let pathname = usePathname()
     let isHomePage = pathname === "/topics"
 
-    const { filePath, path, date, title, tags } = content
+    const { title, tags } = content
 
     return (
         <div className="flex w-full flex-col">

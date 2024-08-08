@@ -134,9 +134,6 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                     </div>
                     <div className="relative flex flex-col items-start gap-3 lg:flex-row">
                         <div className="flex w-full flex-col p-2 lg:w-1/2">
-                            {/* {decodedTransaction?.inputs?.map(
-                                (input: TransactionInput, index: number) => ( */}
-
                             {decodedTransaction?.inputs?.length
                                 ? decodedTransaction.inputs.map(
                                       (

@@ -67,7 +67,7 @@ export function Navigation({
 
     return (
         <nav className={clsx("text-base lg:text-sm", className)}>
-            <a
+            <Link
                 className="mb-6 flex flex-row items-center space-x-3 hover:no-underline"
                 href="/topics"
             >
@@ -78,7 +78,7 @@ export function Navigation({
                         Bitcoin, Privacy &amp; Decentralization
                     </div>
                 </div>
-            </a>
+            </Link>
             <ul role="list" className="space-y-9">
                 {navigation.map((section) => (
                     <li key={section.title}>
