@@ -397,19 +397,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/6870",
-    "publishedAt": "2022-08-30T16:08:14Z",
-    "title": "Not sending a channel_update for private channels",
-    "labels": [
-      "bug",
-      "funding",
-      "graph",
-      "gossip",
-      "interop"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/6952",
     "publishedAt": "2022-09-28T02:41:52Z",
     "title": "chainrg: lnd uses wrong coin type for simnet and other networks ",
@@ -1148,6 +1135,16 @@
       "P1",
       "tests",
       "data-race",
+      "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8140",
+    "publishedAt": "2023-11-01T18:09:48Z",
+    "title": "[bug]: SendCoins sweep functionality returning `insufficient input to create sweep tx`",
+    "labels": [
+      "bug",
       "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
