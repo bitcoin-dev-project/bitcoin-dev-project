@@ -61,7 +61,10 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang={siteMetadata.language}>
+        <html
+            lang={siteMetadata.language}
+            suppressHydrationWarning={process.env.NODE_ENV === "production"}
+        >
             <head>
                 <script
                     async
