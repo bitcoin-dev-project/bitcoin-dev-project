@@ -8,6 +8,7 @@ import {
     ArrowRightIcon,
     CheckIcon
 } from "@heroicons/react/20/solid"
+import Image from "next/image"
 
 const svgPaths = [
     "/bitcoin-topics/static/images/topics/p2pk/p2pk-1.svg",
@@ -20,6 +21,8 @@ const svgSteps = [
         name: "Step 1",
         description: "Push <signature> onto the stack",
         svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-1.svg",
+        fallbackImagePath:
+            "/bitcoin-topics/static/images/topics/p2pk/p2pk-1.png",
         status: "complete",
         code: "[Signature]",
         category: "UnlockScript"
@@ -28,6 +31,8 @@ const svgSteps = [
         name: "Step 2",
         description: "Push <pubkey> onto the stack",
         svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-2.svg",
+        fallbackImagePath:
+            "/bitcoin-topics/static/images/topics/p2pk/p2pk-.png",
         status: "current",
         code: "[Public Key]",
         category: "PubKeyScript"
@@ -36,6 +41,8 @@ const svgSteps = [
         name: "Step 3",
         description: "Pop two items (pub-key & sign.) & verify ECDSA signature",
         svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-3.svg",
+        fallbackImagePath:
+            "/bitcoin-topics/static/images/topics/p2pk/p2pk-3.png",
         status: "upcoming",
         code: "<OP_CHECKSIG>",
         category: "PubKeyScript"
@@ -169,16 +176,24 @@ export default function ScriptStackVisualizer({
                     </ol>
                 </nav>
 
-                <object
-                    ref={svgRef}
-                    type="image/svg+xml"
-                    data={svgSteps[svgIndex].svgPath}
-                    className="h-auto w-3/5 rounded-lg bg-white shadow-md"
-                    aria-labelledby="svgAnimation"
-                    role="img"
-                >
-                    Your browser does not support SVGs
-                </object>
+                <div className="relative h-auto w-3/5">
+                    <object
+                        ref={svgRef}
+                        type="image/svg+xml"
+                        data={svgSteps[svgIndex].svgPath}
+                        className="h-auto w-full rounded-lg bg-white shadow-md"
+                        aria-labelledby="svgAnimation"
+                        role="img"
+                    >
+                        <Image
+                            src={svgSteps[svgIndex].fallbackImagePath}
+                            alt="Static representation of SVG animation"
+                            layout="fill"
+                            objectFit="contain"
+                            className="rounded-lg bg-white shadow-md"
+                        />
+                    </object>
+                </div>
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ export const metadata = genPageMetadata({
         images: [
             {
                 url: "https://bitcoindevs.xyz/images/pages-thumbnails/projects.png",
-                alt: "Bitcoin projects"
+                alt: "bitcoin projects"
             }
         ],
         title: "Discover bitcoin Open Source Projects",
