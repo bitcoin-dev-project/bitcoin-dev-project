@@ -2,19 +2,12 @@ import "css/prism.css"
 import "katex/dist/katex.css"
 
 import { MDXLayoutRenderer } from "pliny/mdx-components"
-import {
-    sortPosts,
-    coreContent,
-    allCoreContent
-} from "pliny/utils/contentlayer"
-import { allTopics, allAuthors } from "contentlayer/generated"
-import type { Authors, Topic } from "contentlayer/generated"
-import { notFound } from "next/navigation"
+import { allTopics } from "contentlayer/generated"
 import TopicLayout from "@/components/bitcoin-topics/layouts/TopicLayout"
 import { components } from "@/components/bitcoin-topics/markdown-ui/MDXComponents"
 import { Metadata } from "next"
 import siteMetadata from "@/data/siteMetadata"
-import { getAuthorDetails } from "@/utils/content-utils"
+import { getAuthorDetails, getTopicData } from "@/utils/content-utils"
 
 export async function generateMetadata({
     params
@@ -75,26 +68,8 @@ export const generateStaticParams = async () => {
 
 export default async function Page({ params }: { params: { slug: string[] } }) {
     const slug = decodeURI(params.slug.join("/"))
-    // Filter out drafts in production
-    const sortedCoreContents = allCoreContent(sortPosts(allTopics))
-    const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
-    if (postIndex === -1) {
-        return notFound()
-    }
-
-    const prev = sortedCoreContents[postIndex + 1]
-    const next = sortedCoreContents[postIndex - 1]
-    const post = allTopics.find((p) => p.slug === slug) as Topic
-    const authorList = post?.authors || ["default"]
-    const authorDetails = getAuthorDetails(authorList)
-    const mainContent = coreContent(post)
-    const jsonLd = post.structuredData
-    jsonLd["author"] = authorDetails.map((author) => {
-        return {
-            "@type": "Person",
-            name: author.name
-        }
-    })
+    const { prev, next, post, authorDetails, mainContent, jsonLd } =
+        getTopicData(slug)
 
     return (
         <>
