@@ -231,6 +231,10 @@ function PopoverNavigation({
 }) {
     const { isOpen, setOpen, wrapperRef, contentRef } = useOnclickOut()
 
+    const handleLinkClick = () => {
+        setOpen(false)
+    }
+
     return (
         <Popover>
             <PopoverButton
@@ -274,7 +278,10 @@ function PopoverNavigation({
                                     }
                                 >
                                     {item.released ? (
-                                        <Link href={item.href}>
+                                        <Link
+                                            href={item.href}
+                                            onClick={handleLinkClick}
+                                        >
                                             <div className="block font-semibold text-gray-800 dark:text-gray-100 relative">
                                                 {item.name}
                                                 <span className="absolute inset-0" />
@@ -309,6 +316,7 @@ function PopoverNavigation({
                                     <Link
                                         key={item.name}
                                         href={item.href}
+                                        onClick={handleLinkClick}
                                         className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 "
                                     >
                                         <item.icon
