@@ -61,7 +61,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang={siteMetadata.language} suppressHydrationWarning>
+        <html lang={siteMetadata.language}>
             <head>
                 <script
                     async
