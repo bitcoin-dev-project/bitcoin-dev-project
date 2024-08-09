@@ -622,15 +622,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/30514",
-    "publishedAt": "2024-07-23T19:37:31Z",
-    "title": "implicit-integer-sign-change in ActivateSnapshot",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/30600",
     "publishedAt": "2024-08-07T13:35:08Z",
     "title": "use MiniWallet in functional test `rpc_signrawtransactionwithkey.py` for funding txs",
