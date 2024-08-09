@@ -17,15 +17,18 @@ interface ScriptDetail {
 
 interface TransactionInput {
     txid: string
-    vout: number
+    n: number
     scriptSig: ScriptDetail
     sequence: number
+    type?: string
+    witness?: string[]
 }
 
 interface TransactionOutput {
     value: number
     n: number
     scriptPubKey: ScriptDetail
+    type?: string
 }
 
 interface DecodedTransaction {
@@ -34,6 +37,7 @@ interface DecodedTransaction {
     locktime: number
     inputs: TransactionInput[]
     outputs: TransactionOutput[]
+    [key: string]: unknown
 }
 
 const BitcoinTransactionViewer: React.FC<{ detail: ScriptDetail }> = ({
@@ -88,31 +92,31 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
     txTitle,
     highlightIndex
 }) => {
-    const [decodedTransaction, setDecodedTransaction] = useState<any>(null)
+    const [decodedTransaction, setDecodedTransaction] =
+        useState<DecodedTransaction | null>(null)
     const [selectedDetail, setSelectedDetail] = useState<ScriptDetail | null>(
         null
     )
 
     useEffect(() => {
-        const decoder = new TransactionDecoder(rawTx, "testnet")
-        setDecodedTransaction(decoder.decode())
+        const decoder = new TransactionDecoder(rawTx, "mainnet")
+        const decoded = decoder.decode()
+        setDecodedTransaction(decoded as unknown as DecodedTransaction)
     }, [rawTx])
 
     const handleDetailChange = (
         detail: TransactionInput | TransactionOutput
     ) => {
         if ("scriptSig" in detail) {
-            if (selectedDetail === detail.scriptSig) {
-                setSelectedDetail(null)
-            } else {
-                setSelectedDetail(detail.scriptSig)
-            }
+            setSelectedDetail(
+                selectedDetail === detail.scriptSig ? null : detail.scriptSig
+            )
         } else if ("scriptPubKey" in detail) {
-            if (selectedDetail === detail.scriptPubKey) {
-                setSelectedDetail(null)
-            } else {
-                setSelectedDetail(detail.scriptPubKey)
-            }
+            setSelectedDetail(
+                selectedDetail === detail.scriptPubKey
+                    ? null
+                    : detail.scriptPubKey
+            )
         }
     }
 
@@ -134,64 +138,55 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                     </div>
                     <div className="relative flex flex-col items-start gap-3 lg:flex-row">
                         <div className="flex w-full flex-col p-2 lg:w-1/2">
-                            {decodedTransaction?.inputs?.length
-                                ? decodedTransaction.inputs.map(
-                                      (
-                                          input: TransactionInput,
-                                          index: number
-                                      ) => (
-                                          <button
-                                              key={index}
-                                              className={`mb-2 cursor-pointer rounded-lg p-2 ${
-                                                  highlightIndex?.input ===
-                                                  index
-                                                      ? "bg-orange-100 shadow"
-                                                      : "bg-white dark:bg-black"
-                                              }`}
-                                              onClick={() =>
-                                                  handleDetailChange(input)
-                                              }
-                                          >
-                                              <div className="flex items-center justify-between">
-                                                  <div
-                                                      className={`font-medium ${
-                                                          highlightIndex?.input ===
-                                                          index
-                                                              ? "text-gray-800 "
-                                                              : "text-gray-800 dark:text-gray-200 "
-                                                      }`}
-                                                  >
-                                                      Input {index + 1}
-                                                  </div>
-                                                  {highlightIndex?.input ===
-                                                      index && (
-                                                      <span
-                                                          className={`rounded-full bg-orange-200 px-3 py-1 text-sm ${
-                                                              highlightIndex?.input ===
-                                                              index
-                                                                  ? "text-gray-800"
-                                                                  : "text-black-800 dark:text-gray-200"
-                                                          }`}
-                                                      >
-                                                          {input.scriptSig
-                                                              ?.type ||
-                                                              "Type not specified"}
-                                                      </span>
-                                                  )}
-                                              </div>
-                                              <div className="text-left text-sm text-gray-600 dark:text-gray-400">
-                                                  Click to view details
-                                              </div>
-                                          </button>
-                                      )
-                                  )
-                                : null}
+                            {decodedTransaction?.inputs?.map(
+                                (input: TransactionInput, index: number) => (
+                                    <button
+                                        key={index}
+                                        className={`mb-2 cursor-pointer rounded-lg p-2 ${
+                                            highlightIndex?.input === index
+                                                ? "bg-orange-100 shadow"
+                                                : "bg-white dark:bg-black"
+                                        }`}
+                                        onClick={() =>
+                                            handleDetailChange(input)
+                                        }
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <div
+                                                className={`font-medium ${
+                                                    highlightIndex?.input ===
+                                                    index
+                                                        ? "text-gray-800 "
+                                                        : "text-gray-800 dark:text-gray-200 "
+                                                }`}
+                                            >
+                                                Input {index + 1}
+                                            </div>
+                                            <span
+                                                className={`rounded-full bg-orange-200 px-3 py-1 text-xs ${
+                                                    highlightIndex?.input ===
+                                                    index
+                                                        ? "text-gray-800"
+                                                        : "text-black-800 dark:text-gray-200"
+                                                }`}
+                                                title="This is the type of the previous transaction's output that this input is spending."
+                                            >
+                                                Prev Out:{" "}
+                                                {input.type || "Unknown"}
+                                            </span>
+                                        </div>
+                                        <div className="text-left text-sm text-gray-600 dark:text-gray-400">
+                                            Click to view details
+                                        </div>
+                                    </button>
+                                )
+                            )}
                         </div>
 
                         {decodedTransaction?.inputs &&
-                        decodedTransaction?.outputs ? (
+                            decodedTransaction?.outputs &&
                             decodedTransaction.inputs.length > 0 &&
-                            decodedTransaction.outputs.length > 0 ? (
+                            decodedTransaction.outputs.length > 0 && (
                                 <svg
                                     className="my-4 transform fill-current text-gray-500 lg:mx-2 lg:my-0 lg:translate-y-1/2"
                                     width="40"
@@ -200,56 +195,49 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                                 >
                                     <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
                                 </svg>
-                            ) : null
-                        ) : null}
+                            )}
                         <div className="flex w-full flex-col p-2 lg:w-1/2">
-                            {decodedTransaction?.outputs?.length
-                                ? decodedTransaction.inputs.map(
-                                      (
-                                          output: TransactionOutput,
-                                          index: number
-                                      ) => (
-                                          <button
-                                              key={index}
-                                              className={`mb-2 cursor-pointer rounded-lg p-2 ${highlightIndex?.output === index ? "bg-orange-100 shadow" : "bg-white dark:bg-black"}`}
-                                              onClick={() =>
-                                                  handleDetailChange(output)
-                                              }
-                                          >
-                                              <div className="flex items-center justify-between">
-                                                  <div
-                                                      className={`font-medium ${
-                                                          highlightIndex?.output ===
-                                                          index
-                                                              ? "text-gray-800 "
-                                                              : "text-gray-800 dark:text-gray-200 "
-                                                      }`}
-                                                  >
-                                                      Output {index + 1}
-                                                  </div>
-                                                  {highlightIndex?.output ===
-                                                      index && (
-                                                      <span
-                                                          className={`rounded-full bg-orange-200 px-3 py-1 text-sm ${
-                                                              highlightIndex?.output ===
-                                                              index
-                                                                  ? "text-gray-800"
-                                                                  : "text-black-800 dark:text-gray-200"
-                                                          }`}
-                                                      >
-                                                          {output.scriptPubKey
-                                                              ?.type ||
-                                                              "Type not specified"}
-                                                      </span>
-                                                  )}
-                                              </div>
-                                              <div className="text-left text-sm text-gray-600 dark:text-gray-400">
-                                                  {output.value} BTC
-                                              </div>
-                                          </button>
-                                      )
-                                  )
-                                : null}
+                            {decodedTransaction?.outputs?.map(
+                                (output: TransactionOutput, index: number) => (
+                                    <button
+                                        key={index}
+                                        className={`mb-2 cursor-pointer rounded-lg p-2 ${
+                                            highlightIndex?.output === index
+                                                ? "bg-orange-100 shadow"
+                                                : "bg-white dark:bg-black"
+                                        }`}
+                                        onClick={() =>
+                                            handleDetailChange(output)
+                                        }
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <div
+                                                className={`font-medium ${
+                                                    highlightIndex?.output ===
+                                                    index
+                                                        ? "text-gray-800 "
+                                                        : "text-gray-800 dark:text-gray-200 "
+                                                }`}
+                                            >
+                                                Output {index + 1}
+                                            </div>
+                                            <span
+                                                className={`rounded-full bg-orange-200 px-3 py-1 text-sm ${
+                                                    highlightIndex?.output ===
+                                                    index
+                                                        ? "text-gray-800"
+                                                        : "text-black-800 dark:text-gray-200"
+                                                }`}
+                                            >
+                                                {output.type || "Unknown"}
+                                            </span>
+                                        </div>
+                                        <div className="text-left text-sm text-gray-600 dark:text-gray-400">
+                                            {output.value} BTC
+                                        </div>
+                                    </button>
+                                )
+                            )}
                         </div>
                     </div>
                 </div>
