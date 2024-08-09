@@ -12,9 +12,13 @@
 # next.js
 /.next/
 /out/
+public/sitemap.xml
 
 # production
 /build
+
+# rss feed
+/public/feed.xml
 
 # misc
 .DS_Store
@@ -33,4 +37,11 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+next-env.d.ts
+
+# Contentlayer
+.contentlayer
+
+# vscode
+.vscode
 next-env.d.ts

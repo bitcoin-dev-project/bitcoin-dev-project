@@ -1,6 +1,36 @@
 import { Wrapper } from "@/components/Wrapper"
 import PageLevel from "@/components/page-level"
 import { tools } from "@/content/tools"
+import { genPageMetadata } from "../seo"
+
+export const metadata = genPageMetadata({
+    title: "Bitcoin tools and resources",
+    keywords:
+        "bitcoin, bitcoin grant, open source, tools, bitcoin resources, bitcoin tools, career, good first issues, bitcoin development, bitcoin topics",
+    description:
+        "From Learning to Action: Dive Into Bitcoin Development. Explore tools crafted to support your learning, building, and contributions in the Bitcoin ecosystem.",
+    openGraph: {
+        images: [
+            {
+                url: "https://bitcoindevs.xyz/images/pages-thumbnails/tools.png",
+                alt: "bitcoin tools"
+            }
+        ],
+        title: "Bitcoin tools and resources",
+        url: "https://bitcoindevs.xyz/tools",
+        type: "website",
+        description:
+            "From Learning to Action: Dive Into Bitcoin Development. Explore tools crafted to support your learning, building, and contributions in the Bitcoin ecosystem."
+    },
+    twitter: {
+        images: ["https://bitcoindevs.xyz/images/pages-thumbnails/tools.png"],
+        card: "summary_large_image",
+        title: "Bitcoin tools and resources",
+        creator: "@Bitcoin_Devs",
+        description:
+            "From Learning to Action: Dive Into Bitcoin Development. Explore tools crafted to support your learning, building, and contributions in the Bitcoin ecosystem."
+    }
+})
 
 export default function Explore() {
     return (
