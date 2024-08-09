@@ -119,5 +119,14 @@
       "High Priority"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/194",
+    "publishedAt": "2024-08-09T07:38:58Z",
+    "title": "cargo test failure",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
