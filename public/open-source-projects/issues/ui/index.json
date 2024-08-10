@@ -85,5 +85,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/ui/issues/474",
+    "publishedAt": "2024-08-08T18:24:16Z",
+    "title": "0.4.0 Broken Restart Setup",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
