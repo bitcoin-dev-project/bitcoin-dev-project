@@ -48,41 +48,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/219",
-    "publishedAt": "2023-10-06T13:25:02Z",
-    "title": "Gateway withdrawal modal does not show error",
-    "labels": [
-      "bug",
-      "gateway-ui"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/ui/issues/297",
-    "publishedAt": "2023-11-14T19:50:29Z",
-    "title": "`nix-guardian` running 2 UIs against the same Fedimintd instance",
-    "labels": [
-      "bug",
-      "development"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/ui/issues/343",
     "publishedAt": "2023-12-14T21:30:44Z",
     "title": "Guardian UI favicon and manifest.json reference non-existent `logo192.png`",
     "labels": [
       "bug",
       "guardian-ui"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/ui/issues/358",
-    "publishedAt": "2024-01-23T23:34:56Z",
-    "title": "leader should not restart after peers have moved to consensus running",
-    "labels": [
-      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
