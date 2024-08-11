@@ -640,14 +640,5 @@
       "RPC/REST/ZMQ"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/30628",
-    "publishedAt": "2024-08-11T06:07:30Z",
-    "title": "Чудовий початок роботи 👌💪",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
