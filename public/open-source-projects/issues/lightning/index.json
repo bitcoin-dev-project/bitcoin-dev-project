@@ -225,17 +225,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
-    "url": "https://github.com/ElementsProject/lightning/issues/6419",
-    "publishedAt": "2023-07-21T06:03:43Z",
-    "title": "For an invoice generated via an offer, decodepay isn't working anymore, while pay still is",
-    "labels": [
-      "bug",
-      "good first issue",
-      "UX ✨"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
     "url": "https://github.com/ElementsProject/lightning/issues/6571",
     "publishedAt": "2023-08-16T05:19:16Z",
     "title": "Hodlinvoice fail",
