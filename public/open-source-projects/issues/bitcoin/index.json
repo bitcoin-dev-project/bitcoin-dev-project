@@ -385,16 +385,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/26035",
-    "publishedAt": "2022-09-07T12:19:09Z",
-    "title": "Finding peers to connect to after -onlynet changes may be problematic",
-    "labels": [
-      "Bug",
-      "P2P"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/26096",
     "publishedAt": "2022-09-14T20:52:21Z",
     "title": "`listtransactions` fails to list self-send transactions (for imported descriptor wallet)",
