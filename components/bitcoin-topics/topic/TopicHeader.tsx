@@ -11,12 +11,6 @@ export function TopicHeader({ title, tags, summary }: any) {
                     <h1 className="text-6xl font-bold mb-6">{title}</h1>
                 </div>
             </header>
-            {tags.length > 0 && (
-                <div className="mb-5">
-                    <Metadata badges={tags} />
-                </div>
-            )}
-
             {summary && <Summary summary={summary} />}
         </header>
     )

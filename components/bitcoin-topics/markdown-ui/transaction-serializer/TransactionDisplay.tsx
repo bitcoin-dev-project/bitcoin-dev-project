@@ -167,7 +167,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                                                     highlightIndex?.input ===
                                                     index
                                                         ? "text-gray-800"
-                                                        : "text-black-800 dark:text-gray-200"
+                                                        : "text-black-800 dark:text-gray-800"
                                                 }`}
                                                 title="This is the type of the previous transaction's output that this input is spending."
                                             >
@@ -226,7 +226,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                                                     highlightIndex?.output ===
                                                     index
                                                         ? "text-gray-800"
-                                                        : "text-black-800 dark:text-gray-200"
+                                                        : "text-black-800 dark:text-gray-800"
                                                 }`}
                                             >
                                                 {output.type || "Unknown"}

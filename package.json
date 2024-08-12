@@ -32,6 +32,7 @@
         "contentlayer2": "^0.4.6",
         "cross-fetch": "^4.0.0",
         "dotenv": "^16.4.5",
+        "framer-motion": "^11.3.21",
         "github-slugger": "^2.0.0",
         "graphql": "^16.8.1",
         "lucide-react": "^0.390.0",
