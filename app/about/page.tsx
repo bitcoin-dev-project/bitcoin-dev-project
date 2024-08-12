@@ -1,4 +1,5 @@
 import { Wrapper } from "@/components/Wrapper"
+import { genPageMetadata } from "../seo"
 
 type Props = {
     content: string | React.ReactNode
@@ -14,6 +15,33 @@ const Item = ({ content, title }: Props) => (
     </div>
 )
 
+export const metadata = genPageMetadata({
+    title: "About | Bitcoin Dev Project",
+    keywords: "bitcoin, open source, good first issues, bitcoin development",
+    description:
+        "Our goal is to provide newcomers with resources and support for your bitcoin open source development journey.",
+    openGraph: {
+        images: [
+            {
+                url: "https://bitcoindevs.xyz/images/pages-thumbnails/about.png",
+                alt: "About BDP"
+            }
+        ],
+        title: "About | Bitcoin Dev Project Mission",
+        url: "https://bitcoindevs.xyz/about",
+        type: "website",
+        description:
+            "Our goal is to provide newcomers with resources and support for your bitcoin open source development journey."
+    },
+    twitter: {
+        images: ["https://bitcoindevs.xyz/images/pages-thumbnails/about.png"],
+        card: "summary_large_image",
+        title: "About | Bitcoin Dev Project",
+        creator: "@Bitcoin_Devs",
+        description:
+            "Our goal is to provide newcomers with resources and support for your bitcoin open source development journey."
+    }
+})
 export default function About() {
     return (
         <Wrapper>

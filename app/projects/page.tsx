@@ -2,6 +2,38 @@ import { Wrapper } from "@/components/Wrapper"
 import Button from "@/components/button"
 import PageLevel from "@/components/page-level"
 import { projects } from "@/content/projects"
+import { genPageMetadata } from "../seo"
+
+export const metadata = genPageMetadata({
+    title: "Discover bitcoin Open Source Projects",
+    keywords:
+        "bitcoin, bitcoin projects, bitcoin grant, open source, career, good first issues, bitcoin development, bitcoin topics",
+    description:
+        "It takes some work to go from curiosity to contribution. But that path is not often laid out clearly. Below are some stepping stones that will help you make your first open source contribution - whether in the form of comments, reviews, or writing your own PRs.",
+    openGraph: {
+        images: [
+            {
+                url: "https://bitcoindevs.xyz/images/pages-thumbnails/projects.png",
+                alt: "bitcoin projects"
+            }
+        ],
+        title: "Discover bitcoin Open Source Projects",
+        url: "https://bitcoindevs.xyz/projects",
+        type: "website",
+        description:
+            "It takes some work to go from curiosity to contribution. But that path is not often laid out clearly. Below are some stepping stones that will help you make your first open source contribution - whether in the form of comments, reviews, or writing your own PRs."
+    },
+    twitter: {
+        images: [
+            "https://bitcoindevs.xyz/images/pages-thumbnails/projects.png"
+        ],
+        card: "summary_large_image",
+        title: "Discover bitcoin Open Source Projects",
+        creator: "@Bitcoin_Devs",
+        description:
+            "It takes some work to go from curiosity to contribution. But that path is not often laid out clearly. Below are some stepping stones that will help you make your first open source contribution - whether in the form of comments, reviews, or writing your own PRs."
+    }
+})
 
 export default function Projects() {
     return (
