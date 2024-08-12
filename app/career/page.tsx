@@ -1,4 +1,5 @@
 import { Wrapper } from "@/components/Wrapper"
+import { genPageMetadata } from "../seo"
 
 type Props = {
     content: string | React.ReactNode
@@ -13,6 +14,35 @@ const Item = ({ content, title }: Props) => (
         <section className="text-lg max-md:text-md">{content}</section>
     </div>
 )
+
+export const metadata = genPageMetadata({
+    title: "Start Your Career in Bitcoin Open Source Development - Grants",
+    keywords:
+        "bitcoin, bitcoin grant, open source, career, good first issues, bitcoin development, bitcoin topics",
+    description:
+        "Start Your Career in Bitcoin Open Source Development and apply to earn a grant for full-time bitcoin open source work",
+    openGraph: {
+        images: [
+            {
+                url: "https://bitcoindevs.xyz/images/pages-thumbnails/career.png",
+                alt: "Bitcoin career"
+            }
+        ],
+        title: "Start Your Career in Bitcoin Open Source Development - Grants",
+        url: "https://bitcoindevs.xyz/career",
+        type: "website",
+        description:
+            "Start Your Career in Bitcoin Open Source Development and apply to earn a grant for full-time bitcoin open source work"
+    },
+    twitter: {
+        images: ["https://bitcoindevs.xyz/images/pages-thumbnails/career.png"],
+        card: "summary_large_image",
+        title: "Start Your Career in Bitcoin Open Source Development",
+        creator: "@Bitcoin_Devs",
+        description:
+            "Start Your Career in Bitcoin Open Source Development and apply to earn a grant for full-time bitcoin open source work"
+    }
+})
 
 export default function Career() {
     return (
