@@ -293,16 +293,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1125",
-    "publishedAt": "2023-09-14T14:31:46Z",
-    "title": "Calling `example_electrum sync` on an unconfirmed tx may result in the tx being stuck as unconfirmed eternally (according to the cli))",
-    "labels": [
-      "bug",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1134",
     "publishedAt": "2023-09-28T06:58:14Z",
     "title": "BIP 326 Anti Fee Sniping",
