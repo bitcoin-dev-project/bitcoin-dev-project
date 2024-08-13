@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.constructRepoQueries = void 0;
+exports.constructRepoQueries = constructRepoQueries;
 const sanitize_1 = require("../../utils/sanitize");
 const client_1 = require("@apollo/client");
 function constructRepoQueries(inputs) {
@@ -45,4 +45,3 @@ function constructRepoQueries(inputs) {
         }
     `;
 }
-exports.constructRepoQueries = constructRepoQueries;
