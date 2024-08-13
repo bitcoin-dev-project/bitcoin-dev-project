@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.swapImageUrl = exports.shuffle = exports.applySearch = exports.applyFilter = exports.applySort = exports.filterIssues = exports.createSortKeys = exports.getValues = exports.FILTERTAGS = exports.ISSUEOPTIONS = exports.SORTOPTIONS = void 0;
+exports.swapImageUrl = exports.applySearch = exports.applyFilter = exports.applySort = exports.createSortKeys = exports.FILTERTAGS = exports.ISSUEOPTIONS = exports.SORTOPTIONS = void 0;
+exports.getValues = getValues;
+exports.filterIssues = filterIssues;
+exports.shuffle = shuffle;
 exports.SORTOPTIONS = ["sort", "random", "newest first", "oldest first"];
 exports.ISSUEOPTIONS = ["labels", "good first issue", "bug", "help wanted"];
 exports.FILTERTAGS = [
@@ -24,7 +27,6 @@ function getValues({ key, issues }) {
     const uniqueProperties = Array.from(new Set(properties).values());
     return { properties: uniqueProperties };
 }
-exports.getValues = getValues;
 const createSortKeys = () => {
     const sortKeys = exports.SORTOPTIONS.slice(1).map((key) => {
         const dashed_key = key.split(" ").join("-");
@@ -51,7 +53,6 @@ function filterIssues(filterArgNkey, dataSet, sortKey, searchQuery) {
     }
     return result;
 }
-exports.filterIssues = filterIssues;
 // applies sort to the dataset or result
 // Sorts according to newest-issues, oldest-issues and relevance which is the default state
 const applySort = (sortKey, result) => {
@@ -135,7 +136,6 @@ function shuffle(data) {
     }
     return data;
 }
-exports.shuffle = shuffle;
 const swapImageUrl = (name, imageUrl) => {
     switch (name) {
         case "polar":
