@@ -10,7 +10,7 @@
         "compile:scripts": "rm -rf scripts && tsc --project tsconfig.scripts.json",
         "fetch-issues": "node scripts/helpers/fetch-issues.js",
         "dev": "next dev",
-        "build": "npm run submodules:update && next build && node ./scripts/rss/postbuild.mjs",
+        "build": "npm run submodules:update && next build && node ./rss/postbuild.mjs",
         "start": "next start",
         "lint": "next lint",
         "submodules:update": "git submodule update --init && git submodule update --remote"
