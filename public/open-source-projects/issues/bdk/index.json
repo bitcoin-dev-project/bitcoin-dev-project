@@ -391,5 +391,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1557",
+    "publishedAt": "2024-08-14T15:14:24Z",
+    "title": "Inconsistent use of `check_wallet_descriptor`",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
