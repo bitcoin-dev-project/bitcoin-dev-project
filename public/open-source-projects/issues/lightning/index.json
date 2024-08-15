@@ -342,5 +342,14 @@
       "backup"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
+  },
+  {
+    "url": "https://github.com/ElementsProject/lightning/issues/7559",
+    "publishedAt": "2024-08-12T13:25:31Z",
+    "title": "bkpr-listaccountevents crashing and bringing down lightningd ",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
