@@ -539,17 +539,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/29073",
-    "publishedAt": "2023-12-13T12:52:28Z",
-    "title": "ci: failure in `wallet_multiwallet.py --legacy-wallet` - (`void wallet::UnloadWallet(std::shared_ptr<CWallet> &&): Assertion 'it.second' failed.`)",
-    "labels": [
-      "Bug",
-      "Wallet",
-      "CI failed"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/29398",
     "publishedAt": "2024-02-07T09:47:49Z",
     "title": "Internal bug detected: Fee needed > fee paid",
