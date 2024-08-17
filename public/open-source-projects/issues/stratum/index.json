@@ -179,28 +179,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/844",
-    "publishedAt": "2024-04-12T16:16:49Z",
-    "title": "JDC is not doing fallback to solo-mining",
-    "labels": [
-      "bug",
-      "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/874",
-    "publishedAt": "2024-04-29T17:54:18Z",
-    "title": "undeterministic connection between JDC and pool",
-    "labels": [
-      "bug",
-      "important",
-      "sv2 pool",
-      "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/920",
     "publishedAt": "2024-05-21T12:24:49Z",
     "title": "JDC does not receive shares anymore from Translator if two new blocks are found in few seconds",
