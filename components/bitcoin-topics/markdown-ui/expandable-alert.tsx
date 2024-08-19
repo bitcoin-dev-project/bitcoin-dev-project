@@ -5,7 +5,9 @@ import {
     AlertTriangleIcon,
     InfoIcon,
     ChevronDownIcon,
-    ChevronUpIcon
+    ChevronUpIcon,
+    CopyIcon,
+    CheckIcon
 } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import clsx from "clsx"
@@ -13,7 +15,7 @@ import clsx from "clsx"
 interface ExpandableAlertProps {
     title: string
     children: React.ReactNode
-    type?: "important" | "warning" | "info" | "success"
+    type?: "important" | "warning" | "info" | "success" | "solution"
     expandable?: boolean
     initialLines?: number
 }
@@ -27,6 +29,7 @@ export default function ExpandableAlert({
 }: ExpandableAlertProps) {
     const [isExpanded, setIsExpanded] = useState(!expandable)
     const [isHovered, setIsHovered] = useState(false)
+    const [isCopied, setIsCopied] = useState(false)
 
     const alertStyles = {
         important: {
@@ -52,6 +55,12 @@ export default function ExpandableAlert({
             bgColor: "#dfede2",
             textColor: "#008a39",
             Icon: CheckCircleIcon
+        },
+        solution: {
+            borderColor: "#008a39",
+            bgColor: "#dfede2",
+            textColor: "#008a39",
+            Icon: CheckCircleIcon
         }
     }
 
@@ -61,6 +70,17 @@ export default function ExpandableAlert({
         setIsExpanded(!isExpanded)
     }
 
+    const handleCopy = () => {
+        const codeContent = React.Children.toArray(children)
+            .map((child: React.ReactNode) =>
+                React.isValidElement(child) ? child.props.children : child
+            )
+            .join("\n")
+        navigator.clipboard.writeText(codeContent as string)
+        setIsCopied(true)
+        setTimeout(() => setIsCopied(false), 2000)
+    }
+
     const childrenArray = React.Children.toArray(children)
     const initialContent = childrenArray.slice(0, initialLines)
     const expandedContent = childrenArray.slice(initialLines)
@@ -68,14 +88,14 @@ export default function ExpandableAlert({
     return (
         <div className="mx-auto mb-10 mt-10 prose max-w-3xl">
             <div
-                className={`border-l-4 p-6 rounded-lg`}
+                className="border-l-4 p-6 rounded-lg"
                 style={{
                     borderColor: borderColor,
                     backgroundColor: bgColor
                 }}
             >
                 <div className="flex items-center mb-4">
-                    <Icon className={`mr-3`} style={{ color: textColor }} />
+                    <Icon className="mr-3" style={{ color: textColor }} />
                     <h4
                         className="mt-0 mb-0 text-lg font-semibold"
                         style={{ color: textColor }}
@@ -84,7 +104,7 @@ export default function ExpandableAlert({
                     </h4>
                 </div>
 
-                <div className="mt-2 ">{initialContent}</div>
+                <div className="mt-2 relative">{initialContent}</div>
 
                 {expandable && expandedContent.length > 0 && (
                     <>

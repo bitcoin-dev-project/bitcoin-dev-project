@@ -21,11 +21,11 @@ const config: Config = {
                     "300": "#f9b450",
                     "400": "#f7931a",
                     "500": "#f1760f",
-                    "600": "#d65309",
-                    "700": "#b1360c",
-                    "800": "#902b10",
-                    "900": "#762311",
-                    "950": "#440f04"
+                    "600": "#e56c0d",
+                    "700": "#d9630b",
+                    "800": "#cc5a0a",
+                    "900": "#bf5109",
+                    "950": "#b24808"
                 },
                 white: {
                     DEFAULT: "#FFF",
@@ -71,9 +71,26 @@ const config: Config = {
                     "950": "#1c1c1e"
                 }
             },
+            keyframes: {
+                updown: {
+                    "0%, 100%": { transform: "translateY(0)" },
+                    "50%": { transform: "translateY(-10px)" }
+                },
+                leftright: {
+                    "0%, 100%": { transform: "translateX(0)" },
+                    "50%": { transform: "translateX(-10px)" }
+                }
+            },
+            animation: {
+                updown: "updown 2s infinite",
+                leftright: "leftright 1.5s infinite"
+            },
             fontFamily: {
                 brawler: ["var(--brawler-font)"],
                 inter: ["var(--inter-font)"]
+            },
+            fontSize: {
+                lg: ["17px", "28px"]
             }
         }
     },

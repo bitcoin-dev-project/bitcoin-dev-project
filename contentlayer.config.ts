@@ -64,7 +64,15 @@ export const Topic = defineDocumentType(() => ({
         bibliography: { type: "string" },
         canonicalUrl: { type: "string" },
         relatedtopics: { type: "list", of: { type: "string" } },
-        category: { type: "string" }
+        category: { type: "string" },
+        children: {
+            type: "list",
+            of: { type: "string" },
+            description: "List of child topic slugs"
+        },
+        parent: { type: "string" },
+        project: { type: "boolean", default: false },
+        order: { type: "number", default: 0 }
     },
     computedFields: {
         ...computedFields,
@@ -80,6 +88,14 @@ export const Topic = defineDocumentType(() => ({
                 image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
                 url: `${siteMetadata.siteUrl}/topics/${doc._raw.flattenedPath}`
             })
+        },
+        childTopics: {
+            type: "json",
+            resolve: (doc) => {
+                return {
+                    childSlugs: doc.children || []
+                }
+            }
         }
     }
 }))

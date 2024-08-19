@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { useId } from "react"
 import clsx from "clsx"
@@ -52,7 +54,7 @@ const icons = {
 }
 
 const iconStyles = {
-    orange: "[--icon-foreground:theme(colors.orange.900)] [--icon-background:theme(colors.white)]",
+    orange: "[--icon-foreground:theme(colors.orange.900)] [--icon-background:theme(colors.white.500)]",
     amber: "[--icon-foreground:theme(colors.amber.900)] [--icon-background:theme(colors.amber.100)]"
 }
 
@@ -65,8 +67,8 @@ export function Icon({
     color?: keyof typeof iconStyles
     icon: keyof typeof icons
 } & Omit<React.ComponentPropsWithoutRef<"svg">, "color">) {
-    let id = useId()
-    let IconComponent = icons[icon]
+    const id = useId()
+    const IconComponent = icons[icon]
 
     return (
         <svg
