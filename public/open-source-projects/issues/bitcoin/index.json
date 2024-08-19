@@ -619,14 +619,5 @@
       "RPC/REST/ZMQ"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/30645",
-    "publishedAt": "2024-08-13T14:57:43Z",
-    "title": "doc: deduplicate list of chain/network strings in RPC/parameter help texts",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
