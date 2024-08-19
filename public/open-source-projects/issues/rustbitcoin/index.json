@@ -116,5 +116,15 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/3186",
+    "publishedAt": "2024-08-19T10:38:33Z",
+    "title": "`private_key_debug_is_obfuscated` test is in the wrong crate",
+    "labels": [
+      "Tests",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
