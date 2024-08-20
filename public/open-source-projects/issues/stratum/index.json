@@ -179,6 +179,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
+    "url": "https://github.com/stratum-mining/stratum/issues/840",
+    "publishedAt": "2024-04-10T08:42:53Z",
+    "title": "Custom transactions from JDC removed from mempool during update",
+    "labels": [
+      "bug",
+      "job-declarator-client"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
     "url": "https://github.com/stratum-mining/stratum/issues/920",
     "publishedAt": "2024-05-21T12:24:49Z",
     "title": "JDC does not receive shares anymore from Translator if two new blocks are found in few seconds",
@@ -277,22 +287,23 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/1054",
-    "publishedAt": "2024-07-16T09:22:21Z",
-    "title": "JDS is missing checks on DeclaredMiningJobs",
-    "labels": [
-      "bug",
-      "job-declarator-server"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/1073",
     "publishedAt": "2024-07-26T15:53:20Z",
     "title": " Add fmt an clippy as git hook for commit",
     "labels": [
       "good first issue",
       "backlog"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1082",
+    "publishedAt": "2024-08-07T14:29:39Z",
+    "title": "JDC should stop sending shares upstream if pool prev hash is different from JDC prev hash",
+    "labels": [
+      "bug",
+      "job declarator",
+      "job-declarator-client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
