@@ -256,15 +256,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/4936",
-    "publishedAt": "2024-04-11T20:22:06Z",
-    "title": "Module-specific endpoint constants should live in their respective modules",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/5013",
     "publishedAt": "2024-04-18T20:44:02Z",
     "title": "Panic on Wallet startup",
