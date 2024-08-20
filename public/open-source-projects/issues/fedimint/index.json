@@ -295,15 +295,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/5863",
-    "publishedAt": "2024-08-14T21:41:19Z",
-    "title": "Upgrade tests for `gatewayd` fail vs master",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/5879",
     "publishedAt": "2024-08-17T14:13:42Z",
     "title": "LDK node returns network as `main` instead of `bitcoin` on mainnet",
