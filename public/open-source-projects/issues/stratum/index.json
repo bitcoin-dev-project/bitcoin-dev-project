@@ -210,18 +210,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/953",
-    "publishedAt": "2024-06-03T20:51:04Z",
-    "title": "MG test templates",
-    "labels": [
-      "help wanted",
-      "test",
-      "important",
-      "message-generator"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/954",
     "publishedAt": "2024-06-03T21:05:50Z",
     "title": "MG message library",
