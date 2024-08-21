@@ -146,15 +146,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/3924",
-    "publishedAt": "2023-12-12T16:47:55Z",
-    "title": "Add license and README link to each `Cargo.toml`",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/3937",
     "publishedAt": "2023-12-13T19:29:33Z",
     "title": "Database overwriting element when expecting insertion of new entry",
@@ -282,16 +273,6 @@
     "labels": [
       "bug",
       "wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/5879",
-    "publishedAt": "2024-08-17T14:13:42Z",
-    "title": "LDK node returns network as `main` instead of `bitcoin` on mainnet",
-    "labels": [
-      "bug",
-      "lightning"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
