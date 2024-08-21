@@ -94,17 +94,19 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
         index: number,
         type: "inputs" | "outputs"
     ): void => {
+        let newSelectedDetail: ScriptDetail | null = null
+
         if ("scriptSig" in detail) {
-            setSelectedDetail(
+            newSelectedDetail =
                 selectedDetail === detail.scriptSig ? null : detail.scriptSig
-            )
         } else if ("scriptPubKey" in detail) {
-            setSelectedDetail(
+            newSelectedDetail =
                 selectedDetail === detail.scriptPubKey
                     ? null
                     : detail.scriptPubKey
-            )
         }
+
+        setSelectedDetail(newSelectedDetail)
 
         if (
             highlightIndex &&
@@ -131,6 +133,9 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                         {displayedItems.map((item, index) => (
                             <motion.button
                                 key={index}
+                                onClick={() =>
+                                    handleDetailChange(item, index, type)
+                                }
                                 className={`mb-2 w-full cursor-pointer rounded-lg p-2 border ${
                                     highlightIndex?.[
                                         type as keyof typeof highlightIndex
