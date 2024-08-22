@@ -294,5 +294,16 @@
       "job-declarator-client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1138",
+    "publishedAt": "2024-08-22T08:23:01Z",
+    "title": "SRI most important, but NOT critical bugs",
+    "labels": [
+      "bug",
+      "backlog",
+      "tracker"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
