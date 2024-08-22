@@ -336,15 +336,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1407",
-    "publishedAt": "2024-04-18T13:45:33Z",
-    "title": "`Wallet::create_signers` should return the `KeychainTxOutIndex` changeset",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1462",
     "publishedAt": "2024-06-06T03:02:19Z",
     "title": "Examples don't show how to properly initialize a IndexedTxGraph etc from disk",
