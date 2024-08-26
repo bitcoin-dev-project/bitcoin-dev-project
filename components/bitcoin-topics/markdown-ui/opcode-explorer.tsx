@@ -22,6 +22,26 @@ const opcodeData = {
             "/bitcoin-topics/static/images/topics/overview/OP_CHECKSIG.svg",
         svgId: "etLaMCOGQ3q1"
     },
+    OP_CHECKMULTISIG: {
+        hex: "0xAE",
+        description:
+            "Verifies multiple signatures against multiple public keys. It checks if at least m of n signatures are valid. If yes push 1 (true) to the stack, otherwise 0 (false)",
+        asm: "0 <Signature2> <Signature3> 2 <PublicKey1> <PublicKey2> <PublicKey3> 3 OP_CHECKMULTISIG",
+        hexCode:
+            "0x00 <Signature2> <Signature3> 0x52 <PublicKey1> <PublicKey2> <PublicKey3> 0x53 0xAE",
+        svgPath:
+            "/bitcoin-topics/static/images/topics/overview/OP_CHECKMULTISIG.svg",
+        svgId: "eMfFZSNeGgU1"
+    },
+    OP_RETURN: {
+        hex: "0x6A",
+        description:
+            "Marks the output as containing data and makes it unspendable. It is often used to embed arbitrary data into the blockchain.",
+        asm: "OP_RETURN <data>",
+        hexCode: "0x6A <data>",
+        svgPath: "/bitcoin-topics/static/images/topics/overview/OP_RETURN.svg",
+        svgId: "ePRvDAyVHFs1"
+    },
     OP_DUP: {
         hex: "0x76",
         description:
@@ -38,7 +58,7 @@ const opcodeData = {
         asm: "5 5 OP_EQUAL",
         hexCode: "0x05 0x05 0x87",
         svgPath: "/bitcoin-topics/static/images/topics/overview/OP_EQUAL.svg",
-        svgId: "eejD8pvxZnV1"
+        svgId: "enWCL7dSHsN1"
     },
     OP_HASH160: {
         hex: "0xA9",
@@ -53,54 +73,30 @@ const opcodeData = {
         hex: "0x88",
         description:
             "Compares the top two items on the stack for equality. If they are not equal, the script fails.",
-        asm: "<data> <hash> OP_EQUALVERIFY",
-        hexCode: "<data> <hash> 0x88",
-        svgPath: "/bitcoin-topics/static/images/topics/overview/p2pk.svg",
-        svgId: "esVE0LwtziS1"
-    },
-    OP_CHECKMULTISIG: {
-        hex: "0xAE",
-        description:
-            "Verifies multiple signatures against a set of public keys and the transaction data.",
-        asm: "<sig1> <sig2> <pubkey1> <pubkey2> <pubkey3> 2 OP_CHECKMULTISIG",
-        hexCode: "<sig1> <sig2> <pubkey1> <pubkey2> <pubkey3> 0xAE",
-        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pkh.svg",
-        svgId: "e6TEc1LyYNP1"
-    },
-    OP_RETURN: {
-        hex: "0x6A",
-        description:
-            "Marks the transaction output as invalid, used to carry data without requiring Bitcoin payment.",
-        asm: "OP_RETURN <data>",
-        hexCode: "0x6A <data>",
-        svgPath: "/bitcoin-topics/static/images/topics/overview/OP_RETURN.svg",
-        svgId: "qrsT2u3V4W5x"
+        asm: "5 5 OP_EQUAL",
+        hexCode: "0x05 0x05 0x87",
+        svgPath:
+            "/bitcoin-topics/static/images/topics/overview/OP_EQUALVERIFY.svg",
+        svgId: "eO6lxqRz2Gw1"
     },
     OP_IF: {
         hex: "0x63",
         description:
-            "Marks the beginning of a conditional block, executing the block if the top stack value is true.",
-        asm: "OP_IF <statements> OP_ENDIF",
-        hexCode: "0x63 <statements> 0x68",
+            "Evaluates a condition. If the condition is true (non-zero), it executes the statements after OP_IF. Otherwise, it jumps to the code after OP_ELSE, if present, or OP_ENDIF.",
+        asm: "<condition> OP_IF <true branch code> OP_ELSE <false branch code> OP_ENDIF",
+        hexCode:
+            "<condition> 0x63 <true branch code> 0x67 <false branch code> 0x68",
         svgPath: "/bitcoin-topics/static/images/topics/overview/OP_IF.svg",
-        svgId: "defG6H7i8J9k"
+        svgId: "eP9fSuUOhc11"
     },
     OP_ELSE: {
         hex: "0x67",
         description:
-            "Defines the beginning of the else block of a conditional structure.",
+            "Marks the beginning of the false branch of a conditional execution (used after OP_IF). The code after OP_ELSE is executed if the condition evaluated by OP_IF is false (zero).",
         asm: "OP_IF <true_statements> OP_ELSE <false_statements> OP_ENDIF",
         hexCode: "0x63 <true_statements> 0x67 <false_statements> 0x68",
         svgPath: "/bitcoin-topics/static/images/topics/overview/OP_ELSE.svg",
-        svgId: "lmnO0P1Q2R3s"
-    },
-    OP_ENDIF: {
-        hex: "0x68",
-        description: "Ends a conditional block previously started with OP_IF.",
-        asm: "OP_IF <statements> OP_ENDIF",
-        hexCode: "0x63 <statements> 0x68",
-        svgPath: "/bitcoin-topics/static/images/topics/overview/OP_ENDIF.svg",
-        svgId: "tuvW4X5Y6Z7a"
+        svgId: "eUCz5G0ZlvY1"
     }
 }
 interface SvgatorPlayer {
@@ -120,6 +116,7 @@ const OpCodeExplorer = () => {
     const [searchTerm, setSearchTerm] = useState<string>("")
     const [currentStep, setCurrentStep] = useState<number>(0)
     const [isPlaying, setIsPlaying] = useState<boolean>(false)
+    const [hasStarted, setHasStarted] = useState<boolean>(false)
     const [totalSteps, setTotalSteps] = useState<number>(4)
     const [isAnimating, setIsAnimating] = useState(false)
     const svgRef = useRef<HTMLObjectElement | null>(null)
@@ -171,6 +168,7 @@ const OpCodeExplorer = () => {
     useEffect(() => {
         setCurrentStep(0)
         setIsPlaying(false)
+        setHasStarted(false)
         playerRef.current = null
         setTimeout(initializeSvgPlayer, 100)
     }, [selectedOpCode, initializeSvgPlayer])
@@ -201,11 +199,14 @@ const OpCodeExplorer = () => {
                 clearTimeout(animationTimeoutRef.current)
             }
             setIsAnimating(true)
+            setIsPlaying(true)
             playerRef.current.seekTo(startTime)
             playerRef.current.play()
             animationTimeoutRef.current = setTimeout(() => {
                 playerRef.current?.pause()
                 setIsAnimating(false)
+                setIsPlaying(false)
+                setHasStarted(true)
             }, 1000)
         }
     }, [])
@@ -221,12 +222,17 @@ const OpCodeExplorer = () => {
 
     const handleNext = useCallback(() => {
         if (isAnimating) return
-        setCurrentStep((prev) => {
-            const newStep = Math.min(totalSteps - 1, prev + 1)
-            playOneSecond(newStep * 1000)
-            return newStep
-        })
-    }, [isAnimating, playOneSecond, totalSteps])
+        if (!hasStarted) {
+            playOneSecond(0)
+            setCurrentStep(0)
+        } else {
+            setCurrentStep((prev) => {
+                const newStep = Math.min(totalSteps - 1, prev + 1)
+                playOneSecond(newStep * 1000)
+                return newStep
+            })
+        }
+    }, [isAnimating, playOneSecond, totalSteps, hasStarted])
 
     const handlePlay = useCallback(() => {
         if (playerRef.current) {
