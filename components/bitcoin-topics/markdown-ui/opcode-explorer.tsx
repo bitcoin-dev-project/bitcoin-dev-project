@@ -87,7 +87,7 @@ const opcodeData = {
         hexCode:
             "<condition> 0x63 <true branch code> 0x67 <false branch code> 0x68",
         svgPath: "/bitcoin-topics/static/images/topics/overview/OP_IF.svg",
-        svgId: "eP9fSuUOhc11"
+        svgId: "eXi1yJfSEOH1"
     },
     OP_ELSE: {
         hex: "0x67",
@@ -96,7 +96,7 @@ const opcodeData = {
         asm: "OP_IF <true_statements> OP_ELSE <false_statements> OP_ENDIF",
         hexCode: "0x63 <true_statements> 0x67 <false_statements> 0x68",
         svgPath: "/bitcoin-topics/static/images/topics/overview/OP_ELSE.svg",
-        svgId: "eUCz5G0ZlvY1"
+        svgId: "exNKX69acQq1"
     }
 }
 interface SvgatorPlayer {
