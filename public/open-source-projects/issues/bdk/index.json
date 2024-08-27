@@ -401,5 +401,14 @@
       "discussion"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1578",
+    "publishedAt": "2024-08-27T13:50:32Z",
+    "title": "PSBT Creation: Change Address Index Skipped on InsufficientFunds",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
