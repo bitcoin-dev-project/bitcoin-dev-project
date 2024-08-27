@@ -608,16 +608,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/30620",
-    "publishedAt": "2024-08-09T18:25:04Z",
-    "title": "wallet: setting changes are subject to race conditions",
-    "labels": [
-      "Bug",
-      "Wallet",
-      "RPC/REST/ZMQ"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
