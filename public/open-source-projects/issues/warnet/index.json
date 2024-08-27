@@ -10,17 +10,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/warnet/issues/27",
-    "publishedAt": "2023-08-15T18:19:12Z",
-    "title": "Create a `PyNode` agent",
-    "labels": [
-      "enhancement",
-      "good first issue",
-      "backlog"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/29",
     "publishedAt": "2023-08-15T18:20:47Z",
     "title": "scenario/persona: preload a chain / wallet ",
