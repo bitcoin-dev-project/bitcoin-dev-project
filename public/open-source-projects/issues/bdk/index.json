@@ -391,5 +391,15 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1577",
+    "publishedAt": "2024-08-27T10:25:57Z",
+    "title": "Address gap limit?",
+    "labels": [
+      "bug",
+      "discussion"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
