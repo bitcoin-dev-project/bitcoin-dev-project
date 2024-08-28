@@ -305,18 +305,5 @@
       "tracker"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1147",
-    "publishedAt": "2024-08-27T09:17:33Z",
-    "title": "framing_sv2 set wrong header channel bit ",
-    "labels": [
-      "bug",
-      "good first issue",
-      "help wanted",
-      "important",
-      "release"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
