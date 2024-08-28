@@ -70,17 +70,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   },
   {
-    "url": "https://github.com/jamaljsr/polar/issues/836",
-    "publishedAt": "2024-02-21T21:47:41Z",
-    "title": "Feature Request: add a description field for each network",
-    "labels": [
-      "enhancement",
-      "good first issue",
-      "up for grabs"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
-  },
-  {
     "url": "https://github.com/jamaljsr/polar/issues/986",
     "publishedAt": "2024-08-24T19:24:04Z",
     "title": "Bug: GUI does not take the decimal point into account when showing the Taproot Assets balance",
