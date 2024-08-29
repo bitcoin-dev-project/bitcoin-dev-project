@@ -326,16 +326,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1362",
-    "publishedAt": "2024-02-28T00:09:03Z",
-    "title": "Update CI to prevent merging any prints to stdout ",
-    "labels": [
-      "bug",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1462",
     "publishedAt": "2024-06-06T03:02:19Z",
     "title": "Examples don't show how to properly initialize a IndexedTxGraph etc from disk",
