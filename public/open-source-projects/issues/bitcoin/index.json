@@ -603,7 +603,7 @@
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/30764",
     "publishedAt": "2024-08-30T11:36:51Z",
-    "title": "wallet: WARNING: ThreadSanitizer: lock-order-inversion (potential deadlock) (pid=32090)",
+    "title": "test: WARNING: ThreadSanitizer: lock-order-inversion (potential deadlock) (pid=32090)",
     "labels": [
       "Bug",
       "Wallet",
