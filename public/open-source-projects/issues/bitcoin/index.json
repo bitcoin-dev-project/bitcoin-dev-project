@@ -599,5 +599,16 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/30764",
+    "publishedAt": "2024-08-30T11:36:51Z",
+    "title": "wallet: WARNING: ThreadSanitizer: lock-order-inversion (potential deadlock) (pid=32090)",
+    "labels": [
+      "Bug",
+      "Wallet",
+      "Tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
