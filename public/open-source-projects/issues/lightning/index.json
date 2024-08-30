@@ -342,5 +342,15 @@
       "backup"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
+  },
+  {
+    "url": "https://github.com/ElementsProject/lightning/issues/7626",
+    "publishedAt": "2024-08-30T05:58:50Z",
+    "title": "Incorrect CLN version in Docker image",
+    "labels": [
+      "bug",
+      "docker"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
