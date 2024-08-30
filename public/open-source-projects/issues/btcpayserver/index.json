@@ -54,6 +54,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/5715",
+    "publishedAt": "2024-01-31T19:26:20Z",
+    "title": "[Bug]: Can't spend Taproot inputs using PSBTs",
+    "labels": [
+      "Bug",
+      "need-info"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/5797",
     "publishedAt": "2024-02-28T17:01:06Z",
     "title": "Failed to import a Multisig Bitcoin wallet -with any of the available options-",
