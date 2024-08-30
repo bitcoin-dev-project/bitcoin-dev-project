@@ -19,15 +19,13 @@ import {
     PanInfo
 } from "framer-motion"
 import { ChevronRight } from "lucide-react"
-
-const editUrl = (path: string): string =>
-    `${siteMetadata.topicsRepo}/blob/main/topics/${path}`
+import { GitHubIcon } from "@/public/images/topics-hero/GitHubIcon"
 
 interface LayoutProps {
     content: CoreContent<Topic>
     authorDetails: CoreContent<Authors>[]
-    next?: { path: string; title: string } | undefined
-    prev?: { path: string; title: string } | undefined
+    next?: { path: string; title: string }
+    prev?: { path: string; title: string }
     children: ReactNode
 }
 
@@ -69,6 +67,20 @@ export default function TopicLayout({
             document.body.style.overflow = "unset"
         }
     }, [isNavOpen])
+
+    const githubEditUrl = `https://github.com/jrakibi/bitcoin-topics/edit/main/topics/${content.slug}.mdx`
+
+    const EditOnGitHubButton = () => (
+        <a
+            href={githubEditUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-3 py-1.5 mt-6 text-sm font-normal text-gray-600 bg-transparent border border-gray-300 rounded hover:bg-gray-50 hover:text-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-200 transition-colors duration-200"
+        >
+            <GitHubIcon className="w-4 h-4 mr-2" />
+            Suggest Edits
+        </a>
+    )
 
     return (
         <div className="flex w-full flex-col">
@@ -169,11 +181,16 @@ export default function TopicLayout({
                                 summary={content.summary}
                             />
                             <Prose>{children}</Prose>
+                            {/* Add the GitHub edit button for mobile */}
+                            <div className="max-w-3xl mx-auto mt-8 flex justify-end">
+                                <EditOnGitHubButton />
+                            </div>
                         </article>
                         <PrevNextLinks prev={prev} next={next} />
                     </motion.div>
                 </motion.div>
 
+                {/* Desktop Main Content */}
                 <div className="hidden lg:block min-w-0 max-w-3xl flex-auto px-4 py-16 lg:mx-auto lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
                     <article>
                         <TopicHeader
@@ -182,6 +199,11 @@ export default function TopicLayout({
                             summary={content.summary}
                         />
                         <Prose>{children}</Prose>
+
+                        {/* Add the GitHub edit button for desktop */}
+                        <div className="max-w-3xl mx-auto mt-8 flex justify-end">
+                            <EditOnGitHubButton />
+                        </div>
                     </article>
                     <PrevNextLinks prev={prev} next={next} />
                 </div>

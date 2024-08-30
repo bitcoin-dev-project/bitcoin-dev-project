@@ -20,10 +20,9 @@ export async function generateMetadata({
     const authorDetails = getAuthorDetails(post.authors || ["default"])
     const authors = authorDetails.map((author) => author.name)
 
-    const imageList =
-        typeof post.images === "string"
-            ? [post.images]
-            : post.images || [siteMetadata.socialBanner]
+    const imageList = [].concat(
+        post.images?.length > 0 ? post.images : siteMetadata.socialBanner
+    )
     const ogImages = imageList.map((img: string) => ({
         url: img.includes("http") ? img : siteMetadata.siteUrl + img
     }))
