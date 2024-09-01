@@ -33,7 +33,7 @@ const categoryOrder = [
     "BIPS",
     "Others",
     "References",
-    "Contribution",
+    "Contribution"
 ]
 
 export function Navigation({
@@ -47,11 +47,13 @@ export function Navigation({
 }) {
     const pathname = usePathname()
     const posts = useMemo(() => allCoreContent(sortPosts(allTopics)), [])
-    const [expandedTopics, setExpandedTopics] = useState<Record<string, boolean>>({})
+    const [expandedTopics, setExpandedTopics] = useState<
+        Record<string, boolean>
+    >({})
 
     // Load expanded state from localStorage on component mount
     useEffect(() => {
-        const savedState = localStorage.getItem('expandedTopics')
+        const savedState = localStorage.getItem("expandedTopics")
         if (savedState) {
             setExpandedTopics(JSON.parse(savedState))
         }
@@ -59,7 +61,7 @@ export function Navigation({
 
     // Save expanded state to localStorage whenever it changes
     useEffect(() => {
-        localStorage.setItem('expandedTopics', JSON.stringify(expandedTopics))
+        localStorage.setItem("expandedTopics", JSON.stringify(expandedTopics))
     }, [expandedTopics])
 
     const childSlugs = new Set(
@@ -128,7 +130,7 @@ export function Navigation({
     }, [posts])
 
     const toggleTopic = useCallback((topicHref: string) => {
-        setExpandedTopics(prev => ({
+        setExpandedTopics((prev) => ({
             ...prev,
             [topicHref]: !prev[topicHref]
         }))
@@ -137,21 +139,28 @@ export function Navigation({
     // Update expanded state when pathname changes
     useEffect(() => {
         const newExpandedState: Record<string, boolean> = {}
-        navigation.forEach(section => {
-            section.links.forEach(link => {
-                if (link.children && (link.href === pathname || link.children.some(child => child.href === pathname))) {
+        navigation.forEach((section) => {
+            section.links.forEach((link) => {
+                if (
+                    link.children &&
+                    (link.href === pathname ||
+                        link.children.some((child) => child.href === pathname))
+                ) {
                     newExpandedState[link.href] = true
                 }
             })
         })
-        setExpandedTopics(prev => {
-            const updated = {...prev, ...newExpandedState}
-            return JSON.stringify(updated) !== JSON.stringify(prev) ? updated : prev
+        setExpandedTopics((prev) => {
+            const updated = { ...prev, ...newExpandedState }
+            return JSON.stringify(updated) !== JSON.stringify(prev)
+                ? updated
+                : prev
         })
     }, [pathname, navigation])
 
     const getIcon = useCallback((iconName: string) => {
-        const IconComponent = Icons[iconName as keyof typeof Icons] || Icons.FaQuestionCircle
+        const IconComponent =
+            Icons[iconName as keyof typeof Icons] || Icons.FaQuestionCircle
         return <IconComponent className="inline-block mr-2 text-current" />
     }, [])
 
@@ -176,13 +185,10 @@ export function Navigation({
                         <h2 className="font-display font-bold text-gray-900 dark:text-white mb-2">
                             {section.title}
                         </h2>
-                        <ul
-                            role="list"
-                            className="space-y-2 pl-2"
-                        >
+                        <ul role="list" className="space-y-2 pl-2">
                             {section.links.map((link) => (
                                 <li key={link.href} className="relative">
-                                    <div 
+                                    <div
                                         className="flex items-center cursor-pointer"
                                         onClick={() => toggleTopic(link.href)}
                                     >
@@ -202,38 +208,53 @@ export function Navigation({
                                             {link.icon && getIcon(link.icon)}
                                             {link.title}
                                         </Link>
-                                        {link.children && link.children.length > 0 && (
-                                            <span className="ml-1 text-xs flex-shrink-0">
-                                                {expandedTopics[link.href] 
-                                                    ? <FaChevronDown className="w-3 h-3" />
-                                                    : <FaChevronRight className="w-3 h-3" />
-                                                }
-                                            </span>
-                                        )}
+                                        {link.children &&
+                                            link.children.length > 0 && (
+                                                <span className="ml-1 text-xs flex-shrink-0">
+                                                    {expandedTopics[
+                                                        link.href
+                                                    ] ? (
+                                                        <FaChevronDown className="w-3 h-3" />
+                                                    ) : (
+                                                        <FaChevronRight className="w-3 h-3" />
+                                                    )}
+                                                </span>
+                                            )}
                                     </div>
-                                    {link.children && link.children.length > 0 && expandedTopics[link.href] && (
-                                        <ul className="mt-1 space-y-1 pl-4">
-                                            {link.children.map((childLink) => (
-                                                <li
-                                                    key={childLink.href}
-                                                    className="relative"
-                                                >
-                                                    <Link
-                                                        href={childLink.href}
-                                                        onClick={onLinkClick}
-                                                        className={clsx(
-                                                            "block font-normal w-full py-1 rounded-md",
-                                                            childLink.href === pathname
-                                                                ? "text-orange-500"
-                                                                : "text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
-                                                        )}
-                                                    >
-                                                        {childLink.title}
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
+                                    {link.children &&
+                                        link.children.length > 0 &&
+                                        expandedTopics[link.href] && (
+                                            <ul className="mt-1 space-y-1 pl-4">
+                                                {link.children.map(
+                                                    (childLink) => (
+                                                        <li
+                                                            key={childLink.href}
+                                                            className="relative"
+                                                        >
+                                                            <Link
+                                                                href={
+                                                                    childLink.href
+                                                                }
+                                                                onClick={
+                                                                    onLinkClick
+                                                                }
+                                                                className={clsx(
+                                                                    "block font-normal w-full py-1 rounded-md",
+                                                                    childLink.href ===
+                                                                        pathname
+                                                                        ? "text-orange-500"
+                                                                        : "text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+                                                                )}
+                                                            >
+                                                                {
+                                                                    childLink.title
+                                                                }
+                                                            </Link>
+                                                        </li>
+                                                    )
+                                                )}
+                                            </ul>
+                                        )}
                                 </li>
                             ))}
                         </ul>

@@ -95,7 +95,9 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                 <div className="border border-gray-200 dark:border-gray-700 rounded-lg py-6 px-6 bg-gray-50 dark:bg-gray-800">
                     <div className="grid grid-cols-12 gap-3 mb-3">
                         <div className="col-span-2">
-                            <label className="block text-xs mb-1 text-gray-600 dark:text-gray-400">Prefix</label>
+                            <label className="block text-xs mb-1 text-gray-600 dark:text-gray-400">
+                                Prefix
+                            </label>
                             <input
                                 type="text"
                                 value={prefix}
@@ -222,7 +224,9 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                 </div>
 
                 <div className="flex items-center mt-3">
-                    <label className="mr-2 text-sm text-gray-600 dark:text-gray-400">Network:</label>
+                    <label className="mr-2 text-sm text-gray-600 dark:text-gray-400">
+                        Network:
+                    </label>
                     <div className="relative">
                         <select
                             value={network}

@@ -21,7 +21,7 @@ import {
     useSpring,
     PanInfo
 } from "framer-motion"
-import { MoreVertical } from 'lucide-react'
+import { MoreVertical } from "lucide-react"
 import React from "react"
 
 const editUrl = (path: string): string =>
@@ -56,7 +56,7 @@ export default function TopicLayout({
     const toggleNav = () => setIsNavOpen(!isNavOpen)
 
     const toggleExpand = (href: string) => {
-        setExpandedTopics(prev => {
+        setExpandedTopics((prev) => {
             const newSet = new Set(prev)
             if (newSet.has(href)) {
                 newSet.delete(href)
@@ -91,7 +91,7 @@ export default function TopicLayout({
 
     useEffect(() => {
         if (pathname) {
-            const pathParts = pathname.split('/').filter(Boolean)
+            const pathParts = pathname.split("/").filter(Boolean)
             setCurrentPath(pathParts)
         }
     }, [pathname])
@@ -101,8 +101,8 @@ export default function TopicLayout({
             setIsScrolled(window.scrollY > 0)
         }
 
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
     return (
@@ -130,15 +130,21 @@ export default function TopicLayout({
                     style={{ x: swipeXSmooth }}
                 >
                     {/* File Tree and Navigation Toggle */}
-                    <div className={`fixed top-16 left-0 right-0 z-40 flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
-                        isScrolled ? 'bg-white/0 dark:bg-gray-900/0 backdrop-blur-md' : 'bg-transparent'
-                    }`}>
+                    <div
+                        className={`fixed top-16 left-0 right-0 z-40 flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
+                            isScrolled
+                                ? "bg-white/0 dark:bg-gray-900/0 backdrop-blur-md"
+                                : "bg-transparent"
+                        }`}
+                    >
                         <div className="flex items-center text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
                             {currentPath.map((part, index) => (
                                 <React.Fragment key={index}>
-                                    {index > 0 && <span className="mx-1">/</span>}
+                                    {index > 0 && (
+                                        <span className="mx-1">/</span>
+                                    )}
                                     <Link
-                                        href={`/${currentPath.slice(0, index + 1).join('/')}`}
+                                        href={`/${currentPath.slice(0, index + 1).join("/")}`}
                                         className="whitespace-nowrap hover:text-orange-500"
                                     >
                                         {part}
@@ -204,8 +210,12 @@ export default function TopicLayout({
                                         className="rounded-lg"
                                     />
                                     <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/70 to-transparent">
-                                        <h2 className="text-2xl font-semibold text-white mb-2">Project</h2>
-                                        <h1 className="text-4xl font-extralight text-white">{title}</h1>
+                                        <h2 className="text-2xl font-semibold text-white mb-2">
+                                            Project
+                                        </h2>
+                                        <h1 className="text-4xl font-extralight text-white">
+                                            {title}
+                                        </h1>
                                     </div>
                                 </div>
                                 <article>
@@ -245,8 +255,12 @@ export default function TopicLayout({
                                     className="rounded-lg"
                                 />
                                 <div className="max-w-3xl mx-auto absolute inset-0 flex flex-col justify-end p-8 pl-0">
-                                    <h2 className="text-2xl font-semibold text-white mb-2">Project</h2>
-                                    <h1 className="text-4xl font-extralight text-white">{title}</h1>
+                                    <h2 className="text-2xl font-semibold text-white mb-2">
+                                        Project
+                                    </h2>
+                                    <h1 className="text-4xl font-extralight text-white">
+                                        {title}
+                                    </h1>
                                 </div>
                             </div>
                             <article>

@@ -5,7 +5,9 @@ import { motion, Variants } from "framer-motion"
 const MailingListSignup = () => {
     const [firstName, setFirstName] = useState("")
     const [email, setEmail] = useState("")
-    const [effectType, setEffectType] = useState<"shimmer" | "colorChange">("shimmer")
+    const [effectType, setEffectType] = useState<"shimmer" | "colorChange">(
+        "shimmer"
+    )
     const [mailchimpResponse, setMailchimpResponse] = useState("")
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
@@ -135,11 +137,11 @@ const MailingListSignup = () => {
             {(mailchimpResponse || error) && (
                 <div className="mt-2">
                     {mailchimpResponse && (
-                        <p className="text-green-500 text-sm">{mailchimpResponse}</p>
+                        <p className="text-green-500 text-sm">
+                            {mailchimpResponse}
+                        </p>
                     )}
-                    {error && (
-                        <p className="text-red-500 text-sm">{error}</p>
-                    )}
+                    {error && <p className="text-red-500 text-sm">{error}</p>}
                 </div>
             )}
         </div>

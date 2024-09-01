@@ -163,26 +163,26 @@ const Quiz = ({
                                             option ===
                                                 questions[currentQuestion]
                                                     .correctAnswer && (
-                                            <motion.div
-                                                initial={{
-                                                    opacity: 0,
-                                                    scale: 0
-                                                }}
-                                                animate={{
-                                                    opacity: 1,
-                                                    scale: 1
-                                                }}
-                                                exit={{
-                                                    opacity: 0,
-                                                    scale: 0
-                                                }}
-                                            >
-                                                <CheckCircle
-                                                    className="text-green-500"
-                                                    size={20}
-                                                />
-                                            </motion.div>
-                                        )}
+                                                <motion.div
+                                                    initial={{
+                                                        opacity: 0,
+                                                        scale: 0
+                                                    }}
+                                                    animate={{
+                                                        opacity: 1,
+                                                        scale: 1
+                                                    }}
+                                                    exit={{
+                                                        opacity: 0,
+                                                        scale: 0
+                                                    }}
+                                                >
+                                                    <CheckCircle
+                                                        className="text-green-500"
+                                                        size={20}
+                                                    />
+                                                </motion.div>
+                                            )}
                                     </AnimatePresence>
                                 </motion.button>
                             )

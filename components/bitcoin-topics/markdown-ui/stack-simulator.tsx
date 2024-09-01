@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from "framer-motion"
 import * as bitcoin from "bitcoinjs-lib"
 import bs58 from "bs58"
 import crypto from "crypto"
-import { ec as EC } from 'elliptic';
+import { ec as EC } from "elliptic"
 
-const ec = new EC('secp256k1');
+const ec = new EC("secp256k1")
 
 type StackItem = string | number | boolean | bigint | Buffer
 
@@ -103,7 +103,10 @@ const opcodes: Opcode[] = [
         name: "OP_CHECKSIG",
         execute: (stack) => {
             if (stack.length < 2) return [...stack, "Error: Insufficient items"]
-            const [pubKeyBuffer, signatureBuffer] = [stack.pop(), stack.pop()] as [Buffer, Buffer]
+            const [pubKeyBuffer, signatureBuffer] = [
+                stack.pop(),
+                stack.pop()
+            ] as [Buffer, Buffer]
             try {
                 const pubKey = ec.keyFromPublic(pubKeyBuffer)
                 const signature = signatureBuffer.slice(0, -1) // Remove the hash type
@@ -135,7 +138,9 @@ const opcodes: Opcode[] = [
                 for (const signature of signatures) {
                     for (const pubKeyBuffer of pubKeys) {
                         const pubKey = ec.keyFromPublic(pubKeyBuffer)
-                        if (pubKey.verify(messageHash, signature.slice(0, -1))) {
+                        if (
+                            pubKey.verify(messageHash, signature.slice(0, -1))
+                        ) {
                             validCount++
                             break
                         }
