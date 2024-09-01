@@ -174,7 +174,7 @@ const StackSimulator = ({ showOperations }: StackSimulatorProps) => {
                 stackItem = Buffer.from(newItem.slice(2), "hex")
             } else {
                 try {
-                    stackItem = bs58.decode(newItem)
+                    stackItem = Buffer.from(bs58.decode(newItem))
                 } catch {
                     stackItem = Buffer.from(newItem)
                 }
