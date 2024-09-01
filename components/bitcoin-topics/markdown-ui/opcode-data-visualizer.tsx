@@ -103,8 +103,8 @@ const OpcodeDataVisualizer: React.FC = () => {
             </p>
             <svg
                 ref={svgRef}
-                width="863"
-                height="545"
+                width="120%"
+                height="auto"
                 viewBox="0 0 1063 545"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

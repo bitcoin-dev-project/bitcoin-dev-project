@@ -71,14 +71,34 @@ export default function ExpandableAlert({
     }
 
     const handleCopy = () => {
-        const codeContent = React.Children.toArray(children)
-            .map((child: React.ReactNode) =>
-                React.isValidElement(child) ? child.props.children : child
-            )
-            .join("\n")
-        navigator.clipboard.writeText(codeContent as string)
-        setIsCopied(true)
-        setTimeout(() => setIsCopied(false), 2000)
+        const extractText = (node: React.ReactNode): string => {
+            if (typeof node === "string") {
+                return node
+            } else if (React.isValidElement(node)) {
+                if (typeof node.props.children === "string") {
+                    return node.props.children
+                } else if (Array.isArray(node.props.children)) {
+                    return node.props.children.map(extractText).join("")
+                } else if (React.isValidElement(node.props.children)) {
+                    return extractText(node.props.children)
+                }
+            } else if (Array.isArray(node)) {
+                return node.map(extractText).join("")
+            }
+            return ""
+        }
+
+        const codeContent = extractText(children)
+
+        navigator.clipboard
+            .writeText(codeContent)
+            .then(() => {
+                setIsCopied(true)
+                setTimeout(() => setIsCopied(false), 2000)
+            })
+            .catch((err) => {
+                console.error("Failed to copy text: ", err)
+            })
     }
 
     const childrenArray = React.Children.toArray(children)
@@ -94,14 +114,33 @@ export default function ExpandableAlert({
                     backgroundColor: bgColor
                 }}
             >
-                <div className="flex items-center mb-4">
-                    <Icon className="mr-3" style={{ color: textColor }} />
-                    <h4
-                        className="mt-0 mb-0 text-lg font-semibold"
-                        style={{ color: textColor }}
-                    >
-                        {title}
-                    </h4>
+                <div className="flex items-center mb-4 justify-between">
+                    <div className="flex items-center">
+                        <Icon
+                            className="mr-3 w-6 h-6"
+                            style={{ color: textColor }}
+                        />
+                        <h4
+                            className="mt-0 mb-0 text-lg font-semibold"
+                            style={{ color: textColor }}
+                        >
+                            {title}
+                        </h4>
+                    </div>
+                    {type === "solution" && (
+                        <button
+                            onClick={handleCopy}
+                            className="flex items-center text-sm"
+                            style={{ color: textColor }}
+                        >
+                            {isCopied ? (
+                                <CheckIcon size={16} className="mr-1 w-4 h-4" />
+                            ) : (
+                                <CopyIcon size={16} className="mr-1 w-4 h-4" />
+                            )}
+                            {isCopied ? "Copied!" : "Copy code"}
+                        </button>
+                    )}
                 </div>
 
                 <div className="mt-2 relative">{initialContent}</div>
@@ -122,9 +161,15 @@ export default function ExpandableAlert({
                                 }}
                             >
                                 {isExpanded ? (
-                                    <ChevronUpIcon size={20} />
+                                    <ChevronUpIcon
+                                        size={20}
+                                        className="w-5 h-5"
+                                    />
                                 ) : (
-                                    <ChevronDownIcon size={20} />
+                                    <ChevronDownIcon
+                                        size={20}
+                                        className="w-5 h-5"
+                                    />
                                 )}
                             </motion.div>
                             <span className="ml-2">

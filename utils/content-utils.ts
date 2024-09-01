@@ -116,7 +116,6 @@ const topicTree = buildTopicTree(allTopics)
 export function getTopicData(slug: string): {
     prev?: { path: string; title: string }
     next?: { path: string; title: string }
-    next: { path: string; title: string }
     post: Topic
     authorDetails: CoreContent<Authors>[]
     mainContent: CoreContent<Topic>

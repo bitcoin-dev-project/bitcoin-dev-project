@@ -244,7 +244,7 @@ export default function ScriptStackVisualizer({
     }
 
     return (
-        <div className="mx-auto py-1 -mx-4 sm:-mx-8 md:-mx-16 lg:-mx-32 xl:-mx-40">
+        <div className="mx-auto py-1 full-width">
             <div className="mx-auto py-1 px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center py-3">
                     <div className="mx-auto flex w-full max-w-6xl flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 rounded-lg bg-[#272E35] p-4 shadow-md">

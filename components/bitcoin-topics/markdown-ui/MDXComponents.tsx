@@ -6,7 +6,6 @@ import Image from "../markdown-ui/Image"
 import SvgDisplay from "./script-visualizer/SvgDisplay"
 import ScriptStackVisualizer from "./script-visualizer/scriptVisualizer"
 import TransactionsDisplay from "./transaction-serializer/TransactionDisplay"
-import CodeEditor from "./CodeEditor"
 import { QuickLink, QuickLinks } from "./QuickLinks"
 import Hint from "./Hints"
 import MinimalVideoPlayer from "./minimal-video-player"
@@ -27,7 +26,6 @@ export const components: MDXComponents = {
     BlogNewsletterForm,
     ScriptStackVisualizer,
     SvgDisplay,
-    CodeEditor,
     TransactionsDisplay,
     QuickLinks,
     QuickLink,

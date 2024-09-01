@@ -4,10 +4,9 @@ import { LightbulbIcon } from "lucide-react"
 
 interface HintProps {
     hints: string[]
-    title?: string
 }
 
-const Hint = ({ hints, title = "Hints" }: HintProps) => {
+const Hint = ({ hints }: HintProps) => {
     const [revealedHints, setRevealedHints] = useState<number>(0)
 
     const revealNextHint = () => {

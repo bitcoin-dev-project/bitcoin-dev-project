@@ -49,7 +49,7 @@ const SandpackComponent = ({
     theme = gruvboxDark
 }: SandpackComponentProps) => {
     return (
-        <div className="mx-auto py-1 -mx-4 sm:-mx-8 md:-mx-16 lg:-mx-32 xl:-mx-40">
+        <div className="mx-auto py-1 full-width">
             <DynamicSandpack
                 files={files}
                 template={"react"}

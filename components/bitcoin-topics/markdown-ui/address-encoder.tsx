@@ -21,15 +21,6 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
     const [isPrefixValid, setIsPrefixValid] = useState<boolean>(true)
     const [isAnimating, setIsAnimating] = useState<boolean>(true)
 
-    const updatePrefix = useCallback(() => {
-        const newPrefix = network === "mainnet" ? "05" : "c4"
-        setPrefix(newPrefix)
-    }, [network])
-
-    useEffect(() => {
-        updatePrefix()
-    }, [updatePrefix])
-
     const validatePrefix = (value: string): boolean => {
         return value === "05" || value === "c4"
     }
@@ -74,6 +65,10 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
         }
         setIsPrefixValid(validatePrefix(prefix))
     }, [prefix, scriptHash, calculateChecksumAndAddress])
+
+    useEffect(() => {
+        setPrefix(network === "mainnet" ? "05" : "c4")
+    }, [network])
 
     const generateRandomScriptHash = () => {
         const randomBytes = crypto.getRandomValues(new Uint8Array(20))

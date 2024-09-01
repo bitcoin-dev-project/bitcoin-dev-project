@@ -8,7 +8,8 @@ import {
     RotateCcw,
     Send,
     ThumbsUp,
-    XCircle
+    XCircle,
+    Flag
 } from "lucide-react"
 
 interface ButtonProps {
@@ -57,6 +58,7 @@ const Quiz = ({
     const [showExplanation, setShowExplanation] = useState<boolean>(false)
     const [isCorrect, setIsCorrect] = useState<boolean>(false)
     const [correctAnswersCount, setCorrectAnswersCount] = useState<number>(0)
+    const [quizCompleted, setQuizCompleted] = useState<boolean>(false)
 
     const handleAnswerClick = (answer: string): void => {
         setSelectedAnswer(answer)
@@ -82,12 +84,17 @@ const Quiz = ({
         }
     }
 
+    const handleFinish = (): void => {
+        setQuizCompleted(true)
+    }
+
     const handleReset = (): void => {
         setCurrentQuestion(0)
         setSelectedAnswer("")
         setShowExplanation(false)
         setIsCorrect(false)
         setCorrectAnswersCount(0)
+        setQuizCompleted(false)
     }
 
     const totalQuestions = questions.length
@@ -99,7 +106,7 @@ const Quiz = ({
                     {questionText}
                 </h2>
             )}
-            {!showExplanation || currentQuestion < totalQuestions - 1 ? (
+            {!quizCompleted ? (
                 <>
                     <div className="mb-4">
                         <h3 className="text-md font-medium mb-2 text-gray-800 dark:text-[#E5E6F1]">
@@ -190,15 +197,19 @@ const Quiz = ({
                             >
                                 SUBMIT
                             </Button>
-                        ) : (
+                        ) : currentQuestion < totalQuestions - 1 ? (
                             <Button
                                 onClick={handleNextQuestion}
-                                disabled={
-                                    currentQuestion >= questions.length - 1
-                                }
                                 icon={<ArrowRight size={16} />}
                             >
                                 NEXT
+                            </Button>
+                        ) : (
+                            <Button
+                                onClick={handleFinish}
+                                icon={<Flag size={16} />}
+                            >
+                                FINISH
                             </Button>
                         )}
                     </div>

@@ -265,7 +265,7 @@ const OpCodeExplorer = () => {
     }, [])
 
     return (
-        <div className="mx-auto py-1 -mx-4 sm:-mx-8 md:-mx-16 lg:-mx-32 xl:-mx-40">
+        <div className="mx-auto py-1 full-width">
             <motion.div
                 className="bg-[#272E35] p-4 sm:p-6 rounded-lg text-sm sm:text-base"
                 initial={{ opacity: 0, y: 20 }}

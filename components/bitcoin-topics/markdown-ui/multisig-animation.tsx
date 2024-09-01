@@ -23,14 +23,12 @@ const MultisigAnimation = () => {
         new Array(2).fill(false)
     )
     const [animatingKey, setAnimatingKey] = useState<number | null>(null)
-    const [isLocked, setIsLocked] = useState(true)
     const [isAuthorized, setIsAuthorized] = useState(false)
     const [isFullscreen, setIsFullscreen] = useState(false)
     const containerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const signedCount = signatures.filter(Boolean).length
-        setIsLocked(signedCount < requiredSignatures)
         setIsAuthorized(signedCount >= requiredSignatures)
     }, [signatures, requiredSignatures])
 
@@ -54,7 +52,6 @@ const MultisigAnimation = () => {
     const restartAnimation = () => {
         setSignatures(new Array(numParticipants).fill(false))
         setAnimatingKey(null)
-        setIsLocked(true)
         setIsAuthorized(false)
     }
 
@@ -67,149 +64,155 @@ const MultisigAnimation = () => {
         setRequiredSignatures(required)
         setSignatures(new Array(participants).fill(false))
         setAnimatingKey(null)
-        setIsLocked(true)
         setIsAuthorized(false)
     }
 
     return (
-        <div
-            className={`mx-auto py-1 -mx-4 sm:-mx-8 md:-mx-16 lg:-mx-32 xl:-mx-40 ${
-                isFullscreen
-                    ? "fixed inset-0 z-50 bg-white dark:bg-[#272E35] overflow-auto"
-                    : ""
-            }`}
-        >
+        <div className="full-width ">
             <div
-                className={`mx-auto py-4 ${
-                    isFullscreen ? "w-full h-full" : "w-full max-w-7xl"
+                className={`mx-auto py-1 " ${
+                    isFullscreen
+                        ? "fixed inset-0 z-50 bg-white dark:bg-[#272E35] overflow-auto"
+                        : ""
                 }`}
-                ref={containerRef}
             >
-                <div className="w-full bg-white dark:bg-[#272E35] rounded-lg overflow-hidden shadow-md">
-                    <div className="bg-gray-100 dark:bg-[#454C54] p-4 flex flex-wrap justify-between items-center text-sm">
-                        <div className="flex flex-wrap items-center space-x-4 mb-2 sm:mb-0">
-                            <span className="text-gray-800 dark:text-[#E5E6F1] font-semibold">
-                                Multisig Setup:
-                            </span>
-                            <select
-                                className="bg-white dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded px-4 py-1 pr-8 appearance-none"
-                                value={requiredSignatures}
-                                onChange={(e) =>
-                                    updateMultisigSetup(
-                                        numParticipants,
-                                        Number(e.target.value)
-                                    )
-                                }
-                            >
+                <div
+                    className={`mx-auto py-4 ${
+                        isFullscreen ? "w-full h-full" : "w-full max-w-7xl"
+                    }`}
+                    ref={containerRef}
+                >
+                    <div className="w-full bg-white dark:bg-[#272E35] rounded-lg overflow-hidden shadow-md">
+                        <div className="bg-gray-100 dark:bg-[#454C54] p-4 flex flex-wrap justify-between items-center text-sm">
+                            <div className="flex flex-wrap items-center space-x-4 mb-2 sm:mb-0">
+                                <span className="text-gray-800 dark:text-[#E5E6F1] font-semibold">
+                                    Multisig Setup:
+                                </span>
+                                <select
+                                    className="bg-white dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded px-4 py-1 pr-8 appearance-none"
+                                    value={requiredSignatures}
+                                    onChange={(e) =>
+                                        updateMultisigSetup(
+                                            numParticipants,
+                                            Number(e.target.value)
+                                        )
+                                    }
+                                >
+                                    {Array.from(
+                                        { length: numParticipants },
+                                        (_, i) => i + 1
+                                    ).map((n) => (
+                                        <option key={n} value={n}>
+                                            {n}
+                                        </option>
+                                    ))}
+                                </select>
+
+                                <span className="text-gray-800 dark:text-[#E5E6F1] font-semibold">
+                                    Of
+                                </span>
+
+                                <select
+                                    className="bg-white dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded px-4 py-1 pr-8 appearance-none"
+                                    value={numParticipants}
+                                    onChange={(e) =>
+                                        setNumParticipants(
+                                            Number(e.target.value)
+                                        )
+                                    }
+                                >
+                                    {[1, 2, 3].map((n) => (
+                                        <option key={n} value={n}>
+                                            {n}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            <div>
+                                <button
+                                    onClick={restartAnimation}
+                                    className="p-2 bg-gray-200 dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded-full hover:bg-gray-300 dark:hover:bg-[#5A6270] transition-colors mr-2"
+                                >
+                                    <RotateCcw size={16} />
+                                </button>
+                                <button
+                                    onClick={toggleFullscreen}
+                                    className="p-2 bg-gray-200 dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded-full hover:bg-gray-300 dark:hover:bg-[#5A6270] transition-colors"
+                                >
+                                    {isFullscreen ? (
+                                        <Minimize2 size={16} />
+                                    ) : (
+                                        <Maximize2 size={16} />
+                                    )}
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="p-4 sm:p-8 relative">
+                            <div className="flex flex-wrap justify-center mb-8 sm:mb-32 space-y-8 sm:space-y-0 sm:space-x-12 relative">
                                 {Array.from(
                                     { length: numParticipants },
-                                    (_, i) => i + 1
-                                ).map((n) => (
-                                    <option key={n} value={n}>
-                                        {n}
-                                    </option>
-                                ))}
-                            </select>
-
-                            <span className="text-gray-800 dark:text-[#E5E6F1] font-semibold">
-                                Of
-                            </span>
-
-                            <select
-                                className="bg-white dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded px-4 py-1 pr-8 appearance-none"
-                                value={numParticipants}
-                                onChange={(e) =>
-                                    setNumParticipants(Number(e.target.value))
-                                }
-                            >
-                                {[1, 2, 3].map((n) => (
-                                    <option key={n} value={n}>
-                                        {n}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-
-                        <div>
-                            <button
-                                onClick={restartAnimation}
-                                className="p-2 bg-gray-200 dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded-full hover:bg-gray-300 dark:hover:bg-[#5A6270] transition-colors mr-2"
-                            >
-                                <RotateCcw size={16} />
-                            </button>
-                            <button
-                                onClick={toggleFullscreen}
-                                className="p-2 bg-gray-200 dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded-full hover:bg-gray-300 dark:hover:bg-[#5A6270] transition-colors"
-                            >
-                                {isFullscreen ? (
-                                    <Minimize2 size={16} />
-                                ) : (
-                                    <Maximize2 size={16} />
+                                    (_, index) => (
+                                        <div
+                                            key={index}
+                                            className="relative flex flex-col items-center w-full sm:w-auto"
+                                        >
+                                            <Participant
+                                                name={participantNames[index]}
+                                                onSign={() => handleSign(index)}
+                                                signed={signatures[index]}
+                                                disabled={
+                                                    signatures.filter(Boolean)
+                                                        .length >=
+                                                    requiredSignatures
+                                                }
+                                                isAnimating={
+                                                    animatingKey === index
+                                                }
+                                                imageUrl={`/bitcoin-topics/static/images/topics/overview/p2ms/${participantNames[index].toLowerCase()}.jpg`}
+                                            />
+                                            <ConnectingLine
+                                                isActive={signatures[index]}
+                                                isAnimating={
+                                                    animatingKey === index
+                                                }
+                                                isAuthorized={isAuthorized}
+                                            />
+                                        </div>
+                                    )
                                 )}
-                            </button>
-                        </div>
-                    </div>
+                            </div>
 
-                    <div className="p-4 sm:p-8 relative">
-                        <div className="flex flex-wrap justify-center mb-8 sm:mb-32 space-y-8 sm:space-y-0 sm:space-x-12 relative">
-                            {Array.from(
-                                { length: numParticipants },
-                                (_, index) => (
-                                    <div
-                                        key={index}
-                                        className="relative flex flex-col items-center w-full sm:w-auto"
-                                    >
-                                        <Participant
-                                            name={participantNames[index]}
-                                            onSign={() => handleSign(index)}
-                                            signed={signatures[index]}
-                                            disabled={
-                                                signatures.filter(Boolean)
-                                                    .length >=
-                                                requiredSignatures
-                                            }
-                                            isAnimating={animatingKey === index}
-                                            imageUrl={`/bitcoin-topics/static/images/topics/overview/p2ms/${participantNames[index].toLowerCase()}.jpg`}
-                                        />
-                                        <ConnectingLine
-                                            isActive={signatures[index]}
-                                            isAnimating={animatingKey === index}
-                                            isAuthorized={isAuthorized}
-                                        />
-                                    </div>
-                                )
+                            <div
+                                className="relative mx-auto"
+                                style={{
+                                    width: `${Math.min(
+                                        numParticipants * 192 +
+                                            (numParticipants - 1) * 48,
+                                        100
+                                    )}%`,
+                                    maxWidth: "100%"
+                                }}
+                            >
+                                <MultisigWallet
+                                    signatures={signatures}
+                                    isAuthorized={isAuthorized}
+                                    animatingKey={animatingKey}
+                                    requiredSignatures={requiredSignatures}
+                                    totalParticipants={numParticipants}
+                                />
+                            </div>
+
+                            {isAuthorized && (
+                                <div className="text-center text-green-500 flex items-center justify-center mt-8">
+                                    <CheckCircle className="mr-2" size={24} />
+                                    <span className="text-lg font-semibold">
+                                        Transaction Authorized
+                                    </span>
+                                </div>
                             )}
                         </div>
-
-                        <div
-                            className="relative mx-auto"
-                            style={{
-                                width: `${Math.min(
-                                    numParticipants * 192 +
-                                        (numParticipants - 1) * 48,
-                                    100
-                                )}%`,
-                                maxWidth: "100%"
-                            }}
-                        >
-                            <MultisigWallet
-                                signatures={signatures}
-                                isLocked={isLocked}
-                                animatingKey={animatingKey}
-                                isAuthorized={isAuthorized}
-                                requiredSignatures={requiredSignatures}
-                                totalParticipants={numParticipants}
-                            />
-                        </div>
-
-                        {isAuthorized && (
-                            <div className="text-center text-green-500 flex items-center justify-center mt-8">
-                                <CheckCircle className="mr-2" size={24} />
-                                <span className="text-lg font-semibold">
-                                    Transaction Authorized
-                                </span>
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>
@@ -250,16 +253,14 @@ const ConnectingLine = ({
 
 const MultisigWallet = ({
     signatures,
-    isLocked,
-    animatingKey,
     isAuthorized,
+    animatingKey,
     requiredSignatures,
     totalParticipants
 }: {
     signatures: boolean[]
-    isLocked: boolean
-    animatingKey: number | null
     isAuthorized: boolean
+    animatingKey: number | null
     requiredSignatures: number
     totalParticipants: number
 }) => (
@@ -269,7 +270,7 @@ const MultisigWallet = ({
         }`}
     >
         <div className="absolute top-2 right-2 flex items-center space-x-2">
-            {isLocked ? (
+            {!isAuthorized ? (
                 <Lock size={28} className="text-gray-500 dark:text-gray-100" />
             ) : (
                 <Unlock size={28} className="text-green-500" />
