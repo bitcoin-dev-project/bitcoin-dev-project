@@ -39,23 +39,23 @@ const BitcoinTransactionViewer: React.FC<{ detail: ScriptDetail }> = ({
     }
 
     return (
-        <div className="h-full space-y-4 rounded-lg bg-gray-50 dark:bg-[#272E35] p-3 font-mono text-sm">
+        <div className="h-full space-y-4 rounded-lg bg-gray-100 dark:bg-gray-900 p-3 font-mono text-sm">
             <div className="flex flex-col gap-3 lg:flex-row">
                 <div className="w-full p-2 lg:w-1/2">
-                    <strong className="mb-2 block text-gray-700 dark:text-[#E5E6F1]">
+                    <strong className="mb-2 block text-gray-800 dark:text-gray-100">
                         ASM:
                     </strong>
-                    <div className="mt-1 whitespace-pre-wrap break-words rounded-md border border-gray-300 dark:border-[#454C54] bg-gray-50 dark:bg-[#272E35] p-2 text-gray-700 dark:text-[#E5E6F1]">
+                    <div className="mt-1 whitespace-pre-wrap break-words rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-2 text-gray-800 dark:text-gray-100">
                         {detail.asm
                             ? displayAsStack(detail.asm)
                             : "ASM data not available"}
                     </div>
                 </div>
                 <div className="w-full p-2 lg:w-1/2">
-                    <strong className="mb-2 block text-gray-700 dark:text-[#E5E6F1]">
+                    <strong className="mb-2 block text-gray-800 dark:text-gray-100">
                         HEX:
                     </strong>
-                    <div className="mt-1 whitespace-pre-wrap break-words rounded-md border border-gray-300 dark:border-[#454C54] bg-gray-50 dark:bg-[#272E35] p-2 text-gray-700 dark:text-[#E5E6F1]">
+                    <div className="mt-1 whitespace-pre-wrap break-words rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-2 text-gray-800 dark:text-gray-100">
                         {detail.hex || "HEX data not available"}
                     </div>
                 </div>
@@ -140,9 +140,9 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                                     highlightIndex?.[
                                         type as keyof typeof highlightIndex
                                     ] === index
-                                        ? "bg-orange-100 dark:bg-orange-900 border-orange-200 dark:border-orange-800"
-                                        : "bg-gray-50 dark:bg-[#2D3748] border-gray-200 dark:border-gray-700"
-                                } hover:bg-gray-100 dark:hover:bg-[#3A4A5E] transition-colors duration-200`}
+                                        ? "bg-orange-100 dark:bg-orange-900/30 border-orange-300 dark:border-orange-700"
+                                        : "bg-gray-50 dark:bg-gray-800 border-gray-300 dark:border-gray-700"
+                                } hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200`}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 animate={
@@ -162,13 +162,13 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                             >
                                 <div className="flex items-center justify-between">
                                     <div
-                                        className={`font-medium text-gray-700 dark:text-gray-200`}
+                                        className={`font-medium text-gray-800 dark:text-gray-100`}
                                     >
                                         {type === "inputs" ? "Input" : "Output"}{" "}
                                         {index + 1}
                                     </div>
                                     <span
-                                        className={`rounded-full bg-orange-200 dark:bg-orange-800 px-3 py-1 text-xs text-orange-800 dark:text-orange-200`}
+                                        className={`rounded-full bg-orange-100 dark:bg-orange-900/50 px-3 py-1 text-xs text-orange-700 dark:text-orange-300`}
                                     >
                                         {type === "inputs"
                                             ? `Prev Out: ${item.type || "Unknown"}`
@@ -186,7 +186,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                 </div>
                 {!isExpanded && remainingCount > 0 && (
                     <div className="absolute bottom-0 left-0 right-0">
-                        <div className="h-12 bg-gradient-to-t from-gray-50 dark:from-[#2D3748] to-transparent"></div>
+                        <div className="h-12 bg-gradient-to-t from-gray-50 dark:from-gray-800 to-transparent"></div>
                         <motion.button
                             onClick={() =>
                                 setExpandedSections((prev) => ({
@@ -208,22 +208,22 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
 
     return (
         <div className="container mx-auto py-1">
-            <div className="mb-6 rounded-lg bg-gray-50 dark:bg-[#272E35] p-3">
+            <div className="mb-6 rounded-lg bg-gray-100 dark:bg-gray-900 p-3">
                 <div className="h-full space-y-4 rounded-lg font-mono text-sm">
                     <div className="text-center">
                         {txTitle && (
-                            <h1 className="mb-1 text-base font-semibold text-gray-800 dark:text-[#E5E6F1]">
+                            <h1 className="mb-1 text-base font-semibold text-gray-800 dark:text-gray-100">
                                 Transaction: {txTitle}
                             </h1>
                         )}
                         {txId && (
-                            <p className="m-1 whitespace-pre-wrap break-words text-gray-600 dark:text-[#E5E6F1]">
+                            <p className="m-1 whitespace-pre-wrap break-words text-gray-600 dark:text-gray-300">
                                 Transaction ID:{" "}
                                 <a
                                     href={`https://mempool.space/tx/${txId}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-500 hover:text-gray-600 dark:text-[#E5E6F1] dark:hover:text-gray-400 underline"
+                                    className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 underline"
                                 >
                                     {txId}
                                 </a>
@@ -232,7 +232,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                     </div>
                     <div className="relative flex flex-col items-start gap-3 lg:flex-row">
                         <div className="flex w-full flex-col p-2 lg:w-1/2">
-                            <span className="font-semibold text-xl mt-4 mb-4 text-gray-800 dark:text-[#E5E6F1]">
+                            <span className="font-semibold text-xl mt-4 mb-4 text-gray-800 dark:text-gray-100">
                                 Inputs{" "}
                                 <span className="font-normal text-base">
                                     ({decodedTransaction?.inputs?.length})
@@ -249,7 +249,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                             decodedTransaction.inputs.length > 0 &&
                             decodedTransaction.outputs.length > 0 && (
                                 <svg
-                                    className="my-4 transform fill-current text-gray-500 dark:text-[#E5E6F1] lg:mx-2 lg:my-0 lg:translate-y-1/2"
+                                    className="my-4 transform fill-current text-gray-500 dark:text-gray-400 lg:mx-2 lg:my-0 lg:translate-y-1/2"
                                     width="40"
                                     height="40"
                                     viewBox="0 0 24 24"
@@ -258,7 +258,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                                 </svg>
                             )}
                         <div className="flex w-full flex-col p-2 lg:w-1/2">
-                            <span className="font-semibold text-xl mt-4 mb-4 text-gray-800 dark:text-[#E5E6F1]">
+                            <span className="font-semibold text-xl mt-4 mb-4 text-gray-800 dark:text-gray-100">
                                 Outputs{" "}
                                 <span className="font-normal text-base">
                                     ({decodedTransaction?.outputs?.length})
@@ -274,7 +274,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
             </div>
 
             {selectedDetail && (
-                <div className="rounded-lg bg-white dark:bg-[#272E35] p-3">
+                <div className="rounded-lg bg-gray-100 dark:bg-gray-900 p-3">
                     <BitcoinTransactionViewer detail={selectedDetail} />
                 </div>
             )}

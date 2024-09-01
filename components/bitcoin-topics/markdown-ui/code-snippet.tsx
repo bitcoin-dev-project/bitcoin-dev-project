@@ -1,4 +1,6 @@
-import React from "react"
+"use client"
+import { ClipboardCheckIcon, ClipboardIcon } from "lucide-react"
+import React, { useState } from "react"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { solarizedlight } from "react-syntax-highlighter/dist/esm/styles/prism"
 
@@ -15,6 +17,7 @@ export const CodeSnippet = ({
     highlightLines = [],
     showLineNumbers = false
 }: CodeSnippetProps) => {
+    const [isCopied, setIsCopied] = useState(false)
     const theme = solarizedlight
 
     const lineProps = (lineNumber: number) => {
@@ -28,8 +31,29 @@ export const CodeSnippet = ({
         return { style }
     }
 
+    const handleCopyClick = async () => {
+        try {
+            await navigator.clipboard.writeText(code)
+            setIsCopied(true)
+            setTimeout(() => setIsCopied(false), 2000)
+        } catch (err) {
+            console.error("Failed to copy text: ", err)
+        }
+    }
+
     return (
-        <div className="bg-[#fef7f2] dark:bg-[#282c34] rounded-lg">
+        <div className="bg-[#fef7f2] dark:bg-[#282c34] rounded-lg relative">
+            <button
+                onClick={handleCopyClick}
+                className="absolute top-2 right-2 p-2 rounded-md bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                aria-label="Copy code"
+            >
+                {isCopied ? (
+                    <ClipboardCheckIcon className="h-5 w-5 text-green-500" />
+                ) : (
+                    <ClipboardIcon className="h-5 w-5 text-gray-500 dark:text-gray-300" />
+                )}
+            </button>
             <SyntaxHighlighter
                 language={language}
                 style={{

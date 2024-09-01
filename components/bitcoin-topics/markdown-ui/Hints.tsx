@@ -21,12 +21,12 @@ const Hint = ({ hints }: HintProps) => {
                 className="bg-white rounded-lg border-l-4 border-[#ebb305] p-6 rounded-lg p-4 cursor-pointer transition-all duration-300 ease-in-out"
                 onClick={revealNextHint}
             >
-                {revealedHints < hints.length && (
+                {/* {revealedHints < hints.length && (
                     <div className="text-center mt-4 text-md text-gray-500">
                         Click to reveal next hint ({revealedHints}/
                         {hints.length})
                     </div>
-                )}
+                )} */}
                 <ul className="list-none space-y-3">
                     {hints.map((hint, index) => (
                         <li

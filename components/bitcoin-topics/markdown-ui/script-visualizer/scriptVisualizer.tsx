@@ -164,7 +164,7 @@ export default function ScriptStackVisualizer({
                                     ? "bg-orange-500"
                                     : index < currentStep
                                       ? "bg-green-500"
-                                      : "bg-gray-300"
+                                      : "bg-gray-300 dark:bg-gray-600"
                             )}
                             aria-label={`Step ${index + 1}`}
                         />
@@ -192,8 +192,8 @@ export default function ScriptStackVisualizer({
                                                   ? "bg-orange-500"
                                                   : index < currentStep
                                                     ? "bg-green-500"
-                                                    : "bg-[#454C54]",
-                                            "relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-600 group-hover:border-gray-400"
+                                                    : "bg-gray-300 dark:bg-gray-600",
+                                            "relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-300 dark:border-gray-600 group-hover:border-gray-400"
                                         )}
                                     >
                                         {index < currentStep ? (
@@ -221,13 +221,13 @@ export default function ScriptStackVisualizer({
                                         className={classNames(
                                             index <= currentStep
                                                 ? "text-orange-500"
-                                                : "text-[#E5E6F1]",
+                                                : "text-gray-900 dark:text-gray-100",
                                             "text-sm font-medium"
                                         )}
                                     >
                                         {step.name}
                                     </span>
-                                    <span className="text-sm text-gray-400">
+                                    <span className="text-sm text-gray-500 dark:text-gray-400">
                                         {step.description}
                                     </span>
                                 </span>
@@ -247,7 +247,7 @@ export default function ScriptStackVisualizer({
         <div className="mx-auto py-1 full-width">
             <div className="mx-auto py-1 px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center py-3">
-                    <div className="mx-auto flex w-full max-w-6xl flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 rounded-lg bg-[#272E35] p-4 shadow-md">
+                    <div className="mx-auto flex w-full max-w-6xl flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 rounded-lg bg-gray-100 dark:bg-gray-800 p-4 shadow-md">
                         {!isMobile && (
                             <div className="w-full lg:w-2/5">
                                 {renderStepIndicators()}
@@ -255,7 +255,7 @@ export default function ScriptStackVisualizer({
                         )}
 
                         <div className="w-full lg:w-3/5">
-                            <div className="bg-[#454C54] rounded-lg shadow-md overflow-hidden mb-4">
+                            <div className="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md overflow-hidden mb-4">
                                 <object
                                     ref={svgRef}
                                     type="image/svg+xml"
@@ -265,7 +265,7 @@ export default function ScriptStackVisualizer({
                                     role="img"
                                 ></object>
                             </div>
-                            <div className="border-2 border-dashed border-[#454C54] p-3 rounded-lg bg-[#272E35] flex items-center justify-center">
+                            <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 p-3 rounded-lg bg-white dark:bg-gray-800 flex items-center justify-center">
                                 <motion.div
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
@@ -273,7 +273,7 @@ export default function ScriptStackVisualizer({
                                     <RewindIcon
                                         className={`h-6 w-6 mr-4 cursor-pointer ${
                                             currentStep > 0
-                                                ? "text-[#E5E6F1] hover:text-orange-500"
+                                                ? "text-gray-900 dark:text-gray-100 hover:text-orange-500"
                                                 : "text-gray-500"
                                         } transition-colors duration-300`}
                                         onClick={() => handleStepChange("prev")}
@@ -285,12 +285,12 @@ export default function ScriptStackVisualizer({
                                 >
                                     {isPlaying ? (
                                         <PauseIcon
-                                            className="h-6 w-6 mr-4 cursor-pointer text-[#E5E6F1] hover:text-orange-500 transition-colors duration-300"
+                                            className="h-6 w-6 mr-4 cursor-pointer text-gray-900 dark:text-gray-100 hover:text-orange-500 transition-colors duration-300"
                                             onClick={handlePause}
                                         />
                                     ) : (
                                         <PlayIcon
-                                            className="h-6 w-6 mr-4 cursor-pointer text-[#E5E6F1] hover:text-orange-500 transition-colors duration-300"
+                                            className="h-6 w-6 mr-4 cursor-pointer text-gray-900 dark:text-gray-100 hover:text-orange-500 transition-colors duration-300"
                                             onClick={handlePlay}
                                         />
                                     )}
@@ -303,13 +303,13 @@ export default function ScriptStackVisualizer({
                                         className={`h-6 w-6 mr-4 cursor-pointer ${
                                             currentStep <
                                             config.steps.length - 1
-                                                ? "text-[#E5E6F1] hover:text-orange-500"
+                                                ? "text-gray-900 dark:text-gray-100 hover:text-orange-500"
                                                 : "text-gray-500"
                                         } transition-colors duration-300`}
                                         onClick={() => handleStepChange("next")}
                                     />
                                 </motion.div>
-                                <div className="flex-grow bg-[#454C54] h-2 rounded-full">
+                                <div className="flex-grow bg-gray-200 dark:bg-gray-700 h-2 rounded-full">
                                     <motion.div
                                         className="bg-orange-500 h-2 rounded-full"
                                         initial={{ width: "0%" }}

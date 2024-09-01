@@ -40,3 +40,64 @@ body {
 .prose {
     max-width: unset;
 }
+@keyframes fastBlink {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-fast-blink {
+    animation: fastBlink 0.7s step-end infinite;
+}
+
+@keyframes smoothBlink {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-smooth-blink {
+    animation: smoothBlink 1s ease-in-out infinite;
+}
+:root {
+    --color-primary-50: #f0f0ff;
+    --color-primary-300: #a3a0ff;
+    --color-primary-400: #8c84ff;
+    --color-primary-700: #4433ff;
+    --color-primary-900: #1a1a3d;
+  
+    --color-warning-50: #fff9e6;
+    --color-warning-300: #ffd699;
+    --color-warning-400: #ffc266;
+    --color-warning-700: #ff9800;
+    --color-warning-900: #332600;
+  
+    --color-info-50: #e6f7ff;
+    --color-info-300: #99e0ff;
+    --color-info-400: #66ccff;
+    --color-info-700: #2196f3;
+    --color-info-900: #0d2b3d;
+  
+    --color-success-50: #e6fff0;
+    --color-success-300: #99ffcc;
+    --color-success-400: #66ffb3;
+    --color-success-700: #00cc66;
+    --color-success-900: #0d331f;
+  
+    /* Add more color variables as needed */
+  }
+  
+  [data-theme='dark'] {
+    --color-primary-900: #1a1a3d;
+    --color-warning-900: #332600;
+    --color-info-900: #0d2b3d;
+    --color-success-900: #0d331f;
+  }

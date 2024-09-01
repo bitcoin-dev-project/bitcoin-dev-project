@@ -1,3 +1,4 @@
 [submodule "public/bitcoin-topics"]
 	path = public/bitcoin-topics
 	url = https://github.com/jrakibi/bitcoin-topics.git
+	branch = feature/project

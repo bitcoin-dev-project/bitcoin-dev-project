@@ -24,12 +24,12 @@ const Button = ({ children, onClick, disabled = false, icon }: ButtonProps) => (
         onClick={onClick}
         disabled={disabled}
         className={`px-5 py-2 rounded-lg flex items-center justify-between 
-                ${disabled ? "bg-gray-300 text-gray-500 dark:bg-[#454C54] dark:text-[#A0A0A0]" : "bg-orange-500 text-white hover:bg-orange-600 dark:bg-orange-500 dark:text-white dark:hover:bg-orange-600"}
+                ${disabled ? "bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400" : "bg-orange-500 text-white hover:bg-orange-600 dark:bg-orange-500 dark:text-white dark:hover:bg-orange-600"}
                 transition-colors duration-200 text-sm`}
     >
         <span className="font-semibold">{children}</span>
         <div className="flex items-center">
-            <div className="w-px h-4 bg-gray-300 dark:bg-gray-400 mx-2"></div>
+            <div className="w-px h-4 bg-gray-300 dark:bg-gray-600 mx-2"></div>
             {icon}
         </div>
     </button>
@@ -137,7 +137,7 @@ const Quiz = ({
                               border-2 ${
                                   selectedAnswer === option && !showExplanation
                                       ? "bg-orange-500 text-white border-orange-500"
-                                      : "border-gray-400 text-gray-400 dark:border-gray-300 dark:text-gray-300"
+                                      : "border-gray-400 text-gray-400 dark:border-gray-500 dark:text-gray-400"
                               }
                               ${
                                   showExplanation &&
@@ -163,26 +163,26 @@ const Quiz = ({
                                             option ===
                                                 questions[currentQuestion]
                                                     .correctAnswer && (
-                                                <motion.div
-                                                    initial={{
-                                                        opacity: 0,
-                                                        scale: 0
-                                                    }}
-                                                    animate={{
-                                                        opacity: 1,
-                                                        scale: 1
-                                                    }}
-                                                    exit={{
-                                                        opacity: 0,
-                                                        scale: 0
-                                                    }}
-                                                >
-                                                    <CheckCircle
-                                                        className="text-green-500"
-                                                        size={20}
-                                                    />
-                                                </motion.div>
-                                            )}
+                                            <motion.div
+                                                initial={{
+                                                    opacity: 0,
+                                                    scale: 0
+                                                }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    scale: 1
+                                                }}
+                                                exit={{
+                                                    opacity: 0,
+                                                    scale: 0
+                                                }}
+                                            >
+                                                <CheckCircle
+                                                    className="text-green-500"
+                                                    size={20}
+                                                />
+                                            </motion.div>
+                                        )}
                                     </AnimatePresence>
                                 </motion.button>
                             )
@@ -219,8 +219,8 @@ const Quiz = ({
                             <motion.div
                                 className={`mt-4 p-3 rounded-lg text-sm ${
                                     isCorrect
-                                        ? "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200"
-                                        : "bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200"
+                                        ? "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-200"
+                                        : "bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-200"
                                 }`}
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -230,12 +230,12 @@ const Quiz = ({
                                 <div className="flex items-center space-x-2 mb-2">
                                     {isCorrect ? (
                                         <CheckCircle
-                                            className="text-green-500 dark:text-green-400"
+                                            className="text-emerald-500 dark:text-emerald-400"
                                             size={20}
                                         />
                                     ) : (
                                         <XCircle
-                                            className="text-red-500 dark:text-red-400"
+                                            className="text-rose-500 dark:text-rose-400"
                                             size={20}
                                         />
                                     )}
@@ -250,7 +250,7 @@ const Quiz = ({
                 </>
             ) : (
                 <motion.div
-                    className="mt-4 p-5 rounded-lg bg-gray-50 dark:bg-[#454C54] text-gray-800 dark:text-[#E5E6F1]"
+                    className="mt-4 p-5 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}

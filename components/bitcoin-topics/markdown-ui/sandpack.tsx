@@ -1,7 +1,7 @@
 "use client"
 
 import dynamic from "next/dynamic"
-import { gruvboxDark } from "@codesandbox/sandpack-themes"
+import { amethyst, aquaBlue, atomDark, cobalt2, cyberpunk, dracula, ecoLight, freeCodeCampDark, githubLight, gruvboxDark, gruvboxLight, levelUp, monokaiPro, neoCyan, nightOwl, sandpackDark } from "@codesandbox/sandpack-themes"
 
 const DynamicSandpack = dynamic(
     () => import("@codesandbox/sandpack-react").then((mod) => mod.Sandpack),

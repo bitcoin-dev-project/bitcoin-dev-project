@@ -267,7 +267,7 @@ const OpCodeExplorer = () => {
     return (
         <div className="mx-auto py-1 full-width">
             <motion.div
-                className="bg-[#272E35] p-4 sm:p-6 rounded-lg text-sm sm:text-base"
+                className="bg-gray-100 dark:bg-gray-900 p-4 sm:p-6 rounded-lg text-sm sm:text-base shadow-md"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -295,7 +295,7 @@ const OpCodeExplorer = () => {
                                     className={`px-4 py-2 rounded-lg mr-3 whitespace-nowrap text-sm font-medium ${
                                         selectedOpCode === opCode
                                             ? "bg-orange-500 text-white"
-                                            : "bg-[#454C54] text-[#E5E6F1] hover:bg-[#5A6270]"
+                                            : "bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
                                     }`}
                                     onClick={() => setSelectedOpCode(opCode)}
                                 >
@@ -313,9 +313,9 @@ const OpCodeExplorer = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.2 }}
-                        className="bg-[#E5E6F1] p-4 sm:p-6 rounded-lg"
+                        className="bg-gray-50 dark:bg-gray-950 p-4 sm:p-6 rounded-lg"
                     >
-                        <h2 className="text-xl sm:text-2xl font-bold mb-8 mt-8 sm:mb-12 text-center text-[#000000]">
+                        <h2 className="text-xl sm:text-2xl font-bold mb-8 mt-8 sm:mb-12 text-center text-gray-800 dark:text-gray-100">
                             {selectedOpCode} ({currentOpCode.hex}):{" "}
                             <span className="text-light sm:text-light font-light">
                                 {currentOpCode.description}
@@ -323,18 +323,18 @@ const OpCodeExplorer = () => {
                         </h2>
 
                         <div className="flex flex-col lg:flex-row mb-6">
-                            <div className="w-full lg:w-2/5 mb-4 lg:mb-0 lg:pr-6 lg:border-r border-[#454C54]">
-                                <div className="bg-[#272E35] text-[#E5E6F1] p-4 rounded-lg shadow-lg">
-                                    <div className="flex items-center justify-between mb-3 border-b border-[#454C54] pb-2">
+                            <div className="w-full lg:w-2/5 mb-4 lg:mb-0 lg:pr-6 lg:border-r border-gray-300 dark:border-gray-800">
+                                <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 p-4 rounded-lg shadow-lg">
+                                    <div className="flex items-center justify-between mb-3 border-b border-gray-200 dark:border-gray-800 pb-2">
                                         <span className="text-sm font-medium">
                                             Example
                                         </span>
-                                        <div className="flex items-center bg-[#454c54] rounded-full p-1">
+                                        <div className="flex items-center bg-gray-200 dark:bg-gray-800 rounded-full p-1">
                                             <button
                                                 className={`px-3 py-1 text-xs rounded-full transition-colors duration-300 ${
                                                     !isAsm
-                                                        ? "bg-gray-600 text-white"
-                                                        : "text-gray-300"
+                                                        ? "bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
+                                                        : "text-gray-600 dark:text-gray-300"
                                                 }`}
                                                 onClick={() => setIsAsm(false)}
                                             >
@@ -343,8 +343,8 @@ const OpCodeExplorer = () => {
                                             <button
                                                 className={`px-3 py-1 text-xs rounded-full transition-colors duration-300 ${
                                                     isAsm
-                                                        ? "bg-gray-600 text-white"
-                                                        : "text-gray-300"
+                                                        ? "bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
+                                                        : "text-gray-600 dark:text-gray-300"
                                                 }`}
                                                 onClick={() => setIsAsm(true)}
                                             >
@@ -358,7 +358,7 @@ const OpCodeExplorer = () => {
                                         animate={{ opacity: 1 }}
                                         transition={{ duration: 0.3 }}
                                     >
-                                        <pre className="whitespace-pre-wrap bg-[#1D2127] p-3 rounded overflow-x-auto">
+                                        <pre className="whitespace-pre-wrap bg-gray-50 dark:bg-[#151820] p-3 rounded overflow-x-auto text-gray-800 dark:text-gray-200">
                                             {isAsm
                                                 ? currentOpCode.asm
                                                 : currentOpCode.hexCode}
@@ -368,7 +368,7 @@ const OpCodeExplorer = () => {
                             </div>
 
                             <div className="w-full lg:w-3/5 lg:pl-6">
-                                <div className="bg-[#454c54] h-64 sm:h-80 rounded-lg mb-4">
+                                <div className="bg-gray-200 dark:bg-[#353c44] h-64 sm:h-80 rounded-lg mb-4">
                                     <object
                                         ref={svgRef}
                                         type="image/svg+xml"
@@ -379,7 +379,7 @@ const OpCodeExplorer = () => {
                                         Your browser does not support SVG
                                     </object>
                                 </div>
-                                <div className="border-2 border-dashed border-[#454C54] p-3 rounded-lg bg-[#272E35] flex items-center justify-center">
+                                <div className="border-2 border-dashed border-gray-300 dark:border-[#353C44] p-3 rounded-lg bg-gray-100 dark:bg-[#1D2127] flex items-center justify-center">
                                     <motion.div
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
@@ -387,8 +387,8 @@ const OpCodeExplorer = () => {
                                         <RewindIcon
                                             className={`h-6 w-6 mr-4 cursor-pointer ${
                                                 isAnimating
-                                                    ? "text-gray-500"
-                                                    : "text-[#E5E6F1] hover:text-orange-500"
+                                                    ? "text-gray-400 dark:text-gray-500"
+                                                    : "text-gray-600 dark:text-[#E5E6F1] hover:text-orange-500"
                                             } transition-colors duration-300`}
                                             onClick={handlePrevious}
                                         />
@@ -399,12 +399,12 @@ const OpCodeExplorer = () => {
                                     >
                                         {isPlaying ? (
                                             <PauseIcon
-                                                className="h-6 w-6 mr-4 cursor-pointer text-[#E5E6F1] hover:text-orange-500 transition-colors duration-300"
+                                                className="h-6 w-6 mr-4 cursor-pointer text-gray-600 dark:text-[#E5E6F1] hover:text-orange-500 transition-colors duration-300"
                                                 onClick={handlePause}
                                             />
                                         ) : (
                                             <PlayIcon
-                                                className="h-6 w-6 mr-4 cursor-pointer text-[#E5E6F1] hover:text-orange-500 transition-colors duration-300"
+                                                className="h-6 w-6 mr-4 cursor-pointer text-gray-600 dark:text-[#E5E6F1] hover:text-orange-500 transition-colors duration-300"
                                                 onClick={handlePlay}
                                             />
                                         )}
@@ -416,13 +416,13 @@ const OpCodeExplorer = () => {
                                         <FastForwardIcon
                                             className={`h-6 w-6 mr-4 cursor-pointer ${
                                                 isAnimating
-                                                    ? "text-gray-500"
-                                                    : "text-[#E5E6F1] hover:text-orange-500"
+                                                    ? "text-gray-400 dark:text-gray-500"
+                                                    : "text-gray-600 dark:text-[#E5E6F1] hover:text-orange-500"
                                             } transition-colors duration-300`}
                                             onClick={handleNext}
                                         />
                                     </motion.div>
-                                    <div className="flex-grow bg-[#454C54] h-2 rounded-full">
+                                    <div className="flex-grow bg-gray-300 dark:bg-[#353C44] h-2 rounded-full">
                                         <motion.div
                                             className="bg-orange-500 h-2 rounded-full"
                                             initial={{ width: "0%" }}

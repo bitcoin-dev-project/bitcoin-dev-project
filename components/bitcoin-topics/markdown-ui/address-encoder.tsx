@@ -91,24 +91,24 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
 
     return (
         <div className="mx-auto mb-4">
-            <div className="bg-[#272E35] p-4 rounded-lg text-[#E5E6F1] font-normal">
-                <div className="border border-[#454C54] rounded-lg py-6 px-6">
+            <div className="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg text-gray-900 dark:text-gray-100 font-normal shadow-md">
+                <div className="border border-gray-200 dark:border-gray-700 rounded-lg py-6 px-6 bg-gray-50 dark:bg-gray-800">
                     <div className="grid grid-cols-12 gap-3 mb-3">
                         <div className="col-span-2">
-                            <label className="block text-xs mb-1">Prefix</label>
+                            <label className="block text-xs mb-1 text-gray-600 dark:text-gray-400">Prefix</label>
                             <input
                                 type="text"
                                 value={prefix}
                                 onChange={(e) => setPrefix(e.target.value)}
-                                className={`w-full bg-[#454C54] rounded px-2 py-1 text-sm ${
+                                className={`w-full bg-white dark:bg-gray-700 rounded px-2 py-1 text-sm ${
                                     isPrefixValid
-                                        ? "border-[#454C54]"
+                                        ? "border-gray-300 dark:border-gray-600"
                                         : "border-red-500"
-                                } border`}
+                                } border focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent`}
                             />
                         </div>
                         <div className="col-span-8">
-                            <label className="block text-xs mb-1">
+                            <label className="block text-xs mb-1 text-gray-600 dark:text-gray-400">
                                 Script Hash
                             </label>
                             <div className="relative">
@@ -118,7 +118,7 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                     onChange={(e) =>
                                         setScriptHash(e.target.value)
                                     }
-                                    className="w-full bg-[#454C54] rounded px-2 py-1 pr-10 text-sm border border-[#454C54]"
+                                    className="w-full bg-white dark:bg-gray-700 rounded px-2 py-1 pr-10 text-sm border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent"
                                 />
                                 <AnimatePresence>
                                     {isAnimating && (
@@ -127,7 +127,7 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                             onClick={
                                                 handleGenerateRandomScriptHash
                                             }
-                                            className="absolute right-2 top-1/2 transform -translate-y-1/3 text-orange-500 hover:text-orange-400 transition-colors duration-300"
+                                            className="absolute right-2 top-1/2 transform -translate-y-1/3 text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300 transition-colors duration-300"
                                             animate={subtleAnimation}
                                             exit={{ opacity: 1 }}
                                         >
@@ -140,7 +140,7 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                             onClick={
                                                 handleGenerateRandomScriptHash
                                             }
-                                            className="absolute right-2 top-1/2 transform -translate-y-1/3 text-orange-500 hover:text-orange-400 transition-colors duration-300"
+                                            className="absolute right-2 top-1/2 transform -translate-y-1/3 text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300 transition-colors duration-300"
                                             initial={{ opacity: 1 }}
                                         >
                                             <ArrowsRightLeftIcon className="h-5 w-5" />
@@ -150,14 +150,14 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                             </div>
                         </div>
                         <div className="col-span-2">
-                            <label className="block text-xs mb-1">
+                            <label className="block text-xs mb-1 text-gray-600 dark:text-gray-400">
                                 CheckSum
                             </label>
                             <input
                                 type="text"
                                 value={checksum}
                                 readOnly
-                                className="w-full bg-[#454C54] rounded px-2 py-1 text-sm border border-[#454C54]"
+                                className="w-full bg-white dark:bg-gray-700 rounded px-2 py-1 text-sm border border-gray-300 dark:border-gray-600"
                             />
                         </div>
                     </div>
@@ -174,15 +174,16 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                         >
                             <path
                                 d="M1 1V1C1 19.9986 16.4014 35.4 35.4 35.4H549.935C562.942 35.4 574.467 43.7813 578.475 56.155L578.749 57L579.023 56.1549C583.031 43.7813 594.556 35.4 607.563 35.4H1118.6C1137.6 35.4 1153 19.9986 1153 1V1"
-                                stroke="#757F8A"
+                                stroke="#CBD5E0"
                                 strokeWidth="2"
                                 strokeLinecap="round"
+                                className="dark:stroke-gray-600"
                             />
                         </svg>
                     </div>
 
                     <div className="mb-3 mt-3 flex justify-center">
-                        <div className="inline-block px-3 py-1 text-sm border border-[#454C54] text-center">
+                        <div className="inline-block px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 text-center bg-white dark:bg-gray-700 rounded">
                             Encode Base 58
                         </div>
                     </div>
@@ -199,19 +200,20 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                         >
                             <path
                                 d="M20.5 51V1H35.5V51H51.5L28.5 69L4 51H20.5Z"
-                                stroke="#757F8A"
+                                stroke="#CBD5E0"
                                 strokeWidth="2"
                                 strokeLinecap="round"
+                                className="dark:stroke-gray-600"
                             />
                         </svg>
                     </div>
 
                     <div className="flex justify-center">
                         <div
-                            className={`w-2/3 bg-[#454C54] rounded-full px-3 py-1 text-sm ${
+                            className={`w-2/3 bg-white dark:bg-gray-700 rounded-full px-3 py-1 text-sm ${
                                 address
                                     ? "border-green-500"
-                                    : "border-[#454C54]"
+                                    : "border-gray-300 dark:border-gray-600"
                             } border text-center`}
                         >
                             {address || "Address ..."}
@@ -220,12 +222,12 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                 </div>
 
                 <div className="flex items-center mt-3">
-                    <label className="mr-2 text-sm">Network:</label>
+                    <label className="mr-2 text-sm text-gray-600 dark:text-gray-400">Network:</label>
                     <div className="relative">
                         <select
                             value={network}
                             onChange={(e) => setNetwork(e.target.value)}
-                            className="bg-[#454C54] rounded px-2 py-1 pr-6 text-sm appearance-none"
+                            className="bg-white dark:bg-gray-700 rounded px-2 py-1 pr-6 text-sm appearance-none border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent"
                         >
                             <option value="mainnet">Mainnet</option>
                             <option value="testnet">Testnet</option>

@@ -10,6 +10,9 @@ import { PrevNextLinks } from "../topic/PrevNextLinks"
 import { Prose } from "../topic/Prose"
 import { TopicHeader } from "../topic/TopicHeader"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
+import Link from "next/link"
+
 import {
     motion,
     AnimatePresence,
@@ -18,8 +21,11 @@ import {
     useSpring,
     PanInfo
 } from "framer-motion"
-import { ChevronRight } from "lucide-react"
-import { GitHubIcon } from "@/public/images/topics-hero/GitHubIcon"
+import { MoreVertical } from 'lucide-react'
+import React from "react"
+
+const editUrl = (path: string): string =>
+    `${siteMetadata.topicsRepo}/blob/main/topics/${path}`
 
 interface LayoutProps {
     content: CoreContent<Topic>
@@ -41,10 +47,25 @@ export default function TopicLayout({
     const swipeX = useMotionValue(0)
     const swipeXSmooth = useSpring(swipeX, { stiffness: 300, damping: 30 })
     const swipeOpacity = useTransform(swipeXSmooth, [-50, 0, 50], [0.5, 0, 0.5])
+    const [currentPath, setCurrentPath] = useState<string[]>([])
+    const [expandedTopics, setExpandedTopics] = useState<Set<string>>(new Set())
+    const [isScrolled, setIsScrolled] = useState(false)
 
     const { title, tags }: { title: string; tags: string[] } = content
 
     const toggleNav = () => setIsNavOpen(!isNavOpen)
+
+    const toggleExpand = (href: string) => {
+        setExpandedTopics(prev => {
+            const newSet = new Set(prev)
+            if (newSet.has(href)) {
+                newSet.delete(href)
+            } else {
+                newSet.add(href)
+            }
+            return newSet
+        })
+    }
 
     const handleDragEnd = (
         event: MouseEvent | TouchEvent | PointerEvent,
@@ -68,25 +89,27 @@ export default function TopicLayout({
         }
     }, [isNavOpen])
 
-    const githubEditUrl = `https://github.com/jrakibi/bitcoin-topics/edit/main/topics/${content.slug}.mdx`
+    useEffect(() => {
+        if (pathname) {
+            const pathParts = pathname.split('/').filter(Boolean)
+            setCurrentPath(pathParts)
+        }
+    }, [pathname])
 
-    const EditOnGitHubButton = () => (
-        <a
-            href={githubEditUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-3 py-1.5 mt-6 text-sm font-normal text-gray-600 bg-transparent border border-gray-300 rounded hover:bg-gray-50 hover:text-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-200 transition-colors duration-200"
-        >
-            <GitHubIcon className="w-4 h-4 mr-2" />
-            Suggest Edits
-        </a>
-    )
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return (
         <div className="flex w-full flex-col">
             {isHomePage && <Hero />}
 
-            <div className="relative mx-auto flex w-full max-w-9xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
+            <div className="relative mx-auto flex w-full max-w-9xl flex-auto justify-center sm:pl-2 lg:pl-8 xl:pl-12">
                 {/* Desktop Navigation */}
                 <div className="hidden lg:relative lg:block lg:flex-none border-r border-orange">
                     <div className="absolute inset-y-0 right-0 bg-[#fff8eb6e] dark:bg-transparent w-[50vw] dark:hidden" />
@@ -106,34 +129,30 @@ export default function TopicLayout({
                     onDragEnd={handleDragEnd}
                     style={{ x: swipeXSmooth }}
                 >
-                    {/* Swipe indicator */}
-                    <motion.div
-                        className="fixed inset-y-0 left-0 w-1 bg-orange-500 pointer-events-none"
-                        style={{ opacity: swipeOpacity }}
-                    />
-
-                    {/* Sidebar Toggle Button */}
-                    <motion.button
-                        onClick={toggleNav}
-                        className="fixed top-24 left-0 z-50 p-1 bg-white/60 dark:bg-gray-800/60 text-gray-400 dark:text-gray-500 rounded-r-sm shadow-sm backdrop-blur-sm"
-                        initial={{ x: -6 }}
-                        animate={{ x: isNavOpen ? -6 : 0 }}
-                        whileHover={{
-                            x: 0,
-                            backgroundColor: "rgba(255, 255, 255, 0.8)",
-                            color: "rgba(0, 0, 0, 0.6)"
-                        }}
-                        transition={{
-                            type: "spring",
-                            stiffness: 500,
-                            damping: 30
-                        }}
-                    >
-                        <ChevronRight
-                            size={16}
-                            className={`transform transition-transform duration-300 ${isNavOpen ? "rotate-180" : ""}`}
-                        />
-                    </motion.button>
+                    {/* File Tree and Navigation Toggle */}
+                    <div className={`fixed top-16 left-0 right-0 z-40 flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
+                        isScrolled ? 'bg-white/0 dark:bg-gray-900/0 backdrop-blur-md' : 'bg-transparent'
+                    }`}>
+                        <div className="flex items-center text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
+                            {currentPath.map((part, index) => (
+                                <React.Fragment key={index}>
+                                    {index > 0 && <span className="mx-1">/</span>}
+                                    <Link
+                                        href={`/${currentPath.slice(0, index + 1).join('/')}`}
+                                        className="whitespace-nowrap hover:text-orange-500"
+                                    >
+                                        {part}
+                                    </Link>
+                                </React.Fragment>
+                            ))}
+                        </div>
+                        <button
+                            onClick={toggleNav}
+                            className="p-2 rounded-md bg-gray-100/80 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 backdrop-blur-sm"
+                        >
+                            <MoreVertical size={20} />
+                        </button>
+                    </div>
 
                     {/* Mobile Navigation Sidebar */}
                     <AnimatePresence>
@@ -147,18 +166,18 @@ export default function TopicLayout({
                                     stiffness: 300,
                                     damping: 30
                                 }}
-                                className="fixed inset-0 z-40"
+                                className="fixed inset-0 z-[50]"
                             >
                                 <div
                                     className="absolute inset-0 bg-black bg-opacity-50"
                                     onClick={toggleNav}
                                 />
                                 <div className="absolute left-0 top-0 bottom-0 w-72 bg-white dark:bg-gray-900 overflow-y-auto">
-                                    <div className="py-16 px-8 xl:px-10">
+                                    <div className="py-4 px-4">
                                         <Navigation
                                             content={content}
                                             onLinkClick={toggleNav}
-                                            className="space-y-6"
+                                            className="space-y-4"
                                         />
                                     </div>
                                 </div>
@@ -168,12 +187,73 @@ export default function TopicLayout({
 
                     {/* Mobile Main Content */}
                     <motion.div
-                        className="min-w-0 max-w-3xl flex-auto px-4 py-16 mx-auto"
+                        className="min-w-0 max-w-3xl flex-auto px-4 py-16 mt-12 mx-auto"
                         animate={{
                             filter: isNavOpen ? "blur(4px)" : "blur(0px)"
                         }}
                         transition={{ duration: 0.3 }}
                     >
+                        {content.project ? (
+                            <>
+                                <div className="relative w-full h-[600px] mb-16">
+                                    <Image
+                                        src="/bitcoin-topics/static/images/topics/project-bitcoin-stack/stack-simulator.svg"
+                                        alt="Project image"
+                                        layout="fill"
+                                        objectFit="cover"
+                                        className="rounded-lg"
+                                    />
+                                    <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/70 to-transparent">
+                                        <h2 className="text-2xl font-semibold text-white mb-2">Project</h2>
+                                        <h1 className="text-4xl font-extralight text-white">{title}</h1>
+                                    </div>
+                                </div>
+                                <article>
+                                    <Prose>{children}</Prose>
+                                </article>
+                            </>
+                        ) : (
+                            <article>
+                                <TopicHeader
+                                    title={title}
+                                    tags={tags}
+                                    summary={content.summary}
+                                />
+                                <Prose>{children}</Prose>
+                            </article>
+                        )}
+                        <PrevNextLinks prev={prev} next={next} />
+                    </motion.div>
+                </motion.div>
+
+                {/* Desktop Main Content */}
+                <div
+                    className={
+                        content.project
+                            ? "hidden lg:block min-w-0 max-w-3xl flex-auto pb-16 lg:mx-auto lg:max-w-none lg:pr-0"
+                            : "hidden lg:block min-w-0 max-w-3xl flex-auto px-4 py-16 lg:mx-auto lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16"
+                    }
+                >
+                    {content.project ? (
+                        <>
+                            <div className="relative w-full h-[600px] mb-16">
+                                <Image
+                                    src="/bitcoin-topics/static/images/topics/project-bitcoin-stack/stack-simulator.svg"
+                                    alt="Project image"
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="rounded-lg"
+                                />
+                                <div className="max-w-3xl mx-auto absolute inset-0 flex flex-col justify-end p-8 pl-0">
+                                    <h2 className="text-2xl font-semibold text-white mb-2">Project</h2>
+                                    <h1 className="text-4xl font-extralight text-white">{title}</h1>
+                                </div>
+                            </div>
+                            <article>
+                                <Prose>{children}</Prose>
+                            </article>
+                        </>
+                    ) : (
                         <article>
                             <TopicHeader
                                 title={title}
@@ -183,29 +263,13 @@ export default function TopicLayout({
                             <Prose>{children}</Prose>
                             {/* Add the GitHub edit button for mobile */}
                             <div className="max-w-3xl mx-auto mt-8 flex justify-end">
-                                <EditOnGitHubButton />
+                                {/* <EditOnGitHubButton /> */}
                             </div>
                         </article>
+                    )}
+                    <div className="xl:px-16">
                         <PrevNextLinks prev={prev} next={next} />
-                    </motion.div>
-                </motion.div>
-
-                {/* Desktop Main Content */}
-                <div className="hidden lg:block min-w-0 max-w-3xl flex-auto px-4 py-16 lg:mx-auto lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
-                    <article>
-                        <TopicHeader
-                            title={title}
-                            tags={tags}
-                            summary={content.summary}
-                        />
-                        <Prose>{children}</Prose>
-
-                        {/* Add the GitHub edit button for desktop */}
-                        <div className="max-w-3xl mx-auto mt-8 flex justify-end">
-                            <EditOnGitHubButton />
-                        </div>
-                    </article>
-                    <PrevNextLinks prev={prev} next={next} />
+                    </div>
                 </div>
             </div>
         </div>
