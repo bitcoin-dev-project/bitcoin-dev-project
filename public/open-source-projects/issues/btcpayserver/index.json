@@ -94,6 +94,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6007",
+    "publishedAt": "2024-05-24T12:42:22Z",
+    "title": "[Bug]: Payout broadcast a transaction but do not change to \"In Progress\" status when \"Subtract fees from amount\" is active",
+    "labels": [
+      "Bug",
+      "Pull Payment"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6131",
     "publishedAt": "2024-08-02T12:15:10Z",
     "title": "[Bug]: `CancelPayoutAfterFaillures` setting is not used",
@@ -103,11 +113,33 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6147",
+    "publishedAt": "2024-08-12T22:15:09Z",
+    "title": "[Bug]: Pull-payment view throws 500 error",
+    "labels": [
+      "Bug",
+      "API",
+      "Pull Payment"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6162",
+    "publishedAt": "2024-08-24T19:31:01Z",
+    "title": "[Bug]: Additional Information from posData is .NET",
+    "labels": [
+      "Bug",
+      "PoS"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6168",
     "publishedAt": "2024-08-25T17:05:19Z",
     "title": "Dashboard: If product view within keypad is enabled, we're not counting manual keypad entries towards sales",
     "labels": [
-      "Bug"
+      "Bug",
+      "Dashboard"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
@@ -116,7 +148,8 @@
     "publishedAt": "2024-08-30T15:13:48Z",
     "title": "Replace invoice payment type icons with SVGs",
     "labels": [
-      "Bug"
+      "Bug",
+      "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
