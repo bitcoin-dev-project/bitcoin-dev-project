@@ -10,16 +10,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/warnet/issues/29",
-    "publishedAt": "2023-08-15T18:20:47Z",
-    "title": "scenario/persona: preload a chain / wallet ",
-    "labels": [
-      "good first issue",
-      "backlog"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/36",
     "publishedAt": "2023-08-15T20:29:39Z",
     "title": "extend test framework functions",
