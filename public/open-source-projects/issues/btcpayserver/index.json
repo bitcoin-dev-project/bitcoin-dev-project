@@ -104,6 +104,17 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6123",
+    "publishedAt": "2024-07-26T15:07:10Z",
+    "title": "[Bug]: 404 on settled free invoice checkoutLink url",
+    "labels": [
+      "Bug",
+      "API",
+      "Invoice"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6131",
     "publishedAt": "2024-08-02T12:15:10Z",
     "title": "[Bug]: `CancelPayoutAfterFaillures` setting is not used",
