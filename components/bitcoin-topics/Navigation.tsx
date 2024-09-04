@@ -185,11 +185,17 @@ export function Navigation({
                         <h2 className="font-display font-bold text-gray-900 dark:text-white mb-2">
                             {section.title}
                         </h2>
-                        <ul role="list" className="space-y-2 pl-2">
+                        <ul role="list" className="space-y-1 pl-2">
                             {section.links.map((link) => (
                                 <li key={link.href} className="relative">
                                     <div
-                                        className="flex items-center cursor-pointer"
+                                        className={clsx(
+                                            "flex items-center cursor-pointer rounded-md",
+                                            "transition-colors duration-200 ease-in-out",
+                                            link.href === pathname
+                                                ? "bg-orange-100 dark:bg-orange-900/20"
+                                                : "hover:bg-gray-100 dark:hover:bg-gray-800/50"
+                                        )}
                                         onClick={() => toggleTopic(link.href)}
                                     >
                                         <Link
@@ -199,10 +205,10 @@ export function Navigation({
                                                 onLinkClick && onLinkClick(e)
                                             }}
                                             className={clsx(
-                                                "flex items-center font-medium w-full py-1 rounded-md",
+                                                "flex items-center font-medium w-full py-2 px-3 rounded-md",
                                                 link.href === pathname
                                                     ? "text-orange-500"
-                                                    : "text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+                                                    : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
                                             )}
                                         >
                                             {link.icon && getIcon(link.icon)}
@@ -210,7 +216,14 @@ export function Navigation({
                                         </Link>
                                         {link.children &&
                                             link.children.length > 0 && (
-                                                <span className="ml-1 text-xs flex-shrink-0">
+                                                <span
+                                                    className={clsx(
+                                                        "ml-auto mr-3 text-xs flex-shrink-0",
+                                                        link.href === pathname
+                                                            ? "text-orange-500"
+                                                            : "text-gray-400"
+                                                    )}
+                                                >
                                                     {expandedTopics[
                                                         link.href
                                                     ] ? (
@@ -224,7 +237,7 @@ export function Navigation({
                                     {link.children &&
                                         link.children.length > 0 &&
                                         expandedTopics[link.href] && (
-                                            <ul className="mt-1 space-y-1 pl-4">
+                                            <ul className="mt-1 space-y-1 pl-6">
                                                 {link.children.map(
                                                     (childLink) => (
                                                         <li
@@ -239,11 +252,12 @@ export function Navigation({
                                                                     onLinkClick
                                                                 }
                                                                 className={clsx(
-                                                                    "block font-normal w-full py-1 rounded-md",
+                                                                    "block font-normal w-full py-2 px-3 rounded-md",
+                                                                    "transition-colors duration-200 ease-in-out",
                                                                     childLink.href ===
                                                                         pathname
-                                                                        ? "text-orange-500"
-                                                                        : "text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+                                                                        ? "bg-orange-100 dark:bg-orange-900/20 text-orange-500"
+                                                                        : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/50"
                                                                 )}
                                                             >
                                                                 {

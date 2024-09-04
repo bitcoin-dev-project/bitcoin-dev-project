@@ -41,7 +41,6 @@ const config: Config = {
                     "900": "#FAFAFA",
                     "950": "#FAFAFA"
                 },
-
                 gray: {
                     DEFAULT: "#696a71",
                     "50": "#f5f5f6",
@@ -70,19 +69,140 @@ const config: Config = {
                     "900": "#3b3b3e",
                     "950": "#1c1c1e"
                 },
-                darkgray: {
-                    DEFAULT: "#1a1a1c",
-                    "50": "#2a2a2c",
-                    "100": "#242426",
-                    "200": "#1e1e20",
-                    "300": "#18181a",
-                    "400": "#141416",
-                    "500": "#101012",
-                    "600": "#0c0c0e",
-                    "700": "#08080a",
-                    "800": "#040406",
-                    "900": "#000002",
-                    "950": "#000000"
+                // VS Code Theme Colors
+                vscode: {
+                    background: {
+                        light: "#ffffff",
+                        dark: "#1e1e1e"
+                    },
+                    navigation: {
+                        light: "#f0f0f0",
+                        dark: "#252526"
+                    },
+                    input: {
+                        light: "#f5f5f5",
+                        dark: "#3c3c3c"
+                    },
+                    text: {
+                        light: "#333333",
+                        dark: "#d4d4d4"
+                    },
+                    hover: {
+                        light: "#e1e1e1",
+                        dark: "#3c3c3c"
+                    },
+                    highlight: {
+                        light: "#f3f4f5",
+                        dark: "#2d2d2d"
+                    },
+                    selection: {
+                        light: "#add6ff",
+                        dark: "#264f78"
+                    },
+                    lineNumber: {
+                        light: "#858585",
+                        dark: "#858585"
+                    },
+                    lineNumberActive: {
+                        light: "#333333",
+                        dark: "#c6c6c6"
+                    },
+                    statusBar: {
+                        background: {
+                            light: "#007acc",
+                            dark: "#007acc"
+                        },
+                        foreground: {
+                            light: "#ffffff",
+                            dark: "#ffffff"
+                        }
+                    },
+                    header: {
+                        background: {
+                            light: "#f3f3f3",
+                            dark: "#252526"
+                        },
+                        foreground: {
+                            light: "#333333",
+                            dark: "#d4d4d4"
+                        }
+                    },
+                    searchBar: {
+                        background: {
+                            light: "#ffffff",
+                            dark: "#1e1e1e"
+                        },
+                        foreground: {
+                            light: "#333333",
+                            dark: "#d4d4d4"
+                        }
+                    },
+                    navButton: {
+                        background: {
+                            light: "#e1e1e1",
+                            dark: "#3c3c3c"
+                        },
+                        foreground: {
+                            light: "#333333",
+                            dark: "#d4d4d4"
+                        }
+                    },
+                    container: {
+                        light: "#f3f3f3",
+                        dark: "#252526"
+                    },
+                    success: {
+                        light: "#8bc34a", // Lighter green
+                        dark: "#689f38" // Darker but not too intense green
+                    },
+                    error: {
+                        light: "#e57373", // Lighter red
+                        dark: "#d32f2f" // Darker but not too intense red
+                    },
+                    file: {
+                        light: "#e1e1e1",
+                        dark: "#3c3c3c"
+                    },
+                    selectedFile: {
+                        light: "#007acc",
+                        dark: "#f1760f"
+                    },
+                    sidebarBackground: {
+                        light: "#f3f3f3",
+                        dark: "#252526"
+                    },
+                    sidebarForeground: {
+                        light: "#616161",
+                        dark: "#cccccc"
+                    },
+                    editorBackground: {
+                        light: "#ffffff",
+                        dark: "#1e1e1e"
+                    },
+                    editorForeground: {
+                        light: "#333333",
+                        dark: "#d4d4d4"
+                    },
+                    titleBar: {
+                        light: "#e7e7e7",
+                        dark: "#3c3c3c"
+                    },
+                    activityBar: {
+                        light: "#2c2c2c",
+                        dark: "#333333"
+                    },
+                    activityBarInactive: {
+                        light: "#8f8f8f",
+                        dark: "#6b6b6b"
+                    },
+                    codeSnippetBackground: {
+                        light: "#f5f5f5", // Light gray for light mode
+                        dark: "#141414" // The color you specified for dark mode
+                    }
+                },
+                warning: {
+                    light: "#f1760f", // A light orange color
+                    dark: "#d18616" // A darker orange for dark mode
                 }
             },
             keyframes: {

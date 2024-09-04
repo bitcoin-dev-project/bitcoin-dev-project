@@ -105,6 +105,9 @@ export default function TopicLayout({
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
+    const isInsideTopic =
+        pathname && pathname.startsWith("/topics/") && pathname !== "/topics"
+
     return (
         <div className="flex w-full flex-col">
             {isHomePage && <Hero />}
@@ -112,7 +115,9 @@ export default function TopicLayout({
             <div className="relative mx-auto flex w-full max-w-9xl flex-auto justify-center sm:pl-2 lg:pl-8 xl:pl-12">
                 {/* Desktop Navigation */}
                 <div className="hidden lg:relative lg:block lg:flex-none border-r border-orange">
-                    <div className="absolute inset-y-0 right-0 bg-[#fff8eb6e] dark:bg-transparent w-[50vw] dark:hidden" />
+                    {isInsideTopic && (
+                        <div className="absolute inset-y-0 right-0 w-[50vw] dark:bg-vscode-navigation-dark bg-vscode-navigation-light" />
+                    )}
                     <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block" />
                     <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-gray-800 dark:block" />
                     <div className="sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-4 xl:w-72 xl:pr-8">

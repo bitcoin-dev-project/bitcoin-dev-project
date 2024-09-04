@@ -24,12 +24,16 @@ const Button = ({ children, onClick, disabled = false, icon }: ButtonProps) => (
         onClick={onClick}
         disabled={disabled}
         className={`px-5 py-2 rounded-lg flex items-center justify-between 
-                ${disabled ? "bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400" : "bg-orange-500 text-white hover:bg-orange-600 dark:bg-orange-500 dark:text-white dark:hover:bg-orange-600"}
+                ${
+                    disabled
+                        ? "bg-vscode-navigation-light dark:bg-vscode-navigation-dark text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark cursor-not-allowed"
+                        : "bg-orange-500 text-white hover:bg-orange-600 dark:bg-orange-500 dark:text-white dark:hover:bg-orange-600"
+                }
                 transition-colors duration-200 text-sm`}
     >
         <span className="font-semibold">{children}</span>
         <div className="flex items-center">
-            <div className="w-px h-4 bg-gray-300 dark:bg-gray-600 mx-2"></div>
+            <div className="w-px h-4 bg-vscode-lineNumber-light dark:bg-vscode-lineNumber-dark mx-2"></div>
             {icon}
         </div>
     </button>
@@ -102,14 +106,14 @@ const Quiz = ({
     return (
         <div className="w-full max-w-2xl mx-auto p-4">
             {questionText && (
-                <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800 dark:text-[#E5E6F1]">
+                <h2 className="text-xl sm:text-2xl font-bold mb-4 text-vscode-text-light dark:text-vscode-text-dark">
                     {questionText}
                 </h2>
             )}
             {!quizCompleted ? (
                 <>
                     <div className="mb-4">
-                        <h3 className="text-md font-medium mb-2 text-gray-800 dark:text-[#E5E6F1]">
+                        <h3 className="text-md font-medium mb-2 text-vscode-text-light dark:text-vscode-text-dark">
                             {questions[currentQuestion].question}
                         </h3>
                     </div>
@@ -120,7 +124,19 @@ const Quiz = ({
                                     key={index}
                                     onClick={() => handleAnswerClick(option)}
                                     disabled={showExplanation}
-                                    className="w-full text-left p-3 rounded-lg flex items-center space-x-3 bg-gray-50 hover:bg-gray-100 dark:bg-[#454C54] dark:hover:bg-[#5A6270] text-sm text-gray-800 dark:text-[#E5E6F1]"
+                                    className={`w-full text-left p-3 rounded-lg flex items-center space-x-3 
+                                        ${
+                                            showExplanation
+                                                ? option ===
+                                                  questions[currentQuestion]
+                                                      .correctAnswer
+                                                    ? "bg-vscode-success-light dark:bg-vscode-success-dark"
+                                                    : option === selectedAnswer
+                                                      ? "bg-vscode-error-light dark:bg-vscode-error-dark"
+                                                      : "bg-vscode-navigation-light dark:bg-vscode-navigation-dark"
+                                                : "bg-vscode-navigation-light dark:bg-vscode-navigation-dark hover:bg-vscode-hover-light dark:hover:bg-vscode-hover-dark"
+                                        }
+                                        text-sm text-vscode-text-light dark:text-vscode-text-dark`}
                                     animate={
                                         selectedAnswer === option
                                             ? { scale: 1.05 }
@@ -137,13 +153,13 @@ const Quiz = ({
                               border-2 ${
                                   selectedAnswer === option && !showExplanation
                                       ? "bg-orange-500 text-white border-orange-500"
-                                      : "border-gray-400 text-gray-400 dark:border-gray-500 dark:text-gray-400"
+                                      : "border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark text-vscode-text-light dark:text-vscode-text-dark"
                               }
                               ${
                                   showExplanation &&
                                   option ===
                                       questions[currentQuestion].correctAnswer
-                                      ? "bg-green-500 border-green-500 text-white"
+                                      ? "bg-vscode-success-light dark:bg-vscode-success-dark border-vscode-success-light dark:border-vscode-success-dark text-white"
                                       : ""
                               }
                               ${
@@ -151,7 +167,7 @@ const Quiz = ({
                                   option === selectedAnswer &&
                                   option !==
                                       questions[currentQuestion].correctAnswer
-                                      ? "bg-red-500 text-white border-red-500"
+                                      ? "bg-vscode-error-light dark:bg-vscode-error-dark text-white border-vscode-error-light dark:border-vscode-error-dark"
                                       : ""
                               }`}
                                     >
@@ -178,7 +194,7 @@ const Quiz = ({
                                                     }}
                                                 >
                                                     <CheckCircle
-                                                        className="text-green-500"
+                                                        className="text-vscode-success-light dark:text-vscode-success-dark"
                                                         size={20}
                                                     />
                                                 </motion.div>
@@ -219,8 +235,8 @@ const Quiz = ({
                             <motion.div
                                 className={`mt-4 p-3 rounded-lg text-sm ${
                                     isCorrect
-                                        ? "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-200"
-                                        : "bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-200"
+                                        ? "bg-vscode-success-light dark:bg-vscode-success-dark text-vscode-text-light dark:text-vscode-text-dark"
+                                        : "bg-vscode-error-light dark:bg-vscode-error-dark text-vscode-text-light dark:text-vscode-text-dark"
                                 }`}
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -230,12 +246,12 @@ const Quiz = ({
                                 <div className="flex items-center space-x-2 mb-2">
                                     {isCorrect ? (
                                         <CheckCircle
-                                            className="text-emerald-500 dark:text-emerald-400"
+                                            className="text-vscode-text-light dark:text-vscode-text-dark"
                                             size={20}
                                         />
                                     ) : (
                                         <XCircle
-                                            className="text-rose-500 dark:text-rose-400"
+                                            className="text-vscode-text-light dark:text-vscode-text-dark"
                                             size={20}
                                         />
                                     )}
@@ -250,7 +266,7 @@ const Quiz = ({
                 </>
             ) : (
                 <motion.div
-                    className="mt-4 p-5 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+                    className="mt-4 p-5 rounded-lg bg-vscode-background-light dark:bg-vscode-background-dark text-vscode-text-light dark:text-vscode-text-dark"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
@@ -259,12 +275,12 @@ const Quiz = ({
                     <div className="flex flex-col items-center space-y-4">
                         {correctAnswersCount === totalQuestions ? (
                             <ThumbsUp
-                                className="text-green-500 dark:text-green-400"
+                                className="text-vscode-success-light dark:text-vscode-success-dark"
                                 size={50}
                             />
                         ) : (
                             <XCircle
-                                className="text-orange-500 dark:text-orange-400"
+                                className="text-vscode-error-light dark:text-vscode-error-dark"
                                 size={50}
                             />
                         )}

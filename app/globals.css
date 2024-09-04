@@ -6,6 +6,9 @@
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
+    --highlight-bg: rgba(241, 118, 13, 0.1);
+    --highlight-border: #f1760d;
+    --line-number-color: #858585;
 }
 
 body {
