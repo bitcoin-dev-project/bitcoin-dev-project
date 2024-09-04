@@ -18,6 +18,13 @@ interface ScriptDetail {
     type?: string
 }
 
+interface TransactionItem {
+    type?: string
+    value?: number
+    scriptSig?: ScriptDetail
+    scriptPubKey?: ScriptDetail
+}
+
 const BitcoinTransactionViewer: React.FC<{ detail: ScriptDetail }> = ({
     detail
 }) => {
@@ -117,7 +124,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
     }
 
     const renderItems = (
-        items: any[],
+        items: TransactionItem[],
         type: "inputs" | "outputs"
     ): JSX.Element => {
         const isExpanded = expandedSections[type]

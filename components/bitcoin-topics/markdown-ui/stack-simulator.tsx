@@ -3,60 +3,7 @@
 import { useState } from "react"
 import { ArrowDownCircle, ArrowUpCircle } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-
-type StackItem = string | number | boolean | bigint
-
-interface Opcode {
-    name: string
-    execute: (stack: StackItem[]) => StackItem[]
-}
-
-const opcodes: Opcode[] = [
-    {
-        name: "OP_ADD",
-        execute: (stack) => {
-            if (stack.length < 2) return [...stack, "Error: Insufficient items"]
-            const [b, a] = [stack.pop(), stack.pop()] as [StackItem, StackItem]
-            if (typeof a === "bigint" && typeof b === "bigint") {
-                return [...stack, a + b]
-            }
-            return [...stack, "Error: Non-numeric values"]
-        }
-    },
-    {
-        name: "OP_EQUAL",
-        execute: (stack) => {
-            if (stack.length < 2) return [...stack, "Error: Insufficient items"]
-            const [b, a] = [stack.pop(), stack.pop()] as [StackItem, StackItem]
-            return [...stack, a === b]
-        }
-    },
-    {
-        name: "OP_VERIFY",
-        execute: (stack) => {
-            if (stack.length < 1) return [...stack, "Error: Insufficient items"]
-            const a = stack.pop()
-            if (a === true || a === BigInt(1)) return stack
-            return [...stack, "Error: Verification failed"]
-        }
-    },
-    {
-        name: "OP_DUP",
-        execute: (stack) => {
-            if (stack.length < 1) return [...stack, "Error: Insufficient items"]
-            const a = stack[stack.length - 1]
-            return [...stack, a]
-        }
-    },
-    {
-        name: "OP_SWAP",
-        execute: (stack) => {
-            if (stack.length < 2) return [...stack, "Error: Insufficient items"]
-            const [b, a] = [stack.pop(), stack.pop()] as [StackItem, StackItem]
-            return [...stack, b, a]
-        }
-    }
-]
+import { Opcode, opcodes, StackItem } from "@/content/opcode-explorer"
 
 interface StackSimulatorProps {
     showOperations: boolean

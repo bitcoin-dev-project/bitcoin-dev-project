@@ -7,6 +7,7 @@ import {
     ScriptExecutionConfig,
     scriptExecutionConfigs
 } from "@/content/stack-steps"
+import { classNames } from "@/utils/content-utils"
 
 interface SvgatorPlayer {
     ready: (callback: () => void) => void
@@ -143,10 +144,6 @@ export default function ScriptStackVisualizer({
         },
         [playStepAnimation]
     )
-
-    function classNames(...classes: string[]): string {
-        return classes.filter(Boolean).join(" ")
-    }
 
     const renderStepIndicators = (): React.ReactNode => {
         if (!config) return null

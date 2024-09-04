@@ -17,11 +17,9 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import { ThemeToggle } from "./dark-mode-toggle"
 import { callsToAction, contributions, products } from "@/content/landing"
 import useOnclickOut from "@/hooks/useOnclickOut"
+import { classNames } from "@/utils/content-utils"
 
 export function Header() {
-    function classNames(...classes: any) {
-        return classes.filter(Boolean).join(" ")
-    }
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
 
     const closeMobileMenu = () => {
