@@ -135,5 +135,15 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/3302",
+    "publishedAt": "2024-09-04T17:26:09Z",
+    "title": "Decide what to do about undocumented `Witness::push` panics",
+    "labels": [
+      "bug",
+      "1.0"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
