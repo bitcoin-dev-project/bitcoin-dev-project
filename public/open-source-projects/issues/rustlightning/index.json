@@ -208,15 +208,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/3288",
-    "publishedAt": "2024-09-03T18:49:40Z",
-    "title": "`lightning-transaction-sync` files are missing copyright notice",
-    "labels": [
-      "good first issue",
-      "Take a Friday Leave a Friday"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   }
 ]
