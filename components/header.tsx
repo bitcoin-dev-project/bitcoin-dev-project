@@ -17,11 +17,9 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import { ThemeToggle } from "./dark-mode-toggle"
 import { callsToAction, contributions, products } from "@/content/landing"
 import useOnclickOut from "@/hooks/useOnclickOut"
+import { classNames } from "@/utils/content-utils"
 
 export function Header() {
-    function classNames(...classes: any) {
-        return classes.filter(Boolean).join(" ")
-    }
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
 
     const closeMobileMenu = () => {
@@ -29,7 +27,7 @@ export function Header() {
     }
 
     return (
-        <header className="isolate sticky top-0 dark:bg-black bg-white z-50">
+        <header className="isolate sticky top-0 bg-vscode-background-light dark:bg-vscode-background-dark  z-50">
             <div className="border-b-2 border-orange-500">
                 <nav
                     className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"

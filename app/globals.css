@@ -23,3 +23,20 @@ body {
         scrollbar-width: none; /* Firefox */
     }
 }
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+}
+
+.prose {
+    max-width: unset;
+}

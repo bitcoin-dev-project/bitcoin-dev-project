@@ -1,5 +1,7 @@
+"use client"
+
 import Link from "next/link"
-import { useId } from "react"
+import { useId, useState } from "react"
 import clsx from "clsx"
 import { ScriptIcon } from "@/public/images/topics-hero/script-icon"
 import { WalletsIcon } from "@/public/images/topics-hero/wallets-icon"
@@ -22,7 +24,7 @@ export function QuickLink({
 }: {
     title: string
     description: string
-    href: string
+    href?: string
     icon: React.ComponentProps<typeof Icon>["icon"]
 }) {
     return (
@@ -31,10 +33,16 @@ export function QuickLink({
             <div className="relative overflow-hidden rounded-xl p-6">
                 <Icon icon={icon} className="h-8 w-8" />
                 <h2 className="mt-4 font-display text-base text-gray-900 dark:text-white">
-                    <Link href={href}>
-                        <span className="absolute -inset-px rounded-xl" />
-                        {title}
-                    </Link>
+                    {href ? ( // Render Link only if href is available
+                        <Link href={href}>
+                            <span className="absolute -inset-px rounded-xl" />
+                            {title}
+                        </Link>
+                    ) : (
+                        <span className="text-gray-500 cursor-default">
+                            {title}
+                        </span> // Non-clickable title
+                    )}
                 </h2>
                 <p className="mt-1 text-sm text-gray-700 dark:text-gray-400">
                     {description}
@@ -52,7 +60,7 @@ const icons = {
 }
 
 const iconStyles = {
-    orange: "[--icon-foreground:theme(colors.orange.900)] [--icon-background:theme(colors.white)]",
+    orange: "[--icon-foreground:theme(colors.orange.900)] [--icon-background:theme(colors.white.500)]",
     amber: "[--icon-foreground:theme(colors.amber.900)] [--icon-background:theme(colors.amber.100)]"
 }
 
@@ -65,8 +73,8 @@ export function Icon({
     color?: keyof typeof iconStyles
     icon: keyof typeof icons
 } & Omit<React.ComponentPropsWithoutRef<"svg">, "color">) {
-    let id = useId()
-    let IconComponent = icons[icon]
+    const id = useId()
+    const IconComponent = icons[icon]
 
     return (
         <svg

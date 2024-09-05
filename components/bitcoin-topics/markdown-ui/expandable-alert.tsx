@@ -5,7 +5,9 @@ import {
     AlertTriangleIcon,
     InfoIcon,
     ChevronDownIcon,
-    ChevronUpIcon
+    ChevronUpIcon,
+    CopyIcon,
+    CheckIcon
 } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import clsx from "clsx"
@@ -13,7 +15,7 @@ import clsx from "clsx"
 interface ExpandableAlertProps {
     title: string
     children: React.ReactNode
-    type?: "important" | "warning" | "info" | "success"
+    type?: "important" | "warning" | "info" | "success" | "solution"
     expandable?: boolean
     initialLines?: number
 }
@@ -27,38 +29,76 @@ export default function ExpandableAlert({
 }: ExpandableAlertProps) {
     const [isExpanded, setIsExpanded] = useState(!expandable)
     const [isHovered, setIsHovered] = useState(false)
+    const [isCopied, setIsCopied] = useState(false)
 
     const alertStyles = {
         important: {
-            borderColor: "#4433ff",
-            bgColor: "#dbe1ee",
-            textColor: "#4433ff",
+            borderColor: "border-blue-300 dark:border-blue-600",
+            bgColor: "bg-blue-50 dark:bg-blue-800/20",
+            headerColor: "!text-blue-700 dark:!text-blue-300",
             Icon: CheckCircleIcon
         },
         warning: {
-            borderColor: "#ff9800",
-            bgColor: "#fff3e0",
-            textColor: "#ff9800",
+            borderColor: "border-yellow-300 dark:border-yellow-600",
+            bgColor: "bg-yellow-50 dark:bg-yellow-800/20",
+            headerColor: "!text-yellow-700 dark:!text-yellow-300",
             Icon: AlertTriangleIcon
         },
         info: {
-            borderColor: "#2196f3",
-            bgColor: "#e3f2fd",
-            textColor: "#2196f3",
+            borderColor: "border-cyan-300 dark:border-cyan-600",
+            bgColor: "bg-cyan-50 dark:bg-cyan-800/20",
+            headerColor: "!text-cyan-700 dark:!text-cyan-300",
             Icon: InfoIcon
         },
         success: {
-            borderColor: "#008a39",
-            bgColor: "#dfede2",
-            textColor: "#008a39",
+            borderColor: "border-purple-300 dark:border-purple-600",
+            bgColor: "bg-purple-50 dark:bg-purple-800/20",
+            headerColor: "!text-purple-700 dark:!text-purple-300",
+            Icon: CheckCircleIcon
+        },
+        solution: {
+            borderColor: "border-green-300 dark:border-green-600",
+            bgColor: "bg-green-50 dark:bg-green-800/20",
+            headerColor: "!text-green-700 dark:!text-green-300",
             Icon: CheckCircleIcon
         }
     }
 
-    const { borderColor, bgColor, textColor, Icon } = alertStyles[type]
+    const { borderColor, bgColor, headerColor, Icon } = alertStyles[type]
 
     const toggleExpand = () => {
         setIsExpanded(!isExpanded)
+    }
+
+    const handleCopy = () => {
+        const extractText = (node: React.ReactNode): string => {
+            if (typeof node === "string") {
+                return node
+            } else if (React.isValidElement(node)) {
+                if (typeof node.props.children === "string") {
+                    return node.props.children
+                } else if (Array.isArray(node.props.children)) {
+                    return node.props.children.map(extractText).join("")
+                } else if (React.isValidElement(node.props.children)) {
+                    return extractText(node.props.children)
+                }
+            } else if (Array.isArray(node)) {
+                return node.map(extractText).join("")
+            }
+            return ""
+        }
+
+        const codeContent = extractText(children)
+
+        navigator.clipboard
+            .writeText(codeContent)
+            .then(() => {
+                setIsCopied(true)
+                setTimeout(() => setIsCopied(false), 2000)
+            })
+            .catch((err) => {
+                console.error("Failed to copy text: ", err)
+            })
     }
 
     const childrenArray = React.Children.toArray(children)
@@ -68,23 +108,38 @@ export default function ExpandableAlert({
     return (
         <div className="mx-auto mb-10 mt-10 prose max-w-3xl">
             <div
-                className={`border-l-4 p-6 rounded-lg`}
-                style={{
-                    borderColor: borderColor,
-                    backgroundColor: bgColor
-                }}
+                className={clsx(
+                    "border-l-4 p-6 rounded-lg",
+                    borderColor,
+                    bgColor,
+                    "text-gray-800 dark:text-gray-200" // Default text color for body
+                )}
             >
-                <div className="flex items-center mb-4">
-                    <Icon className={`mr-3`} style={{ color: textColor }} />
-                    <h4
-                        className="mt-0 mb-0 text-lg font-semibold"
-                        style={{ color: textColor }}
-                    >
-                        {title}
-                    </h4>
+                <div className="flex items-center mb-4 justify-between">
+                    <div className="flex items-center">
+                        <Icon className={`mr-3 w-6 h-6 ${headerColor}`} />
+                        <h4
+                            className={`mt-0 mb-0 text-lg font-semibold ${headerColor}`}
+                        >
+                            {title}
+                        </h4>
+                    </div>
+                    {type === "solution" && (
+                        <button
+                            onClick={handleCopy}
+                            className={`flex items-center text-sm ${headerColor}`}
+                        >
+                            {isCopied ? (
+                                <CheckIcon size={16} className="mr-1 w-4 h-4" />
+                            ) : (
+                                <CopyIcon size={16} className="mr-1 w-4 h-4" />
+                            )}
+                            {isCopied ? "Copied!" : "Copy code"}
+                        </button>
+                    )}
                 </div>
 
-                <div className="mt-2 ">{initialContent}</div>
+                <div className="mt-2 relative">{initialContent}</div>
 
                 {expandable && expandedContent.length > 0 && (
                     <>
@@ -92,8 +147,7 @@ export default function ExpandableAlert({
                             onClick={toggleExpand}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
-                            className="flex items-center text-base font-bold mt-3"
-                            style={{ color: textColor }}
+                            className={`flex items-center text-base font-bold mt-3 ${headerColor}`}
                         >
                             <motion.div
                                 animate={{
@@ -102,9 +156,15 @@ export default function ExpandableAlert({
                                 }}
                             >
                                 {isExpanded ? (
-                                    <ChevronUpIcon size={20} />
+                                    <ChevronUpIcon
+                                        size={20}
+                                        className="w-5 h-5"
+                                    />
                                 ) : (
-                                    <ChevronDownIcon size={20} />
+                                    <ChevronDownIcon
+                                        size={20}
+                                        className="w-5 h-5"
+                                    />
                                 )}
                             </motion.div>
                             <span className="ml-2">
