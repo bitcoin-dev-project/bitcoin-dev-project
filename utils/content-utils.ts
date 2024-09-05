@@ -79,7 +79,19 @@ function findNextTopic(
     if (current.topic.parent) {
         const parentNode = findTopicInTree(current.topic.parent, topicTree)
         if (parentNode) {
-            return findNextTopic(parentNode, topicTree)
+            const parentSiblings = parentNode.topic.parent
+                ? findTopicInTree(parentNode.topic.parent, topicTree)
+                      ?.children || topicTree
+                : topicTree
+            const parentIndex = parentSiblings.findIndex(
+                (node) => node.topic.slug === parentNode.topic.slug
+            )
+            if (parentIndex < parentSiblings.length - 1) {
+                return parentSiblings[parentIndex + 1]
+            } else {
+                // If the parent is the last in its level, continue up the tree
+                return findNextTopic(parentNode, parentSiblings)
+            }
         }
     }
 
