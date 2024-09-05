@@ -58,7 +58,7 @@ export function Hero() {
                                 is your all-in-one Bitcoin education center.
                             </p>
                             <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                                <Button href="/topics/welcome">
+                                <Button href="/topics/1-welcome">
                                     Get started
                                 </Button>
                                 <Button
