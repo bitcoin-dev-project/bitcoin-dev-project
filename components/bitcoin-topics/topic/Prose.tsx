@@ -34,7 +34,17 @@ export function Prose<T extends React.ElementType = "div">({
                 "[&_ul>li]:relative [&_ul>li]:pl-8",
                 "[&_ul>li]:before:content-['→'] [&_ul>li]:before:absolute [&_ul>li]:before:left-2 [&_ul>li]:before:top-1/2 [&_ul>li]:before:transform [&_ul>li]:before:-translate-y-1/2 [&_ul>li]:before:text-orange-500 [&_ul>li]:before:font-bold",
                 // ordered list
-                "[&_ol>li]:marker:text-orange-500"
+                "[&_ol>li]:marker:text-orange-500",
+                // Unset color for specific elements
+                "[&_thead_th]:text-current",
+                "[&_code]:text-current",
+                // Ensure headings and strong text use the current text color
+                "[&_h1]:text-current [&_h2]:text-current [&_h3]:text-current [&_h4]:text-current",
+                "[&_strong]:text-current",
+                // Set background color for pre elements with different opacity for light and dark modes
+                "[&_pre]:bg-[#1e1e1e]/85 dark:[&_pre]:bg-[#1e1e1e]/55",
+                // Ensure text in pre elements is visible in both light and dark modes
+                "[&_pre]:text-white dark:[&_pre]:text-gray-200"
             )}
             {...props}
         />

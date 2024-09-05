@@ -68,11 +68,11 @@ const MultisigAnimation = () => {
     }
 
     return (
-        <div className="full-width ">
+        <div className="full-width">
             <div
-                className={`mx-auto py-1 " ${
+                className={`mx-auto py-1 ${
                     isFullscreen
-                        ? "fixed inset-0 z-50 bg-white dark:bg-[#272E35] overflow-auto"
+                        ? "fixed inset-0 z-50 bg-vscode-background-light dark:bg-vscode-background-dark overflow-auto"
                         : ""
                 }`}
             >
@@ -82,14 +82,14 @@ const MultisigAnimation = () => {
                     }`}
                     ref={containerRef}
                 >
-                    <div className="w-full bg-white dark:bg-[#272E35] rounded-lg overflow-hidden shadow-md">
-                        <div className="bg-gray-100 dark:bg-[#454C54] p-4 flex flex-wrap justify-between items-center text-sm">
+                    <div className="w-full bg-vscode-container-light dark:bg-vscode-container-dark rounded-lg overflow-hidden shadow-md">
+                        <div className="bg-vscode-navButton-background-light dark:bg-vscode-navButton-background-dark p-4 flex flex-wrap justify-between items-center text-sm">
                             <div className="flex flex-wrap items-center space-x-4 mb-2 sm:mb-0">
-                                <span className="text-gray-800 dark:text-[#E5E6F1] font-semibold">
+                                <span className="text-vscode-text-light dark:text-vscode-text-dark font-semibold">
                                     Multisig Setup:
                                 </span>
                                 <select
-                                    className="bg-white dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded px-4 py-1 pr-8 appearance-none"
+                                    className="bg-vscode-input-light dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark rounded px-4 py-1 pr-8 appearance-none"
                                     value={requiredSignatures}
                                     onChange={(e) =>
                                         updateMultisigSetup(
@@ -108,12 +108,12 @@ const MultisigAnimation = () => {
                                     ))}
                                 </select>
 
-                                <span className="text-gray-800 dark:text-[#E5E6F1] font-semibold">
+                                <span className="text-vscode-text-light dark:text-vscode-text-dark font-semibold">
                                     Of
                                 </span>
 
                                 <select
-                                    className="bg-white dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded px-4 py-1 pr-8 appearance-none"
+                                    className="bg-vscode-input-light dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark rounded px-4 py-1 pr-8 appearance-none"
                                     value={numParticipants}
                                     onChange={(e) =>
                                         setNumParticipants(
@@ -132,13 +132,13 @@ const MultisigAnimation = () => {
                             <div>
                                 <button
                                     onClick={restartAnimation}
-                                    className="p-2 bg-gray-200 dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded-full hover:bg-gray-300 dark:hover:bg-[#5A6270] transition-colors mr-2"
+                                    className="p-2 bg-vscode-hover-light dark:bg-vscode-hover-dark text-vscode-text-light dark:text-vscode-text-dark rounded-full hover:bg-vscode-selection-light dark:hover:bg-vscode-selection-dark transition-colors mr-2"
                                 >
                                     <RotateCcw size={16} />
                                 </button>
                                 <button
                                     onClick={toggleFullscreen}
-                                    className="p-2 bg-gray-200 dark:bg-[#272E35] text-gray-800 dark:text-[#E5E6F1] rounded-full hover:bg-gray-300 dark:hover:bg-[#5A6270] transition-colors"
+                                    className="p-2 bg-vscode-hover-light dark:bg-vscode-hover-dark text-vscode-text-light dark:text-vscode-text-dark rounded-full hover:bg-vscode-selection-light dark:hover:bg-vscode-selection-dark transition-colors"
                                 >
                                     {isFullscreen ? (
                                         <Minimize2 size={16} />
@@ -205,7 +205,7 @@ const MultisigAnimation = () => {
                             </div>
 
                             {isAuthorized && (
-                                <div className="text-center text-green-500 flex items-center justify-center mt-8">
+                                <div className="text-center text-vscode-success-light dark:text-vscode-success-dark flex items-center justify-center mt-8">
                                     <CheckCircle className="mr-2" size={24} />
                                     <span className="text-lg font-semibold">
                                         Transaction Authorized
@@ -232,10 +232,10 @@ const ConnectingLine = ({
     <div
         className={`absolute left-1/2 top-full w-1 h-16 sm:h-32 -translate-x-1/2 transition-all duration-300 ${
             isAuthorized
-                ? "bg-green-500"
+                ? "bg-vscode-success-light dark:bg-vscode-success-dark"
                 : isActive
                   ? "bg-orange-500"
-                  : "bg-gray-300 dark:bg-[#454C54]"
+                  : "bg-vscode-hover-light dark:bg-vscode-hover-dark"
         }`}
     >
         {isAnimating && (
@@ -265,23 +265,27 @@ const MultisigWallet = ({
     totalParticipants: number
 }) => (
     <div
-        className={`relative w-full h-24 sm:h-36 mx-auto border-2 border-gray-300 dark:border-[#454C54] rounded-lg p-2 sm:p-4 transform transition-all duration-300 ${
-            isAuthorized ? "bg-green-100" : "bg-gray-100 dark:bg-[#454c54]"
+        className={`relative w-full h-24 sm:h-36 mx-auto border-2 border-vscode-hover-light dark:border-vscode-hover-dark rounded-lg p-2 sm:p-4 transform transition-all duration-300 ${
+            isAuthorized
+                ? "bg-vscode-success-light dark:bg-vscode-success-dark bg-opacity-20"
+                : "bg-vscode-background-light dark:bg-vscode-background-dark"
         }`}
     >
         <div className="absolute top-2 right-2 flex items-center space-x-2">
             {!isAuthorized ? (
-                <Lock size={28} className="text-gray-500 dark:text-gray-100" />
+                <Lock
+                    size={28}
+                    className="text-vscode-text-light dark:text-vscode-text-dark"
+                />
             ) : (
-                <Unlock size={28} className="text-green-500" />
+                <Unlock
+                    size={28}
+                    className="text-vscode-success-light dark:text-vscode-success-dark"
+                />
             )}
         </div>
         <p
-            className={`text-center mb-2 sm:mb-6 mt-2 text-base sm:text-xl font-semibold ${
-                isAuthorized
-                    ? "text-green-800"
-                    : "text-gray-800 dark:text-[#E5E6F1]"
-            }`}
+            className={`text-center mb-2 sm:mb-6 mt-2 text-base sm:text-xl font-semibold text-vscode-text-light dark:text-vscode-text-dark`}
         >
             {`${requiredSignatures} of ${totalParticipants}`}{" "}
             <span className="font-light">Multisig Wallet</span>
@@ -346,12 +350,12 @@ const Participant = ({
     imageUrl: string
 }) => (
     <div
-        className={`bg-white dark:bg-[#E5E6F1] rounded-lg shadow p-4 sm:p-6 text-center w-full sm:w-48 ${
+        className={`bg-vscode-background-light dark:bg-vscode-background-dark rounded-lg shadow p-4 sm:p-6 text-center w-full sm:w-48 ${
             isAnimating ? "bg-orange-100" : ""
         }`}
     >
         <div className="flex justify-center mb-4">
-            <div className="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+            <div className="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-vscode-hover-light dark:bg-vscode-hover-dark flex items-center justify-center overflow-hidden">
                 <Image
                     src={imageUrl}
                     alt={name}
@@ -361,7 +365,7 @@ const Participant = ({
                 />
             </div>
         </div>
-        <p className="mb-3 text-sm font-semibold text-gray-800 dark:text-[#272E35]">
+        <p className="mb-3 text-sm font-semibold text-vscode-text-light dark:text-vscode-text-dark">
             {name}
         </p>
         <button
@@ -371,9 +375,9 @@ const Participant = ({
                 isAnimating
                     ? "bg-yellow-500 text-white"
                     : signed
-                      ? "bg-green-500 text-white"
+                      ? "bg-vscode-success-light dark:bg-vscode-success-dark text-white"
                       : disabled
-                        ? "bg-gray-300 dark:bg-[#454C54] text-gray-500 dark:text-[#E5E6F1]"
+                        ? "bg-vscode-hover-light dark:bg-vscode-hover-dark text-vscode-text-light dark:text-vscode-text-dark"
                         : "bg-orange-500 text-white hover:bg-orange-600"
             }`}
         >

@@ -27,7 +27,7 @@ export function Header() {
     }
 
     return (
-        <header className="isolate sticky top-0 dark:bg-black bg-white z-50">
+        <header className="isolate sticky top-0 bg-vscode-background-light dark:bg-vscode-background-dark  z-50">
             <div className="border-b-2 border-orange-500">
                 <nav
                     className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
