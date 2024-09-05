@@ -1,15 +1,5 @@
 [
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/33",
-    "publishedAt": "2021-08-20T16:12:09Z",
-    "title": "Use `shrink` for prop tests",
-    "labels": [
-      "documentation",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/67",
     "publishedAt": "2021-11-17T15:43:36Z",
     "title": "refactor all the repetitive code in roles-logic-sv2 parsers file into macros",
