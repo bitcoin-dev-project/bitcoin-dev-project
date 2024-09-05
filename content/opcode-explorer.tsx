@@ -117,15 +117,6 @@ export const opcodes: Opcode[] = [
         }
     },
     {
-        name: "OP_VERIFY",
-        execute: (stack) => {
-            if (stack.length < 1) return [...stack, "Error: Insufficient items"]
-            const a = stack.pop()
-            if (a === true || a === BigInt(1)) return stack
-            return [...stack, "Error: Verification failed"]
-        }
-    },
-    {
         name: "OP_DUP",
         execute: (stack) => {
             if (stack.length < 1) return [...stack, "Error: Insufficient items"]
@@ -136,10 +127,11 @@ export const opcodes: Opcode[] = [
     {
         name: "OP_SWAP",
         execute: (stack) => {
-            const [newStack, items] = popFromStack(stack, 2)
-            if (typeof items === "string") return [...newStack, items]
-            const [b, a] = items as [StackItem, StackItem]
-            return [...newStack, b, a]
+            if (stack.length < 2) return [...stack, "Error: Insufficient items"]
+            const newStack = [...stack]
+            const a = newStack.pop()!
+            const b = newStack.pop()!
+            return [...newStack, a, b]
         }
     }
 ]
