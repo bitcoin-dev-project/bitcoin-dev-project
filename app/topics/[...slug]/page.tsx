@@ -5,7 +5,6 @@ import { MDXLayoutRenderer } from "pliny/mdx-components"
 import { allTopics } from "contentlayer/generated"
 import TopicLayout from "@/components/bitcoin-topics/layouts/TopicLayout"
 import { components } from "@/components/bitcoin-topics/markdown-ui/MDXComponents"
-import { Metadata } from "next"
 import siteMetadata from "@/data/siteMetadata"
 import { getAuthorDetails, getTopicData } from "@/utils/content-utils"
 
@@ -13,28 +12,20 @@ export async function generateMetadata({
     params
 }: {
     params: { slug: string[] }
-}): Promise<Metadata | undefined> {
+}) {
     const slug = decodeURI(params.slug.join("/"))
     const post = allTopics.find((p) => p.slug === slug)
-    const authorList = post?.authors || ["default"]
-    const authorDetails = getAuthorDetails(authorList)
-    if (!post) {
-        return
-    }
+    if (!post) return
 
-    const publishedAt = new Date(post.date).toISOString()
-    const modifiedAt = new Date(post.lastmod || post.date).toISOString()
+    const authorDetails = getAuthorDetails(post.authors || ["default"])
     const authors = authorDetails.map((author) => author.name)
-    let imageList = [siteMetadata.socialBanner]
-    if (post.images) {
-        imageList =
-            typeof post.images === "string" ? [post.images] : post.images
-    }
-    const ogImages = imageList.map((img) => {
-        return {
-            url: img.includes("http") ? img : siteMetadata.siteUrl + img
-        }
-    })
+
+    const imageList = [].concat(
+        post.images?.length > 0 ? post.images : siteMetadata.socialBanner
+    )
+    const ogImages = imageList.map((img: string) => ({
+        url: img.includes("http") ? img : siteMetadata.siteUrl + img
+    }))
 
     return {
         title: post.title,
@@ -45,8 +36,8 @@ export async function generateMetadata({
             siteName: siteMetadata.title,
             locale: "en_US",
             type: "article",
-            publishedTime: publishedAt,
-            modifiedTime: modifiedAt,
+            publishedTime: new Date(post.date).toISOString(),
+            modifiedTime: new Date(post.lastmod || post.date).toISOString(),
             url: "./",
             images: ogImages,
             authors: authors.length > 0 ? authors : [siteMetadata.author]
@@ -61,9 +52,7 @@ export async function generateMetadata({
 }
 
 export const generateStaticParams = async () => {
-    const paths = allTopics.map((p) => ({ slug: p.slug.split("/") }))
-
-    return paths
+    return allTopics.map((p) => ({ slug: p.slug.split("/") }))
 }
 
 export default async function Page({ params }: { params: { slug: string[] } }) {
@@ -72,7 +61,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
         getTopicData(slug)
 
     return (
-        <>
+        <div className="scroll-smooth">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -89,6 +78,6 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
                     toc={post.toc}
                 />
             </TopicLayout>
-        </>
+        </div>
     )
 }

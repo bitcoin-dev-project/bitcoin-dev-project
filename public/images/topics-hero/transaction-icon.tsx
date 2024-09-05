@@ -29,7 +29,8 @@ export function TransactionIcon({
                 <circle cx={12} cy={20} r={12} fill={`url(#${id}-gradient)`} />
                 <path
                     d="M27 12.13 19.87 5 13 11.87v14.26l14-14Z"
-                    className="fill-[var(--icon-background)] stroke-[color:var(--icon-foreground)]"
+                    fill="var(--icon-background)"
+                    stroke="var(--icon-foreground)"
                     fillOpacity={0.5}
                     strokeWidth={2}
                     strokeLinecap="round"

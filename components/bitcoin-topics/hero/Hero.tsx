@@ -51,14 +51,15 @@ export function Hero() {
                         />
                         <div className="relative">
                             <p className="inline bg-gradient-to-r  from-orange-600 via-orange-400 to-orange-600  dark:from-orange-200 dark:via-orange-400 dark:to-orange-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-                                Learn About Bitcoin
+                                Bitcoin Topics
                             </p>
                             <p className="mt-3 text-2xl tracking-tight text-gray-400">
-                                From the basics to advanced concepts, BDP Learn
-                                is your all-in-one Bitcoin education center.
+                                The interactive learning experience designed to
+                                help you become confident in Bitcoin
+                                development.
                             </p>
                             <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                                <Button href="/topics/welcome">
+                                <Button href="/topics/1-welcome">
                                     Get started
                                 </Button>
                                 <Button

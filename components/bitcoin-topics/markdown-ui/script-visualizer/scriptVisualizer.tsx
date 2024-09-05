@@ -1,271 +1,334 @@
 "use client"
 
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState, useCallback, useMemo } from "react"
+import { PlayIcon, PauseIcon, FastForwardIcon, RewindIcon } from "lucide-react"
+import { motion } from "framer-motion"
 import {
-    PlayIcon,
-    PauseIcon,
-    ArrowLeftIcon,
-    ArrowRightIcon,
-    CheckIcon
-} from "@heroicons/react/20/solid"
+    ScriptExecutionConfig,
+    scriptExecutionConfigs
+} from "@/content/stack-steps"
+import { classNames } from "@/utils/content-utils"
 
-const svgPaths = [
-    "/bitcoin-topics/static/images/topics/p2pk/p2pk-1.svg",
-    "/bitcoin-topics/static/images/topics/p2pk/p2pk-2.svg",
-    "/bitcoin-topics/static/images/topics/p2pk/p2pk-3.svg"
-]
-
-const svgSteps = [
-    {
-        name: "Step 1",
-        description: "Push <signature> onto the stack",
-        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-1.svg",
-        status: "complete",
-        code: "[Signature]",
-        category: "UnlockScript"
-    },
-    {
-        name: "Step 2",
-        description: "Push <pubkey> onto the stack",
-        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-2.svg",
-        status: "current",
-        code: "[Public Key]",
-        category: "PubKeyScript"
-    },
-    {
-        name: "Step 3",
-        description: "Pop two items (pub-key & sign.) & verify ECDSA signature",
-        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk-3.svg",
-        status: "upcoming",
-        code: "<OP_CHECKSIG>",
-        category: "PubKeyScript"
-    }
-]
+interface SvgatorPlayer {
+    ready: (callback: () => void) => void
+    pause: () => void
+    seekTo: (time: number) => void
+    play: () => void
+    duration: number
+    currentTime: number
+}
 
 interface ScriptStackVisualizerProps {
-    type: string
-    children: React.ReactNode
+    type: keyof typeof scriptExecutionConfigs
 }
 
 export default function ScriptStackVisualizer({
-    type,
-    children
+    type
 }: ScriptStackVisualizerProps) {
-    const [svgIndex, setSvgIndex] = useState(0)
+    const [config, setConfig] = useState<ScriptExecutionConfig | null>(null)
+    const [currentStep, setCurrentStep] = useState<number>(-1)
+    const [isPlaying, setIsPlaying] = useState<boolean>(false)
+    const [isMobile, setIsMobile] = useState<boolean>(false)
     const svgRef = useRef<HTMLObjectElement>(null)
-    const mobileRef = useRef<HTMLObjectElement>(null)
-
-    const handlePlayerAction = (action: string) => {
-        ;[svgRef, mobileRef].forEach((ref) => {
-            if (ref.current && ref.current.contentDocument) {
-                const svgElement =
-                    ref.current.contentDocument.getElementById("p2pk")
-                if (svgElement && (svgElement as any).svgatorPlayer) {
-                    ;(svgElement as any).svgatorPlayer.ready(() => {
-                        ;(svgElement as any).svgatorPlayer[action]()
-                    })
-                }
-            }
-        })
-    }
+    const playerRef = useRef<SvgatorPlayer | null>(null)
+    const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
     useEffect(() => {
-        const timer = setTimeout(() => handlePlayerAction("play"), 100)
+        const selectedConfig = scriptExecutionConfigs[type]
+        setConfig(selectedConfig || null)
+
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+
+        checkMobile()
+        window.addEventListener("resize", checkMobile)
+        return () => window.removeEventListener("resize", checkMobile)
+    }, [type])
+
+    const cumulativeDurations = useMemo(() => {
+        if (!config) return []
+        return config.steps.reduce<number[]>((acc, step, index) => {
+            acc[index] = (acc[index - 1] || 0) + step.duration * 1000
+            return acc
+        }, [])
+    }, [config])
+
+    const initializeSvgPlayer = useCallback(() => {
+        if (!config) return
+
+        if (svgRef.current && svgRef.current.contentDocument) {
+            const svgElement = svgRef.current.contentDocument.getElementById(
+                config.svgId
+            ) as (SVGSVGElement & { svgatorPlayer: SvgatorPlayer }) | null
+            if (svgElement && svgElement.svgatorPlayer) {
+                playerRef.current = svgElement.svgatorPlayer
+                playerRef.current.ready(() => {
+                    playerRef.current?.pause()
+                    playerRef.current?.seekTo(0)
+                })
+            }
+        }
+    }, [config])
+
+    useEffect(() => {
+        if (!config) return
+
+        const timer = setTimeout(() => {
+            initializeSvgPlayer()
+        }, 100)
         return () => clearTimeout(timer)
-    }, [svgIndex])
+    }, [initializeSvgPlayer, config])
 
-    const handleSvgSelect = (index: number) => {
-        setSvgIndex(index)
-    }
+    const playStepAnimation = useCallback(
+        (step: number) => {
+            if (!config || !playerRef.current) return
 
-    const handleSvgSwitch = (direction: "next" | "prev") => {
-        setSvgIndex((prev) => {
-            const newIndex =
-                direction === "next"
-                    ? (prev + 1) % svgPaths.length
-                    : (prev - 1 + svgPaths.length) % svgPaths.length
-            return newIndex
-        })
-    }
+            if (animationTimeoutRef.current) {
+                clearTimeout(animationTimeoutRef.current)
+            }
 
-    function classNames(...classes: string[]) {
-        return classes.filter(Boolean).join(" ")
-    }
+            const startTime = step > 0 ? cumulativeDurations[step - 1] : 0
+            const endTime = cumulativeDurations[step]
+            playerRef.current.seekTo(startTime)
+            playerRef.current.play()
+            setIsPlaying(true)
 
-    const getStatusIcon = (index: number) => {
-        if (index < svgIndex) {
+            const animationDuration = endTime - startTime
+            animationTimeoutRef.current = setTimeout(() => {
+                playerRef.current?.pause()
+                setIsPlaying(false)
+            }, animationDuration)
+        },
+        [config, cumulativeDurations]
+    )
+
+    const handlePlay = useCallback(() => {
+        if (!isPlaying && currentStep >= 0) {
+            playStepAnimation(currentStep)
+        }
+    }, [isPlaying, currentStep, playStepAnimation])
+
+    const handlePause = useCallback(() => {
+        if (playerRef.current) {
+            playerRef.current.pause()
+            setIsPlaying(false)
+            if (animationTimeoutRef.current) {
+                clearTimeout(animationTimeoutRef.current)
+            }
+        }
+    }, [])
+
+    const handleStepChange = useCallback(
+        (direction: "next" | "prev") => {
+            if (!config) return
+
+            setCurrentStep((prev) => {
+                const newStep =
+                    direction === "next"
+                        ? Math.min(prev + 1, config.steps.length - 1)
+                        : Math.max(prev - 1, 0)
+                if (newStep >= 0) {
+                    playStepAnimation(newStep)
+                }
+                return newStep
+            })
+        },
+        [config, playStepAnimation]
+    )
+
+    const handleStepClick = useCallback(
+        (index: number) => {
+            setCurrentStep(index)
+            playStepAnimation(index)
+        },
+        [playStepAnimation]
+    )
+
+    const renderStepIndicators = (): React.ReactNode => {
+        if (!config) return null
+
+        if (isMobile) {
             return (
-                <CheckIcon
-                    className="h-5 w-5 text-green-500"
-                    aria-hidden="true"
-                />
-            )
-        } else if (index === svgIndex) {
-            return <span className="h-2.5 w-2.5 rounded-full bg-orange-600" />
-        } else {
-            return (
-                <span className="h-2.5 w-2.5 rounded-full bg-transparent group-hover:bg-gray-300" />
+                <div className="flex justify-center space-x-2 mt-4">
+                    {config.steps.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => handleStepClick(index)}
+                            className={classNames(
+                                "h-2 w-2 rounded-full",
+                                index === currentStep
+                                    ? "bg-orange-500"
+                                    : index < currentStep
+                                      ? "bg-vscode-success-light dark:bg-vscode-success-dark"
+                                      : "bg-vscode-input-light dark:bg-vscode-input-dark"
+                            )}
+                            aria-label={`Step ${index + 1}`}
+                        />
+                    ))}
+                </div>
             )
         }
+
+        return (
+            <nav aria-label="Progress" className="w-full">
+                <div className="space-y-3">
+                    {config.steps.map((step, index) => (
+                        <div key={step.name} className="relative">
+                            <button
+                                onClick={() => handleStepClick(index)}
+                                className="group relative flex w-full items-start text-left"
+                            >
+                                <span className="flex h-9 items-center">
+                                    <span
+                                        className={classNames(
+                                            currentStep >=
+                                                config.steps.length - 1
+                                                ? "bg-vscode-success-light dark:bg-vscode-success-dark"
+                                                : index === currentStep
+                                                  ? "bg-orange-500"
+                                                  : index < currentStep
+                                                    ? "bg-vscode-success-light dark:bg-vscode-success-dark"
+                                                    : "bg-gray-300 dark:bg-vscode-input-dark",
+                                            "relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-300 dark:border-vscode-input-dark group-hover:border-gray-400 dark:group-hover:border-vscode-hover-dark"
+                                        )}
+                                    >
+                                        {/* Empty span to maintain spacing */}
+                                        <span className="h-2.5 w-2.5 rounded-full" />
+                                    </span>
+                                </span>
+                                <span className="ml-4 flex min-w-0 flex-col">
+                                    <span
+                                        className={classNames(
+                                            index <= currentStep
+                                                ? "text-orange-500"
+                                                : "text-vscode-text-light dark:text-vscode-text-dark",
+                                            "text-sm font-medium"
+                                        )}
+                                    >
+                                        {step.name}
+                                    </span>
+                                    <span className="text-sm text-vscode-text-light dark:text-vscode-text-dark opacity-70">
+                                        {step.description}
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    ))}
+                </div>
+            </nav>
+        )
+    }
+
+    if (!config) {
+        return <div>Configuration not found for type: {type}</div>
     }
 
     return (
-        <div className="mx-auto py-1 -mx-4 sm:-mx-8 md:-mx-16 lg:-mx-32 xl:-mx-40">
+        <div className="mx-auto py-1 full-width">
             <div className="mx-auto py-1 px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center py-3">
-                    <div className="mx-auto flex w-full max-w-6xl flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 rounded-lg bg-gray-50 dark:bg-gray-900 p-4 shadow-md">
-                        {/* Mobile layout */}
-                        <div className="lg:hidden w-full space-y-4">
-                            {svgPaths.map((path, index) => (
-                                <object
-                                    key={path}
-                                    ref={index === svgIndex ? mobileRef : null}
-                                    type="image/svg+xml"
-                                    data={path}
-                                    className={`h-auto w-full rounded-lg bg-white shadow-md ${index === svgIndex ? "block" : "hidden"}`}
-                                    aria-labelledby="svgAnimation"
-                                    role="img"
-                                >
-                                    Your browser does not support SVGs
-                                </object>
-                            ))}
-
-                            <div className="flex justify-center items-center space-x-4">
-                                <button
-                                    onClick={() => handleSvgSwitch("prev")}
-                                    className={`p-2 ${svgIndex > 0 ? "text-orange-500 hover:text-orange-700" : "text-gray-400"} cursor-pointer rounded`}
-                                    disabled={svgIndex === 0}
-                                >
-                                    <ArrowLeftIcon className="h-5 w-5" />
-                                </button>
-                                <button
-                                    onClick={() => handlePlayerAction("play")}
-                                    className="cursor-pointer rounded p-2 text-orange-500 hover:text-orange-700"
-                                >
-                                    <PlayIcon className="h-5 w-5" />
-                                </button>
-                                <button
-                                    onClick={() => handlePlayerAction("pause")}
-                                    className="cursor-pointer rounded p-2 text-orange-500 hover:text-orange-700"
-                                >
-                                    <PauseIcon className="h-5 w-5" />
-                                </button>
-                                <button
-                                    onClick={() => handleSvgSwitch("next")}
-                                    className={`p-2 ${svgIndex < svgSteps.length - 1 ? "text-orange-500 hover:text-orange-700" : "text-gray-400"} cursor-pointer rounded`}
-                                    disabled={svgIndex === svgSteps.length - 1}
-                                >
-                                    <ArrowRightIcon className="h-5 w-5" />
-                                </button>
-                            </div>
-
-                            <div className="flex justify-center space-x-2">
-                                {svgSteps.map((_, index) => (
-                                    <div
-                                        key={index}
-                                        className={`h-2 w-2 rounded-full ${
-                                            index === svgIndex
-                                                ? "bg-orange-600"
-                                                : "bg-gray-300"
-                                        }`}
-                                    />
-                                ))}
+                    <div className="mx-auto w-full max-w-6xl rounded-lg overflow-hidden shadow-lg">
+                        {/* VS Code-like title bar */}
+                        <div className="bg-vscode-titleBar-light dark:bg-vscode-titleBar-dark text-vscode-sidebarForeground-light dark:text-vscode-sidebarForeground-dark p-2 flex items-center">
+                            <div className="flex-grow text-center text-sm font-medium">
+                                Script Stack Visualizer
                             </div>
                         </div>
 
-                        {/* Desktop layout */}
-                        <nav
-                            aria-label="Progress"
-                            className="hidden lg:block w-full lg:w-2/5"
-                        >
-                            <div className="mb-4 flex justify-center space-x-2">
-                                <button
-                                    onClick={() => handleSvgSwitch("prev")}
-                                    className={`p-2 ${svgIndex > 0 ? "text-orange-500 hover:text-orange-700" : "text-gray-400"} cursor-pointer rounded`}
-                                    disabled={svgIndex === 0}
-                                >
-                                    <ArrowLeftIcon className="h-5 w-5" />
-                                </button>
-                                <button
-                                    onClick={() => handlePlayerAction("play")}
-                                    className="cursor-pointer rounded p-2 text-orange-500 hover:text-orange-700"
-                                >
-                                    <PlayIcon className="h-5 w-5" />
-                                </button>
-                                <button
-                                    onClick={() => handlePlayerAction("pause")}
-                                    className="cursor-pointer rounded p-2 text-orange-500 hover:text-orange-700"
-                                >
-                                    <PauseIcon className="h-5 w-5" />
-                                </button>
-                                <button
-                                    onClick={() => handleSvgSwitch("next")}
-                                    className={`p-2 ${svgIndex < svgSteps.length - 1 ? "text-orange-500 hover:text-orange-700" : "text-gray-400"} cursor-pointer rounded`}
-                                    disabled={svgIndex === svgSteps.length - 1}
-                                >
-                                    <ArrowRightIcon className="h-5 w-5" />
-                                </button>
-                            </div>
+                        <div className="flex">
+                            {/* Main content area */}
+                            <div className="flex-grow flex">
+                                {/* Left panel (step indicators) */}
+                                {!isMobile && (
+                                    <div className="w-1/3 bg-vscode-sidebarBackground-light dark:bg-vscode-sidebarBackground-dark p-4 overflow-y-auto">
+                                        {renderStepIndicators()}
+                                    </div>
+                                )}
 
-                            <ol role="list" className="space-y-4">
-                                {svgSteps.map((step, index) => (
-                                    <li key={step.name} className="relative">
-                                        <button
-                                            onClick={() =>
-                                                handleSvgSelect(index)
-                                            }
-                                            className="group relative flex w-full items-start text-left"
+                                {/* Right panel (visualization and controls) */}
+                                <div className="w-full lg:w-2/3 bg-vscode-editorBackground-light dark:bg-vscode-editorBackground-dark p-4">
+                                    <div className="bg-vscode-background-light dark:bg-vscode-background-dark rounded-lg shadow-md overflow-hidden mb-4">
+                                        <object
+                                            ref={svgRef}
+                                            type="image/svg+xml"
+                                            data={config.svgPath}
+                                            className="w-full h-full dark:bg-vscode-file-dark bg-vscode-file-light"
+                                            aria-labelledby="svgAnimation"
+                                            role="img"
+                                        ></object>
+                                    </div>
+                                    <div className="border border-gray-300 dark:border-vscode-input-dark p-3 rounded-lg bg-gray-100 dark:bg-vscode-background-dark flex items-center justify-center">
+                                        <motion.div
+                                            whileHover={{ scale: 1.1 }}
+                                            whileTap={{ scale: 0.9 }}
                                         >
-                                            <span className="flex h-9 items-center">
-                                                <span
-                                                    className={classNames(
-                                                        index === svgIndex
-                                                            ? "bg-orange-600"
-                                                            : "",
-                                                        index < svgIndex
-                                                            ? "bg-green-500"
-                                                            : "",
-                                                        "relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-300 bg-white group-hover:border-gray-400"
-                                                    )}
-                                                >
-                                                    {getStatusIcon(index)}
-                                                </span>
-                                            </span>
-                                            <span className="ml-4 flex min-w-0 flex-col">
-                                                <span
-                                                    className={classNames(
-                                                        index <= svgIndex
-                                                            ? "text-orange-600"
-                                                            : "text-gray-500",
-                                                        "text-sm font-medium"
-                                                    )}
-                                                >
-                                                    {step.name}
-                                                </span>
-                                                <span className="text-sm text-gray-500">
-                                                    {step.description}
-                                                </span>
-                                            </span>
-                                        </button>
-                                    </li>
-                                ))}
-                            </ol>
-                        </nav>
+                                            <RewindIcon
+                                                className={`h-6 w-6 mr-4 cursor-pointer ${
+                                                    currentStep > 0
+                                                        ? "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
+                                                        : "text-vscode-text-light dark:text-vscode-text-dark opacity-50"
+                                                } transition-colors duration-300`}
+                                                onClick={() =>
+                                                    handleStepChange("prev")
+                                                }
+                                            />
+                                        </motion.div>
+                                        <motion.div
+                                            whileHover={{ scale: 1.1 }}
+                                            whileTap={{ scale: 0.9 }}
+                                        >
+                                            {isPlaying ? (
+                                                <PauseIcon
+                                                    className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
+                                                    onClick={handlePause}
+                                                />
+                                            ) : (
+                                                <PlayIcon
+                                                    className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
+                                                    onClick={handlePlay}
+                                                />
+                                            )}
+                                        </motion.div>
+                                        <motion.div
+                                            whileHover={{ scale: 1.1 }}
+                                            whileTap={{ scale: 0.9 }}
+                                        >
+                                            <FastForwardIcon
+                                                className={`h-6 w-6 mr-4 cursor-pointer ${
+                                                    currentStep <
+                                                    config.steps.length - 1
+                                                        ? "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
+                                                        : "text-vscode-text-light dark:text-vscode-text-dark opacity-50"
+                                                } transition-colors duration-300`}
+                                                onClick={() =>
+                                                    handleStepChange("next")
+                                                }
+                                            />
+                                        </motion.div>
+                                        <div className="flex-grow bg-gray-300 dark:bg-vscode-input-dark h-2 rounded-full">
+                                            <motion.div
+                                                className="bg-orange-500 h-2 rounded-full"
+                                                initial={{ width: "0%" }}
+                                                animate={{
+                                                    width: `${((currentStep + 1) / config.steps.length) * 100}%`
+                                                }}
+                                                transition={{
+                                                    type: "spring",
+                                                    stiffness: 300,
+                                                    damping: 30
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
 
-                        <div className="hidden lg:block w-full lg:w-3/5">
-                            {svgPaths.map((path, index) => (
-                                <object
-                                    key={path}
-                                    ref={index === svgIndex ? svgRef : null}
-                                    type="image/svg+xml"
-                                    data={path}
-                                    className={`h-auto w-full rounded-lg bg-white shadow-md ${index === svgIndex ? "block" : "hidden"}`}
-                                    aria-labelledby="svgAnimation"
-                                    role="img"
-                                >
-                                    Your browser does not support SVGs
-                                </object>
-                            ))}
+                                    {isMobile && (
+                                        <div className="w-full mt-4">
+                                            {renderStepIndicators()}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
