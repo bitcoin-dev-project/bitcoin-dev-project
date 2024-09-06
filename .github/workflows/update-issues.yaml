@@ -15,17 +15,13 @@ permissions:
 jobs:
     fetch-and-save-issues:
         runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [20]
-                branch: [staging, master]
 
         steps:
             - name: Checkout repository
               uses: actions/checkout@v3
               with:
                   persist-credentials: true
-                  ref: ${{ matrix.branch }}
+                  ref: master
                   fetch-depth: 0
                   token: ${{ secrets.SFIGS_TOKEN }}
 
@@ -51,5 +47,5 @@ jobs:
               run: |
                   git config --global user.email "${{secrets.EMAIL}}"
                   git config --global user.name "${{secrets.NAME}}"
-                  git commit -am "chore: update issues" || echo "No changes to commit"
-                  git push origin ${{ matrix.branch }}
+                  git add -f public/open-source-projects/issues/
+                  git diff --quiet && git diff --staged --quiet || (git commit -m "Update open source project issues" && git push origin master)
