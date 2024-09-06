@@ -24,8 +24,9 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v3
               with:
-                  persist-credentials: true
+                  persist-credentials: false
                   ref: ${{ matrix.branch }}
+                  fetch-depth: 0
 
             - name: Set up Node.js
               uses: actions/setup-node@v2
@@ -44,8 +45,10 @@ jobs:
               run: npm run fetch-issues
 
             - name: Commit and Push Changes
+              env:
+                  GITHUB_TOKEN: ${{ secrets.SFIGS_TOKEN }}
               run: |
                   git config --global user.email "${{secrets.EMAIL}}"
                   git config --global user.name "${{secrets.NAME}}"
                   git commit -am "chore: update issues" || echo "No changes to commit"
-                  git push
+                  git push origin ${{ matrix.branch }}
