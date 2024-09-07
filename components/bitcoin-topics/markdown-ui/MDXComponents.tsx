@@ -18,6 +18,8 @@ import SandpackComponent from "./sandpack"
 import Quiz from "./Quiz"
 import StackSimulator from "./stack-simulator"
 import { CodeSnippet } from "./code-snippet"
+import MailingListSignup from "./mailing-list-signup"
+import { BitcoinHistory } from "./bitcoin-history"
 
 export const components: MDXComponents = {
     Image,
@@ -39,5 +41,7 @@ export const components: MDXComponents = {
     SandpackComponent,
     Quiz,
     StackSimulator,
-    CodeSnippet
+    CodeSnippet,
+    BitcoinHistory,
+    MailingListSignup
 }

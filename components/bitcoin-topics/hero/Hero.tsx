@@ -1,5 +1,4 @@
-"use client"
-import { Fragment } from "react"
+import React, { Fragment, useState, useEffect } from "react"
 import Image from "next/image"
 import clsx from "clsx"
 import { Highlight } from "prism-react-renderer"
@@ -7,6 +6,7 @@ import { Highlight } from "prism-react-renderer"
 import { Button } from "./Button"
 import blurOrangeImage from "@/public/images/topics-hero/blur-orange.png"
 import blurIndigoImage from "@/public/images/topics-hero/blur-indigo.png"
+import { HeroBackground } from "@/public/images/topics-hero/HeroBackground"
 
 const codeLanguage = "c"
 const code = `CAmount GetBlockSubsidy(int nHeight, const Consensus) {
@@ -22,9 +22,7 @@ const tabs = [
     { name: "bip324.h", isActive: false }
 ]
 
-import { HeroBackground } from "@/public/images/topics-hero/HeroBackground"
-
-function TrafficLightsIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+function TrafficLightsIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg aria-hidden="true" viewBox="0 0 42 10" fill="none" {...props}>
             <circle cx="5" cy="5" r="4.5" />
@@ -34,7 +32,31 @@ function TrafficLightsIcon(props: React.ComponentPropsWithoutRef<"svg">) {
     )
 }
 
+function useTypingEffect(text: string, speed = 20) {
+    const [displayedText, setDisplayedText] = useState("")
+    const [isComplete, setIsComplete] = useState(false)
+
+    useEffect(() => {
+        let i = 0
+        const timer = setInterval(() => {
+            if (i < text.length) {
+                setDisplayedText((prev) => prev + text.charAt(i))
+                i++
+            } else {
+                clearInterval(timer)
+                setIsComplete(true)
+            }
+        }, speed)
+
+        return () => clearInterval(timer)
+    }, [text, speed])
+
+    return { displayedText, isComplete }
+}
+
 export function Hero() {
+    const { displayedText, isComplete } = useTypingEffect(code)
+
     return (
         <div className="overflow-hidden -mb-32 mt-[-4.75rem] pb-32 pt-[4.75rem]">
             <div className="py-16 sm:px-2 lg:relative lg:px-0 lg:py-20">
@@ -59,7 +81,7 @@ export function Hero() {
                                 development.
                             </p>
                             <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                                <Button href="/topics/1-welcome">
+                                <Button href="/topics/bitcoin-history">
                                     Get started
                                 </Button>
                                 <Button
@@ -125,7 +147,7 @@ export function Hero() {
                                             </div>
                                         ))}
                                     </div>
-                                    <div className="mt-6 flex items-start px-1 text-sm text-[#fdba74]">
+                                    <div className="mt-6 flex items-start px-1 text-sm">
                                         <div
                                             aria-hidden="true"
                                             className="select-none border-r border-gray-300/5 pr-4 font-mono text-gray-600"
@@ -133,16 +155,16 @@ export function Hero() {
                                             {Array.from({
                                                 length: code.split("\n").length
                                             }).map((_, index) => (
-                                                <span key={index}>
+                                                <Fragment key={index}>
                                                     {(index + 1)
                                                         .toString()
                                                         .padStart(2, "0")}
                                                     <br />
-                                                </span>
+                                                </Fragment>
                                             ))}
                                         </div>
                                         <Highlight
-                                            code={code}
+                                            code={displayedText}
                                             language={codeLanguage}
                                             theme={{
                                                 plain: {},
@@ -164,41 +186,54 @@ export function Hero() {
                                                     style={style}
                                                 >
                                                     <code className="px-4">
-                                                        {tokens.map(
-                                                            (
-                                                                line,
-                                                                lineIndex
-                                                            ) => (
-                                                                <div
-                                                                    key={
-                                                                        lineIndex
-                                                                    }
-                                                                    {...getLineProps(
-                                                                        {
-                                                                            line
+                                                        <div
+                                                            style={{
+                                                                height: "150px",
+                                                                overflowY:
+                                                                    "hidden"
+                                                            }}
+                                                        >
+                                                            {tokens.map(
+                                                                (
+                                                                    line,
+                                                                    lineIndex
+                                                                ) => (
+                                                                    <div
+                                                                        key={
+                                                                            lineIndex
                                                                         }
-                                                                    )}
-                                                                >
-                                                                    {line.map(
-                                                                        (
-                                                                            token,
-                                                                            tokenIndex
-                                                                        ) => (
-                                                                            <span
-                                                                                key={
-                                                                                    tokenIndex
-                                                                                }
-                                                                                {...getTokenProps(
-                                                                                    {
-                                                                                        token
+                                                                        {...getLineProps(
+                                                                            {
+                                                                                line
+                                                                            }
+                                                                        )}
+                                                                    >
+                                                                        {line.map(
+                                                                            (
+                                                                                token,
+                                                                                tokenIndex
+                                                                            ) => (
+                                                                                <span
+                                                                                    key={
+                                                                                        tokenIndex
                                                                                     }
-                                                                                )}
-                                                                            />
-                                                                        )
-                                                                    )}
+                                                                                    {...getTokenProps(
+                                                                                        {
+                                                                                            token
+                                                                                        }
+                                                                                    )}
+                                                                                />
+                                                                            )
+                                                                        )}
+                                                                    </div>
+                                                                )
+                                                            )}
+                                                            {isComplete && (
+                                                                <div className="mt-1 inline-block">
+                                                                    <span className="animate-smooth-blink text-orange-400 inline-block w-[2px] h-[1.2em] bg-current"></span>
                                                                 </div>
-                                                            )
-                                                        )}
+                                                            )}
+                                                        </div>
                                                     </code>
                                                 </pre>
                                             )}
