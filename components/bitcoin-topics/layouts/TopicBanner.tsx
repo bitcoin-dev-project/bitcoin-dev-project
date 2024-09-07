@@ -130,13 +130,19 @@ export default function TopicBanner({
                 >
                     {/* File Tree and Navigation Toggle */}
                     <div
-                        className={`fixed top-16 left-0 right-0 z-40 flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
+                        className={`fixed top-16 left-0 right-0 z-40 flex items-center border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
                             isScrolled
                                 ? "bg-white/0 dark:bg-gray-900/0 backdrop-blur-md"
                                 : "bg-transparent"
                         }`}
                     >
-                        <div className="flex items-center text-sm text-gray-600 dark:text-gray-300 overflow-x-auto">
+                        <button
+                            onClick={toggleNav}
+                            className="p-2 rounded-md text-gray-600 dark:text-gray-300 backdrop-blur-sm"
+                        >
+                            <MoreVertical size={20} />
+                        </button>
+                        <div className="flex items-center text-sm text-gray-600 dark:text-gray-300 overflow-x-auto ml-4">
                             {currentPath.map((part, index) => (
                                 <React.Fragment key={index}>
                                     {index > 0 && (
@@ -151,12 +157,6 @@ export default function TopicBanner({
                                 </React.Fragment>
                             ))}
                         </div>
-                        <button
-                            onClick={toggleNav}
-                            className="p-2 rounded-md bg-gray-100/80 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 backdrop-blur-sm"
-                        >
-                            <MoreVertical size={20} />
-                        </button>
                     </div>
 
                     {/* Mobile Navigation Sidebar */}

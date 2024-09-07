@@ -257,7 +257,7 @@ export const BitcoinHistory: React.FC = () => {
                     className="relative flex justify-center"
                     style={{ marginTop: "-10px" }}
                 >
-                    <img
+                    <Image
                         src="/bitcoin-topics/static/images/topics/bitcoin-history/underline.svg"
                         alt="Underline"
                         className="absolute not-prose"
@@ -268,6 +268,8 @@ export const BitcoinHistory: React.FC = () => {
                             marginTop: "0",
                             marginBottom: "0"
                         }}
+                        width={100}
+                        height={100}
                     />
                 </div>
             </motion.div>
@@ -446,11 +448,13 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
                         animate={imageControls}
                         variants={imageVariants}
                     >
-                        <img
+                        <Image
                             src={event.media.src}
                             alt={event.media.alt}
                             className="rounded-lg shadow-md mx-auto md:mx-0"
                             style={{ maxWidth: "100%", height: "auto" }}
+                            width={300}
+                            height={200}
                         />
                     </motion.div>
                 )

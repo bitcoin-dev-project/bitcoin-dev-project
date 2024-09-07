@@ -128,7 +128,7 @@ export function Navigation({
             })
         )
         return navigation
-    }, [posts])
+    }, [posts, groupedPosts, sortedCategories])
 
     const toggleTopic = useCallback((topicHref: string) => {
         setExpandedTopics((prev) => ({
