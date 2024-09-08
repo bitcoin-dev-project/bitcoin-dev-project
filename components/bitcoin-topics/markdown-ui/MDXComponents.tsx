@@ -20,6 +20,8 @@ import StackSimulator from "./stack-simulator"
 import { CodeSnippet } from "./code-snippet"
 import MailingListSignup from "./mailing-list-signup"
 import { BitcoinHistory } from "./bitcoin-history"
+import HexTransactionHighlighter from "./hex-transaction-highlighter"
+import DiscordInvite from "./discord-invite"
 
 export const components: MDXComponents = {
     Image,
@@ -43,5 +45,7 @@ export const components: MDXComponents = {
     StackSimulator,
     CodeSnippet,
     BitcoinHistory,
-    MailingListSignup
+    MailingListSignup,
+    HexTransactionHighlighter,
+    DiscordInvite
 }

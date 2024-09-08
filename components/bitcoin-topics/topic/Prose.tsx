@@ -35,6 +35,11 @@ export function Prose<T extends React.ElementType = "div">({
                 "[&_ul>li]:before:content-['→'] [&_ul>li]:before:absolute [&_ul>li]:before:left-2 [&_ul>li]:before:top-1/2 [&_ul>li]:before:transform [&_ul>li]:before:-translate-y-1/2 [&_ul>li]:before:text-orange-500 [&_ul>li]:before:font-bold",
                 // ordered list
                 "[&_ol>li]:marker:text-orange-500",
+                // Cancel custom list styling for elements with not-prose class
+                "[&_.not-prose_ul]:list-disc [&_.not-prose_ul]:pl-5",
+                "[&_.not-prose_ol]:list-decimal [&_.not-prose_ol]:pl-5",
+                "[&_.not-prose_li]:pl-0 [&_.not-prose_li]:before:content-none",
+                "[&_.not-prose_ol>li]:marker:text-current",
                 // Unset color for specific elements
                 "[&_thead_th]:text-current",
                 "[&_code]:text-current",
