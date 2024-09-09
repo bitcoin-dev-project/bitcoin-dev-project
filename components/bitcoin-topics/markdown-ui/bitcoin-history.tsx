@@ -322,18 +322,15 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
     const controls = useAnimation()
     const imageControls = useAnimation()
     const [ref, inView] = useInView({
-        triggerOnce: false,
-        threshold: 0.3, // Increased threshold
-        rootMargin: "-100px 0px" // Added rootMargin
+        triggerOnce: true,
+        threshold: 0.1,
+        rootMargin: "-50px 0px"
     })
 
     useEffect(() => {
         if (inView) {
             controls.start("visible")
             imageControls.start("visible")
-        } else {
-            controls.start("hidden")
-            imageControls.start("hidden")
         }
     }, [controls, imageControls, inView])
 
@@ -343,10 +340,10 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.3, // Increased duration
+                duration: 0.3,
                 ease: "easeOut",
                 when: "beforeChildren",
-                staggerChildren: 0.3 // Increased stagger
+                staggerChildren: 0.3
             }
         }
     }
