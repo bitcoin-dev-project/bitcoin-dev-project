@@ -42,9 +42,6 @@ export default function TopicLayout({
     const pathname: string | null = usePathname()
     const isHomePage: boolean = pathname === "/topics"
     const [isNavOpen, setIsNavOpen] = useState(false)
-    const swipeX = useMotionValue(0)
-    const swipeXSmooth = useSpring(swipeX, { stiffness: 300, damping: 30 })
-    const swipeOpacity = useTransform(swipeXSmooth, [-50, 0, 50], [0.5, 0, 0.5])
     const [currentPath, setCurrentPath] = useState<string[]>([])
     const [expandedTopics, setExpandedTopics] = useState<Set<string>>(new Set())
     const [isScrolled, setIsScrolled] = useState(false)
@@ -63,17 +60,6 @@ export default function TopicLayout({
             }
             return newSet
         })
-    }
-
-    const handleDragEnd = (
-        event: MouseEvent | TouchEvent | PointerEvent,
-        info: PanInfo
-    ) => {
-        if (info.offset.x > 50 && !isNavOpen) {
-            setIsNavOpen(true)
-        } else if (info.offset.x < -50 && isNavOpen) {
-            setIsNavOpen(false)
-        }
     }
 
     const githubEditUrl = `https://github.com/jrakibi/bitcoin-topics/edit/main/topics/${content.slug}.mdx`
@@ -137,15 +123,8 @@ export default function TopicLayout({
                     </div>
                 </div>
 
-                {/* Mobile Navigation with Swipe */}
-                <motion.div
-                    className="lg:hidden w-full"
-                    drag="x"
-                    dragConstraints={{ left: 0, right: 0 }}
-                    dragElastic={0.2}
-                    onDragEnd={handleDragEnd}
-                    style={{ x: swipeXSmooth }}
-                >
+                {/* Mobile Navigation */}
+                <div className="lg:hidden w-full">
                     {/* File Tree and Navigation Toggle */}
                     <div
                         className={`fixed top-16 left-0 right-0 z-40 flex items-center border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
@@ -226,7 +205,7 @@ export default function TopicLayout({
                         </article>
                         <PrevNextLinks prev={prev} next={next} />
                     </motion.div>
-                </motion.div>
+                </div>
 
                 {/* Desktop Main Content */}
                 <div className="hidden lg:block min-w-0 max-w-3xl flex-auto px-4 py-16 lg:mx-auto lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
