@@ -110,7 +110,7 @@ export default function TopicBanner({
                 <div className="lg:hidden w-full">
                     {/* File Tree and Navigation Toggle */}
                     <div
-                        className={`fixed top-16 left-0 right-0 z-40 flex items-center border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
+                        className={`fixed top-15 left-0 right-0 z-40 flex items-center border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
                             isScrolled
                                 ? "bg-white/0 dark:bg-gray-900/0 backdrop-blur-md"
                                 : "bg-transparent"
