@@ -126,8 +126,9 @@ export default function TopicLayout({
                 {/* Mobile Navigation */}
                 <div className="lg:hidden w-full">
                     {/* File Tree and Navigation Toggle */}
+
                     <div
-                        className={`fixed top-15 left-0 right-0 z-40 flex items-center border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
+                        className={`fixed top-[60px] left-0 right-0 z-40 flex items-center border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
                             isScrolled
                                 ? "bg-white/0 dark:bg-gray-900/0 backdrop-blur-md"
                                 : "bg-transparent"
@@ -139,20 +140,22 @@ export default function TopicLayout({
                         >
                             <MoreVertical size={20} />
                         </button>
-                        <div className="flex items-center text-sm text-gray-600 dark:text-gray-300 overflow-x-auto ml-4">
-                            {currentPath.map((part, index) => (
-                                <React.Fragment key={index}>
-                                    {index > 0 && (
-                                        <span className="mx-1">/</span>
-                                    )}
-                                    <Link
-                                        href={`/${currentPath.slice(0, index + 1).join("/")}`}
-                                        className="whitespace-nowrap hover:text-orange-500"
-                                    >
-                                        {part}
-                                    </Link>
-                                </React.Fragment>
-                            ))}
+                        <div className="flex-1 overflow-x-auto">
+                            <div className="flex items-center text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">
+                                {currentPath.map((part, index) => (
+                                    <React.Fragment key={index}>
+                                        {index > 0 && (
+                                            <span className="mx-1">/</span>
+                                        )}
+                                        <Link
+                                            href={`/${currentPath.slice(0, index + 1).join("/")}`}
+                                            className="hover:text-orange-500"
+                                        >
+                                            {part}
+                                        </Link>
+                                    </React.Fragment>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
