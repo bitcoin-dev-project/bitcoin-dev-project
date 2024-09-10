@@ -103,15 +103,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/18911",
-    "publishedAt": "2020-05-08T01:55:53Z",
-    "title": "Improve minimum file descriptor accounting and documentation",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/19087",
     "publishedAt": "2020-05-28T07:18:06Z",
     "title": "Inconsistent RPC error handling",
