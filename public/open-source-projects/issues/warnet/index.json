@@ -60,14 +60,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin-dev-project/warnet/issues/562",
-    "publishedAt": "2024-09-10T09:17:27Z",
-    "title": "bug: warnet init fails if user does not create custom network ",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
