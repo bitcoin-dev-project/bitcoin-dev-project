@@ -114,7 +114,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                 </div>
                 <div className="flex items-center justify-between mb-2">
                     <div className="text-base">
-                        {gameState === "playing"
+                        {gameState === GameState.Playing
                             ? `Round ${currentStep + 1} of ${fields.length}`
                             : "Get ready!"}
                     </div>
@@ -138,7 +138,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
             {/* Body */}
             <div className="p-6 bg-vscode-background-light dark:bg-vscode-background-dark">
                 <AnimatePresence mode="wait">
-                    {gameState === "explanation" && (
+                    {gameState === GameState.Playing && (
                         <motion.div
                             key="explanation"
                             initial={{ opacity: 0 }}
@@ -159,7 +159,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                             </motion.button>
                         </motion.div>
                     )}
-                    {gameState === "playing" && (
+                    {gameState === GameState.Playing && (
                         <motion.div
                             key="question"
                             initial={{ opacity: 0 }}
@@ -209,7 +209,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                             </motion.div>
                         </motion.div>
                     )}
-                    {gameState === "showingResult" && (
+                    {gameState === GameState.ShowingResult && (
                         <motion.div
                             key="result"
                             initial={{ opacity: 0, y: 20 }}
@@ -240,7 +240,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
 
             {/* Footer */}
             <div className="bg-vscode-input-light dark:bg-vscode-input-dark p-4 flex justify-end">
-                {gameState === "playing" && (
+                {gameState === GameState.Playing && (
                     <>
                         <button
                             onClick={showAnswer}
