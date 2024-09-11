@@ -56,7 +56,15 @@ export function Navigation({
     useEffect(() => {
         const savedState = localStorage.getItem("expandedTopics")
         if (savedState) {
-            setExpandedTopics(JSON.parse(savedState))
+            try {
+                const parsedState = JSON.parse(savedState)
+                setExpandedTopics(parsedState)
+            } catch (error) {
+                console.error(
+                    "Error parsing expandedTopics from localStorage:",
+                    error
+                )
+            }
         }
     }, [])
 
@@ -219,11 +227,15 @@ export function Navigation({
                                             link.children.length > 0 && (
                                                 <span
                                                     className={clsx(
-                                                        "ml-auto mr-3 text-xs flex-shrink-0",
+                                                        "ml-auto mr-3 text-xs flex-shrink-0 p-2",
                                                         link.href === pathname
                                                             ? "text-orange-500"
                                                             : "text-gray-400"
                                                     )}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation()
+                                                        toggleTopic(link.href)
+                                                    }}
                                                 >
                                                     {expandedTopics[
                                                         link.href

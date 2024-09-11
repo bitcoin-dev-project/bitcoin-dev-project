@@ -10,17 +10,9 @@ import { PrevNextLinks } from "../topic/PrevNextLinks"
 import { Prose } from "../topic/Prose"
 import { TopicHeader } from "../topic/TopicHeader"
 import { usePathname } from "next/navigation"
-import Image from "next/image"
 import Link from "next/link"
 
-import {
-    motion,
-    AnimatePresence,
-    useMotionValue,
-    useTransform,
-    useSpring,
-    PanInfo
-} from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { MoreVertical } from "lucide-react"
 import React from "react"
 import { GitHubIcon } from "@/public/images/topics-hero/GitHubIcon"
@@ -43,24 +35,11 @@ export default function TopicLayout({
     const isHomePage: boolean = pathname === "/topics"
     const [isNavOpen, setIsNavOpen] = useState(false)
     const [currentPath, setCurrentPath] = useState<string[]>([])
-    const [expandedTopics, setExpandedTopics] = useState<Set<string>>(new Set())
     const [isScrolled, setIsScrolled] = useState(false)
 
     const { title, tags }: { title: string; tags: string[] } = content
 
     const toggleNav = () => setIsNavOpen(!isNavOpen)
-
-    const toggleExpand = (href: string) => {
-        setExpandedTopics((prev) => {
-            const newSet = new Set(prev)
-            if (newSet.has(href)) {
-                newSet.delete(href)
-            } else {
-                newSet.add(href)
-            }
-            return newSet
-        })
-    }
 
     const githubEditUrl = `https://github.com/jrakibi/bitcoin-topics/edit/main/topics/${content.slug}.mdx`
 

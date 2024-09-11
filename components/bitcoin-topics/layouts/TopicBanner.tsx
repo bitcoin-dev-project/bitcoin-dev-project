@@ -12,13 +12,7 @@ import { usePathname } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 
-import {
-    motion,
-    AnimatePresence,
-    useMotionValue,
-    useSpring,
-    PanInfo
-} from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { MoreVertical } from "lucide-react"
 import React from "react"
 import { GitHubIcon } from "@/public/images/topics-hero/GitHubIcon"

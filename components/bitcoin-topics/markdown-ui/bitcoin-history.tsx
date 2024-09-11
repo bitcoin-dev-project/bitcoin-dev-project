@@ -49,172 +49,13 @@ const EventTypeBadge: React.FC<EventTypeBadgeProps> = ({ type }) => {
     )
 }
 
-const bitcoinHistory: HistoryEvent[] = [
-    {
-        id: "2007-post-satoshi-starts",
-        type: "post",
-        date: "Early 2007",
-        title: "Satoshi starts working on Bitcoin",
-        paragraphs: [
-            "Satoshi Nakamoto starts writing code for Bitcoin. This is based on a post to the Cryptography mailing list where Satoshi wrote on Nov 17th, 2008:",
-            "»I believe I've worked through all those little details over the last year and a half while coding it.«"
-        ],
-        links: [
-            {
-                label: "e-mail (metzdowd.com)",
-                link: "https://www.metzdowd.com/pipermail/cryptography/2008-November/014863.html"
-            },
-            {
-                label: "e-mail (nakamotoinstitute.org)",
-                link: "http://satoshi.nakamotoinstitute.org/emails/cryptography/15/#selection-101.55-103.36"
-            }
-        ],
-        media: {
-            type: "image",
-            src: "/bitcoin-topics/static/images/topics/bitcoin-history/step1-dark.png",
-            alt: "Satoshi starts working on Bitcoin"
-        }
-    },
-    {
-        id: "2008-post-bitcoin-paper",
-        type: "post",
-        date: "1st November 2008",
-        title: "Bitcoin paper published",
-        paragraphs: [
-            "Satoshi Nakamoto announces Bitcoin on the Cryptography mailing list:",
-            "«I've been working on a new electronic cash system that's fully peer-to-peer, with no trusted third party.»"
-        ],
-        links: [
-            {
-                label: "e-mail (metzdowd.com)",
-                link: "https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html"
-            },
-            {
-                label: "e-mail (nakamotoinstitute.org)",
-                link: "https://satoshi.nakamotoinstitute.org/emails/cryptography/1/"
-            },
-            {
-                label: "whitepaper",
-                link: "https://www.bitcoin.org/bitcoin.pdf"
-            }
-        ],
-        media: {
-            type: "image",
-            src: "/bitcoin-topics/static/images/topics/bitcoin-history/whitepaper.png",
-            alt: "Satoshi starts working on Bitcoin"
-        }
-    },
-    {
-        id: "2009-other-genesis-block",
-        type: "other",
-        date: "Between 3rd and 9th January 2009",
-        title: "Genesis Block mined",
-        paragraphs: [
-            "The Genesis block is mined with a timestamp of Jan 9th.",
-            "The coinbase contains the famous words: »The Times 03/Jan/2009 Chancellor on brink of second bailout for banks«."
-        ],
-        links: [
-            {
-                label: "block explorer",
-                link: "https://blockstream.info/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"
-            },
-            {
-                label: "wiki entry",
-                link: "https://en.bitcoin.it/wiki/Genesis_block"
-            }
-        ],
-        media: {
-            type: "image",
-            src: "/bitcoin-topics/static/images/topics/bitcoin-history/step8.png",
-            alt: "Genesis block"
-        }
-    },
-    {
-        id: "2010-release-multiple-0-3-xx",
-        type: "release",
-        date: "Throughout the summer of 2010",
-        title: "Various Bitcoin v0.3.xx versions are released",
-        paragraphs: [],
-        links: [],
-        media: {
-            type: "image",
-            src: "/bitcoin-topics/static/images/topics/bitcoin-history/step5.png",
-            alt: "Genesis block"
-        }
-    },
-    {
-        id: "2010-bug-overflow-bug",
-        type: "bug",
-        date: "15th August 2010",
-        title: "Critical overflow bug fixed",
-        paragraphs: [
-            "Satoshi pushes out a fix in v0.3.9(ish) and tells users and miners to re-org the block with the overflowed transaction out of history."
-        ],
-        links: [
-            {
-                label: "bitcointalk.org",
-                link: "https://bitcointalk.org/index.php?topic=823.msg9531#msg9531"
-            }
-        ],
-        media: {
-            type: "image",
-            src: "/bitcoin-topics/static/images/topics/bitcoin-history/step7.png",
-            alt: "Genesis block"
-        }
-    },
-    {
-        id: "2011-other-new-contributors",
-        type: "other",
-        date: "March-June 2011",
-        title: "New contributors join",
-        paragraphs: [
-            "Several new contributors start working on the project: TheBlueMatt (March 3), sipa (March 12), laanwj (May 15) and gmaxwell (June 18). Their first pull requests are listed below."
-        ],
-        links: [
-            {
-                label: "TheBlueMatt",
-                link: "https://github.com/bitcoin/bitcoin/pull/92"
-            },
-            {
-                label: "sipa",
-                link: "https://github.com/bitcoin/bitcoin/pull/116"
-            },
-            {
-                label: "laanwj",
-                link: "https://github.com/bitcoin/bitcoin/pull/225"
-            },
-            {
-                label: "gmaxwell",
-                link: "https://github.com/bitcoin/bitcoin/pull/326"
-            }
-        ],
-        media: {
-            type: "image",
-            src: "/bitcoin-topics/static/images/topics/bitcoin-history/step6.png",
-            alt: "Genesis block"
-        }
-    },
-    {
-        id: "2010-post-alert-system",
-        type: "post",
-        title: "Alert system introduced",
-        date: "22nd August 2010",
-        paragraphs: [
-            "Satoshi starts working on an alert system which is added in v0.3.11. He writes:",
-            "»I've been working on writing the alert system.  Alerts are broadcast through the network and apply to a range of version numbers.  Alert messages are signed with a private key that only I have.«",
-            "»Getting surprised by some temporary down time when your node would otherwise be at risk is better than getting surprised by a thief draining all your inventory.«",
-            "»Someday when we haven't found any new bugs for a long time and it has been thoroughly security reviewed without finding anything, this can be scaled back.  I'm not arguing that this is the permanent way of things forever.  It's still beta software.«"
-        ],
-        links: [
-            {
-                label: "bitcointalk.org",
-                link: "https://bitcointalk.org/index.php?topic=898.msg10722#msg10722"
-            }
-        ]
-    }
-]
+interface BitcoinHistoryProps {
+    historyEvents: HistoryEvent[]
+}
 
-export const BitcoinHistory: React.FC = () => {
+export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
+    historyEvents
+}) => {
     const [visibleEvents, setVisibleEvents] = useState(6)
 
     const loadMore = () => {
@@ -274,7 +115,7 @@ export const BitcoinHistory: React.FC = () => {
                 </div>
             </motion.div>
             <div className="relative space-y-12 md:space-y-16">
-                {bitcoinHistory.slice(0, visibleEvents).map((event, index) => (
+                {historyEvents.slice(0, visibleEvents).map((event, index) => (
                     <React.Fragment key={event.id}>
                         <EventItem event={event} index={index} />
                         {index < visibleEvents - 1 && (
@@ -283,7 +124,7 @@ export const BitcoinHistory: React.FC = () => {
                     </React.Fragment>
                 ))}
             </div>
-            {visibleEvents < bitcoinHistory.length && (
+            {visibleEvents < historyEvents.length && (
                 <motion.button
                     className="mt-32 px-4 py-2 bg-orange-500 text-white rounded-md mx-auto block"
                     onClick={loadMore}

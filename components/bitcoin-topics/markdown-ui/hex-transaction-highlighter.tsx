@@ -14,14 +14,22 @@ interface HexHighlighterProps {
     title: string
 }
 
+const GameState = {
+    Explanation: "explanation",
+    Playing: "playing",
+    ShowingResult: "showingResult"
+} as const
+
+type GameStateType = (typeof GameState)[keyof typeof GameState]
+
 const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
     hexString,
     fields,
     title
 }) => {
-    const [gameState, setGameState] = useState<
-        "explanation" | "playing" | "showingResult"
-    >("explanation")
+    const [gameState, setGameState] = useState<GameStateType>(
+        GameState.Explanation
+    )
     const [currentStep, setCurrentStep] = useState(-1)
     const [score, setScore] = useState(0)
     const [isIncorrect, setIsIncorrect] = useState(false)
@@ -74,17 +82,17 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
             setHighlightedField(null)
             setIsAnswered(false)
         } else {
-            setGameState("showingResult")
+            setGameState(GameState.ShowingResult)
         }
     }
 
     const startGame = () => {
-        setGameState("playing")
+        setGameState(GameState.Playing)
         setCurrentStep(0)
     }
 
     const resetGame = () => {
-        setGameState("explanation")
+        setGameState(GameState.Explanation)
         setCurrentStep(-1)
         setScore(0)
         setHighlightedField(null)
