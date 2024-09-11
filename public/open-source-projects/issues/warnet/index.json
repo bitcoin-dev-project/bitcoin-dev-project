@@ -21,17 +21,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/warnet/issues/78",
-    "publishedAt": "2023-08-26T13:22:23Z",
-    "title": "get p2p messages from non-tank peers (e.g. onion addrs)",
-    "labels": [
-      "enhancement",
-      "good first issue",
-      "help wanted"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/warnet/issues/184",
     "publishedAt": "2023-10-31T22:57:56Z",
     "title": "Explore alternatives to patching `IsRoutable`",
