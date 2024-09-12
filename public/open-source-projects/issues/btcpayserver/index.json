@@ -124,16 +124,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6168",
-    "publishedAt": "2024-08-25T17:05:19Z",
-    "title": "Dashboard: If product view within keypad is enabled, we're not counting manual keypad entries towards sales",
-    "labels": [
-      "Bug",
-      "Dashboard"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6180",
     "publishedAt": "2024-08-30T15:13:48Z",
     "title": "Replace invoice payment type icons with SVGs",
