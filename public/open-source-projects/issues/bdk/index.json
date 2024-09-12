@@ -402,5 +402,16 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1602",
+    "publishedAt": "2024-09-12T09:44:33Z",
+    "title": "Move stuff from `crates/chain/tests/common` to `bdk_testenv` and make them publicly-accessible",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
