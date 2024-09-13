@@ -56,25 +56,10 @@ interface BitcoinHistoryProps {
 export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
     historyEvents
 }) => {
-    const [visibleEvents, setVisibleEvents] = useState(6)
+    const [visibleEvents, setVisibleEvents] = useState(historyEvents.length) // Set to show all events
 
-    const loadMore = () => {
-        setVisibleEvents((prevVisible) => prevVisible + 5)
-    }
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (
-                window.innerHeight + document.documentElement.scrollTop ===
-                document.documentElement.offsetHeight
-            ) {
-                loadMore()
-            }
-        }
-
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
+    // Removed loadMore function
+    // Removed useEffect for scroll event listener
 
     return (
         <div className="container mx-auto px-4 py-8 bg-vscode-background-light dark:bg-vscode-background-dark text-vscode-text-light dark:text-vscode-text-dark">
@@ -115,7 +100,7 @@ export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
                 </div>
             </motion.div>
             <div className="relative space-y-12 md:space-y-16">
-                {historyEvents.slice(0, visibleEvents).map((event, index) => (
+                {historyEvents.map((event, index) => (
                     <React.Fragment key={event.id}>
                         <EventItem event={event} index={index} />
                         {index < visibleEvents - 1 && (
@@ -124,16 +109,6 @@ export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
                     </React.Fragment>
                 ))}
             </div>
-            {visibleEvents < historyEvents.length && (
-                <motion.button
-                    className="mt-32 px-4 py-2 bg-orange-500 text-white rounded-md mx-auto block"
-                    onClick={loadMore}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    Load More
-                </motion.button>
-            )}
 
             <motion.div
                 className="mt-32 text-center opacity-70 text-sm"
@@ -336,7 +311,7 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
                         {paragraph}
                     </motion.p>
                 ))}
-                {event.links.length > 0 && (
+                {event.links && event.links.length > 0 && (
                     <motion.div
                         className={`mt-4 flex flex-wrap ${index % 2 === 0 ? "justify-start" : "justify-end"} gap-2`}
                         variants={childVariants}
