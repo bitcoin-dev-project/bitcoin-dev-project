@@ -56,10 +56,7 @@ interface BitcoinHistoryProps {
 export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
     historyEvents
 }) => {
-    const [visibleEvents, setVisibleEvents] = useState(historyEvents.length) // Set to show all events
-
-    // Removed loadMore function
-    // Removed useEffect for scroll event listener
+    const [visibleEvents, setVisibleEvents] = useState(historyEvents.length)
 
     return (
         <div className="container mx-auto px-4 py-8 bg-vscode-background-light dark:bg-vscode-background-dark text-vscode-text-light dark:text-vscode-text-dark">
