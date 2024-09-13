@@ -342,15 +342,5 @@
       "backup"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/7645",
-    "publishedAt": "2024-09-06T04:40:30Z",
-    "title": "Core lightning crashes with FATAL SIGNAL 11",
-    "labels": [
-      "bug",
-      "crash"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
