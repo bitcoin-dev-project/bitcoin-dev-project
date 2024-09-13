@@ -13,6 +13,7 @@ import { useState, useEffect, useCallback, useMemo } from "react"
 import { motion } from "framer-motion"
 import { FaChevronRight, FaChevronDown } from "react-icons/fa"
 import * as Icons from "react-icons/fa"
+import { BookOpenIcon, ClockIcon, ArrowRightIcon } from "lucide-react"
 
 interface NavigationLink {
     title: string
@@ -51,6 +52,9 @@ export function Navigation({
     const [expandedTopics, setExpandedTopics] = useState<
         Record<string, boolean>
     >({})
+    const [lastVisitedTopic, setLastVisitedTopic] = useState<string | null>(
+        null
+    )
 
     // Load expanded state from localStorage on component mount
     useEffect(() => {
@@ -71,6 +75,27 @@ export function Navigation({
     // Save expanded state to localStorage whenever it changes
     useEffect(() => {
         localStorage.setItem("expandedTopics", JSON.stringify(expandedTopics))
+        // Store expanded state for children as well
+        const expandedChildren = Object.keys(expandedTopics).reduce(
+            (acc, key) => {
+                const children = expandedTopics[key]
+                    ? navigation
+                          .find((section) =>
+                              section.links.some((link) => link.href === key)
+                          )
+                          ?.links.find((link) => link.href === key)?.children
+                    : []
+                if (children) {
+                    acc[key] = children.map((child) => child.href)
+                }
+                return acc
+            },
+            {} as Record<string, string[]>
+        )
+        localStorage.setItem(
+            "expandedChildren",
+            JSON.stringify(expandedChildren)
+        )
     }, [expandedTopics])
 
     const childSlugs = new Set(
@@ -173,6 +198,30 @@ export function Navigation({
         return <IconComponent className="inline-block mr-2 text-current" />
     }, [])
 
+    const handleTopicClick = useCallback(
+        (link: NavigationLink) => {
+            const topicData = {
+                href: link.href,
+                time: new Date().toISOString(),
+                // Save only the currently visited child if expanded
+                children:
+                    link.children && expandedTopics[link.href]
+                        ? link.children.map((child) => child.href)
+                        : []
+            }
+            setLastVisitedTopic(link.href)
+            localStorage.setItem("lastVisitedTopic", JSON.stringify(topicData))
+        },
+        [expandedTopics]
+    )
+
+    useEffect(() => {
+        const savedLastVisitedTopic = localStorage.getItem("lastVisitedTopic")
+        if (savedLastVisitedTopic) {
+            setLastVisitedTopic(savedLastVisitedTopic)
+        }
+    }, [posts])
+
     return (
         <nav className={clsx("text-md lg:text-sm font-medium", className)}>
             <Link
@@ -212,6 +261,7 @@ export function Navigation({
                                             onClick={(e) => {
                                                 e.stopPropagation()
                                                 onLinkClick && onLinkClick(e)
+                                                handleTopicClick(link)
                                             }}
                                             className={clsx(
                                                 "flex items-center font-medium w-full py-2 px-3 rounded-md",
@@ -261,9 +311,18 @@ export function Navigation({
                                                                 href={
                                                                     childLink.href
                                                                 }
-                                                                onClick={
-                                                                    onLinkClick
-                                                                }
+                                                                onClick={(
+                                                                    e
+                                                                ) => {
+                                                                    e.stopPropagation()
+                                                                    handleTopicClick(
+                                                                        childLink
+                                                                    )
+                                                                    onLinkClick &&
+                                                                        onLinkClick(
+                                                                            e
+                                                                        )
+                                                                }}
                                                                 className={clsx(
                                                                     "block font-normal w-full py-2 px-3 rounded-md",
                                                                     "transition-colors duration-200 ease-in-out",
