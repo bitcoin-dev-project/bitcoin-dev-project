@@ -601,16 +601,5 @@
       "Tests"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/30887",
-    "publishedAt": "2024-09-12T17:51:16Z",
-    "title": "Closing a wallet using the fa46088440 28.x QT client segfaults",
-    "labels": [
-      "Bug",
-      "GUI",
-      "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
