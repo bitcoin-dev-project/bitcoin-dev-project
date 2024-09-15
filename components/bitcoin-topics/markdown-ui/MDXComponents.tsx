@@ -18,10 +18,6 @@ import SandpackComponent from "./sandpack"
 import Quiz from "./Quiz"
 import StackSimulator from "./stack-simulator"
 import { CodeSnippet } from "./code-snippet"
-import MailingListSignup from "./mailing-list-signup"
-import { BitcoinHistory } from "./bitcoin-history"
-import HexTransactionHighlighter from "./hex-transaction-highlighter"
-import DiscordInvite from "./discord-invite"
 import ExerciseSelector from "./exercise-selector"
 
 export const components: MDXComponents = {
