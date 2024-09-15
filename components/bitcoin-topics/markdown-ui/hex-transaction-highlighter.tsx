@@ -138,7 +138,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
             {/* Body */}
             <div className="p-6 bg-vscode-background-light dark:bg-vscode-background-dark">
                 <AnimatePresence mode="wait">
-                    {gameState === GameState.Playing && (
+                    {gameState === GameState.Explanation && (
                         <motion.div
                             key="explanation"
                             initial={{ opacity: 0 }}

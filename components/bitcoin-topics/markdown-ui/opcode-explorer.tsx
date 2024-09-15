@@ -1,14 +1,16 @@
 "use client"
 
 import { opcodeData } from "@/content/opcode-explorer"
-import { Switch } from "@headlessui/react"
-import { motion, AnimatePresence } from "framer-motion"
+import { ResetIcon } from "@radix-ui/react-icons"
+import { motion } from "framer-motion"
 import {
     SearchIcon,
     RewindIcon,
     PauseIcon,
     PlayIcon,
-    FastForwardIcon
+    FastForwardIcon,
+    LayoutGridIcon,
+    LayoutListIcon
 } from "lucide-react"
 import React, { useState, useRef, useEffect, useCallback } from "react"
 
@@ -32,6 +34,7 @@ const OpCodeExplorer = () => {
     const [hasStarted, setHasStarted] = useState(false)
     const [totalSteps, setTotalSteps] = useState(4)
     const [isAnimating, setIsAnimating] = useState(false)
+    const [isExpandedView, setIsExpandedView] = useState(true)
     const svgRef = useRef<HTMLObjectElement | null>(null)
     const playerRef = useRef<SvgatorPlayer | null>(null)
     const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -125,38 +128,43 @@ const OpCodeExplorer = () => {
     }, [])
 
     const handlePrevious = useCallback(() => {
-        if (isAnimating) return
         setCurrentStep((prev) => {
             const newStep = Math.max(0, prev - 1)
-            playOneSecond(newStep * 1000)
+            playOneSecond(newStep * 1000) // Play the new step immediately
             return newStep
         })
-    }, [isAnimating, playOneSecond])
+    }, [playOneSecond])
 
     const handleNext = useCallback(() => {
-        if (isAnimating) return
-        if (!hasStarted) {
-            playOneSecond(0)
-            setCurrentStep(0)
-        } else {
-            setCurrentStep((prev) => {
-                const newStep = Math.min(totalSteps - 1, prev + 1)
-                playOneSecond(newStep * 1000)
-                return newStep
-            })
-        }
-    }, [isAnimating, playOneSecond, totalSteps, hasStarted])
+        setCurrentStep((prev) => {
+            const newStep = hasStarted
+                ? Math.min(totalSteps - 1, prev + 1)
+                : prev
+            playOneSecond(newStep * 1000)
+            setHasStarted(true)
+            return newStep
+        })
+    }, [playOneSecond, totalSteps, hasStarted])
 
     const handlePlay = useCallback(() => {
         if (playerRef.current) {
-            if (isAnimating) {
-                playerRef.current.play()
-            } else {
-                playOneSecond(currentStep * 1000)
-            }
+            playerRef.current.play() // Play the entire SVG animation
             setIsPlaying(true)
         }
-    }, [currentStep, isAnimating, playOneSecond])
+    }, [])
+
+    // Add a new handleReset function
+    const handleReset = useCallback(() => {
+        if (playerRef.current) {
+            playerRef.current.seekTo(currentStep * 1000) // Reset to the current step
+            playerRef.current.play() // Play from the current step
+            setIsPlaying(true)
+            setTimeout(() => {
+                playerRef.current?.pause() // Stop after 1 second
+                setIsPlaying(false)
+            }, 1000)
+        }
+    }, [currentStep])
 
     const handlePause = useCallback(() => {
         if (playerRef.current) {
@@ -185,11 +193,33 @@ const OpCodeExplorer = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                {/* Header */}
-                <div className="bg-vscode-titleBar-light dark:bg-vscode-titleBar-dark text-vscode-sidebarForeground-light dark:text-vscode-sidebarForeground-dark p-2 flex items-center">
-                    <div className="flex-grow text-center text-sm font-medium">
+                {/* Header - Adjusted padding */}
+                <div className="bg-vscode-titleBar-light dark:bg-vscode-titleBar-dark text-vscode-sidebarForeground-light dark:text-vscode-sidebarForeground-dark px-4 sm:px-6 py-2 flex items-center justify-between">
+                    <div className="text-sm font-medium">
                         Bitcoin OpCode Explorer
                     </div>
+                    <motion.button
+                        onClick={() => setIsExpandedView(!isExpandedView)}
+                        className="p-2 rounded-md hover:bg-vscode-hover-light dark:hover:bg-vscode-hover-dark transition-colors duration-200 flex items-center"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        {isExpandedView ? (
+                            <>
+                                <LayoutListIcon className="w-5 h-5 mr-2" />
+                                <span className="text-sm">
+                                    Switch to Compact View
+                                </span>
+                            </>
+                        ) : (
+                            <>
+                                <LayoutGridIcon className="w-5 h-5 mr-2" />
+                                <span className="text-sm">
+                                    Switch to Expanded View
+                                </span>
+                            </>
+                        )}
+                    </motion.button>
                 </div>
 
                 {/* Main content */}
@@ -232,148 +262,163 @@ const OpCodeExplorer = () => {
                         </div>
                     </div>
 
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={selectedOpCode}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.2 }}
-                            className="bg-vscode-background-light dark:bg-vscode-background-dark p-4 sm:p-6 rounded-lg"
+                    <motion.div
+                        key={selectedOpCode}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.2 }}
+                        className="bg-vscode-background-light dark:bg-vscode-background-dark p-4 sm:p-6 rounded-lg"
+                    >
+                        <div className="text-xl sm:text-2xl font-bold mb-4 text-center text-vscode-text-light dark:text-vscode-text-dark">
+                            <span className="text-orange-500">
+                                {selectedOpCode}
+                            </span>{" "}
+                            ({currentOpCode.hex})
+                        </div>
+                        <div className="text-base sm:text-lg mb-6 text-center text-vscode-text-light dark:text-vscode-text-dark">
+                            {currentOpCode.description}
+                        </div>
+
+                        <div
+                            className={`flex ${isExpandedView ? "flex-col" : "flex-col lg:flex-row"} mb-6`}
                         >
-                            <div className="text-xl sm:text-2xl font-bold mb-4 text-center text-vscode-text-light dark:text-vscode-text-dark">
-                                <span className="text-orange-500">
-                                    {selectedOpCode}
-                                </span>{" "}
-                                ({currentOpCode.hex})
-                            </div>
-                            <div className="text-base sm:text-lg mb-6 text-center text-vscode-text-light dark:text-vscode-text-dark">
-                                {currentOpCode.description}
-                            </div>
-
-                            <div className="flex flex-col lg:flex-row mb-6">
-                                <div className="w-full lg:w-2/5 mb-4 lg:mb-0 lg:pr-6 lg:border-r border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark">
-                                    <div className="bg-vscode-container-light dark:bg-vscode-container-dark text-vscode-text-light dark:text-vscode-text-dark p-4 rounded-lg shadow-lg">
-                                        <div className="flex items-center justify-between mb-3 border-b border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark pb-2">
-                                            <span className="text-sm font-medium">
-                                                Example
-                                            </span>
-                                            <div className="flex items-center bg-vscode-navButton-light dark:bg-vscode-navButton-dark rounded-full p-1">
-                                                <button
-                                                    className={`px-3 py-1 text-xs rounded-full transition-colors duration-300 ${
-                                                        !isAsm
-                                                            ? "bg-orange-500 text-white"
-                                                            : "text-vscode-text-light dark:text-vscode-text-dark"
-                                                    }`}
-                                                    onClick={() =>
-                                                        setIsAsm(false)
-                                                    }
-                                                >
-                                                    HEX
-                                                </button>
-                                                <button
-                                                    className={`px-3 py-1 text-xs rounded-full transition-colors duration-300 ${
-                                                        isAsm
-                                                            ? "bg-orange-500 text-white"
-                                                            : "text-vscode-text-light dark:text-vscode-text-dark"
-                                                    }`}
-                                                    onClick={() =>
-                                                        setIsAsm(true)
-                                                    }
-                                                >
-                                                    ASM
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <motion.div
-                                            className="font-mono text-sm leading-relaxed"
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            transition={{ duration: 0.3 }}
-                                        >
-                                            <pre className="whitespace-pre-wrap !bg-vscode-file-light dark:!bg-vscode-input-dark p-3 rounded overflow-x-auto !text-vscode-text-light dark:!text-vscode-text-dark">
-                                                {isAsm
-                                                    ? currentOpCode.asm
-                                                    : currentOpCode.hexCode}
-                                            </pre>
-                                        </motion.div>
-                                    </div>
+                            <div
+                                className={`${isExpandedView ? "w-full mb-6" : "w-full lg:w-3/5 lg:pr-6"}`}
+                            >
+                                <div
+                                    className={`bg-vscode-container-light dark:bg-vscode-container-dark rounded-lg mb-4 ${isExpandedView ? "h-80 sm:h-96" : "h-64 sm:h-80"}`}
+                                >
+                                    <object
+                                        ref={svgRef}
+                                        type="image/svg+xml"
+                                        data={currentOpCode.svgPath}
+                                        className="w-full h-full"
+                                        onLoad={initializeSvgPlayer}
+                                    >
+                                        Your browser does not support SVG
+                                    </object>
                                 </div>
-
-                                <div className="w-full lg:w-3/5 lg:pl-6">
-                                    <div className="bg-vscode-container-light dark:bg-vscode-container-dark h-64 sm:h-80 rounded-lg mb-4">
-                                        <object
-                                            ref={svgRef}
-                                            type="image/svg+xml"
-                                            data={currentOpCode.svgPath}
-                                            className="w-full h-full"
-                                            onLoad={initializeSvgPlayer}
-                                        >
-                                            Your browser does not support SVG
-                                        </object>
-                                    </div>
-                                    <div className="border-2 border-dashed border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark p-3 rounded-lg bg-vscode-background-light dark:bg-vscode-background-dark flex items-center justify-center">
-                                        <motion.div
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                        >
-                                            <RewindIcon
-                                                className={`h-6 w-6 mr-4 cursor-pointer ${
-                                                    isAnimating
-                                                        ? "text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark"
-                                                        : "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
-                                                } transition-colors duration-300`}
-                                                onClick={handlePrevious}
+                                <div className="border-2 border-dashed border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark p-3 rounded-lg bg-vscode-background-light dark:bg-vscode-background-dark flex items-center justify-center">
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <RewindIcon
+                                            className={`h-6 w-6 mr-4 cursor-pointer ${
+                                                isAnimating
+                                                    ? "text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark"
+                                                    : "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
+                                            } transition-colors duration-300`}
+                                            onClick={handlePrevious}
+                                        />
+                                    </motion.div>
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        {isPlaying ? (
+                                            <PauseIcon
+                                                className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
+                                                onClick={handlePause}
                                             />
-                                        </motion.div>
-                                        <motion.div
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                        >
-                                            {isPlaying ? (
-                                                <PauseIcon
-                                                    className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
-                                                    onClick={handlePause}
-                                                />
-                                            ) : (
-                                                <PlayIcon
-                                                    className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
-                                                    onClick={handlePlay}
-                                                />
-                                            )}
-                                        </motion.div>
-                                        <motion.div
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                        >
-                                            <FastForwardIcon
-                                                className={`h-6 w-6 mr-4 cursor-pointer ${
-                                                    isAnimating
-                                                        ? "text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark"
-                                                        : "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
-                                                } transition-colors duration-300`}
-                                                onClick={handleNext}
+                                        ) : (
+                                            <PlayIcon
+                                                className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
+                                                onClick={handlePlay}
                                             />
-                                        </motion.div>
-                                        <div className="flex-grow bg-vscode-lineNumber-light dark:bg-vscode-lineNumber-dark h-2 rounded-full">
-                                            <motion.div
-                                                className="bg-orange-500 h-2 rounded-full"
-                                                initial={{ width: "0%" }}
-                                                animate={{
-                                                    width: `${(currentStep / (totalSteps - 1)) * 100}%`
-                                                }}
-                                                transition={{
-                                                    type: "spring",
-                                                    stiffness: 300,
-                                                    damping: 30
-                                                }}
-                                            />
-                                        </div>
+                                        )}
+                                    </motion.div>
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <ResetIcon
+                                            className={`h-6 w-6 mr-4 cursor-pointer ${
+                                                isAnimating
+                                                    ? "text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark"
+                                                    : "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
+                                            } transition-colors duration-300`}
+                                            onClick={handleReset} // Call handleReset on click
+                                        />
+                                    </motion.div>
+                                    <motion.div
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <FastForwardIcon
+                                            className={`h-6 w-6 mr-4 cursor-pointer ${
+                                                isAnimating
+                                                    ? "text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark"
+                                                    : "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
+                                            } transition-colors duration-300`}
+                                            onClick={handleNext}
+                                        />
+                                    </motion.div>
+                                    <div className="flex-grow bg-vscode-lineNumber-light dark:bg-vscode-lineNumber-dark h-2 rounded-full">
+                                        <motion.div
+                                            className="bg-orange-500 h-2 rounded-full"
+                                            initial={{ width: "0%" }}
+                                            animate={{
+                                                width: `${(currentStep / (totalSteps - 1)) * 100}%`
+                                            }}
+                                            transition={{
+                                                type: "spring",
+                                                stiffness: 300,
+                                                damping: 30
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
-                    </AnimatePresence>
+
+                            <div
+                                className={`${isExpandedView ? "w-full" : "w-full lg:w-2/5 lg:pl-6"}`}
+                            >
+                                <div className="bg-vscode-container-light dark:bg-vscode-container-dark text-vscode-text-light dark:text-vscode-text-dark p-4 rounded-lg shadow-lg">
+                                    <div className="flex items-center justify-between mb-3 border-b border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark pb-2">
+                                        <span className="text-sm font-medium">
+                                            Example
+                                        </span>
+                                        <div className="flex items-center bg-vscode-navButton-light dark:bg-vscode-navButton-dark rounded-full p-1">
+                                            <button
+                                                className={`px-3 py-1 text-xs rounded-full transition-colors duration-300 ${
+                                                    !isAsm
+                                                        ? "bg-orange-500 text-white"
+                                                        : "text-vscode-text-light dark:text-vscode-text-dark"
+                                                }`}
+                                                onClick={() => setIsAsm(false)}
+                                            >
+                                                HEX
+                                            </button>
+                                            <button
+                                                className={`px-3 py-1 text-xs rounded-full transition-colors duration-300 ${
+                                                    isAsm
+                                                        ? "bg-orange-500 text-white"
+                                                        : "text-vscode-text-light dark:text-vscode-text-dark"
+                                                }`}
+                                                onClick={() => setIsAsm(true)}
+                                            >
+                                                ASM
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <motion.div
+                                        className="font-mono text-sm leading-relaxed"
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <pre className="whitespace-pre-wrap !bg-vscode-file-light dark:!bg-vscode-input-dark p-3 rounded overflow-x-auto !text-vscode-text-light dark:!text-vscode-text-dark">
+                                            {isAsm
+                                                ? currentOpCode.asm
+                                                : currentOpCode.hexCode}
+                                        </pre>
+                                    </motion.div>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </motion.div>
         </div>
