@@ -33,11 +33,12 @@ const OpCodeExplorer = () => {
     const [isPlaying, setIsPlaying] = useState(false)
     const [hasStarted, setHasStarted] = useState(false)
     const [totalSteps, setTotalSteps] = useState(4)
-    const [isAnimating, setIsAnimating] = useState(false)
     const [isExpandedView, setIsExpandedView] = useState(true)
     const svgRef = useRef<HTMLObjectElement | null>(null)
     const playerRef = useRef<SvgatorPlayer | null>(null)
     const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+    const [isAtEnd, setIsAtEnd] = useState(false)
+    const [isAtStart, setIsAtStart] = useState(true)
 
     const opCodes = Object.keys(opcodeData)
     const currentOpCode = opcodeData[selectedOpCode]
@@ -85,6 +86,8 @@ const OpCodeExplorer = () => {
         setCurrentStep(0)
         setIsPlaying(false)
         setHasStarted(false)
+        setIsAtStart(true)
+        setIsAtEnd(false)
         playerRef.current = null
         setTimeout(initializeSvgPlayer, 100)
     }, [selectedOpCode, initializeSvgPlayer])
@@ -114,13 +117,11 @@ const OpCodeExplorer = () => {
             if (animationTimeoutRef.current) {
                 clearTimeout(animationTimeoutRef.current)
             }
-            setIsAnimating(true)
             setIsPlaying(true)
             playerRef.current.seekTo(startTime)
             playerRef.current.play()
             animationTimeoutRef.current = setTimeout(() => {
                 playerRef.current?.pause()
-                setIsAnimating(false)
                 setIsPlaying(false)
                 setHasStarted(true)
             }, 1000)
@@ -128,43 +129,59 @@ const OpCodeExplorer = () => {
     }, [])
 
     const handlePrevious = useCallback(() => {
+        if (isAtStart) return;
+
         setCurrentStep((prev) => {
             const newStep = Math.max(0, prev - 1)
-            playOneSecond(newStep * 1000) // Play the new step immediately
-            return newStep
-        })
-    }, [playOneSecond])
-
-    const handleNext = useCallback(() => {
-        setCurrentStep((prev) => {
-            const newStep = hasStarted
-                ? Math.min(totalSteps - 1, prev + 1)
-                : prev
             playOneSecond(newStep * 1000)
             setHasStarted(true)
+            setIsAtEnd(false)
+            if (newStep === 0) {
+                setIsAtStart(true)
+            }
             return newStep
         })
-    }, [playOneSecond, totalSteps, hasStarted])
+    }, [playOneSecond, isAtStart])
+
+    const handleNext = useCallback(() => {
+        if (isAtEnd) return;
+
+        setCurrentStep((prev) => {
+            const newStep = Math.min(totalSteps - 1, prev + 1)
+            playOneSecond(newStep * 1000)
+            setHasStarted(true)
+            setIsAtStart(false)
+            if (newStep === totalSteps - 1) {
+                setIsAtEnd(true)
+            }
+            return newStep
+        })
+    }, [playOneSecond, totalSteps, isAtEnd])
 
     const handlePlay = useCallback(() => {
         if (playerRef.current) {
-            playerRef.current.play() // Play the entire SVG animation
+            playerRef.current.play()
             setIsPlaying(true)
+            setHasStarted(true)
+            setIsAtStart(false)
         }
     }, [])
 
-    // Add a new handleReset function
     const handleReset = useCallback(() => {
         if (playerRef.current) {
-            playerRef.current.seekTo(currentStep * 1000) // Reset to the current step
-            playerRef.current.play() // Play from the current step
+            playerRef.current.seekTo(0)
+            playerRef.current.play()
             setIsPlaying(true)
+            setHasStarted(true)
+            setIsAtStart(true)
+            setIsAtEnd(false)
+            setCurrentStep(0)
             setTimeout(() => {
-                playerRef.current?.pause() // Stop after 1 second
+                playerRef.current?.pause()
                 setIsPlaying(false)
             }, 1000)
         }
-    }, [currentStep])
+    }, [])
 
     const handlePause = useCallback(() => {
         if (playerRef.current) {
@@ -173,7 +190,6 @@ const OpCodeExplorer = () => {
             if (animationTimeoutRef.current) {
                 clearTimeout(animationTimeoutRef.current)
             }
-            setIsAnimating(false)
         }
     }, [])
 
@@ -198,9 +214,10 @@ const OpCodeExplorer = () => {
                     <div className="text-sm font-medium">
                         Bitcoin OpCode Explorer
                     </div>
+                    {/* Only show the view toggle button on larger screens */}
                     <motion.button
                         onClick={() => setIsExpandedView(!isExpandedView)}
-                        className="p-2 rounded-md hover:bg-vscode-hover-light dark:hover:bg-vscode-hover-dark transition-colors duration-200 flex items-center"
+                        className="hidden sm:flex p-2 rounded-md hover:bg-vscode-hover-light dark:hover:bg-vscode-hover-dark transition-colors duration-200 items-center"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
@@ -306,7 +323,7 @@ const OpCodeExplorer = () => {
                                     >
                                         <RewindIcon
                                             className={`h-6 w-6 mr-4 cursor-pointer ${
-                                                isAnimating
+                                                isAtStart
                                                     ? "text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark"
                                                     : "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
                                             } transition-colors duration-300`}
@@ -324,7 +341,11 @@ const OpCodeExplorer = () => {
                                             />
                                         ) : (
                                             <PlayIcon
-                                                className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
+                                                className={`h-6 w-6 mr-4 cursor-pointer ${
+                                                    hasStarted && !isAtStart
+                                                        ? "text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark"
+                                                        : "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
+                                                } transition-colors duration-300`}
                                                 onClick={handlePlay}
                                             />
                                         )}
@@ -334,12 +355,8 @@ const OpCodeExplorer = () => {
                                         whileTap={{ scale: 0.9 }}
                                     >
                                         <ResetIcon
-                                            className={`h-6 w-6 mr-4 cursor-pointer ${
-                                                isAnimating
-                                                    ? "text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark"
-                                                    : "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
-                                            } transition-colors duration-300`}
-                                            onClick={handleReset} // Call handleReset on click
+                                            className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
+                                            onClick={handleReset}
                                         />
                                     </motion.div>
                                     <motion.div
@@ -348,7 +365,7 @@ const OpCodeExplorer = () => {
                                     >
                                         <FastForwardIcon
                                             className={`h-6 w-6 mr-4 cursor-pointer ${
-                                                isAnimating
+                                                isAtEnd
                                                     ? "text-vscode-lineNumber-light dark:text-vscode-lineNumber-dark"
                                                     : "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
                                             } transition-colors duration-300`}
