@@ -129,7 +129,7 @@ const OpCodeExplorer = () => {
     }, [])
 
     const handlePrevious = useCallback(() => {
-        if (isAtStart) return;
+        if (isAtStart) return
 
         setCurrentStep((prev) => {
             const newStep = Math.max(0, prev - 1)
@@ -144,7 +144,7 @@ const OpCodeExplorer = () => {
     }, [playOneSecond, isAtStart])
 
     const handleNext = useCallback(() => {
-        if (isAtEnd) return;
+        if (isAtEnd) return
 
         setCurrentStep((prev) => {
             const newStep = Math.min(totalSteps - 1, prev + 1)
