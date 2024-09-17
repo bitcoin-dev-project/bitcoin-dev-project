@@ -154,14 +154,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
-  },
-  {
-    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/3348",
-    "publishedAt": "2024-09-11T09:49:28Z",
-    "title": "Broken feature handling in `internals::impl_to_hex_from_lower_hex` macro",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]

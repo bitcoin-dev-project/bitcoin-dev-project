@@ -142,5 +142,14 @@
       "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6227",
+    "publishedAt": "2024-09-16T23:15:02Z",
+    "title": "Adding products with the same ID breaks the POS",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
