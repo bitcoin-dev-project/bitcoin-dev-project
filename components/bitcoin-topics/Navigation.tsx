@@ -314,7 +314,6 @@ export function Navigation({
                                                                 onClick={(
                                                                     e
                                                                 ) => {
-                                                                    e.stopPropagation()
                                                                     handleTopicClick(
                                                                         childLink
                                                                     )
