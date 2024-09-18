@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import clsx from "clsx"
+import { useCallback } from "react"
 
 function ArrowIcon(props: React.ComponentPropsWithoutRef<"svg">) {
     return (
@@ -15,12 +16,18 @@ function PageLink({
     title,
     href,
     direction = "next",
+    onClick,
     ...props
 }: Omit<React.ComponentPropsWithoutRef<"div">, "direction" | "title"> & {
     title: string
     href: string
     direction?: "previous" | "next"
+    onClick: (href: string) => void
 }) {
+    const handleClick = useCallback(() => {
+        onClick(href)
+    }, [onClick, href])
+
     return (
         <div {...props}>
             <dt className="font-display text-sm font-medium text-gray-900 dark:text-white">
@@ -29,6 +36,7 @@ function PageLink({
             <dd className="mt-1">
                 <Link
                     href={href}
+                    onClick={handleClick}
                     className={clsx(
                         "flex items-center gap-x-1 text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300",
                         direction === "previous" && "flex-row-reverse"
@@ -54,24 +62,35 @@ export function PrevNextLinks({
     next?: { path: string; title: string }
     prev?: { path: string; title: string }
 }) {
+    const handleTopicClick = useCallback((href: string) => {
+        const topicData = {
+            href,
+            time: new Date().toISOString(),
+            children: []
+        }
+        localStorage.setItem("lastVisitedTopic", JSON.stringify(topicData))
+    }, [])
+
     if (!next && !prev) {
         return null
     }
 
     return (
         <dl className="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800">
-            {next && next.path && (
+            {next?.path && (
                 <PageLink
                     direction="previous"
                     title={next.title}
                     href={`/${next.path}`}
+                    onClick={() => handleTopicClick(`/${next.path}`)}
                 />
             )}
-            {prev && prev.path && (
+            {prev?.path && (
                 <PageLink
                     className="ml-auto text-right"
                     title={prev.title}
                     href={`/${prev.path}`}
+                    onClick={() => handleTopicClick(`/${prev.path}`)}
                 />
             )}
         </dl>
