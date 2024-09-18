@@ -1,25 +1,5 @@
 [
   {
-    "url": "https://github.com/ACINQ/eclair/issues/1001",
-    "publishedAt": "2019-05-12T23:34:03Z",
-    "title": "Feature request: Support query string authentication on API WebSocket endpoint",
-    "labels": [
-      "help wanted",
-      "feature request"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
-  },
-  {
-    "url": "https://github.com/ACINQ/eclair/issues/1437",
-    "publishedAt": "2020-05-25T16:36:48Z",
-    "title": "Feature request: implement cookie authentication for eclair RPC",
-    "labels": [
-      "help wanted",
-      "feature request"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
-  },
-  {
     "url": "https://github.com/ACINQ/eclair/issues/1640",
     "publishedAt": "2020-12-15T16:41:16Z",
     "title": "Replace Json API with (Kotlin?) plugin",
