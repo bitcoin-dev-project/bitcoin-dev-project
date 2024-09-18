@@ -186,15 +186,12 @@ const ContinueReadingComp: React.FC<{
                         </div>
 
                         {/* Improved Discord card */}
-                        <motion.div
-                            className="relative overflow-hidden cursor-pointer group"
+                        <motion.a
+                            href="https://discord.gg/EAy9XMufbY"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative overflow-hidden cursor-pointer group block"
                             whileTap={{ scale: 0.98 }}
-                            onClick={() =>
-                                window.open(
-                                    "https://discord.gg/EAy9XMufbY",
-                                    "_blank"
-                                )
-                            }
                             onHoverStart={() => setIsHovered(true)}
                             onHoverEnd={() => setIsHovered(false)}
                         >
@@ -248,7 +245,7 @@ const ContinueReadingComp: React.FC<{
                                 }}
                                 transition={{ duration: 0.5 }}
                             />
-                        </motion.div>
+                        </motion.a>
                     </div>
                 </div>
             </div>
