@@ -51,9 +51,6 @@ export function Navigation({
     const [expandedTopics, setExpandedTopics] = useState<
         Record<string, boolean>
     >({})
-    const [lastVisitedTopic, setLastVisitedTopic] = useState<string | null>(
-        null
-    )
 
     // Load expanded state from localStorage on component mount
     useEffect(() => {
@@ -202,24 +199,15 @@ export function Navigation({
             const topicData = {
                 href: link.href,
                 time: new Date().toISOString(),
-                // Save only the currently visited child if expanded
                 children:
                     link.children && expandedTopics[link.href]
                         ? link.children.map((child) => child.href)
                         : []
             }
-            setLastVisitedTopic(link.href)
             localStorage.setItem("lastVisitedTopic", JSON.stringify(topicData))
         },
         [expandedTopics]
     )
-
-    useEffect(() => {
-        const savedLastVisitedTopic = localStorage.getItem("lastVisitedTopic")
-        if (savedLastVisitedTopic) {
-            setLastVisitedTopic(savedLastVisitedTopic)
-        }
-    }, [posts])
 
     return (
         <nav className={clsx("text-md lg:text-sm font-medium", className)}>
