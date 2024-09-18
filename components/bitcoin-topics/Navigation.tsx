@@ -13,7 +13,6 @@ import { useState, useEffect, useCallback, useMemo } from "react"
 import { motion } from "framer-motion"
 import { FaChevronRight, FaChevronDown } from "react-icons/fa"
 import * as Icons from "react-icons/fa"
-import { BookOpenIcon, ClockIcon, ArrowRightIcon } from "lucide-react"
 
 interface NavigationLink {
     title: string

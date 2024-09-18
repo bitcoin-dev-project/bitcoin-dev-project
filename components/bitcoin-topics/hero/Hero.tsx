@@ -104,7 +104,7 @@ const ContinueReadingComp: React.FC<{
                         unoptimized
                         priority
                     />
-                    <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(transparent,white,white)] lg:-bottom-32 lg:-top-32 lg:left-[calc(50%+14rem)] lg:right-0 [mask-image:linear-gradient(transparent,white,transparent)] lg:[mask-image:linear-gradient(transparent,white,white,transparent)]">
+                    <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 lg:-bottom-32 lg:-top-32 lg:left-[calc(50%+14rem)] lg:right-0 [mask-image:linear-gradient(transparent,white,transparent)] lg:[mask-image:linear-gradient(transparent,white,white,transparent)]">
                         <HeroBackground className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-0 lg:translate-x-0 lg:translate-y-[-60%] opacity-20 lg:opacity-100" />
                     </div>
 
@@ -234,17 +234,6 @@ const ContinueReadingComp: React.FC<{
                                     <ArrowRightIcon className="h-6 w-6 text-indigo-500 dark:text-indigo-400" />
                                 </motion.div>
                             </div>
-                            <motion.div
-                                className="absolute inset-0 bg-indigo-100 dark:bg-indigo-900 opacity-0"
-                                initial={{ scale: 0, x: "100%", y: "-100%" }}
-                                animate={{
-                                    scale: isHovered ? 2.5 : 0,
-                                    x: isHovered ? "0%" : "100%",
-                                    y: isHovered ? "0%" : "-100%",
-                                    opacity: isHovered ? 0.1 : 0
-                                }}
-                                transition={{ duration: 0.5 }}
-                            />
                         </motion.a>
                     </div>
                 </div>
@@ -337,7 +326,7 @@ export function Hero() {
                                 </div>
                             </div>
                             <div className="relative lg:static xl:pl-10">
-                                <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(transparent,white,white)] lg:-bottom-32 lg:-top-32 lg:left-[calc(50%+14rem)] lg:right-0  [mask-image:linear-gradient(transparent,white,transparent)] lg:[mask-image:linear-gradient(white,white,transparent)]">
+                                <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 lg:-bottom-32 lg:-top-32 lg:left-[calc(50%+14rem)] lg:right-0  [mask-image:linear-gradient(transparent,white,transparent)] lg:[mask-image:linear-gradient(white,white,transparent)]">
                                     <HeroBackground className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-0 lg:translate-x-0 lg:translate-y-[-60%]" />
                                 </div>
                                 <div className="relative">

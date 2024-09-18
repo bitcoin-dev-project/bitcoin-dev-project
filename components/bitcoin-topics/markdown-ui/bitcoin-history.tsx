@@ -56,8 +56,6 @@ interface BitcoinHistoryProps {
 export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
     historyEvents
 }) => {
-    const [visibleEvents, setVisibleEvents] = useState(historyEvents.length)
-
     return (
         <div className="container mx-auto px-4 py-8 bg-vscode-background-light dark:bg-vscode-background-dark text-vscode-text-light dark:text-vscode-text-dark">
             <motion.div
@@ -100,7 +98,7 @@ export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
                 {historyEvents.map((event, index) => (
                     <React.Fragment key={event.id}>
                         <EventItem event={event} index={index} />
-                        {index < visibleEvents - 1 && (
+                        {index < historyEvents.length - 1 && (
                             <ConnectingLine index={index} />
                         )}
                     </React.Fragment>

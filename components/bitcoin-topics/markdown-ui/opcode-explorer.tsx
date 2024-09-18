@@ -4,7 +4,6 @@ import { opcodeData } from "@/content/opcode-explorer"
 import { ResetIcon } from "@radix-ui/react-icons"
 import { motion } from "framer-motion"
 import {
-    SearchIcon,
     RewindIcon,
     PauseIcon,
     PlayIcon,
