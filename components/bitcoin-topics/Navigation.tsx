@@ -351,18 +351,54 @@ export function Navigation({
         </nav>
     )
 }
-
 const EmailSubscription = () => {
     const [email, setEmail] = useState("")
+    const [mailchimpResponse, setMailchimpResponse] = useState("")
+    const [error, setError] = useState("")
+    const [loading, setLoading] = useState(false)
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        console.log("Submitted:", email)
-        setEmail("")
+        setMailchimpResponse("")
+        setError("")
+        setLoading(true)
+
+        try {
+            const response = await fetch("/subscribe", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email })
+            })
+
+            setLoading(false)
+            if (response.ok) {
+                const data = await response.json()
+                setMailchimpResponse(data.message)
+                setEmail("")
+                return
+            }
+
+            if (response.status === 400) {
+                const data = await response.json()
+                if (data?.title?.toLowerCase().includes("member exists")) {
+                    setError("You are already subscribed to our newsletter")
+                    return
+                }
+            }
+            throw new Error("Something went wrong. Please try again later.")
+        } catch (error: any) {
+            setLoading(false)
+            console.error(error)
+            if (error instanceof Error) {
+                setError(error.message)
+            }
+        }
     }
 
     return (
-        <div className="my-6 border-t  border-gray-200 mt-12 pt-4  dark:border-gray-800">
+        <div className="my-6 border-t border-gray-200 mt-12 pt-4 dark:border-gray-800">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                 Stay Updated
             </h3>
@@ -380,10 +416,17 @@ const EmailSubscription = () => {
                     className="ml-2 px-3 py-1 text-sm font-medium text-orange-500 hover:text-orange-600 focus:outline-none"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    disabled={loading}
                 >
-                    Subscribe
+                    {loading ? "Subscribing..." : "Subscribe"}
                 </motion.button>
             </form>
+            {mailchimpResponse && (
+                <p className="mt-2 text-sm text-green-500">
+                    {mailchimpResponse}
+                </p>
+            )}
+            {error && <p className="mt-2 text-sm text-red-500">{error}</p>}
         </div>
     )
 }
