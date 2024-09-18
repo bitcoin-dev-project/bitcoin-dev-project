@@ -142,10 +142,9 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                                                     ) : (
                                                         <PencilIcon className="mr-2 h-5 w-5" />
                                                     )}
-                                                    {lang
-                                                        .charAt(0)
-                                                        .toUpperCase() +
-                                                        lang.slice(1)}
+                                                    <span className="capitalize">
+                                                        {lang}
+                                                    </span>
                                                 </motion.button>
                                             )
                                         )}
@@ -159,12 +158,7 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.3 }}
-                                className="bg-vscode-background-light dark:bg-vscode-background-dark rounded-lg"
-                                style={{
-                                    height: "calc(100vh - 120px)",
-                                    minHeight: "400px",
-                                    maxHeight: "600px"
-                                }}
+                                className="bg-vscode-background-light dark:bg-vscode-background-dark rounded-lg h-[calc(100vh-120px)] min-h-[400px] max-h-[600px]"
                             >
                                 <div className="h-full bg-vscode-editorBackground-light dark:bg-vscode-editorBackground-dark rounded-lg shadow-inner overflow-hidden">
                                     {selectedLanguage === "javascript" ? (
