@@ -327,17 +327,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1462",
-    "publishedAt": "2024-06-06T03:02:19Z",
-    "title": "Examples don't show how to properly initialize a IndexedTxGraph etc from disk",
-    "labels": [
-      "bug",
-      "good first issue",
-      "invalid"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1504",
     "publishedAt": "2024-07-08T14:59:11Z",
     "title": "The `url` dependency does not prevent URL homograph attacks",
@@ -400,6 +389,17 @@
     "labels": [
       "good first issue",
       "tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1618",
+    "publishedAt": "2024-09-19T15:51:13Z",
+    "title": "Test CLI examples using a regtest node in CI",
+    "labels": [
+      "good first issue",
+      "tests",
+      "ci"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
