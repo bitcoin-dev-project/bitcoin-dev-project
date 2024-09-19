@@ -157,16 +157,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/715",
-    "publishedAt": "2022-08-12T22:32:54Z",
-    "title": "Large `importdescriptors` call slow, possible to reduce number of watched addresses?",
-    "labels": [
-      "bug",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/749",
     "publishedAt": "2022-09-10T20:35:14Z",
     "title": "Error syncing wallet via RPC client on macOS system",
