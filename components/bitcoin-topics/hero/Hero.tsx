@@ -67,9 +67,8 @@ function useTypingEffect(text: string, speed = 20) {
 
 const ContinueReadingComp: React.FC<{
     lastVisitedTopicTitle: string | null
-    lastVisitedTime: string | null
     handleContinueReading: () => void
-}> = ({ lastVisitedTopicTitle, lastVisitedTime, handleContinueReading }) => {
+}> = ({ lastVisitedTopicTitle, handleContinueReading }) => {
     const [isHovered, setIsHovered] = useState(false)
 
     return (
@@ -162,18 +161,6 @@ const ContinueReadingComp: React.FC<{
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex items-center">
-                                        <ClockIcon className="h-6 w-6 text-orange-500 mr-3" />
-                                        <div>
-                                            <p className="font-medium text-base text-gray-900 dark:text-white">
-                                                {lastVisitedTime}{" "}
-                                                {/* Display last visited time */}
-                                            </p>
-                                            <p className="text-sm text-gray-500 dark:text-gray-400">
-                                                Last visit date
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
                                 <Button
                                     onClick={handleContinueReading}
@@ -247,7 +234,6 @@ export function Hero() {
     const [lastVisitedTopic, setLastVisitedTopic] = useState<string | null>(
         null
     )
-    const [lastVisitedTime, setLastVisitedTime] = useState<string | null>(null)
     const router = useRouter()
 
     const posts = useMemo(() => allCoreContent(sortPosts(allTopics)), [])
@@ -256,9 +242,8 @@ export function Hero() {
         const savedLastVisitedTopic = localStorage.getItem("lastVisitedTopic")
         if (savedLastVisitedTopic) {
             try {
-                const { href, time } = JSON.parse(savedLastVisitedTopic)
+                const { href } = JSON.parse(savedLastVisitedTopic)
                 setLastVisitedTopic(href)
-                setLastVisitedTime(new Date(time).toLocaleString())
             } catch (error) {
                 console.error("Error parsing last visited topic:", error)
             }
@@ -284,7 +269,6 @@ export function Hero() {
             lastVisitedTopicTitle ? (
                 <ContinueReadingComp
                     lastVisitedTopicTitle={lastVisitedTopicTitle}
-                    lastVisitedTime={lastVisitedTime}
                     handleContinueReading={handleContinueReading}
                 />
             ) : (

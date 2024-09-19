@@ -198,7 +198,6 @@ export function Navigation({
         (link: NavigationLink) => {
             const topicData = {
                 href: link.href,
-                time: new Date().toISOString(),
                 children:
                     link.children && expandedTopics[link.href]
                         ? link.children.map((child) => child.href)

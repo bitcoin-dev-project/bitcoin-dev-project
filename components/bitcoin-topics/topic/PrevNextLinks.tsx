@@ -65,7 +65,6 @@ export function PrevNextLinks({
     const handleTopicClick = useCallback((href: string) => {
         const topicData = {
             href,
-            time: new Date().toISOString(),
             children: []
         }
         localStorage.setItem("lastVisitedTopic", JSON.stringify(topicData))
