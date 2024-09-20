@@ -79,9 +79,12 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${barlow.className} bg-vscode-background-light text-vscode-text-light dark:bg-vscode-background-dark dark:text-vscode-text-dark`}
+                className={`${barlow.className}  bg-white dark:bg-black text-vscode-text-light dark:text-vscode-text-dark`}
             >
-                <ThemeProvider attribute="class">
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme={siteMetadata.theme}
+                >
                     <Header />
                     <main>{children}</main>
                     <Footer />

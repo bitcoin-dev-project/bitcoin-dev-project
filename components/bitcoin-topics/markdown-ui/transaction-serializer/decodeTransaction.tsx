@@ -115,13 +115,12 @@ class TransactionDecoder {
     private classifyOutputScript(script: Buffer): string {
         const isOutput = (
             paymentFn: (args: { output: Buffer }) => unknown
-        ): string | undefined => {
+        ): boolean => {
             try {
-                return paymentFn({ output: script })
-                    ? paymentFn.name
-                    : undefined
+                return !!paymentFn({ output: script })
             } catch (e) {
-                return undefined
+                // console.error(`Error checking ${paymentFn.name}:`, e);
+                return false
             }
         }
 
@@ -129,36 +128,79 @@ class TransactionDecoder {
         if (isOutput(payments.p2pkh)) return "P2PKH"
         if (isOutput(payments.p2ms)) return "P2MS (multisig)"
         if (isOutput(payments.p2wpkh)) return "P2WPKH"
+        if (isOutput(payments.p2wsh)) return "P2WSH"
         if (isOutput(payments.p2sh)) return "P2SH"
 
         return "nonstandard"
     }
 
     private classifyInputType(input: TxInput): string {
+        // Check for native SegWit inputs
         if (input.witness.length > 0) {
             return input.witness.length === 2 ? "P2WPKH" : "P2WSH"
         }
 
+        // Non-witness inputs
         if (input.script.length > 0) {
             const decompiled = btcScript.decompile(input.script)
             if (!decompiled) return "UNKNOWN"
 
-            if (decompiled.length === 2 && isBuffer(decompiled[1])) {
+            // P2PKH: <signature> <pubkey>
+            if (
+                decompiled.length === 2 &&
+                isBuffer(decompiled[0]) &&
+                isBuffer(decompiled[1]) &&
+                decompiled[0].length >= 70 &&
+                decompiled[1].length >= 33
+            ) {
                 return "P2PKH"
             }
 
+            // P2SH: <...> <redeemScript>
             if (
-                decompiled.length > 2 &&
-                isBuffer(decompiled[decompiled.length - 1]) &&
-                (decompiled[decompiled.length - 1] as Buffer).equals(
-                    Buffer.from("OP_CHECKMULTISIG", "ascii")
-                )
+                decompiled.length >= 2 &&
+                isBuffer(decompiled[decompiled.length - 1])
             ) {
-                return "P2SH (likely multisig)"
+                const redeemScript = btcScript.decompile(
+                    decompiled[decompiled.length - 1] as Buffer
+                )
+                if (redeemScript) {
+                    // P2SH-P2WPKH
+                    if (
+                        redeemScript.length === 2 &&
+                        redeemScript[0] === 0 &&
+                        isBuffer(redeemScript[1]) &&
+                        redeemScript[1].length === 20
+                    ) {
+                        return "P2SH-P2WPKH"
+                    }
+                    // P2SH-P2WSH
+                    if (
+                        redeemScript.length === 2 &&
+                        redeemScript[0] === 0 &&
+                        isBuffer(redeemScript[1]) &&
+                        redeemScript[1].length === 32
+                    ) {
+                        return "P2SH-P2WSH"
+                    }
+                    // P2SH-Multisig
+                    if (
+                        redeemScript[redeemScript.length - 1] ===
+                        btcScript.OPS.OP_CHECKMULTISIG
+                    ) {
+                        return "P2SH-Multisig"
+                    }
+                }
+                return "P2SH"
             }
 
-            if (decompiled.length === 1 && isBuffer(decompiled[0])) {
-                return "P2SH"
+            // Legacy P2PK: <signature>
+            if (
+                decompiled.length === 1 &&
+                isBuffer(decompiled[0]) &&
+                decompiled[0].length >= 70
+            ) {
+                return "P2PK"
             }
         }
 

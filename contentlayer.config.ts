@@ -57,6 +57,7 @@ export const Topic = defineDocumentType(() => ({
         draft: { type: "boolean" },
         featured: { type: "boolean" },
         summary: { type: "string" },
+        bannerImage: { type: "string" },
         thumbnail: { type: "string" },
         images: { type: "json" },
         authors: { type: "list", of: { type: "string" } },
@@ -72,7 +73,8 @@ export const Topic = defineDocumentType(() => ({
         },
         parent: { type: "string" },
         project: { type: "boolean", default: false },
-        order: { type: "number", default: 0 }
+        order: { type: "number", default: 0 },
+        icon: { type: "string" }
     },
     computedFields: {
         ...computedFields,

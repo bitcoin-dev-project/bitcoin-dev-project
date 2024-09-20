@@ -3,13 +3,13 @@
 import { ReactNode, useState, useEffect } from "react"
 import { CoreContent } from "pliny/utils/contentlayer"
 import type { Topic, Authors } from "contentlayer/generated"
-import siteMetadata from "@/data/siteMetadata"
 import { Navigation } from "../Navigation"
 import { Hero } from "../hero/Hero"
 import { PrevNextLinks } from "../topic/PrevNextLinks"
 import { Prose } from "../topic/Prose"
 import { TopicHeader } from "../topic/TopicHeader"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 import Link from "next/link"
 
 import { motion, AnimatePresence } from "framer-motion"
@@ -25,7 +25,7 @@ interface LayoutProps {
     children: ReactNode
 }
 
-export default function TopicLayout({
+export default function TopicBanner({
     content,
     next,
     prev,
@@ -95,8 +95,6 @@ export default function TopicLayout({
                     {isInsideTopic && (
                         <div className="absolute inset-y-0 right-0 w-[50vw] dark:bg-vscode-navigation-dark bg-vscode-navigation-light" />
                     )}
-                    <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-gray-800 dark:block" />
-                    <div className="absolute bottom-0 right-0 top-28 hidden w-px bg-gray-800 dark:block" />
                     <div className="sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-4 xl:w-72 xl:pr-8">
                         <Navigation content={content} />
                     </div>
@@ -177,6 +175,67 @@ export default function TopicLayout({
                         }}
                         transition={{ duration: 0.3 }}
                     >
+                        {content.bannerImage ? (
+                            <>
+                                <div className="relative w-full h-[600px] mb-16">
+                                    <Image
+                                        src={content.bannerImage}
+                                        alt="Project image"
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                    <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/70 to-transparent">
+                                        <h2 className="text-2xl font-semibold text-white mb-2">
+                                            Project
+                                        </h2>
+                                        <h1 className="text-4xl font-extralight text-white">
+                                            {title}
+                                        </h1>
+                                    </div>
+                                </div>
+                                <article>
+                                    <Prose>{children}</Prose>
+                                </article>
+                            </>
+                        ) : (
+                            <article>
+                                <TopicHeader
+                                    title={title}
+                                    tags={tags}
+                                    summary={content.summary}
+                                />
+                                <Prose>{children}</Prose>
+                            </article>
+                        )}
+                        <PrevNextLinks prev={prev} next={next} />
+                    </motion.div>
+                </div>
+
+                {/* Desktop Main Content */}
+                <div className="hidden lg:block min-w-0 max-w-3xl flex-auto pb-16 lg:mx-auto lg:max-w-none lg:pr-0">
+                    {content.bannerImage ? (
+                        <>
+                            <div className="relative w-full h-[600px] mb-16">
+                                <Image
+                                    src={content.bannerImage}
+                                    alt="Project image"
+                                    layout="fill"
+                                    objectFit="cover"
+                                />
+                                <div className="max-w-3xl mx-auto absolute inset-0 flex flex-col justify-end p-8 pl-0">
+                                    <h2 className="text-2xl font-semibold text-white mb-2">
+                                        Project
+                                    </h2>
+                                    <h1 className="text-4xl font-extralight text-white">
+                                        {title}
+                                    </h1>
+                                </div>
+                            </div>
+                            <article>
+                                <Prose>{children}</Prose>
+                            </article>
+                        </>
+                    ) : (
                         <article>
                             <TopicHeader
                                 title={title}
@@ -184,25 +243,12 @@ export default function TopicLayout({
                                 summary={content.summary}
                             />
                             <Prose>{children}</Prose>
+                            {/* Add the GitHub edit button for mobile */}
+                            <div className="max-w-3xl mx-auto mt-8 flex justify-end">
+                                <EditOnGitHubButton />
+                            </div>
                         </article>
-                        <PrevNextLinks prev={prev} next={next} />
-                    </motion.div>
-                </div>
-
-                {/* Desktop Main Content */}
-                <div className="hidden lg:block min-w-0 max-w-3xl flex-auto px-4 py-16 lg:mx-auto lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
-                    <article>
-                        <TopicHeader
-                            title={title}
-                            tags={tags}
-                            summary={content.summary}
-                        />
-                        <Prose>{children}</Prose>
-                        {/* Add the GitHub edit button for mobile */}
-                        <div className="max-w-3xl mx-auto mt-8 flex justify-end">
-                            <EditOnGitHubButton />
-                        </div>
-                    </article>
+                    )}
                     <div className="xl:px-16">
                         <PrevNextLinks prev={prev} next={next} />
                     </div>

@@ -40,3 +40,17 @@ body {
 .prose {
     max-width: unset;
 }
+
+@keyframes smoothBlink {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-smooth-blink {
+    animation: smoothBlink 1s ease-in-out infinite;
+}
