@@ -7,6 +7,14 @@ import TopicLayout from "@/components/bitcoin-topics/layouts/TopicLayout"
 import { components } from "@/components/bitcoin-topics/markdown-ui/MDXComponents"
 import siteMetadata from "@/data/siteMetadata"
 import { getAuthorDetails, getTopicData } from "@/utils/content-utils"
+import TopicBanner from "@/components/bitcoin-topics/layouts/TopicBanner"
+
+const defaultLayout = "TopicLayout"
+const layouts = {
+    TopicLayout,
+    TopicBanner
+}
+type LayoutKey = keyof typeof layouts
 
 export async function generateMetadata({
     params
@@ -60,13 +68,15 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     const { prev, next, post, authorDetails, mainContent, jsonLd } =
         getTopicData(slug)
 
+    const Layout = layouts[(post.layout as LayoutKey) || defaultLayout]
+
     return (
         <div className="scroll-smooth">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <TopicLayout
+            <Layout
                 content={mainContent}
                 authorDetails={authorDetails}
                 next={next}
@@ -77,7 +87,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
                     components={components}
                     toc={post.toc}
                 />
-            </TopicLayout>
+            </Layout>
         </div>
     )
 }
