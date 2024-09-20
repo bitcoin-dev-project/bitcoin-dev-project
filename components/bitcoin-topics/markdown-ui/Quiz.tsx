@@ -113,7 +113,7 @@ const Quiz = ({
             {!quizCompleted ? (
                 <>
                     <div className="mb-4">
-                        <h3 className="text-md font-medium mb-2 text-vscode-text-light dark:text-vscode-text-dark">
+                        <h3 className="text-md font-medium mb-2 mt-0 text-vscode-text-light dark:text-vscode-text-dark">
                             {questions[currentQuestion].question}
                         </h3>
                     </div>
