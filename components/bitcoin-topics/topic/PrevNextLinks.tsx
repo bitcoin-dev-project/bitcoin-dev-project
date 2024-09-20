@@ -22,12 +22,8 @@ function PageLink({
     title: string
     href: string
     direction?: "previous" | "next"
-    onClick: (href: string) => void
+    onClick: () => void
 }) {
-    const handleClick = useCallback(() => {
-        onClick(href)
-    }, [onClick, href])
-
     return (
         <div {...props}>
             <dt className="font-display text-sm font-medium text-gray-900 dark:text-white">
@@ -36,7 +32,7 @@ function PageLink({
             <dd className="mt-1">
                 <Link
                     href={href}
-                    onClick={handleClick}
+                    onClick={onClick}
                     className={clsx(
                         "flex items-center gap-x-1 text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300",
                         direction === "previous" && "flex-row-reverse"
