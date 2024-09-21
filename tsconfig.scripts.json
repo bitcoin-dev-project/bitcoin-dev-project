@@ -5,7 +5,9 @@
         "outDir": "scripts",
         "strict": true,
         "esModuleInterop": true,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "skipLibCheck": true
     },
-    "include": ["helpers/**/*.ts", "utils/**/*.ts", "types/**/*.ts"]
+    "include": ["helpers/**/*.ts", "utils/**/*.ts", "types/**/*.ts"],
+    "exclude": ["utils/content-utils.ts"]
 }

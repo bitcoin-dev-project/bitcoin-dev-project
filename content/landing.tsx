@@ -253,7 +253,7 @@ export const products = [
             "Learning bitcoin is hard, but we make it easy for you to get started.",
         href: "/topics",
         icon: ListBulletIcon,
-        released: false
+        released: true
     }
 ]
 

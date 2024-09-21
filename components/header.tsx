@@ -17,15 +17,17 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import { ThemeToggle } from "./dark-mode-toggle"
 import { callsToAction, contributions, products } from "@/content/landing"
 import useOnclickOut from "@/hooks/useOnclickOut"
+import { classNames } from "@/utils/content-utils"
 
 export function Header() {
-    function classNames(...classes: any) {
-        return classes.filter(Boolean).join(" ")
-    }
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
 
+    const closeMobileMenu = () => {
+        setMobileMenuOpen(false)
+    }
+
     return (
-        <header className="isolate sticky top-0 dark:bg-black bg-white z-50">
+        <header className="isolate sticky top-0 bg-vscode-background-light dark:bg-vscode-background-dark  z-50">
             <div className="border-b-2 border-orange-500">
                 <nav
                     className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
@@ -62,25 +64,25 @@ export function Header() {
                             navItemList={contributions}
                             navType="CONTRIBUTE"
                         />
-                        <a
+                        <Link
                             href="/career"
                             className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100"
                         >
                             Career
-                        </a>
+                        </Link>
 
-                        <a
+                        <Link
                             href="/tools"
                             className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100"
                         >
                             Tools
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="/about"
                             className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100"
                         >
                             About
-                        </a>
+                        </Link>
                         <ThemeToggle />
                     </PopoverGroup>
                 </nav>
@@ -91,7 +93,7 @@ export function Header() {
                 onClose={setMobileMenuOpen}
             >
                 <div className="fixed inset-0 z-10" />
-                <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-800/10">
+                <DialogPanel className="fixed inset-y-0 right-0 z-40 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-800/10">
                     <div className="flex items-center justify-between">
                         <Link href="/">
                             <h1 className="text-2xl md:text-xl font-bold">
@@ -137,6 +139,9 @@ export function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
+                                                        onClick={
+                                                            closeMobileMenu
+                                                        }
                                                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-950 "
                                                     >
                                                         {item.name}
@@ -170,6 +175,9 @@ export function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
+                                                        onClick={
+                                                            closeMobileMenu
+                                                        }
                                                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-950 "
                                                     >
                                                         {item.name}
@@ -179,24 +187,24 @@ export function Header() {
                                         </>
                                     )}
                                 </Disclosure>
-                                <a
+                                <Link
                                     href="/career"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-950 "
                                 >
                                     Career
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/tools"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-950 "
                                 >
                                     Tools
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/about"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-950 "
                                 >
                                     About
-                                </a>
+                                </Link>
                             </div>
                             <div className="py-6">
                                 <ThemeToggle />
@@ -230,6 +238,10 @@ function PopoverNavigation({
     navType: "LEARN" | "CONTRIBUTE"
 }) {
     const { isOpen, setOpen, wrapperRef, contentRef } = useOnclickOut()
+
+    const handleLinkClick = () => {
+        setOpen(false)
+    }
 
     return (
         <Popover>
@@ -273,28 +285,34 @@ function PopoverNavigation({
                                             : "pointer-events-none opacity-50"
                                     }
                                 >
-                                    <a
-                                        href={
-                                            item.released
-                                                ? item.href
-                                                : undefined
-                                        }
-                                    >
-                                        <div className="block font-semibold text-gray-800 dark:text-gray-100 relative">
-                                            {item.name}
-
-                                            {navType === "LEARN" &&
-                                                !item.released && (
+                                    {item.released ? (
+                                        <Link
+                                            href={item.href}
+                                            onClick={handleLinkClick}
+                                        >
+                                            <div className="block font-semibold text-gray-800 dark:text-gray-100 relative">
+                                                {item.name}
+                                                <span className="absolute inset-0" />
+                                            </div>
+                                            <p className="mt-1 text-gray-600 dark:text-gray-400">
+                                                {item.description}
+                                            </p>
+                                        </Link>
+                                    ) : (
+                                        <div>
+                                            <div className="block font-semibold text-gray-800 dark:text-gray-100 relative">
+                                                {item.name}
+                                                {navType === "LEARN" && (
                                                     <span className="ml-2 inline-flex items-center rounded-full bg-yellow-50 px-2 py-1 text-xs font-normal text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
                                                         Coming Soon
                                                     </span>
                                                 )}
-                                            <span className="absolute inset-0" />
+                                            </div>
+                                            <p className="mt-1 text-gray-600 dark:text-gray-400">
+                                                {item.description}
+                                            </p>
                                         </div>
-                                        <p className="mt-1 text-gray-600 dark:text-gray-400">
-                                            {item.description}
-                                        </p>
-                                    </a>
+                                    )}
                                 </div>
                             </div>
                         ))}
@@ -303,9 +321,10 @@ function PopoverNavigation({
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="grid grid-cols-1 divide-x divide-gray-800/5 border-x border-gray-800/5">
                                 {callsToAction.map((item) => (
-                                    <a
+                                    <Link
                                         key={item.name}
                                         href={item.href}
+                                        onClick={handleLinkClick}
                                         className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 "
                                     >
                                         <item.icon
@@ -313,7 +332,7 @@ function PopoverNavigation({
                                             aria-hidden="true"
                                         />
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>

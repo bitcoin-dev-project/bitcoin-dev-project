@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.slugify = void 0;
+exports.slugify = slugify;
 function slugify(inputString) {
     return inputString
         .toString()
@@ -10,4 +10,3 @@ function slugify(inputString) {
         .replace(/[^\w-]+/g, "")
         .replace(/--+/g, "-");
 }
-exports.slugify = slugify;
