@@ -286,15 +286,5 @@
       "dependencies"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/5980",
-    "publishedAt": "2024-09-06T00:51:39Z",
-    "title": "`GatewayBalances` should include inbound liquidity",
-    "labels": [
-      "good first issue",
-      "lightning"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]

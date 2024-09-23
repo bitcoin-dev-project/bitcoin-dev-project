@@ -196,17 +196,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/797",
-    "publishedAt": "2022-11-14T09:43:15Z",
-    "title": "misleading spendable balance",
-    "labels": [
-      "bug",
-      "module-wallet",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/826",
     "publishedAt": "2022-12-24T17:25:02Z",
     "title": "There's no way to set connect timeout for the Esplora backend client",
