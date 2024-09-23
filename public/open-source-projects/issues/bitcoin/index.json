@@ -83,17 +83,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/18217",
-    "publishedAt": "2020-02-28T00:17:47Z",
-    "title": "Improve documentation of estimatesmartfee",
-    "labels": [
-      "Bug",
-      "Docs",
-      "RPC/REST/ZMQ"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/18625",
     "publishedAt": "2020-04-13T15:02:01Z",
     "title": "untrust vs unsafe ?",
