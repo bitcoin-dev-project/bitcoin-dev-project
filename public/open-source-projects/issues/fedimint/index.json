@@ -97,16 +97,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/3299",
-    "publishedAt": "2023-09-27T19:32:01Z",
-    "title": "`fedimintd` must check `consensus.json.version` against its current consensus version.",
-    "labels": [
-      "good first issue",
-      "consensus"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/3300",
     "publishedAt": "2023-09-27T19:50:26Z",
     "title": "On start print consensus versions",
