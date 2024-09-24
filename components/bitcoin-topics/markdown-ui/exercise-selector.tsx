@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import { Sandpack } from "@codesandbox/sandpack-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { CodeIcon, PencilIcon, ArrowLeftIcon } from "lucide-react"
+import { gruvboxDark } from "@codesandbox/sandpack-themes"
 
 type Language = "javascript" | "python"
 
@@ -96,13 +97,23 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                                 }}
                             >
                                 <div className="absolute inset-0 filter blur-[6px]">
-                                    <iframe
-                                        src={trinketUrl}
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: "none", margin: 0 }}
-                                        allowFullScreen
-                                    ></iframe>
+                                    <Sandpack
+                                        template="react"
+                                        theme={gruvboxDark}
+                                        options={{
+                                            externalResources: [
+                                                "https://cdn.tailwindcss.com"
+                                            ],
+                                            showLineNumbers: true,
+                                            showInlineErrors: true,
+                                            editorHeight: "100%",
+                                            ...sandpackConfig.options
+                                        }}
+                                        customSetup={
+                                            sandpackConfig.customSetup || {}
+                                        }
+                                        files={sandpackConfig.files}
+                                    />
                                 </div>
                                 <div className="absolute inset-0 z-10 flex flex-col justify-center items-center bg-[#FFFFFF66] dark:bg-[#1E1E1E66] text-black dark:text-white backdrop-blur-[1px]">
                                     <motion.div
@@ -158,12 +169,13 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.3 }}
-                                className="bg-vscode-background-light dark:bg-vscode-background-dark rounded-lg h-[calc(100vh-120px)] min-h-[400px] max-h-[600px]"
+                                className="bg-vscode-background-light dark:bg-vscode-background-dark rounded-lg min-h-[400px] max-h-[600px]"
                             >
                                 <div className="h-full bg-vscode-editorBackground-light dark:bg-vscode-editorBackground-dark rounded-lg shadow-inner overflow-hidden">
                                     {selectedLanguage === "javascript" ? (
                                         <Sandpack
                                             template="react"
+                                            theme={gruvboxDark}
                                             options={{
                                                 externalResources: [
                                                     "https://cdn.tailwindcss.com"
@@ -189,7 +201,7 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                                                     margin: 0
                                                 }}
                                                 allowFullScreen
-                                                className="rounded-md shadow-sm"
+                                                className="rounded-md shadow-sm h-[calc(100vh-200px)]"
                                             ></iframe>
                                         </div>
                                     )}

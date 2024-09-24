@@ -29,11 +29,11 @@ const OpcodeDataVisualizer: React.FC = () => {
                         opcode: "OP_PUSHBYTES_X",
                         description: "Dynamic data pushing (1-75 bytes)",
                         details:
-                            "The OP_PUSHBYTES_X opcodes (0x01 to 0x4b) are used to push up to 75 bytes on to the stack. Just replace the X with the number of upcoming bytes you want pushed on to the stack.",
+                            "The OP_PUSHBYTES_X opcodes (0x01 to 0x4b) are used to push up to 75 bytes onto the stack. Replace X with the number of upcoming bytes you want pushed onto the stack.",
                         example:
-                            "OP_DATAPUSH_32 0x1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t",
+                            "OP_PUSHBYTES_32 0x1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u",
                         funFact:
-                            "This is the most commonly used opcode for pushing data on to the stack"
+                            "This is the most commonly used opcode for pushing data onto the stack."
                     }
                     break
                 case "op_push_data_1":
@@ -41,8 +41,8 @@ const OpcodeDataVisualizer: React.FC = () => {
                         opcode: "OP_PUSHDATA1",
                         description: "Dynamic data pushing (76-255 bytes)",
                         details:
-                            "The OP_PUSHDATA1 opcode (0x4c) is followed by 1 byte indicating the number of bytes you want pushed on to the stack, followed by the actual bytes.  This is used when you want to push more data on the stack than you can with OP_PUSHBYTES_X.",
-                        example: "OP_PUSHDATA1 4c "
+                            "The OP_PUSHDATA1 opcode (0x4c) is followed by 1 byte indicating the number of bytes to be pushed onto the stack, followed by the actual data.",
+                        example: "OP_PUSHDATA1 0x4c [76 bytes of data]"
                     }
                     break
                 case "op_push_data_2":
@@ -50,8 +50,8 @@ const OpcodeDataVisualizer: React.FC = () => {
                         opcode: "OP_PUSHDATA2",
                         description: "Data between 256-65535 bytes",
                         details:
-                            "The OP_PUSHDATA2 opcode (0x4d) works in the same was as OP_PUSHDATA1, except it's followed by 2 bytes to indicate the number of upcoming bytes to be pushed on to the stack.  This is used when you want to push more data on the stack than you can with OP_PUSHDATA1.",
-                        example: "OP_PUSHDATA2 0001 "
+                            "The OP_PUSHDATA2 opcode (0x4d) is followed by 2 bytes indicating the number of upcoming bytes to be pushed onto the stack, followed by the actual data.",
+                        example: "OP_PUSHDATA2 0x0100 [256 bytes of data]"
                     }
                     break
                 case "op_push_data_4":
@@ -59,8 +59,8 @@ const OpcodeDataVisualizer: React.FC = () => {
                         opcode: "OP_PUSHDATA4",
                         description: "Data between 65536-4294967295 bytes",
                         details:
-                            "The OP_PUSHDATA4 opcode (0x4e) works in the same was as OP_PUSHDATA2, but is followed by 4 bytes to indicate the number of upcoming bytes to be pushed on to the stack.  This is used when you want to push more data on the stack than you can with OP_PUSHDATA2.",
-                        example: "OP_PUSHDATA4 00000100 [65536 bytes]"
+                            "The OP_PUSHDATA4 opcode (0x4e) is followed by 4 bytes indicating the number of upcoming bytes to be pushed onto the stack, followed by the actual data.",
+                        example: "OP_PUSHDATA4 0x00010000 [65536 bytes of data]"
                     }
                     break
                 default:
@@ -98,7 +98,7 @@ const OpcodeDataVisualizer: React.FC = () => {
 
     return (
         <div className="flex max-w-4xl flex-col items-center p-4">
-            <p className="mb-0 text-center text-gray-600">
+            <p className="mb-0 text-center text-vscode-text-light dark:text-vscode-text-dark">
                 *Click on the colored rectangles to learn more about each
                 OP_PUSH data type.
             </p>
@@ -131,15 +131,15 @@ const OpCodeInfo: React.FC<OpCodeInfoProps> = ({
 }) => {
     return (
         <motion.div
-            className="max-w-3xl mx-auto bg-gradient-to-br from-white-50 to-gray-100 rounded-xl overflow-hidden shadow-lg border border-gray-200"
+            className="max-w-3xl mx-auto bg-vscode-container-light dark:bg-vscode-container-dark rounded-xl overflow-hidden shadow-lg border border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <div className="bg-gradient-to-r from-gray-400 to-gray-500 px-4 py-2">
-                <span className="text-xl font-bold text-white flex items-center">
-                    <span className="font-mono bg-white text-gray-700 px-2 py-1 rounded mr-2 text-sm">
+            <div className="bg-vscode-titleBar-light dark:bg-vscode-titleBar-dark px-4 py-2">
+                <span className="text-xl font-bold text-vscode-sidebarForeground-light dark:text-vscode-sidebarForeground-dark flex items-center">
+                    <span className="font-mono bg-vscode-file-light dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark px-2 py-1 rounded mr-2 text-sm">
                         {opcode}
                     </span>
                     <span className="text-sm font-normal">{description}</span>
@@ -147,23 +147,27 @@ const OpCodeInfo: React.FC<OpCodeInfoProps> = ({
             </div>
 
             <div className="p-4 space-y-3">
-                <p className="text-gray-700">{details}</p>
+                <p className="text-vscode-text-light dark:text-vscode-text-dark">
+                    {details}
+                </p>
 
-                <div className="bg-white rounded-lg shadow-inner p-3 border border-gray-200">
-                    <h3 className="text-md font-semibold text-gray-700 mb-1">
+                <div className="bg-vscode-file-light dark:bg-vscode-input-dark rounded-lg shadow-inner p-3 border border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark">
+                    <div className="text-md font-semibold text-vscode-text-light dark:text-vscode-text-dark mb-1">
                         Example Usage:
-                    </h3>
-                    <pre className="font-mono text-xs bg-gray-50 p-2 rounded border border-gray-200 text-gray-600">
+                    </div>
+                    <pre className="font-mono text-xs bg-vscode-file-light dark:bg-vscode-input-dark p-2 rounded border border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark text-vscode-text-light dark:text-vscode-text-dark">
                         {example}
                     </pre>
                 </div>
 
                 {funFact && (
-                    <div className="bg-gray-50 border-l-4 border-gray-400 p-2 rounded-r-lg">
-                        <p className="font-bold text-gray-800 text-sm">
+                    <div className="bg-vscode-navButton-light dark:bg-vscode-navButton-dark border-l-4 border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark p-2 rounded-r-lg space-y-1">
+                        <p className="font-bold text-vscode-text-light dark:text-vscode-text-dark text-sm m-0">
                             Fun Fact:
                         </p>
-                        <p className="text-gray-700">{funFact}</p>
+                        <p className="text-vscode-text-light dark:text-vscode-text-dark m-0">
+                            {funFact}
+                        </p>
                     </div>
                 )}
             </div>
