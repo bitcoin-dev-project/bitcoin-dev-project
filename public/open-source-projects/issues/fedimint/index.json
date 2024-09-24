@@ -146,18 +146,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/3937",
-    "publishedAt": "2023-12-13T19:29:33Z",
-    "title": "Database overwriting element when expecting insertion of new entry",
-    "labels": [
-      "good first issue",
-      "lightning",
-      "consensus",
-      "mint"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/4014",
     "publishedAt": "2024-01-05T13:39:25Z",
     "title": "Cancelled LN payment update stream doesn't yield `Cancelled` state",
