@@ -8,6 +8,8 @@ import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoi
 import screenshotBitcoinTranscriptReview from "@/public/images/hero/screenshots/bitcoin-transcript-review.png"
 import screenshotChatBTC from "@/public/images/hero/screenshots/chatBTC.png"
 import screenshotSavingSatoshi from "@/public/images/hero/screenshots/saving_satoshi.png"
+import screenshotDecodingBitcoin from "@/public/images/hero/screenshots/decoding-bitcoin.png"
+import screenshotBTCdemy from "@/public/images/hero/screenshots/btc-demy.png"
 
 import logoBitcoinSearch from "@/public/images/tools/bitcoin-search.jpg"
 import logoBitcoinTLDR from "@/public/images/tools/bitcoin-tldr.jpg"
@@ -15,6 +17,7 @@ import logoBitcoinTranscript from "@/public/images/tools/bitcoin-transcripts.jpg
 import logoTrRev from "@/public/images/tools/bitcoin-transcripts-review.jpg"
 import logoChatBTC from "@/public/images/tools/chat-btc.jpg"
 import logoSavingSatoshi from "@/public/images/tools/saving-satoshi.jpg"
+import logoBTCdemy from "@/public/images/tools/btc-demy.png"
 import discordIcon from "@/public/images/hero/socials/discord.svg"
 import githubIcon from "@/public/images/hero/socials/github.svg"
 import xIcon from "@/public/images/hero/socials/x.svg"
@@ -91,12 +94,20 @@ export const primaryFeatures = [
 
 export const tools: Array<IFeature> = [
     {
-        name: "Good First Issues",
-        description: "Explore vetted Free Open Source Software (FOSS) projects",
+        name: "Decoding Bitcoin",
+        description:
+            "The interactive learning experience to help you become confident in Bitcoin development.",
         summary: "",
-        image: screenshotGoodFirstIssues,
-        icon: logoBitcoinTranscript,
-        link: "https://bitcoindevs.xyz/good-first-issues"
+        image: screenshotDecodingBitcoin,
+        link: "https://bitcoindevs.xyz/topics"
+    },
+    {
+        name: "BTCdemy",
+        description: "The Bitcoiner's Intro to Rust",
+        summary: "",
+        image: screenshotBTCdemy,
+        icon: logoBTCdemy,
+        link: "https://btcdemy.thinkific.com/"
     },
     {
         name: "Saving Satoshi",
@@ -105,6 +116,14 @@ export const tools: Array<IFeature> = [
         image: screenshotSavingSatoshi,
         icon: logoSavingSatoshi,
         link: "https://savingsatoshi.com"
+    },
+    {
+        name: "Good First Issues",
+        description: "Explore vetted Free Open Source Software (FOSS) projects",
+        summary: "",
+        image: screenshotGoodFirstIssues,
+        icon: logoBitcoinTranscript,
+        link: "https://bitcoindevs.xyz/good-first-issues"
     },
     {
         name: "Bitcoin Transcripts Review",
