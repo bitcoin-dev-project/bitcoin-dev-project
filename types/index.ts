@@ -48,6 +48,6 @@ export interface IFeature {
     summary: string
     description: string
     image: ImageProps["src"]
-    icon: ImageProps["src"]
+    icon?: ImageProps["src"]
     link: string
 }
