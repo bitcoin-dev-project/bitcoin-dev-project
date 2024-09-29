@@ -8,11 +8,13 @@ export function TopicHeader({ title, tags, summary }: any) {
     const isBitcoinHistory = pathname === "/topics/bitcoin-history"
 
     return (
-        <header className="mb-9 space-y-1 mt-8">
+        <header className="mb-9 space-y-1 mt-2 sm:mt-8">
             {!isBitcoinHistory && (
-                <header className="pt-6 xl:pb-6">
-                    <div className="space-y-1 text-center">
-                        <h1 className="text-6xl font-bold mb-6">{title}</h1>
+                <header className="pt-2 sm:pt-6 xl:pb-6">
+                    <div className="space-y-1 text-left sm:text-center">
+                        <h1 className="text-6xl font-bold mb-6 break-words">
+                            {title}
+                        </h1>
                     </div>
                 </header>
             )}

@@ -41,7 +41,7 @@ export default function TopicLayout({
 
     const toggleNav = () => setIsNavOpen(!isNavOpen)
 
-    const githubEditUrl = `https://github.com/jrakibi/bitcoin-topics/edit/main/topics/${content.slug}.mdx`
+    const githubEditUrl = `https://github.com/bitcoin-dev-project/bitcoin-topics/edit/main/topics/${content.slug}.mdx`
 
     const EditOnGitHubButton = () => (
         <a

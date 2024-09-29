@@ -41,7 +41,7 @@ export default function TopicBanner({
 
     const toggleNav = () => setIsNavOpen(!isNavOpen)
 
-    const githubEditUrl = `https://github.com/jrakibi/bitcoin-topics/edit/main/topics/${content.slug}.mdx`
+    const githubEditUrl = `https://github.com/bitcoin-dev-project/bitcoin-topics/edit/main/topics/${content.slug}.mdx`
 
     const EditOnGitHubButton = () => (
         <a
@@ -177,18 +177,18 @@ export default function TopicBanner({
                     >
                         {content.bannerImage ? (
                             <>
-                                <div className="relative w-full h-[600px] mb-16">
+                                <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] mb-8 sm:mb-16">
                                     <Image
                                         src={content.bannerImage}
                                         alt="Project image"
                                         layout="fill"
                                         objectFit="cover"
                                     />
-                                    <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/70 to-transparent">
-                                        <h2 className="text-2xl font-semibold text-white mb-2">
+                                    <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-8 bg-gradient-to-t from-black/70 to-transparent">
+                                        <h2 className="text-xl sm:text-2xl font-semibold text-white mb-1 sm:mb-2">
                                             Project
                                         </h2>
-                                        <h1 className="text-4xl font-extralight text-white">
+                                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extralight text-white">
                                             {title}
                                         </h1>
                                     </div>

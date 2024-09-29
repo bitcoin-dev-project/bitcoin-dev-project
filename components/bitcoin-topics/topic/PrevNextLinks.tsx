@@ -26,27 +26,27 @@ function PageLink({
 }) {
     return (
         <div {...props}>
-            <dt className="font-display text-sm font-medium text-gray-900 dark:text-white">
-                {direction === "next" ? "Next" : "Previous"}
-            </dt>
-            <dd className="mt-1">
-                <Link
-                    href={href}
-                    onClick={onClick}
-                    className={clsx(
-                        "flex items-center gap-x-1 text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300",
-                        direction === "previous" && "flex-row-reverse"
-                    )}
-                >
-                    {title}
-                    <ArrowIcon
+            <Link href={href} onClick={onClick} className="block">
+                <dt className="font-display text-sm font-medium text-gray-900 dark:text-white">
+                    {direction === "next" ? "Next" : "Previous"}
+                </dt>
+                <dd className="mt-1">
+                    <span
                         className={clsx(
-                            "h-4 w-4 flex-none fill-current",
-                            direction === "previous" && "-scale-x-100"
+                            "flex items-center gap-x-1 text-base font-semibold text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300",
+                            direction === "previous" && "flex-row-reverse"
                         )}
-                    />
-                </Link>
-            </dd>
+                    >
+                        {title}
+                        <ArrowIcon
+                            className={clsx(
+                                "h-4 w-4 flex-none fill-current",
+                                direction === "previous" && "-scale-x-100"
+                            )}
+                        />
+                    </span>
+                </dd>
+            </Link>
         </div>
     )
 }

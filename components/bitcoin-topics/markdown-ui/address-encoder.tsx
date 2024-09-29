@@ -102,8 +102,8 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                 {/* Main content */}
                 <div className="p-6">
                     <div className="border border-vscode-hover-light dark:border-vscode-hover-dark rounded-lg py-6 px-6 bg-vscode-background-light dark:bg-vscode-background-dark">
-                        <div className="grid grid-cols-12 gap-3 mb-3">
-                            <div className="col-span-2">
+                        <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 mb-3">
+                            <div className="sm:col-span-2">
                                 <label className="block text-xs mb-1 text-vscode-text-light dark:text-vscode-text-dark">
                                     Prefix
                                 </label>
@@ -115,10 +115,10 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                         isPrefixValid
                                             ? "border-vscode-hover-light dark:border-vscode-hover-dark"
                                             : "border-vscode-error-light dark:border-vscode-error-dark"
-                                    } border focus:ring-2 focus:ring-vscode-selection-light dark:focus:ring-vscode-selection-dark focus:border-transparent`}
+                                    } border focus:ring-2 focus:ring-vscode-selection-light dark:focus:ring-vscode-selection-dark focus:border-transparent break-all sm:truncate`}
                                 />
                             </div>
-                            <div className="col-span-8">
+                            <div className="sm:col-span-8">
                                 <label className="block text-xs mb-1 text-vscode-text-light dark:text-vscode-text-dark">
                                     Script Hash
                                 </label>
@@ -129,7 +129,7 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                         onChange={(e) =>
                                             setScriptHash(e.target.value)
                                         }
-                                        className="w-full bg-vscode-input-light dark:bg-vscode-input-dark rounded px-2 py-1 pr-10 text-sm border border-vscode-hover-light dark:border-vscode-hover-dark focus:ring-2 focus:ring-vscode-selection-light dark:focus:ring-vscode-selection-dark focus:border-transparent"
+                                        className="w-full bg-vscode-input-light dark:bg-vscode-input-dark rounded px-2 py-1 pr-10 text-sm border border-vscode-hover-light dark:border-vscode-hover-dark focus:ring-2 focus:ring-vscode-selection-light dark:focus:ring-vscode-selection-dark focus:border-transparent break-all sm:truncate"
                                     />
                                     <AnimatePresence>
                                         {isAnimating && (
@@ -160,7 +160,7 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                     </AnimatePresence>
                                 </div>
                             </div>
-                            <div className="col-span-2">
+                            <div className="sm:col-span-2">
                                 <label className="block text-xs mb-1 text-vscode-text-light dark:text-vscode-text-dark">
                                     CheckSum
                                 </label>
@@ -168,7 +168,7 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                     type="text"
                                     value={checksum}
                                     readOnly
-                                    className="w-full bg-vscode-input-light dark:bg-vscode-input-dark rounded px-2 py-1 text-sm border border-vscode-hover-light dark:border-vscode-hover-dark"
+                                    className="w-full bg-vscode-input-light dark:bg-vscode-input-dark rounded px-2 py-1 text-sm border border-vscode-hover-light dark:border-vscode-hover-dark break-all sm:truncate"
                                 />
                             </div>
                         </div>
@@ -221,11 +221,11 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
 
                         <div className="flex justify-center">
                             <div
-                                className={`w-2/3 bg-vscode-input-light dark:bg-vscode-input-dark rounded-full px-3 py-1 text-sm ${
+                                className={`w-full sm:w-2/3 bg-vscode-input-light dark:bg-vscode-input-dark rounded-full px-3 py-1 text-sm ${
                                     address
                                         ? "border-vscode-success-light dark:border-vscode-success-dark"
                                         : "border-vscode-hover-light dark:border-vscode-hover-dark"
-                                } border text-center`}
+                                } border text-center break-all sm:truncate`}
                             >
                                 {address || "Address ..."}
                             </div>
@@ -233,14 +233,14 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                     </div>
 
                     <div className="flex items-center mt-3">
-                        <label className="mr-2 text-sm text-vscode-text-light dark:text-vscode-text-dark">
+                        <label className="mr-2 text-sm text-vscode-text-light dark:text-vscode-text-dark break-all sm:truncate">
                             Network:
                         </label>
                         <div className="relative">
                             <select
                                 value={network}
                                 onChange={(e) => setNetwork(e.target.value)}
-                                className="bg-vscode-input-light dark:bg-vscode-input-dark rounded px-2 py-1 pr-6 text-sm appearance-none border border-vscode-hover-light dark:border-vscode-hover-dark focus:ring-2 focus:ring-vscode-selection-light dark:focus:ring-vscode-selection-dark focus:border-transparent"
+                                className="bg-vscode-input-light dark:bg-vscode-input-dark rounded px-2 py-1 pr-6 text-sm appearance-none border border-vscode-hover-light dark:border-vscode-hover-dark focus:ring-2 focus:ring-vscode-selection-light dark:focus:ring-vscode-selection-dark focus:border-transparent break-all sm:truncate"
                             >
                                 <option value="mainnet">Mainnet</option>
                                 <option value="testnet">Testnet</option>
