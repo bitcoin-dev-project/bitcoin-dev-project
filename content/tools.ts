@@ -66,6 +66,13 @@ export const tools = {
                     link: "https://savingsatoshi.com"
                 },
                 {
+                    description: "The Bitcoiner's Intro to Rust",
+                    image: "/images/tools/btc-demy.png",
+                    title: "BTC demy",
+                    subTitle: "",
+                    link: "https://btcdemy.thinkific.com/"
+                },
+                {
                     title: "Polar",
                     subTitle: "",
                     description:
