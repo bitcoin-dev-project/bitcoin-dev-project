@@ -103,11 +103,50 @@ export default function ScriptStackVisualizer({
         [config, cumulativeDurations]
     )
 
-    const handlePlay = useCallback(() => {
-        if (!isPlaying && currentStep >= 0) {
-            playStepAnimation(currentStep)
+    const playRemainingSteps = useCallback(() => {
+        if (!config || !playerRef.current) return
+
+        const playNextStep = (step: number) => {
+            if (step >= config.steps.length) {
+                setIsPlaying(false)
+                setCurrentStep(config.steps.length - 1)
+                return
+            }
+
+            const startTime = step > 0 ? cumulativeDurations[step - 1] : 0
+            const endTime = cumulativeDurations[step]
+            playerRef.current!.seekTo(startTime)
+            playerRef.current!.play()
+            setCurrentStep(step)
+
+            const animationDuration = endTime - startTime
+            animationTimeoutRef.current = setTimeout(() => {
+                playNextStep(step + 1)
+            }, animationDuration)
         }
-    }, [isPlaying, currentStep, playStepAnimation])
+
+        setIsPlaying(true)
+        playNextStep(0) // Always start from the first step
+    }, [config, cumulativeDurations])
+
+    const handlePlay = useCallback(() => {
+        if (!isPlaying) {
+            if (currentStep >= (config?.steps.length ?? 0) - 1) {
+                // If we're at the end, reset everything and start from the beginning
+                setCurrentStep(0)
+                if (playerRef.current) {
+                    playerRef.current.seekTo(0)
+                }
+                // Reset any marked steps or progress
+                // (You may need to add state variables and reset them here)
+                setIsPlaying(true)
+                playRemainingSteps() // Change this line
+            } else {
+                // If not at the end, continue from current step
+                playRemainingSteps()
+            }
+        }
+    }, [isPlaying, currentStep, config?.steps.length, playRemainingSteps])
 
     const handlePause = useCallback(() => {
         if (playerRef.current) {

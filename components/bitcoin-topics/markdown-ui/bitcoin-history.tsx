@@ -135,7 +135,7 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
-        rootMargin: "-50px 0px"
+        rootMargin: "-20px 0px"
     })
 
     useEffect(() => {
@@ -146,26 +146,26 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
     }, [controls, imageControls, inView])
 
     const containerVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.3,
-                ease: "easeOut",
-                when: "beforeChildren",
-                staggerChildren: 0.3
-            }
-        }
-    }
-
-    const childVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.5,
+                duration: 0.2,
+                ease: "easeOut",
+                when: "beforeChildren",
+                staggerChildren: 0.1
+            }
+        }
+    }
+
+    const childVariants = {
+        hidden: { opacity: 0, y: 10 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.3,
                 ease: "easeOut"
             }
         }

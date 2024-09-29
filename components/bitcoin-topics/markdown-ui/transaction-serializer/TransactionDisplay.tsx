@@ -216,18 +216,18 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
     return (
         <div className="container mx-auto py-1">
             <div className="rounded-lg overflow-hidden bg-[#f3f3f3] dark:bg-[#252526] shadow-md">
-                {/* Header with updated background colors and reduced height */}
+                {/* Header with updated layout for better spacing */}
                 <div className="bg-[#e1e1e1] dark:bg-[#3c3c3c] py-2 px-4">
-                    <div className="flex items-center justify-between">
-                        <div className="flex-1">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div className="flex-1 min-w-0">
                             {txTitle && (
-                                <span className="text-sm font-semibold text-vscode-text-light dark:text-vscode-text-dark truncate">
+                                <span className="text-sm font-semibold text-vscode-text-light dark:text-vscode-text-dark block truncate">
                                     {txTitle}
                                 </span>
                             )}
                         </div>
                         {txId && (
-                            <div className="flex-shrink-0 text-right">
+                            <div className="flex-shrink-0">
                                 <a
                                     href={`https://mempool.space/tx/${txId}`}
                                     target="_blank"

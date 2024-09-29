@@ -110,81 +110,18 @@ export default function About() {
                                         {" "}
                                         long history
                                     </a>{" "}
-                                    of providing technical education through its{" "}
+                                    of providing technical education through its in-person residencies
+                                    and{" "}
                                     <a
                                         className="text-orange"
-                                        href="https://residency.chaincode.com"
+                                        href="https://learning.chaincode.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        in-person residencies
-                                    </a>{" "}
-                                    and started offering online programs via the{" "}
-                                    <a
-                                        className="text-orange"
-                                        href="https://chaincode.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        seminars
-                                    </a>{" "}
-                                    in 2020.
+                                        online programs
+                                    </a>
+                                    .
                                 </p>
-                                <ul>
-                                    <li>
-                                        Design by{" "}
-                                        <a
-                                            className="text-orange"
-                                            href="https://twitter.com/MogashniNaidoo"
-                                            target="_blank"
-                                            rel="noopener"
-                                        >
-                                            Mogashni Naidoo
-                                        </a>{" "}
-                                        and{" "}
-                                        <a
-                                            className="text-orange"
-                                            href="https://twitter.com/StephenDeLorme"
-                                            target="_blank"
-                                            rel="noopener"
-                                        >
-                                            Stephen DeLorme
-                                        </a>
-                                    </li>
-                                    <li>
-                                        Product by{" "}
-                                        <a
-                                            className="text-orange"
-                                            href="https://www.artassoiants.com"
-                                            target="_blank"
-                                            rel="noopener"
-                                        >
-                                            Art Assoiants
-                                        </a>
-                                    </li>
-                                    <li>
-                                        Dev by{" "}
-                                        <a
-                                            className="text-orange"
-                                            href="https://twitter.com/balogunofafrica"
-                                            target="_blank"
-                                            rel="noopener"
-                                        >
-                                            Balogun
-                                        </a>
-                                    </li>
-                                    <li>
-                                        Ideas by{" "}
-                                        <a
-                                            className="text-orange"
-                                            href="https://adamjonas.com"
-                                            target="_blank"
-                                            rel="noopener"
-                                        >
-                                            Adam Jonas
-                                        </a>
-                                    </li>
-                                </ul>
                             </>
                         }
                         title="Who"

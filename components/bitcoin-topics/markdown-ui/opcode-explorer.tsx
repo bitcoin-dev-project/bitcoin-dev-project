@@ -292,7 +292,7 @@ const OpCodeExplorer = () => {
                             </span>{" "}
                             ({currentOpCode.hex})
                         </div>
-                        <div className="text-base sm:text-lg mb-6 text-center text-vscode-text-light dark:text-vscode-text-dark">
+                        <div className="text-base sm:text-lg mb-6 text-vscode-text-light dark:text-vscode-text-dark max-w-2xl mx-auto">
                             {currentOpCode.description}
                         </div>
 
@@ -303,7 +303,7 @@ const OpCodeExplorer = () => {
                                 className={`${isExpandedView ? "w-full mb-6" : "w-full lg:w-3/5 lg:pr-6"}`}
                             >
                                 <div
-                                    className={`bg-vscode-container-light dark:bg-vscode-container-dark rounded-lg mb-4 ${isExpandedView ? "h-80 sm:h-96" : "h-64 sm:h-80"}`}
+                                    className={`bg-vscode-container-light dark:bg-vscode-container-dark rounded-lg mb-4`}
                                 >
                                     <object
                                         ref={svgRef}

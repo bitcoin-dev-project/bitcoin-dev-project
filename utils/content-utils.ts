@@ -90,7 +90,7 @@ function findNextTopic(
                 return parentSiblings[parentIndex + 1]
             } else {
                 // If the parent is the last in its level, continue up the tree
-                return findNextTopic(parentNode, parentSiblings)
+                return null
             }
         }
     }

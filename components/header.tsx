@@ -269,38 +269,43 @@ function PopoverNavigation({
                         {navItemList.map((item) => (
                             <div
                                 key={item.name}
-                                className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-100 dark:hover:bg-black-900 flex gap-4"
+                                className={`group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-100 dark:hover:bg-black-900 ${
+                                    item.released
+                                        ? "cursor-pointer"
+                                        : "pointer-events-none opacity-50"
+                                }`}
                             >
-                                <div className="flex h-11 w-11 min-h-11 min-w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange group-hover:bg-white dark:group-hover:bg-black-900">
-                                    <item.icon
-                                        className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-500"
-                                        aria-hidden="true"
-                                    />
-                                </div>
-
-                                <div
-                                    className={
-                                        item.released
-                                            ? ""
-                                            : "pointer-events-none opacity-50"
-                                    }
-                                >
-                                    {item.released ? (
-                                        <Link
-                                            href={item.href}
-                                            onClick={handleLinkClick}
-                                        >
-                                            <div className="block font-semibold text-gray-800 dark:text-gray-100 relative">
+                                {item.released ? (
+                                    <Link
+                                        href={item.href}
+                                        onClick={handleLinkClick}
+                                        className="flex gap-4"
+                                    >
+                                        <div className="flex h-11 w-11 min-h-11 min-w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange group-hover:bg-white dark:group-hover:bg-black-900">
+                                            <item.icon
+                                                className="h-6 w-6 text-gray-600 dark:text-black-800 group-hover:text-orange-500"
+                                                aria-hidden="true"
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="block font-semibold text-gray-800 dark:text-gray-100">
                                                 {item.name}
-                                                <span className="absolute inset-0" />
                                             </div>
                                             <p className="mt-1 text-gray-600 dark:text-gray-400">
                                                 {item.description}
                                             </p>
-                                        </Link>
-                                    ) : (
+                                        </div>
+                                    </Link>
+                                ) : (
+                                    <div className="flex gap-4">
+                                        <div className="flex h-11 w-11 min-h-11 min-w-11 items-center justify-center rounded-lg bg-gray-100 dark:bg-orange">
+                                            <item.icon
+                                                className="h-6 w-6 text-gray-600 dark:text-black-800"
+                                                aria-hidden="true"
+                                            />
+                                        </div>
                                         <div>
-                                            <div className="block font-semibold text-gray-800 dark:text-gray-100 relative">
+                                            <div className="block font-semibold text-gray-800 dark:text-gray-100">
                                                 {item.name}
                                                 {navType === "LEARN" && (
                                                     <span className="ml-2 inline-flex items-center rounded-full bg-yellow-50 px-2 py-1 text-xs font-normal text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
@@ -312,8 +317,8 @@ function PopoverNavigation({
                                                 {item.description}
                                             </p>
                                         </div>
-                                    )}
-                                </div>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
