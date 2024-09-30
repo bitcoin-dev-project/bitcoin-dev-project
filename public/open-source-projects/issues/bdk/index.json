@@ -185,17 +185,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/791",
-    "publishedAt": "2022-10-31T13:59:06Z",
-    "title": "Substitute `enable_rbf` in `TxBuilder` with `disable_rbf`",
-    "labels": [
-      "good first issue",
-      "module-wallet",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/826",
     "publishedAt": "2022-12-24T17:25:02Z",
     "title": "There's no way to set connect timeout for the Esplora backend client",
