@@ -145,14 +145,5 @@
       "1.0"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
-  },
-  {
-    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/3327",
-    "publishedAt": "2024-09-08T08:57:13Z",
-    "title": "Feature Request: Provide xpriv.to_xpub(&secp) API ",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]

@@ -409,5 +409,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1633",
+    "publishedAt": "2024-09-30T12:37:15Z",
+    "title": "Is it supposed that BDK doesn't remember txs after signing and only adds them after seeing them in the mempool?",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
