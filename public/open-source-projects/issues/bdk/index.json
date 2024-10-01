@@ -273,17 +273,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1266",
-    "publishedAt": "2024-01-11T08:20:27Z",
-    "title": "An alternative approach to `AnchorFromBlockPosition`.",
-    "labels": [
-      "good first issue",
-      "discussion",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1342",
     "publishedAt": "2024-02-13T01:06:24Z",
     "title": "allow_shrinking not working as expected",
@@ -384,6 +373,15 @@
     "url": "https://github.com/bitcoindevkit/bdk/issues/1630",
     "publishedAt": "2024-09-28T07:47:57Z",
     "title": "After the transaction is removed, the re-synchronization is still on the transaction list.",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1634",
+    "publishedAt": "2024-10-01T15:19:24Z",
+    "title": "`example_bitcoind_rpc_polling` sync command ends with stack overflow",
     "labels": [
       "bug"
     ],
