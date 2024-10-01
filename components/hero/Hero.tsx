@@ -17,7 +17,7 @@ export function Hero() {
                 Study and contribute to bitcoin open-source development
             </p>
             <div className="mt-10 flex justify-center gap-x-6">
-                <Link href="/topics">
+                <Link href="/learn">
                     <button
                         type="button"
                         className="py-1 pl-4 pr-2 duration-200 border-orange-500 bg-orange-500 hover:text-black h-12 hover:bg-white text-white border-[1.5px] hover:border-orange-500 dark:hover:border-white rounded-full inline-flex items-center gap-4 md:gap-12"

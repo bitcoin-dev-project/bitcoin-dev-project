@@ -32,7 +32,7 @@ export default function TopicLayout({
     children
 }: LayoutProps) {
     const pathname: string | null = usePathname()
-    const isHomePage: boolean = pathname === "/topics"
+    const isHomePage: boolean = pathname === "/learn"
     const [isNavOpen, setIsNavOpen] = useState(false)
     const [currentPath, setCurrentPath] = useState<string[]>([])
     const [isScrolled, setIsScrolled] = useState(false)
@@ -41,7 +41,7 @@ export default function TopicLayout({
 
     const toggleNav = () => setIsNavOpen(!isNavOpen)
 
-    const githubEditUrl = `https://github.com/bitcoin-dev-project/bitcoin-topics/edit/main/topics/${content.slug}.mdx`
+    const githubEditUrl = `https://github.com/bitcoin-dev-project/bitcoin-topics/edit/main/learn/${content.slug}.mdx`
 
     const EditOnGitHubButton = () => (
         <a
@@ -83,7 +83,7 @@ export default function TopicLayout({
     }, [])
 
     const isInsideTopic =
-        pathname && pathname.startsWith("/topics/") && pathname !== "/topics"
+        pathname && pathname.startsWith("/learn/") && pathname !== "/learn"
 
     return (
         <div className="flex w-full flex-col bg-vscode-background-light dark:bg-vscode-background-dark">

@@ -112,7 +112,7 @@ const ContinueReadingComp: React.FC<{
                         <h1 className="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">
                             Welcome back to{" "}
                             <span className="text-orange-500">
-                                Bitcoin Topics
+                                Decoding Bitcoin
                             </span>
                         </h1>
                         <p className="text-xl text-gray-800 dark:text-gray-300">
@@ -127,7 +127,7 @@ const ContinueReadingComp: React.FC<{
                                 Resume Reading
                             </Button>
                             <Button
-                                href="/topics/bitcoin-history"
+                                href="/learn/bitcoin-history"
                                 className="flex-1 bg-transparent hover:bg-vscode-header-background-light  dark:hover:bg-vscode-hover-dark text-gray-800 dark:text-gray-200 font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out text-lg flex items-center justify-center border border-gray-300 dark:border-gray-600"
                             >
                                 <HistoryIcon className="mr-2 h-5 w-5 text-gray-900 dark:text-gray-200" />
@@ -265,7 +265,7 @@ export function Hero() {
     return (
         <>
             {lastVisitedTopic &&
-            lastVisitedTopic !== "/topics" &&
+            lastVisitedTopic !== "/learn" &&
             lastVisitedTopicTitle ? (
                 <ContinueReadingComp
                     lastVisitedTopicTitle={lastVisitedTopicTitle}
@@ -288,7 +288,7 @@ export function Hero() {
                                 />
                                 <div className="relative">
                                     <p className="inline bg-gradient-to-r from-orange-600 via-orange-400 to-orange-600 dark:from-orange-200 dark:via-orange-400 dark:to-orange-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-                                        Bitcoin Topics
+                                        Decoding Bitcoin
                                     </p>
                                     <p className="mt-3 text-2xl tracking-tight text-gray-400">
                                         The interactive learning experience
@@ -296,7 +296,7 @@ export function Hero() {
                                         Bitcoin development.
                                     </p>
                                     <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                                        <Button href="/topics/bitcoin-history">
+                                        <Button href="/learn/bitcoin-history">
                                             Get started
                                         </Button>
                                         <Button

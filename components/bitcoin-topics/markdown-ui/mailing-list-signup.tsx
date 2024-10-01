@@ -77,7 +77,7 @@ const MailingListSignup: React.FC = () => {
                 </motion.div>
                 <div>
                     <h3 className="text-lg font-bold">
-                        Bitcoin Topics Newsletter
+                        Decoding Bitcoin Newsletter
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm">
                         Your weekly dose of Bitcoin knowledge

@@ -212,7 +212,7 @@ export function Navigation({
         <nav className={clsx("text-md lg:text-sm font-medium", className)}>
             <Link
                 className="mb-6 flex flex-row items-center space-x-3 hover:no-underline"
-                href="/topics"
+                href="/learn"
             >
                 <div className="h-11 w-1 rounded-lg bg-[#e77429]"></div>
                 <div>
