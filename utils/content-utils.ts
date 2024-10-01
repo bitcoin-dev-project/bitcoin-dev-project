@@ -150,13 +150,13 @@ export function getTopicData(slug: string): {
 
     const prev = nextTopic
         ? {
-              path: `learn/${nextTopic.topic.slug}`,
+              path: `decoding/${nextTopic.topic.slug}`,
               title: nextTopic.topic.title
           }
         : undefined
     const next = prevTopic
         ? {
-              path: `learn/${prevTopic.topic.slug}`,
+              path: `decoding/${prevTopic.topic.slug}`,
               title: prevTopic.topic.title
           }
         : undefined

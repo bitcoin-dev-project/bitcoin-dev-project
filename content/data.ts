@@ -82,7 +82,7 @@ export const learnSection = createSection({
 export const links = [
     {
         text: "Topics",
-        linkTo: "/learn"
+        linkTo: "/decoding"
     },
     {
         text: "Career",

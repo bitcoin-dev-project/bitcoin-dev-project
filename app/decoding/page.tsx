@@ -21,7 +21,7 @@ export const metadata = genPageMetadata({
             }
         ],
         title: "Decoding Bitcoin",
-        url: "https://bitcoindevs.xyz/learn",
+        url: "https://bitcoindevs.xyz/decoding",
         type: "website",
         description:
             "Simplifying bitcoin tech to help you learn as efficiently as possible"

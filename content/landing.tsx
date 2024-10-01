@@ -99,7 +99,7 @@ export const tools: Array<IFeature> = [
             "The interactive learning experience to help you become confident in Bitcoin development.",
         summary: "",
         image: screenshotDecodingBitcoin,
-        link: "https://bitcoindevs.xyz/learn"
+        link: "https://bitcoindevs.xyz/decoding"
     },
     {
         name: "BTCdemy",
@@ -270,7 +270,7 @@ export const products = [
         name: "Decoding Bitcoin",
         description:
             "Learning bitcoin is hard, but we make it easy for you to get started.",
-        href: "/learn",
+        href: "/decoding",
         icon: ListBulletIcon,
         released: true
     }

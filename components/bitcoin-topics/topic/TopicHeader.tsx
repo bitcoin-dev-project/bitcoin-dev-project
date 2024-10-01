@@ -5,7 +5,7 @@ import Summary from "./summary"
 
 export function TopicHeader({ title, tags, summary }: any) {
     const pathname = usePathname()
-    const isBitcoinHistory = pathname === "/learn/bitcoin-history"
+    const isBitcoinHistory = pathname === "/decoding/bitcoin-history"
 
     return (
         <header className="mb-9 space-y-1 mt-2 sm:mt-8">

@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const routes = [
         "",
-        "learn",
+        "decoding",
         "career",
         "good-first-issues",
         "projects",

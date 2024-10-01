@@ -127,7 +127,7 @@ const ContinueReadingComp: React.FC<{
                                 Resume Reading
                             </Button>
                             <Button
-                                href="/learn/bitcoin-history"
+                                href="/decoding/bitcoin-history"
                                 className="flex-1 bg-transparent hover:bg-vscode-header-background-light  dark:hover:bg-vscode-hover-dark text-gray-800 dark:text-gray-200 font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out text-lg flex items-center justify-center border border-gray-300 dark:border-gray-600"
                             >
                                 <HistoryIcon className="mr-2 h-5 w-5 text-gray-900 dark:text-gray-200" />
@@ -265,7 +265,7 @@ export function Hero() {
     return (
         <>
             {lastVisitedTopic &&
-            lastVisitedTopic !== "/learn" &&
+            lastVisitedTopic !== "/decoding" &&
             lastVisitedTopicTitle ? (
                 <ContinueReadingComp
                     lastVisitedTopicTitle={lastVisitedTopicTitle}
@@ -296,7 +296,7 @@ export function Hero() {
                                         Bitcoin development.
                                     </p>
                                     <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                                        <Button href="/learn/bitcoin-history">
+                                        <Button href="/decoding/bitcoin-history">
                                             Get started
                                         </Button>
                                         <Button
