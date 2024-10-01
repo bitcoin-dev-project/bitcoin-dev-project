@@ -251,16 +251,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1120",
-    "publishedAt": "2023-09-12T14:34:01Z",
-    "title": "`wallet_esplora_async` returns error 429 while scanning",
-    "labels": [
-      "bug",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1134",
     "publishedAt": "2023-09-28T06:58:14Z",
     "title": "BIP 326 Anti Fee Sniping",
