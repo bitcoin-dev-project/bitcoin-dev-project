@@ -580,5 +580,14 @@
       "Tests"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/31021",
+    "publishedAt": "2024-10-02T17:30:09Z",
+    "title": "bitcoin.service issue for a noob like me",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
