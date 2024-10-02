@@ -69,9 +69,9 @@ export const learningPath = [
 
 export const primaryFeatures = [
     {
-        title: "Bitcoin Topics",
+        title: "Decoding Bitcoin",
         description:
-            "Breaking complex Bitcoin topics in a simple way. A resource rich with Visuals and animations to simplify complex technical Bitcoin concepts",
+            "Breaking complex Decoding Bitcoin in a simple way. A resource rich with Visuals and animations to simplify complex technical Bitcoin concepts",
         image: screenshotTopics,
         released: false,
         checks: [
@@ -99,7 +99,7 @@ export const tools: Array<IFeature> = [
             "The interactive learning experience to help you become confident in Bitcoin development.",
         summary: "",
         image: screenshotDecodingBitcoin,
-        link: "https://bitcoindevs.xyz/topics"
+        link: "https://bitcoindevs.xyz/decoding"
     },
     {
         name: "BTCdemy",
@@ -267,10 +267,10 @@ export const products = [
         released: true
     },
     {
-        name: "Bitcoin Topics",
+        name: "Decoding Bitcoin",
         description:
             "Learning bitcoin is hard, but we make it easy for you to get started.",
-        href: "/topics",
+        href: "/decoding",
         icon: ListBulletIcon,
         released: true
     }

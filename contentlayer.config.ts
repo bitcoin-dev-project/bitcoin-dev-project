@@ -47,7 +47,7 @@ const computedFields: ComputedFields = {
 
 export const Topic = defineDocumentType(() => ({
     name: "Topic",
-    filePathPattern: "topics/**/*.mdx",
+    filePathPattern: "decoding/**/*.mdx",
     contentType: "mdx",
     fields: {
         title: { type: "string", required: true },
@@ -88,7 +88,7 @@ export const Topic = defineDocumentType(() => ({
                 dateModified: doc.lastmod || doc.date,
                 description: doc.summary,
                 image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
-                url: `${siteMetadata.siteUrl}/topics/${doc._raw.flattenedPath}`
+                url: `${siteMetadata.siteUrl}/decoding/${doc._raw.flattenedPath}`
             })
         },
         childTopics: {
@@ -146,7 +146,7 @@ function createTagCount(allTopics: any[]) {
 
 export default makeSource({
     contentDirPath: "public/bitcoin-topics",
-    contentDirInclude: ["topics", "authors"],
+    contentDirInclude: ["decoding", "authors"],
     documentTypes: [Topic, Authors],
     disableImportAliasWarning: true,
     mdx: {

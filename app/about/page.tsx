@@ -110,8 +110,8 @@ export default function About() {
                                         {" "}
                                         long history
                                     </a>{" "}
-                                    of providing technical education through its in-person residencies
-                                    and{" "}
+                                    of providing technical education through its
+                                    in-person residencies and{" "}
                                     <a
                                         className="text-orange"
                                         href="https://learning.chaincode.com"

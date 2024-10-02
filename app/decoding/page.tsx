@@ -8,7 +8,7 @@ import { genPageMetadata } from "../seo"
 import { getTopicData } from "@/utils/content-utils"
 
 export const metadata = genPageMetadata({
-    title: "Bitcoin Topics",
+    title: "Decoding Bitcoin",
     keywords:
         "bitcoin, bitcoin topics, bitcoin privacy, bitcoin grant, open source, tools, bitcoin resources, bitcoin tools, career, good first issues, bitcoin development, bitcoin topics",
     description:
@@ -20,8 +20,8 @@ export const metadata = genPageMetadata({
                 alt: "Bitcoin career"
             }
         ],
-        title: "Bitcoin Topics",
-        url: "https://bitcoindevs.xyz/topics",
+        title: "Decoding Bitcoin",
+        url: "https://bitcoindevs.xyz/decoding",
         type: "website",
         description:
             "Simplifying bitcoin tech to help you learn as efficiently as possible"
@@ -29,7 +29,7 @@ export const metadata = genPageMetadata({
     twitter: {
         images: ["https://bitcoindevs.xyz/images/pages-thumbnails/topics.png"],
         card: "summary_large_image",
-        title: "Bitcoin Topics",
+        title: "Decoding Bitcoin",
         creator: "@Bitcoin_Devs",
         description:
             "Simplifying bitcoin tech to help you learn as efficiently as possible"
