@@ -127,7 +127,7 @@ const ContinueReadingComp: React.FC<{
                                 Resume Reading
                             </Button>
                             <Button
-                                href="/decoding/bitcoin-history"
+                                href="/decoding/1-welcome"
                                 className="flex-1 bg-transparent hover:bg-vscode-header-background-light  dark:hover:bg-vscode-hover-dark text-gray-800 dark:text-gray-200 font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out text-lg flex items-center justify-center border border-gray-300 dark:border-gray-600"
                             >
                                 <HistoryIcon className="mr-2 h-5 w-5 text-gray-900 dark:text-gray-200" />
