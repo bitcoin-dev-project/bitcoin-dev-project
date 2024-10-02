@@ -296,7 +296,7 @@ export function Hero() {
                                         Bitcoin development.
                                     </p>
                                     <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                                        <Button href="/decoding/bitcoin-history">
+                                        <Button href="/decoding/1-welcome">
                                             Get started
                                         </Button>
                                         <Button
