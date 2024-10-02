@@ -79,7 +79,7 @@ const StackSimulator = ({ showOperations }: StackSimulatorProps) => {
 
                 {/* Main content */}
                 <div className="p-4 sm:p-6">
-                    <div className="flex space-x-2 mb-4">
+                    <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 mb-4">
                         <input
                             type="text"
                             value={input}
@@ -87,24 +87,30 @@ const StackSimulator = ({ showOperations }: StackSimulatorProps) => {
                             placeholder="Enter value or opcode"
                             className="flex-grow px-3 py-2 border border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark rounded-md bg-vscode-input-light dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:outline-none focus:ring-2 focus:ring-orange-500"
                         />
-                        <motion.button
-                            onClick={push}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
-                        >
-                            <ArrowDownCircle className="inline-block w-5 h-5 mr-1" />
-                            Push
-                        </motion.button>
-                        <motion.button
-                            onClick={pop}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-4 py-2 bg-vscode-file-light dark:bg-vscode-file-dark text-vscode-text-light dark:text-vscode-text-dark rounded-md hover:bg-vscode-hover-light dark:hover:bg-vscode-hover-dark focus:outline-none focus:ring-2 focus:ring-vscode-hover-light dark:focus:ring-vscode-hover-dark focus:ring-opacity-50"
-                        >
-                            <ArrowUpCircle className="inline-block w-5 h-5 mr-1" />
-                            Pop
-                        </motion.button>
+                        <div className="flex space-x-2">
+                            <motion.button
+                                onClick={push}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="flex-1 sm:flex-none px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                            >
+                                <div className="flex items-center justify-center">
+                                    <ArrowDownCircle className="w-5 h-5 mr-2" />
+                                    <span>Push</span>
+                                </div>
+                            </motion.button>
+                            <motion.button
+                                onClick={pop}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="flex-1 sm:flex-none px-4 py-2 bg-vscode-file-light dark:bg-vscode-file-dark text-vscode-text-light dark:text-vscode-text-dark rounded-md hover:bg-vscode-hover-light dark:hover:bg-vscode-hover-dark focus:outline-none focus:ring-2 focus:ring-vscode-hover-light dark:focus:ring-vscode-hover-dark focus:ring-opacity-50"
+                            >
+                                <div className="flex items-center justify-center">
+                                    <ArrowUpCircle className="w-5 h-5 mr-2" />
+                                    <span>Pop</span>
+                                </div>
+                            </motion.button>
+                        </div>
                     </div>
 
                     {showOperations && (

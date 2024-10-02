@@ -16,14 +16,16 @@ export function Hero() {
             <p className="mx-auto mt-6 max-w-2xl text-2xl max-sm:text-base tracking-tight text-black-700 dark:text-black-300">
                 Study and contribute to bitcoin open-source development
             </p>
-            <div className="mt-10 flex justify-center gap-x-6">
-                <Link href="/decoding">
+            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-y-4 sm:gap-x-6">
+                <Link href="/decoding" className="w-full sm:w-auto">
                     <button
                         type="button"
-                        className="py-1 pl-4 pr-2 duration-200 border-orange-500 bg-orange-500 hover:text-black h-12 hover:bg-white text-white border-[1.5px] hover:border-orange-500 dark:hover:border-white rounded-full inline-flex items-center gap-4 md:gap-12"
+                        className="w-full sm:w-auto md:pl-7 py-1 px-4 sm:pl-4 sm:pr-2 duration-200 border-orange-500 bg-orange-500 hover:text-black h-12 hover:bg-white text-white border-[1.5px] hover:border-orange-500 dark:hover:border-white rounded-full flex items-center justify-between sm:justify-start sm:gap-4 md:gap-16"
                     >
-                        <p className="w-full">Learn Bitcoin</p>
-                        <div className="bg-black h-8 w-12 md:w-14 text-white inline-flex items-center justify-center rounded-full">
+                        <p className="flex-grow text-center sm:text-left sm:flex-grow-0">
+                            Learn Bitcoin
+                        </p>
+                        <div className="bg-black h-8 w-8 sm:w-12 md:w-8 text-white flex items-center justify-center rounded-full flex-shrink-0">
                             <span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -39,10 +41,10 @@ export function Hero() {
                         </div>
                     </button>
                 </Link>
-                <Link href="/good-first-issues">
+                <Link href="/good-first-issues" className="w-full sm:w-auto">
                     <button
                         type="button"
-                        className="py-1 pl-4 pr-4 border-orange-500 bg-transparent text-orange-500 hover:bg-orange-500 hover:text-white h-12 border rounded-full inline-flex items-center justify-center transition-colors duration-200"
+                        className="w-full sm:w-auto py-1 px-4 border-orange-500 bg-transparent text-orange-500 hover:bg-orange-500 hover:text-white h-12 border rounded-full flex items-center justify-center transition-colors duration-200"
                     >
                         Contribute to Open Source
                     </button>
