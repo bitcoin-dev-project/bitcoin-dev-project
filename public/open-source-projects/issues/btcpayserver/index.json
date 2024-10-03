@@ -151,15 +151,5 @@
       "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6242",
-    "publishedAt": "2024-09-24T05:23:31Z",
-    "title": "Add updated image upload support on Crowdfund plugin",
-    "labels": [
-      "Enhancement",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
