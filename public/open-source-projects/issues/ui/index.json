@@ -74,15 +74,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/ui/issues/534",
-    "publishedAt": "2024-09-23T19:59:49Z",
-    "title": "NixOS Guardian-UI package broken for v0.4.2",
-    "labels": [
-      "bug",
-      "infra"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
