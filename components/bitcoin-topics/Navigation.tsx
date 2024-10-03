@@ -385,7 +385,7 @@ const EmailSubscription = () => {
     return (
         <div className="my-6 border-t border-gray-200 mt-12 pt-4 dark:border-gray-800">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                Stay Updated
+                Bitcoin Only Newsletter
             </h3>
             <form onSubmit={handleSubmit} className="flex items-center">
                 <input
