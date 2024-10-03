@@ -142,14 +142,5 @@
       "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6236",
-    "publishedAt": "2024-09-20T20:27:37Z",
-    "title": "Problems with invitation and accepting invitation to the server by user",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
