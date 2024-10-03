@@ -212,7 +212,7 @@ export function Navigation({
         <nav className={clsx("text-md lg:text-sm font-medium", className)}>
             <Link
                 className="mb-6 flex flex-row items-center space-x-3 hover:no-underline"
-                href="/topics"
+                href="/decoding"
             >
                 <div className="h-11 w-1 rounded-lg bg-[#e77429]"></div>
                 <div>
@@ -385,7 +385,7 @@ const EmailSubscription = () => {
     return (
         <div className="my-6 border-t border-gray-200 mt-12 pt-4 dark:border-gray-800">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                Stay Updated
+                Bitcoin Only Newsletter
             </h3>
             <form onSubmit={handleSubmit} className="flex items-center">
                 <input
