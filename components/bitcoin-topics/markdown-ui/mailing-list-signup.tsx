@@ -51,9 +51,9 @@ const MailingListSignup: React.FC = () => {
     }
 
     const benefits = [
-        "Weekly Bitcoin insights",
-        "Exclusive learning resources",
-        "Community discussions"
+        "Weekly bitcoin updates",
+        "No spam, bitcoin only",
+        "New illustrations every Saturday (coming soon)"
     ]
 
     return (
@@ -76,9 +76,7 @@ const MailingListSignup: React.FC = () => {
                     />
                 </motion.div>
                 <div>
-                    <h3 className="text-lg font-bold">
-                        Decoding Bitcoin Newsletter
-                    </h3>
+                    <h3 className="text-lg font-bold">TLDR Newsletter</h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm">
                         Your weekly dose of Bitcoin knowledge
                     </p>
