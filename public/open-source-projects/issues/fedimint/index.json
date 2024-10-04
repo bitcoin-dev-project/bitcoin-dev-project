@@ -30,17 +30,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/1397",
-    "publishedAt": "2023-01-18T21:19:03Z",
-    "title": "Contract offers malleability",
-    "labels": [
-      "bug",
-      "lightning",
-      "crypto"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/1728",
     "publishedAt": "2023-02-21T16:57:36Z",
     "title": "Tests shouldn't be included in code coverage stats",
