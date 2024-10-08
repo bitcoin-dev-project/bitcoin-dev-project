@@ -1,15 +1,5 @@
 [
   {
-    "url": "https://github.com/fedimint/fedimint/issues/1178",
-    "publishedAt": "2022-12-30T21:11:20Z",
-    "title": "Gateway CLI should be able to spend / reissue ecash",
-    "labels": [
-      "good first issue",
-      "lightning"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/1245",
     "publishedAt": "2023-01-08T22:37:47Z",
     "title": "Upstream HtlcAccepted, Onion, and Htlc structs to cln_plugin",
@@ -125,45 +115,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/4014",
-    "publishedAt": "2024-01-05T13:39:25Z",
-    "title": "Cancelled LN payment update stream doesn't yield `Cancelled` state",
-    "labels": [
-      "bug",
-      "lightning",
-      "client",
-      "backport releases/v0.2"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4021",
-    "publishedAt": "2024-01-09T02:01:14Z",
-    "title": "LN: can reach pending refund state if payment succeeded",
-    "labels": [
-      "bug",
-      "lightning",
-      "client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/4124",
     "publishedAt": "2024-01-24T17:50:39Z",
     "title": "setup restart when some peers have consensus running",
     "labels": [
       "help wanted",
       "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4365",
-    "publishedAt": "2024-02-19T18:41:09Z",
-    "title": "Improve `gateway-cli info` command",
-    "labels": [
-      "good first issue",
-      "lightning"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
