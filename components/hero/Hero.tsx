@@ -41,14 +41,6 @@ export function Hero() {
                         </div>
                     </button>
                 </Link>
-                <Link href="/good-first-issues" className="w-full sm:w-auto">
-                    <button
-                        type="button"
-                        className="w-full sm:w-auto py-1 px-4 border-orange-500 bg-transparent text-orange-500 hover:bg-orange-500 hover:text-white h-12 border rounded-full flex items-center justify-center transition-colors duration-200"
-                    >
-                        Contribute to Open Source
-                    </button>
-                </Link>
             </div>
             <div className="max-sm:mt-4 mt-36 lg:mt-44">
                 <p className="font-display text-base text-black-800 dark:text-black-100">
