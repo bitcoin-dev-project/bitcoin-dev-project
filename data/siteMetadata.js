@@ -10,12 +10,15 @@ const siteMetadata = {
     siteRepo: "https://github.com/bitcoin-dev-project/bitcoin-dev-project",
     topicsRepo: "https://github.com/bitcoin-dev-project/bitcoin-topics",
     siteLogo: "/public/hero.jpg",
-    socialBanner: "https://bitcoindevs.xyz/landscape_2_1.jpg?v1",
+    socialBanner:
+        "https://bitcoindevs.xyz/images/pages-thumbnails/social-banner.jpg",
     github: "https://github.com/bitcoin-dev-project/",
     x: "https://x.com/Bitcoin_Devs",
     locale: "en-US",
     twitter: {
-        images: ["https://bitcoindevs.xyz/landscape_2_1.jpg?v1"],
+        images: [
+            "https://bitcoindevs.xyz/images/pages-thumbnails/social-banner.jpg"
+        ],
         card: "summary_large_image",
         link: "https://x.com/Bitcoin_Devs"
     },
