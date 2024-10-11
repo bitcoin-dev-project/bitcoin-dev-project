@@ -95,7 +95,8 @@
     "publishedAt": "2022-08-15T21:27:22Z",
     "title": "Set the new `dont_forward` bit in channel_update messages",
     "labels": [
-      "good first issue"
+      "good first issue",
+      "Take a Friday Leave a Friday"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
@@ -103,15 +104,6 @@
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/1898",
     "publishedAt": "2022-12-04T00:49:40Z",
     "title": "Provide local balance msat value in `ChannelForceClosed`",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2013",
-    "publishedAt": "2023-02-06T19:36:04Z",
-    "title": " Refuse new updates after the ChannelMonitor has seen a funding spend confirmed",
     "labels": [
       "good first issue"
     ],
