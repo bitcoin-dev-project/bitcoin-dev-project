@@ -92,16 +92,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/19087",
-    "publishedAt": "2020-05-28T07:18:06Z",
-    "title": "Inconsistent RPC error handling",
-    "labels": [
-      "Bug",
-      "RPC/REST/ZMQ"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/19496",
     "publishedAt": "2020-07-11T20:24:40Z",
     "title": "Use of C++ undefined behavior in various `IteratorComparators`",
@@ -167,17 +157,6 @@
     "title": "Duplicate coinbase transaction space reservation in CreateNewBlock",
     "labels": [
       "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/22119",
-    "publishedAt": "2021-06-01T12:56:51Z",
-    "title": "Optional late, block submission, difficulty test",
-    "labels": [
-      "Bug",
-      "RPC/REST/ZMQ",
-      "Mining"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
@@ -327,16 +306,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/25868",
-    "publishedAt": "2022-08-18T19:33:30Z",
-    "title": "Error: specified data directory \"\\\\IP.Ad.re.ss\\release\\Folder\"does not exist",
-    "labels": [
-      "Bug",
-      "Windows"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/25895",
     "publishedAt": "2022-08-21T17:05:59Z",
     "title": "importdescriptors hanging on importing/updating descriptor with large range",
@@ -350,7 +319,8 @@
     "publishedAt": "2022-09-01T21:21:36Z",
     "title": "combinerawtransaction confusing with distinct transactions",
     "labels": [
-      "Bug"
+      "Bug",
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
@@ -461,6 +431,16 @@
       "Bug",
       "Wallet",
       "CI failed"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/27391",
+    "publishedAt": "2023-04-01T18:26:57Z",
+    "title": "rpc: show P2(W)SH redeemScript in getrawtransaction (and friends)",
+    "labels": [
+      "Feature",
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
