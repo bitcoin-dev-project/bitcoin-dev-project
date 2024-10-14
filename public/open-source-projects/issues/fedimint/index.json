@@ -231,5 +231,15 @@
       "client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/6165",
+    "publishedAt": "2024-10-14T10:19:29Z",
+    "title": "Setup process is flaky",
+    "labels": [
+      "bug",
+      "dkg"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
