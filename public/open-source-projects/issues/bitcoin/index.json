@@ -220,17 +220,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/23651",
-    "publishedAt": "2021-12-02T14:22:00Z",
-    "title": "test: C++ debugger interferes with functional tests that quickly stop/start nodes",
-    "labels": [
-      "Bug",
-      "macOS",
-      "Tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/24049",
     "publishedAt": "2022-01-12T16:12:37Z",
     "title": "net: signed-integer-overflow in LocalServiceInfo",
@@ -525,18 +514,6 @@
     "labels": [
       "Bug",
       "Data corruption"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/30159",
-    "publishedAt": "2024-05-23T15:22:09Z",
-    "title": "LevelDB read failure: Corruption: block checksum mismatch",
-    "labels": [
-      "Bug",
-      "UTXO Db and Indexes",
-      "Data corruption",
-      "Resource usage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
