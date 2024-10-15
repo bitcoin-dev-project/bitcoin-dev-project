@@ -128,15 +128,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   },
   {
-    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/3244",
-    "publishedAt": "2024-08-26T12:44:47Z",
-    "title": "`bip32` deprecated type alias naming screw up",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
-  },
-  {
     "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/3302",
     "publishedAt": "2024-09-04T17:26:09Z",
     "title": "Decide what to do about undocumented `Witness::push` panics",
