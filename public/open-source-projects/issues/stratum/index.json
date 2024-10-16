@@ -286,16 +286,5 @@
       "roles"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1149",
-    "publishedAt": "2024-08-28T16:32:16Z",
-    "title": "vulnerability in sv1_api",
-    "labels": [
-      "good first issue",
-      "help wanted",
-      "sv1"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
