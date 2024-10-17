@@ -212,16 +212,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/6107",
-    "publishedAt": "2024-09-28T19:42:04Z",
-    "title": "Gatway exits registration loop early if one federation is offline",
-    "labels": [
-      "bug",
-      "lightning"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/6153",
     "publishedAt": "2024-10-11T18:45:58Z",
     "title": "LightningClientModule shouldn't attempt to update gateway cache during init",
