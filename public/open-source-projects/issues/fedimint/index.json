@@ -212,17 +212,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/6153",
-    "publishedAt": "2024-10-11T18:45:58Z",
-    "title": "LightningClientModule shouldn't attempt to update gateway cache during init",
-    "labels": [
-      "bug",
-      "lightning",
-      "client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/6165",
     "publishedAt": "2024-10-14T10:19:29Z",
     "title": "Setup process is flaky",
