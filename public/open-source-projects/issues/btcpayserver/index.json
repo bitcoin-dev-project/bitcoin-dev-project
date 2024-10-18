@@ -143,5 +143,15 @@
       "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6317",
+    "publishedAt": "2024-10-18T11:59:56Z",
+    "title": "[Bug]: Cannot remove my store SMTP settings",
+    "labels": [
+      "Bug",
+      "UI / UX"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
