@@ -53,16 +53,16 @@ export function Hero() {
                             role="list"
                             className="flex items-center justify-center gap-10 max-sm:gap-4 mt-8"
                         >
-                            {group.map((company) => (
-                                <li key={company.name} className="flex">
+                            {group.map((product) => (
+                                <li key={product.name} className="flex">
                                     <Link
-                                        href={company.url}
+                                        href={product.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         <Image
-                                            src={company.logo}
-                                            alt={company.name}
+                                            src={product.logo}
+                                            alt={product.name}
                                             unoptimized
                                             className="rounded-lg h-16 w-16 max-md:w-12 max-md:h-12 filter grayscale hover:filter-none transition-all duration-300"
                                         />
