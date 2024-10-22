@@ -194,16 +194,33 @@ export const values = [
 
 export const hero = [
     [
-        { name: "ChatBTC", logo: logoChatBTC },
-        { name: "Bitcoin Search", logo: logoBitcoinSearch },
+        {
+            name: "ChatBTC",
+            logo: logoChatBTC,
+            url: "https://chat.bitcoinsearch.xyz"
+        },
+        {
+            name: "Bitcoin Search",
+            logo: logoBitcoinSearch,
+            url: "https://bitcoinsearch.xyz"
+        },
         {
             name: "Transcript Review",
             logo: logoTrRev,
-            className: "hidden xl:block"
+            className: "hidden xl:block",
+            url: "https://review.btctranscripts.com"
         },
 
-        { name: "Trsanscript", logo: logoBitcoinTranscript },
-        { name: "Bitcoin TLDR", logo: logoBitcoinTLDR }
+        {
+            name: "Transcript",
+            logo: logoBitcoinTranscript,
+            url: "https://btctranscripts.com"
+        },
+        {
+            name: "Bitcoin TLDR",
+            logo: logoBitcoinTLDR,
+            url: "https://tldr.bitcoinsearch.xyz"
+        }
     ]
 ]
 
