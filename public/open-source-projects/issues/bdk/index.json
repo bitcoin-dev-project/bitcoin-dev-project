@@ -194,17 +194,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/856",
-    "publishedAt": "2023-02-09T13:45:03Z",
-    "title": "Improving the documentation for TxBuilder",
-    "labels": [
-      "documentation",
-      "good first issue",
-      "module-wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/859",
     "publishedAt": "2023-02-10T09:20:42Z",
     "title": "RPC sync failure ",
@@ -268,17 +257,6 @@
     "labels": [
       "good first issue",
       "module-blockchain",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1342",
-    "publishedAt": "2024-02-13T01:06:24Z",
-    "title": "allow_shrinking not working as expected",
-    "labels": [
-      "bug",
-      "documentation",
       "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
