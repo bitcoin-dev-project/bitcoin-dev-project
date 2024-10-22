@@ -143,5 +143,15 @@
       "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6325",
+    "publishedAt": "2024-10-21T19:45:50Z",
+    "title": "[Bug]: Store name incorrect display (v2.0.0 beta)",
+    "labels": [
+      "Bug",
+      "UI / UX"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
