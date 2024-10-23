@@ -124,19 +124,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/5169",
-    "publishedAt": "2021-04-05T10:34:02Z",
-    "title": "[lncli] lnd.conf in lnddir arg's directory should be read",
-    "labels": [
-      "help wanted",
-      "beginner",
-      "config",
-      "cli",
-      "lncli"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/5203",
     "publishedAt": "2021-04-12T23:25:41Z",
     "title": "walletrpc SendOutputs fails to attach zero value outputs",
@@ -1147,6 +1134,16 @@
     "labels": [
       "bug",
       "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8149",
+    "publishedAt": "2023-11-03T17:44:26Z",
+    "title": "[bug]: ChannelArbitrator does not cleanly stop",
+    "labels": [
+      "bug",
+      "P3"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
