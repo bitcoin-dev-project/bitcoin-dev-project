@@ -23,6 +23,7 @@ import MailingListSignup from "./mailing-list-signup"
 import { BitcoinHistory } from "./bitcoin-history"
 import HexTransactionHighlighter from "./hex-transaction-highlighter"
 import DiscordInvite from "./discord-invite"
+import MerkleTreeExplainer from "./merkle-tree"
 
 export const components: MDXComponents = {
     Image,
@@ -49,5 +50,6 @@ export const components: MDXComponents = {
     BitcoinHistory,
     MailingListSignup,
     HexTransactionHighlighter,
-    DiscordInvite
+    DiscordInvite,
+    MerkleTreeExplainer
 }
