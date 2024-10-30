@@ -372,14 +372,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1666",
-    "publishedAt": "2024-10-29T13:38:09Z",
-    "title": "Applied unconfirmed transactions need to be pruned after some time",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
