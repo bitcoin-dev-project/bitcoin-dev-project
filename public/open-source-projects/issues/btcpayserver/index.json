@@ -143,5 +143,14 @@
       "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6342",
+    "publishedAt": "2024-10-30T17:43:55Z",
+    "title": "[Bug]: Crowdfound page dead after update to BTCPay 2.0",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
