@@ -13,13 +13,9 @@ interface ScriptNode {
 
 const MerkleTreeExplainer: React.FC = () => {
     const [scripts, setScripts] = useState<ScriptNode[]>([])
-    const [selectedScriptId, setSelectedScriptId] = useState<string | null>(
-        null
-    )
+    const [selectedScriptId, setSelectedScriptId] = useState<string | null>(null)
     const [merkleRoot, setMerkleRoot] = useState<ScriptNode | null>(null)
-    const [transform, setTransform] = useState<d3.ZoomTransform>(
-        d3.zoomIdentity
-    )
+    const [transform, setTransform] = useState<d3.ZoomTransform>(d3.zoomIdentity)
     const zoomRef = useRef<any>()
     const svgRef = useRef<SVGSVGElement | null>(null)
     const treeGroupRef = useRef<SVGGElement>(null)
@@ -30,59 +26,59 @@ const MerkleTreeExplainer: React.FC = () => {
     const [scriptInput, setScriptInput] = useState<string>("")
     const [scriptCounter, setScriptCounter] = useState<number>(1)
 
-    const getTextColor = useCallback(
-        (d?: d3.HierarchyPointNode<ScriptNode>) => {
-            return theme === "dark" ? "#ffffff" : "#333333"
-        },
-        [theme]
-    )
-
-    // Function to simulate hash calculation
-    const calculateHash = (input: string) => {
-        let hash = 0
-        for (let i = 0; i < input.length; i++) {
-            const char = input.charCodeAt(i)
-            hash = (hash << 5) - hash + char
-            hash |= 0
-        }
-        return `Hash(${Math.abs(hash)})`
+    // Simplified hash function for educational purposes
+    const calculateHash = (input: string): string => {
+        // For simplicity, we'll just return a string "Hash(input)"
+        return `Hash(${input})`
     }
 
     // Function to add a new script
     const addScript = () => {
-        const scriptId = scriptInput.trim() || `Script ${scriptCounter}`
+        const scriptId = scriptInput.trim() || `Subscript_${scriptCounter}`
+        const scriptContent = scriptInput.trim() || `Script ${scriptCounter}`
         const newScript: ScriptNode = {
             id: scriptId,
-            hash: calculateHash(scriptId)
+            hash: scriptContent
         }
         setScripts([...scripts, newScript])
-        setScriptInput("") // Clear input
+        setScriptInput("")
         setScriptCounter((prev) => prev + 1)
     }
 
-    // Update the buildMerkleTree function
+    // Build the Merkle tree
     const buildMerkleTree = (leafNodes: ScriptNode[]): ScriptNode | null => {
         if (leafNodes.length === 0) return null
 
-        // Create hash nodes for each script
-        let hashNodes: ScriptNode[] = leafNodes.map((script, index) => ({
-            id: `Hash_${index + 1}`,
-            hash: calculateHash(script.hash),
-            children: [script]
-        }))
+        // Hash each script
+        let hashNodes: ScriptNode[] = leafNodes.map((script, index) => {
+            const scriptHash = calculateHash(script.hash)
+            const scriptNodeHash = calculateHash(`1|${scriptHash}`)
+            return {
+                id: `H${index + 1}`,
+                hash: scriptNodeHash,
+                children: [script]
+            }
+        })
 
         while (hashNodes.length > 1) {
             const tempNodes: ScriptNode[] = []
             for (let i = 0; i < hashNodes.length; i += 2) {
                 const left = hashNodes[i]
-                const right = hashNodes[i + 1] || hashNodes[i] // Duplicate last node if odd number
-                const combinedHash = calculateHash(left.hash + right.hash)
-                const parentNode: ScriptNode = {
-                    id: `Node_${left.id.split("_")[1]}${right.id.split("_")[1]}`,
-                    hash: combinedHash,
-                    children: [left, right]
+                const right = hashNodes[i + 1]
+
+                if (right) {
+                    // Combine left and right hashes
+                    const combinedHash = calculateHash(`${left.hash}+${right.hash}`)
+                    const parentNode: ScriptNode = {
+                        id: `H${left.id.slice(1)}${right.id.slice(1)}`, // E.g., H12, H34
+                        hash: combinedHash,
+                        children: [left, right]
+                    }
+                    tempNodes.push(parentNode)
+                } else {
+                    // Promote the left node without combining
+                    tempNodes.push(left)
                 }
-                tempNodes.push(parentNode)
             }
             hashNodes = tempNodes
         }
@@ -90,7 +86,7 @@ const MerkleTreeExplainer: React.FC = () => {
         return hashNodes[0]
     }
 
-    // Updated function to get Merkle proof nodes and path nodes
+    // Function to get the Merkle proof nodes and path
     const getMerkleProof = (
         root: ScriptNode,
         targetId: string
@@ -133,7 +129,7 @@ const MerkleTreeExplainer: React.FC = () => {
         return { proof, path }
     }
 
-    // Update the handleScriptSelect function
+    // Handle script selection
     const handleScriptSelect = useCallback(
         (id: string) => {
             setSelectedScriptId(id)
@@ -146,6 +142,7 @@ const MerkleTreeExplainer: React.FC = () => {
         [merkleRoot]
     )
 
+    // Handle zoom
     const handleZoom = useCallback((zoomLevel: number) => {
         if (zoomRef.current && svgRef.current) {
             d3.select(svgRef.current)
@@ -155,6 +152,7 @@ const MerkleTreeExplainer: React.FC = () => {
         }
     }, [])
 
+    // Initialize zoom behavior
     useEffect(() => {
         if (svgRef.current && treeGroupRef.current) {
             const svg = d3.select(svgRef.current)
@@ -199,34 +197,97 @@ const MerkleTreeExplainer: React.FC = () => {
         })
     }, [])
 
-    // Function to check if a node is in the Merkle path
-    const isInMerklePath = useCallback(
-        (node: d3.HierarchyPointNode<ScriptNode>): boolean => {
-            if (!selectedScriptId) return false
-            if (!node.children) {
-                return node.data.id === selectedScriptId
+    // Function to determine if a color is light or dark
+    const isLightColor = (color: string): boolean => {
+        // Remove the hash symbol if present
+        color = color.replace("#", "")
+
+        // Convert shorthand colors (#fff) to full form (#ffffff)
+        if (color.length === 3) {
+            color = color
+                .split("")
+                .map((c) => c + c)
+                .join("")
+        }
+
+        const r = parseInt(color.substr(0, 2), 16)
+        const g = parseInt(color.substr(2, 2), 16)
+        const b = parseInt(color.substr(4, 2), 16)
+
+        // Compute luminance
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
+
+        return luminance > 0.5 // Return true if light color
+    }
+
+    // Make getNodeColor accessible
+    const getNodeColor = useCallback(
+        (d?: d3.HierarchyPointNode<ScriptNode>) => {
+            if (!d) return theme === "dark" ? "#1e1e1e" : "#ffffff"
+
+            if (!d.children) {
+                return "#effef3" // Leaf nodes (scripts)
+            } else if (merkleProofNodes.includes(d.data.hash)) {
+                return "#ffe8d8" // Orange background for Merkle proof nodes
+            } else if (merklePathNodes.includes(d.data.hash)) {
+                return theme === "dark" ? "#3c3c3c" : "#ffffff"
+            } else {
+                return theme === "dark" ? "#1e1e1e" : "#ffffff"
             }
-            return node.children.some((child) => isInMerklePath(child))
         },
-        [selectedScriptId]
+        [theme, merkleProofNodes, merklePathNodes]
+    )
+
+    // Function to get contrasting text color based on background
+    const getTextColor = useCallback(
+        (
+            d?: d3.HierarchyPointNode<ScriptNode>,
+            backgroundColorOverride?: string
+        ) => {
+            if (!d) return theme === "dark" ? "#ffffff" : "#333333"
+
+            // Get the node background color
+            const backgroundColor = backgroundColorOverride || getNodeColor(d)
+
+            // Determine if background color is light or dark
+            const isBackgroundLight = isLightColor(backgroundColor)
+
+            // Return contrasting text color
+            return isBackgroundLight ? "#333333" : "#ffffff"
+        },
+        [theme, getNodeColor]
     )
 
     // Update the getNodeText function
     const getNodeText = useCallback((d: any): string => {
         if (!d.parent) {
-            return "Merkle Root"
+            return "MAST Root"
         } else if (!d.children) {
-            return d.data.id // Just "Script X" for leaf nodes
-        } else if (d.data.id.startsWith("Hash_")) {
-            return `H${d.data.id.split("_")[1]}` // H1, H2, ..., Hn for direct hash nodes
+            return d.data.id // Just "Subscript_X" for leaf nodes
+        } else if (d.data.id.startsWith("H")) {
+            return `${d.data.id}` // H1, H2, ..., Hn for hash nodes
         } else {
-            // For combined hash nodes, use the pattern H12, H1234, etc.
-            const childIds = d.children
-                .map((child: any) => child.data.id.split("_")[1])
-                .join("")
-            return `H${childIds}`
+            // For combined hash nodes
+            return `${d.data.id}`
         }
     }, [])
+
+    // Define getBorderColor function before drawTree
+    const getBorderColor = (d?: d3.HierarchyPointNode<ScriptNode>) => {
+        if (!d)
+            return theme === "dark"
+                ? "rgba(255, 255, 255, 0.1)"
+                : "rgba(0, 0, 0, 0.1)"
+
+        if (!d.children) {
+            return "#28b648" // Border for leaf nodes (scripts)
+        } else if (merkleProofNodes.includes(d.data.hash)) {
+            return "#f36228" // Orange border for Merkle proof nodes
+        }
+        return theme === "dark"
+            ? "rgba(255, 255, 255, 0.1)"
+            : "rgba(0, 0, 0, 0.1)"
+    }
 
     // Update the drawTree function
     const drawTree = useCallback(
@@ -313,38 +374,6 @@ const MerkleTreeExplainer: React.FC = () => {
                     Math.abs(previousNode.y - node.y) > 1
 
                 return positionChanged
-            }
-
-            // Update node colors
-            const getNodeColor = (d?: any) => {
-                if (!d) return theme === "dark" ? "#1e1e1e" : "#ffffff"
-
-                if (!d.children) {
-                    return "#effef3" // Leaf nodes (scripts)
-                } else if (merkleProofNodes.includes(d.data.hash)) {
-                    return "#ffe8d8" // Orange background for Merkle proof nodes
-                } else if (merklePathNodes.includes(d.data.hash)) {
-                    return theme === "dark" ? "#3c3c3c" : "#ffffff"
-                } else {
-                    return theme === "dark" ? "#1e1e1e" : "#ffffff"
-                }
-            }
-
-            // Define getBorderColor function
-            const getBorderColor = (d?: d3.HierarchyPointNode<ScriptNode>) => {
-                if (!d)
-                    return theme === "dark"
-                        ? "rgba(255, 255, 255, 0.1)"
-                        : "rgba(0, 0, 0, 0.1)"
-
-                if (!d.children) {
-                    return "#28b648" // Border for leaf nodes (scripts)
-                } else if (merkleProofNodes.includes(d.data.hash)) {
-                    return "#f36228" // Orange border for Merkle proof nodes
-                }
-                return theme === "dark"
-                    ? "rgba(255, 255, 255, 0.1)"
-                    : "rgba(0, 0, 0, 0.1)"
             }
 
             // Add a filter definition for the drop shadow
@@ -445,8 +474,8 @@ const MerkleTreeExplainer: React.FC = () => {
                 .attr("y", -nodeHeight / 2)
                 .attr("width", nodeWidth)
                 .attr("height", nodeHeight)
-                .attr("fill", getNodeColor)
-                .attr("stroke", (d: any) => getBorderColor(d))
+                .attr("fill", (d) => getNodeColor(d))
+                .attr("stroke", (d) => getBorderColor(d))
                 .attr("stroke-width", 1)
                 .attr("rx", 5)
                 .attr("ry", 5)
@@ -458,7 +487,7 @@ const MerkleTreeExplainer: React.FC = () => {
                 .attr("text-anchor", "middle")
                 .attr("dy", 0)
                 .attr("font-size", "10px")
-                .attr("fill", (d: any) => getTextColor(d))
+                .attr("fill", (d) => getTextColor(d))
                 .text((d) => getNodeText(d))
                 .call(wrapText, nodeWidth - 10)
                 .style("font-size", "10px") // Adjust font size to fit
@@ -521,8 +550,8 @@ const MerkleTreeExplainer: React.FC = () => {
             // Update node colors and borders
             node.merge(nodeEnter)
                 .select("rect")
-                .attr("fill", getNodeColor)
-                .attr("stroke", getBorderColor())
+                .attr("fill", (d) => getNodeColor(d))
+                .attr("stroke", (d) => getBorderColor(d))
 
             // Update node text
             node.merge(nodeEnter)
@@ -530,7 +559,7 @@ const MerkleTreeExplainer: React.FC = () => {
                 .text((d) => getNodeText(d))
                 .call(wrapText, nodeWidth - 10)
                 .style("font-size", "10px")
-                .style("fill", getTextColor())
+                .style("fill", (d) => getTextColor(d))
                 .each(function () {
                     const text = d3.select(this)
                     const words = text.text().split(/\s+/)
@@ -577,13 +606,6 @@ const MerkleTreeExplainer: React.FC = () => {
                     handleScriptSelect(d.data.id)
                 })
 
-            // Add a new function to handle node hover
-            node.merge(nodeEnter).on("click", (event, d) => {
-                if (!d.children) {
-                    handleScriptSelect(d.data.id)
-                }
-            })
-
             // Add "Spend" button to leaf nodes
             nodeEnter
                 .filter((d) => !d.children)
@@ -626,12 +648,48 @@ const MerkleTreeExplainer: React.FC = () => {
             getNodeText,
             wrapText,
             theme,
-            getTextColor
+            getTextColor,
+            getNodeColor
         ]
     )
 
     const nodeWidth = 120 // Adjust this value as needed
     const nodeHeight = 60 // Adjust this value as needed
+
+ // Updated getEquation function
+ const getEquation = (
+    node: d3.HierarchyPointNode<ScriptNode>,
+    index: number,
+    pathLength: number
+): string | null => {
+    if (!node.children) {
+        // Leaf node (script), no equation
+        return null
+    }
+
+    if (node.children.length === 1) {
+        // Node with one child (e.g., H1 = Hash(Script1))
+        const child = node.children[0]
+        const childLabel = !child.children ? child.data.id : getNodeText(child)
+        return `${getNodeText(node)} = Hash(${childLabel})`
+    } else if (node.children.length === 2) {
+        // Node with two children
+        const leftChild = node.children[0]
+        const rightChild = node.children[1]
+        const leftLabel = !leftChild.children ? leftChild.data.id : getNodeText(leftChild)
+        const rightLabel = !rightChild.children ? rightChild.data.id : getNodeText(rightChild)
+
+        if (node.parent === null) {
+            // Root node
+            return `Merkle Root = Hash(${leftLabel} + ${rightLabel})`
+        } else {
+            return `${getNodeText(node)} = Hash(${leftLabel} + ${rightLabel})`
+        }
+    } else {
+        // Should not happen, but handle gracefully
+        return null
+    }
+}
 
     const showNextEquation = (
         index: number,
@@ -646,88 +704,14 @@ const MerkleTreeExplainer: React.FC = () => {
     ) => {
         if (index >= pathNodes.size()) return
 
-        pathNodes.each(function (d, i) {
-            if (i === index) {
-                const node = d3.select(this)
-                let equationText: any = node.select(".equation-text")
-                let borderPath: any = node.select(".border-path")
-                const rect = node.select("rect")
+        const currentNode = pathNodes.filter((_, i) => i === index)
+        currentNode.each(function (d, i) {
+            const node = d3.select(this)
+            const rect = node.select("rect")
 
-                // Create elements if they don't exist
-                if (equationText.empty()) {
-                    equationText = node
-                        .append("text")
-                        .attr("class", "equation-text")
-                        .attr("text-anchor", "middle")
-                        .attr("dominant-baseline", "middle")
-                        .style("font-size", "10px") // Reduced from 12px to 10px
-                        .style("font-weight", "300") // Light font weight
-                        .style("fill", getTextColor())
-                }
-
-                // Get rectangle dimensions
-                const width = parseFloat(rect.attr("width"))
-                const height = parseFloat(rect.attr("height"))
-                const x = parseFloat(rect.attr("x"))
-                const y = parseFloat(rect.attr("y"))
-
-                // Only create and animate border for non-script nodes
-                if (!d.children) {
-                    // This is a script node, so we don't add a green border
-                    if (borderPath.size() > 0) {
-                        borderPath.remove() // Remove existing border if any
-                    }
-                } else {
-                    if (borderPath.empty()) {
-                        borderPath = node
-                            .append("path")
-                            .attr("class", "border-path")
-                            .attr("fill", "none")
-                            .attr("stroke", "#28b648") // Green border for hash calculation
-                            .attr("stroke-width", 2)
-                    }
-
-                    // Add background and text color transition
-                    rect.transition()
-                        .duration(1000)
-                        .attr("fill", "#effef3") // Green background
-                        .attr("stroke", "#28b648") // Green border
-
-                    // Update text color
-                    node.select("text")
-                        .transition()
-                        .duration(1000)
-                        .style("fill", "#333333") // Green text
-                }
-
-                // Set equation text color to black/white based on theme
-                equationText
-                    .text(getEquation(d, i, pathNodes.size()))
-                    .attr("x", x + width / 2)
-                    .attr("y", y)
-                    .style("opacity", 0)
-                    .style("fill", theme === "dark" ? "#ffffff" : "#333333") // Black/white text for equation
-                    .style("font-size", "10px")
-                    .style("font-weight", "300")
-                    .transition()
-                    .duration(1000)
-                    .attr("y", y - height / 2 + 6)
-                    .style("opacity", 1)
-
-                // Animate the line to the parent node
-                if (i < pathNodes.size() - 1) {
-                    const parentNode = pathNodes
-                        .filter((_, j) => j === i + 1)
-                        .datum()
-                    const line = nodeGroup.select(
-                        `path.link[data-source="${parentNode.data.id}"][data-target="${d.data.id}"]`
-                    )
-                    line.transition()
-                        .duration(500)
-                        .attr("stroke", "#4CAF50") // Changed to green
-                        .attr("stroke-width", 2)
-                        .attr("opacity", 1)
-                }
+            // Skip leaf nodes
+            if (!d.children) {
+                // Proceed to next node after delay
                 setTimeout(
                     () =>
                         showNextEquation(
@@ -736,46 +720,214 @@ const MerkleTreeExplainer: React.FC = () => {
                             nodeGroup,
                             getNodeText
                         ),
-                    1000
+                    500 // Short delay for consistency
                 )
+                return // Skip the rest of the code for this node
+            }
+
+            let equationText: any = node.select(".equation-text")
+            let borderPath: any = node.select(".border-path")
+
+            // Create elements if they don't exist
+            if (equationText.empty()) {
+                equationText = node
+                    .append("text")
+                    .attr("class", "equation-text")
+                    .attr("text-anchor", "middle")
+                    .attr("dominant-baseline", "middle")
+                    .style("font-size", "10px")
+                    .style("font-weight", "300")
+                    .style("fill", getTextColor(d))
+            }
+
+            // Get rectangle dimensions
+            const width = parseFloat(rect.attr("width"))
+            const height = parseFloat(rect.attr("height"))
+            const x = parseFloat(rect.attr("x"))
+            const y = parseFloat(rect.attr("y"))
+            const rx = parseFloat(rect.attr("rx")) || 0
+            const ry = parseFloat(rect.attr("ry")) || 0
+
+            if (borderPath.empty()) {
+                // Create a path that matches the rectangle with rounded corners
+                const pathData = d3.path()
+                pathData.moveTo(x + rx, y)
+                pathData.lineTo(x + width - rx, y)
+                if (rx > 0 || ry > 0) {
+                    pathData.arcTo(x + width, y, x + width, y + ry, rx)
+                }
+                pathData.lineTo(x + width, y + height - ry)
+                if (rx > 0 || ry > 0) {
+                    pathData.arcTo(
+                        x + width,
+                        y + height,
+                        x + width - rx,
+                        y + height,
+                        rx
+                    )
+                }
+                pathData.lineTo(x + rx, y + height)
+                if (rx > 0 || ry > 0) {
+                    pathData.arcTo(
+                        x,
+                        y + height,
+                        x,
+                        y + height - ry,
+                        rx
+                    )
+                }
+                pathData.lineTo(x, y + ry)
+                if (rx > 0 || ry > 0) {
+                    pathData.arcTo(x, y, x + rx, y, rx)
+                }
+                pathData.closePath()
+
+                borderPath = node
+                    .append("path")
+                    .attr("class", "border-path")
+                    .attr("d", pathData.toString())
+                    .attr("fill", "none")
+                    .attr("stroke", "#28b648") // Green border
+                    .attr("stroke-width", 2)
+
+                const totalLength = borderPath.node().getTotalLength()
+
+                // Start border path animation
+                borderPath
+                    .attr("stroke-dasharray", totalLength)
+                    .attr("stroke-dashoffset", totalLength)
+                    .attr("opacity", 1)
+                    .transition()
+                    .duration(1000)
+                    .attr("stroke-dashoffset", 0)
+                    .on("end", () => {
+                        // After border animation completes, animate the line to parent node
+                        if (index < pathNodes.size() - 1) {
+                            const parentNode = pathNodes
+                                .filter((_, j) => j === index + 1)
+                                .datum()
+                            const line = nodeGroup.select(
+                                `path.link[data-source="${parentNode.data.id}"][data-target="${d.data.id}"]`
+                            )
+                            line.transition()
+                                .duration(500)
+                                .attr("stroke", "#4CAF50") // Green line
+                                .attr("stroke-width", 2)
+                                .attr("opacity", 1)
+                                .on("end", () => {
+                                    // Proceed to next node after line animation completes
+                                    showNextEquation(
+                                        index + 1,
+                                        pathNodes,
+                                        nodeGroup,
+                                        getNodeText
+                                    )
+                                })
+                        } else {
+                            // No parent node (root node), proceed to next node
+                            showNextEquation(
+                                index + 1,
+                                pathNodes,
+                                nodeGroup,
+                                getNodeText
+                            )
+                        }
+                    })
+            }
+
+            // Animate rect fill and stroke
+            rect.transition()
+                .duration(1000)
+                .attr("fill", "#effef3") // Green background
+                .attr("stroke", "#28b648") // Green border
+
+            // Update text color based on new background color
+            node.select("text")
+                .transition()
+                .duration(1000)
+                .style("fill", () => getTextColor(d, "#effef3"))
+
+            // Set equation text
+            const equation = getEquation(d, index, pathNodes.size())
+            if (equation) {
+                equationText
+                    .text(equation)
+                    .attr("x", x + width / 2)
+                    .attr("y", y)
+                    .style("opacity", 0)
+                    .style("fill", theme === "dark" ? "#ffffff" : "#333333")
+                    .style("font-size", "10px")
+                    .style("font-weight", "300")
+                    .transition()
+                    .duration(1000)
+                    .attr("y", y - height / 2 + 6)
+                    .style("opacity", 1)
             }
         })
     }
+
 
     const handleSpend = useCallback(
         (id: string) => {
             setSelectedScriptId(id)
             if (merkleRoot) {
-                const { proof, path } = getMerkleProof(merkleRoot, id)
-                setMerkleProofNodes(proof)
-                setMerklePathNodes(path)
                 const nodeGroup = d3.select(treeGroupRef.current)
-                const pathNodes: d3.Selection<
-                    SVGGElement,
-                    d3.HierarchyPointNode<ScriptNode>,
-                    SVGGElement | null,
-                    unknown
-                > = nodeGroup
-                    .selectAll<SVGGElement, d3.HierarchyPointNode<ScriptNode>>(
-                        "g.node"
-                    )
-                    .filter(
-                        (d: d3.HierarchyPointNode<ScriptNode>) =>
-                            path.includes(d.data.hash) || d.data.id === id
-                    )
-                    .sort(
-                        (
-                            a: d3.HierarchyPointNode<ScriptNode>,
-                            b: d3.HierarchyPointNode<ScriptNode>
-                        ) => d3.descending(a.depth, b.depth)
-                    )
 
-                // Reset all lines to gray
+                // Reset the tree visualization before starting the new animation
+
+                // Remove existing equation texts
+                nodeGroup.selectAll(".equation-text").remove()
+
+                // Remove animated borders
+                nodeGroup.selectAll(".border-path").remove()
+
+                // Reset node styles to default
+                nodeGroup
+                    .selectAll("g.node")
+                    .each(function (d) {
+                        const node = d3.select(this)
+                        const rect = node.select("rect")
+                        const text = node.select("text")
+
+                        rect
+                            .attr("fill", () => getNodeColor(d))
+                            .attr("stroke", () => getBorderColor(d))
+                            .attr("stroke-width", 1)
+                            .attr("opacity", 1)
+
+                        text
+                            .attr("opacity", 1)
+                            .style("fill", () => getTextColor(d))
+
+                        // Reset spend button opacity
+                        if (!d.children) {
+                            node.select(".spend-button")
+                                .attr("opacity", 1)
+                        }
+                    })
+
+                // Reset link styles to default
                 nodeGroup
                     .selectAll("path.link")
                     .attr("stroke", theme === "dark" ? "#555" : "#ccc")
                     .attr("stroke-width", 1)
-                    .attr("opacity", 0.3)
+                    .attr("opacity", 1)
+
+                // Proceed with the rest of the handleSpend function
+                const { proof, path } = getMerkleProof(merkleRoot, id)
+                setMerkleProofNodes(proof)
+                setMerklePathNodes(path)
+
+                const pathNodes = nodeGroup
+                    .selectAll<SVGGElement, d3.HierarchyPointNode<ScriptNode>>(
+                        "g.node"
+                    )
+                    .filter(
+                        (d) => path.includes(d.data.hash) || d.data.id === id
+                    )
+                    .sort(
+                        (a, b) => d3.descending(a.depth, b.depth)
+                    )
 
                 // Update node colors and opacity
                 nodeGroup
@@ -794,29 +946,32 @@ const MerkleTreeExplainer: React.FC = () => {
 
                         rect.attr("fill", () => {
                             if (d.data.id === id) return "#4CAF50"
-                            if (proof.includes(d.data.hash)) return "#ffe8d8" // Changed from #ffd700 to #ffe8d8
+                            if (proof.includes(d.data.hash)) return "#ffe8d8"
                             if (path.includes(d.data.hash))
-                                return theme === "dark" ? "#4a4a4a" : "#ffffff"
+                                return theme === "dark"
+                                    ? "#4a4a4a"
+                                    : "#ffffff"
                             return theme === "dark" ? "#2d2d2d" : "#ffffff"
                         })
                             .attr("stroke", () => {
                                 if (proof.includes(d.data.hash) && d.children)
-                                    return "#f36228" // Orange border for Merkle proof nodes (non-leaf)
-                                if (!d.children) return "#28b648" // Green border for leaf nodes (scripts)
-                                return theme === "dark" ? "#555" : "none" // Default border for other nodes
+                                    return "#f36228"
+                                if (!d.children) return "#28b648"
+                                return theme === "dark" ? "#555" : "none"
                             })
                             .attr("stroke-width", 1)
                             .transition()
                             .duration(500)
                             .attr("opacity", isPartOfPath ? 1 : 0.3)
 
+                        // Get the new background color
+                        const newBackgroundColor = rect.attr("fill")
+
+                        // Update text color
                         text.transition()
                             .duration(500)
                             .attr("opacity", isPartOfPath ? 1 : 0.3)
-                            .style(
-                                "fill",
-                                theme === "dark" ? "#ffffff" : "#333333"
-                            ) // Always black/white text
+                            .style("fill", () => getTextColor(d, newBackgroundColor))
 
                         if (!d.children) {
                             node.select(".spend-button")
@@ -825,6 +980,11 @@ const MerkleTreeExplainer: React.FC = () => {
                                 .attr("opacity", isPartOfPath ? 1 : 0.3)
                         }
                     })
+
+                // Update link styles for path
+                nodeGroup
+                    .selectAll("path.link")
+                    .attr("opacity", 0.3)
 
                 // Update the function call
                 showNextEquation(
@@ -835,37 +995,8 @@ const MerkleTreeExplainer: React.FC = () => {
                 )
             }
         },
-        [merkleRoot, getMerkleProof, theme]
+        [merkleRoot, getMerkleProof, theme, getTextColor, getNodeText]
     )
-
-    const getEquation = (
-        node: d3.HierarchyPointNode<ScriptNode>,
-        index: number,
-        pathLength: number
-    ): string => {
-        if (!node.children) {
-            return `Hash(${node.data.id})` // For leaf nodes, show Hash(Script X)
-        }
-
-        const leftChild = node.children[0]
-        const rightChild = node.children[1]
-
-        const getLabel = (child: d3.HierarchyPointNode<ScriptNode>) => {
-            if (!child.children) {
-                return `Script ${child.data.id.split(" ")[1]}` // Directly use the script name
-            }
-            return getNodeText(child) // Use the getNodeText function for consistency
-        }
-
-        const leftLabel = getLabel(leftChild)
-        const rightLabel = rightChild ? getLabel(rightChild) : leftLabel // Use left label if right child doesn't exist
-
-        if (node.parent === null) {
-            return `Merkle Root = Hash(${leftLabel} + ${rightLabel})`
-        }
-
-        return `${getNodeText(node)} = Hash(${leftLabel} + ${rightLabel})`
-    }
 
     const resetTree = useCallback(() => {
         setScripts([])
@@ -918,8 +1049,6 @@ const MerkleTreeExplainer: React.FC = () => {
                         <div className="flex flex-col items-center">
                             {/* Main container with items aligned at bottom */}
                             <div className="flex items-end gap-3">
-                                {" "}
-                                {/* Changed to items-end */}
                                 {/* Input group with its label */}
                                 <div className="flex flex-col items-center">
                                     {/* Label centered only above the input controls */}
@@ -930,7 +1059,7 @@ const MerkleTreeExplainer: React.FC = () => {
                                             width: "calc(40px + 192px + 40px + 24px)" // width of minus + input + plus + gaps
                                         }}
                                     >
-                                        Add script
+                                        Add Subscript
                                     </span>
 
                                     {/* Input controls group */}
@@ -958,7 +1087,7 @@ const MerkleTreeExplainer: React.FC = () => {
                                                         e.target.value
                                                     )
                                                 }
-                                                placeholder={`Script ${scriptCounter}`}
+                                                placeholder={`Subcript ${scriptCounter}`}
                                                 className="w-full px-4 py-2 rounded-md text-center focus:outline-none focus:ring-2 focus:ring-[#37b950] transition-all duration-200 placeholder-[#37b950]"
                                                 style={{
                                                     backgroundColor: "#effef3",
