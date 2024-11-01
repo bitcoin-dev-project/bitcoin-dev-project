@@ -13,9 +13,13 @@ interface ScriptNode {
 
 const MerkleTreeExplainer: React.FC = () => {
     const [scripts, setScripts] = useState<ScriptNode[]>([])
-    const [selectedScriptId, setSelectedScriptId] = useState<string | null>(null)
+    const [selectedScriptId, setSelectedScriptId] = useState<string | null>(
+        null
+    )
     const [merkleRoot, setMerkleRoot] = useState<ScriptNode | null>(null)
-    const [transform, setTransform] = useState<d3.ZoomTransform>(d3.zoomIdentity)
+    const [transform, setTransform] = useState<d3.ZoomTransform>(
+        d3.zoomIdentity
+    )
     const zoomRef = useRef<any>()
     const svgRef = useRef<SVGSVGElement | null>(null)
     const treeGroupRef = useRef<SVGGElement>(null)
@@ -68,7 +72,9 @@ const MerkleTreeExplainer: React.FC = () => {
 
                 if (right) {
                     // Combine left and right hashes
-                    const combinedHash = calculateHash(`${left.hash}+${right.hash}`)
+                    const combinedHash = calculateHash(
+                        `${left.hash}+${right.hash}`
+                    )
                     const parentNode: ScriptNode = {
                         id: `H${left.id.slice(1)}${right.id.slice(1)}`, // E.g., H12, H34
                         hash: combinedHash,
@@ -656,40 +662,46 @@ const MerkleTreeExplainer: React.FC = () => {
     const nodeWidth = 120 // Adjust this value as needed
     const nodeHeight = 60 // Adjust this value as needed
 
- // Updated getEquation function
- const getEquation = (
-    node: d3.HierarchyPointNode<ScriptNode>,
-    index: number,
-    pathLength: number
-): string | null => {
-    if (!node.children) {
-        // Leaf node (script), no equation
-        return null
-    }
-
-    if (node.children.length === 1) {
-        // Node with one child (e.g., H1 = Hash(Script1))
-        const child = node.children[0]
-        const childLabel = !child.children ? child.data.id : getNodeText(child)
-        return `${getNodeText(node)} = Hash(${childLabel})`
-    } else if (node.children.length === 2) {
-        // Node with two children
-        const leftChild = node.children[0]
-        const rightChild = node.children[1]
-        const leftLabel = !leftChild.children ? leftChild.data.id : getNodeText(leftChild)
-        const rightLabel = !rightChild.children ? rightChild.data.id : getNodeText(rightChild)
-
-        if (node.parent === null) {
-            // Root node
-            return `Merkle Root = Hash(${leftLabel} + ${rightLabel})`
-        } else {
-            return `${getNodeText(node)} = Hash(${leftLabel} + ${rightLabel})`
+    // Updated getEquation function
+    const getEquation = (
+        node: d3.HierarchyPointNode<ScriptNode>,
+        index: number,
+        pathLength: number
+    ): string | null => {
+        if (!node.children) {
+            // Leaf node (script), no equation
+            return null
         }
-    } else {
-        // Should not happen, but handle gracefully
-        return null
+
+        if (node.children.length === 1) {
+            // Node with one child (e.g., H1 = Hash(Script1))
+            const child = node.children[0]
+            const childLabel = !child.children
+                ? child.data.id
+                : getNodeText(child)
+            return `${getNodeText(node)} = Hash(${childLabel})`
+        } else if (node.children.length === 2) {
+            // Node with two children
+            const leftChild = node.children[0]
+            const rightChild = node.children[1]
+            const leftLabel = !leftChild.children
+                ? leftChild.data.id
+                : getNodeText(leftChild)
+            const rightLabel = !rightChild.children
+                ? rightChild.data.id
+                : getNodeText(rightChild)
+
+            if (node.parent === null) {
+                // Root node
+                return `Merkle Root = Hash(${leftLabel} + ${rightLabel})`
+            } else {
+                return `${getNodeText(node)} = Hash(${leftLabel} + ${rightLabel})`
+            }
+        } else {
+            // Should not happen, but handle gracefully
+            return null
+        }
     }
-}
 
     const showNextEquation = (
         index: number,
@@ -768,13 +780,7 @@ const MerkleTreeExplainer: React.FC = () => {
                 }
                 pathData.lineTo(x + rx, y + height)
                 if (rx > 0 || ry > 0) {
-                    pathData.arcTo(
-                        x,
-                        y + height,
-                        x,
-                        y + height - ry,
-                        rx
-                    )
+                    pathData.arcTo(x, y + height, x, y + height - ry, rx)
                 }
                 pathData.lineTo(x, y + ry)
                 if (rx > 0 || ry > 0) {
@@ -866,7 +872,6 @@ const MerkleTreeExplainer: React.FC = () => {
         })
     }
 
-
     const handleSpend = useCallback(
         (id: string) => {
             setSelectedScriptId(id)
@@ -882,29 +887,23 @@ const MerkleTreeExplainer: React.FC = () => {
                 nodeGroup.selectAll(".border-path").remove()
 
                 // Reset node styles to default
-                nodeGroup
-                    .selectAll("g.node")
-                    .each(function (d) {
-                        const node = d3.select(this)
-                        const rect = node.select("rect")
-                        const text = node.select("text")
+                nodeGroup.selectAll("g.node").each(function (d) {
+                    const node = d3.select(this)
+                    const rect = node.select("rect")
+                    const text = node.select("text")
 
-                        rect
-                            .attr("fill", () => getNodeColor(d))
-                            .attr("stroke", () => getBorderColor(d))
-                            .attr("stroke-width", 1)
-                            .attr("opacity", 1)
+                    rect.attr("fill", () => getNodeColor(d))
+                        .attr("stroke", () => getBorderColor(d))
+                        .attr("stroke-width", 1)
+                        .attr("opacity", 1)
 
-                        text
-                            .attr("opacity", 1)
-                            .style("fill", () => getTextColor(d))
+                    text.attr("opacity", 1).style("fill", () => getTextColor(d))
 
-                        // Reset spend button opacity
-                        if (!d.children) {
-                            node.select(".spend-button")
-                                .attr("opacity", 1)
-                        }
-                    })
+                    // Reset spend button opacity
+                    if (!d.children) {
+                        node.select(".spend-button").attr("opacity", 1)
+                    }
+                })
 
                 // Reset link styles to default
                 nodeGroup
@@ -925,9 +924,7 @@ const MerkleTreeExplainer: React.FC = () => {
                     .filter(
                         (d) => path.includes(d.data.hash) || d.data.id === id
                     )
-                    .sort(
-                        (a, b) => d3.descending(a.depth, b.depth)
-                    )
+                    .sort((a, b) => d3.descending(a.depth, b.depth))
 
                 // Update node colors and opacity
                 nodeGroup
@@ -948,9 +945,7 @@ const MerkleTreeExplainer: React.FC = () => {
                             if (d.data.id === id) return "#4CAF50"
                             if (proof.includes(d.data.hash)) return "#ffe8d8"
                             if (path.includes(d.data.hash))
-                                return theme === "dark"
-                                    ? "#4a4a4a"
-                                    : "#ffffff"
+                                return theme === "dark" ? "#4a4a4a" : "#ffffff"
                             return theme === "dark" ? "#2d2d2d" : "#ffffff"
                         })
                             .attr("stroke", () => {
@@ -971,7 +966,9 @@ const MerkleTreeExplainer: React.FC = () => {
                         text.transition()
                             .duration(500)
                             .attr("opacity", isPartOfPath ? 1 : 0.3)
-                            .style("fill", () => getTextColor(d, newBackgroundColor))
+                            .style("fill", () =>
+                                getTextColor(d, newBackgroundColor)
+                            )
 
                         if (!d.children) {
                             node.select(".spend-button")
@@ -982,9 +979,7 @@ const MerkleTreeExplainer: React.FC = () => {
                     })
 
                 // Update link styles for path
-                nodeGroup
-                    .selectAll("path.link")
-                    .attr("opacity", 0.3)
+                nodeGroup.selectAll("path.link").attr("opacity", 0.3)
 
                 // Update the function call
                 showNextEquation(
