@@ -312,18 +312,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
-    "url": "https://github.com/ElementsProject/lightning/issues/7117",
-    "publishedAt": "2024-02-28T15:59:25Z",
-    "title": "gci: Consider adding a nightly CI workflow for reprobuilds",
-    "labels": [
-      "enhancement",
-      "help wanted",
-      "continuous-integration",
-      "build"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
     "url": "https://github.com/ElementsProject/lightning/issues/7172",
     "publishedAt": "2024-03-25T14:09:39Z",
     "title": "bitcoind: bad-txns-inputs-missingorspent on sendrawtransaction",
