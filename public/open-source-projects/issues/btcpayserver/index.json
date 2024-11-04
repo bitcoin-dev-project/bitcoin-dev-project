@@ -143,5 +143,15 @@
       "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6355",
+    "publishedAt": "2024-11-04T07:46:13Z",
+    "title": "Paid Lightning Network Invoices are not updating to \"settled\" transaction status.",
+    "labels": [
+      "Bug",
+      "Lightning"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
