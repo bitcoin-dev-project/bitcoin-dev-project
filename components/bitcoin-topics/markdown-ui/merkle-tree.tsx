@@ -226,16 +226,29 @@ const MerkleTreeExplainer: React.FC = () => {
         return luminance > 0.5 // Return true if light color
     }
 
-    // Make getNodeColor accessible
     const getNodeColor = useCallback(
-        (d?: d3.HierarchyPointNode<ScriptNode>) => {
+        (
+            d?:
+                | d3.HierarchyNode<ScriptNode>
+                | d3.HierarchyPointNode<ScriptNode>
+                | unknown
+        ) => {
             if (!d) return theme === "dark" ? "#1e1e1e" : "#ffffff"
 
-            if (!d.children) {
+            const node = d as
+                | d3.HierarchyNode<ScriptNode>
+                | d3.HierarchyPointNode<ScriptNode>
+            if (!("children" in node)) {
                 return "#effef3" // Leaf nodes (scripts)
-            } else if (merkleProofNodes.includes(d.data.hash)) {
+            } else if (
+                "data" in node &&
+                merkleProofNodes.includes(node.data.hash)
+            ) {
                 return "#ffe8d8" // Orange background for Merkle proof nodes
-            } else if (merklePathNodes.includes(d.data.hash)) {
+            } else if (
+                "data" in node &&
+                merklePathNodes.includes(node.data.hash)
+            ) {
                 return theme === "dark" ? "#3c3c3c" : "#ffffff"
             } else {
                 return theme === "dark" ? "#1e1e1e" : "#ffffff"
@@ -247,7 +260,7 @@ const MerkleTreeExplainer: React.FC = () => {
     // Function to get contrasting text color based on background
     const getTextColor = useCallback(
         (
-            d?: d3.HierarchyPointNode<ScriptNode>,
+            d?: d3.HierarchyPointNode<ScriptNode> | unknown,
             backgroundColorOverride?: string
         ) => {
             if (!d) return theme === "dark" ? "#ffffff" : "#333333"
@@ -279,15 +292,26 @@ const MerkleTreeExplainer: React.FC = () => {
     }, [])
 
     // Define getBorderColor function before drawTree
-    const getBorderColor = (d?: d3.HierarchyPointNode<ScriptNode>) => {
+    const getBorderColor = (
+        d?:
+            | d3.HierarchyNode<ScriptNode>
+            | d3.HierarchyPointNode<ScriptNode>
+            | unknown
+    ) => {
         if (!d)
             return theme === "dark"
                 ? "rgba(255, 255, 255, 0.1)"
                 : "rgba(0, 0, 0, 0.1)"
 
-        if (!d.children) {
+        const node = d as
+            | d3.HierarchyNode<ScriptNode>
+            | d3.HierarchyPointNode<ScriptNode>
+        if (!("children" in node)) {
             return "#28b648" // Border for leaf nodes (scripts)
-        } else if (merkleProofNodes.includes(d.data.hash)) {
+        } else if (
+            "data" in node &&
+            merkleProofNodes.includes(node.data.hash)
+        ) {
             return "#f36228" // Orange border for Merkle proof nodes
         }
         return theme === "dark"
@@ -900,7 +924,7 @@ const MerkleTreeExplainer: React.FC = () => {
                     text.attr("opacity", 1).style("fill", () => getTextColor(d))
 
                     // Reset spend button opacity
-                    if (!d.children) {
+                    if (!(d as d3.HierarchyPointNode<ScriptNode>).children) {
                         node.select(".spend-button").attr("opacity", 1)
                     }
                 })
