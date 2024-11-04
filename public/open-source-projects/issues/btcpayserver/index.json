@@ -145,6 +145,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6356",
+    "publishedAt": "2024-11-03T18:50:24Z",
+    "title": "Unable to export csv/xml form Reports",
+    "labels": [
+      "Bug",
+      "UI / UX"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6355",
     "publishedAt": "2024-11-04T07:46:13Z",
     "title": "Paid Lightning Network Invoices are not updating to \"settled\" transaction status.",
