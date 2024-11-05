@@ -330,14 +330,5 @@
       "backup"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/7790",
-    "publishedAt": "2024-11-03T23:42:55Z",
-    "title": "Rune rate is not working as expected",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
