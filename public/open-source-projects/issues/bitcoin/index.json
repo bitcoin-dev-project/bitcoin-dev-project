@@ -258,16 +258,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/25265",
-    "publishedAt": "2022-06-01T23:28:24Z",
-    "title": "Setting torcontrol overrides proxy address",
-    "labels": [
-      "Bug",
-      "P2P"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/25336",
     "publishedAt": "2022-06-11T03:08:31Z",
     "title": "Onlynet=ipv4 disables Tor advertisements",
