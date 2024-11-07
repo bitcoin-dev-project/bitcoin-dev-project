@@ -71,7 +71,7 @@ export function PrevNextLinks({
     }
 
     return (
-        <dl className="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800">
+        <dl className="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 max-w-3xl mx-auto">
             {next?.path && (
                 <PageLink
                     direction="previous"

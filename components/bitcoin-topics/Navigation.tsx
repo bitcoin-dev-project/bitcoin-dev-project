@@ -11,8 +11,16 @@ import {
 import { Topic, allTopics } from "@/.contentlayer/generated"
 import { useState, useEffect, useCallback, useMemo } from "react"
 import { motion } from "framer-motion"
-import { FaChevronRight, FaChevronDown } from "react-icons/fa"
+import {
+    FaChevronRight,
+    FaChevronDown,
+    FaCheck,
+    FaUsers,
+    FaCalendar
+} from "react-icons/fa"
 import * as Icons from "react-icons/fa"
+import { HiArrowRight } from "react-icons/hi2"
+import Image from "next/image"
 
 interface NavigationLink {
     title: string
@@ -20,6 +28,7 @@ interface NavigationLink {
     project: boolean
     children?: NavigationLink[]
     icon?: string
+    completed?: boolean
 }
 
 interface NavigationCategory {
@@ -51,6 +60,9 @@ export function Navigation({
     const [expandedTopics, setExpandedTopics] = useState<
         Record<string, boolean>
     >({})
+    const [completedTopics, setCompletedTopics] = useState<Set<string>>(
+        new Set()
+    )
 
     // Load expanded state from localStorage on component mount
     useEffect(() => {
@@ -93,6 +105,57 @@ export function Navigation({
             JSON.stringify(expandedChildren)
         )
     }, [expandedTopics])
+
+    // Update the useEffect to properly load completed topics
+    useEffect(() => {
+        const saved = localStorage.getItem("completedTopics")
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved)
+                // Convert the parsed object's keys into a Set
+                const completedSet = new Set(
+                    Object.keys(parsed).filter((key) => parsed[key])
+                )
+                setCompletedTopics(completedSet)
+            } catch (error) {
+                console.error("Error parsing completedTopics:", error)
+            }
+        }
+    }, [])
+
+    // Add listener for completion changes
+    useEffect(() => {
+        const handleCompletionChange = () => {
+            const saved = localStorage.getItem("completedTopics")
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved)
+                    const completedSet = new Set(
+                        Object.keys(parsed).filter((key) => parsed[key])
+                    )
+                    setCompletedTopics(completedSet)
+                } catch (error) {
+                    console.error("Error parsing completedTopics:", error)
+                }
+            }
+        }
+
+        window.addEventListener(
+            "topicCompletionChanged",
+            handleCompletionChange
+        )
+        return () => {
+            window.removeEventListener(
+                "topicCompletionChanged",
+                handleCompletionChange
+            )
+        }
+    }, [])
+
+    // normalize paths
+    const normalizePath = (path: string) => {
+        return path.replace("/decoding/", "").replace("/", "")
+    }
 
     const childSlugs = new Set(
         posts.flatMap(
@@ -242,28 +305,48 @@ export function Navigation({
                                         )}
                                         onClick={() => toggleTopic(link.href)}
                                     >
-                                        <Link
-                                            href={link.href}
-                                            onClick={(e) => {
-                                                e.stopPropagation()
-                                                onLinkClick && onLinkClick(e)
-                                                handleTopicClick(link)
-                                            }}
-                                            className={clsx(
-                                                "flex items-center font-medium w-full py-2 px-3 rounded-md",
-                                                link.href === pathname
-                                                    ? "text-orange-500"
-                                                    : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-                                            )}
-                                        >
-                                            {link.icon && getIcon(link.icon)}
-                                            {link.title}
-                                        </Link>
+                                        <div className="flex items-center min-w-0 flex-1">
+                                            <Link
+                                                href={link.href}
+                                                onClick={(e) => {
+                                                    e.stopPropagation()
+                                                    onLinkClick &&
+                                                        onLinkClick(e)
+                                                    handleTopicClick(link)
+                                                }}
+                                                className={clsx(
+                                                    "flex items-center flex-1 py-2 px-3 rounded-md min-w-0",
+                                                    link.href === pathname
+                                                        ? "text-orange-500"
+                                                        : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                                                )}
+                                            >
+                                                {completedTopics.has(
+                                                    normalizePath(link.href)
+                                                ) ? (
+                                                    <div className="flex-shrink-0 w-5 h-5 mr-2 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-500/20">
+                                                        <FaCheck
+                                                            className="w-2.5 h-2.5 text-orange-500 dark:text-orange-400"
+                                                            aria-label="Completed"
+                                                        />
+                                                    </div>
+                                                ) : (
+                                                    link.icon && (
+                                                        <span className="flex-shrink-0">
+                                                            {getIcon(link.icon)}
+                                                        </span>
+                                                    )
+                                                )}
+                                                <span className="truncate mr-2">
+                                                    {link.title}
+                                                </span>
+                                            </Link>
+                                        </div>
                                         {link.children &&
                                             link.children.length > 0 && (
                                                 <span
                                                     className={clsx(
-                                                        "ml-auto mr-3 text-xs flex-shrink-0 p-2",
+                                                        "flex-shrink-0 ml-auto mr-3 text-xs p-2",
                                                         link.href === pathname
                                                             ? "text-orange-500"
                                                             : "text-gray-400"
@@ -293,34 +376,59 @@ export function Navigation({
                                                             key={childLink.href}
                                                             className="relative"
                                                         >
-                                                            <Link
-                                                                href={
-                                                                    childLink.href
-                                                                }
-                                                                onClick={(
-                                                                    e
-                                                                ) => {
-                                                                    handleTopicClick(
-                                                                        childLink
-                                                                    )
-                                                                    onLinkClick &&
-                                                                        onLinkClick(
-                                                                            e
-                                                                        )
-                                                                }}
+                                                            <div
                                                                 className={clsx(
-                                                                    "block font-normal w-full py-2 px-3 rounded-md",
-                                                                    "transition-colors duration-200 ease-in-out",
+                                                                    "flex items-center rounded-md",
                                                                     childLink.href ===
                                                                         pathname
-                                                                        ? "bg-orange-100 dark:bg-orange-900/20 text-orange-500"
-                                                                        : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/50"
+                                                                        ? "bg-orange-100 dark:bg-orange-900/20"
+                                                                        : "hover:bg-gray-100 dark:hover:bg-gray-800/50"
                                                                 )}
                                                             >
-                                                                {
-                                                                    childLink.title
-                                                                }
-                                                            </Link>
+                                                                <div className="flex items-center min-w-0 flex-1">
+                                                                    {completedTopics.has(
+                                                                        normalizePath(
+                                                                            childLink.href
+                                                                        )
+                                                                    ) && (
+                                                                        <div className="ml-3 w-5 h-5 flex-shrink-0 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-500/20">
+                                                                            <FaCheck
+                                                                                className="w-2.5 h-2.5 text-orange-500 dark:text-orange-400"
+                                                                                aria-label="Completed"
+                                                                            />
+                                                                        </div>
+                                                                    )}
+                                                                    <Link
+                                                                        href={
+                                                                            childLink.href
+                                                                        }
+                                                                        onClick={(
+                                                                            e
+                                                                        ) => {
+                                                                            handleTopicClick(
+                                                                                childLink
+                                                                            )
+                                                                            onLinkClick &&
+                                                                                onLinkClick(
+                                                                                    e
+                                                                                )
+                                                                        }}
+                                                                        className={clsx(
+                                                                            "flex items-center flex-1 py-2 px-3 font-normal",
+                                                                            childLink.href ===
+                                                                                pathname
+                                                                                ? "text-orange-500"
+                                                                                : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                                                                        )}
+                                                                    >
+                                                                        <span className="truncate">
+                                                                            {
+                                                                                childLink.title
+                                                                            }
+                                                                        </span>
+                                                                    </Link>
+                                                                </div>
+                                                            </div>
                                                         </li>
                                                     )
                                                 )}
