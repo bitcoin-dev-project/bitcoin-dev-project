@@ -85,15 +85,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/5970",
-    "publishedAt": "2024-05-03T16:26:25Z",
-    "title": "[Bug]: Can't import wallet file / Electrum and Sparrow",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6007",
     "publishedAt": "2024-05-24T12:42:22Z",
     "title": "[Bug]: Payout broadcast a transaction but do not change to \"In Progress\" status when \"Subtract fees from amount\" is active",
