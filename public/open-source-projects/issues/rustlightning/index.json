@@ -165,16 +165,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2879",
-    "publishedAt": "2024-02-06T22:38:46Z",
-    "title": "Rename `payment_parameters_from_zero_amount_invoice` to imply amount-less, not 0-amount",
-    "labels": [
-      "good first issue",
-      "Take a Friday Leave a Friday"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/2958",
     "publishedAt": "2024-03-21T07:10:11Z",
     "title": "Move tests in `channelmanager.rs` into more appropriate test files",
