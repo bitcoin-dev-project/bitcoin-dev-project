@@ -13,7 +13,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { MoreVertical, CheckCircle, Loader2, ChevronRight } from "lucide-react"
+import { CheckCircle, Loader2, ArrowRight, MoreVertical } from "lucide-react"
 import React from "react"
 import { GitHubIcon } from "@/public/images/topics-hero/GitHubIcon"
 
@@ -60,15 +60,8 @@ export default function TopicBanner({
     }, [content.slug])
 
     const toggleCompleted = async () => {
-        if (isCompleted && showNextItem && prev?.path) {
-            router.push(`/${prev.path}`)
-            return
-        }
-
         if (isCompleted) {
             setIsCompleted(false)
-            setShowNextItem(false)
-
             const completedTopics = JSON.parse(
                 localStorage.getItem("completedTopics") || "{}"
             )
@@ -78,18 +71,14 @@ export default function TopicBanner({
                 "completedTopics",
                 JSON.stringify(completedTopics)
             )
-
             window.dispatchEvent(new Event("topicCompletionChanged"))
             return
         }
 
         setIsLoading(true)
-
         await new Promise((resolve) => setTimeout(resolve, 800))
-
-        setIsCompleted(true)
         setIsLoading(false)
-        setShowNextItem(true)
+        setIsCompleted(true)
 
         const completedTopics = JSON.parse(
             localStorage.getItem("completedTopics") || "{}"
@@ -97,51 +86,87 @@ export default function TopicBanner({
         const normalizedSlug = normalizePath(content.slug)
         completedTopics[normalizedSlug] = true
         localStorage.setItem("completedTopics", JSON.stringify(completedTopics))
-
         window.dispatchEvent(new Event("topicCompletionChanged"))
-
-        if (!next?.path) {
-            setShowNextItem(false)
-        }
     }
 
     const ActionButtons = () => (
-        <div className="flex items-center justify-between w-full">
-            <motion.button
-                onClick={toggleCompleted}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`inline-flex items-center px-3 py-1.5 text-sm font-normal border rounded transition-colors duration-200 ${
-                    isCompleted
-                        ? "bg-orange-500 text-white border-orange-600 hover:bg-orange-600 dark:bg-orange-500 dark:text-white dark:border-orange-600 dark:hover:bg-orange-600"
-                        : "border-orange-500 text-orange-500 hover:bg-orange-50 dark:border-orange-500 dark:text-orange-400 dark:hover:bg-orange-500/10"
-                }`}
-                disabled={isLoading}
-            >
-                {isLoading ? (
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                ) : isCompleted ? (
-                    <ChevronRight className="w-4 h-4 mr-2 stroke-white" />
-                ) : (
-                    <CheckCircle className="w-4 h-4 mr-2 fill-none stroke-orange-500 dark:stroke-orange-400" />
-                )}
-                {isLoading
-                    ? "Loading..."
-                    : isCompleted
-                      ? showNextItem
-                          ? "Go to next item"
-                          : "Completed"
-                      : "Mark as Complete"}
-            </motion.button>
-            <a
+        <div className="flex items-center justify-between w-full max-w-3xl mx-auto">
+            {/* Left side - Completion actions */}
+            <div className="flex items-center gap-4">
+                <AnimatePresence mode="wait">
+                    {isCompleted ? (
+                        <motion.div
+                            className="flex items-center gap-4"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 20 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <motion.button
+                                onClick={toggleCompleted}
+                                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-600 transition-colors"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                <CheckCircle className="w-4 h-4 mr-2" />
+                                Completed
+                            </motion.button>
+
+                            {prev?.path && (
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.2 }}
+                                >
+                                    <Link href={`/${prev.path}`}>
+                                        <motion.button
+                                            className="inline-flex items-center px-4 py-2 text-sm font-medium border-2 border-orange-500 text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-500/10 rounded-md transition-colors"
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
+                                        >
+                                            Next Topic
+                                            <ArrowRight className="w-4 h-4 ml-2" />
+                                        </motion.button>
+                                    </Link>
+                                </motion.div>
+                            )}
+                        </motion.div>
+                    ) : (
+                        <motion.button
+                            onClick={toggleCompleted}
+                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-orange-500 border-2 border-orange-500 rounded-md hover:bg-orange-50 dark:hover:bg-orange-500/10 transition-colors"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            disabled={isLoading}
+                        >
+                            {isLoading ? (
+                                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            ) : (
+                                <CheckCircle className="w-4 h-4 mr-2" />
+                            )}
+                            {isLoading
+                                ? "Marking as Complete..."
+                                : "Mark as Complete"}
+                        </motion.button>
+                    )}
+                </AnimatePresence>
+            </div>
+
+            {/* Right side - Suggest Edits */}
+            <motion.a
                 href={githubEditUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-3 py-1.5 text-sm font-normal text-gray-600 bg-transparent border border-gray-300 rounded hover:bg-gray-50 hover:text-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-200 transition-colors duration-200"
+                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800/50 transition-colors"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
             >
                 <GitHubIcon className="w-4 h-4 mr-2" />
                 Suggest Edits
-            </a>
+            </motion.a>
         </div>
     )
 
