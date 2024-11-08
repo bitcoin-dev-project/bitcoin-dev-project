@@ -163,5 +163,25 @@
       "Reporting"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6370",
+    "publishedAt": "2024-11-08T15:23:20Z",
+    "title": "[Bug]: WalletCamera for Address scanning doesn't work",
+    "labels": [
+      "Bug",
+      "UI / UX"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6371",
+    "publishedAt": "2024-11-08T18:08:42Z",
+    "title": "[Bug]: 2.0.1 Crowdfunding balance tracking logic is innacruate",
+    "labels": [
+      "Bug",
+      "Crowdfund"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
