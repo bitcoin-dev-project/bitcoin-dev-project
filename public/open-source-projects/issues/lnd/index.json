@@ -990,18 +990,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7969",
-    "publishedAt": "2023-09-09T08:04:24Z",
-    "title": "[bug]: dust HTLC is not failed upstream before downstream channel close is confirmed on-chain",
-    "labels": [
-      "bug",
-      "P1",
-      "needs triage",
-      "force closes"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7971",
     "publishedAt": "2023-09-10T09:12:07Z",
     "title": "[bug]: coin selection uses \"RBF\"ed inputs",
@@ -1145,6 +1133,18 @@
       "channel closing",
       "spec",
       "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8157",
+    "publishedAt": "2023-11-07T14:22:30Z",
+    "title": "[bug]: LND with Neutrino never fully starts up",
+    "labels": [
+      "bug",
+      "neutrino",
+      "networking",
+      "P2"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
