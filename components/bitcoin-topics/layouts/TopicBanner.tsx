@@ -8,14 +8,23 @@ import { Hero } from "../hero/Hero"
 import { PrevNextLinks } from "../topic/PrevNextLinks"
 import { Prose } from "../topic/Prose"
 import { TopicHeader } from "../topic/TopicHeader"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { MoreVertical } from "lucide-react"
+import {
+    MoreVertical,
+    CheckCircle,
+    Badge,
+    CheckCircle2,
+    Award,
+    Medal,
+    Loader2
+} from "lucide-react"
 import React from "react"
 import { GitHubIcon } from "@/public/images/topics-hero/GitHubIcon"
+import { FaApple } from "react-icons/fa"
 
 interface LayoutProps {
     content: CoreContent<Topic>
@@ -31,11 +40,15 @@ export default function TopicBanner({
     prev,
     children
 }: LayoutProps) {
-    const pathname: string | null = usePathname()
-    const isHomePage: boolean = pathname === "/decoding"
+    const router = useRouter()
+    const pathname = usePathname()
+    const isHomePage = pathname === "/decoding"
     const [isNavOpen, setIsNavOpen] = useState(false)
     const [currentPath, setCurrentPath] = useState<string[]>([])
     const [isScrolled, setIsScrolled] = useState(false)
+    const [isCompleted, setIsCompleted] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [showNextItem, setShowNextItem] = useState(false)
 
     const { title, tags }: { title: string; tags: string[] } = content
 
@@ -43,16 +56,106 @@ export default function TopicBanner({
 
     const githubEditUrl = `https://github.com/bitcoin-dev-project/bitcoin-topics/edit/main/decoding/${content.slug}.mdx`
 
-    const EditOnGitHubButton = () => (
-        <a
-            href={githubEditUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-3 py-1.5 mt-6 text-sm font-normal text-gray-600 bg-transparent border border-gray-300 rounded hover:bg-gray-50 hover:text-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-200 transition-colors duration-200"
-        >
-            <GitHubIcon className="w-4 h-4 mr-2" />
-            Suggest Edits
-        </a>
+    const normalizePath = (path: string) => {
+        return path.replace("/decoding/", "").replace("/", "")
+    }
+
+    useEffect(() => {
+        const completedTopics = JSON.parse(
+            localStorage.getItem("completedTopics") || "{}"
+        )
+        const normalizedSlug = normalizePath(content.slug)
+        setIsCompleted(!!completedTopics[normalizedSlug])
+    }, [content.slug])
+
+    const toggleCompleted = async () => {
+        if (isCompleted && showNextItem && prev?.path) {
+            router.push(`/${prev.path}`)
+            return
+        }
+
+        if (isCompleted) {
+            setIsCompleted(false)
+            setShowNextItem(false)
+
+            const completedTopics = JSON.parse(
+                localStorage.getItem("completedTopics") || "{}"
+            )
+            const normalizedSlug = normalizePath(content.slug)
+            delete completedTopics[normalizedSlug]
+            localStorage.setItem(
+                "completedTopics",
+                JSON.stringify(completedTopics)
+            )
+
+            window.dispatchEvent(new Event("topicCompletionChanged"))
+            return
+        }
+
+        setIsLoading(true)
+
+        await new Promise((resolve) => setTimeout(resolve, 800))
+
+        setIsCompleted(true)
+        setIsLoading(false)
+        setShowNextItem(true)
+
+        const completedTopics = JSON.parse(
+            localStorage.getItem("completedTopics") || "{}"
+        )
+        const normalizedSlug = normalizePath(content.slug)
+        completedTopics[normalizedSlug] = true
+        localStorage.setItem("completedTopics", JSON.stringify(completedTopics))
+
+        window.dispatchEvent(new Event("topicCompletionChanged"))
+
+        if (!next?.path) {
+            setShowNextItem(false)
+        }
+    }
+
+    const ActionButtons = () => (
+        <div className="flex items-center justify-between w-full">
+            <motion.button
+                onClick={toggleCompleted}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`inline-flex items-center px-3 py-1.5 text-sm font-normal border rounded transition-colors duration-200 ${
+                    isCompleted
+                        ? "bg-orange-500 text-white border-orange-600 hover:bg-orange-600 dark:bg-orange-500 dark:text-white dark:border-orange-600 dark:hover:bg-orange-600"
+                        : "border-orange-500 text-orange-500 hover:bg-orange-50 dark:border-orange-500 dark:text-orange-400 dark:hover:bg-orange-500/10"
+                }`}
+                disabled={isLoading}
+            >
+                {isLoading ? (
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                ) : isCompleted ? (
+                    showNextItem ? (
+                        <Award className="w-4 h-4 mr-2 stroke-white fill-none" />
+                    ) : (
+                        <Award className="w-4 h-4 mr-2 stroke-white fill-none" />
+                    )
+                ) : (
+                    <CheckCircle className="w-4 h-4 mr-2 fill-none stroke-orange-500 dark:stroke-orange-400" />
+                )}
+                {isLoading
+                    ? "Loading..."
+                    : isCompleted
+                      ? showNextItem
+                          ? "Go to next item"
+                          : "Completed"
+                      : "Mark as Complete"}
+            </motion.button>
+            <a
+                href={githubEditUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-3 py-1.5 text-sm font-normal text-gray-600 bg-transparent border border-gray-300 rounded hover:bg-gray-50 hover:text-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-200 transition-colors duration-200"
+            >
+                <GitHubIcon className="w-4 h-4 mr-2" />
+                Suggest Edits
+            </a>
+        </div>
     )
 
     useEffect(() => {
@@ -82,10 +185,26 @@ export default function TopicBanner({
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
-    const isInsideTopic =
-        pathname &&
-        pathname.startsWith("/decoding/") &&
-        pathname !== "/decoding"
+    useEffect(() => {
+        const handleCompletionChange = () => {
+            const saved = localStorage.getItem("completedTopics")
+            if (saved) {
+                setCompletedTopics(JSON.parse(saved))
+            }
+        }
+
+        window.addEventListener("topicCompletionChange", handleCompletionChange)
+        return () => {
+            window.removeEventListener(
+                "topicCompletionChange",
+                handleCompletionChange
+            )
+        }
+    }, [])
+
+    const isCommunitiesPath = pathname?.includes("/communities")
+
+    const isAttackCategory = content.category === "Attacks"
 
     return (
         <div className="flex w-full flex-col bg-vscode-background-light dark:bg-vscode-background-dark">
@@ -94,7 +213,7 @@ export default function TopicBanner({
             <div className="relative mx-auto flex w-full max-w-9xl flex-auto justify-center sm:pl-2 lg:pl-8 xl:pl-12">
                 {/* Desktop Navigation */}
                 <div className="hidden lg:relative lg:block lg:flex-none border-r border-orange">
-                    {isInsideTopic && (
+                    {isCommunitiesPath && (
                         <div className="absolute inset-y-0 right-0 w-[50vw] dark:bg-vscode-navigation-dark bg-vscode-navigation-light" />
                     )}
                     <div className="sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-4 xl:w-72 xl:pr-8">
@@ -196,25 +315,55 @@ export default function TopicBanner({
                                     </div>
                                 </div>
                                 <article>
-                                    <Prose>{children}</Prose>
+                                    {isCommunitiesPath ? (
+                                        <div className="max-w-6xl mx-auto">
+                                            {children}
+                                        </div>
+                                    ) : (
+                                        <Prose>{children}</Prose>
+                                    )}
                                 </article>
                             </>
                         ) : (
                             <article>
-                                <TopicHeader
-                                    title={title}
-                                    tags={tags}
-                                    summary={content.summary}
-                                />
-                                <Prose>{children}</Prose>
+                                {!isCommunitiesPath && (
+                                    <TopicHeader
+                                        title={title}
+                                        tags={tags}
+                                        summary={content.summary}
+                                        titleClassName={
+                                            isAttackCategory
+                                                ? "text-[#ff6163]"
+                                                : ""
+                                        }
+                                    />
+                                )}
+                                {isCommunitiesPath ? (
+                                    <div className="max-w-6xl mx-auto">
+                                        {children}
+                                    </div>
+                                ) : (
+                                    <>
+                                        <Prose>{children}</Prose>
+                                        <div className="max-w-3xl mx-auto mt-8 flex justify-end">
+                                            <ActionButtons />
+                                        </div>
+                                    </>
+                                )}
                             </article>
                         )}
-                        <PrevNextLinks prev={prev} next={next} />
+                        {!isCommunitiesPath && (
+                            <PrevNextLinks prev={prev} next={next} />
+                        )}
                     </motion.div>
                 </div>
 
                 {/* Desktop Main Content */}
-                <div className="hidden lg:block min-w-0 max-w-3xl flex-auto pb-16 lg:mx-auto lg:max-w-none lg:pr-0">
+                <div
+                    className={`hidden lg:block min-w-0 max-w-3xl flex-auto pb-16 lg:mx-auto lg:max-w-none lg:pr-0 ${
+                        isAttackCategory ? "bg-[#ff616340]" : ""
+                    }`}
+                >
                     {content.bannerImage ? (
                         <>
                             <div className="relative w-full h-[600px] mb-16">
@@ -228,32 +377,58 @@ export default function TopicBanner({
                                     <h2 className="text-2xl font-semibold text-white mb-2">
                                         Project
                                     </h2>
-                                    <h1 className="text-4xl font-extralight text-white">
+                                    <h1
+                                        className={`text-4xl font-extralight ${
+                                            isAttackCategory
+                                                ? "text-[#ff6163]"
+                                                : "text-white"
+                                        }`}
+                                    >
                                         {title}
                                     </h1>
                                 </div>
                             </div>
                             <article>
-                                <Prose>{children}</Prose>
+                                {isCommunitiesPath ? (
+                                    <div className="max-w-6xl mx-auto">
+                                        {children}
+                                    </div>
+                                ) : (
+                                    <Prose>{children}</Prose>
+                                )}
                             </article>
                         </>
                     ) : (
                         <article>
-                            <TopicHeader
-                                title={title}
-                                tags={tags}
-                                summary={content.summary}
-                            />
-                            <Prose>{children}</Prose>
-                            {/* Add the GitHub edit button for mobile */}
-                            <div className="max-w-3xl mx-auto mt-8 flex justify-end">
-                                <EditOnGitHubButton />
-                            </div>
+                            {!isCommunitiesPath && (
+                                <TopicHeader
+                                    title={title}
+                                    tags={tags}
+                                    summary={content.summary}
+                                    titleClassName={
+                                        isAttackCategory ? "text-[#ff6163]" : ""
+                                    }
+                                />
+                            )}
+                            {isCommunitiesPath ? (
+                                <div className="max-w-6xl mx-auto">
+                                    {children}
+                                </div>
+                            ) : (
+                                <>
+                                    <Prose>{children}</Prose>
+                                    <div className="max-w-3xl mx-auto mt-8 flex justify-end">
+                                        <ActionButtons />
+                                    </div>
+                                </>
+                            )}
                         </article>
                     )}
-                    <div className="xl:px-16">
-                        <PrevNextLinks prev={prev} next={next} />
-                    </div>
+                    {!isCommunitiesPath && (
+                        <div className="xl:px-16">
+                            <PrevNextLinks prev={prev} next={next} />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

@@ -56,7 +56,8 @@ const icons = {
     scripts: ScriptIcon,
     keys: KeysIcon,
     wallets: WalletsIcon,
-    transaction: TransactionIcon
+    transaction: TransactionIcon,
+    attacks: TransactionIcon
 }
 
 const iconStyles = {
