@@ -13,9 +13,18 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { CheckCircle, Loader2, ArrowRight, MoreVertical } from "lucide-react"
+import {
+    MoreVertical,
+    CheckCircle,
+    Badge,
+    CheckCircle2,
+    Award,
+    Medal,
+    Loader2
+} from "lucide-react"
 import React from "react"
 import { GitHubIcon } from "@/public/images/topics-hero/GitHubIcon"
+import { FaApple } from "react-icons/fa"
 
 interface LayoutProps {
     content: CoreContent<Topic>
@@ -60,8 +69,15 @@ export default function TopicBanner({
     }, [content.slug])
 
     const toggleCompleted = async () => {
+        if (isCompleted && showNextItem && prev?.path) {
+            router.push(`/${prev.path}`)
+            return
+        }
+
         if (isCompleted) {
             setIsCompleted(false)
+            setShowNextItem(false)
+
             const completedTopics = JSON.parse(
                 localStorage.getItem("completedTopics") || "{}"
             )
@@ -71,14 +87,18 @@ export default function TopicBanner({
                 "completedTopics",
                 JSON.stringify(completedTopics)
             )
+
             window.dispatchEvent(new Event("topicCompletionChanged"))
             return
         }
 
         setIsLoading(true)
+
         await new Promise((resolve) => setTimeout(resolve, 800))
-        setIsLoading(false)
+
         setIsCompleted(true)
+        setIsLoading(false)
+        setShowNextItem(true)
 
         const completedTopics = JSON.parse(
             localStorage.getItem("completedTopics") || "{}"
@@ -86,87 +106,55 @@ export default function TopicBanner({
         const normalizedSlug = normalizePath(content.slug)
         completedTopics[normalizedSlug] = true
         localStorage.setItem("completedTopics", JSON.stringify(completedTopics))
+
         window.dispatchEvent(new Event("topicCompletionChanged"))
+
+        if (!next?.path) {
+            setShowNextItem(false)
+        }
     }
 
     const ActionButtons = () => (
-        <div className="flex items-center justify-between w-full max-w-3xl mx-auto">
-            {/* Left side - Completion actions */}
-            <div className="flex items-center gap-4">
-                <AnimatePresence mode="wait">
-                    {isCompleted ? (
-                        <motion.div
-                            className="flex items-center gap-4"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 20 }}
-                            transition={{ duration: 0.3 }}
-                        >
-                            <motion.button
-                                onClick={toggleCompleted}
-                                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-600 transition-colors"
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                <CheckCircle className="w-4 h-4 mr-2" />
-                                Completed
-                            </motion.button>
-
-                            {prev?.path && (
-                                <motion.div
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.2 }}
-                                >
-                                    <Link href={`/${prev.path}`}>
-                                        <motion.button
-                                            className="inline-flex items-center px-4 py-2 text-sm font-medium border-2 border-orange-500 text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-500/10 rounded-md transition-colors"
-                                            whileHover={{ scale: 1.02 }}
-                                            whileTap={{ scale: 0.98 }}
-                                        >
-                                            Next Topic
-                                            <ArrowRight className="w-4 h-4 ml-2" />
-                                        </motion.button>
-                                    </Link>
-                                </motion.div>
-                            )}
-                        </motion.div>
+        <div className="flex items-center justify-between w-full">
+            <motion.button
+                onClick={toggleCompleted}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`inline-flex items-center px-3 py-1.5 text-sm font-normal border rounded transition-colors duration-200 ${
+                    isCompleted
+                        ? "bg-orange-500 text-white border-orange-600 hover:bg-orange-600 dark:bg-orange-500 dark:text-white dark:border-orange-600 dark:hover:bg-orange-600"
+                        : "border-orange-500 text-orange-500 hover:bg-orange-50 dark:border-orange-500 dark:text-orange-400 dark:hover:bg-orange-500/10"
+                }`}
+                disabled={isLoading}
+            >
+                {isLoading ? (
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                ) : isCompleted ? (
+                    showNextItem ? (
+                        <Award className="w-4 h-4 mr-2 stroke-white fill-none" />
                     ) : (
-                        <motion.button
-                            onClick={toggleCompleted}
-                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-orange-500 border-2 border-orange-500 rounded-md hover:bg-orange-50 dark:hover:bg-orange-500/10 transition-colors"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            disabled={isLoading}
-                        >
-                            {isLoading ? (
-                                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                            ) : (
-                                <CheckCircle className="w-4 h-4 mr-2" />
-                            )}
-                            {isLoading
-                                ? "Marking as Complete..."
-                                : "Mark as Complete"}
-                        </motion.button>
-                    )}
-                </AnimatePresence>
-            </div>
-
-            {/* Right side - Suggest Edits */}
-            <motion.a
+                        <Award className="w-4 h-4 mr-2 stroke-white fill-none" />
+                    )
+                ) : (
+                    <CheckCircle className="w-4 h-4 mr-2 fill-none stroke-orange-500 dark:stroke-orange-400" />
+                )}
+                {isLoading
+                    ? "Loading..."
+                    : isCompleted
+                      ? showNextItem
+                          ? "Go to next item"
+                          : "Completed"
+                      : "Mark as Complete"}
+            </motion.button>
+            <a
                 href={githubEditUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800/50 transition-colors"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center px-3 py-1.5 text-sm font-normal text-gray-600 bg-transparent border border-gray-300 rounded hover:bg-gray-50 hover:text-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-200 transition-colors duration-200"
             >
                 <GitHubIcon className="w-4 h-4 mr-2" />
                 Suggest Edits
-            </motion.a>
+            </a>
         </div>
     )
 
@@ -214,10 +202,9 @@ export default function TopicBanner({
         }
     }, [])
 
-    const isInsideTopic =
-        pathname &&
-        pathname.startsWith("/decoding/") &&
-        pathname !== "/decoding"
+    const isCommunitiesPath = pathname?.includes("/communities")
+
+    const isAttackCategory = content.category === "Attacks"
 
     return (
         <div className="flex w-full flex-col bg-vscode-background-light dark:bg-vscode-background-dark">
@@ -226,7 +213,7 @@ export default function TopicBanner({
             <div className="relative mx-auto flex w-full max-w-9xl flex-auto justify-center sm:pl-2 lg:pl-8 xl:pl-12">
                 {/* Desktop Navigation */}
                 <div className="hidden lg:relative lg:block lg:flex-none border-r border-orange">
-                    {isInsideTopic && (
+                    {isCommunitiesPath && (
                         <div className="absolute inset-y-0 right-0 w-[50vw] dark:bg-vscode-navigation-dark bg-vscode-navigation-light" />
                     )}
                     <div className="sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-4 xl:w-72 xl:pr-8">
@@ -328,25 +315,55 @@ export default function TopicBanner({
                                     </div>
                                 </div>
                                 <article>
-                                    <Prose>{children}</Prose>
+                                    {isCommunitiesPath ? (
+                                        <div className="max-w-6xl mx-auto">
+                                            {children}
+                                        </div>
+                                    ) : (
+                                        <Prose>{children}</Prose>
+                                    )}
                                 </article>
                             </>
                         ) : (
                             <article>
-                                <TopicHeader
-                                    title={title}
-                                    tags={tags}
-                                    summary={content.summary}
-                                />
-                                <Prose>{children}</Prose>
+                                {!isCommunitiesPath && (
+                                    <TopicHeader
+                                        title={title}
+                                        tags={tags}
+                                        summary={content.summary}
+                                        titleClassName={
+                                            isAttackCategory
+                                                ? "text-[#ff6163]"
+                                                : ""
+                                        }
+                                    />
+                                )}
+                                {isCommunitiesPath ? (
+                                    <div className="max-w-6xl mx-auto">
+                                        {children}
+                                    </div>
+                                ) : (
+                                    <>
+                                        <Prose>{children}</Prose>
+                                        <div className="max-w-3xl mx-auto mt-8 flex justify-end">
+                                            <ActionButtons />
+                                        </div>
+                                    </>
+                                )}
                             </article>
                         )}
-                        <PrevNextLinks prev={prev} next={next} />
+                        {!isCommunitiesPath && (
+                            <PrevNextLinks prev={prev} next={next} />
+                        )}
                     </motion.div>
                 </div>
 
                 {/* Desktop Main Content */}
-                <div className="hidden lg:block min-w-0 max-w-3xl flex-auto pb-16 lg:mx-auto lg:max-w-none lg:pr-0">
+                <div
+                    className={`hidden lg:block min-w-0 max-w-3xl flex-auto pb-16 lg:mx-auto lg:max-w-none lg:pr-0 ${
+                        isAttackCategory ? "bg-[#ff616340]" : ""
+                    }`}
+                >
                     {content.bannerImage ? (
                         <>
                             <div className="relative w-full h-[600px] mb-16">
@@ -360,31 +377,58 @@ export default function TopicBanner({
                                     <h2 className="text-2xl font-semibold text-white mb-2">
                                         Project
                                     </h2>
-                                    <h1 className="text-4xl font-extralight text-white">
+                                    <h1
+                                        className={`text-4xl font-extralight ${
+                                            isAttackCategory
+                                                ? "text-[#ff6163]"
+                                                : "text-white"
+                                        }`}
+                                    >
                                         {title}
                                     </h1>
                                 </div>
                             </div>
                             <article>
-                                <Prose>{children}</Prose>
+                                {isCommunitiesPath ? (
+                                    <div className="max-w-6xl mx-auto">
+                                        {children}
+                                    </div>
+                                ) : (
+                                    <Prose>{children}</Prose>
+                                )}
                             </article>
                         </>
                     ) : (
                         <article>
-                            <TopicHeader
-                                title={title}
-                                tags={tags}
-                                summary={content.summary}
-                            />
-                            <Prose>{children}</Prose>
-                            <div className="max-w-3xl mx-auto mt-8 flex justify-end">
-                                <ActionButtons />
-                            </div>
+                            {!isCommunitiesPath && (
+                                <TopicHeader
+                                    title={title}
+                                    tags={tags}
+                                    summary={content.summary}
+                                    titleClassName={
+                                        isAttackCategory ? "text-[#ff6163]" : ""
+                                    }
+                                />
+                            )}
+                            {isCommunitiesPath ? (
+                                <div className="max-w-6xl mx-auto">
+                                    {children}
+                                </div>
+                            ) : (
+                                <>
+                                    <Prose>{children}</Prose>
+                                    <div className="max-w-3xl mx-auto mt-8 flex justify-end">
+                                        <ActionButtons />
+                                    </div>
+                                </>
+                            )}
                         </article>
                     )}
-                    <div className="xl:px-16">
-                        <PrevNextLinks prev={prev} next={next} />
-                    </div>
+                    {!isCommunitiesPath && (
+                        <div className="xl:px-16">
+                            <PrevNextLinks prev={prev} next={next} />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
