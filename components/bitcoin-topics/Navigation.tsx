@@ -13,6 +13,9 @@ import { useState, useEffect, useCallback, useMemo } from "react"
 import { motion } from "framer-motion"
 import { FaChevronRight, FaChevronDown } from "react-icons/fa"
 import * as Icons from "react-icons/fa"
+import { HiArrowRight } from "react-icons/hi2"
+import Image from "next/image"
+import { getAllCommunities } from "@/lib/data/communities"
 
 interface NavigationLink {
     title: string
@@ -93,6 +96,57 @@ export function Navigation({
             JSON.stringify(expandedChildren)
         )
     }, [expandedTopics])
+
+    // Update the useEffect to properly load completed topics
+    useEffect(() => {
+        const saved = localStorage.getItem("completedTopics")
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved)
+                // Convert the parsed object's keys into a Set
+                const completedSet = new Set(
+                    Object.keys(parsed).filter((key) => parsed[key])
+                )
+                setCompletedTopics(completedSet)
+            } catch (error) {
+                console.error("Error parsing completedTopics:", error)
+            }
+        }
+    }, [])
+
+    // Add listener for completion changes
+    useEffect(() => {
+        const handleCompletionChange = () => {
+            const saved = localStorage.getItem("completedTopics")
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved)
+                    const completedSet = new Set(
+                        Object.keys(parsed).filter((key) => parsed[key])
+                    )
+                    setCompletedTopics(completedSet)
+                } catch (error) {
+                    console.error("Error parsing completedTopics:", error)
+                }
+            }
+        }
+
+        window.addEventListener(
+            "topicCompletionChanged",
+            handleCompletionChange
+        )
+        return () => {
+            window.removeEventListener(
+                "topicCompletionChanged",
+                handleCompletionChange
+            )
+        }
+    }, [])
+
+    // Helper function to normalize paths
+    const normalizePath = (path: string) => {
+        return path.replace("/decoding/", "").replace("/", "")
+    }
 
     const childSlugs = new Set(
         posts.flatMap(
@@ -208,6 +262,11 @@ export function Navigation({
         [expandedTopics]
     )
 
+    const communities = getAllCommunities()
+    const activeCommunities = communities.filter(
+        (community) => community.currentCohort.status === "in-progress"
+    )
+
     return (
         <nav className={clsx("text-md lg:text-sm font-medium", className)}>
             <Link
@@ -222,6 +281,56 @@ export function Navigation({
                     </div>
                 </div>
             </Link>
+
+            <div className="mb-8 space-y-2">
+                {/* Active Communities Preview */}
+                <Link
+                    href="/decoding/communities"
+                    className={clsx(
+                        "block relative group",
+                        "bg-gradient-to-r from-orange-500/10 to-orange-600/5",
+                        "hover:from-orange-500/20 hover:to-orange-600/10",
+                        "dark:from-orange-500/5 dark:to-orange-600/0",
+                        "dark:hover:from-orange-500/10 dark:hover:to-orange-600/5",
+                        "rounded-lg p-4 transition-all duration-200"
+                    )}
+                >
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                            <div className="p-2 bg-orange-500/10 rounded-lg">
+                                <Icons.FaUsers className="w-5 h-5 text-orange-500" />
+                            </div>
+                            <div>
+                                <h3 className="font-medium text-gray-900 dark:text-gray-100">
+                                    Active Communities
+                                </h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-400">
+                                    {activeCommunities.length} cohorts in
+                                    progress
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <div className="flex -space-x-2">
+                                {activeCommunities.map((community) => (
+                                    <div
+                                        key={community.id}
+                                        className="relative w-6 h-6 rounded-full border-2 border-white dark:border-gray-900 overflow-hidden"
+                                    >
+                                        <Image
+                                            src={community.logo}
+                                            alt={community.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            <HiArrowRight className="w-4 h-4 text-orange-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </div>
+                    </div>
+                </Link>
+            </div>
 
             <ul role="list" className="space-y-6">
                 {navigation.map((section) => (

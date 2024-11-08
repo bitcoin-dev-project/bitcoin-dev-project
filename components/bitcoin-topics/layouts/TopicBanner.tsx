@@ -8,12 +8,12 @@ import { Hero } from "../hero/Hero"
 import { PrevNextLinks } from "../topic/PrevNextLinks"
 import { Prose } from "../topic/Prose"
 import { TopicHeader } from "../topic/TopicHeader"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { MoreVertical } from "lucide-react"
+import { CheckCircle, Loader2, ArrowRight, MoreVertical } from "lucide-react"
 import React from "react"
 import { GitHubIcon } from "@/public/images/topics-hero/GitHubIcon"
 
@@ -31,11 +31,15 @@ export default function TopicBanner({
     prev,
     children
 }: LayoutProps) {
-    const pathname: string | null = usePathname()
-    const isHomePage: boolean = pathname === "/decoding"
+    const router = useRouter()
+    const pathname = usePathname()
+    const isHomePage = pathname === "/decoding"
     const [isNavOpen, setIsNavOpen] = useState(false)
     const [currentPath, setCurrentPath] = useState<string[]>([])
     const [isScrolled, setIsScrolled] = useState(false)
+    const [isCompleted, setIsCompleted] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [showNextItem, setShowNextItem] = useState(false)
 
     const { title, tags }: { title: string; tags: string[] } = content
 
@@ -43,16 +47,127 @@ export default function TopicBanner({
 
     const githubEditUrl = `https://github.com/bitcoin-dev-project/bitcoin-topics/edit/main/decoding/${content.slug}.mdx`
 
-    const EditOnGitHubButton = () => (
-        <a
-            href={githubEditUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-3 py-1.5 mt-6 text-sm font-normal text-gray-600 bg-transparent border border-gray-300 rounded hover:bg-gray-50 hover:text-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-200 transition-colors duration-200"
-        >
-            <GitHubIcon className="w-4 h-4 mr-2" />
-            Suggest Edits
-        </a>
+    const normalizePath = (path: string) => {
+        return path.replace("/decoding/", "").replace("/", "")
+    }
+
+    useEffect(() => {
+        const completedTopics = JSON.parse(
+            localStorage.getItem("completedTopics") || "{}"
+        )
+        const normalizedSlug = normalizePath(content.slug)
+        setIsCompleted(!!completedTopics[normalizedSlug])
+    }, [content.slug])
+
+    const toggleCompleted = async () => {
+        if (isCompleted) {
+            setIsCompleted(false)
+            const completedTopics = JSON.parse(
+                localStorage.getItem("completedTopics") || "{}"
+            )
+            const normalizedSlug = normalizePath(content.slug)
+            delete completedTopics[normalizedSlug]
+            localStorage.setItem(
+                "completedTopics",
+                JSON.stringify(completedTopics)
+            )
+            window.dispatchEvent(new Event("topicCompletionChanged"))
+            return
+        }
+
+        setIsLoading(true)
+        await new Promise((resolve) => setTimeout(resolve, 800))
+        setIsLoading(false)
+        setIsCompleted(true)
+
+        const completedTopics = JSON.parse(
+            localStorage.getItem("completedTopics") || "{}"
+        )
+        const normalizedSlug = normalizePath(content.slug)
+        completedTopics[normalizedSlug] = true
+        localStorage.setItem("completedTopics", JSON.stringify(completedTopics))
+        window.dispatchEvent(new Event("topicCompletionChanged"))
+    }
+
+    const ActionButtons = () => (
+        <div className="flex items-center justify-between w-full max-w-3xl mx-auto">
+            {/* Left side - Completion actions */}
+            <div className="flex items-center gap-4">
+                <AnimatePresence mode="wait">
+                    {isCompleted ? (
+                        <motion.div
+                            className="flex items-center gap-4"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 20 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <motion.button
+                                onClick={toggleCompleted}
+                                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-600 transition-colors"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                <CheckCircle className="w-4 h-4 mr-2" />
+                                Completed
+                            </motion.button>
+
+                            {prev?.path && (
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.2 }}
+                                >
+                                    <Link href={`/${prev.path}`}>
+                                        <motion.button
+                                            className="inline-flex items-center px-4 py-2 text-sm font-medium border-2 border-orange-500 text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-500/10 rounded-md transition-colors"
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
+                                        >
+                                            Next Topic
+                                            <ArrowRight className="w-4 h-4 ml-2" />
+                                        </motion.button>
+                                    </Link>
+                                </motion.div>
+                            )}
+                        </motion.div>
+                    ) : (
+                        <motion.button
+                            onClick={toggleCompleted}
+                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-orange-500 border-2 border-orange-500 rounded-md hover:bg-orange-50 dark:hover:bg-orange-500/10 transition-colors"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            disabled={isLoading}
+                        >
+                            {isLoading ? (
+                                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            ) : (
+                                <CheckCircle className="w-4 h-4 mr-2" />
+                            )}
+                            {isLoading
+                                ? "Marking as Complete..."
+                                : "Mark as Complete"}
+                        </motion.button>
+                    )}
+                </AnimatePresence>
+            </div>
+
+            {/* Right side - Suggest Edits */}
+            <motion.a
+                href={githubEditUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800/50 transition-colors"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+            >
+                <GitHubIcon className="w-4 h-4 mr-2" />
+                Suggest Edits
+            </motion.a>
+        </div>
     )
 
     useEffect(() => {
@@ -80,6 +195,23 @@ export default function TopicBanner({
 
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
+    useEffect(() => {
+        const handleCompletionChange = () => {
+            const saved = localStorage.getItem("completedTopics")
+            if (saved) {
+                setCompletedTopics(JSON.parse(saved))
+            }
+        }
+
+        window.addEventListener("topicCompletionChange", handleCompletionChange)
+        return () => {
+            window.removeEventListener(
+                "topicCompletionChange",
+                handleCompletionChange
+            )
+        }
     }, [])
 
     const isInsideTopic =
@@ -245,9 +377,8 @@ export default function TopicBanner({
                                 summary={content.summary}
                             />
                             <Prose>{children}</Prose>
-                            {/* Add the GitHub edit button for mobile */}
                             <div className="max-w-3xl mx-auto mt-8 flex justify-end">
-                                <EditOnGitHubButton />
+                                <ActionButtons />
                             </div>
                         </article>
                     )}

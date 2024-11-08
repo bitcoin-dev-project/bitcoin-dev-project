@@ -87,6 +87,8 @@ export default function TopicLayout({
         pathname.startsWith("/decoding/") &&
         pathname !== "/decoding"
 
+    const isAttackCategory = content.category === "Attacks"
+
     return (
         <div className="flex w-full flex-col bg-vscode-background-light dark:bg-vscode-background-dark">
             {isHomePage && <Hero />}
@@ -192,15 +194,21 @@ export default function TopicLayout({
                 </div>
 
                 {/* Desktop Main Content */}
-                <div className="hidden lg:block min-w-0 max-w-3xl flex-auto px-4 py-16 lg:mx-auto lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
+                <div
+                    className={`hidden lg:block min-w-0 max-w-3xl flex-auto px-4 py-16 lg:mx-auto lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16 ${
+                        isAttackCategory ? "bg-[#ff616340]" : ""
+                    }`}
+                >
                     <article>
                         <TopicHeader
                             title={title}
                             tags={tags}
                             summary={content.summary}
+                            titleClassName={
+                                isAttackCategory ? "text-[#ff6163]" : ""
+                            }
                         />
                         <Prose>{children}</Prose>
-                        {/* Add the GitHub edit button for mobile */}
                         <div className="max-w-3xl mx-auto mt-8 flex justify-end">
                             <EditOnGitHubButton />
                         </div>
