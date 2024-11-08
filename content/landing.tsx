@@ -10,6 +10,7 @@ import screenshotChatBTC from "@/public/images/hero/screenshots/chatBTC.png"
 import screenshotSavingSatoshi from "@/public/images/hero/screenshots/saving_satoshi.png"
 import screenshotDecodingBitcoin from "@/public/images/hero/screenshots/decoding-bitcoin.png"
 import screenshotBTCdemy from "@/public/images/hero/screenshots/btc-demy.png"
+import screenshotWarnet from "@/public/images/hero/screenshots/warnet.png"
 
 import logoBitcoinSearch from "@/public/images/tools/bitcoin-search.jpg"
 import logoBitcoinTLDR from "@/public/images/tools/bitcoin-tldr.jpg"
@@ -168,6 +169,14 @@ export const tools: Array<IFeature> = [
         image: screenshotChatBTC,
         icon: logoChatBTC,
         link: "https://chat.bitcoinsearch.xyz"
+    },
+    {
+        name: "Warnet",
+        description:
+            "Monitor and analyze the emergent behaviors of P2P networks",
+        summary: "",
+        image: screenshotWarnet,
+        link: "https://warnet.dev"
     }
 ]
 
