@@ -210,15 +210,5 @@
       "dkg"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/6241",
-    "publishedAt": "2024-10-29T01:09:48Z",
-    "title": "gatewayd: cltv limit .... should be greater than ....",
-    "labels": [
-      "bug",
-      "lightning"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
