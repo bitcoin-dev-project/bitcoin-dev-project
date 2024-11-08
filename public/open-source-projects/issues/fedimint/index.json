@@ -1,15 +1,5 @@
 [
   {
-    "url": "https://github.com/fedimint/fedimint/issues/1245",
-    "publishedAt": "2023-01-08T22:37:47Z",
-    "title": "Upstream HtlcAccepted, Onion, and Htlc structs to cln_plugin",
-    "labels": [
-      "good first issue",
-      "lightning"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/1344",
     "publishedAt": "2023-01-16T17:35:13Z",
     "title": "1-click deployments",
