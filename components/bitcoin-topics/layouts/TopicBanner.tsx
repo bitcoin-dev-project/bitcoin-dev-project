@@ -201,7 +201,9 @@ export default function TopicBanner({
         const handleCompletionChange = () => {
             const saved = localStorage.getItem("completedTopics")
             if (saved) {
-                setCompletedTopics(JSON.parse(saved))
+                const completedTopics = JSON.parse(saved)
+                const normalizedSlug = normalizePath(content.slug)
+                setIsCompleted(!!completedTopics[normalizedSlug])
             }
         }
 
@@ -212,7 +214,7 @@ export default function TopicBanner({
                 handleCompletionChange
             )
         }
-    }, [])
+    }, [content.slug])
 
     const isInsideTopic =
         pathname &&
