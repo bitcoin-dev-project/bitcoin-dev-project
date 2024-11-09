@@ -70,6 +70,31 @@ const ContinueReadingComp: React.FC<{
     handleContinueReading: () => void
 }> = ({ lastVisitedTopicTitle, handleContinueReading }) => {
     const [isHovered, setIsHovered] = useState(false)
+    const [progress, setProgress] = useState(0)
+
+    useEffect(() => {
+        try {
+            // Get completed topics from localStorage
+            const completedTopicsStr = localStorage.getItem("completedTopics")
+            const completedTopics = completedTopicsStr
+                ? JSON.parse(completedTopicsStr)
+                : {}
+
+            const completedCount = Object.keys(completedTopics).length
+            const totalTopics = allTopics.length || 1
+
+            // Calculate progress percentage
+            const progressPercentage = Math.round(
+                (completedCount / totalTopics) * 100
+            )
+
+            // Ensure we set a valid number
+            setProgress(isNaN(progressPercentage) ? 0 : progressPercentage)
+        } catch (error) {
+            console.error("Error calculating progress:", error)
+            setProgress(0)
+        }
+    }, [])
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-vscode-background-light to-vscode-background-light dark:from-vscode-background-dark dark:to-vscode-background-dark">
@@ -128,12 +153,14 @@ const ContinueReadingComp: React.FC<{
                             </Button>
                             <Button
                                 href="/decoding/1-welcome"
-                                className="flex-1 bg-transparent hover:bg-vscode-header-background-light  dark:hover:bg-vscode-hover-dark text-gray-800 dark:text-gray-200 font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out text-lg flex items-center justify-center border border-gray-300 dark:border-gray-600"
+                                onClick={() => {
+                                    localStorage.removeItem("lastVisitedTopic")
+                                    localStorage.removeItem("completedTopics")
+                                }}
+                                className="flex-1 bg-transparent hover:bg-vscode-header-background-light dark:hover:bg-vscode-hover-dark text-gray-800 dark:text-gray-200 font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out text-lg flex items-center justify-center border border-gray-300 dark:border-gray-600"
                             >
                                 <HistoryIcon className="mr-2 h-5 w-5 text-gray-900 dark:text-gray-200" />
                                 <span className="text-gray-900 dark:text-gray-200">
-                                    {" "}
-                                    {/* Added span for light mode text color */}
                                     Start from the beginning
                                 </span>
                             </Button>
@@ -159,6 +186,25 @@ const ContinueReadingComp: React.FC<{
                                             <p className="text-sm text-gray-500 dark:text-gray-400">
                                                 Last visited topic
                                             </p>
+                                        </div>
+                                    </div>
+                                    <div className="mt-4">
+                                        <div className="flex justify-between items-center mb-2">
+                                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                                                Overall Progress
+                                            </span>
+                                            <span className="text-sm font-medium text-orange-500">
+                                                {isNaN(progress) ? 0 : progress}
+                                                %
+                                            </span>
+                                        </div>
+                                        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                            <div
+                                                className="bg-orange-500 h-2.5 rounded-full transition-all duration-300 ease-in-out"
+                                                style={{
+                                                    width: `${progress}%`
+                                                }}
+                                            ></div>
                                         </div>
                                     </div>
                                 </div>

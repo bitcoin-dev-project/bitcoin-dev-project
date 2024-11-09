@@ -23,7 +23,6 @@ import MailingListSignup from "./mailing-list-signup"
 import { BitcoinHistory } from "./bitcoin-history"
 import HexTransactionHighlighter from "./hex-transaction-highlighter"
 import DiscordInvite from "./discord-invite"
-import EllipticCurveVisualizer from "./elliptic-curve-visualizer"
 
 export const components: MDXComponents = {
     Image,

@@ -19,7 +19,7 @@ const communitiesContent = {
 }
 
 // Add a helper function to format the status display text
-const getStatusDisplay = (status: CohortStatus) => {
+const getStatusDisplay = (status: string) => {
     switch (status) {
         case "in-progress":
             return {
@@ -59,7 +59,7 @@ export default function CommunitiesPage() {
     })
 
     return (
-        <TopicBanner content={communitiesContent}>
+        <div>
             <div className="max-w-7xl mx-auto py-8 px-4">
                 {/* Header */}
                 <div className="text-center mb-12">
@@ -204,6 +204,6 @@ export default function CommunitiesPage() {
                     ))}
                 </div>
             </div>
-        </TopicBanner>
+        </div>
     )
 }

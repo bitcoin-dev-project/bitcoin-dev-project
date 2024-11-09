@@ -388,7 +388,7 @@ export default function CommunityDashboard({
     const totalWeeks = communityData.weeklyData.length
 
     return (
-        <TopicBanner content={mockContent}>
+        <div>
             <div className="max-w-7xl mx-auto py-8">
                 {/* Completion Banner */}
                 {isCompleted && (
@@ -858,6 +858,6 @@ export default function CommunityDashboard({
                     </div>
                 </div>
             </div>
-        </TopicBanner>
+        </div>
     )
 }
