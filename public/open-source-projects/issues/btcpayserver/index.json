@@ -177,7 +177,7 @@
   {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6371",
     "publishedAt": "2024-11-08T18:08:42Z",
-    "title": "[Bug]: 2.0.1 Crowdfunding balance tracking logic is innacruate",
+    "title": "[Bug]: 2.0.1 Crowdfunding balance tracking logic is inaccurate",
     "labels": [
       "Bug",
       "Crowdfund"
