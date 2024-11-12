@@ -64,6 +64,41 @@ export function Navigation({
         new Set()
     )
 
+    // Define handleCompletionChange outside of useEffect hooks
+    const handleCompletionChange = useCallback(() => {
+        const saved = localStorage.getItem("completedTopics")
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved)
+                const completedSet = new Set(
+                    Object.keys(parsed).filter((key) => parsed[key])
+                )
+                setCompletedTopics(completedSet)
+            } catch (error) {
+                console.error("Error parsing completedTopics:", error)
+            }
+        }
+    }, [])
+
+    // Load completed topics from localStorage on component mount
+    useEffect(() => {
+        handleCompletionChange()
+    }, [handleCompletionChange])
+
+    // Add listener for completion changes
+    useEffect(() => {
+        window.addEventListener(
+            "topicCompletionChanged",
+            handleCompletionChange
+        )
+        return () => {
+            window.removeEventListener(
+                "topicCompletionChanged",
+                handleCompletionChange
+            )
+        }
+    }, [handleCompletionChange])
+
     // Load expanded state from localStorage on component mount
     useEffect(() => {
         const savedState = localStorage.getItem("expandedTopics")
@@ -105,52 +140,6 @@ export function Navigation({
             JSON.stringify(expandedChildren)
         )
     }, [expandedTopics])
-
-    // Update the useEffect to properly load completed topics
-    useEffect(() => {
-        const saved = localStorage.getItem("completedTopics")
-        if (saved) {
-            try {
-                const parsed = JSON.parse(saved)
-                // Convert the parsed object's keys into a Set
-                const completedSet = new Set(
-                    Object.keys(parsed).filter((key) => parsed[key])
-                )
-                setCompletedTopics(completedSet)
-            } catch (error) {
-                console.error("Error parsing completedTopics:", error)
-            }
-        }
-    }, [])
-
-    // Add listener for completion changes
-    useEffect(() => {
-        const handleCompletionChange = () => {
-            const saved = localStorage.getItem("completedTopics")
-            if (saved) {
-                try {
-                    const parsed = JSON.parse(saved)
-                    const completedSet = new Set(
-                        Object.keys(parsed).filter((key) => parsed[key])
-                    )
-                    setCompletedTopics(completedSet)
-                } catch (error) {
-                    console.error("Error parsing completedTopics:", error)
-                }
-            }
-        }
-
-        window.addEventListener(
-            "topicCompletionChanged",
-            handleCompletionChange
-        )
-        return () => {
-            window.removeEventListener(
-                "topicCompletionChanged",
-                handleCompletionChange
-            )
-        }
-    }, [])
 
     // normalize paths
     const normalizePath = (path: string) => {
