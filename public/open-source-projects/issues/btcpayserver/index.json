@@ -150,27 +150,8 @@
     "title": "Paid Lightning Network Invoices are not updating to \"settled\" transaction status.",
     "labels": [
       "Bug",
-      "Lightning"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6364",
-    "publishedAt": "2024-11-07T23:26:52Z",
-    "title": "[Bug]: InvoiceCurrencyAmount and Rate columns in exported csv displays 0.00",
-    "labels": [
-      "Bug",
-      "Reporting"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6370",
-    "publishedAt": "2024-11-08T15:23:20Z",
-    "title": "[Bug]: WalletCamera for Address scanning doesn't work",
-    "labels": [
-      "Bug",
-      "UI / UX"
+      "Lightning",
+      "blocked"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
