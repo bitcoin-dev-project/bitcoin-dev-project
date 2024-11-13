@@ -374,6 +374,9 @@ export default function BaseLayout({
                             <article>
                                 <Prose>{children}</Prose>
                             </article>
+                            <div className="max-w-3xl mx-auto mt-8 flex justify-between items-center">
+                                <ActionButtons />
+                            </div>
                         </>
                     ) : (
                         <article>
