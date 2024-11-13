@@ -148,16 +148,16 @@ export function getTopicData(slug: string): {
     const nextTopic = findNextTopic(postNode, siblings)
     const prevTopic = findPrevTopic(postNode, siblings)
 
-    const prev = nextTopic
-        ? {
-              path: `decoding/${nextTopic.topic.slug}`,
-              title: nextTopic.topic.title
-          }
-        : undefined
-    const next = prevTopic
+    const prev = prevTopic
         ? {
               path: `decoding/${prevTopic.topic.slug}`,
               title: prevTopic.topic.title
+          }
+        : undefined
+    const next = nextTopic
+        ? {
+              path: `decoding/${nextTopic.topic.slug}`,
+              title: nextTopic.topic.title
           }
         : undefined
 
