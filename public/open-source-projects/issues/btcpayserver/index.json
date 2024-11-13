@@ -154,14 +154,5 @@
       "Crowdfund"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6389",
-    "publishedAt": "2024-11-12T12:42:53Z",
-    "title": "[Bug]: Create  Payout Processors for BTC-Chain - blank page",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
