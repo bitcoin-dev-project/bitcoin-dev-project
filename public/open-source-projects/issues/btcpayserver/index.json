@@ -113,25 +113,5 @@
       "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6371",
-    "publishedAt": "2024-11-08T18:08:42Z",
-    "title": "[Bug]: 2.0.1 Crowdfunding balance tracking logic is inaccurate",
-    "labels": [
-      "Bug",
-      "Crowdfund"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6398",
-    "publishedAt": "2024-11-13T09:14:11Z",
-    "title": "[Bug]: HTML tag is visible in UI after UTXO rescan",
-    "labels": [
-      "Bug",
-      "UI / UX"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
