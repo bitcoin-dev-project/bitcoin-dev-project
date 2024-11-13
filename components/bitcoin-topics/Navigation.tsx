@@ -80,13 +80,9 @@ export function Navigation({
         }
     }, [])
 
-    // Load completed topics from localStorage on component mount
+    // Load completed topics and add listener
     useEffect(() => {
         handleCompletionChange()
-    }, [handleCompletionChange])
-
-    // Add listener for completion changes
-    useEffect(() => {
         window.addEventListener(
             "topicCompletionChanged",
             handleCompletionChange
