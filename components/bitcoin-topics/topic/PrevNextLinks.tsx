@@ -71,21 +71,21 @@ export function PrevNextLinks({
     }
 
     return (
-        <dl className="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800">
-            {next?.path && (
-                <PageLink
-                    direction="previous"
-                    title={next.title}
-                    href={`/${next.path}`}
-                    onClick={() => handleTopicClick(`/${next.path}`)}
-                />
-            )}
+        <dl className="mt-12 flex border-t border-gray-200 pt-6 dark:border-gray-800 max-w-3xl mx-auto">
             {prev?.path && (
                 <PageLink
-                    className="ml-auto text-right"
+                    direction="previous"
                     title={prev.title}
                     href={`/${prev.path}`}
                     onClick={() => handleTopicClick(`/${prev.path}`)}
+                />
+            )}
+            {next?.path && (
+                <PageLink
+                    className="ml-auto text-right"
+                    title={next.title}
+                    href={`/${next.path}`}
+                    onClick={() => handleTopicClick(`/${next.path}`)}
                 />
             )}
         </dl>
