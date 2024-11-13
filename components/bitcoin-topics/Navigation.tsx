@@ -11,16 +11,8 @@ import {
 import { Topic, allTopics } from "@/.contentlayer/generated"
 import { useState, useEffect, useCallback, useMemo } from "react"
 import { motion } from "framer-motion"
-import {
-    FaChevronRight,
-    FaChevronDown,
-    FaCheck,
-    FaUsers,
-    FaCalendar
-} from "react-icons/fa"
+import { FaChevronRight, FaChevronDown, FaCheck } from "react-icons/fa"
 import * as Icons from "react-icons/fa"
-import { HiArrowRight } from "react-icons/hi2"
-import Image from "next/image"
 
 interface NavigationLink {
     title: string
