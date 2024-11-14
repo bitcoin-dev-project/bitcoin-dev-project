@@ -314,16 +314,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/26245",
-    "publishedAt": "2022-10-04T12:59:27Z",
-    "title": "Header inconsistency after invalidate/reconsider block",
-    "labels": [
-      "Bug",
-      "Validation"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/26317",
     "publishedAt": "2022-10-15T04:02:21Z",
     "title": "avoid_reuse=true is incorrectly skipping one of my UXTOs",
