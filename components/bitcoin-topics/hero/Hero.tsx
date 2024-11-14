@@ -71,6 +71,7 @@ const ContinueReadingComp: React.FC<{
 }> = ({ lastVisitedTopicTitle, handleContinueReading }) => {
     const [isHovered, setIsHovered] = useState(false)
     const [progress, setProgress] = useState(0)
+    const router = useRouter()
 
     useEffect(() => {
         try {
@@ -152,10 +153,17 @@ const ContinueReadingComp: React.FC<{
                                 Resume Reading
                             </Button>
                             <Button
-                                href="/decoding/1-welcome"
                                 onClick={() => {
-                                    localStorage.removeItem("lastVisitedTopic")
+                                    const welcomeTopicData = {
+                                        href: "/decoding/welcome",
+                                        children: []
+                                    }
+                                    localStorage.setItem(
+                                        "lastVisitedTopic",
+                                        JSON.stringify(welcomeTopicData)
+                                    )
                                     localStorage.removeItem("completedTopics")
+                                    router.push("/decoding/welcome")
                                 }}
                                 className="flex-1 bg-transparent hover:bg-vscode-header-background-light dark:hover:bg-vscode-hover-dark text-gray-800 dark:text-gray-200 font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out text-lg flex items-center justify-center border border-gray-300 dark:border-gray-600"
                             >
@@ -298,7 +306,34 @@ export function Hero() {
 
     const handleContinueReading = () => {
         if (lastVisitedTopic) {
-            router.push(lastVisitedTopic)
+            const topic = posts.find(
+                (post) => `/${post.path}` === lastVisitedTopic
+            )
+            if (topic) {
+                router.push(lastVisitedTopic)
+            } else {
+                // Update localStorage with welcome page data before redirecting
+                const welcomeTopicData = {
+                    href: "/decoding/welcome",
+                    children: []
+                }
+                localStorage.setItem(
+                    "lastVisitedTopic",
+                    JSON.stringify(welcomeTopicData)
+                )
+                router.push("/decoding/welcome")
+            }
+        } else {
+            // Handle case where lastVisitedTopic is null
+            const welcomeTopicData = {
+                href: "/decoding/welcome",
+                children: []
+            }
+            localStorage.setItem(
+                "lastVisitedTopic",
+                JSON.stringify(welcomeTopicData)
+            )
+            router.push("/decoding/welcome")
         }
     }
 
@@ -342,7 +377,7 @@ export function Hero() {
                                         Bitcoin development.
                                     </p>
                                     <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                                        <Button href="/decoding/1-welcome">
+                                        <Button href="/decoding/welcome">
                                             Get started
                                         </Button>
                                         <Button
