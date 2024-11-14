@@ -7,7 +7,8 @@ const config: Config = {
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
         "./node_modules/pliny/**/*.js",
         "./layouts/**/*.{js,ts,tsx}",
-        "./public/bitcoin-topics/**/*.mdx"
+        "./public/bitcoin-topics/**/*.mdx",
+        "node_modules/@bitcoin-dev-project/bdp-ui/dist/**/*.{js,mjs,jsx,ts,tsx}"
     ],
     darkMode: "class",
     theme: {
