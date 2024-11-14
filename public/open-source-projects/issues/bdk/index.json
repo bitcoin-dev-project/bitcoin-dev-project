@@ -399,5 +399,16 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1707",
+    "publishedAt": "2024-11-14T04:42:09Z",
+    "title": "Consider unconfirmed ancestors in tx fee estimation",
+    "labels": [
+      "bug",
+      "module-wallet",
+      "audit"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
