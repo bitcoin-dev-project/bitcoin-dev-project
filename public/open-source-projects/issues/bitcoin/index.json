@@ -527,5 +527,15 @@
       "Tests"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/31289",
+    "publishedAt": "2024-11-14T15:05:29Z",
+    "title": "bitcoin-qt failed assertion on startup",
+    "labels": [
+      "Bug",
+      "GUI"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
