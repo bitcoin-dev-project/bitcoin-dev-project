@@ -340,7 +340,7 @@ export function Hero() {
     const lastVisitedTopicTitle = useMemo(() => {
         if (!lastVisitedTopic) return null
         const topic = posts.find((post) => `/${post.path}` === lastVisitedTopic)
-        return topic ? topic.title : "Last Topic"
+        return topic ? topic.title : null
     }, [lastVisitedTopic, posts])
 
     return (
