@@ -103,16 +103,8 @@
     "title": "Feature Request: include a super macaroon for litd in the GUI",
     "labels": [
       "enhancement",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
-  },
-  {
-    "url": "https://github.com/jamaljsr/polar/issues/1049",
-    "publishedAt": "2024-11-14T21:40:41Z",
-    "title": "Bug: GUI block height does not detect manually mined blocks using `bitcoin-cli`",
-    "labels": [
-      "bug"
+      "good first issue",
+      "up for grabs"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   }
