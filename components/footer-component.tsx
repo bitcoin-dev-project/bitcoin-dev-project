@@ -2,6 +2,7 @@
 
 import React from "react"
 import { Footer } from "@bitcoin-dev-project/bdp-ui"
+import { LinkedinIcon } from "lucide-react"
 
 function Wrapper({
     className,
@@ -52,6 +53,15 @@ const FooterComponent = () => {
                                 iconProps: {
                                     className: "hover:text-orange-400"
                                 }
+                            },
+                            {
+                                entity: "linkedIn",
+                                entityLink:
+                                    "https://www.linkedin.com/company/bitcoin-devs/",
+                                iconProps: {
+                                    className: "hover:text-orange-400"
+                                },
+                                icon: <LinkedinIcon className="w-full h-full" />
                             }
                         ]}
                     />
