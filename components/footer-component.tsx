@@ -2,9 +2,6 @@
 
 import React from "react"
 import { Footer } from "@bitcoin-dev-project/bdp-ui"
-import Link from "next/link"
-// import { menuApps } from "@/utils/data";
-import Image from "next/image"
 
 function Wrapper({
     className,
@@ -21,8 +18,8 @@ function Wrapper({
 const FooterComponent = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full">
-            <div className="border-b-[0.5px] border-b-gray-custom-400 max-md:mx-6 w-full"></div>
-            <Wrapper className="py-10 max-md:pt-8 max-md:pb-[67px] max-lg:px-2 w-full">
+            <div className="border-b-[0.5px] border-b-gray-custom-400 w-full"></div>
+            <Wrapper className="py-10 w-full">
                 <Footer>
                     <Footer.Socials
                         platforms={[
