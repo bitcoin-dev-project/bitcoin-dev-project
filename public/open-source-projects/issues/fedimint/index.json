@@ -210,14 +210,5 @@
       "dkg"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/6334",
-    "publishedAt": "2024-11-11T18:19:03Z",
-    "title": "Likely memory leak",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
