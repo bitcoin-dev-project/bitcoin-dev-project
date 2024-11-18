@@ -117,5 +117,15 @@
       "Email"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6409",
+    "publishedAt": "2024-11-18T13:53:01Z",
+    "title": "[Bug]: ",
+    "labels": [
+      "Bug",
+      "Payment Request"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
