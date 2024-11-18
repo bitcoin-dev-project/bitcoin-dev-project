@@ -990,18 +990,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7971",
-    "publishedAt": "2023-09-10T09:12:07Z",
-    "title": "[bug]: coin selection uses \"RBF\"ed inputs",
-    "labels": [
-      "bug",
-      "P2",
-      "coin selection",
-      "rbf"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7973",
     "publishedAt": "2023-09-11T14:59:59Z",
     "title": "[bug]: Channel not propagating in gossip and unable to update policies",
@@ -1145,6 +1133,18 @@
       "neutrino",
       "networking",
       "P2"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8172",
+    "publishedAt": "2023-11-13T12:08:29Z",
+    "title": "[bug]: Do not allow replayed HTLCs to be intercepted.",
+    "labels": [
+      "bug",
+      "HTLC",
+      "P2",
+      "interceptors"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
