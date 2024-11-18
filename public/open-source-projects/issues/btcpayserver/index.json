@@ -121,7 +121,7 @@
   {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6409",
     "publishedAt": "2024-11-18T13:53:01Z",
-    "title": "[Bug]: ",
+    "title": "[Bug]: Payment History in payment requests is invisible for `pending payment` and invalid invoices shown as pending",
     "labels": [
       "Bug",
       "Payment Request"
