@@ -114,16 +114,16 @@ const weeklyTopics = {
         resources: ["bitcoin-history"]
     },
     week2: {
-        mainTopic: "3-overview",
+        mainTopic: "overview",
         resources: [
-            "3-1-overview-stack",
-            "3-2-overview-opcodes",
-            "3-3-overview-locking-unlocking"
+            "stack",
+            "opcodes",
+            "locking-unlocking"
         ]
     },
     week3: {
-        mainTopic: "4-p2pk",
-        resources: ["4-0-p2pk-problems", "4-1-p2pk-exercise1"]
+        mainTopic: "p2pk",
+        resources: ["p2pk-problems", "p2pk-exercise1"]
     },
     week4: {
         mainTopic: "pay-to-public-key-p2pk",
@@ -138,24 +138,24 @@ const weeklyTopics = {
         mainTopic: "pay-to-public-key-p2pkh",
         resources: [
             "5-p2pkh-introduction",
-            "5-1-p2pkh-exercise1",
-            "5-2-p2pkh-exercise2"
+            "p2pkh-exercise1",
+            "p2pkh-exercise2"
         ]
     },
     week6: {
         mainTopic: "pay-to-script-hash-p2sh",
         resources: [
-            "6-p2sh-introduction",
-            "6-1-p2sh-exercise",
-            "6-2-p2sh-exercise"
+            "p2sh-introduction",
+            "p2sh-exercise",
+            "p2sh-exercise"
         ]
     },
     week7: {
         mainTopic: "pay-to-multisig-p2ms",
         resources: [
-            "7-p2ms-introduction",
-            "7-1-p2ms-exercise",
-            "7-2-p2ms-exercise"
+            "p2ms-introduction",
+            "p2ms-exercise",
+            "p2ms-exercise"
         ]
     },
     week8: {
@@ -177,35 +177,35 @@ const mockTopics = {
         category: "Course",
         parent: null
     },
-    "3-1-overview-stack": {
-        slug: "3-1-overview-stack",
+    "stack": {
+        slug: "stack",
         title: "Stack Overview",
         category: "Course",
-        parent: "3-overview"
+        parent: "overview"
     },
-    "3-2-overview-opcodes": {
-        slug: "3-2-overview-opcodes",
+    "opcodes": {
+        slug: "opcodes",
         title: "Bitcoin Opcodes",
         category: "Course",
-        parent: "3-overview"
+        parent: "overview"
     },
-    "3-3-overview-locking-unlocking": {
-        slug: "3-3-overview-locking-unlocking",
+    "locking-unlocking": {
+        slug: "locking-unlocking",
         title: "Locking and Unlocking Scripts",
         category: "Course",
-        parent: "3-overview"
+        parent: "overview"
     },
-    "4-0-p2pk-problems": {
-        slug: "4-0-p2pk-problems",
+    "p2pk-problems": {
+        slug: "p2pk-problems",
         title: "P2PK Problems",
         category: "Course",
-        parent: "4-p2pk"
+        parent: "p2pk"
     },
-    "4-1-p2pk-exercise1": {
-        slug: "4-1-p2pk-exercise1",
+    "p2pk-exercise1": {
+        slug: "p2pk-exercise1",
         title: "P2PK Exercise 1",
         category: "Exercise",
-        parent: "4-p2pk"
+        parent: "p2pk"
     }
 }
 
@@ -277,7 +277,7 @@ export const communitiesData: Community[] = [
                         id: 2,
                         title: "Script Execution Model",
                         type: "Course",
-                        link: "1-1-script-execution",
+                        link: "script-execution",
                         completed: false,
                         parentTopic: "1-introduction"
                     },
@@ -285,7 +285,7 @@ export const communitiesData: Community[] = [
                         id: 3,
                         title: "Basic Script Operations",
                         type: "Exercise",
-                        link: "1-2-basic-operations",
+                        link: "basic-operations",
                         completed: false,
                         parentTopic: "1-introduction"
                     }
@@ -297,11 +297,11 @@ export const communitiesData: Community[] = [
                     },
                     {
                         text: "Explain how the stack works in Bitcoin Script using a simple arithmetic operation example",
-                        relatedMaterial: "1-1-script-execution"
+                        relatedMaterial: "script-execution"
                     },
                     {
                         text: "What are the main categories of Script operations available in Bitcoin?",
-                        relatedMaterial: "1-2-basic-operations"
+                        relatedMaterial: "basic-operations"
                     },
                     {
                         text: "How does Bitcoin validate transactions using Script?",
@@ -313,7 +313,7 @@ export const communitiesData: Community[] = [
                     },
                     {
                         text: "Demonstrate how to debug a simple Bitcoin Script execution",
-                        relatedMaterial: "1-2-basic-operations"
+                        relatedMaterial: "basic-operations"
                     }
                 ]),
                 weeklyCall: {
@@ -395,71 +395,71 @@ export const communitiesData: Community[] = [
                         id: 1,
                         title: "Stack Operations",
                         type: "Course",
-                        link: "3-1-overview-stack",
+                        link: "stack",
                         completed: false,
-                        parentTopic: "3-overview"
+                        parentTopic: "overview"
                     },
                     {
                         id: 2,
                         title: "Bitcoin Opcodes",
                         type: "Course",
-                        link: "3-2-overview-opcodes",
+                        link: "opcodes",
                         completed: false,
-                        parentTopic: "3-overview"
+                        parentTopic: "overview"
                     },
                     {
                         id: 3,
                         title: "Locking & Unlocking Scripts",
                         type: "Course",
-                        link: "3-3-overview-locking-unlocking",
+                        link: "locking-unlocking",
                         completed: false,
-                        parentTopic: "3-overview"
+                        parentTopic: "overview"
                     },
                     {
                         id: 4,
                         title: "Script Success and Failure",
                         type: "Course",
-                        link: "3-4-overview-script-success-failure",
+                        link: "script-success-failure",
                         completed: false,
-                        parentTopic: "3-overview"
+                        parentTopic: "overview"
                     },
                     {
                         id: 5,
                         title: "Standard & Non-Standard Scripts",
                         type: "Course",
-                        link: "3-5-overview-standard-nonstandard",
+                        link: "standard-nonstandard",
                         completed: false,
-                        parentTopic: "3-overview"
+                        parentTopic: "overview"
                     }
                 ],
                 questions: distributeQuestionsToGroups([
                     {
                         text: "Explain how stack operations work in Bitcoin Script and provide an example of OP_ADD execution",
-                        relatedMaterial: "/decoding/3-1-overview-stack"
+                        relatedMaterial: "/decoding/stack"
                     },
                     {
                         text: "What are the main categories of Bitcoin opcodes and their purposes?",
-                        relatedMaterial: "/decoding/3-2-overview-opcodes"
+                        relatedMaterial: "/decoding/opcodes"
                     },
                     {
                         text: "Describe the relationship between locking and unlocking scripts in Bitcoin transactions",
                         relatedMaterial:
-                            "/decoding/3-3-overview-locking-unlocking"
+                            "/decoding/locking-unlocking"
                     },
                     {
                         text: "What determines script success or failure in Bitcoin? Explain the validation rules",
                         relatedMaterial:
-                            "/decoding/3-4-overview-script-success-failure"
+                            "/decoding/script-success-failure"
                     },
                     {
                         text: "Compare standard and non-standard scripts in Bitcoin. How are they handled by the network?",
                         relatedMaterial:
-                            "/decoding/3-5-overview-standard-nonstandard"
+                            "/decoding/standard-nonstandard"
                     },
                     {
                         text: "What is the IsStandard() function and how does it affect transaction relay policies?",
                         relatedMaterial:
-                            "/decoding/3-5-overview-standard-nonstandard"
+                            "/decoding/standard-nonstandard"
                     }
                 ]),
                 weeklyCall: {
@@ -486,59 +486,59 @@ export const communitiesData: Community[] = [
                         id: 1,
                         title: "P2PK Introduction",
                         type: "Course",
-                        link: "4-p2pk",
+                        link: "p2pk",
                         completed: false,
-                        parentTopic: "4-p2pk"
+                        parentTopic: "p2pk"
                     },
                     {
                         id: 2,
                         title: "Problems with P2PK",
                         type: "Course",
-                        link: "4-0-p2pk-problems",
+                        link: "p2pk-problems",
                         completed: false,
-                        parentTopic: "4-p2pk"
+                        parentTopic: "p2pk"
                     },
                     {
                         id: 3,
                         title: "P2PK Exercise 1",
                         type: "Exercise",
-                        link: "4-1-p2pk-exercise1",
+                        link: "p2pk-exercise1",
                         completed: false,
-                        parentTopic: "4-p2pk"
+                        parentTopic: "p2pk"
                     },
                     {
                         id: 4,
                         title: "P2PK Exercise 2",
                         type: "Exercise",
-                        link: "4-2-p2pk-exercise2",
+                        link: "p2pk-exercise2",
                         completed: false,
-                        parentTopic: "4-p2pk"
+                        parentTopic: "p2pk"
                     }
                 ],
                 questions: distributeQuestionsToGroups([
                     {
                         text: "Explain how P2PK works in Bitcoin and analyze the first P2PK transaction in block 170",
-                        relatedMaterial: "/decoding/4-p2pk"
+                        relatedMaterial: "/decoding/p2pk"
                     },
                     {
                         text: "What are the main problems with P2PK and why was it eventually replaced?",
-                        relatedMaterial: "/decoding/4-0-p2pk-problems"
+                        relatedMaterial: "/decoding/p2pk-problems"
                     },
                     {
                         text: "Compare compressed and uncompressed public keys in P2PK transactions. Why did Satoshi use uncompressed keys?",
-                        relatedMaterial: "/decoding/4-p2pk"
+                        relatedMaterial: "/decoding/p2pk"
                     },
                     {
                         text: "Describe the process of validating a P2PK transaction using Bitcoin's Script language",
-                        relatedMaterial: "/decoding/4-p2pk"
+                        relatedMaterial: "/decoding/p2pk"
                     },
                     {
                         text: "How does the stack-based execution model work in P2PK script validation?",
-                        relatedMaterial: "/decoding/4-p2pk"
+                        relatedMaterial: "/decoding/p2pk"
                     },
                     {
                         text: "What security considerations should be taken into account when using P2PK scripts?",
-                        relatedMaterial: "/decoding/4-0-p2pk-problems"
+                        relatedMaterial: "/decoding/p2pk-problems"
                     }
                 ]),
                 weeklyCall: {
@@ -573,7 +573,7 @@ export const communitiesData: Community[] = [
                         id: 2,
                         title: "P2PKH Exercise 1",
                         type: "Exercise",
-                        link: "5-1-p2pkh-exercise1",
+                        link: "p2pkh-exercise1",
                         completed: false,
                         parentTopic: "5-p2pkh"
                     },
@@ -581,7 +581,7 @@ export const communitiesData: Community[] = [
                         id: 3,
                         title: "P2PKH Exercise 2",
                         type: "Exercise",
-                        link: "5-2-p2pkh-exercise2",
+                        link: "p2pkh-exercise2",
                         completed: false,
                         parentTopic: "5-p2pkh"
                     }
@@ -636,51 +636,51 @@ export const communitiesData: Community[] = [
                         id: 1,
                         title: "P2SH Introduction",
                         type: "Course",
-                        link: "6-p2sh",
+                        link: "p2sh",
                         completed: false,
-                        parentTopic: "6-p2sh"
+                        parentTopic: "p2sh"
                     },
                     {
                         id: 2,
                         title: "P2SH Exercise 1",
                         type: "Exercise",
-                        link: "6-1-p2sh-exercise",
+                        link: "p2sh-exercise",
                         completed: false,
-                        parentTopic: "6-p2sh"
+                        parentTopic: "p2sh"
                     },
                     {
                         id: 3,
                         title: "P2SH Exercise 2",
                         type: "Exercise",
-                        link: "6-2-p2sh-exercise",
+                        link: "p2sh-exercise",
                         completed: false,
-                        parentTopic: "6-p2sh"
+                        parentTopic: "p2sh"
                     }
                 ],
                 questions: distributeQuestionsToGroups([
                     {
                         text: "Analyze the first P2SH transaction in Bitcoin's history. What makes it significant?",
-                        relatedMaterial: "6-p2sh"
+                        relatedMaterial: "p2sh"
                     },
                     {
                         text: "How does P2SH improve upon earlier Bitcoin script types? Discuss its advantages",
-                        relatedMaterial: "6-p2sh"
+                        relatedMaterial: "p2sh"
                     },
                     {
                         text: "Explain the process of creating and validating a P2SH transaction",
-                        relatedMaterial: "6-p2sh"
+                        relatedMaterial: "p2sh"
                     },
                     {
                         text: "How are P2SH addresses generated? Describe the step-by-step process",
-                        relatedMaterial: "6-p2sh"
+                        relatedMaterial: "p2sh"
                     },
                     {
                         text: "Compare the script execution process between P2SH and P2PKH transactions",
-                        relatedMaterial: "6-p2sh"
+                        relatedMaterial: "p2sh"
                     },
                     {
                         text: "What role does the redeem script play in P2SH, and how is it validated?",
-                        relatedMaterial: "6-p2sh"
+                        relatedMaterial: "p2sh"
                     }
                 ]),
                 weeklyCall: {
@@ -707,51 +707,51 @@ export const communitiesData: Community[] = [
                         id: 1,
                         title: "P2MS Introduction",
                         type: "Course",
-                        link: "7-p2ms",
+                        link: "p2ms",
                         completed: false,
-                        parentTopic: "7-p2ms"
+                        parentTopic: "p2ms"
                     },
                     {
                         id: 2,
                         title: "P2MS Exercise 1",
                         type: "Exercise",
-                        link: "7-1-p2ms-exercise",
+                        link: "p2ms-exercise",
                         completed: false,
-                        parentTopic: "7-p2ms"
+                        parentTopic: "p2ms"
                     },
                     {
                         id: 3,
                         title: "P2MS Exercise 2",
                         type: "Exercise",
-                        link: "7-2-p2ms-exercise",
+                        link: "p2ms-exercise",
                         completed: false,
-                        parentTopic: "7-p2ms"
+                        parentTopic: "p2ms"
                     }
                 ],
                 questions: distributeQuestionsToGroups([
                     {
                         text: "Explain the difference between bare P2MS and P2SH-wrapped multisig. What are the advantages of each?",
-                        relatedMaterial: "7-p2ms"
+                        relatedMaterial: "p2ms"
                     },
                     {
                         text: "What are the standardness rules for P2MS transactions and how do they differ from validity rules?",
-                        relatedMaterial: "7-p2ms"
+                        relatedMaterial: "p2ms"
                     },
                     {
                         text: "Why is OP_0 used in P2MS ScriptSig and what is the 'off-by-one' bug?",
-                        relatedMaterial: "7-p2ms"
+                        relatedMaterial: "p2ms"
                     },
                     {
                         text: "How does signature order affect P2MS script execution efficiency?",
-                        relatedMaterial: "7-p2ms"
+                        relatedMaterial: "p2ms"
                     },
                     {
                         text: "Compare the structure of P2MS locking and unlocking scripts. How do they work together?",
-                        relatedMaterial: "7-p2ms"
+                        relatedMaterial: "p2ms"
                     },
                     {
                         text: "What are the practical limitations of P2MS and how can they be overcome?",
-                        relatedMaterial: "7-p2ms"
+                        relatedMaterial: "p2ms"
                     }
                 ]),
                 weeklyCall: {
