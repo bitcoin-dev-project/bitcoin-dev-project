@@ -115,11 +115,7 @@ const weeklyTopics = {
     },
     week2: {
         mainTopic: "overview",
-        resources: [
-            "stack",
-            "opcodes",
-            "locking-unlocking"
-        ]
+        resources: ["stack", "opcodes", "locking-unlocking"]
     },
     week3: {
         mainTopic: "p2pk",
@@ -144,19 +140,11 @@ const weeklyTopics = {
     },
     week6: {
         mainTopic: "pay-to-script-hash-p2sh",
-        resources: [
-            "p2sh-introduction",
-            "p2sh-exercise",
-            "p2sh-exercise"
-        ]
+        resources: ["p2sh-introduction", "p2sh-exercise", "p2sh-exercise"]
     },
     week7: {
         mainTopic: "pay-to-multisig-p2ms",
-        resources: [
-            "p2ms-introduction",
-            "p2ms-exercise",
-            "p2ms-exercise"
-        ]
+        resources: ["p2ms-introduction", "p2ms-exercise", "p2ms-exercise"]
     },
     week8: {
         mainTopic: "taproot",
@@ -177,13 +165,13 @@ const mockTopics = {
         category: "Course",
         parent: null
     },
-    "stack": {
+    stack: {
         slug: "stack",
         title: "Stack Overview",
         category: "Course",
         parent: "overview"
     },
-    "opcodes": {
+    opcodes: {
         slug: "opcodes",
         title: "Bitcoin Opcodes",
         category: "Course",
@@ -443,23 +431,19 @@ export const communitiesData: Community[] = [
                     },
                     {
                         text: "Describe the relationship between locking and unlocking scripts in Bitcoin transactions",
-                        relatedMaterial:
-                            "/decoding/locking-unlocking"
+                        relatedMaterial: "/decoding/locking-unlocking"
                     },
                     {
                         text: "What determines script success or failure in Bitcoin? Explain the validation rules",
-                        relatedMaterial:
-                            "/decoding/script-success-failure"
+                        relatedMaterial: "/decoding/script-success-failure"
                     },
                     {
                         text: "Compare standard and non-standard scripts in Bitcoin. How are they handled by the network?",
-                        relatedMaterial:
-                            "/decoding/standard-nonstandard"
+                        relatedMaterial: "/decoding/standard-nonstandard"
                     },
                     {
                         text: "What is the IsStandard() function and how does it affect transaction relay policies?",
-                        relatedMaterial:
-                            "/decoding/standard-nonstandard"
+                        relatedMaterial: "/decoding/standard-nonstandard"
                     }
                 ]),
                 weeklyCall: {

@@ -258,16 +258,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/25265",
-    "publishedAt": "2022-06-01T23:28:24Z",
-    "title": "Setting torcontrol overrides proxy address",
-    "labels": [
-      "Bug",
-      "P2P"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/25336",
     "publishedAt": "2022-06-11T03:08:31Z",
     "title": "Onlynet=ipv4 disables Tor advertisements",
@@ -320,16 +310,6 @@
     "labels": [
       "Bug",
       "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/26245",
-    "publishedAt": "2022-10-04T12:59:27Z",
-    "title": "Header inconsistency after invalidate/reconsider block",
-    "labels": [
-      "Bug",
-      "Validation"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
@@ -535,6 +515,16 @@
       "Bug",
       "Wallet",
       "Tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/31289",
+    "publishedAt": "2024-11-14T15:05:29Z",
+    "title": "bitcoin-qt failed assertion on startup",
+    "labels": [
+      "Bug",
+      "GUI"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }

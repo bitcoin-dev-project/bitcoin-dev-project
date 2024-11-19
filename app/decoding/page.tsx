@@ -39,7 +39,7 @@ export const metadata = genPageMetadata({
 })
 
 // Default page to display in home page for topics
-const slug = "1-welcome"
+const slug = "welcome"
 
 export default async function Page() {
     const { prev, next, post, authorDetails, mainContent, jsonLd } =

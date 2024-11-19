@@ -19,15 +19,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/378",
-    "publishedAt": "2023-06-20T15:22:30Z",
-    "title": "using Concurrency in EsploraConfig resulting in errors ",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/469",
     "publishedAt": "2024-03-14T15:59:37Z",
     "title": "Question: Finalizing a fully signed PSBT",
@@ -58,6 +49,24 @@
     "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/605",
     "publishedAt": "2024-10-10T17:16:38Z",
     "title": "Spending Policy Required: External error on tx builder finish",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/620",
+    "publishedAt": "2024-11-04T19:26:27Z",
+    "title": "LDK Node + BDK",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/621",
+    "publishedAt": "2024-11-04T21:00:21Z",
+    "title": "Importing multiple swift bindings modulemap collision",
     "labels": [
       "bug"
     ],

@@ -79,6 +79,14 @@ export const tools = {
                         "One-click lightning networks for local app development and testing",
                     image: "/images/projects/polar.jpg",
                     link: "https://lightningpolar.com"
+                },
+                {
+                    title: "Warnet",
+                    subTitle: "",
+                    description:
+                        "Monitor and analyze the emergent behaviors of P2P networks",
+                    image: "/images/projects/warnet.png",
+                    link: "https://warnet.dev"
                 }
             ]
         }

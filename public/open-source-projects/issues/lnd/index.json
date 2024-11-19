@@ -124,19 +124,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/5169",
-    "publishedAt": "2021-04-05T10:34:02Z",
-    "title": "[lncli] lnd.conf in lnddir arg's directory should be read",
-    "labels": [
-      "help wanted",
-      "beginner",
-      "config",
-      "cli",
-      "lncli"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/5203",
     "publishedAt": "2021-04-12T23:25:41Z",
     "title": "walletrpc SendOutputs fails to attach zero value outputs",
@@ -695,18 +682,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7440",
-    "publishedAt": "2023-02-22T13:49:57Z",
-    "title": "[bug]: verifychanbackup indicates a good backup with empty json response",
-    "labels": [
-      "beginner",
-      "feature request",
-      "good first issue",
-      "lncli"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7463",
     "publishedAt": "2023-02-27T10:31:30Z",
     "title": "[bug]: reverse the order inside invoice settlement flow",
@@ -1015,18 +990,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7969",
-    "publishedAt": "2023-09-09T08:04:24Z",
-    "title": "[bug]: dust HTLC is not failed upstream before downstream channel close is confirmed on-chain",
-    "labels": [
-      "bug",
-      "P1",
-      "needs triage",
-      "force closes"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7971",
     "publishedAt": "2023-09-10T09:12:07Z",
     "title": "[bug]: coin selection uses \"RBF\"ed inputs",
@@ -1147,6 +1110,41 @@
     "labels": [
       "bug",
       "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8149",
+    "publishedAt": "2023-11-03T17:44:26Z",
+    "title": "[bug]: ChannelArbitrator does not cleanly stop",
+    "labels": [
+      "bug",
+      "P3"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8153",
+    "publishedAt": "2023-11-07T00:05:14Z",
+    "title": "chancloser: implement the new option_simple_close co-op close flow",
+    "labels": [
+      "bug",
+      "intermediate",
+      "channel closing",
+      "spec",
+      "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8157",
+    "publishedAt": "2023-11-07T14:22:30Z",
+    "title": "[bug]: LND with Neutrino never fully starts up",
+    "labels": [
+      "bug",
+      "neutrino",
+      "networking",
+      "P2"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }

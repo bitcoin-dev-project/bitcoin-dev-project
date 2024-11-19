@@ -85,41 +85,11 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/5970",
-    "publishedAt": "2024-05-03T16:26:25Z",
-    "title": "[Bug]: Can't import wallet file / Electrum and Sparrow",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6007",
-    "publishedAt": "2024-05-24T12:42:22Z",
-    "title": "[Bug]: Payout broadcast a transaction but do not change to \"In Progress\" status when \"Subtract fees from amount\" is active",
-    "labels": [
-      "Bug",
-      "Pull Payment"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6131",
     "publishedAt": "2024-08-02T12:15:10Z",
     "title": "[Bug]: `CancelPayoutAfterFaillures` setting is not used",
     "labels": [
       "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6147",
-    "publishedAt": "2024-08-12T22:15:09Z",
-    "title": "[Bug]: Pull-payment view throws 500 error",
-    "labels": [
-      "Bug",
-      "API",
-      "Pull Payment"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
@@ -145,12 +115,15 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6325",
-    "publishedAt": "2024-10-21T19:45:50Z",
-    "title": "[Bug]: Store name incorrect display (v2.0.0 beta)",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6406",
+    "publishedAt": "2024-11-16T10:07:02Z",
+    "title": "[Bug]: email activation for new users can't be turned of for private registration via API",
     "labels": [
       "Bug",
-      "UI / UX"
+      "UI / UX",
+      "API",
+      "Server Settings",
+      "Email"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }

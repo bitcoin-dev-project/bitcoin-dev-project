@@ -11,13 +11,7 @@ import {
 import { Topic, allTopics } from "@/.contentlayer/generated"
 import { useState, useEffect, useCallback, useMemo } from "react"
 import { motion } from "framer-motion"
-import {
-    FaChevronRight,
-    FaChevronDown,
-    FaCheck,
-    FaUsers,
-    FaCalendar
-} from "react-icons/fa"
+import { FaChevronRight, FaChevronDown, FaCheck } from "react-icons/fa"
 import * as Icons from "react-icons/fa"
 import { HiArrowRight } from "react-icons/hi2"
 import Image from "next/image"
@@ -64,6 +58,37 @@ export function Navigation({
         new Set()
     )
 
+    // Define handleCompletionChange outside of useEffect hooks
+    const handleCompletionChange = useCallback(() => {
+        const saved = localStorage.getItem("completedTopics")
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved)
+                const completedSet = new Set(
+                    Object.keys(parsed).filter((key) => parsed[key])
+                )
+                setCompletedTopics(completedSet)
+            } catch (error) {
+                console.error("Error parsing completedTopics:", error)
+            }
+        }
+    }, [])
+
+    // Load completed topics and add listener
+    useEffect(() => {
+        handleCompletionChange()
+        window.addEventListener(
+            "topicCompletionChanged",
+            handleCompletionChange
+        )
+        return () => {
+            window.removeEventListener(
+                "topicCompletionChanged",
+                handleCompletionChange
+            )
+        }
+    }, [handleCompletionChange])
+
     // Load expanded state from localStorage on component mount
     useEffect(() => {
         const savedState = localStorage.getItem("expandedTopics")
@@ -105,52 +130,6 @@ export function Navigation({
             JSON.stringify(expandedChildren)
         )
     }, [expandedTopics])
-
-    // Update the useEffect to properly load completed topics
-    useEffect(() => {
-        const saved = localStorage.getItem("completedTopics")
-        if (saved) {
-            try {
-                const parsed = JSON.parse(saved)
-                // Convert the parsed object's keys into a Set
-                const completedSet = new Set(
-                    Object.keys(parsed).filter((key) => parsed[key])
-                )
-                setCompletedTopics(completedSet)
-            } catch (error) {
-                console.error("Error parsing completedTopics:", error)
-            }
-        }
-    }, [])
-
-    // Add listener for completion changes
-    useEffect(() => {
-        const handleCompletionChange = () => {
-            const saved = localStorage.getItem("completedTopics")
-            if (saved) {
-                try {
-                    const parsed = JSON.parse(saved)
-                    const completedSet = new Set(
-                        Object.keys(parsed).filter((key) => parsed[key])
-                    )
-                    setCompletedTopics(completedSet)
-                } catch (error) {
-                    console.error("Error parsing completedTopics:", error)
-                }
-            }
-        }
-
-        window.addEventListener(
-            "topicCompletionChanged",
-            handleCompletionChange
-        )
-        return () => {
-            window.removeEventListener(
-                "topicCompletionChanged",
-                handleCompletionChange
-            )
-        }
-    }, [])
 
     // normalize paths
     const normalizePath = (path: string) => {
