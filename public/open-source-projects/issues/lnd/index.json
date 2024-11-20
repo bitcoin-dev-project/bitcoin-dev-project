@@ -1103,6 +1103,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8149",
+    "publishedAt": "2023-11-03T17:44:26Z",
+    "title": "[bug]: ChannelArbitrator does not cleanly stop",
+    "labels": [
+      "bug",
+      "P3"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
     "url": "https://github.com/lightningnetwork/lnd/issues/8153",
     "publishedAt": "2023-11-07T00:05:14Z",
     "title": "chancloser: implement the new option_simple_close co-op close flow",
@@ -1136,19 +1146,6 @@
       "HTLC",
       "P2",
       "interceptors"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
-    "url": "https://github.com/lightningnetwork/lnd/issues/8175",
-    "publishedAt": "2023-11-14T06:29:13Z",
-    "title": "lnd: remove deprecated endpoints `sendpayment` and `sendtoroute`",
-    "labels": [
-      "rpc",
-      "code health",
-      "beginner",
-      "routing",
-      "payments"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
