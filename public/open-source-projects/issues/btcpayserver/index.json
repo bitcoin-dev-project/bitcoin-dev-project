@@ -12,17 +12,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/4986",
-    "publishedAt": "2023-05-18T13:31:36Z",
-    "title": "Accessibility Testing: Paid Invoice, Pull Payment, Create Invoice: Tested on Windows",
-    "labels": [
-      "Enhancement",
-      "UI / UX",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/5156",
     "publishedAt": "2023-07-05T21:05:41Z",
     "title": "[Invoices] Improved filter iteration",
@@ -41,15 +30,6 @@
       "Bug",
       "UI / UX",
       "Plugin"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/5666",
-    "publishedAt": "2024-01-17T14:19:03Z",
-    "title": "[Bug]: Problems with login into BTCPay Server after updating Raspiblitz / Umbrel deployments",
-    "labels": [
-      "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
