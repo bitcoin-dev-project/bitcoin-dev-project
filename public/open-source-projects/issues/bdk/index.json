@@ -391,5 +391,14 @@
       "audit"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1740",
+    "publishedAt": "2024-11-21T12:58:42Z",
+    "title": "Undetected double-spent",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
