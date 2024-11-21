@@ -305,7 +305,8 @@
     "publishedAt": "2024-09-09T03:37:25Z",
     "title": "electrum_client: disrepancies w/ certificate verification between `use-rustls` & `use-openssl`",
     "labels": [
-      "bug"
+      "bug",
+      "module-blockchain"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -321,21 +322,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1627",
-    "publishedAt": "2024-09-26T16:01:26Z",
-    "title": "`bdk_testenv` docs are not building on docs.rs",
-    "labels": [
-      "bug",
-      "release"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1630",
     "publishedAt": "2024-09-28T07:47:57Z",
     "title": "After the transaction is removed, the re-synchronization is still on the transaction list.",
     "labels": [
-      "bug"
+      "bug",
+      "discussion"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -354,7 +346,8 @@
     "publishedAt": "2024-10-06T09:31:28Z",
     "title": "Transactions inserted with `Wallet::insert_tx` will be replaced by the wallet when creating a new tx.",
     "labels": [
-      "bug"
+      "bug",
+      "discussion"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -364,7 +357,8 @@
     "title": "Performance issue with `get_chain_position` and associated methods for unconfirmed transactions",
     "labels": [
       "bug",
-      "module-blockchain"
+      "module-blockchain",
+      "audit"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
