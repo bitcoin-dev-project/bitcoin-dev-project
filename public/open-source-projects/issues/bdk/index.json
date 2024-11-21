@@ -332,16 +332,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1634",
-    "publishedAt": "2024-10-01T15:19:24Z",
-    "title": "`example_bitcoind_rpc_polling` sync command ends with stack overflow",
-    "labels": [
-      "bug",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1642",
     "publishedAt": "2024-10-06T09:31:28Z",
     "title": "Transactions inserted with `Wallet::insert_tx` will be replaced by the wallet when creating a new tx.",
