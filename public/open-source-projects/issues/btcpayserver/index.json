@@ -54,17 +54,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/5898",
-    "publishedAt": "2024-04-03T20:19:12Z",
-    "title": "[Bug]: Error LNURL payment link on creating invoices over API",
-    "labels": [
-      "Bug",
-      "Lightning",
-      "API"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6180",
     "publishedAt": "2024-08-30T15:13:48Z",
     "title": "Replace invoice payment type icons with SVGs",

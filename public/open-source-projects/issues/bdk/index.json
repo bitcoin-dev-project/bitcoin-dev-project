@@ -284,7 +284,8 @@
     "publishedAt": "2024-08-12T15:56:09Z",
     "title": "MissingNonWitnessUtxo even before signing",
     "labels": [
-      "bug"
+      "bug",
+      "discussion"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -294,6 +295,7 @@
     "title": "Address gap limit?",
     "labels": [
       "bug",
+      "new feature",
       "discussion"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
@@ -323,7 +325,8 @@
     "publishedAt": "2024-09-26T16:01:26Z",
     "title": "`bdk_testenv` docs are not building on docs.rs",
     "labels": [
-      "bug"
+      "bug",
+      "release"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -341,7 +344,8 @@
     "publishedAt": "2024-10-01T15:19:24Z",
     "title": "`example_bitcoind_rpc_polling` sync command ends with stack overflow",
     "labels": [
-      "bug"
+      "bug",
+      "module-blockchain"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -359,7 +363,8 @@
     "publishedAt": "2024-10-29T12:41:56Z",
     "title": "Performance issue with `get_chain_position` and associated methods for unconfirmed transactions",
     "labels": [
-      "bug"
+      "bug",
+      "module-blockchain"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
