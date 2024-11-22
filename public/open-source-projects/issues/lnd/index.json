@@ -577,18 +577,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7261",
-    "publishedAt": "2022-12-18T21:45:58Z",
-    "title": "[bug]: \"edge not found\" for local channel",
-    "labels": [
-      "bug",
-      "graph",
-      "P2",
-      "gossip"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7300",
     "publishedAt": "2023-01-07T14:05:26Z",
     "title": "[bug]: channel open transaction fails to broadcast because lnd is unaware of own mempool transaction after rescan",
@@ -1146,6 +1134,19 @@
       "HTLC",
       "P2",
       "interceptors"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8175",
+    "publishedAt": "2023-11-14T06:29:13Z",
+    "title": "lnd: remove deprecated endpoints `sendpayment` and `sendtoroute`",
+    "labels": [
+      "rpc",
+      "code health",
+      "beginner",
+      "routing",
+      "payments"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
