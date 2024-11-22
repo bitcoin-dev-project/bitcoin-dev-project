@@ -19,15 +19,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/469",
-    "publishedAt": "2024-03-14T15:59:37Z",
-    "title": "Question: Finalizing a fully signed PSBT",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/571",
     "publishedAt": "2024-07-10T19:38:30Z",
     "title": "bdkFFI.framework/bdkFFI does not contain a slice for arm64e-apple-macosx21.1",
@@ -40,15 +31,6 @@
     "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/573",
     "publishedAt": "2024-07-18T19:47:53Z",
     "title": "MacOS Build Error",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/605",
-    "publishedAt": "2024-10-10T17:16:38Z",
-    "title": "Spending Policy Required: External error on tx builder finish",
     "labels": [
       "bug"
     ],
