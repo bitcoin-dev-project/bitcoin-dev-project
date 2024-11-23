@@ -179,17 +179,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/951",
-    "publishedAt": "2024-06-02T14:20:27Z",
-    "title": "`StandardChannel` support on JDC",
-    "labels": [
-      "good first issue",
-      "help wanted",
-      "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/954",
     "publishedAt": "2024-06-03T21:05:50Z",
     "title": "MG message library",
