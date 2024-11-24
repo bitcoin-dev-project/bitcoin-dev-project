@@ -13,6 +13,7 @@ import { useState, useEffect, useCallback, useMemo } from "react"
 import { motion } from "framer-motion"
 import { FaChevronRight, FaChevronDown, FaCheck } from "react-icons/fa"
 import * as Icons from "react-icons/fa"
+import { ArrowRight } from "lucide-react"
 
 interface NavigationLink {
     title: string
@@ -262,6 +263,36 @@ export function Navigation({
                     </div>
                 </div>
             </Link>
+
+            {/* Add Communities Section before the main navigation */}
+            <div className="mb-8">
+                <Link
+                    href="/decoding/communities"
+                    className={clsx(
+                        "group flex items-center px-4 py-3 rounded-lg transition-all duration-200",
+                        "bg-gradient-to-r from-orange-500/10 to-orange-500/5",
+                        "border border-orange-500/20 hover:border-orange-500/40",
+                        "hover:from-orange-500/15 hover:to-orange-500/10"
+                    )}
+                >
+                    <div className="flex items-center flex-1 min-w-0">
+                        <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-orange-500/20 mr-3">
+                            <Icons.FaUsers className="w-4 h-4 text-orange-500" />
+                        </div>
+                        <div>
+                            <h3 className="text-sm font-semibold text-orange-500 dark:text-orange-400">
+                                Communities
+                            </h3>
+                            <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">
+                                Join study groups & cohorts
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex-shrink-0 ml-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <ArrowRight className="w-4 h-4 text-orange-500" />
+                    </div>
+                </Link>
+            </div>
 
             <ul role="list" className="space-y-6">
                 {navigation.map((section) => (
