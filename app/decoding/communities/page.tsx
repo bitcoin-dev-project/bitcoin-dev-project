@@ -6,9 +6,9 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { HiUsers, HiClock, HiGlobe, HiArrowRight } from "react-icons/hi"
 import { FaDiscord, FaRocket } from "react-icons/fa"
-import { getAllCommunities } from "@/lib/data/communities"
+import { getAllCommunities } from "@/lib/utils/communities"
 
-const getStatusDisplay = (status: string) => {
+const getStatusDisplay = (status: string | undefined) => {
     switch (status) {
         case "in-progress":
             return {

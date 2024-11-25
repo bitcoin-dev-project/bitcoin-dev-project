@@ -33,7 +33,7 @@ import {
     calculateCohortProgress,
     Resource,
     ResourceType
-} from "@/lib/data/communities"
+} from "@/lib/utils/communities"
 import { allTopics } from "contentlayer/generated"
 import { HiDownload } from "react-icons/hi"
 
@@ -997,7 +997,7 @@ const GroupsSection = ({
         <div className="space-y-8">
             {/* Groups Overview */}
             {weekData.groupAssignments.map((group) => {
-                const groupQuestions = questions.filter(
+                const groupQuestions = questions?.filter(
                     (q) => q.assignedTo.groupId === group.groupId
                 )
                 const groupData = communityData.currentCohort.groups.find(
@@ -1063,7 +1063,7 @@ const GroupsSection = ({
                                 Discussion Topics
                             </h4>
                             <div className="space-y-4">
-                                {groupQuestions.map((question, index) => (
+                                {groupQuestions?.map((question, index) => (
                                     <div
                                         key={question.id}
                                         className="flex items-start gap-4 p-4 rounded-lg bg-gray-800/30"
