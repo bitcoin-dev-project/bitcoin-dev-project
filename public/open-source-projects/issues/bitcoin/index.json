@@ -519,6 +519,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
+    "url": "https://github.com/bitcoin/bitcoin/issues/31293",
+    "publishedAt": "2024-11-15T08:54:02Z",
+    "title": "Discover() will not run if listening on any address with an explicit bind=0.0.0.0",
+    "labels": [
+      "P2P",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
     "url": "https://github.com/bitcoin/bitcoin/issues/31345",
     "publishedAt": "2024-11-22T12:01:22Z",
     "title": "Add `sat_to_btc()` and conversely `btc_to_sat()` util functions in functional tests",
