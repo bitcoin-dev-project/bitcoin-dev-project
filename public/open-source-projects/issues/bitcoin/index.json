@@ -521,7 +521,7 @@
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/31345",
     "publishedAt": "2024-11-22T12:01:22Z",
-    "title": "Add `satToBtc()` and conversely `btcToSat()` util functions in functional tests",
+    "title": "Add `sat_to_btc()` and conversely `btc_to_sat()` util functions in functional tests",
     "labels": [
       "good first issue"
     ],
