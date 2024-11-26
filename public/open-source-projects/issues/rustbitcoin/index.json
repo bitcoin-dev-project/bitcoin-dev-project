@@ -117,5 +117,23 @@
       "1.0"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/3652",
+    "publishedAt": "2024-11-25T13:06:32Z",
+    "title": "`from_next_work_required` should not take the timespan as a u64",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/3654",
+    "publishedAt": "2024-11-25T19:30:51Z",
+    "title": "NodeInfo Ord should be explicitly implemented",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
