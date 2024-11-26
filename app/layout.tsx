@@ -6,6 +6,7 @@ import { Header } from "@/components/header"
 import { ThemeProvider } from "next-themes"
 import "remark-github-blockquote-alert/alert.css"
 import siteMetadata from "@/data/siteMetadata"
+import BossBanner from "@/components/banner/BossBanner"
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteMetadata.siteUrl),
@@ -86,6 +87,7 @@ export default function RootLayout({
                     defaultTheme={siteMetadata.theme}
                 >
                     <Header />
+                    <BossBanner />
                     <main>{children}</main>
                     <Footer />
                 </ThemeProvider>
