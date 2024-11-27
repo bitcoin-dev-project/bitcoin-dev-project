@@ -332,16 +332,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1642",
-    "publishedAt": "2024-10-06T09:31:28Z",
-    "title": "Transactions inserted with `Wallet::insert_tx` will be replaced by the wallet when creating a new tx.",
-    "labels": [
-      "bug",
-      "discussion"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1665",
     "publishedAt": "2024-10-29T12:41:56Z",
     "title": "Performance issue with `get_chain_position` and associated methods for unconfirmed transactions",
