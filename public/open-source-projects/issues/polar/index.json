@@ -70,16 +70,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   },
   {
-    "url": "https://github.com/jamaljsr/polar/issues/986",
-    "publishedAt": "2024-08-24T19:24:04Z",
-    "title": "Bug: GUI does not take the decimal point into account when showing the Taproot Assets balance",
-    "labels": [
-      "bug",
-      "up for grabs"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
-  },
-  {
     "url": "https://github.com/jamaljsr/polar/issues/1020",
     "publishedAt": "2024-10-03T19:56:29Z",
     "title": "Bug: Wrong mapping of the zmq ports",
