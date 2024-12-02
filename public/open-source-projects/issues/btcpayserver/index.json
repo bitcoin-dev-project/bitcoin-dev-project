@@ -85,16 +85,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6423",
-    "publishedAt": "2024-11-22T12:33:22Z",
-    "title": "API error when adding a non existing user to a store not clear",
-    "labels": [
-      "Bug",
-      "API"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6437",
     "publishedAt": "2024-11-26T12:59:05Z",
     "title": "[Bug]: Combination of status filters on invoices page causes 500 fatal server error",
