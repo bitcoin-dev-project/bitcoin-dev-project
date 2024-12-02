@@ -126,5 +126,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/3688",
+    "publishedAt": "2024-12-02T03:19:20Z",
+    "title": "`Amount` serde does not roundtrip `Amount::MAX`",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
