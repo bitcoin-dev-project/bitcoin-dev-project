@@ -409,5 +409,15 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1754",
+    "publishedAt": "2024-12-03T12:02:57Z",
+    "title": "Move `TxTemplate` to `bdk_testenv` and make it better",
+    "labels": [
+      "good first issue",
+      "tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
