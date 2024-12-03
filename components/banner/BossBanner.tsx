@@ -1,15 +1,11 @@
 "use client"
 
 import { Banner } from "@bitcoin-dev-project/bdp-ui"
-import { usePathname } from "next/navigation"
 
 const BossBanner = () => {
-    const pathname = usePathname()
-    const isHomePage = pathname === "/"
-
     return (
         <div
-            className={`w-full dark:bg-black bg-white sticky top-[60px] lg:top-[64px] z-20 ${isHomePage ? "block" : "hidden"}`}
+            className={`w-full dark:bg-black bg-white sticky top-[60px] lg:top-[64px] z-20`}
         >
             <Banner
                 headingText="Start your career in bitcoin open source —"
