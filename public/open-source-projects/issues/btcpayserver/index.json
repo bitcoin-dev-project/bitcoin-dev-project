@@ -92,14 +92,5 @@
       "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6458",
-    "publishedAt": "2024-12-03T10:44:06Z",
-    "title": "[Bug]: BTC-FIAT Lightning Balance toggle for lightning doesn't work",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
