@@ -244,13 +244,19 @@ export const getWeeklyData = (
 export const getCurrentWeek = (community: Community): number => {
     const now = new Date()
     const start = new Date(community.currentCohort.startDate)
-    const diffTime = now.getTime() - start.getTime()
-    const diffWeeks = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 7)) + 1
+    const currentWeekData = community.weeklyData.find((week) => {
+        const callEnd = new Date(week.weeklyCall.date)
+        callEnd.setHours(
+            week.weeklyCall.time.hour + 1,
+            week.weeklyCall.time.minute,
+            0,
+            0
+        ) // Assuming 1-hour call
+        return now < callEnd
+    })
 
-    if (diffWeeks < 1) return 1
-    if (diffWeeks > community.weeklyData.length)
-        return community.weeklyData.length
-    return diffWeeks
+    if (!currentWeekData) return community.weeklyData.length // If no current week found, return the last week
+    return currentWeekData.weekNumber
 }
 
 export const isCohortCompleted = (community: Community): boolean => {
