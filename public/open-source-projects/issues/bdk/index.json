@@ -301,16 +301,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1598",
-    "publishedAt": "2024-09-09T03:37:25Z",
-    "title": "electrum_client: disrepancies w/ certificate verification between `use-rustls` & `use-openssl`",
-    "labels": [
-      "bug",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1618",
     "publishedAt": "2024-09-19T15:51:13Z",
     "title": "Test CLI examples using a regtest node in CI",
