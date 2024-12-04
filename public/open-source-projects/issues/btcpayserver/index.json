@@ -75,16 +75,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6409",
-    "publishedAt": "2024-11-18T13:53:01Z",
-    "title": "[Bug]: Payment History in payment requests is invisible for `pending payment` and invalid invoices shown as pending",
-    "labels": [
-      "Bug",
-      "Payment Request"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6437",
     "publishedAt": "2024-11-26T12:59:05Z",
     "title": "[Bug]: Combination of status filters on invoices page causes 500 fatal server error",
