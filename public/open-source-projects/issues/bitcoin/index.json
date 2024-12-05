@@ -536,14 +536,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/31426",
-    "publishedAt": "2024-12-05T08:49:29Z",
-    "title": "Args: -noconnect=0 is interpreted as -connect=0.0.0.1",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
