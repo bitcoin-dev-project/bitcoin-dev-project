@@ -1,0 +1,592 @@
+{
+    "weeklyTopics": {
+        "week1": {
+            "mainTopic": "bitcoin-history",
+            "resources": ["bitcoin-history"]
+        },
+        "week2": {
+            "mainTopic": "overview",
+            "resources": ["stack", "opcodes", "locking-unlocking"]
+        },
+        "week3": {
+            "mainTopic": "p2pk",
+            "resources": [
+                "p2pk-introduction",
+                "problems-with-p2pk",
+                "p2pk-exercise1"
+            ]
+        },
+        "week4": {
+            "mainTopic": "pay-to-public-key-hash-p2pkh",
+            "resources": [
+                "5-p2pkh-introduction",
+                "p2pkh-exercise1",
+                "p2pkh-exercise2"
+            ]
+        },
+        "week5": {
+            "mainTopic": "pay-to-script-hash-p2sh",
+            "resources": ["p2sh-introduction", "p2sh-exercise", "p2sh-exercise"]
+        },
+        "week6": {
+            "mainTopic": "pay-to-multisig-p2ms",
+            "resources": ["p2ms-introduction", "p2ms-exercise", "p2ms-exercise"]
+        },
+        "week7": {
+            "mainTopic": "taproot-basics",
+            "resources": ["taproot-intro", "tagged-hashes", "schnorr-basics"]
+        },
+        "week8": {
+            "mainTopic": "taproot-advanced",
+            "resources": [
+                "schnorr-advanced",
+                "musig",
+                "taptweak",
+                "nonce-reuse-attack"
+            ]
+        }
+    },
+    "communities": [
+        {
+            "id": "bitcoin-indonesia",
+            "name": "Bitcoin Indonesia",
+            "logo": "/communities/images/bitcoin-indonesia.png",
+            "description": "Bitcoin Indonesia is a non-profit organization dedicated to promoting Bitcoin adoption through education and community building across Indonesia.",
+            "language": "Indonesian",
+            "timezone": "GMT+8",
+            "currentCohort": {
+                "number": 1,
+                "students": 14,
+                "startDate": "2024-11-22",
+                "endDate": "2025-01-17",
+                "groups": [
+                    {
+                        "id": 1,
+                        "name": "Group A",
+                        "chaperon": {
+                            "name": "KeyPleb",
+                            "expertise": "Bitcoin Educator"
+                        },
+                        "students": [
+                            {
+                                "name": "Olanma"
+                            },
+                            {
+                                "name": "Rads0909"
+                            },
+                            {
+                                "name": "tenzoin"
+                            },
+                            {
+                                "name": "fernandobernardz"
+                            },
+                            {
+                                "name": "hapdul_"
+                            },
+                            {
+                                "name": "sernyi"
+                            },
+                            {
+                                "name": "fighterleslie"
+                            },
+                            {
+                                "name": "future5962"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Group B",
+                        "chaperon": {
+                            "name": "jamal",
+                            "expertise": "Bitcoin Open Source Developer"
+                        },
+                        "students": [
+                            {
+                                "name": "stackeduary"
+                            },
+                            {
+                                "name": "toxinityy"
+                            },
+                            {
+                                "name": "sayf_001"
+                            },
+                            {
+                                "name": "sunnygoh"
+                            },
+                            {
+                                "name": "BangZet"
+                            },
+                            {
+                                "name": "basnugroho"
+                            },
+                            {
+                                "name": "nicoseba"
+                            },
+                            {
+                                "name": "xcatzilla"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "name": "Group C",
+                        "chaperon": {
+                            "name": "jamal",
+                            "expertise": "Bitcoin Open Source Developer"
+                        },
+                        "students": [
+                            {
+                                "name": "flu0rescen"
+                            },
+                            {
+                                "name": "hkmiadli"
+                            },
+                            {
+                                "name": "0xZaddy"
+                            },
+                            {
+                                "name": "Fauzan_nur23"
+                            },
+                            {
+                                "name": "b_rezha"
+                            },
+                            {
+                                "name": "odie212"
+                            },
+                            {
+                                "name": "Vyshed"
+                            },
+                            {
+                                "name": "rengga_ferdiansa"
+                            },
+                            {
+                                "name": "greedlove"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "weeklyData": [
+                {
+                    "weekNumber": 1,
+                    "topic": "Introduction",
+                    "topicSlug": "bitcoin-history",
+                    "description": "Explore the fascinating history of Bitcoin, from its mysterious origins with Satoshi Nakamoto to its evolution into a global phenomenon. Learn about key historical events, early development, and the fundamental principles that make Bitcoin revolutionary.",
+                    "resources": [],
+                    "baseQuestions": [],
+                    "weeklyCall": {
+                        "date": "2024-11-22T12:00:00Z",
+                        "discordLink": "https://discord.gg/6XPJ96sCY4",
+                        "time": {
+                            "hour": 20,
+                            "minute": 0,
+                            "timeZone": "Asia/Makassar"
+                        },
+                        "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
+                    },
+                    "groupAssignments": [],
+                    "additionalResources": []
+                },
+                {
+                    "weekNumber": 2,
+                    "topic": "Script Overview",
+                    "topicSlug": "script-overview",
+                    "description": "Dive into Bitcoin's scripting language, understanding how the stack-based execution model works, different types of opcodes, and the relationship between locking and unlocking scripts. Learn about script validation rules and standardness policies.",
+                    "resources": [
+                        {
+                            "id": 1,
+                            "title": "Stack Operations",
+                            "link": "stack",
+                            "parentTopic": "overview"
+                        },
+                        {
+                            "id": 2,
+                            "title": "Bitcoin Opcodes",
+                            "link": "opcodes",
+                            "parentTopic": "overview"
+                        },
+                        {
+                            "id": 3,
+                            "title": "Locking & Unlocking Scripts",
+                            "link": "locking-unlocking",
+                            "parentTopic": "overview"
+                        },
+                        {
+                            "id": 4,
+                            "title": "Script Success and Failure",
+                            "link": "script-success-failure",
+                            "parentTopic": "overview"
+                        },
+                        {
+                            "id": 5,
+                            "title": "Standard & Non-Standard Scripts",
+                            "link": "standard-nonstandard",
+                            "parentTopic": "overview"
+                        },
+                        {
+                            "id": 6,
+                            "title": "PushData Opcodes",
+                            "link": "pushdata-opcodes",
+                            "parentTopic": "overview"
+                        },
+                        {
+                            "id": 7,
+                            "title": "Test your knowledge",
+                            "link": "quiz",
+                            "parentTopic": "overview"
+                        }
+                    ],
+                    "baseQuestions": [
+                        {
+                            "text": "How does the Turing incompleteness of Bitcoin Script contribute to the security and efficiency of the Bitcoin network?",
+                            "relatedMaterial": "/decoding/stack"
+                        },
+                        {
+                            "text": "Compare standard and non-standard scripts in Bitcoin. How are they handled by the network?",
+                            "relatedMaterial": "/decoding/opcodes"
+                        },
+                        {
+                            "text": "What are the potential consequences of a script leaving multiple items on the stack after execution? How does this affect the validity of a transaction?",
+                            "relatedMaterial": "/decoding/locking-unlocking"
+                        },
+                        {
+                            "text": "What is the IsStandard() function and how does it affect transaction relay policies?",
+                            "relatedMaterial": "/decoding/script-success-failure"
+                        },
+                        {
+                            "text": "What' s the difference between OP_CHECKSIG and OP_CHECKMULTISIG?",
+                            "relatedMaterial": "/decoding/standard-nonstandard"
+                        },
+                        {
+                            "text": "Explain the difference between OP_PUSHDATA1, OP_PUSHDATA2, and OP_PUSHDATA4",
+                            "relatedMaterial": "/decoding/standard-nonstandard"
+                        },
+                        {
+                            "text": "Explain how stack operations work in Bitcoin Script and provide an example of OP _ ADD execution",
+                            "relatedMaterial": "/decoding/standard-nonstandard"
+                        },
+                        {
+                            "text": "What are the main categories of Bitcoin opcodes and their purposes?",
+                            "relatedMaterial": "/decoding/standard-nonstandard"
+                        },
+                        {
+                            "text": "Describe the relationship between locking and unlocking scripts in Bitcoin transactions",
+                            "relatedMaterial": "/decoding/standard-nonstandard"
+                        },
+                        {
+                            "text": "What determines script success or failure in Bitcoin? Explain the validation rules",
+                            "relatedMaterial": "/decoding/standard-nonstandard"
+                        }
+                    ],
+                    "weeklyCall": {
+                        "date": "2024-11-29T12:00:00Z",
+                        "discordLink": "https://discord.gg/6XPJ96sCY4",
+                        "time": {
+                            "hour": 20,
+                            "minute": 0,
+                            "timeZone": "Asia/Makassar"
+                        },
+                        "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
+                    },
+                    "groupAssignments": [
+                        {
+                            "groupId": 1,
+                            "deputyName": "Fernando"
+                        },
+                        {
+                            "groupId": 2,
+                            "deputyName": "stackeduary"
+                        },
+                        {
+                            "groupId": 3,
+                            "deputyName": "flu0rescen"
+                        }
+                    ],
+                    "additionalResources": [
+                        {
+                            "id": "doc-2",
+                            "title": "Bitcoin Script Reference Guide",
+                            "description": "Complete documentation of Bitcoin Script operations and examples",
+                            "type": "documentation",
+                            "url": "#",
+                            "difficulty": "intermediate",
+                            "author": "Bitcoin Core",
+                            "duration": 45,
+                            "tags": ["documentation", "script", "reference"]
+                        }
+                    ]
+                },
+                {
+                    "weekNumber": 3,
+                    "topic": "Pay to Public Key (P2PK)",
+                    "topicSlug": "p2pk",
+                    "description": "Study the earliest and simplest form of Bitcoin transactions - Pay to Public Key (P2PK). Analyze historical transactions, understand the role of public key cryptography, and learn why this script type was eventually superseded.",
+                    "resources": [
+                        {
+                            "id": 1,
+                            "title": "P2PK Introduction",
+                            "link": "p2pk",
+                            "parentTopic": "p2pk"
+                        },
+                        {
+                            "id": 2,
+                            "title": "Problems with P2PK",
+                            "link": "p2pk-problems",
+                            "parentTopic": "p2pk"
+                        },
+                        {
+                            "id": 3,
+                            "title": "P2PK Exercise 1",
+                            "link": "p2pk-exercise1",
+                            "parentTopic": "p2pk"
+                        },
+                        {
+                            "id": 4,
+                            "title": "P2PK Exercise 2",
+                            "link": "p2pk-exercise2",
+                            "parentTopic": "p2pk"
+                        },
+                        {
+                            "id": 5,
+                            "title": "P2PK Exercise 3",
+                            "link": "p2pk-exercise3",
+                            "parentTopic": "p2pk"
+                        }
+                    ],
+                    "baseQuestions": [
+                        {
+                            "text": "What are the three main challenges associated with P2PK transactions? Explain each challenge.",
+                            "relatedMaterial": "/decoding/p2pk"
+                        },
+                        {
+                            "text": "In the first Bitcoin transaction (block 170), Satoshi sent 10 BTC to Hal Finney using a P2PK script. Analyze the provided hex code for the transaction, breaking down the input, output, and script components.",
+                            "relatedMaterial": "/decoding/p2pk-problems"
+                        },
+                        {
+                            "text": "Why did Satoshi Nakamoto use uncompressed public keys in early Bitcoin transactions, and what are the benefits of compressed keys?",
+                            "relatedMaterial": "/decoding/p2pk"
+                        },
+                        {
+                            "text": "During transaction validation, explain how are ScriptPubKey and ScriptSig combined, and why?",
+                            "relatedMaterial": "/decoding/p2pk"
+                        },
+                        {
+                            "text": "In the examples provided, what are the hex representations of OP_PUSHBYTES_65 and OP_CHECKSIG in the ScriptPubKey?",
+                            "relatedMaterial": "/decoding/p2pk"
+                        },
+                        {
+                            "text": "Describe in detail how OP_CHECKSIG operates on the stack in a P2PK transaction. What inputs does it consume, and what outputs does it produce? (You can also refer to the OpCode animations we have seen in previous week lesson)",
+                            "relatedMaterial": "/decoding/p2pk-problems"
+                        },
+                        {
+                            "text": "For a concatenated script <Signature Finney> <Public Key Finney> OP_CHECKSIG, describe each step of its evaluation during the unlocking process. How does the stack state evolve?",
+                            "relatedMaterial": "/decoding/p2pk-problems"
+                        },
+                        {
+                            "text": "The ScriptPubKey in a P2PK transaction includes the public key directly. If a compression method were used, how would the hex representation of the script change?",
+                            "relatedMaterial": "/decoding/p2pk-problems"
+                        },
+                        {
+                            "text": "What are the specific conditions under which OP_CHECKSIG would return FALSE during script execution in a P2PK transaction?",
+                            "relatedMaterial": "/decoding/p2pk-problems"
+                        }
+                    ],
+                    "weeklyCall": {
+                        "date": "2024-12-06T12:00:00Z",
+                        "discordLink": "https://discord.gg/6XPJ96sCY4",
+                        "time": {
+                            "hour": 20,
+                            "minute": 0,
+                            "timeZone": "Asia/Makassar"
+                        },
+                        "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
+                    },
+                    "groupAssignments": [
+                        {
+                            "groupId": 1,
+                            "deputyName": "Olanna"
+                        },
+                        {
+                            "groupId": 2,
+                            "deputyName": "toxinityy"
+                        },
+                        {
+                            "groupId": 3,
+                            "deputyName": "hkmiadli"
+                        }
+                    ],
+                    "additionalResources": []
+                },
+                {
+                    "weekNumber": 4,
+                    "topic": "Pay to Public Key Hash (P2PKH)",
+                    "topicSlug": "p2pkh",
+                    "description": "Examine the most common historical Bitcoin script type - P2PKH. Learn about the benefits of hashing public keys, improved privacy features, and analyze real-world transactions including the famous Bitcoin pizza transaction.",
+                    "resources": [
+                        {
+                            "id": 1,
+                            "title": "P2PKH Introduction",
+                            "link": "p2pkh",
+                            "parentTopic": "5-p2pkh"
+                        },
+                        {
+                            "id": 2,
+                            "title": "P2PKH Exercise 1",
+                            "link": "p2pkh-exercise1",
+                            "parentTopic": "5-p2pkh"
+                        },
+                        {
+                            "id": 3,
+                            "title": "P2PKH Exercise 2",
+                            "link": "p2pkh-exercise2",
+                            "parentTopic": "5-p2pkh"
+                        }
+                    ],
+                    "baseQuestions": [],
+                    "weeklyCall": {
+                        "date": "2024-12-13T12:00:00Z",
+                        "discordLink": "https://discord.gg/6XPJ96sCY4",
+                        "time": {
+                            "hour": 20,
+                            "minute": 0,
+                            "timeZone": "Asia/Makassar"
+                        },
+                        "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
+                    },
+                    "groupAssignments": [],
+                    "additionalResources": []
+                },
+                {
+                    "weekNumber": 5,
+                    "topic": "Pay to Script Hash (P2SH)",
+                    "topicSlug": "p2sh",
+                    "description": "Understand how P2SH revolutionized Bitcoin's scripting capabilities by allowing complex redemption conditions to be hidden in a hash. Learn about script composition, validation rules, and the flexibility P2SH brought to Bitcoin.",
+                    "resources": [
+                        {
+                            "id": 1,
+                            "title": "P2SH Introduction",
+                            "link": "p2sh",
+                            "parentTopic": "p2sh"
+                        },
+                        {
+                            "id": 2,
+                            "title": "P2SH Exercise 1",
+                            "link": "p2sh-exercise-1",
+                            "parentTopic": "p2sh"
+                        },
+                        {
+                            "id": 3,
+                            "title": "P2SH Exercise 2",
+                            "link": "p2sh-exercise-2",
+                            "parentTopic": "p2sh"
+                        }
+                    ],
+                    "baseQuestions": [],
+                    "weeklyCall": {
+                        "date": "2024-12-27T12:00:00Z",
+                        "discordLink": "https://discord.gg/6XPJ96sCY4",
+                        "time": {
+                            "hour": 20,
+                            "minute": 0,
+                            "timeZone": "Asia/Makassar"
+                        },
+                        "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
+                    },
+                    "groupAssignments": [
+                        {
+                            "groupId": 1,
+                            "deputyName": "sernyi"
+                        },
+                        {
+                            "groupId": 2,
+                            "deputyName": "BangZet"
+                        }
+                    ],
+                    "additionalResources": []
+                },
+                {
+                    "weekNumber": 6,
+                    "topic": "Pay to MultiSig (P2MS)",
+                    "topicSlug": "p2ms",
+                    "description": "Explore multi-signature scripts in Bitcoin, both in their bare form and wrapped in P2SH. Learn about threshold signatures, key management considerations, and how multisig enhances Bitcoin's security model.",
+                    "resources": [
+                        {
+                            "id": 1,
+                            "title": "P2MS Introduction",
+                            "link": "p2ms",
+                            "parentTopic": "p2ms"
+                        },
+                        {
+                            "id": 2,
+                            "title": "P2MS Exercise 1",
+                            "link": "p2ms-exercise-1",
+                            "parentTopic": "p2ms"
+                        },
+                        {
+                            "id": 3,
+                            "title": "P2MS Exercise 2",
+                            "link": "p2ms-exercise-2",
+                            "parentTopic": "p2ms"
+                        }
+                    ],
+                    "baseQuestions": [],
+                    "weeklyCall": {
+                        "date": "2025-01-03T12:00:00Z",
+                        "discordLink": "https://discord.gg/6XPJ96sCY4",
+                        "time": {
+                            "hour": 20,
+                            "minute": 0,
+                            "timeZone": "Asia/Makassar"
+                        },
+                        "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
+                    },
+                    "groupAssignments": [],
+                    "additionalResources": []
+                },
+                {
+                    "weekNumber": 7,
+                    "topic": "Taproot Basics",
+                    "topicSlug": "taproot-basics",
+                    "description": "Begin your journey into Bitcoin's latest script upgrade - Taproot. Learn about Schnorr signatures, tagged hashes, and the fundamental building blocks that enable improved privacy and scalability in Bitcoin.",
+                    "resources": [],
+                    "baseQuestions": [],
+                    "weeklyCall": {
+                        "date": "2025-01-10T12:00:00Z",
+                        "discordLink": "https://discord.gg/6XPJ96sCY4",
+                        "time": {
+                            "hour": 20,
+                            "minute": 0,
+                            "timeZone": "Asia/Makassar"
+                        },
+                        "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
+                    },
+                    "groupAssignments": [],
+                    "additionalResources": []
+                },
+                {
+                    "weekNumber": 8,
+                    "topic": "Taproot Advanced",
+                    "topicSlug": "taproot-advanced",
+                    "description": "Deep dive into advanced Taproot concepts including MuSig, key aggregation, and taptweak operations. Understand how these components work together to create more efficient and private Bitcoin transactions.",
+                    "resources": [],
+                    "baseQuestions": [],
+                    "weeklyCall": {
+                        "date": "2025-01-17T12:00:00Z",
+                        "discordLink": "https://discord.gg/6XPJ96sCY4",
+                        "time": {
+                            "hour": 20,
+                            "minute": 0,
+                            "timeZone": "Asia/Makassar"
+                        },
+                        "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
+                    },
+                    "groupAssignments": [],
+                    "additionalResources": []
+                }
+            ],
+            "totalAlumni": 0,
+            "nextCohortDate": "2025-01-15"
+        }
+    ]
+}
