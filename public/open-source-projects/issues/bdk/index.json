@@ -386,7 +386,9 @@
     "publishedAt": "2024-11-22T10:54:06Z",
     "title": "cancel_tx has no effect",
     "labels": [
-      "bug"
+      "bug",
+      "documentation",
+      "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
