@@ -391,16 +391,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1747",
-    "publishedAt": "2024-11-26T02:23:54Z",
-    "title": "Better comment for `TxGraph::empty_outspends`",
-    "labels": [
-      "documentation",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1754",
     "publishedAt": "2024-12-03T12:02:57Z",
     "title": "Move `TxTemplate` to `bdk_testenv` and make it better",
