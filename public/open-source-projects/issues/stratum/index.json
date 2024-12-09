@@ -265,5 +265,14 @@
       "roles"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1280",
+    "publishedAt": "2024-12-09T18:22:12Z",
+    "title": "Grammatical errors in logs messages",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
