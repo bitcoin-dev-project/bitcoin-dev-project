@@ -269,7 +269,7 @@
   {
     "url": "https://github.com/stratum-mining/stratum/issues/1280",
     "publishedAt": "2024-12-09T18:22:12Z",
-    "title": "Grammatical errors in logs messages",
+    "title": "misleading JDC logs need to be refactored",
     "labels": [
       "good first issue"
     ],
