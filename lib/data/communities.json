@@ -443,7 +443,38 @@
                             "parentTopic": "5-p2pkh"
                         }
                     ],
-                    "baseQuestions": [],
+                    "baseQuestions": [
+                        {
+                            "text": "What is the difference between P2PKH and P2PK transactions?"
+                        },
+                        {
+                            "text": "What is the purpose of the OP_DUP and OP_HASH160 opcodes in a P2PKH locking script?"
+                        },
+                        {
+                            "text": "Describe the process of constructing a P2PKH scriptPubKey from a given public key. What are the exact steps and opcodes used?"
+                        },
+                        {
+                            "text": "Why does P2PKH lock bitcoins to the hash of a public key instead of the public key itself?"
+                        },
+                        {
+                            "text": "What opcodes are used in a P2PKH scriptPubKey, and what are their functions?"
+                        },
+                        {
+                            "text": "At what point is the public key revealed in a P2PKH transaction?"
+                        },
+                        {
+                            "text": "Why is P2PKH considered more private and secure compared to revealing the full public key in the transaction output?"
+                        },
+                        {
+                            "text": "What steps must Bob take to spend the bitcoins sent to his P2PKH address?"
+                        },
+                        {
+                            "text": "Given the hexadecimal representation of a scriptPubKey, describe the process to decode it into its ASM (Assembly) equivalent."
+                        },
+                        {
+                            "text": "If you were provided with the following P2PKH scriptPubKey: `76a9147d1980cd67f0ed29a94793823b866bf47eab965e88ac`, decode it to identify the public key hash and explain the purpose of each component."
+                        }
+                    ],
                     "weeklyCall": {
                         "date": "2024-12-13T12:00:00Z",
                         "discordLink": "https://discord.gg/6XPJ96sCY4",
@@ -454,7 +485,20 @@
                         },
                         "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
                     },
-                    "groupAssignments": [],
+                    "groupAssignments": [
+                        {
+                            "groupId": 1,
+                            "deputyName": "Rads0909"
+                        },
+                        {
+                            "groupId": 2,
+                            "deputyName": "sayf_001"
+                        },
+                        {
+                            "groupId": 3,
+                            "deputyName": "0xZaddy"
+                        }
+                    ],
                     "additionalResources": []
                 },
                 {
