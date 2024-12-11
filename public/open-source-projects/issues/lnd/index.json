@@ -428,16 +428,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7091",
-    "publishedAt": "2022-10-28T06:46:42Z",
-    "title": "[bug]: unable to retry coop close attempt with higher fee rate (between two nodes running v0.15.3)",
-    "labels": [
-      "bug",
-      "channel closing"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7104",
     "publishedAt": "2022-11-02T08:07:09Z",
     "title": "[bug]: Unknown Unconfirmed Balance",
@@ -1147,6 +1137,18 @@
       "beginner",
       "routing",
       "payments"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8210",
+    "publishedAt": "2023-11-20T16:47:18Z",
+    "title": "chainntnfs: found data race in unit test",
+    "labels": [
+      "bug",
+      "test flake",
+      "P1",
+      "chain handling"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
