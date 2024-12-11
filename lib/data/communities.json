@@ -445,34 +445,44 @@
                     ],
                     "baseQuestions": [
                         {
-                            "text": "What is the difference between P2PKH and P2PK transactions?"
+                            "text": "What is the difference between P2PKH and P2PK transactions?",
+                            "relatedMaterial": "/decoding/p2pkh"
                         },
                         {
-                            "text": "What is the purpose of the OP_DUP and OP_HASH160 opcodes in a P2PKH locking script?"
+                            "text": "What is the purpose of the OP_DUP and OP_HASH160 opcodes in a P2PKH locking script?",
+                            "relatedMaterial": "/decoding/p2pkh"
                         },
                         {
-                            "text": "Describe the process of constructing a P2PKH scriptPubKey from a given public key. What are the exact steps and opcodes used?"
+                            "text": "Describe the process of constructing a P2PKH scriptPubKey from a given public key. What are the exact steps and opcodes used?",
+                            "relatedMaterial": "/decoding/p2pkh"
                         },
                         {
-                            "text": "Why does P2PKH lock bitcoins to the hash of a public key instead of the public key itself?"
+                            "text": "Why does P2PKH lock bitcoins to the hash of a public key instead of the public key itself?",
+                            "relatedMaterial": "/decoding/p2pkh"
                         },
                         {
-                            "text": "What opcodes are used in a P2PKH scriptPubKey, and what are their functions?"
+                            "text": "What opcodes are used in a P2PKH scriptPubKey, and what are their functions?",
+                            "relatedMaterial": "/decoding/p2pkh"
                         },
                         {
-                            "text": "At what point is the public key revealed in a P2PKH transaction?"
+                            "text": "At what point is the public key revealed in a P2PKH transaction?",
+                            "relatedMaterial": "/decoding/p2pkh"
                         },
                         {
-                            "text": "Why is P2PKH considered more private and secure compared to revealing the full public key in the transaction output?"
+                            "text": "Why is P2PKH considered more private and secure compared to revealing the full public key in the transaction output?",
+                            "relatedMaterial": "/decoding/p2pkh"
                         },
                         {
-                            "text": "What steps must Bob take to spend the bitcoins sent to his P2PKH address?"
+                            "text": "What steps must Bob take to spend the bitcoins sent to his P2PKH address?",
+                            "relatedMaterial": "/decoding/p2pkh"
                         },
                         {
-                            "text": "Given the hexadecimal representation of a scriptPubKey, describe the process to decode it into its ASM (Assembly) equivalent."
+                            "text": "Given the hexadecimal representation of a scriptPubKey, describe the process to decode it into its ASM (Assembly) equivalent.",
+                            "relatedMaterial": "/decoding/p2pkh"
                         },
                         {
-                            "text": "If you were provided with the following P2PKH scriptPubKey: `76a9147d1980cd67f0ed29a94793823b866bf47eab965e88ac`, decode it to identify the public key hash and explain the purpose of each component."
+                            "text": "If you were provided with the following P2PKH scriptPubKey: `76a9147d1980cd67f0ed29a94793823b866bf47eab965e88ac`, decode it to identify the public key hash and explain the purpose of each component.",
+                            "relatedMaterial": "/decoding/p2pkh"
                         }
                     ],
                     "weeklyCall": {
