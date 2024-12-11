@@ -333,15 +333,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1677",
-    "publishedAt": "2024-11-07T18:32:50Z",
-    "title": "wallet: Don't call `get_chain_position` redundantly",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1683",
     "publishedAt": "2024-11-13T10:12:43Z",
     "title": "Retry mechanism broken on WASM",
