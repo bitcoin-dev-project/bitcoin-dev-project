@@ -274,5 +274,15 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1286",
+    "publishedAt": "2024-12-11T05:11:39Z",
+    "title": "need to migrate `sv1-mining-device` logs from `println!` to `tracing`",
+    "labels": [
+      "good first issue",
+      "help wanted"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]

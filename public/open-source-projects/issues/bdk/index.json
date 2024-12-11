@@ -322,17 +322,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1665",
-    "publishedAt": "2024-10-29T12:41:56Z",
-    "title": "Performance issue with `get_chain_position` and associated methods for unconfirmed transactions",
-    "labels": [
-      "bug",
-      "module-blockchain",
-      "audit"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1676",
     "publishedAt": "2024-11-07T18:26:58Z",
     "title": "Wallet should use transaction version 2 when creating transactions",
