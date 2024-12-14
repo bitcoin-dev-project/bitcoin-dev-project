@@ -278,7 +278,7 @@
   {
     "url": "https://github.com/stratum-mining/stratum/issues/1286",
     "publishedAt": "2024-12-11T05:11:39Z",
-    "title": "need to migrate `sv1-mining-device` logs from `println!` to `tracing`",
+    "title": "need to migrate `sv1-mining-device` logs from `println! / eprintln!` to `tracing`",
     "labels": [
       "good first issue",
       "help wanted"
