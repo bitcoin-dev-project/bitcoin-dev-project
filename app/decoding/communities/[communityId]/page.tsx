@@ -198,18 +198,15 @@ const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
                             Weekly Call
                         </p>
                     </div>
-                    <p className="text-xs text-gray-400">
+                    <p className="text-xs text-gray-400 hidden md:block">
                         Every Friday • 8:00 AM (Bali)
                     </p>
                 </div>
             </div>
-            <span
-                className={`inline-flex items-center px-2.5 py-1 text-xs w-fit ${
-                    callActive
-                        ? "bg-green-500/10 text-green-400 rounded-full"
-                        : "text-gray-400"
-                }`}
-            >
+
+            <div className="md:hidden text-xs text-gray-400">{timeUntil}</div>
+
+            <span className="hidden md:inline-flex items-center px-2.5 py-1 text-xs w-fit">
                 {callActive ? (
                     <span className="flex items-center gap-1.5">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-400"></div>
@@ -222,6 +219,7 @@ const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
                     </span>
                 )}
             </span>
+
             <div className="flex flex-col gap-2">
                 <button
                     onClick={() =>
@@ -242,7 +240,7 @@ const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
                 </button>
                 <button
                     onClick={() => createCalendarEvent(weeklyCall)}
-                    className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm
+                    className="hidden md:flex w-full items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm
                         bg-gray-700 hover:bg-gray-600 text-white transition-colors duration-200"
                 >
                     <HiCalendar className="w-4 h-4" />
@@ -545,7 +543,7 @@ const LearningResourcesSection = ({
                 </div>
 
                 {/* Progress Overview */}
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-gray-900/40 rounded-xl p-4">
                         <div className="flex items-center gap-3 mb-3">
                             <div className="p-2 rounded-lg bg-orange-500/10">
@@ -904,32 +902,36 @@ const DashboardTabs = ({
                     </div>
                 </div>
 
-                <div className="flex">
-                    {tabs.map((tab) => (
-                        <button
-                            key={tab.id}
-                            onClick={() => setActiveTab(tab.id)}
-                            className={`
-                                flex-1 flex items-center justify-center gap-2 px-4 py-3
-                                text-sm font-medium transition-all duration-200 relative
-                                ${
-                                    activeTab === tab.id
-                                        ? "text-orange-400"
-                                        : "text-gray-400 hover:text-gray-300"
-                                }
-                            `}
-                        >
-                            {tab.icon}
-                            <span>{tab.id}</span>
-                            {activeTab === tab.id && (
-                                <motion.div
-                                    layoutId="activeTab"
-                                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-400"
-                                    initial={false}
-                                />
-                            )}
-                        </button>
-                    ))}
+                {/* Make tabs scrollable on mobile */}
+                <div className="overflow-x-auto scrollbar-hide">
+                    <div className="flex min-w-full">
+                        {tabs.map((tab) => (
+                            <button
+                                key={tab.id}
+                                onClick={() => setActiveTab(tab.id)}
+                                className={`
+                                    flex-1 flex items-center justify-center gap-2 
+                                    px-4 py-3 whitespace-nowrap
+                                    text-sm font-medium transition-all duration-200 relative
+                                    ${
+                                        activeTab === tab.id
+                                            ? "text-orange-400"
+                                            : "text-gray-400 hover:text-gray-300"
+                                    }
+                                `}
+                            >
+                                {tab.icon}
+                                <span>{tab.id}</span>
+                                {activeTab === tab.id && (
+                                    <motion.div
+                                        layoutId="activeTab"
+                                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-400"
+                                        initial={false}
+                                    />
+                                )}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
 
@@ -1305,65 +1307,186 @@ export default function CommunityDashboard({
                 </div>
             )}
 
-            {/* Header Section */}
+            {/* Simplified Header */}
             <div className="border-b border-gray-800">
-                <div className="max-w-7xl mx-auto px-4 py-6">
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                            <Link
-                                href="/decoding"
-                                className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors duration-200"
-                            >
-                                <HiArrowRight className="w-5 h-5 text-gray-400 rotate-180" />
-                            </Link>
-                            <div className="w-14 h-14 relative">
-                                <Image
-                                    src={communityData.logo}
-                                    alt={communityData.name}
-                                    fill
-                                    className="rounded-lg object-cover"
-                                />
-                            </div>
-                            <div>
-                                <h1 className="text-2xl font-bold text-white">
-                                    {communityData.name}
-                                </h1>
-                                <div className="flex items-center mt-1 space-x-3 text-sm text-gray-400">
-                                    <span>{communityData.language}</span>
-                                    <span>•</span>
-                                    <span>{communityData.timezone}</span>
-                                    <span>•</span>
-                                    <span>
-                                        {communityData.currentCohort.students}{" "}
-                                        Students
-                                    </span>
-                                </div>
+                <div className="max-w-7xl mx-auto px-4 py-4">
+                    <div className="flex items-center gap-4">
+                        <Link
+                            href="/decoding"
+                            className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors duration-200"
+                        >
+                            <HiArrowRight className="w-5 h-5 text-gray-400 rotate-180" />
+                        </Link>
+                        <div className="w-12 h-12 relative">
+                            <Image
+                                src={communityData.logo}
+                                alt={communityData.name}
+                                fill
+                                className="rounded-lg object-cover"
+                            />
+                        </div>
+                        <div>
+                            <h1 className="text-xl font-bold text-white">
+                                {communityData.name}
+                            </h1>
+                            <div className="flex items-center gap-2 text-sm text-gray-400">
+                                <span>{communityData.language}</span>
+                                <span>•</span>
+                                <span>{communityData.timezone}</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Main Content Grid */}
+            {/* Mobile Week Navigation */}
+            <div className="md:hidden border-b border-gray-800 bg-gray-900/40">
+                <div className="px-4 py-3">
+                    <div className="flex items-center justify-between mb-3">
+                        <h2 className="text-white font-medium">
+                            {currentWeekData.topic}
+                        </h2>
+                    </div>
+                    <div className="overflow-x-auto scrollbar-hide">
+                        <div className="flex items-center min-w-max gap-2">
+                            <span className="text-sm text-gray-400 mr-1">
+                                Week
+                            </span>
+                            <div className="flex gap-1.5">
+                                {Array.from(
+                                    { length: totalWeeks },
+                                    (_, i) => i + 1
+                                ).map((week) => (
+                                    <button
+                                        key={week}
+                                        onClick={() => setSelectedWeek(week)}
+                                        className={`
+                                            min-w-[32px] h-8 rounded-full flex items-center justify-center text-sm
+                                            transition-colors duration-200
+                                            ${
+                                                selectedWeek === week
+                                                    ? "bg-orange-500 text-white"
+                                                    : "bg-gray-800/80 text-gray-400 hover:bg-gray-800"
+                                            }
+                                            ${week > getCurrentWeek(communityData) ? "opacity-50 cursor-not-allowed" : ""}
+                                        `}
+                                        disabled={
+                                            week > getCurrentWeek(communityData)
+                                        }
+                                    >
+                                        {week}
+                                    </button>
+                                ))}
+                            </div>
+                            {selectedWeek === getCurrentWeek(communityData) && (
+                                <span className="ml-2 px-2 py-0.5 text-xs rounded-full bg-orange-500/20 text-orange-400 whitespace-nowrap">
+                                    Current
+                                </span>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Main Content */}
             <div className="max-w-7xl mx-auto px-4 py-6">
-                <div className="grid grid-cols-12 gap-8">
-                    {/* Left Sidebar - Now with position: sticky */}
-                    <div className="col-span-3">
-                        <div className="sticky top-6 space-y-6 max-h-[calc(100vh-4rem)] overflow-y-auto">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    {/* Sidebar with Desktop Week Navigation */}
+                    <div className="md:col-span-3">
+                        <div className="space-y-4">
                             <Progress community={communityData} />
                             <WeeklyCallSection weekData={currentWeekData} />
-                            <WeekNavigation
-                                communityData={communityData}
-                                totalWeeks={totalWeeks}
-                                currentWeek={getCurrentWeek(communityData)}
-                                selectedWeek={selectedWeek}
-                                setSelectedWeek={setSelectedWeek}
-                            />
+                            {/* Desktop Week Navigation */}
+                            <div className="hidden md:block">
+                                <div className="bg-gray-900/40 rounded-xl overflow-hidden">
+                                    <div className="p-4 border-b border-gray-800">
+                                        <h3 className="text-sm font-medium text-white">
+                                            Course Timeline
+                                        </h3>
+                                    </div>
+                                    <div className="divide-y divide-gray-800">
+                                        {Array.from(
+                                            { length: totalWeeks },
+                                            (_, i) => i + 1
+                                        ).map((week) => {
+                                            const isLocked =
+                                                week >
+                                                getCurrentWeek(communityData)
+                                            const isPast =
+                                                week <
+                                                getCurrentWeek(communityData)
+                                            const isCurrent =
+                                                week ===
+                                                getCurrentWeek(communityData)
+                                            const isSelected =
+                                                week === selectedWeek
+                                            const weekData = getWeeklyData(
+                                                communityData,
+                                                week
+                                            )
+
+                                            return (
+                                                <button
+                                                    key={week}
+                                                    onClick={() =>
+                                                        setSelectedWeek(week)
+                                                    }
+                                                    disabled={isLocked}
+                                                    className={`
+                                                        w-full flex items-center gap-3 p-4
+                                                        transition-colors duration-200
+                                                        hover:bg-gray-800/60
+                                                        ${isSelected ? "bg-orange-500/10 border-l-2 border-orange-500" : ""}
+                                                        ${isLocked ? "opacity-50 cursor-not-allowed" : ""}
+                                                    `}
+                                                >
+                                                    <div
+                                                        className={`
+                                                        w-8 h-8 rounded-lg flex items-center justify-center shrink-0
+                                                        ${isLocked ? "bg-gray-800/60" : isSelected ? "bg-orange-500/20" : "bg-gray-800/40"}
+                                                    `}
+                                                    >
+                                                        {isLocked ? (
+                                                            <HiLockClosed className="w-4 h-4 text-gray-500" />
+                                                        ) : isPast ? (
+                                                            <FaCheckCircle className="w-4 h-4 text-green-400" />
+                                                        ) : (
+                                                            <span
+                                                                className={`text-sm font-medium ${isSelected ? "text-orange-400" : "text-gray-400"}`}
+                                                            >
+                                                                {week}
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                    <div className="flex-1 text-left">
+                                                        <div className="flex items-center gap-2">
+                                                            <span
+                                                                className={`text-sm font-medium ${isSelected ? "text-orange-400" : "text-gray-300"}`}
+                                                            >
+                                                                Week {week}
+                                                            </span>
+                                                            {isCurrent && (
+                                                                <span className="text-xs px-1.5 py-0.5 rounded-full bg-orange-500/20 text-orange-400">
+                                                                    Current
+                                                                </span>
+                                                            )}
+                                                        </div>
+                                                        <p className="text-xs text-gray-500 truncate">
+                                                            {weekData?.topic ||
+                                                                `Module ${week}`}
+                                                        </p>
+                                                    </div>
+                                                </button>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Main Content Area with Tabs */}
-                    <div className="col-span-9">
+                    {/* Main Content Area */}
+                    <div className="md:col-span-9">
                         <DashboardTabs
                             activeTab={activeTab}
                             setActiveTab={setActiveTab}
