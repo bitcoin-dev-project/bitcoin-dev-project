@@ -1,4 +1,4 @@
-![The Bitcoin Dev Project](./assets/img/rabbit_landscape.jpg)
+![The Bitcoin Dev Project](./public/images/landscape_2_1.jpg)
 
 # The Bitcoin Dev Project
 
