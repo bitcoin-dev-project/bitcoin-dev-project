@@ -339,14 +339,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/7904",
-    "publishedAt": "2024-12-05T08:55:02Z",
-    "title": "askrene getroutes produces a malformed response",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
