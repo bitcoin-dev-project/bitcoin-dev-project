@@ -536,7 +536,40 @@
                             "parentTopic": "p2sh"
                         }
                     ],
-                    "baseQuestions": [],
+                    "baseQuestions": [
+                        {
+                            "text": "What is the main purpose of P2SH, and how does it differ from P2PKH?",
+                            "relatedMaterial": "/decoding/p2sh"
+                        },
+                        {
+                            "text": "How can you identify a P2SH address by looking at it? What distinguishes it from other Bitcoin address types?",
+                            "relatedMaterial": "/decoding/p2sh"
+                        },
+                        {
+                            "text": "What is the correct sequence of hashing operations needed to create a P2SH address from a redeem script?",
+                            "relatedMaterial": "/decoding/p2sh"
+                        },
+                        {
+                            "text": "When spending from a P2SH address, what two conditions must be met for the transaction to be valid?",
+                            "relatedMaterial": "/decoding/p2sh"
+                        },
+                        {
+                            "text": "What is a common use case for P2SH, and why is it beneficial in this scenario?",
+                            "relatedMaterial": "/decoding/p2sh"
+                        },
+                        {
+                            "text": "What is the role of the IsStandard() function in the context of P2SH, and how has it changed since Bitcoin Core release 0.10.0?",
+                            "relatedMaterial": "/decoding/p2sh"
+                        },
+                        {
+                            "text": "Explain the difference between a redeem script and a locking script in the context of P2SH",
+                            "relatedMaterial": "/decoding/p2sh"
+                        },
+                        {
+                            "text": "What are the steps involved in creating a P2SH address from a redeem script?",
+                            "relatedMaterial": "/decoding/p2sh"
+                        }
+                    ],
                     "weeklyCall": {
                         "date": "2024-12-27T12:00:00Z",
                         "discordLink": "https://discord.gg/6XPJ96sCY4",
@@ -550,11 +583,15 @@
                     "groupAssignments": [
                         {
                             "groupId": 1,
-                            "deputyName": "sernyi"
+                            "deputyName": "hkmiadli"
                         },
                         {
                             "groupId": 2,
-                            "deputyName": "BangZet"
+                            "deputyName": ""
+                        },
+                        {
+                            "groupId": 3,
+                            "deputyName": ""
                         }
                     ],
                     "additionalResources": []
