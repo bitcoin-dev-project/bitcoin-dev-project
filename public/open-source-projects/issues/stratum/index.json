@@ -276,16 +276,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/1286",
-    "publishedAt": "2024-12-11T05:11:39Z",
-    "title": "need to migrate `sv1-mining-device` logs from `println! / eprintln!` to `tracing`",
-    "labels": [
-      "good first issue",
-      "help wanted"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/1292",
     "publishedAt": "2024-12-11T15:16:39Z",
     "title": "JDS Unable to establish connection when Tproxy is activated",
