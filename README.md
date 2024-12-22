@@ -18,7 +18,7 @@ pnpm install
 bun install
 ```
 
-2) Get the `bitcoin-topics` content (initialize the `bitcoin-topics` submodule):
+2) Download submodules:
 
 ```bash
 npm run submodules:update
