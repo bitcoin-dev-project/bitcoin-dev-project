@@ -252,6 +252,17 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1297",
+    "publishedAt": "2024-01-23T18:47:03Z",
+    "title": "The `TxGraph.list_chain_txs()` method doesn't behave as you'd expect from the docs",
+    "labels": [
+      "documentation",
+      "good first issue",
+      "module-wallet"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1504",
     "publishedAt": "2024-07-08T14:59:11Z",
     "title": "The `url` dependency does not prevent URL homograph attacks",
@@ -322,17 +333,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1665",
-    "publishedAt": "2024-10-29T12:41:56Z",
-    "title": "Performance issue with `get_chain_position` and associated methods for unconfirmed transactions",
-    "labels": [
-      "bug",
-      "module-blockchain",
-      "audit"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1676",
     "publishedAt": "2024-11-07T18:26:58Z",
     "title": "Wallet should use transaction version 2 when creating transactions",
@@ -340,15 +340,6 @@
       "good first issue",
       "module-wallet",
       "audit"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1677",
-    "publishedAt": "2024-11-07T18:32:50Z",
-    "title": "wallet: Don't call `get_chain_position` redundantly",
-    "labels": [
-      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
