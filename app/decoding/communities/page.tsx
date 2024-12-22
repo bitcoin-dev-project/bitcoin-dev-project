@@ -14,25 +14,25 @@ const getStatusDisplay = (status: string | undefined) => {
             return {
                 text: "In Progress",
                 classes:
-                    "bg-green-500/20 text-green-400 border border-green-500/20"
+                    "bg-green-500/20 text-green-400 border border-green-500/20 dark:bg-green-500/20 dark:text-green-400 dark:border-green-500/20"
             }
         case "starting-soon":
             return {
                 text: "Starting Soon",
                 classes:
-                    "bg-orange-500/20 text-orange-400 border border-orange-500/20"
+                    "bg-orange-500/20 text-orange-600 border border-orange-500/20 dark:bg-orange-500/20 dark:text-orange-400 dark:border-orange-500/20"
             }
         case "completed":
             return {
                 text: "Completed",
                 classes:
-                    "bg-blue-500/20 text-blue-400 border border-blue-500/20"
+                    "bg-blue-500/20 text-blue-600 border border-blue-500/20 dark:bg-blue-500/20 dark:text-blue-400 dark:border-blue-500/20"
             }
         default:
             return {
                 text: "Unknown",
                 classes:
-                    "bg-gray-500/20 text-gray-400 border border-gray-500/20"
+                    "bg-gray-500/20 text-gray-600 border border-gray-500/20 dark:bg-gray-500/20 dark:text-gray-400 dark:border-gray-500/20"
             }
     }
 }
@@ -72,9 +72,9 @@ export default function CommunitiesPage() {
     })
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950">
-            <div className="relative border-b border-gray-800">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-500/20 via-black to-transparent opacity-70" />
+        <div className="min-h-screen bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-950">
+            <div className="relative border-b border-gray-200 dark:border-gray-800">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-100/50 via-white to-transparent dark:from-orange-500/20 dark:via-black dark:to-transparent opacity-70" />
                 <div className="relative max-w-7xl mx-auto px-4 py-12">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -83,24 +83,24 @@ export default function CommunitiesPage() {
                     >
                         <div
                             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full 
-                            bg-gradient-to-r from-orange-500/10 to-orange-500/5 
-                            border border-orange-500/20"
+                            bg-gradient-to-r from-orange-100 to-orange-50 dark:from-orange-500/10 dark:to-orange-500/5 
+                            border border-orange-200 dark:border-orange-500/20"
                         >
-                            <FaRocket className="w-4 h-4 text-orange-400" />
-                            <span className="text-sm font-medium text-orange-400">
+                            <FaRocket className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                            <span className="text-sm font-medium text-orange-600 dark:text-orange-400">
                                 Community-Led Bitcoin Education
                             </span>
                         </div>
 
                         <div className="space-y-4">
-                            <h1 className="text-3xl md:text-5xl font-bold text-white">
+                            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
                                 Bitcoin Communities
-                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
+                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 dark:from-orange-400 dark:to-orange-500">
                                     Running Study Cohorts
                                 </span>
                             </h1>
 
-                            <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">
+                            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-base md:text-lg">
                                 Join these Bitcoin communities as they guide
                                 their members through structured learning
                                 programs with weekly discussions and hands-on
@@ -108,19 +108,19 @@ export default function CommunitiesPage() {
                             </p>
                         </div>
 
-                        <div className="inline-flex items-center gap-6 px-6 py-3 rounded-xl bg-gray-800/30 border border-gray-700/50">
+                        <div className="inline-flex items-center gap-6 px-6 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/30 border border-gray-200 dark:border-gray-700/50">
                             <div className="text-left">
-                                <h3 className="text-lg font-semibold text-white">
+                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                                     Want to use Decoding Bitcoin for your next
                                     cohort?
                                 </h3>
-                                <p className="text-sm text-gray-400">
+                                <p className="text-sm text-gray-600 dark:text-gray-400">
                                     Let us know and we'll create a custom
                                     dashboard for your community.
                                 </p>
                             </div>
                             <Link
-                                href="mailto:contact@decodingbitcoin.com"
+                                href="mailto:info@bitcoindevs.xyz"
                                 className="flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 
                                     text-white rounded-lg transition-all duration-200 whitespace-nowrap
                                     hover:translate-y-[-1px]"
@@ -133,14 +133,14 @@ export default function CommunitiesPage() {
                 </div>
             </div>
 
-            <div className="sticky top-0 z-10 bg-gray-900/80 backdrop-blur-xl border-b border-gray-800">
+            <div className="sticky top-0 z-10 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800">
                 <div className="max-w-7xl mx-auto px-4 py-3">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
                             <Link
                                 href="/decoding"
-                                className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-800/50 text-gray-400 
-                                hover:bg-gray-800/80 hover:text-white transition-all duration-200"
+                                className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 
+                                hover:bg-gray-200 dark:hover:bg-gray-800/80 hover:text-gray-900 dark:hover:text-white transition-all duration-200"
                             >
                                 <HiArrowRight className="w-4 h-4 rotate-180" />
                                 <span>Back</span>
@@ -160,7 +160,7 @@ export default function CommunitiesPage() {
                                             ${
                                                 filter === filterOption
                                                     ? "bg-orange-500 text-white"
-                                                    : "bg-gray-800/50 text-gray-400 hover:bg-gray-800/80 hover:text-white"
+                                                    : "bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800/80 hover:text-gray-900 dark:hover:text-white"
                                             }
                                         `}
                                         >
@@ -179,8 +179,8 @@ export default function CommunitiesPage() {
                             onChange={(e) =>
                                 setSelectedLanguage(e.target.value)
                             }
-                            className="px-3 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg
-                                text-gray-300 focus:outline-none focus:border-orange-500/50"
+                            className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg
+                                text-gray-900 dark:text-gray-300 focus:outline-none focus:border-orange-500/50"
                         >
                             {languages.map((lang) => (
                                 <option key={lang} value={lang}>
@@ -204,16 +204,14 @@ export default function CommunitiesPage() {
                         >
                             <Link
                                 href={`/decoding/communities/${community.id}`}
-                                className="group block bg-gray-800/30 hover:bg-gray-800/50 
-                                    rounded-xl border border-gray-700/50 overflow-hidden
+                                className="group block bg-white dark:bg-gray-800/30 hover:bg-gray-50 dark:hover:bg-gray-800/50 
+                                    rounded-xl border border-gray-200 dark:border-gray-700/50 overflow-hidden
                                     transition-all duration-300 hover:border-orange-500/20
                                     hover:shadow-lg hover:shadow-orange-500/5"
                             >
-                                {/* Card Header with Gradient */}
                                 <div className="relative p-6">
-                                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-700/5 to-transparent" />
+                                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-100/50 dark:from-gray-700/5 to-transparent" />
                                     <div className="relative">
-                                        {/* Community Info */}
                                         <div className="flex items-start justify-between mb-6">
                                             <div className="flex gap-4">
                                                 <div className="w-16 h-16 relative rounded-xl overflow-hidden">
@@ -225,15 +223,12 @@ export default function CommunitiesPage() {
                                                     />
                                                 </div>
                                                 <div>
-                                                    <h2 className="text-xl font-semibold text-white mb-2">
+                                                    <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                                                         {community.name}
                                                     </h2>
                                                     <div className="flex items-center gap-3 text-sm">
                                                         <span
-                                                            className={`
-                                                            px-2 py-1 rounded-full text-xs font-medium
-                                                            ${getStatusDisplay(community.currentCohort.status).classes}
-                                                        `}
+                                                            className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusDisplay(community.currentCohort.status).classes}`}
                                                         >
                                                             {
                                                                 getStatusDisplay(
@@ -243,7 +238,7 @@ export default function CommunitiesPage() {
                                                                 ).text
                                                             }
                                                         </span>
-                                                        <span className="text-gray-400">
+                                                        <span className="text-gray-600 dark:text-gray-400">
                                                             Cohort #
                                                             {
                                                                 community
@@ -260,14 +255,13 @@ export default function CommunitiesPage() {
                                             />
                                         </div>
 
-                                        {/* Info Grid */}
                                         <div className="grid grid-cols-2 gap-4 mb-6">
                                             <div className="space-y-1">
                                                 <div className="text-xs text-gray-500">
                                                     Language
                                                 </div>
-                                                <div className="flex items-center gap-2 text-sm text-gray-300">
-                                                    <HiGlobe className="w-4 h-4 text-gray-400" />
+                                                <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                                                    <HiGlobe className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                                                     {community.language}
                                                 </div>
                                             </div>
@@ -275,63 +269,61 @@ export default function CommunitiesPage() {
                                                 <div className="text-xs text-gray-500">
                                                     Timezone
                                                 </div>
-                                                <div className="flex items-center gap-2 text-sm text-gray-300">
-                                                    <HiClock className="w-4 h-4 text-gray-400" />
+                                                <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                                                    <HiClock className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                                                     {community.timezone}
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                                        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
                                             {community.description}
                                         </p>
 
-                                        {/* Stats Section */}
-                                        <div className="bg-gray-900/50 rounded-xl p-4 space-y-4">
+                                        <div className="bg-gray-50 dark:bg-gray-900/50 rounded-xl p-4 space-y-4">
                                             <div className="grid grid-cols-2 gap-4">
                                                 <div className="flex items-center gap-3">
-                                                    <div className="p-2 rounded-lg bg-gray-800/50">
-                                                        <HiUsers className="w-4 h-4 text-orange-400" />
+                                                    <div className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+                                                        <HiUsers className="w-4 h-4 text-orange-500 dark:text-orange-400" />
                                                     </div>
                                                     <div>
-                                                        <div className="text-sm font-medium text-white">
+                                                        <div className="text-sm font-medium text-gray-900 dark:text-white">
                                                             {
                                                                 community
                                                                     .currentCohort
                                                                     .students
                                                             }
                                                         </div>
-                                                        <div className="text-xs text-gray-400">
+                                                        <div className="text-xs text-gray-500 dark:text-gray-400">
                                                             Students
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="flex items-center gap-3">
-                                                    <div className="p-2 rounded-lg bg-gray-800/50">
+                                                    <div className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50">
                                                         <FaDiscord className="w-4 h-4 text-[#5865F2]" />
                                                     </div>
                                                     <div>
-                                                        <div className="text-sm font-medium text-white">
+                                                        <div className="text-sm font-medium text-gray-900 dark:text-white">
                                                             {
                                                                 community.totalAlumni
                                                             }
                                                         </div>
-                                                        <div className="text-xs text-gray-400">
+                                                        <div className="text-xs text-gray-500 dark:text-gray-400">
                                                             Alumni
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            {/* Progress Bar for Active Communities */}
                                             {community.currentCohort.status ===
                                                 "in-progress" && (
                                                 <div className="space-y-2">
                                                     <div className="flex items-center justify-between text-sm">
-                                                        <span className="text-gray-400">
+                                                        <span className="text-gray-600 dark:text-gray-400">
                                                             Progress
                                                         </span>
-                                                        <span className="text-orange-400 font-medium">
+                                                        <span className="text-orange-600 dark:text-orange-400 font-medium">
                                                             {
                                                                 community
                                                                     .currentCohort
@@ -340,7 +332,7 @@ export default function CommunitiesPage() {
                                                             %
                                                         </span>
                                                     </div>
-                                                    <div className="w-full bg-gray-800 rounded-full h-1.5 overflow-hidden">
+                                                    <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-1.5 overflow-hidden">
                                                         <motion.div
                                                             initial={{
                                                                 width: 0
@@ -361,21 +353,21 @@ export default function CommunitiesPage() {
                                     </div>
                                 </div>
 
-                                <div className="border-t border-gray-700/50 p-4 bg-gray-900/30">
+                                <div className="border-t border-gray-200 dark:border-gray-700/50 p-4 bg-gray-50 dark:bg-gray-900/30">
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center gap-2">
-                                            <div className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center">
-                                                <HiClock className="w-4 h-4 text-gray-400" />
+                                            <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+                                                <HiClock className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                                             </div>
                                             <div className="text-sm">
-                                                <span className="text-gray-400">
+                                                <span className="text-gray-600 dark:text-gray-400">
                                                     {new Date(
                                                         community.currentCohort.startDate
                                                     ) <= new Date()
                                                         ? "Started"
                                                         : "Starts"}
                                                 </span>
-                                                <div className="text-white font-medium">
+                                                <div className="text-gray-900 dark:text-white font-medium">
                                                     {formatDate(
                                                         community.currentCohort
                                                             .startDate
@@ -383,7 +375,7 @@ export default function CommunitiesPage() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <span className="text-orange-400 font-medium group-hover:translate-x-1 transition-transform duration-300">
+                                        <span className="text-orange-600 dark:text-orange-400 font-medium group-hover:translate-x-1 transition-transform duration-300">
                                             View Details →
                                         </span>
                                     </div>
@@ -399,13 +391,13 @@ export default function CommunitiesPage() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-center py-20"
                     >
-                        <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-800/50 flex items-center justify-center">
-                            <FaRocket className="w-8 h-8 text-gray-600" />
+                        <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-100 dark:bg-gray-800/50 flex items-center justify-center">
+                            <FaRocket className="w-8 h-8 text-gray-400 dark:text-gray-600" />
                         </div>
-                        <h3 className="text-xl font-medium text-white mb-2">
+                        <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-2">
                             No communities found
                         </h3>
-                        <p className="text-gray-400">
+                        <p className="text-gray-600 dark:text-gray-400">
                             Try adjusting your filters to find more communities
                         </p>
                     </motion.div>

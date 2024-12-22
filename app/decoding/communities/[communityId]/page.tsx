@@ -111,9 +111,38 @@ const isCallActive = (weeklyCall: WeeklyData["weeklyCall"]) => {
 }
 
 const createCalendarEvent = (weeklyCall: WeeklyData["weeklyCall"]) => {
-    const nextCall = getNextCallDate(weeklyCall)
+    const timeZone = weeklyCall.time.timeZone
+    const nextCall = new Date(weeklyCall.date)
+    debugger
+    // Create a date in the specified timezone
+    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
+    const formatter = new Intl.DateTimeFormat("en-US", {
+        timeZone: timeZone,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+    })
+
+    // Set the time in the original timezone
+    const originalDate = new Date(weeklyCall.date)
+    originalDate.setHours(weeklyCall.time.hour, weeklyCall.time.minute, 0, 0)
+
+    // Format the date in the original timezone
+    const formattedDate = formatter.format(originalDate)
+    const [datePart, timePart] = formattedDate.split(", ")
+    const [month, day, year] = datePart.split("/")
+    const [hour, minute] = timePart.split(":")
+
+    // Create the start date in the correct timezone
+    nextCall.setFullYear(parseInt(year), parseInt(month) - 1, parseInt(day))
+    nextCall.setHours(parseInt(hour), parseInt(minute), 0, 0)
+
+    // Create end time (1 hour later)
     const endCall = new Date(nextCall)
-    endCall.setHours(endCall.getHours() + 1) // 1-hour call
+    endCall.setHours(endCall.getHours() + 1)
 
     const event = {
         title: "Bitcoin Development Weekly Call",
@@ -126,18 +155,25 @@ const createCalendarEvent = (weeklyCall: WeeklyData["weeklyCall"]) => {
             .toISOString()
             .replace(/[-:]/g, "")
             .replace(/\.\d{3}/, ""),
-        location: `Discord - ${weeklyCall.discordLink}`
+        location: `Discord - ${weeklyCall.discordLink}`,
+        timezone: timeZone
     }
 
     const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
+PRODID:-//Decoding Bitcoin//Calendar//EN
 BEGIN:VEVENT
 SUMMARY:${event.title}
 DESCRIPTION:${event.description.replace(/\n/g, "\\n")}
-DTSTART:${event.startTime}
-DTEND:${event.endTime}
+DTSTART;TZID=${event.timezone}:${event.startTime}
+DTEND;TZID=${event.timezone}:${event.endTime}
 LOCATION:${event.location}
-RRULE:FREQ=WEEKLY;BYDAY=FR
+RRULE:FREQ=WEEKLY
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
 END:VEVENT
 END:VCALENDAR`
 
@@ -187,24 +223,26 @@ const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
     }, [weeklyCall])
 
     return (
-        <div className="flex flex-col gap-3 bg-gray-800/40 rounded-xl p-4 border border-gray-700/50">
+        <div className="flex flex-col gap-3 bg-white/80 dark:bg-gray-800/40 rounded-xl p-4 border border-gray-200 dark:border-gray-700/50">
             <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[#5865F2]/10 flex items-center justify-center">
                     <FaDiscord className="w-4 h-4 text-[#5865F2]" />
                 </div>
                 <div>
                     <div className="flex items-center gap-2">
-                        <p className="text-sm font-medium text-white">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">
                             Weekly Call
                         </p>
                     </div>
-                    <p className="text-xs text-gray-400 hidden md:block">
+                    <p className="text-xs text-gray-600 dark:text-gray-400 hidden md:block">
                         Every Friday • 8:00 AM (Bali)
                     </p>
                 </div>
             </div>
 
-            <div className="md:hidden text-xs text-gray-400">{timeUntil}</div>
+            <div className="md:hidden text-xs text-gray-600 dark:text-gray-400">
+                {timeUntil}
+            </div>
 
             <span className="hidden md:inline-flex items-center px-2.5 py-1 text-xs w-fit">
                 {callActive ? (
@@ -241,7 +279,8 @@ const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
                 <button
                     onClick={() => createCalendarEvent(weeklyCall)}
                     className="hidden md:flex w-full items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm
-                        bg-gray-700 hover:bg-gray-600 text-white transition-colors duration-200"
+                        bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 
+                        text-gray-900 dark:text-white transition-colors duration-200"
                 >
                     <HiCalendar className="w-4 h-4" />
                     Add to Calendar
@@ -257,17 +296,17 @@ const Progress = ({ community }: { community: Community }) => {
     const totalWeeks = community.weeklyData.length
 
     return (
-        <div className="flex flex-col gap-4 bg-gray-800/40 rounded-xl p-4 border border-gray-700/50">
+        <div className="flex flex-col gap-4 bg-white/80 dark:bg-gray-800/40 rounded-xl p-4 border border-gray-200 dark:border-gray-700/50">
             <div className="space-y-1">
                 <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">
+                    <span className="text-sm text-gray-600 dark:text-gray-400">
                         Cohort Timeline
                     </span>
-                    <span className="text-sm font-medium text-orange-400">
+                    <span className="text-sm font-medium text-orange-500 dark:text-orange-400">
                         {progress}%
                     </span>
                 </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                     <div
                         className="bg-orange-500 h-2 rounded-full transition-all duration-300"
                         style={{ width: `${progress}%` }}
@@ -275,10 +314,10 @@ const Progress = ({ community }: { community: Community }) => {
                 </div>
             </div>
             <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-400">
+                <span className="text-gray-600 dark:text-gray-400">
                     Week {currentWeek} of {totalWeeks}
                 </span>
-                <span className="px-2 py-1 rounded-md bg-orange-500/10 text-orange-400">
+                <span className="px-2 py-1 rounded-md bg-orange-500/10 text-orange-600 dark:text-orange-400">
                     {totalWeeks - currentWeek + 1} weeks remaining
                 </span>
             </div>
@@ -327,16 +366,16 @@ const QuestionsSection = ({
     <div className="space-y-6">
         <div className="flex items-center justify-between">
             <div>
-                <h2 className="text-xl font-semibold text-white">
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
                     Week {weekNumber} Discussion Topics
                 </h2>
-                <p className="text-sm text-gray-400 mt-1">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     Topics we'll cover in our weekly call
                 </p>
             </div>
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800/50 rounded-lg">
-                <HiDocument className="w-4 h-4 text-gray-400" />
-                <span className="text-sm text-gray-400">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100/50 dark:bg-gray-800/50 rounded-lg">
+                <HiDocument className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                <span className="text-sm text-gray-600 dark:text-gray-400">
                     {questions.length} topics
                 </span>
             </div>
@@ -345,16 +384,16 @@ const QuestionsSection = ({
             {questions.map((question, index) => (
                 <div
                     key={question.id}
-                    className="group relative p-4 rounded-xl bg-gray-800/20 hover:bg-gray-800/30 transition-all duration-200"
+                    className="group relative p-4 rounded-xl bg-gray-50/50 hover:bg-gray-100/50 dark:bg-gray-800/20 dark:hover:bg-gray-800/30 transition-all duration-200"
                 >
                     <div className="flex items-center gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center">
-                            <span className="text-sm font-medium text-gray-400">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
                                 {(index + 1).toString().padStart(2, "0")}
                             </span>
                         </div>
                         <div className="flex-1 min-w-0">
-                            <p className="text-gray-200 leading-relaxed">
+                            <p className="text-gray-900 dark:text-gray-200 leading-relaxed">
                                 {question.text}
                             </p>
                         </div>
@@ -364,13 +403,13 @@ const QuestionsSection = ({
         </div>
         {questions.length === 0 && (
             <div className="text-center py-12">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-800/50 flex items-center justify-center">
-                    <HiDocument className="w-8 h-8 text-gray-600" />
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100/50 dark:bg-gray-800/50 flex items-center justify-center">
+                    <HiDocument className="w-8 h-8 text-gray-400 dark:text-gray-600" />
                 </div>
-                <h3 className="text-gray-400 font-medium">
+                <h3 className="text-gray-700 dark:text-gray-400 font-medium">
                     No discussion topics yet
                 </h3>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-gray-600 dark:text-gray-500 mt-1">
                     Topics for this week will be added soon
                 </p>
             </div>
@@ -544,22 +583,22 @@ const LearningResourcesSection = ({
 
                 {/* Progress Overview */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-gray-900/40 rounded-xl p-4">
-                        <div className="flex items-center gap-3 mb-3">
+                    <div className="bg-white dark:bg-gray-800/40 rounded-xl p-4 border border-gray-200 dark:border-gray-800">
+                        <div className="flex items-center gap-3 mb-4">
                             <div className="p-2 rounded-lg bg-orange-500/10">
-                                <FaBook className="w-4 h-4 text-orange-400" />
+                                <FaBook className="w-4 h-4 text-orange-500" />
                             </div>
-                            <span className="text-sm font-medium text-white">
+                            <span className="text-sm font-medium text-gray-900 dark:text-white">
                                 Lessons
                             </span>
                         </div>
                         <div className="flex items-center justify-between">
-                            <span className="text-2xl font-bold text-orange-400">
+                            <span className="text-2xl font-bold text-orange-500">
                                 {lessons.filter((l) => l.isCompleted).length}/
                                 {lessons.length}
                             </span>
                             <div className="flex items-center gap-2">
-                                <div className="h-1.5 w-16 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-1.5 w-16 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                                     <div
                                         className="h-full bg-orange-500 rounded-full transition-all duration-300"
                                         style={{
@@ -571,22 +610,22 @@ const LearningResourcesSection = ({
                         </div>
                     </div>
 
-                    <div className="bg-gray-900/40 rounded-xl p-4">
-                        <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-white dark:bg-gray-800/40 rounded-xl p-4 border border-gray-200 dark:border-gray-800">
+                        <div className="flex items-center gap-3 mb-4">
                             <div className="p-2 rounded-lg bg-purple-500/10">
-                                <FaPuzzlePiece className="w-4 h-4 text-purple-400" />
+                                <FaPuzzlePiece className="w-4 h-4 text-purple-500" />
                             </div>
-                            <span className="text-sm font-medium text-white">
+                            <span className="text-sm font-medium text-gray-900 dark:text-white">
                                 Exercises
                             </span>
                         </div>
                         <div className="flex items-center justify-between">
-                            <span className="text-2xl font-bold text-purple-400">
+                            <span className="text-2xl font-bold text-purple-500">
                                 {exercises.filter((e) => e.isCompleted).length}/
                                 {exercises.length}
                             </span>
                             <div className="flex items-center gap-2">
-                                <div className="h-1.5 w-16 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-1.5 w-16 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                                     <div
                                         className="h-full bg-purple-500 rounded-full transition-all duration-300"
                                         style={{
@@ -598,22 +637,22 @@ const LearningResourcesSection = ({
                         </div>
                     </div>
 
-                    <div className="bg-gray-900/40 rounded-xl p-4">
-                        <div className="flex items-center gap-3 mb-3">
+                    <div className="bg-white dark:bg-gray-800/40 rounded-xl p-4 border border-gray-200 dark:border-gray-800">
+                        <div className="flex items-center gap-3 mb-4">
                             <div className="p-2 rounded-lg bg-blue-500/10">
-                                <FaTools className="w-4 h-4 text-blue-400" />
+                                <FaTools className="w-4 h-4 text-blue-500" />
                             </div>
-                            <span className="text-sm font-medium text-white">
+                            <span className="text-sm font-medium text-gray-900 dark:text-white">
                                 Projects
                             </span>
                         </div>
                         <div className="flex items-center justify-between">
-                            <span className="text-2xl font-bold text-blue-400">
+                            <span className="text-2xl font-bold text-blue-500">
                                 {projects.filter((p) => p.isCompleted).length}/
                                 {projects.length}
                             </span>
                             <div className="flex items-center gap-2">
-                                <div className="h-1.5 w-16 bg-gray-800 rounded-full overflow-hidden">
+                                <div className="h-1.5 w-16 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                                     <div
                                         className="h-full bg-blue-500 rounded-full transition-all duration-300"
                                         style={{
@@ -645,9 +684,9 @@ const LearningResourcesSection = ({
                             section.items.length > 0 && (
                                 <div
                                     key={section.label}
-                                    className="bg-gray-900/60 rounded-xl overflow-hidden border border-gray-800/50"
+                                    className="bg-white dark:bg-gray-800/40 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800"
                                 >
-                                    <div className="p-4 border-b border-gray-800">
+                                    <div className="p-4 border-b border-gray-200 dark:border-gray-800">
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center gap-3">
                                                 <section.icon
@@ -655,11 +694,11 @@ const LearningResourcesSection = ({
                                                         COLORS.primary.text
                                                     }
                                                 />
-                                                <h3 className="font-medium text-white">
+                                                <h3 className="font-medium text-gray-900 dark:text-white">
                                                     {section.label}
                                                 </h3>
                                             </div>
-                                            <span className="text-sm text-gray-400">
+                                            <span className="text-sm text-gray-600 dark:text-gray-400">
                                                 {
                                                     section.items.filter(
                                                         (r) => r.isCompleted
@@ -671,15 +710,15 @@ const LearningResourcesSection = ({
                                         </div>
                                     </div>
 
-                                    <div className="divide-y divide-gray-800">
+                                    <div className="divide-y divide-gray-200 dark:divide-gray-700">
                                         {section.items.map(
                                             (resource, index) => (
                                                 <Link
                                                     key={resource.id}
                                                     href={`/decoding/${resource.link}`}
                                                     className={`
-                                                    block p-4 hover:bg-gray-800/40 transition-colors duration-200
-                                                    ${!resource.isCompleted && index === 0 ? "bg-gray-800/20" : ""}
+                                                    block p-4 hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors duration-200
+                                                    ${!resource.isCompleted && index === 0 ? "bg-gray-50 dark:bg-gray-800/20" : ""}
                                                 `}
                                                 >
                                                     <div className="flex items-center gap-4">
@@ -697,13 +736,13 @@ const LearningResourcesSection = ({
                                                                     />
                                                                 </div>
                                                             ) : (
-                                                                <div className="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center">
-                                                                    <div className="w-4 h-4 rounded-full border-2 border-gray-600" />
+                                                                <div className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                                                                    <div className="w-4 h-4 rounded-full border-2 border-gray-300 dark:border-gray-600" />
                                                                 </div>
                                                             )}
                                                         </div>
                                                         <div className="flex-1 min-w-0">
-                                                            <h4 className="text-sm font-medium text-white">
+                                                            <h4 className="text-sm font-medium text-gray-900 dark:text-white">
                                                                 {resource.title}
                                                             </h4>
                                                         </div>
@@ -714,7 +753,7 @@ const LearningResourcesSection = ({
                                                                 <span
                                                                     className="flex items-center gap-1.5 px-3 py-1.5 
                                                                 border border-orange-500/50 hover:border-orange-500
-                                                                text-orange-400 hover:text-orange-300
+                                                                text-orange-500 hover:text-orange-400
                                                                 text-sm rounded-md bg-transparent
                                                                 transition-all duration-200"
                                                                 >
@@ -723,7 +762,7 @@ const LearningResourcesSection = ({
                                                                 </span>
                                                             )}
 
-                                                        <HiArrowRight className="w-4 h-4 text-gray-600" />
+                                                        <HiArrowRight className="w-4 h-4 text-gray-400 dark:text-gray-500" />
                                                     </div>
                                                 </Link>
                                             )
@@ -733,99 +772,6 @@ const LearningResourcesSection = ({
                             )
                     )}
                 </div>
-            </div>
-        </div>
-    )
-}
-
-const WeekNavigation = ({
-    communityData,
-    totalWeeks,
-    currentWeek,
-    selectedWeek,
-    setSelectedWeek
-}: {
-    communityData: Community
-    totalWeeks: number
-    currentWeek: number
-    selectedWeek: number
-    setSelectedWeek: React.Dispatch<React.SetStateAction<number>>
-}) => {
-    return (
-        <div className="bg-gray-900/40 rounded-xl overflow-hidden">
-            <div className="p-4 border-b border-gray-800">
-                <h3 className="text-sm font-medium text-white">
-                    Course Timeline
-                </h3>
-            </div>
-            <div className="divide-y divide-gray-800">
-                {Array.from({ length: totalWeeks }, (_, i) => i + 1).map(
-                    (week) => {
-                        const isLocked = week > currentWeek
-                        const isPast = week < currentWeek
-                        const isCurrent = week === currentWeek
-                        const isSelected = week === selectedWeek
-                        const weekData = getWeeklyData(communityData, week)
-
-                        return (
-                            <button
-                                key={week}
-                                onClick={() => setSelectedWeek(week)}
-                                className={`
-                                    w-full flex items-center gap-3 p-4
-                                    transition-colors duration-200
-                                    hover:bg-gray-800/60
-                                    ${isSelected ? "bg-orange-500/10 border-l-2 border-orange-500" : ""}
-                                `}
-                            >
-                                {/* Week Status Indicator */}
-                                <div
-                                    className={`
-                                        w-8 h-8 rounded-lg flex items-center justify-center shrink-0
-                                        ${isLocked ? "bg-gray-800/60" : isSelected ? "bg-orange-500/20" : "bg-gray-800/40"}
-                                    `}
-                                >
-                                    {isLocked ? (
-                                        <HiLockClosed className="w-4 h-4 text-gray-500" />
-                                    ) : isPast ? (
-                                        <FaCheckCircle className="w-4 h-4 text-green-400" />
-                                    ) : (
-                                        <span
-                                            className={`
-                                            text-sm font-medium
-                                            ${isSelected ? "text-orange-400" : "text-gray-400"}
-                                        `}
-                                        >
-                                            {week}
-                                        </span>
-                                    )}
-                                </div>
-
-                                {/* Week Info */}
-                                <div className="flex-1 text-left min-w-0">
-                                    <div className="flex items-center gap-2">
-                                        <span
-                                            className={`
-                                            text-sm font-medium truncate
-                                            ${isSelected ? "text-orange-400" : "text-gray-300"}
-                                        `}
-                                        >
-                                            Week {week}
-                                        </span>
-                                        {isCurrent && (
-                                            <span className="text-xs px-1.5 py-0.5 rounded-full bg-orange-500/20 text-orange-400">
-                                                Current
-                                            </span>
-                                        )}
-                                    </div>
-                                    <p className="text-xs text-gray-500 truncate">
-                                        {weekData?.topic || `Module ${week}`}
-                                    </p>
-                                </div>
-                            </button>
-                        )
-                    }
-                )}
             </div>
         </div>
     )
@@ -877,25 +823,25 @@ const DashboardTabs = ({
     return (
         <div className="space-y-6">
             {/* Enhanced Tab Navigation with Stats */}
-            <div className="bg-gray-900/60 rounded-xl border border-gray-800">
-                <div className="p-4 border-b border-gray-800">
+            <div className="bg-white dark:bg-gray-800/40 rounded-xl border border-gray-200 dark:border-gray-800">
+                <div className="p-4 border-b border-gray-200 dark:border-gray-800">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
                             <div className="flex items-center gap-2">
-                                <HiClock className="w-4 h-4 text-gray-400" />
-                                <span className="text-sm text-gray-400">
+                                <HiClock className="w-4 h-4 text-gray-400 dark:text-gray-500" />
+                                <span className="text-sm text-gray-600 dark:text-gray-400">
                                     Est. Time: {Math.ceil(totalMinutes / 60)}h{" "}
                                     {totalMinutes % 60}m
                                 </span>
                             </div>
-                            <div className="w-px h-4 bg-gray-700" />
+                            <div className="w-px h-4 bg-gray-200 dark:bg-gray-700" />
                             <div className="flex items-center gap-2">
-                                <FaCheckCircle className="w-4 h-4 text-gray-400" />
+                                <FaCheckCircle className="w-4 h-4 text-gray-400 dark:text-gray-500" />
                                 {/* Additional stats can be added here */}
                             </div>
                         </div>
                         {weekNumber === currentWeek && (
-                            <span className="px-2 py-1 text-xs rounded-full bg-orange-500/20 text-orange-400">
+                            <span className="px-2 py-1 text-xs rounded-full bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400">
                                 Current Week
                             </span>
                         )}
@@ -915,8 +861,8 @@ const DashboardTabs = ({
                                     text-sm font-medium transition-all duration-200 relative
                                     ${
                                         activeTab === tab.id
-                                            ? "text-orange-400"
-                                            : "text-gray-400 hover:text-gray-300"
+                                            ? "text-orange-500 dark:text-orange-400"
+                                            : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300"
                                     }
                                 `}
                             >
@@ -925,7 +871,7 @@ const DashboardTabs = ({
                                 {activeTab === tab.id && (
                                     <motion.div
                                         layoutId="activeTab"
-                                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-400"
+                                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500 dark:bg-orange-400"
                                         initial={false}
                                     />
                                 )}
@@ -953,7 +899,7 @@ const DashboardTabs = ({
                 )}
 
                 {activeTab === "Discussions" && (
-                    <div className="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-800/50">
+                    <div className="bg-white dark:bg-gray-800/40 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
                         <QuestionsSection
                             questions={collectQuestions(currentWeekData)}
                             weekNumber={weekNumber}
@@ -962,7 +908,7 @@ const DashboardTabs = ({
                 )}
 
                 {activeTab === "Groups" && (
-                    <div className="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-800/50">
+                    <div className="bg-white dark:bg-gray-800/40 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
                         <GroupsSection
                             weekData={currentWeekData}
                             weekNumber={weekNumber}
@@ -973,7 +919,7 @@ const DashboardTabs = ({
                 )}
 
                 {activeTab === "Resources" && (
-                    <div className="bg-gray-900/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-800/50">
+                    <div className="bg-white dark:bg-gray-800/40 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
                         <AdditionalResources weekData={currentWeekData} />
                     </div>
                 )}
@@ -1009,17 +955,17 @@ const GroupsSection = ({
                 return (
                     <div
                         key={group.groupId}
-                        className="bg-gray-900/40 backdrop-blur-sm rounded-xl border border-gray-800/50 overflow-hidden"
+                        className="bg-white dark:bg-gray-800/40 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden"
                     >
                         {/* Group Header */}
-                        <div className="p-4 border-b border-gray-800">
+                        <div className="p-4 border-b border-gray-200 dark:border-gray-800">
                             <div className="flex items-center justify-between mb-3">
-                                <h3 className="text-lg font-medium text-white">
+                                <h3 className="text-lg font-medium text-gray-900 dark:text-white">
                                     Group {group.groupId}
                                 </h3>
-                                <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800/50 rounded-lg">
-                                    <HiUserCircle className="w-4 h-4 text-gray-400" />
-                                    <span className="text-sm text-gray-400">
+                                <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                                    <HiUserCircle className="w-4 h-4 text-gray-400 dark:text-gray-500" />
+                                    <span className="text-sm text-gray-600 dark:text-gray-400">
                                         {groupData?.students.length} members
                                     </span>
                                 </div>
@@ -1028,30 +974,30 @@ const GroupsSection = ({
                             {/* Group Leaders */}
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Chaperon */}
-                                <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/30">
-                                    <div className="w-10 h-10 rounded-lg bg-gray-700/50 flex items-center justify-center">
-                                        <HiUserCircle className="w-6 h-6 text-gray-400" />
+                                <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-100 dark:bg-gray-700">
+                                    <div className="w-10 h-10 rounded-lg bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
+                                        <HiUserCircle className="w-6 h-6 text-gray-400 dark:text-gray-500" />
                                     </div>
                                     <div>
-                                        <div className="text-xs font-medium text-gray-400 mb-0.5">
+                                        <div className="text-xs font-medium text-gray-600 dark:text-gray-400 mb-0.5">
                                             Chaperon
                                         </div>
-                                        <div className="text-sm text-white">
+                                        <div className="text-sm text-gray-900 dark:text-white">
                                             {groupData?.chaperon.name}
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Weekly Deputy */}
-                                <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/30">
-                                    <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center">
-                                        <FaDiscord className="w-5 h-5 text-orange-400" />
+                                <div className="flex items-center gap-3 p-3 rounded-lg bg-orange-50 dark:bg-orange-900/20">
+                                    <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-500/20 flex items-center justify-center">
+                                        <FaDiscord className="w-5 h-5 text-orange-500 dark:text-orange-400" />
                                     </div>
                                     <div>
-                                        <div className="text-xs font-medium text-gray-400 mb-0.5">
+                                        <div className="text-xs font-medium text-gray-600 dark:text-gray-400 mb-0.5">
                                             Week {weekNumber} Deputy
                                         </div>
-                                        <div className="text-sm text-white">
+                                        <div className="text-sm text-gray-900 dark:text-white">
                                             {group.deputyName}
                                         </div>
                                     </div>
@@ -1061,27 +1007,27 @@ const GroupsSection = ({
 
                         {/* Assigned Questions */}
                         <div className="p-4">
-                            <h4 className="text-sm font-medium text-gray-400 mb-4">
+                            <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-4">
                                 Discussion Topics
                             </h4>
                             <div className="space-y-4">
                                 {groupQuestions?.map((question, index) => (
                                     <div
                                         key={question.id}
-                                        className="flex items-start gap-4 p-4 rounded-lg bg-gray-800/30"
+                                        className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800/20"
                                     >
-                                        <div className="w-6 h-6 rounded-full bg-gray-700/50 flex-shrink-0 flex items-center justify-center">
-                                            <span className="text-xs text-gray-400">
+                                        <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center">
+                                            <span className="text-xs text-gray-600 dark:text-gray-400">
                                                 {index + 1}
                                             </span>
                                         </div>
                                         <div>
-                                            <p className="text-gray-200 text-sm leading-relaxed mb-2">
+                                            <p className="text-gray-900 dark:text-white text-sm leading-relaxed mb-2">
                                                 {question.text}
                                             </p>
                                             <div className="flex items-center gap-2">
-                                                <HiUserCircle className="w-4 h-4 text-gray-500" />
-                                                <span className="text-sm text-gray-400">
+                                                <HiUserCircle className="w-4 h-4 text-gray-400 dark:text-gray-500" />
+                                                <span className="text-sm text-gray-600 dark:text-gray-400">
                                                     Assigned to:{" "}
                                                     {
                                                         question.assignedTo
@@ -1101,13 +1047,13 @@ const GroupsSection = ({
             {/* Empty State */}
             {weekData.groupAssignments.length === 0 && (
                 <div className="text-center py-12">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-800/50 flex items-center justify-center">
-                        <HiUserCircle className="w-8 h-8 text-gray-600" />
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                        <HiUserCircle className="w-8 h-8 text-gray-400 dark:text-gray-500" />
                     </div>
-                    <h3 className="text-gray-400 font-medium">
+                    <h3 className="text-gray-600 dark:text-gray-400 font-medium">
                         No groups assigned yet
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                         Group assignments for this week will be added soon
                     </p>
                 </div>
@@ -1120,33 +1066,33 @@ const ResourceCard = ({ resource }: { resource: Resource }) => {
     const typeConfig = {
         documentation: {
             icon: HiDocument,
-            color: "text-blue-400",
-            bgColor: "bg-blue-400/10"
+            color: "text-blue-500",
+            bgColor: "bg-blue-500/10"
         },
         video: {
             icon: HiPlay,
-            color: "text-red-400",
-            bgColor: "bg-red-400/10"
+            color: "text-red-500",
+            bgColor: "bg-red-500/10"
         },
         exercise: {
             icon: FaPuzzlePiece,
-            color: "text-purple-400",
-            bgColor: "bg-purple-400/10"
+            color: "text-purple-500",
+            bgColor: "bg-purple-500/10"
         },
         article: {
             icon: HiDocument,
-            color: "text-green-400",
-            bgColor: "bg-green-400/10"
+            color: "text-green-500",
+            bgColor: "bg-green-500/10"
         },
         tool: {
             icon: FaTools,
-            color: "text-orange-400",
-            bgColor: "bg-orange-400/10"
+            color: "text-orange-500",
+            bgColor: "bg-orange-500/10"
         },
         github: {
             icon: FaGithub,
-            color: "text-gray-400",
-            bgColor: "bg-gray-400/10"
+            color: "text-gray-500",
+            bgColor: "bg-gray-500/10"
         }
     }
 
@@ -1154,19 +1100,19 @@ const ResourceCard = ({ resource }: { resource: Resource }) => {
     const Icon = config.icon
 
     return (
-        <div className="group bg-gray-900/40 backdrop-blur-sm rounded-xl p-4 hover:bg-gray-800/40 transition-all duration-200">
+        <div className="group bg-white dark:bg-gray-800/40 rounded-xl p-4 hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-all duration-200">
             <div className="flex items-start gap-4">
                 <div className={`p-3 rounded-lg ${config.bgColor}`}>
                     <Icon className={`w-5 h-5 ${config.color}`} />
                 </div>
                 <div className="flex-1 min-w-0">
-                    <h3 className="text-sm font-medium text-white mb-1">
+                    <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-1">
                         {resource.title}
                     </h3>
-                    <p className="text-sm text-gray-400 mb-3">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                         {resource.description}
                     </p>
-                    <div className="flex items-center gap-4 text-xs text-gray-500">
+                    <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
                         {resource.duration && (
                             <span className="flex items-center gap-1">
                                 <HiClock className="w-4 h-4" />
@@ -1177,7 +1123,7 @@ const ResourceCard = ({ resource }: { resource: Resource }) => {
                             href={resource.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-1 text-orange-400 hover:text-orange-300"
+                            className="flex items-center gap-1 text-orange-500 hover:text-orange-400"
                         >
                             View Resource
                             <HiArrowUpRight className="w-3 h-3" />
@@ -1210,7 +1156,7 @@ const AdditionalResources = ({ weekData }: { weekData: WeeklyData }) => {
     return (
         <div className="space-y-6">
             {/* Simple Filter Tabs */}
-            <div className="flex items-center gap-2 border-b border-gray-800">
+            <div className="flex items-center gap-2 border-b border-gray-200 dark:border-gray-800">
                 {resourceTypes.map((type) => (
                     <button
                         key={type.value}
@@ -1221,14 +1167,14 @@ const AdditionalResources = ({ weekData }: { weekData: WeeklyData }) => {
                             px-4 py-2 text-sm font-medium relative
                             ${
                                 selectedType === type.value
-                                    ? "text-orange-400"
-                                    : "text-gray-400 hover:text-gray-300"
+                                    ? "text-orange-500 dark:text-orange-400"
+                                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300"
                             }
                         `}
                     >
                         {type.label}
                         {selectedType === type.value && (
-                            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-400" />
+                            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500 dark:bg-orange-400" />
                         )}
                     </button>
                 ))}
@@ -1244,7 +1190,7 @@ const AdditionalResources = ({ weekData }: { weekData: WeeklyData }) => {
             {/* Simple Empty State */}
             {filteredResources.length === 0 && (
                 <div className="text-center py-8">
-                    <p className="text-gray-400">
+                    <p className="text-gray-600 dark:text-gray-400">
                         No {selectedType === "all" ? "resources" : selectedType}{" "}
                         available for this week.
                     </p>
@@ -1290,13 +1236,13 @@ export default function CommunityDashboard({
     const totalWeeks = communityData.weeklyData.length
 
     return (
-        <div className="min-h-screen bg-vscode-background-light dark:bg-vscode-background-dark">
+        <div className="min-h-screen bg-white dark:bg-vscode-background-dark">
             {isCompleted && (
                 <div className="border-b border-green-500/20 bg-green-500/5">
                     <div className="max-w-7xl mx-auto px-4 py-3">
                         <div className="flex items-center space-x-3">
                             <FaCheckCircle className="w-5 h-5 text-green-500" />
-                            <p className="text-green-400">
+                            <p className="text-green-600 dark:text-green-400">
                                 Cohort completed on{" "}
                                 {new Date(
                                     communityData.currentCohort.endDate
@@ -1308,14 +1254,14 @@ export default function CommunityDashboard({
             )}
 
             {/* Simplified Header */}
-            <div className="border-b border-gray-800">
+            <div className="border-b border-gray-200 dark:border-gray-800">
                 <div className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex items-center gap-4">
                         <Link
                             href="/decoding"
-                            className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors duration-200"
+                            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
                         >
-                            <HiArrowRight className="w-5 h-5 text-gray-400 rotate-180" />
+                            <HiArrowRight className="w-5 h-5 text-gray-400 dark:text-gray-500 rotate-180" />
                         </Link>
                         <div className="w-12 h-12 relative">
                             <Image
@@ -1326,10 +1272,10 @@ export default function CommunityDashboard({
                             />
                         </div>
                         <div>
-                            <h1 className="text-xl font-bold text-white">
+                            <h1 className="text-xl font-bold text-gray-900 dark:text-white">
                                 {communityData.name}
                             </h1>
-                            <div className="flex items-center gap-2 text-sm text-gray-400">
+                            <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                                 <span>{communityData.language}</span>
                                 <span>•</span>
                                 <span>{communityData.timezone}</span>
@@ -1340,16 +1286,16 @@ export default function CommunityDashboard({
             </div>
 
             {/* Mobile Week Navigation */}
-            <div className="md:hidden border-b border-gray-800 bg-gray-900/40">
+            <div className="md:hidden border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800/40">
                 <div className="px-4 py-3">
                     <div className="flex items-center justify-between mb-3">
-                        <h2 className="text-white font-medium">
+                        <h2 className="text-gray-900 dark:text-white font-medium">
                             {currentWeekData.topic}
                         </h2>
                     </div>
                     <div className="overflow-x-auto scrollbar-hide">
                         <div className="flex items-center min-w-max gap-2">
-                            <span className="text-sm text-gray-400 mr-1">
+                            <span className="text-sm text-gray-600 dark:text-gray-400 mr-1">
                                 Week
                             </span>
                             <div className="flex gap-1.5">
@@ -1366,7 +1312,7 @@ export default function CommunityDashboard({
                                             ${
                                                 selectedWeek === week
                                                     ? "bg-orange-500 text-white"
-                                                    : "bg-gray-800/80 text-gray-400 hover:bg-gray-800"
+                                                    : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600"
                                             }
                                             ${week > getCurrentWeek(communityData) ? "opacity-50 cursor-not-allowed" : ""}
                                         `}
@@ -1379,7 +1325,7 @@ export default function CommunityDashboard({
                                 ))}
                             </div>
                             {selectedWeek === getCurrentWeek(communityData) && (
-                                <span className="ml-2 px-2 py-0.5 text-xs rounded-full bg-orange-500/20 text-orange-400 whitespace-nowrap">
+                                <span className="ml-2 px-2 py-0.5 text-xs rounded-full bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 whitespace-nowrap">
                                     Current
                                 </span>
                             )}
@@ -1398,13 +1344,13 @@ export default function CommunityDashboard({
                             <WeeklyCallSection weekData={currentWeekData} />
                             {/* Desktop Week Navigation */}
                             <div className="hidden md:block">
-                                <div className="bg-gray-900/40 rounded-xl overflow-hidden">
-                                    <div className="p-4 border-b border-gray-800">
-                                        <h3 className="text-sm font-medium text-white">
+                                <div className="bg-white dark:bg-gray-800/40 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800">
+                                    <div className="p-4 border-b border-gray-200 dark:border-gray-800">
+                                        <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                                             Course Timeline
                                         </h3>
                                     </div>
-                                    <div className="divide-y divide-gray-800">
+                                    <div className="divide-y divide-gray-200 dark:divide-gray-700">
                                         {Array.from(
                                             { length: totalWeeks },
                                             (_, i) => i + 1
@@ -1435,24 +1381,24 @@ export default function CommunityDashboard({
                                                     className={`
                                                         w-full flex items-center gap-3 p-4
                                                         transition-colors duration-200
-                                                        hover:bg-gray-800/60
-                                                        ${isSelected ? "bg-orange-500/10 border-l-2 border-orange-500" : ""}
+                                                        hover:bg-gray-50 dark:hover:bg-gray-700/40
+                                                        ${isSelected ? "bg-orange-50 dark:bg-orange-900/20 border-l-2 border-orange-500" : ""}
                                                         ${isLocked ? "opacity-50 cursor-not-allowed" : ""}
                                                     `}
                                                 >
                                                     <div
                                                         className={`
                                                         w-8 h-8 rounded-lg flex items-center justify-center shrink-0
-                                                        ${isLocked ? "bg-gray-800/60" : isSelected ? "bg-orange-500/20" : "bg-gray-800/40"}
+                                                        ${isLocked ? "bg-gray-100 dark:bg-gray-700" : isSelected ? "bg-orange-50 dark:bg-orange-900/20" : "bg-gray-50 dark:bg-gray-800/20"}
                                                     `}
                                                     >
                                                         {isLocked ? (
-                                                            <HiLockClosed className="w-4 h-4 text-gray-500" />
+                                                            <HiLockClosed className="w-4 h-4 text-gray-400 dark:text-gray-500" />
                                                         ) : isPast ? (
-                                                            <FaCheckCircle className="w-4 h-4 text-green-400" />
+                                                            <FaCheckCircle className="w-4 h-4 text-green-500" />
                                                         ) : (
                                                             <span
-                                                                className={`text-sm font-medium ${isSelected ? "text-orange-400" : "text-gray-400"}`}
+                                                                className={`text-sm font-medium ${isSelected ? "text-orange-500" : "text-gray-600 dark:text-gray-400"}`}
                                                             >
                                                                 {week}
                                                             </span>
@@ -1461,17 +1407,17 @@ export default function CommunityDashboard({
                                                     <div className="flex-1 text-left">
                                                         <div className="flex items-center gap-2">
                                                             <span
-                                                                className={`text-sm font-medium ${isSelected ? "text-orange-400" : "text-gray-300"}`}
+                                                                className={`text-sm font-medium ${isSelected ? "text-orange-500" : "text-gray-900 dark:text-white"}`}
                                                             >
                                                                 Week {week}
                                                             </span>
                                                             {isCurrent && (
-                                                                <span className="text-xs px-1.5 py-0.5 rounded-full bg-orange-500/20 text-orange-400">
+                                                                <span className="text-xs px-1.5 py-0.5 rounded-full bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400">
                                                                     Current
                                                                 </span>
                                                             )}
                                                         </div>
-                                                        <p className="text-xs text-gray-500 truncate">
+                                                        <p className="text-xs text-gray-600 dark:text-gray-400 truncate">
                                                             {weekData?.topic ||
                                                                 `Module ${week}`}
                                                         </p>
