@@ -571,7 +571,7 @@
                         }
                     ],
                     "weeklyCall": {
-                        "date": "2024-12-27T12:00:00Z",
+                        "date": "2024-12-20T12:00:00Z",
                         "discordLink": "https://discord.gg/6XPJ96sCY4",
                         "time": {
                             "hour": 20,
@@ -621,9 +621,42 @@
                             "parentTopic": "p2ms"
                         }
                     ],
-                    "baseQuestions": [],
+                    "baseQuestions": [
+                        {
+                            "text": "Explain the difference between 'standardness' and 'validity' in the context of P2MS transactions. What are the limits for each?",
+                            "relatedMaterial": "/decoding/p2ms"
+                        },
+                        {
+                            "text": "In a P2MS ScriptPubKey, what are the essential components that must be included in the correct order?",
+                            "relatedMaterial": "/decoding/p2ms"
+                        },
+                        {
+                            "text": "Why is OP_0 included at the beginning of the ScriptSig in P2MS transactions? What bug does this address?",
+                            "relatedMaterial": "/decoding/p2ms"
+                        },
+                        {
+                            "text": "What is the maximum number of public keys allowed in a standard (non-P2SH) P2MS script, and why is this limit in place?",
+                            "relatedMaterial": "/decoding/p2ms"
+                        },
+                        {
+                            "text": "In a 1-of-3 multisig setup, explain why matching signatures with the first public key is more efficient than matching with the last one.",
+                            "relatedMaterial": "/decoding/p2ms"
+                        },
+                        {
+                            "text": "For a 2-of-3 multisig transaction, what would the unlocking script (ScriptSig) contain?",
+                            "relatedMaterial": "/decoding/p2ms"
+                        },
+                        {
+                            "text": "How can you overcome the 3-public-key limitation of standard P2MS, and what is the new limit when using this method?",
+                            "relatedMaterial": "/decoding/p2ms"
+                        },
+                        {
+                            "text": "What is the primary purpose of a P2MS (Pay-to-Multisig) transaction in Bitcoin?",
+                            "relatedMaterial": "/decoding/p2ms"
+                        }
+                    ],
                     "weeklyCall": {
-                        "date": "2025-01-03T12:00:00Z",
+                        "date": "2024-12-27T12:00:00Z",
                         "discordLink": "https://discord.gg/6XPJ96sCY4",
                         "time": {
                             "hour": 20,
@@ -632,7 +665,20 @@
                         },
                         "description": "Dear Bitcoiners!\n\nWelcome to Decoding Bitcoin study cohort launch session where we will have a quick presentation from Jamal, creator of Decoding Bitcoin platform. We will set a few expectations, answer any questions, and get to know each other. No preparation needed 😇\n\nLocation - Lounge channel on Discord:\nhttps://discord.gg/6XPJ96sCY4"
                     },
-                    "groupAssignments": [],
+                    "groupAssignments": [
+                        {
+                            "groupId": 1,
+                            "deputyName": "hkmiadli"
+                        },
+                        {
+                            "groupId": 2,
+                            "deputyName": "0xZaddy"
+                        },
+                        {
+                            "groupId": 3,
+                            "deputyName": "future5962"
+                        }
+                    ],
                     "additionalResources": []
                 },
                 {
@@ -643,7 +689,7 @@
                     "resources": [],
                     "baseQuestions": [],
                     "weeklyCall": {
-                        "date": "2025-01-10T12:00:00Z",
+                        "date": "2025-01-03T12:00:00Z",
                         "discordLink": "https://discord.gg/6XPJ96sCY4",
                         "time": {
                             "hour": 20,
@@ -663,7 +709,7 @@
                     "resources": [],
                     "baseQuestions": [],
                     "weeklyCall": {
-                        "date": "2025-01-17T12:00:00Z",
+                        "date": "2025-01-10T12:00:00Z",
                         "discordLink": "https://discord.gg/6XPJ96sCY4",
                         "time": {
                             "hour": 20,
