@@ -63,16 +63,5 @@
       "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6480",
-    "publishedAt": "2024-12-12T13:12:07Z",
-    "title": "[Bug]: Dashboard does not show fiat balance with LND backend",
-    "labels": [
-      "Bug",
-      "UI / UX",
-      "Lightning"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
