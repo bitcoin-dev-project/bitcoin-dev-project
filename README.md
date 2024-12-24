@@ -6,7 +6,31 @@ This is the source code for the [Bitcoin Dev Project](https://bitcoindevs.xyz) t
 
 ## Setup
 
-First, run the development server:
+1) Install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+2) Download submodules:
+
+```bash
+npm run submodules:update
+# or
+yarn submodules:update
+# or
+pnpm submodules:update
+# or
+bun submodules:update
+```
+
+3) Run the development server:
 
 ```bash
 npm run dev
