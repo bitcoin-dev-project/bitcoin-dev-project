@@ -534,7 +534,7 @@
     "title": "Assertion pindexPrev && pindexPrev == chainstate.m_chain.Tip() when running regtest",
     "labels": [
       "Bug",
-      "Mining"
+      "Tests"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
