@@ -128,14 +128,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/208",
-    "publishedAt": "2024-12-03T16:26:32Z",
-    "title": "Unable to use CLN node as destination in defined activity",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
