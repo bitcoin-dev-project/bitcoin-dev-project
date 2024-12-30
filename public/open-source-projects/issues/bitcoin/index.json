@@ -527,15 +527,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/31562",
-    "publishedAt": "2024-12-24T13:20:20Z",
-    "title": "Assertion pindexPrev && pindexPrev == chainstate.m_chain.Tip() when running regtest",
-    "labels": [
-      "Bug",
-      "Tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
