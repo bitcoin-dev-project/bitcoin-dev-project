@@ -398,7 +398,8 @@
     "publishedAt": "2024-12-09T19:09:29Z",
     "title": "Possible unexpected behavior in `bdk_chain::migrate_schema`",
     "labels": [
-      "bug"
+      "bug",
+      "documentation"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
