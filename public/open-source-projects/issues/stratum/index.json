@@ -285,5 +285,14 @@
       "job-declarator-server"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1324",
+    "publishedAt": "2025-01-02T12:42:09Z",
+    "title": "Pool and JDC update `nTime` field with current timestamp - they should use the one sent by TP",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
