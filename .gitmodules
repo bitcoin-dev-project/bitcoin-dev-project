@@ -1,4 +1,4 @@
 [submodule "public/bitcoin-topics"]
 	path = public/bitcoin-topics
-	url = https://github.com/bitcoin-dev-project/bitcoin-topics.git
+	url = https://github.com/bitcoin-dev-project/decoding-bitcoin.git
 	branch = transaction-module
