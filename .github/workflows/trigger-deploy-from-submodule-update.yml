@@ -1,18 +1,17 @@
 name: Trigger deploy with deploy hooks
 
 on:
-  repository_dispatch:
-    types: [update_submodules]
+    repository_dispatch:
+        types: [update_submodules]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
 
 jobs:
-  deploy:
-
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger master branch deployment
-        run: |
-          curl -X POST \
-          ${{ secrets.PROD_DEPLOY_HOOK }}
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Trigger master branch deployment
+              run: |
+                  curl -X POST \
+                  ${{ secrets.PROD_DEPLOY_HOOK }}
