@@ -300,7 +300,7 @@ export function Navigation({
                                                         : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
                                                 )}
                                             >
-                                                {/* {completedTopics.has(
+                                                {completedTopics.has(
                                                     normalizePath(link.href)
                                                 ) ? (
                                                     <div className="flex-shrink-0 w-5 h-5 mr-2 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-500/20">
@@ -315,7 +315,7 @@ export function Navigation({
                                                             {getIcon(link.icon)}
                                                         </span>
                                                     )
-                                                )} */}
+                                                )}
                                                 <span className="truncate mr-2">
                                                     {link.title}
                                                 </span>

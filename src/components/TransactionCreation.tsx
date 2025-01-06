@@ -2,6 +2,26 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
+const TransactionParts = [
+    "version",
+    "marker",
+    "flag",
+    "input_count",
+    "txid",
+    "vout",
+    "scriptsig_size",
+    "scriptsig",
+    "sequence",
+    "output_count",
+    "amount",
+    "scriptpubkey_size",
+    "scriptpubkey",
+    "witness",
+    "locktime"
+] as const
+
+type TransactionPart = (typeof TransactionParts)[number]
+
 interface TransactionField {
     name: string
     size: string
@@ -11,20 +31,23 @@ interface TransactionField {
 }
 
 interface TransactionCreationProps {
-    enabledFields?: string[]
+    enabledFields?: TransactionPart[]
 }
 
 export default function TransactionCreation({
     enabledFields
 }: TransactionCreationProps = {}) {
-    const [activeSection, setActiveSection] = useState<string>(() => {
+    const [activeSection, setActiveSection] = useState<TransactionPart>(() => {
         if (enabledFields && enabledFields.length > 0) {
-            return enabledFields[0]
+            const section = TransactionParts.includes(enabledFields[0])
+            if (section) {
+                return enabledFields[0]
+            }
         }
         return "version"
     })
 
-    const transactionFields: Record<string, TransactionField> = {
+    const transactionFields: Record<TransactionPart, TransactionField> = {
         version: {
             name: "Version",
             size: "4 bytes",
@@ -140,7 +163,7 @@ export default function TransactionCreation({
     }
 
     // Helper function to check if a field is enabled
-    const isFieldEnabled = (fieldName: string): boolean => {
+    const isFieldEnabled = (fieldName: TransactionPart): boolean => {
         if (!enabledFields || enabledFields.length === 0) return true
         return enabledFields.includes(fieldName)
     }
@@ -183,6 +206,7 @@ export default function TransactionCreation({
                                     <div className="flex gap-1 items-center">
                                         <TransactionBlock
                                             field={transactionFields.version}
+                                            fieldName="version"
                                             isActive={
                                                 activeSection === "version"
                                             }
@@ -206,6 +230,7 @@ export default function TransactionCreation({
                                     <div className="flex gap-1 items-end">
                                         <TransactionBlock
                                             field={transactionFields.marker}
+                                            fieldName="marker"
                                             isActive={
                                                 activeSection === "marker"
                                             }
@@ -217,6 +242,7 @@ export default function TransactionCreation({
                                         />
                                         <TransactionBlock
                                             field={transactionFields.flag}
+                                            fieldName="flag"
                                             isActive={activeSection === "flag"}
                                             isEnabled={isFieldEnabled("flag")}
                                             onClick={() =>
@@ -238,6 +264,7 @@ export default function TransactionCreation({
                                             field={
                                                 transactionFields.input_count
                                             }
+                                            fieldName="input_count"
                                             isActive={
                                                 activeSection === "input_count"
                                             }
@@ -268,16 +295,27 @@ export default function TransactionCreation({
                                         ].map((field) => (
                                             <TransactionBlock
                                                 key={field}
-                                                field={transactionFields[field]}
+                                                field={
+                                                    transactionFields[
+                                                        field as TransactionPart
+                                                    ]
+                                                }
+                                                fieldName={
+                                                    field as TransactionPart
+                                                }
                                                 isActive={
                                                     activeSection === field
                                                 }
                                                 isEnabled={isFieldEnabled(
-                                                    field
+                                                    field as TransactionPart
                                                 )}
                                                 onClick={() =>
-                                                    isFieldEnabled(field) &&
-                                                    setActiveSection(field)
+                                                    isFieldEnabled(
+                                                        field as TransactionPart
+                                                    ) &&
+                                                    setActiveSection(
+                                                        field as TransactionPart
+                                                    )
                                                 }
                                             />
                                         ))}
@@ -295,6 +333,7 @@ export default function TransactionCreation({
                                             field={
                                                 transactionFields.output_count
                                             }
+                                            fieldName="output_count"
                                             isActive={
                                                 activeSection === "output_count"
                                             }
@@ -325,16 +364,27 @@ export default function TransactionCreation({
                                         ].map((field) => (
                                             <TransactionBlock
                                                 key={field}
-                                                field={transactionFields[field]}
+                                                field={
+                                                    transactionFields[
+                                                        field as TransactionPart
+                                                    ]
+                                                }
+                                                fieldName={
+                                                    field as TransactionPart
+                                                }
                                                 isActive={
                                                     activeSection === field
                                                 }
                                                 isEnabled={isFieldEnabled(
-                                                    field
+                                                    field as TransactionPart
                                                 )}
                                                 onClick={() =>
-                                                    isFieldEnabled(field) &&
-                                                    setActiveSection(field)
+                                                    isFieldEnabled(
+                                                        field as TransactionPart
+                                                    ) &&
+                                                    setActiveSection(
+                                                        field as TransactionPart
+                                                    )
                                                 }
                                             />
                                         ))}
@@ -350,6 +400,7 @@ export default function TransactionCreation({
                                     <div className="flex gap-1 items-center">
                                         <TransactionBlock
                                             field={transactionFields.witness}
+                                            fieldName="witness"
                                             isActive={
                                                 activeSection === "witness"
                                             }
@@ -373,6 +424,7 @@ export default function TransactionCreation({
                                     <div className="flex gap-1 items-center">
                                         <TransactionBlock
                                             field={transactionFields.locktime}
+                                            fieldName="locktime"
                                             isActive={
                                                 activeSection === "locktime"
                                             }
@@ -501,13 +553,15 @@ interface TransactionBlockProps {
     isActive: boolean
     isEnabled?: boolean
     onClick: () => void
+    fieldName: TransactionPart
 }
 
 function TransactionBlock({
     field,
     isActive,
     isEnabled = true,
-    onClick
+    onClick,
+    fieldName
 }: TransactionBlockProps) {
     const getByteWidth = (size: string): string => {
         if (size.includes("variable")) {
