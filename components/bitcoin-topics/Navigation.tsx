@@ -31,7 +31,9 @@ interface NavigationCategory {
 const categoryOrder = [
     "Introduction",
     "History",
+    "Transactions",
     "Scripts",
+    "Taproot",
     "BIPS",
     "Others",
     "References",
