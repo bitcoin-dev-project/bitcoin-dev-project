@@ -394,16 +394,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1767",
-    "publishedAt": "2024-12-09T19:09:29Z",
-    "title": "Possible unexpected behavior in `bdk_chain::migrate_schema`",
-    "labels": [
-      "bug",
-      "documentation"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1788",
     "publishedAt": "2025-01-02T14:01:11Z",
     "title": "Inconsistent `KeychainTxOutIndex` state after db reload",
