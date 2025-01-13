@@ -4,12 +4,26 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Network } from "bitcoinjs-lib"
 import TransactionDecoder, { DecodedTransaction } from "./decodeTransaction"
 
+/**
+ * Note on inputAmounts:
+ * Transaction inputs don't contain their amounts within the raw transaction data.
+ * To get an input's amount, we'd need to:
+ * 1. Get the previous transaction ID and output index
+ * 2. Query a blockchain API or node for that transaction
+ * 3. Find the corresponding output amount
+ *
+ * To avoid this complexity and external API dependencies, we accept an optional
+ * inputAmounts array where each index corresponds to the transaction input at
+ * the same index. If provided, these amounts will be displayed with their
+ * respective inputs.
+ */
 interface TransactionsDisplayProps {
     rawTx: string
     txId?: string
     txTitle?: string
     highlightIndex?: { input?: number; output?: number }
     network: Network
+    inputAmounts?: number[] // Array of amounts corresponding to each input
 }
 
 interface ScriptDetail {
@@ -76,8 +90,13 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
     txId,
     txTitle,
     highlightIndex,
-    network
+    network,
+    inputAmounts
 }) => {
+    const satoshisToBTC = (satoshis: number): string => {
+        return (satoshis / 100000000).toFixed(8)
+    }
+
     const [decodedTransaction, setDecodedTransaction] =
         useState<DecodedTransaction | null>(null)
     const [selectedDetail, setSelectedDetail] = useState<ScriptDetail | null>(
@@ -182,11 +201,21 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                                             : item.type || "Unknown"}
                                     </span>
                                 </div>
-                                {"value" in item && (
-                                    <div className="text-left text-xs text-vscode-text-light dark:text-vscode-text-dark mt-1">
-                                        {item.value} BTC
-                                    </div>
-                                )}
+                                {type === "inputs" &&
+                                    inputAmounts &&
+                                    inputAmounts[index] !== undefined && (
+                                        <div className="text-left text-xs text-vscode-text-light dark:text-vscode-text-dark mt-1">
+                                            {satoshisToBTC(inputAmounts[index])}{" "}
+                                            BTC
+                                        </div>
+                                    )}
+                                {type === "outputs" &&
+                                    "value" in item &&
+                                    item.value !== undefined && (
+                                        <div className="text-left text-xs text-vscode-text-light dark:text-vscode-text-dark mt-1">
+                                            {satoshisToBTC(item.value)} BTC
+                                        </div>
+                                    )}
                             </motion.button>
                         ))}
                     </AnimatePresence>
