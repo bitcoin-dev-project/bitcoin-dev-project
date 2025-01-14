@@ -141,6 +141,10 @@ const popFromStack = (
     count: number
 ): [StackItem[], StackItem[] | string] => {
     if (stack.length < count) return [stack, `Error: Insufficient items`]
-    const items = stack.slice(-count)
+    const items = stack.slice(-count).map((item) => {
+        if (item === true) return BigInt(1)
+        if (item === false) return BigInt(0)
+        return item
+    })
     return [stack.slice(0, -count), items]
 }
