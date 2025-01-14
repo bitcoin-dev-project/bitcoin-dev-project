@@ -112,7 +112,9 @@
     "publishedAt": "2025-01-09T13:22:29Z",
     "title": "Bug: Use default wallet for rpc commands when multiple wallets are loaded",
     "labels": [
-      "bug"
+      "bug",
+      "good first issue",
+      "up for grabs"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   }
