@@ -5,6 +5,7 @@ import { genPageMetadata } from "../seo"
 import { useEffect, useState, useMemo } from "react"
 import Papa from "papaparse"
 import { ExternalLink, Search, ArrowDown, ArrowUp } from "lucide-react"
+import FundingStats from "@/components/funding/FundingStats"
 
 interface FundingData {
     funder: string
@@ -169,8 +170,9 @@ export default function Funding() {
                         Who Funds Bitcoin Development?
                     </h1>
                     <p className="text-xl max-md:text-lg">
-                        A historical record of the financial contributors and
-                        organizations supporting Bitcoin development.
+                        A historical record of of Bitcoin development funding,
+                        focused on original contributions and excluding
+                        reallocations.
                     </p>
                 </div>
 
@@ -183,206 +185,217 @@ export default function Funding() {
                         {error}
                     </div>
                 ) : (
-                    <div className="space-y-4">
-                        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                            {/* Search Input */}
-                            <div className="relative w-full md:w-64">
-                                <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-500" />
-                                <input
-                                    type="text"
-                                    placeholder="Search..."
-                                    className="pl-8 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
-                                    value={searchQuery}
-                                    onChange={(e) =>
-                                        setSearchQuery(e.target.value)
-                                    }
-                                />
+                    <div className="space-y-8">
+                        <FundingStats
+                            data={filteredData}
+                            searchQuery={searchQuery}
+                            selectedFunder={selectedFunder}
+                            selectedRecipient={selectedRecipient}
+                            selectedYear={selectedYear}
+                        />
+                        <div className="space-y-4">
+                            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                                {/* Search Input */}
+                                <div className="relative w-full md:w-64">
+                                    <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-500" />
+                                    <input
+                                        type="text"
+                                        placeholder="Search..."
+                                        className="pl-8 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
+                                        value={searchQuery}
+                                        onChange={(e) =>
+                                            setSearchQuery(e.target.value)
+                                        }
+                                    />
+                                </div>
+
+                                {/* Filter Selects */}
+                                <div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
+                                    <select
+                                        value={selectedFunder}
+                                        onChange={(e) =>
+                                            setSelectedFunder(e.target.value)
+                                        }
+                                        className="rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
+                                    >
+                                        <option value="all">All Funders</option>
+                                        {funders.map((funder) => (
+                                            <option key={funder} value={funder}>
+                                                {funder}
+                                            </option>
+                                        ))}
+                                    </select>
+
+                                    <select
+                                        value={selectedRecipient}
+                                        onChange={(e) =>
+                                            setSelectedRecipient(e.target.value)
+                                        }
+                                        className="rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
+                                    >
+                                        <option value="all">
+                                            All Recipients
+                                        </option>
+                                        {recipients.map((recipient) => (
+                                            <option
+                                                key={recipient}
+                                                value={recipient}
+                                            >
+                                                {recipient}
+                                            </option>
+                                        ))}
+                                    </select>
+
+                                    <select
+                                        value={selectedYear}
+                                        onChange={(e) =>
+                                            setSelectedYear(e.target.value)
+                                        }
+                                        className="rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
+                                    >
+                                        <option value="all">All Years</option>
+                                        {years.map((year) => (
+                                            <option key={year} value={year}>
+                                                {year}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
                             </div>
 
-                            {/* Filter Selects */}
-                            <div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
-                                <select
-                                    value={selectedFunder}
-                                    onChange={(e) =>
-                                        setSelectedFunder(e.target.value)
-                                    }
-                                    className="rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
-                                >
-                                    <option value="all">All Funders</option>
-                                    {funders.map((funder) => (
-                                        <option key={funder} value={funder}>
-                                            {funder}
-                                        </option>
-                                    ))}
-                                </select>
-
-                                <select
-                                    value={selectedRecipient}
-                                    onChange={(e) =>
-                                        setSelectedRecipient(e.target.value)
-                                    }
-                                    className="rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
-                                >
-                                    <option value="all">All Recipients</option>
-                                    {recipients.map((recipient) => (
-                                        <option
-                                            key={recipient}
-                                            value={recipient}
-                                        >
-                                            {recipient}
-                                        </option>
-                                    ))}
-                                </select>
-
-                                <select
-                                    value={selectedYear}
-                                    onChange={(e) =>
-                                        setSelectedYear(e.target.value)
-                                    }
-                                    className="rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
-                                >
-                                    <option value="all">All Years</option>
-                                    {years.map((year) => (
-                                        <option key={year} value={year}>
-                                            {year}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
-
-                        <div className="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
-                            <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                <thead className="bg-gray-50 dark:bg-gray-800">
-                                    <tr>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                        >
-                                            Funder
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                        >
-                                            Recipient
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                        >
-                                            Amount
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider cursor-pointer group"
-                                            onClick={() =>
-                                                setSortDirection((prev) =>
-                                                    prev === "desc"
-                                                        ? "asc"
-                                                        : "desc"
-                                                )
-                                            }
-                                        >
-                                            <div className="flex items-center gap-2">
-                                                Date
-                                                <span className="text-gray-400 dark:text-gray-500">
-                                                    {sortDirection ===
-                                                    "desc" ? (
-                                                        <ArrowDown className="h-4 w-4" />
-                                                    ) : (
-                                                        <ArrowUp className="h-4 w-4" />
-                                                    )}
-                                                </span>
-                                            </div>
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                        >
-                                            Source
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                        >
-                                            Notes
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
-                                    {filteredData.length === 0 ? (
+                            <div className="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
+                                <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead className="bg-gray-50 dark:bg-gray-800">
                                         <tr>
-                                            <td
-                                                colSpan={6}
-                                                className="px-6 py-10 text-center text-sm text-gray-500 dark:text-gray-400"
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
                                             >
-                                                No matching records found
-                                            </td>
+                                                Funder
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+                                            >
+                                                Recipient
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+                                            >
+                                                Amount
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider cursor-pointer group"
+                                                onClick={() =>
+                                                    setSortDirection((prev) =>
+                                                        prev === "desc"
+                                                            ? "asc"
+                                                            : "desc"
+                                                    )
+                                                }
+                                            >
+                                                <div className="flex items-center gap-2">
+                                                    Date
+                                                    <span className="text-gray-400 dark:text-gray-500">
+                                                        {sortDirection ===
+                                                        "desc" ? (
+                                                            <ArrowDown className="h-4 w-4" />
+                                                        ) : (
+                                                            <ArrowUp className="h-4 w-4" />
+                                                        )}
+                                                    </span>
+                                                </div>
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+                                            >
+                                                Source
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+                                            >
+                                                Notes
+                                            </th>
                                         </tr>
-                                    ) : (
-                                        filteredData.map((row, index) => (
-                                            <tr
-                                                key={index}
-                                                className="hover:bg-gray-50 dark:hover:bg-gray-800"
-                                            >
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                                    {row.funder}
-                                                </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                                    {row.recipient}
-                                                </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                                    {row.amount === "NA"
-                                                        ? ""
-                                                        : row.amount}
-                                                </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                                    {row.date}
-                                                </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                                    {row.source_url ? (
-                                                        <a
-                                                            href={
-                                                                row.source_url
-                                                            }
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
-                                                        >
-                                                            Link{" "}
-                                                            <ExternalLink className="h-4 w-4" />
-                                                        </a>
-                                                    ) : (
-                                                        "-"
-                                                    )}
-                                                </td>
-                                                <td className="px-6 py-4 text-sm">
-                                                    {row.notes || ""}
+                                    </thead>
+                                    <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
+                                        {filteredData.length === 0 ? (
+                                            <tr>
+                                                <td
+                                                    colSpan={6}
+                                                    className="px-6 py-10 text-center text-sm text-gray-500 dark:text-gray-400"
+                                                >
+                                                    No matching records found
                                                 </td>
                                             </tr>
-                                        ))
-                                    )}
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
-                            <div className="flex items-center gap-1">
-                                Data from{" "}
-                                <a
-                                    href="https://github.com/bitcoin-dev-project/who-funds-bitcoin-development"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
-                                >
-                                    bitcoin-dev-project/who-funds-bitcoin-development{" "}
-                                    <ExternalLink className="h-3 w-3" />
-                                </a>
+                                        ) : (
+                                            filteredData.map((row, index) => (
+                                                <tr
+                                                    key={index}
+                                                    className="hover:bg-gray-50 dark:hover:bg-gray-800"
+                                                >
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                        {row.funder}
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                                                        {row.recipient}
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                                                        {row.amount === "NA"
+                                                            ? ""
+                                                            : row.amount}
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                                                        {row.date}
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                                                        {row.source_url ? (
+                                                            <a
+                                                                href={
+                                                                    row.source_url
+                                                                }
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
+                                                            >
+                                                                Link{" "}
+                                                                <ExternalLink className="h-4 w-4" />
+                                                            </a>
+                                                        ) : (
+                                                            "-"
+                                                        )}
+                                                    </td>
+                                                    <td className="px-6 py-4 text-sm">
+                                                        {row.notes || ""}
+                                                    </td>
+                                                </tr>
+                                            ))
+                                        )}
+                                    </tbody>
+                                </table>
                             </div>
-                            <div>
-                                Showing {filteredData.length} of{" "}
-                                {fundingData.length} entries
+
+                            <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+                                <div className="flex items-center gap-1">
+                                    Data from{" "}
+                                    <a
+                                        href="https://github.com/bitcoin-dev-project/who-funds-bitcoin-development"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
+                                    >
+                                        bitcoin-dev-project/who-funds-bitcoin-development{" "}
+                                        <ExternalLink className="h-3 w-3" />
+                                    </a>
+                                </div>
+                                <div>
+                                    Showing {filteredData.length} of{" "}
+                                    {fundingData.length} entries
+                                </div>
                             </div>
                         </div>
                     </div>
