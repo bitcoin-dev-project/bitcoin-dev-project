@@ -13,7 +13,8 @@
         "build": "npm run submodules:update && next build && node ./rss/postbuild.mjs",
         "start": "next start",
         "lint": "next lint",
-        "submodules:update": "git submodule update --init && git submodule update --remote"
+        "submodules:update": "git submodule update --init && git submodule update --remote",
+        "test": "jest"
     },
     "dependencies": {
         "@apollo/client": "^3.10.3",
@@ -71,7 +72,11 @@
         "ts-node": "^10.9.2"
     },
     "devDependencies": {
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.1.0",
         "@types/elliptic": "^6.4.18",
+        "@types/jest": "^29.5.14",
         "@types/mailchimp__mailchimp_marketing": "^3.0.20",
         "@types/node": "^20",
         "@types/react": "^18",
@@ -80,6 +85,8 @@
         "autoprefixer": "^10.0.1",
         "eslint": "^8",
         "eslint-config-next": "14.0.1",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
         "postcss": "^8",
         "prettier": "^3.2.5",
         "tailwindcss": "^3.3.0",
