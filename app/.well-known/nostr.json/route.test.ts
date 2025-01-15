@@ -19,6 +19,7 @@ it("should return data with status 200", async () => {
     const body = await response.json()
 
     expect(response.status).toBe(200)
+    expect(response.headers.get("Access-Control-Allow-Origin")).toEqual("*")
     expect(body.names[name]).toBe(pubkey)
 })
 
