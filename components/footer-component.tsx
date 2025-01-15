@@ -61,7 +61,7 @@ const FooterComponent = () => {
                                 iconProps: {
                                     className: "hover:text-orange-400"
                                 },
-                                icon: <LinkedinIcon className="w-full h-full" />
+                                icon: <LinkedinIcon width="100%" height="auto" />
                             }
                         ]}
                     />
