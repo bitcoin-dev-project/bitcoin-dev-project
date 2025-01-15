@@ -1,11 +1,11 @@
 import { Barlow } from "next/font/google"
-import Footer from "@/components/footer"
 import type { Metadata } from "next"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { ThemeProvider } from "next-themes"
 import "remark-github-blockquote-alert/alert.css"
 import siteMetadata from "@/data/siteMetadata"
+import FooterComponent from "@/components/footer-component"
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteMetadata.siteUrl),
@@ -87,7 +87,7 @@ export default function RootLayout({
                 >
                     <Header />
                     <main>{children}</main>
-                    <Footer />
+                    <FooterComponent />
                 </ThemeProvider>
             </body>
         </html>
