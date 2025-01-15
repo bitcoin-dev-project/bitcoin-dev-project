@@ -37,7 +37,11 @@ export async function GET(request: NextRequest) {
 
         return new Response(JSON.stringify(clientResponse), {
             status: 200,
-            headers: { "content-type": "application/json" }
+            headers: {
+                "content-type": "application/json",
+                // This next headers is so CORS policies don't restrict JS apps
+                "Access-Control-Allow-Origin": "*"
+            }
         })
     } catch (error: any) {
         console.error(error)
