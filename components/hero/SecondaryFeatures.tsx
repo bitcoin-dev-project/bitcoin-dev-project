@@ -56,16 +56,23 @@ function FeaturesMobile() {
                         className="mx-auto max-w-2xl"
                         isActive
                     />
-                    <div className="relative mt-10 pb-10">
-                        <div className="absolute -inset-x-4 bottom-0 top-8 bg-gray-200 dark:bg-gray-800 sm:-inset-x-6" />
-                        <div className="relative mx-auto overflow-hidden rounded-xl bg-white dark:bg-black shadow-lg shadow-black-800/5 ring-1 ring-black-500/10">
-                            <Image
-                                className="object-center w-full h-full"
-                                src={feature.image}
-                                alt=""
-                            />
+                    <a
+                        href={feature.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block cursor-pointer"
+                    >
+                        <div className="relative mt-10 pb-10">
+                            <div className="absolute -inset-x-4 bottom-0 top-8 bg-gray-200 dark:bg-gray-800 sm:-inset-x-6" />
+                            <div className="relative mx-auto overflow-hidden rounded-xl bg-white dark:bg-black shadow-lg shadow-black-800/5 ring-1 ring-black-500/10">
+                                <Image
+                                    className="object-center w-full h-full"
+                                    src={feature.image}
+                                    alt=""
+                                />
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             ))}
         </div>
