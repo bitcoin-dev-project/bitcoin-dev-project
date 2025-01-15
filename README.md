@@ -6,7 +6,7 @@ This is the source code for the [Bitcoin Dev Project](https://bitcoindevs.xyz) t
 
 ## Setup
 
-1) Install the dependencies:
+1. Install the dependencies:
 
 ```bash
 npm install
@@ -18,7 +18,7 @@ pnpm install
 bun install
 ```
 
-2) Download submodules:
+2. Download submodules:
 
 ```bash
 npm run submodules:update
@@ -30,7 +30,7 @@ pnpm submodules:update
 bun submodules:update
 ```
 
-3) Run the development server:
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -44,6 +44,6 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-***
+---
 
 To run the tests, use `npm run test`
