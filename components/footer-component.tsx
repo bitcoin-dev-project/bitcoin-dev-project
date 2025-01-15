@@ -57,7 +57,7 @@ const FooterComponent = () => {
                             {
                                 entity: "linkedIn",
                                 entityLink:
-                                    "https://www.linkedin.com/company/bitcoin-devs/",
+                                    "https://www.linkedin.com/company/bitcoin-dev-project/",
                                 iconProps: {
                                     className: "hover:text-orange-400"
                                 },
