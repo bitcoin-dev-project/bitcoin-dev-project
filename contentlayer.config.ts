@@ -74,7 +74,12 @@ export const Topic = defineDocumentType(() => ({
         parent: { type: "string" },
         project: { type: "boolean", default: false },
         order: { type: "number", default: 0 },
-        icon: { type: "string" }
+        icon: { type: "string" },
+        topicType: {
+            type: "string",
+            options: ["lesson", "exercise", "project"],
+            default: "lesson"
+        }
     },
     computedFields: {
         ...computedFields,
