@@ -285,5 +285,16 @@
       "job-declarator-server"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1355",
+    "publishedAt": "2025-01-16T14:30:35Z",
+    "title": "tProxy cannot handle 10k miners with delay of 100ms between each connection",
+    "labels": [
+      "bug",
+      "roles",
+      "high prio"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
