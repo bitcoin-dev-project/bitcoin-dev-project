@@ -3,9 +3,10 @@
 import { Wrapper } from "@/components/Wrapper"
 import { useEffect, useState, useMemo } from "react"
 import Papa from "papaparse"
-import { ExternalLink, Search, ArrowDown, ArrowUp } from "lucide-react"
+import { ExternalLink, Search } from "lucide-react"
 import FundingStats from "@/components/funding/FundingStats"
 import FilterSelects from "@/components/funding/FilterSelects"
+import FundingTable from "@/components/funding/FundingTable"
 
 export interface FundingEntry {
     funder: string
@@ -126,8 +127,8 @@ export default function Funding() {
                         Who Funds Bitcoin Development?
                     </h1>
                     <p className="text-xl max-md:text-lg">
-                        publicly disclosed Bitcoin development funding,
-                        excluding downstream allocations.
+                        Publicly disclosed bitcoin development funding,
+                        excluding downstream allocations
                     </p>
                 </div>
 
@@ -182,139 +183,27 @@ export default function Funding() {
                                 />
                             </div>
 
-                            <div className="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
-                                <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead className="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                scope="col"
-                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                            >
-                                                Donor
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                            >
-                                                Recipient
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                            >
-                                                Amount
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider cursor-pointer group"
-                                                onClick={() =>
-                                                    setSortDirection((prev) =>
-                                                        prev === "desc"
-                                                            ? "asc"
-                                                            : "desc"
-                                                    )
-                                                }
-                                            >
-                                                <div className="flex items-center gap-2">
-                                                    Date
-                                                    <span className="text-gray-400 dark:text-gray-500">
-                                                        {sortDirection ===
-                                                        "desc" ? (
-                                                            <ArrowDown className="h-4 w-4" />
-                                                        ) : (
-                                                            <ArrowUp className="h-4 w-4" />
-                                                        )}
-                                                    </span>
-                                                </div>
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                            >
-                                                Source
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
-                                            >
-                                                Notes
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
-                                        {filteredData.length === 0 ? (
-                                            <tr>
-                                                <td
-                                                    colSpan={6}
-                                                    className="px-6 py-10 text-center text-sm text-gray-500 dark:text-gray-400"
-                                                >
-                                                    No matching records found
-                                                </td>
-                                            </tr>
-                                        ) : (
-                                            filteredData.map((row, index) => (
-                                                <tr
-                                                    key={index}
-                                                    className="hover:bg-gray-50 dark:hover:bg-gray-800"
-                                                >
-                                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                                        {row.funder}
-                                                    </td>
-                                                    <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                                        {row.recipient}
-                                                    </td>
-                                                    <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                                        {row.amount === "NA"
-                                                            ? ""
-                                                            : row.amount}
-                                                    </td>
-                                                    <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                                        {row.date}
-                                                    </td>
-                                                    <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                                        {row.source_url ? (
-                                                            <a
-                                                                href={
-                                                                    row.source_url
-                                                                }
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
-                                                            >
-                                                                Link{" "}
-                                                                <ExternalLink className="h-4 w-4" />
-                                                            </a>
-                                                        ) : (
-                                                            "-"
-                                                        )}
-                                                    </td>
-                                                    <td className="px-6 py-4 text-sm">
-                                                        {row.notes || ""}
-                                                    </td>
-                                                </tr>
-                                            ))
-                                        )}
-                                    </tbody>
-                                </table>
-                            </div>
+                            <FundingTable
+                                data={filteredData}
+                                sortDirection={sortDirection}
+                                setSortDirection={setSortDirection}
+                            />
 
-                            <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
-                                <div className="flex items-center gap-1">
-                                    Data from{" "}
-                                    <a
-                                        href="https://github.com/bitcoin-dev-project/who-funds-bitcoin-development"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
-                                    >
-                                        bitcoin-dev-project/who-funds-bitcoin-development{" "}
-                                        <ExternalLink className="h-3 w-3" />
-                                    </a>
-                                </div>
-                                <div>
-                                    Showing {filteredData.length} of{" "}
-                                    {fundingData.length} entries
-                                </div>
+                            <div className="flex flex-row-reverse text-sm text-gray-500 dark:text-gray-400">
+                                Showing {filteredData.length} of{" "}
+                                {fundingData.length} entries
+                            </div>
+                            <div className="flex items-center gap-1">
+                                Contribute your data to{" "}
+                                <a
+                                    href="https://github.com/bitcoin-dev-project/who-funds-bitcoin-development"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-orange-500 hover:text-orange-600 inline-flex items-center gap-1"
+                                >
+                                    /who-funds-bitcoin-development{" "}
+                                    <ExternalLink className="h-3 w-3" />
+                                </a>
                             </div>
                         </div>
                     </div>
