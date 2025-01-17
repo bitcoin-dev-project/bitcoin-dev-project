@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from "react"
+import React, { useMemo } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 interface FundingEntry {
@@ -10,25 +10,135 @@ interface FundingEntry {
     notes: string | null
 }
 
-interface ParsedAmount {
-    value: number
-    currency: string
+interface FundingStatsProps {
+    data: FundingEntry[]
+    searchQuery?: string
+    selectedFunder: string
+    selectedRecipient: string
+    selectedYear: string
 }
 
-// Helper function to parse amount strings
-const parseAmount = (amountStr: string | null): ParsedAmount | null => {
-    if (!amountStr || amountStr === "NA") return null
+const FundingStats: React.FC<FundingStatsProps> = ({
+    data,
+    searchQuery = "",
+    selectedFunder = "all",
+    selectedRecipient = "all",
+    selectedYear = "all"
+}) => {
+    // Process data and calculate totals
+    const { uniqueFunders, uniqueRecipients, yearRange } = useMemo(() => {
+        const funders = new Set(data.map((d) => d.funder))
+        const recipients = new Set(data.map((d) => d.recipient))
 
-    // Remove commas and split into parts
-    const parts = amountStr.replace(/,/g, "").split(" ")
-    const value = parseFloat(parts[0])
-    const currency = parts[1]
+        // Calculate year range
+        const years = data
+            .map((d) => parseInt(d.date.split("/")[0]))
+            .filter(Boolean)
+        const minYear = Math.min(...years)
+        const maxYear = Math.max(...years)
 
-    if (isNaN(value) || !currency) return null
+        return {
+            uniqueFunders: funders.size,
+            uniqueRecipients: recipients.size,
+            yearRange: { minYear, maxYear }
+        }
+    }, [data])
 
-    return { value, currency }
+    // Generate dynamic subtitle based on filters
+    const subtitle = useMemo(() => {
+        const parts = []
+
+        // Funder part
+        if (selectedFunder !== "all") {
+            parts.push(`from ${selectedFunder}`)
+        } else {
+            parts.push(
+                `from ${uniqueFunders} ${uniqueFunders === 1 ? "funder" : "donors"}`
+            )
+        }
+
+        // Recipient part
+        if (selectedRecipient !== "all") {
+            parts.push(`to ${selectedRecipient}`)
+        } else {
+            parts.push(
+                `to ${uniqueRecipients} ${uniqueRecipients === 1 ? "recipient" : "recipients"}`
+            )
+        }
+
+        // Year part
+        if (selectedYear !== "all") {
+            parts.push(`in ${selectedYear}`)
+        } else if (yearRange.minYear && yearRange.maxYear) {
+            if (yearRange.minYear === yearRange.maxYear) {
+                parts.push(`in ${yearRange.minYear}`)
+            } else {
+                parts.push(`from ${yearRange.minYear} to ${yearRange.maxYear}`)
+            }
+        }
+
+        return parts.join(" ")
+    }, [
+        selectedFunder,
+        selectedRecipient,
+        selectedYear,
+        uniqueFunders,
+        uniqueRecipients,
+        yearRange
+    ])
+
+    const { formattedTotals } = useMemo(() => {
+        let totalUSD = 0
+        let totalBTC = 0
+
+        data.forEach((entry) => {
+            if (!entry.amount || entry.amount === "NA") return
+
+            // Parse amount string and split into value and currency
+            const amountStr = entry.amount.replace(/,/g, "")
+            const match = amountStr.match(/^(\d+(?:\.\d+)?)\s*(BTC|USD)?$/)
+
+            if (match) {
+                const [, value, currency] = match
+                const numValue = parseFloat(value)
+
+                if (currency === "BTC") {
+                    totalBTC += numValue
+                } else {
+                    totalUSD += numValue
+                }
+            }
+        })
+
+        return {
+            formattedTotals: formatCurrencies(totalUSD, totalBTC)
+        }
+    }, [data])
+
+    return (
+        <div className="space-y-4">
+            <div className="grid gap-4 md:grid-cols-2">
+                <Card>
+                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                        <CardTitle className="text-sm font-medium">
+                            Total Public Donations
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="text-2xl font-bold">
+                            {formattedTotals}
+                        </div>
+                        <p className="text-sm text-muted-foreground mt-1">
+                            {subtitle}
+                        </p>
+                    </CardContent>
+                </Card>
+            </div>
+        </div>
+    )
 }
 
+// Helper function to format currency amounts
 const formatCurrencies = (usd: number, btc: number): string => {
     const usdStr = new Intl.NumberFormat("en-US", {
         style: "currency",
@@ -40,138 +150,6 @@ const formatCurrencies = (usd: number, btc: number): string => {
     if (btc === 0) return usdStr
     if (usd === 0) return `${btc.toFixed(2)} BTC`
     return `${usdStr} & ${btc.toFixed(2)} BTC`
-}
-
-interface FundingStatsProps {
-    data: FundingEntry[]
-    searchQuery?: string
-    selectedFunder?: string
-    selectedRecipient?: string
-    selectedYear?: string
-}
-
-const FundingStats: React.FC<FundingStatsProps> = ({
-    data,
-    searchQuery = "",
-    selectedFunder = "all",
-    selectedRecipient = "all",
-    selectedYear = "all"
-}) => {
-    // Determine initial view mode based on filters
-    const determineInitialViewMode = () => {
-        if (selectedRecipient !== "all") return "funder"
-        if (selectedFunder !== "all") return "recipient"
-        return "recipient"
-    }
-
-    const [viewMode, setViewMode] = useState<"recipient" | "funder">(
-        determineInitialViewMode()
-    )
-
-    // Automatically adjust view mode when filters change
-    useEffect(() => {
-        setViewMode(determineInitialViewMode())
-    }, [selectedRecipient, selectedFunder])
-
-    // Generate dynamic subtitle
-    const getSubtitle = useMemo(() => {
-        const conditions: string[] = []
-
-        // Search query condition
-        if (searchQuery) {
-            conditions.push(`matching "${searchQuery}"`)
-        }
-
-        // Funder condition
-        if (selectedFunder !== "all") {
-            conditions.push(`from ${selectedFunder}`)
-        }
-
-        // Recipient condition
-        if (selectedRecipient !== "all") {
-            conditions.push(`to ${selectedRecipient}`)
-        }
-
-        // Year condition
-        if (selectedYear !== "all") {
-            conditions.push(`in ${selectedYear}`)
-        }
-
-        // Combine conditions
-        const subtitleText =
-            conditions.length > 0
-                ? conditions.join(" • ")
-                : "all funding entries"
-
-        return subtitleText
-    }, [searchQuery, selectedFunder, selectedRecipient, selectedYear])
-
-    const { visualizationData, totals, stats } = useMemo(() => {
-        const groupedData = new Map<string, { usd: number; btc: number }>()
-        let totalUSD = 0
-        let totalBTC = 0
-
-        // Process all entries
-        data.forEach((entry) => {
-            const amount = parseAmount(entry.amount)
-            if (!amount) return
-
-            const key =
-                viewMode === "recipient" ? entry.recipient : entry.funder
-            const current = groupedData.get(key) || { usd: 0, btc: 0 }
-
-            if (amount.currency === "USD") {
-                current.usd += amount.value
-                totalUSD += amount.value
-            } else if (amount.currency === "BTC") {
-                current.btc += amount.value
-                totalBTC += amount.value
-            }
-
-            groupedData.set(key, current)
-        })
-
-        // Convert to visualization format
-        const vizData = Array.from(groupedData.entries())
-            .map(([name, amounts]) => ({
-                name,
-                usdAmount: amounts.usd,
-                btcAmount: amounts.btc
-            }))
-            .sort((a, b) => b.usdAmount - a.usdAmount)
-
-        return {
-            visualizationData: vizData,
-            totals: { usd: totalUSD, btc: totalBTC },
-            stats: {
-                uniqueFunders: new Set(data.map((d) => d.funder)).size,
-                uniqueRecipients: new Set(data.map((d) => d.recipient)).size
-            }
-        }
-    }, [data, viewMode])
-
-    return (
-        <div className="space-y-4">
-            <div className="grid gap-4 md:grid-cols-2">
-                <Card>
-                    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                        <CardTitle className="text-sm font-medium">
-                            Total Funding
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="text-2xl font-bold">
-                            {formatCurrencies(totals.usd, totals.btc)}
-                        </div>
-                        <p className="text-sm text-muted-foreground mt-1">
-                            from {stats.uniqueFunders} funders to{" "}
-                            {stats.uniqueRecipients} recipients
-                        </p>
-                    </CardContent>
-                </Card>
-            </div>
-        </div>
-    )
 }
 
 export default FundingStats

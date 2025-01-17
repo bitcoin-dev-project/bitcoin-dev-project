@@ -1,13 +1,13 @@
 "use client"
 
 import { Wrapper } from "@/components/Wrapper"
-import { genPageMetadata } from "../seo"
 import { useEffect, useState, useMemo } from "react"
 import Papa from "papaparse"
 import { ExternalLink, Search, ArrowDown, ArrowUp } from "lucide-react"
 import FundingStats from "@/components/funding/FundingStats"
+import FilterSelects from "@/components/funding/FilterSelects"
 
-interface FundingData {
+export interface FundingEntry {
     funder: string
     recipient: string
     amount: string
@@ -19,33 +19,8 @@ interface FundingData {
 const GITHUB_CSV_URL =
     "https://raw.githubusercontent.com/bitcoin-dev-project/who-funds-bitcoin-development/refs/heads/main/funding.csv"
 
-// export const metadata = genPageMetadata({
-//     title: "Bitcoin Open Source Funding History",
-//     keywords: "bitcoin, open source, funding, grants, bitcoin development",
-//     description: "A comprehensive history of Bitcoin open source funding and grants.",
-//     openGraph: {
-//         images: [
-//             {
-//                 url: "https://bitcoindevs.xyz/images/pages-thumbnails/funding.png",
-//                 alt: "Bitcoin Funding History"
-//             }
-//         ],
-//         title: "Bitcoin Open Source Funding History",
-//         url: "https://bitcoindevs.xyz/funding",
-//         type: "website",
-//         description: "A comprehensive history of Bitcoin open source funding and grants."
-//     },
-//     twitter: {
-//         images: ["https://bitcoindevs.xyz/images/pages-thumbnails/funding.png"],
-//         card: "summary_large_image",
-//         title: "Bitcoin Open Source Funding History",
-//         creator: "@Bitcoin_Devs",
-//         description: "A comprehensive history of Bitcoin open source funding and grants."
-//     }
-// })
-
 export default function Funding() {
-    const [fundingData, setFundingData] = useState<FundingData[]>([])
+    const [fundingData, setFundingData] = useState<FundingEntry[]>([])
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
 
@@ -66,7 +41,7 @@ export default function Funding() {
                     header: true,
                     skipEmptyLines: true,
                     complete: (results) => {
-                        setFundingData(results.data as FundingData[])
+                        setFundingData(results.data as FundingEntry[])
                         setIsLoading(false)
                     },
                     error: (error: any) => {
@@ -85,38 +60,15 @@ export default function Funding() {
         fetchData()
     }, [])
 
-    // Compute unique values for filters
-    const { funders, recipients, years } = useMemo(() => {
-        const fundersSet = new Set<string>()
-        const recipientsSet = new Set<string>()
-        const yearsSet = new Set<string>()
-
-        fundingData.forEach((row) => {
-            if (row.funder) fundersSet.add(row.funder)
-            if (row.recipient) recipientsSet.add(row.recipient)
-            if (row.date) {
-                const year = row.date.split("/")[0]
-                if (year) yearsSet.add(year)
-            }
-        })
-
-        return {
-            funders: Array.from(fundersSet).sort(),
-            recipients: Array.from(recipientsSet).sort(),
-            years: Array.from(yearsSet).sort().reverse()
-        }
-    }, [fundingData])
-
     // Helper function to parse YYYY/MM dates
     const parseDateString = (dateStr: string) => {
         if (!dateStr) return 0
         const [year, month] = dateStr.split("/").map((num) => parseInt(num))
-        // Create a date using year and month (month - 1 because JS months are 0-based)
         return new Date(year, month ? month - 1 : 0).getTime()
     }
 
     // Sort function for dates
-    const sortData = (data: FundingData[]) => {
+    const sortData = (data: FundingEntry[]) => {
         return [...data].sort((a, b) => {
             const dateA = parseDateString(a.date)
             const dateB = parseDateString(b.date)
@@ -126,11 +78,14 @@ export default function Funding() {
 
     // Filter and sort the data
     const filteredData = useMemo(() => {
+        // First apply all filters
         const filtered = fundingData.filter((row) => {
             const matchesSearch =
                 searchQuery === "" ||
                 Object.values(row).some((value) =>
-                    value?.toLowerCase().includes(searchQuery.toLowerCase())
+                    String(value)
+                        .toLowerCase()
+                        .includes(searchQuery.toLowerCase())
                 )
 
             const matchesFunder =
@@ -152,6 +107,7 @@ export default function Funding() {
             )
         })
 
+        // Then sort the filtered data
         return sortData(filtered)
     }, [
         fundingData,
@@ -170,9 +126,8 @@ export default function Funding() {
                         Who Funds Bitcoin Development?
                     </h1>
                     <p className="text-xl max-md:text-lg">
-                        A historical record of of Bitcoin development funding,
-                        focused on original contributions and excluding
-                        reallocations.
+                        publicly disclosed Bitcoin development funding,
+                        excluding downstream allocations.
                     </p>
                 </div>
 
@@ -210,57 +165,21 @@ export default function Funding() {
                                 </div>
 
                                 {/* Filter Selects */}
-                                <div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
-                                    <select
-                                        value={selectedFunder}
-                                        onChange={(e) =>
-                                            setSelectedFunder(e.target.value)
-                                        }
-                                        className="rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
-                                    >
-                                        <option value="all">All Funders</option>
-                                        {funders.map((funder) => (
-                                            <option key={funder} value={funder}>
-                                                {funder}
-                                            </option>
-                                        ))}
-                                    </select>
-
-                                    <select
-                                        value={selectedRecipient}
-                                        onChange={(e) =>
-                                            setSelectedRecipient(e.target.value)
-                                        }
-                                        className="rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
-                                    >
-                                        <option value="all">
-                                            All Recipients
-                                        </option>
-                                        {recipients.map((recipient) => (
-                                            <option
-                                                key={recipient}
-                                                value={recipient}
-                                            >
-                                                {recipient}
-                                            </option>
-                                        ))}
-                                    </select>
-
-                                    <select
-                                        value={selectedYear}
-                                        onChange={(e) =>
-                                            setSelectedYear(e.target.value)
-                                        }
-                                        className="rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 text-sm"
-                                    >
-                                        <option value="all">All Years</option>
-                                        {years.map((year) => (
-                                            <option key={year} value={year}>
-                                                {year}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
+                                <FilterSelects
+                                    rawData={fundingData}
+                                    filteredData={filteredData}
+                                    selectedFunder={selectedFunder}
+                                    selectedRecipient={selectedRecipient}
+                                    selectedYear={selectedYear}
+                                    onFunderChange={setSelectedFunder}
+                                    onRecipientChange={setSelectedRecipient}
+                                    onYearChange={setSelectedYear}
+                                    onReset={() => {
+                                        setSelectedFunder("all")
+                                        setSelectedRecipient("all")
+                                        setSelectedYear("all")
+                                    }}
+                                />
                             </div>
 
                             <div className="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
@@ -271,7 +190,7 @@ export default function Funding() {
                                                 scope="col"
                                                 className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
                                             >
-                                                Funder
+                                                Donor
                                             </th>
                                             <th
                                                 scope="col"
