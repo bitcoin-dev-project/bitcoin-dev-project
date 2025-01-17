@@ -1,6 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import MultiFundingVisualization from "./MultiFundingVisualization"
 
 interface FundingEntry {
     funder: string
@@ -171,13 +170,6 @@ const FundingStats: React.FC<FundingStatsProps> = ({
                     </CardContent>
                 </Card>
             </div>
-
-            <MultiFundingVisualization
-                data={visualizationData}
-                subtitle={getSubtitle}
-                viewMode={viewMode}
-                onViewModeChange={setViewMode}
-            />
         </div>
     )
 }
