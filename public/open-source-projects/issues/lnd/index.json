@@ -673,18 +673,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7487",
-    "publishedAt": "2023-03-07T05:33:34Z",
-    "title": "routing: data race found when updating additional edge",
-    "labels": [
-      "bug",
-      "routing",
-      "payments",
-      "P2"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7502",
     "publishedAt": "2023-03-10T08:23:29Z",
     "title": "[bug]: Opened channel, tx not broadcast, funds lower",
@@ -1149,6 +1137,17 @@
       "test flake",
       "P1",
       "chain handling"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8263",
+    "publishedAt": "2023-12-08T11:25:01Z",
+    "title": "[bug]: logs heavily spammed by `[ERR] CRTR: error computing probability to node:`",
+    "labels": [
+      "bug",
+      "logging",
+      "P3"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
