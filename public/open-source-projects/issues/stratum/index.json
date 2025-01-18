@@ -287,6 +287,26 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
+    "url": "https://github.com/stratum-mining/stratum/issues/1349",
+    "publishedAt": "2025-01-16T08:05:37Z",
+    "title": "Change JDC behavior on shutdown",
+    "labels": [
+      "bug",
+      "roles"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1351",
+    "publishedAt": "2025-01-16T08:39:29Z",
+    "title": "Avoid using unwrap in JDC listener ",
+    "labels": [
+      "bug",
+      "roles"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
     "url": "https://github.com/stratum-mining/stratum/issues/1355",
     "publishedAt": "2025-01-16T14:30:35Z",
     "title": "tProxy cannot handle 10k miners with delay of 100ms between each connection",
