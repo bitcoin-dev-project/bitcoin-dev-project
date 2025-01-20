@@ -10,15 +10,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
-    "url": "https://github.com/ElementsProject/lightning/issues/2216",
-    "publishedAt": "2019-01-03T10:21:51Z",
-    "title": "python plugin lib removes line breaks from doc string for help function",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
     "url": "https://github.com/ElementsProject/lightning/issues/2482",
     "publishedAt": "2019-03-18T14:53:30Z",
     "title": "Unable to connect to peer : Bad file descriptor",
