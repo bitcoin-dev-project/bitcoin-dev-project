@@ -401,5 +401,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1807",
+    "publishedAt": "2025-01-22T18:27:43Z",
+    "title": "[wallet] `build_fee_bump` fails to remove the change output for single descriptor wallet",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
