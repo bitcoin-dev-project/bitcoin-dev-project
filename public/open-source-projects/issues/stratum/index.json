@@ -328,5 +328,16 @@
       "adopter-feedback"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1377",
+    "publishedAt": "2025-01-22T07:04:46Z",
+    "title": "Make the pool wait for the template provider to start",
+    "labels": [
+      "bug",
+      "refactor",
+      "roles"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
