@@ -319,5 +319,16 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
+  },
+  {
+    "url": "https://github.com/ElementsProject/lightning/issues/8023",
+    "publishedAt": "2025-01-21T23:41:35Z",
+    "title": "Logging with pytest is not working",
+    "labels": [
+      "bug",
+      "testing",
+      "python"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
