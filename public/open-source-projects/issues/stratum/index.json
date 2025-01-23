@@ -318,5 +318,15 @@
       "adopter-feedback"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1384",
+    "publishedAt": "2025-01-22T16:40:17Z",
+    "title": "Look into `Sniffer::recv_from_up_send_to_down` as it seems broken",
+    "labels": [
+      "bug",
+      "integration-tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
