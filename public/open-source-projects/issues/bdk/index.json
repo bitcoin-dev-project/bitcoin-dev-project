@@ -339,6 +339,7 @@
     "title": "After the transaction is removed, the re-synchronization is still on the transaction list.",
     "labels": [
       "bug",
+      "duplicate",
       "discussion"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
