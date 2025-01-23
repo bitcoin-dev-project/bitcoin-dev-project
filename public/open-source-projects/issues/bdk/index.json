@@ -411,5 +411,15 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1810",
+    "publishedAt": "2025-01-23T14:39:27Z",
+    "title": "Off-by-one error is making optional UTxOs selection too restrictive for coinbase outputs",
+    "labels": [
+      "bug",
+      "module-wallet"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
