@@ -106,5 +106,15 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/214",
+    "publishedAt": "2025-01-27T16:24:24Z",
+    "title": "Refactor: Move parsing into its own module",
+    "labels": [
+      "good first issue",
+      "Code Health"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
