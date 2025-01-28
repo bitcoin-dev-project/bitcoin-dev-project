@@ -126,5 +126,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/1117",
+    "publishedAt": "2025-01-28T16:55:23Z",
+    "title": "Bug: Always \"FAILURE_REASON_INSUFFICIENT_BALANCE\" on pay invoice attempt despite balance exist",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   }
 ]
