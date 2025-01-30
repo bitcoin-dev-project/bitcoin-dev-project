@@ -11,7 +11,7 @@ import screenshotSavingSatoshi from "@/public/images/hero/screenshots/saving_sat
 import screenshotDecodingBitcoin from "@/public/images/hero/screenshots/decoding-bitcoin.png"
 import screenshotBTCdemy from "@/public/images/hero/screenshots/btc-demy.png"
 import screenshotWarnet from "@/public/images/hero/screenshots/warnet.png"
-
+import screenshotSimLN from "@/public/images/hero/screenshots/simln.png"
 import logoBitcoinSearch from "@/public/images/tools/bitcoin-search.jpg"
 import logoBitcoinTLDR from "@/public/images/tools/bitcoin-tldr.jpg"
 import logoBitcoinTranscript from "@/public/images/tools/bitcoin-transcripts.jpg"
@@ -177,6 +177,13 @@ export const tools: Array<IFeature> = [
         summary: "",
         image: screenshotWarnet,
         link: "https://warnet.dev"
+    },
+    {
+        name: "SimLN",
+        description: "Instantly simulate real-world Lightning network activity",
+        summary: "",
+        image: screenshotSimLN,
+        link: "https://simln.dev"
     }
 ]
 
