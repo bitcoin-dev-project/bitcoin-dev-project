@@ -412,5 +412,15 @@
       "module-wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1815",
+    "publishedAt": "2025-01-30T02:37:42Z",
+    "title": "Add spent trait to improve sent_and_received()",
+    "labels": [
+      "good first issue",
+      "module-wallet"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
