@@ -37,14 +37,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
-  },
-  {
-    "url": "https://github.com/ACINQ/eclair/issues/2912",
-    "publishedAt": "2024-09-23T08:28:16Z",
-    "title": "Splicing out funds should update router balances",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/7670721?v=4"
   }
 ]
