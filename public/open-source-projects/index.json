@@ -12,6 +12,14 @@
         "lang": ["C#", "Javascript", "Shell"],
         "issue": "https://github.com/btcpayserver/btcpayserver/issues"
     },
+    "payjoin": {
+        "repo_url": "https://github.com/payjoin/rust-payjoin",
+        "name": "rust-payjoin",
+        "org": "Payjoin",
+        "tags": ["rust", "bitcoin"],
+        "lang": ["Rust"],
+        "issue": "https://github.com/payjoin/rust-payjoin/issues"
+    },
     "fedimint": {
         "repo_url": "https://github.com/fedimint/fedimint",
         "name": "fedimint",
