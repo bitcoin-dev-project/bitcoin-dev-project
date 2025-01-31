@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/64",
+    "publishedAt": "2023-05-06T16:43:15Z",
+    "title": "Persist data in default directory",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "payjoin-cli"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/339",
+    "publishedAt": "2024-08-12T19:10:36Z",
+    "title": "Add adverserial tests",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/350",
+    "publishedAt": "2024-08-20T19:15:54Z",
+    "title": "The `bitcoincore-rpc` dependency has problems in our specific use case",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "payjoin-cli"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/402",
+    "publishedAt": "2024-11-20T20:27:12Z",
+    "title": "Take arguments by reference where possible",
+    "labels": [
+      "good first issue",
+      "tech debt"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/480",
+    "publishedAt": "2025-01-14T15:33:23Z",
+    "title": "Accomodate Updated BIP 78 Spec",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/487",
+    "publishedAt": "2025-01-16T01:37:20Z",
+    "title": "Remove `.unwrap()`, even in Tests",
+    "labels": [
+      "good first issue",
+      "tech debt"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/503",
+    "publishedAt": "2025-01-21T23:58:59Z",
+    "title": "Add docstrings for undocumented components",
+    "labels": [
+      "documentation",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  }
+]
