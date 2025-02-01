@@ -422,5 +422,14 @@
       "module-wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1817",
+    "publishedAt": "2025-02-01T08:58:25Z",
+    "title": "Never panic based on remote-provided inputs",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
