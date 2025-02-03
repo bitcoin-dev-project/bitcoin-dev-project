@@ -46,13 +46,8 @@
         "repo_url": "https://github.com/payjoin/rust-payjoin",
         "name": "rust-payjoin",
         "org": "payjoin",
-        "tags": [
-            "rust",
-            "bitcoin"
-        ],
-        "lang": [
-            "Rust"
-        ],
+        "tags": ["rust", "bitcoin", "privacy", "fees"],
+        "lang": ["Rust"],
         "issue": "https://github.com/payjoin/rust-payjoin/issues"
     },
     "polar": {

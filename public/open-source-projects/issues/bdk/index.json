@@ -419,7 +419,6 @@
     "publishedAt": "2025-02-01T08:58:25Z",
     "title": "Never panic based on remote-provided inputs",
     "labels": [
-<<<<<<< HEAD
       "bug",
       "module-blockchain"
     ],
@@ -433,9 +432,6 @@
       "bug",
       "module-blockchain",
       "module-database"
-=======
-      "bug"
->>>>>>> 91ab60d (fix: remove vls and add payjoin)
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }

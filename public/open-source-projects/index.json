@@ -29,7 +29,7 @@
     },
     "lnd": {
         "repo_url": "https://github.com/lightningnetwork/lnd",
-        "name": "LND",
+        "name": "lnd",
         "org": "lightningnetwork",
         "tags": [
             "lightning",
@@ -90,7 +90,7 @@
     },
     "stratum": {
         "repo_url": "https://github.com/stratum-mining/stratum",
-        "name": "StratumV2",
+        "name": "stratum",
         "org": "stratum-mining",
         "tags": ["mining", "bitcoin", "protocol"],
         "lang": ["Rust"],
@@ -148,7 +148,7 @@
         "repo_url": "https://github.com/payjoin/rust-payjoin",
         "name": "rust-payjoin",
         "org": "payjoin",
-        "tags": ["rust", "bitcoin"],
+        "tags": ["rust", "bitcoin", "privacy", "fees"],
         "lang": ["Rust"],
         "issue": "https://github.com/payjoin/rust-payjoin/issues"
     },

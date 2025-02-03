@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
 const TransactionParts = [
-    "marker",
     "version",
+    "marker",
     "flag",
     "input_count",
     "txid",
