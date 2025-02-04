@@ -326,7 +326,7 @@ export function Navigation({
                                                     handleTopicClick(link)
                                                 }}
                                                 className={clsx(
-                                                    "flex items-center flex-1 py-2 px-3 rounded-md min-w-0",
+                                                    "flex items-center flex-1 py-2 px-3 rounded-md min-w-0 group-hover:w-auto",
                                                     link.href === pathname
                                                         ? "text-orange-500"
                                                         : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
@@ -348,7 +348,7 @@ export function Navigation({
                                                         </span>
                                                     )
                                                 )}
-                                                <span className="truncate mr-2">
+                                                <span className="truncate mr-2 group-hover:truncate-none whitespace-normal">
                                                     {link.title}
                                                 </span>
                                             </Link>
@@ -425,14 +425,14 @@ export function Navigation({
                                                                                 )
                                                                         }}
                                                                         className={clsx(
-                                                                            "flex items-center flex-1 py-2 px-3 font-normal",
+                                                                            "flex items-center flex-1 py-2 px-3 font-normal group-hover:w-auto",
                                                                             childLink.href ===
                                                                                 pathname
                                                                                 ? "text-orange-500"
                                                                                 : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                                                                         )}
                                                                     >
-                                                                        <span className="truncate">
+                                                                        <span className="truncate group-hover:truncate-none whitespace-normal">
                                                                             {
                                                                                 childLink.title
                                                                             }

@@ -98,52 +98,42 @@ export default function TransactionAnimationPlayer({
 
             {/* Control Panel */}
             <div className="border border-gray-300 dark:border-vscode-input-dark p-3 rounded-lg bg-gray-100 dark:bg-vscode-background-dark flex items-center justify-center">
-                <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <RewindIcon
-                        className={`h-6 w-6 mr-4 cursor-pointer ${
-                            currentSvgIndex > 0
-                                ? "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
-                                : "text-vscode-text-light dark:text-vscode-text-dark opacity-50"
-                        } transition-colors duration-300`}
-                        onClick={() => handleStepChange("prev")}
-                    />
-                </motion.div>
-
-                <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    {isPlaying ? (
-                        <PauseIcon
-                            className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
-                            onClick={handlePause}
+                <div className="flex items-center gap-4">
+                    <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        <RewindIcon
+                            className={`h-6 w-6 cursor-pointer ${
+                                currentSvgIndex > 0
+                                    ? "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
+                                    : "text-vscode-text-light dark:text-vscode-text-dark opacity-50"
+                            } transition-colors duration-300`}
+                            onClick={() => handleStepChange("prev")}
                         />
-                    ) : (
-                        <PlayIcon
-                            className="h-6 w-6 mr-4 cursor-pointer text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500 transition-colors duration-300"
-                            onClick={handlePlay}
+                    </motion.div>
+
+                    {/* Step indicator */}
+                    <span className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark min-w-[80px] text-center">
+                        {currentSvgIndex + 1} of {svgPaths.length}
+                    </span>
+
+                    <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        <FastForwardIcon
+                            className={`h-6 w-6 cursor-pointer ${
+                                currentSvgIndex < svgPaths.length - 1
+                                    ? "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
+                                    : "text-vscode-text-light dark:text-vscode-text-dark opacity-50"
+                            } transition-colors duration-300`}
+                            onClick={() => handleStepChange("next")}
                         />
-                    )}
-                </motion.div>
+                    </motion.div>
+                </div>
 
-                <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <FastForwardIcon
-                        className={`h-6 w-6 mr-4 cursor-pointer ${
-                            currentSvgIndex < svgPaths.length - 1
-                                ? "text-vscode-text-light dark:text-vscode-text-dark hover:text-orange-500"
-                                : "text-vscode-text-light dark:text-vscode-text-dark opacity-50"
-                        } transition-colors duration-300`}
-                        onClick={() => handleStepChange("next")}
-                    />
-                </motion.div>
-
-                <div className="flex-grow bg-gray-300 dark:bg-vscode-input-dark h-2 rounded-full">
+                <div className="flex-grow ml-4 bg-gray-300 dark:bg-vscode-input-dark h-2 rounded-full">
                     <motion.div
                         className="bg-orange-500 h-2 rounded-full"
                         initial={{ width: "0%" }}
