@@ -404,17 +404,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/27494",
-    "publishedAt": "2023-04-19T15:26:58Z",
-    "title": "Use different datadirs for different signets",
-    "labels": [
-      "Feature",
-      "Tests",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/27975",
     "publishedAt": "2023-06-26T09:14:38Z",
     "title": "fuzz: Use-of-uninitialized-value in evutil_inet_pton",
