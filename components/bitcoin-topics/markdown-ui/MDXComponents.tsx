@@ -25,6 +25,7 @@ import HexTransactionHighlighter from "./hex-transaction-highlighter"
 import DiscordInvite from "./discord-invite"
 import TransactionCreation from "@/src/components/TransactionCreation"
 import TransactionAnimationPlayer from "@/content/transaction-animation-player"
+import TransactionDecoder from "./transaction-decoder"
 
 export const components: MDXComponents = {
     Image,
@@ -53,5 +54,6 @@ export const components: MDXComponents = {
     HexTransactionHighlighter,
     DiscordInvite,
     TransactionCreation,
-    TransactionAnimationPlayer
+    TransactionAnimationPlayer,
+    TransactionDecoder
 }
