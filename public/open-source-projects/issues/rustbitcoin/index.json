@@ -117,5 +117,14 @@
       "1.0"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/4023",
+    "publishedAt": "2025-02-07T12:56:13Z",
+    "title": "Make `Debug` representation of `Witness` to be slice of hex-encoded bytes",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
