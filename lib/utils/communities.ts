@@ -1,4 +1,4 @@
-import communitiesData from "../../public/bitcoin-topics/communities/communities.json"
+import communitiesData from "../../public/decoding-bitcoin/communities/communities.json"
 
 // Types
 export type WeeklyData = {

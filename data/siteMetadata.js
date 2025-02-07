@@ -8,7 +8,7 @@ const siteMetadata = {
     theme: "dark", // system, dark or light
     siteUrl: "https://bitcoindevs.xyz",
     siteRepo: "https://github.com/bitcoin-dev-project/bitcoin-dev-project",
-    topicsRepo: "https://github.com/bitcoin-dev-project/bitcoin-topics",
+    topicsRepo: "https://github.com/bitcoin-dev-project/decoding-bitcoin",
     siteLogo: "/public/hero.jpg",
     socialBanner:
         "https://bitcoindevs.xyz/images/pages-thumbnails/social-banner.jpg",

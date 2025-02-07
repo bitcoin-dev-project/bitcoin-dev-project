@@ -2,8 +2,8 @@ import "css/prism.css"
 import "katex/dist/katex.css"
 
 import { MDXLayoutRenderer } from "pliny/mdx-components"
-import TopicLayout from "@/components/bitcoin-topics/layouts/TopicLayout"
-import { components } from "@/components/bitcoin-topics/markdown-ui/MDXComponents"
+import TopicLayout from "@/components/decoding-bitcoin/layouts/TopicLayout"
+import { components } from "@/components/decoding-bitcoin/markdown-ui/MDXComponents"
 import { genPageMetadata } from "../seo"
 import { getTopicData } from "@/utils/content-utils"
 

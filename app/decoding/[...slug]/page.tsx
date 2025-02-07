@@ -3,11 +3,11 @@ import "katex/dist/katex.css"
 
 import { MDXLayoutRenderer } from "pliny/mdx-components"
 import { allTopics } from "contentlayer/generated"
-import TopicLayout from "@/components/bitcoin-topics/layouts/TopicLayout"
-import { components } from "@/components/bitcoin-topics/markdown-ui/MDXComponents"
+import TopicLayout from "@/components/decoding-bitcoin/layouts/TopicLayout"
+import { components } from "@/components/decoding-bitcoin/markdown-ui/MDXComponents"
 import siteMetadata from "@/data/siteMetadata"
 import { getAuthorDetails, getTopicData } from "@/utils/content-utils"
-import TopicBanner from "@/components/bitcoin-topics/layouts/TopicBanner"
+import TopicBanner from "@/components/decoding-bitcoin/layouts/TopicBanner"
 
 const defaultLayout = "TopicLayout"
 const layouts = {

@@ -12,7 +12,7 @@ export interface ScriptExecutionConfig {
 
 export const scriptExecutionConfigs: Record<string, ScriptExecutionConfig> = {
     p2pk: {
-        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pk.svg",
+        svgPath: "/decoding-bitcoin/static/images/topics/p2pk/p2pk.svg",
         svgId: "esVE0LwtziS1",
         steps: [
             {
@@ -43,7 +43,7 @@ export const scriptExecutionConfigs: Record<string, ScriptExecutionConfig> = {
         ]
     },
     p2pkh: {
-        svgPath: "/bitcoin-topics/static/images/topics/p2pk/p2pkh.svg",
+        svgPath: "/decoding-bitcoin/static/images/topics/p2pk/p2pkh.svg",
         svgId: "e6TEc1LyYNP1",
         steps: [
             {
@@ -85,7 +85,7 @@ export const scriptExecutionConfigs: Record<string, ScriptExecutionConfig> = {
         ]
     },
     p2sh: {
-        svgPath: "/bitcoin-topics/static/images/topics/p2sh/p2sh.svg",
+        svgPath: "/decoding-bitcoin/static/images/topics/p2sh/p2sh.svg",
         svgId: "eqnufOUG9Zo1",
         steps: [
             {

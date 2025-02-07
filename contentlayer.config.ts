@@ -150,7 +150,7 @@ function createTagCount(allTopics: any[]) {
 }
 
 export default makeSource({
-    contentDirPath: "public/bitcoin-topics",
+    contentDirPath: "public/decoding-bitcoin",
     contentDirInclude: ["decoding", "authors"],
     documentTypes: [Topic, Authors],
     disableImportAliasWarning: true,
@@ -178,7 +178,7 @@ export default makeSource({
             rehypeKatex,
             [
                 rehypeCitation,
-                { path: path.join(root, "public/bitcoin-topics") }
+                { path: path.join(root, "public/decoding-bitcoin") }
             ],
             [rehypePrismPlus, { defaultLanguage: "js", ignoreMissing: true }],
             rehypePresetMinify
