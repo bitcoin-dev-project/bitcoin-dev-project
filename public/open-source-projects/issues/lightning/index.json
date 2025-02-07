@@ -326,7 +326,7 @@
     "title": "lightning-rpc file isn't created",
     "labels": [
       "bug",
-      "docker"
+      "crash"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
