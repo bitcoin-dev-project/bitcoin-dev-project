@@ -142,7 +142,8 @@
     "publishedAt": "2023-11-09T01:37:38Z",
     "title": "add probing code",
     "labels": [
-      "good first issue"
+      "good first issue",
+      "Pathfinding"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
