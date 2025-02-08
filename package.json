@@ -13,7 +13,7 @@
         "build": "npm run submodules:update && next build && node ./rss/postbuild.mjs",
         "start": "next start",
         "lint": "next lint",
-        "submodules:update": "git submodule update --init && git submodule update --remote",
+        "submodules:update": "git submodule update --init --remote",
         "test": "jest"
     },
     "dependencies": {

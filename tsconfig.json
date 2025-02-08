@@ -22,7 +22,7 @@
             "@/*": ["./*"],
             "@/components/*": ["components/*"],
             "@/data/*": ["data/*"],
-            "@/layouts/*": ["components/bitcoin-topics/layouts/*"],
+            "@/layouts/*": ["components/decoding-bitcoin/layouts/*"],
             "@/css/*": ["css/*"],
             "contentlayer/generated": ["./.contentlayer/generated"]
         },

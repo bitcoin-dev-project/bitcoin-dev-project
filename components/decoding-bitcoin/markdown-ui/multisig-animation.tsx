@@ -170,7 +170,7 @@ const MultisigAnimation = () => {
                                                 isAnimating={
                                                     animatingKey === index
                                                 }
-                                                imageUrl={`/bitcoin-topics/static/images/topics/overview/p2ms/${participantNames[index].toLowerCase()}.jpg`}
+                                                imageUrl={`/decoding-bitcoin/static/images/topics/overview/p2ms/${participantNames[index].toLowerCase()}.jpg`}
                                             />
                                             <ConnectingLine
                                                 isActive={signatures[index]}
