@@ -423,5 +423,16 @@
       "module-blockchain"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1827",
+    "publishedAt": "2025-02-08T20:55:23Z",
+    "title": "[bdk 0.29] Syncing a Wallet that received many small UTXOs panics with SQLite error",
+    "labels": [
+      "bug",
+      "module-blockchain",
+      "module-database"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
