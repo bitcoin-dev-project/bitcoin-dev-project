@@ -218,7 +218,7 @@
     "title": "TProxy responding to mining.submit with result:true for low difficulty shares.",
     "labels": [
       "bug",
-      "translation proxy"
+      "translator proxy"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
@@ -283,7 +283,7 @@
     "title": "Prevent tproxy from panicing if downstream address is unavailable",
     "labels": [
       "bug",
-      "translation proxy",
+      "translator proxy",
       "refactor"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
@@ -303,7 +303,7 @@
     "title": "JDS Unable to establish connection when Tproxy is activated",
     "labels": [
       "bug",
-      "translation proxy",
+      "translator proxy",
       "job-declarator-server"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
@@ -315,18 +315,6 @@
     "labels": [
       "bug",
       "roles"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1355",
-    "publishedAt": "2025-01-16T14:30:35Z",
-    "title": "tProxy cannot handle 10k miners with delay of 100ms between each connection",
-    "labels": [
-      "bug",
-      "roles",
-      "high prio",
-      "adopter-feedback"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
@@ -358,6 +346,17 @@
     "labels": [
       "bug",
       "integration-tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1431",
+    "publishedAt": "2025-01-31T16:18:42Z",
+    "title": "Incorrect Task Status Handling in translator_sv2",
+    "labels": [
+      "bug",
+      "translator proxy",
+      "roles"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }

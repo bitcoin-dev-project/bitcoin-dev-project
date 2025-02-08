@@ -1059,16 +1059,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/8140",
-    "publishedAt": "2023-11-01T18:09:48Z",
-    "title": "[bug]: SendCoins sweep functionality returning `insufficient input to create sweep tx`",
-    "labels": [
-      "bug",
-      "needs triage"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/8149",
     "publishedAt": "2023-11-03T17:44:26Z",
     "title": "[bug]: ChannelArbitrator does not cleanly stop",
@@ -1148,6 +1138,16 @@
       "bug",
       "logging",
       "P3"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8299",
+    "publishedAt": "2023-12-20T13:45:46Z",
+    "title": "[bug]: `max-commit-fee-rate-anchors` ignored at force close, much higher fee used.",
+    "labels": [
+      "bug",
+      "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "url": "https://github.com/fedimint/ui/issues/10",
+    "url": "https://github.com/fedimint/fedimint-ui/issues/10",
     "publishedAt": "2023-05-08T11:58:39Z",
     "title": "Move password storage to Context from API",
     "labels": [
@@ -10,7 +10,7 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/156",
+    "url": "https://github.com/fedimint/fedimint-ui/issues/156",
     "publishedAt": "2023-08-28T18:02:36Z",
     "title": "Follower prematurely shows message that all have approved after approving",
     "labels": [
@@ -19,7 +19,7 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/162",
+    "url": "https://github.com/fedimint/fedimint-ui/issues/162",
     "publishedAt": "2023-08-30T19:01:45Z",
     "title": "Provide typed `useTheme` hook from `packages/ui`",
     "labels": [
@@ -29,7 +29,7 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/186",
+    "url": "https://github.com/fedimint/fedimint-ui/issues/186",
     "publishedAt": "2023-09-07T15:15:11Z",
     "title": "Add the abillity to specify your own `FM_TEST_DIR`",
     "labels": [
@@ -38,7 +38,7 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/212",
+    "url": "https://github.com/fedimint/fedimint-ui/issues/212",
     "publishedAt": "2023-09-28T00:03:08Z",
     "title": "VPN-related websocket failure",
     "labels": [
@@ -48,7 +48,7 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/343",
+    "url": "https://github.com/fedimint/fedimint-ui/issues/343",
     "publishedAt": "2023-12-14T21:30:44Z",
     "title": "Guardian UI favicon and manifest.json reference non-existent `logo192.png`",
     "labels": [
@@ -58,7 +58,7 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/474",
+    "url": "https://github.com/fedimint/fedimint-ui/issues/474",
     "publishedAt": "2024-08-08T18:24:16Z",
     "title": "0.4.0 Broken Restart Setup",
     "labels": [
@@ -67,7 +67,7 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/ui/issues/493",
+    "url": "https://github.com/fedimint/fedimint-ui/issues/493",
     "publishedAt": "2024-08-14T21:35:55Z",
     "title": " bug: solo doesn't show federation name during setup",
     "labels": [
