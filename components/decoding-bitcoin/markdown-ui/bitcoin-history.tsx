@@ -79,7 +79,7 @@ export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
                     style={{ marginTop: "-10px" }}
                 >
                     <Image
-                        src="/bitcoin-topics/static/images/topics/bitcoin-history/underline.svg"
+                        src="/decoding-bitcoin/static/images/topics/bitcoin-history/underline.svg"
                         alt="Underline"
                         className="absolute not-prose"
                         style={{
@@ -381,7 +381,7 @@ const ConnectingLine: React.FC<{ index: number }> = ({ index }) => {
         >
             <div className="relative w-full flex justify-center">
                 <Image
-                    src={`/bitcoin-topics/static/images/topics/bitcoin-history/line${lineIndex}.svg`}
+                    src={`/decoding-bitcoin/static/images/topics/bitcoin-history/line${lineIndex}.svg`}
                     alt={`Connecting line ${lineIndex}`}
                     width={768}
                     height={263}

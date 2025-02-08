@@ -13,7 +13,7 @@ export const opcodeData = {
         asm: "<sig> <pubkey> OP_CHECKSIG",
         hexCode: "<sig> <pubkey> 0xAC",
         svgPath:
-            "/bitcoin-topics/static/images/topics/overview/OP_CHECKSIG.svg",
+            "/decoding-bitcoin/static/images/topics/overview/OP_CHECKSIG.svg",
         svgId: "eIGw4bYh7q01"
     },
     OP_CHECKMULTISIG: {
@@ -24,7 +24,7 @@ export const opcodeData = {
         hexCode:
             "0x00 <Signature2> <Signature3> 0x52 <PublicKey1> <PublicKey2> <PublicKey3> 0x53 0xAE",
         svgPath:
-            "/bitcoin-topics/static/images/topics/overview/OP_CHECKMULTISIG.svg",
+            "/decoding-bitcoin/static/images/topics/overview/OP_CHECKMULTISIG.svg",
         svgId: "ewpOsy7XivL1"
     },
     OP_RETURN: {
@@ -33,7 +33,8 @@ export const opcodeData = {
             "Marks the output as containing data and makes it unspendable. It is often used to embed arbitrary data into the blockchain.",
         asm: "OP_RETURN <data>",
         hexCode: "0x6A <data>",
-        svgPath: "/bitcoin-topics/static/images/topics/overview/OP_RETURN.svg",
+        svgPath:
+            "/decoding-bitcoin/static/images/topics/overview/OP_RETURN.svg",
         svgId: "ePRvDAyVHFs1"
     },
     OP_DUP: {
@@ -42,7 +43,7 @@ export const opcodeData = {
             "Duplicates the top item on the stack and pushes it onto the stack again.",
         asm: "5 OP_DUP",
         hexCode: "0x05 0x76",
-        svgPath: "/bitcoin-topics/static/images/topics/overview/OP_DUP.svg",
+        svgPath: "/decoding-bitcoin/static/images/topics/overview/OP_DUP.svg",
         svgId: "eV5jQmEphkS1"
     },
     OP_EQUAL: {
@@ -51,7 +52,7 @@ export const opcodeData = {
             "Compares the top two items on the stack. If they are equal, it pushes 1 onto the stack; otherwise, it pushes 0.",
         asm: "5 5 OP_EQUAL",
         hexCode: "0x05 0x05 0x87",
-        svgPath: "/bitcoin-topics/static/images/topics/overview/OP_EQUAL.svg",
+        svgPath: "/decoding-bitcoin/static/images/topics/overview/OP_EQUAL.svg",
         svgId: "euOsxtleRZo1"
     },
     OP_HASH160: {
@@ -60,7 +61,8 @@ export const opcodeData = {
             "Hashes the top item on the stack twice: first with SHA-256 and then with RIPEMD-160.",
         asm: "<data> OP_HASH160",
         hexCode: "<data> 0xA9",
-        svgPath: "/bitcoin-topics/static/images/topics/overview/OP_HASH160.svg",
+        svgPath:
+            "/decoding-bitcoin/static/images/topics/overview/OP_HASH160.svg",
         svgId: "eVi2ttrKQ4j1"
     },
     OP_EQUALVERIFY: {
@@ -70,7 +72,7 @@ export const opcodeData = {
         asm: "5 5 OP_EQUALVERIFY",
         hexCode: "0x05 0x05 0x88",
         svgPath:
-            "/bitcoin-topics/static/images/topics/overview/OP_EQUALVERIFY.svg",
+            "/decoding-bitcoin/static/images/topics/overview/OP_EQUALVERIFY.svg",
         svgId: "e2znsLFuITp1"
     },
     OP_IF: {
@@ -79,7 +81,7 @@ export const opcodeData = {
             "Evaluates a condition. If the condition is true (non-zero), it executes the statements after OP_IF. Otherwise, it jumps to the code after OP_ELSE, if present, or OP_ENDIF.",
         asm: "<condition> OP_IF <true branch code> OP_ENDIF",
         hexCode: "<condition> 0x63 <true branch code> 0x68",
-        svgPath: "/bitcoin-topics/static/images/topics/overview/OP_IF.svg",
+        svgPath: "/decoding-bitcoin/static/images/topics/overview/OP_IF.svg",
         svgId: "eFfHWhIxGND1"
     },
     OP_ELSE: {
@@ -89,7 +91,7 @@ export const opcodeData = {
         asm: "<condition> OP_IF <true branch code> OP_ELSE <false branch code> OP_ENDIF",
         hexCode:
             "<condition> 0x63 <true branch code> 0x67 <false branch code> 0x68",
-        svgPath: "/bitcoin-topics/static/images/topics/overview/OP_ELSE.svg",
+        svgPath: "/decoding-bitcoin/static/images/topics/overview/OP_ELSE.svg",
         svgId: "e9yEjpOIwHv1"
     }
 }

@@ -381,7 +381,7 @@ export function Hero() {
                                             Get started
                                         </Button>
                                         <Button
-                                            href="https://github.com/bitcoin-dev-project/bitcoin-topics"
+                                            href="https://github.com/bitcoin-dev-project/decoding-bitcoin"
                                             target="_blank"
                                             variant="secondary"
                                         >

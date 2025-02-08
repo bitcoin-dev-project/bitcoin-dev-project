@@ -2,7 +2,7 @@ import {
     Gradient,
     LightMode,
     DarkMode
-} from "@/components/bitcoin-topics/markdown-ui/QuickLinks"
+} from "@/components/decoding-bitcoin/markdown-ui/QuickLinks"
 
 export function WalletsIcon({
     id,

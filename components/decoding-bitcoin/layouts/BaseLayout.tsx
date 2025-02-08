@@ -44,7 +44,7 @@ export default function BaseLayout({
 
     const toggleNav = () => setIsNavOpen(!isNavOpen)
 
-    const githubEditUrl = `https://github.com/bitcoin-dev-project/bitcoin-topics/edit/main/decoding/${content.slug}.mdx`
+    const githubEditUrl = `https://github.com/bitcoin-dev-project/decoding-bitcoin/edit/main/decoding/${content.slug}.mdx`
 
     const normalizePath = (path: string) => {
         return path.replace("/decoding/", "").replace("/", "")
