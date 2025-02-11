@@ -65,14 +65,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint-ui/issues/493",
-    "publishedAt": "2024-08-14T21:35:55Z",
-    "title": " bug: solo doesn't show federation name during setup",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
