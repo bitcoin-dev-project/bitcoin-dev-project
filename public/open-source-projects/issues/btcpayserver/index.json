@@ -62,14 +62,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6590",
-    "publishedAt": "2025-02-08T10:49:50Z",
-    "title": "[Bug]: can't create LN address with invoice metadata",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
