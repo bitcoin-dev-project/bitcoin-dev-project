@@ -360,5 +360,15 @@
       "roles"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1473",
+    "publishedAt": "2025-02-11T17:49:40Z",
+    "title": "`binary_sv2` procedural macro (in `derive_codec_sv2` cannot serialize messages with fields named `data`)",
+    "labels": [
+      "bug",
+      "binary-sv2"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
