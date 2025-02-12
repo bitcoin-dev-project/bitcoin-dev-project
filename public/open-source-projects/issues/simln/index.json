@@ -77,15 +77,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/198",
-    "publishedAt": "2024-08-22T10:10:42Z",
-    "title": "Installation instructions needs to mention protobuf as a requirement ",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/214",
     "publishedAt": "2025-01-27T16:24:24Z",
     "title": "Refactor: Move parsing into its own module",
@@ -100,7 +91,8 @@
     "publishedAt": "2025-02-07T19:15:45Z",
     "title": "Bug: Interaction between simulation file path and results directory",
     "labels": [
-      "bug"
+      "bug",
+      "Medium Priority"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
