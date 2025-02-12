@@ -78,12 +78,14 @@ export const projects = {
                     github: "https://github.com/bitcoin-core/secp256k1"
                 },
                 {
-                    title: "Validating Lightning Signer",
+                    title: "Payjoin",
                     subTitle: "",
                     description:
-                        "Improve your lightning node security by protecting your keys separately",
-                    image: "/images/projects/vls.png",
-                    link: "https://vls.tech"
+                        "Scale Bitcoin, save fees, and preserve privacy all at once.",
+                    image: "/images/projects/payjoin.png",
+                    link: "https://payjoin.org/",
+                    github: "https://github.com/payjoin",
+                    repo: "rust-payjoin"
                 },
                 {
                     title: "BTCPayserver",
