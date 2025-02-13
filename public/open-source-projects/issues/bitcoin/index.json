@@ -487,5 +487,15 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/31474",
+    "publishedAt": "2024-12-12T00:17:39Z",
+    "title": "Potential crash (assert) rescanning wallet",
+    "labels": [
+      "Bug",
+      "Wallet"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
