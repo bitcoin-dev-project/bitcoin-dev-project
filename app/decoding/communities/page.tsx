@@ -95,7 +95,7 @@ export default function CommunitiesPage() {
                         <div className="space-y-4">
                             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
                                 Bitcoin Communities
-                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 dark:from-orange-400 dark:to-orange-500">
+                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 dark:from-orange-400 dark:to-orange-500 leading-[1.2] pb-1 md:pb-2 pt-1 md:pt-2">
                                     Running Study Cohorts
                                 </span>
                             </h1>
