@@ -26,7 +26,7 @@ import DiscordInvite from "./discord-invite"
 import TransactionCreation from "@/src/components/TransactionCreation"
 import TransactionAnimationPlayer from "@/content/transaction-animation-player"
 import TransactionDecoder from "./transaction-decoder"
-
+import ReorgCalculator from "./reorg-calculator"
 export const components: MDXComponents = {
     Image,
     CustomLink,
@@ -55,5 +55,6 @@ export const components: MDXComponents = {
     DiscordInvite,
     TransactionCreation,
     TransactionAnimationPlayer,
-    TransactionDecoder
+    TransactionDecoder,
+    ReorgCalculator
 }
