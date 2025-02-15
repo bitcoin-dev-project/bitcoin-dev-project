@@ -321,12 +321,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
-    "url": "https://github.com/ElementsProject/lightning/issues/8035",
-    "publishedAt": "2025-01-27T09:20:52Z",
-    "title": "lightning-rpc file isn't created",
+    "url": "https://github.com/ElementsProject/lightning/issues/8079",
+    "publishedAt": "2025-02-11T11:27:42Z",
+    "title": "docs: enable offer documentation is missing",
     "labels": [
-      "bug",
-      "crash"
+      "docs",
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
