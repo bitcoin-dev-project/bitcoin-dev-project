@@ -181,15 +181,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/23119",
-    "publishedAt": "2021-09-28T13:06:17Z",
-    "title": "test: replace bare asserts with assertion helpers (assert_equal() etc.)",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/23366",
     "publishedAt": "2021-10-27T04:43:14Z",
     "title": "CI failure: `ThreadSanitizer: data race /usr/lib/llvm-12/bin/../include/c++/v1/ios:523:12 in std::__1::ios_base::width() const`",
