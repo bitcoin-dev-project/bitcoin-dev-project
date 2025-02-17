@@ -210,5 +210,14 @@
       "dkg"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/6874",
+    "publishedAt": "2025-02-17T20:18:26Z",
+    "title": "Gatewayd makes LND fail payments",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
