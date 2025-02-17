@@ -9,6 +9,14 @@ import {
     AlertTriangle,
     BookOpen
 } from "lucide-react"
+import {
+    LineChart,
+    Line,
+    XAxis,
+    YAxis,
+    Tooltip,
+    ResponsiveContainer
+} from "recharts"
 
 const ReorgCalculator = () => {
     const [attackerHashrate, setAttackerHashrate] = useState(30)
@@ -103,6 +111,30 @@ const ReorgCalculator = () => {
         if (hashrate < 25) return "text-yellow-500"
         if (hashrate < 40) return "text-orange-500"
         return "text-red-500"
+    }
+
+    const generateGraphData = () => {
+        const data = []
+        for (let i = 1; i <= 12; i++) {
+            data.push({
+                blocks: i,
+                probability:
+                    calculateProbability(attackerHashrate / 100, i) * 100
+            })
+        }
+        return data
+    }
+
+    const CustomTooltip = ({ active, payload }: any) => {
+        if (active && payload && payload.length) {
+            return (
+                <div className="bg-vscode-hover-dark p-2 rounded-lg border border-vscode-border-dark text-sm">
+                    <p>Blocks: {payload[0].payload.blocks}</p>
+                    <p>Probability: {payload[0].value.toFixed(4)}%</p>
+                </div>
+            )
+        }
+        return null
     }
 
     return (
@@ -250,6 +282,21 @@ const ReorgCalculator = () => {
                             step={1}
                             className="w-full h-2 bg-vscode-input-dark rounded-lg appearance-none cursor-pointer"
                         />
+
+                        <div className="mt-3 text-sm p-3 bg-vscode-input-dark rounded-md">
+                            <div className="flex items-center gap-2">
+                                <AlertTriangle className="w-4 h-4 text-yellow-500" />
+                                <span className="font-medium">
+                                    Network Context:
+                                </span>
+                            </div>
+                            <p className="mt-1 text-vscode-text-light/70 dark:text-vscode-text-dark/70">
+                                For reference, Foundry USA, currently the
+                                largest mining pool, controls approximately
+                                31.1% of the global hashrate (according to
+                                mempool.space).
+                            </p>
+                        </div>
                     </div>
 
                     <div>
@@ -317,6 +364,62 @@ const ReorgCalculator = () => {
                                 : probability < 0.1
                                   ? "Some risk exists. Consider waiting for more confirmations."
                                   : "High risk of reorganization. Wait for more confirmations."}
+                        </div>
+                    </div>
+
+                    <div className="mt-6">
+                        <div className="h-64 w-full">
+                            <ResponsiveContainer width="100%" height="100%">
+                                <LineChart
+                                    data={generateGraphData()}
+                                    margin={{
+                                        top: 10,
+                                        right: 20,
+                                        bottom: 25,
+                                        left: 25
+                                    }}
+                                >
+                                    <XAxis
+                                        dataKey="blocks"
+                                        stroke="#888"
+                                        label={{
+                                            value: "Number of Confirmations",
+                                            position: "bottom",
+                                            offset: 10,
+                                            style: {
+                                                fontSize: "12px"
+                                            }
+                                        }}
+                                    />
+                                    <YAxis
+                                        stroke="#888"
+                                        label={{
+                                            value: "Attack Success Rate (%)",
+                                            angle: -90,
+                                            position: "insideLeft",
+                                            offset: -15,
+                                            style: {
+                                                fontSize: "12px",
+                                                textAnchor: "middle"
+                                            }
+                                        }}
+                                    />
+                                    <Tooltip content={<CustomTooltip />} />
+                                    <Line
+                                        type="monotone"
+                                        dataKey="probability"
+                                        stroke={
+                                            probability < 0.01
+                                                ? "#22c55e"
+                                                : probability < 0.1
+                                                  ? "#eab308"
+                                                  : "#ef4444"
+                                        }
+                                        strokeWidth={2}
+                                        dot={false}
+                                    />
+                                </LineChart>
+                            </ResponsiveContainer>
                         </div>
                     </div>
                 </div>
