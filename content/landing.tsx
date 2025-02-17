@@ -83,11 +83,11 @@ export const primaryFeatures = [
     {
         title: "Good First Issues",
         description:
-            "Explore vetted Free Open Source Software (FOSS) projects and find your way in bitcoin open source.",
+            "Explore curated bitcoin open source software (₿OSS) projects to get off of ₿OSS 0.",
         image: screenshotGoodFirstIssues,
         released: true,
         checks: [
-            "Explore vetted FOSS projects",
+            "Explore curated ₿OSS projects",
             "Find your way in bitcoin open source"
         ]
     }
@@ -318,8 +318,9 @@ export const contributions = [
         released: true
     },
     {
-        name: "FOSS Projects",
-        description: "Learn how to contribute to the bitcoin core software.",
+        name: "₿OSS Projects",
+        description:
+            "Explore curated bitcoin open source software (₿OSS) projects.",
         href: "/projects",
         icon: ChartPieIcon,
         released: true

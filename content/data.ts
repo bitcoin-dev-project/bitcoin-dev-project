@@ -141,7 +141,7 @@ export const navPointers = [
 
 export const ContributeNavPointers = [
     {
-        btnText: "FOSS Projects",
+        btnText: "₿OSS Projects",
         description: "",
         jumpTo: `/projects`
     },

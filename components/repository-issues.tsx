@@ -226,9 +226,8 @@ function InfoTab() {
             <div className="w-[300px] max-lg:w-[250px] max-md:w-full flex flex-col gap-4 relative">
                 <div className="bg-gray-100 dark:bg-gray-900 border dark:border-black-700 border-[#F7F7F7] p-4 max-md:p-3 rounded-xl">
                     <p className="max-md:text-[15px]">
-                        Use this tool to explore vetted Free Open Source
-                        Software (FOSS) projects and find your way in bitcoin
-                        open source.
+                        Explore curated bitcoin open source software (₿OSS)
+                        projects to get off of ₿OSS 0.
                     </p>
                 </div>
             </div>
