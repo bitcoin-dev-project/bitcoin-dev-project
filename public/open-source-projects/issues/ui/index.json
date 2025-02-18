@@ -1,15 +1,5 @@
 [
   {
-    "url": "https://github.com/fedimint/fedimint-ui/issues/10",
-    "publishedAt": "2023-05-08T11:58:39Z",
-    "title": "Move password storage to Context from API",
-    "labels": [
-      "good first issue",
-      "refactor"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint-ui/issues/156",
     "publishedAt": "2023-08-28T18:02:36Z",
     "title": "Follower prematurely shows message that all have approved after approving",
