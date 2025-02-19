@@ -27,22 +27,6 @@
         "lang": ["Rust", "Shell", "Nix"],
         "issue": "https://github.com/fedimint/fedimint/issues"
     },
-    "fedimint-ui": {
-        "repo_url": "https://github.com/fedimint/ui",
-        "name": "ui",
-        "org": "fedimint",
-        "tags": [
-            "lightning",
-            "bitcoin",
-            "p2p",
-            "e-cash",
-            "gateways",
-            "react",
-            "web"
-        ],
-        "lang": ["Typescript", "Shell"],
-        "issue": "https://github.com/fedimint/ui/issues"
-    },
     "lnd": {
         "repo_url": "https://github.com/lightningnetwork/lnd",
         "name": "lnd",
@@ -159,6 +143,14 @@
         "tags": ["lightning", "simulator", "cli"],
         "lang": ["Rust", "Shell"],
         "issue": "https://github.com/bitcoin-dev-project/sim-ln/issues"
+    },
+    "payjoin": {
+        "repo_url": "https://github.com/payjoin/rust-payjoin",
+        "name": "rust-payjoin",
+        "org": "payjoin",
+        "tags": ["rust", "bitcoin", "privacy", "fees"],
+        "lang": ["Rust"],
+        "issue": "https://github.com/payjoin/rust-payjoin/issues"
     },
     "warnet": {
         "repo_url": "https://github.com/bitcoin-dev-project/warnet",
