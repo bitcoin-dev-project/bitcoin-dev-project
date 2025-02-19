@@ -68,5 +68,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/535",
+    "publishedAt": "2025-02-13T04:49:11Z",
+    "title": "`select_first_candidate` returns a `InternalSelectionError::NotFound`",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
