@@ -46,5 +46,5 @@ jobs:
               run: |
                   git config --global user.email "${{secrets.EMAIL}}"
                   git config --global user.name "${{secrets.NAME}}"
-                  git add -f public/open-source-projects/issues/ scripts/public-open-source-projects/index.json
+                  git add -f public/open-source-projects/issues/ scripts/public/open-source-projects/index.json
                   git diff --quiet && git diff --staged --quiet || (git commit -m "Update open source project issues" && git push)
