@@ -117,5 +117,14 @@
       "1.0"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/4097",
+    "publishedAt": "2025-02-21T12:05:59Z",
+    "title": "`Witnes::taproot_control_block` returns `Some(signature)` for key spends",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
