@@ -104,5 +104,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/222",
+    "publishedAt": "2025-02-24T00:56:04Z",
+    "title": "count in defined activity produces count-1 events (one less than expected)",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
