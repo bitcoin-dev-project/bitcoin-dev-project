@@ -330,16 +330,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/1418",
-    "publishedAt": "2025-01-29T22:16:14Z",
-    "title": "JDS connects to wrong RPC port on Integration Tests",
-    "labels": [
-      "bug",
-      "integration-tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/1420",
     "publishedAt": "2025-01-29T22:45:24Z",
     "title": "JDC does not exchange messages with TP in Integration Tests",
