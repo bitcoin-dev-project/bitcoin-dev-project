@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect, useCallback } from "react"
 import * as bitcoin from "bitcoinjs-lib"
 import clsx from "clsx"
 import { Code, Hash } from "lucide-react"
@@ -172,10 +172,9 @@ const ExampleInputs = ({ examples, onSelectExample }: ExampleInputsProps) => (
 interface HashInputProps {
     input: string
     onInputChange: (value: string) => void
-    onCompute: () => void
 }
 
-const HashInput = ({ input, onInputChange, onCompute }: HashInputProps) => (
+const HashInput = ({ input, onInputChange }: HashInputProps) => (
     <div className="bg-white dark:bg-vscode-input-dark p-4 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark">
         <div className="flex items-center gap-2 mb-4">
             <Hash className="w-4 h-4" />
@@ -191,26 +190,15 @@ const HashInput = ({ input, onInputChange, onCompute }: HashInputProps) => (
                 className="w-full p-3 border-2 border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-gray-50 dark:bg-black text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200"
                 rows={3}
             />
-            <button
-                onClick={onCompute}
-                className="w-full bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 focus:ring-2 focus:ring-orange-500/50 focus:outline-none"
-            >
-                <Code className="h-5 w-5" />
-                Compute Hash
-            </button>
         </div>
     </div>
 )
 
-const HashFunctions = () => {
-    const [input, setInput] = useState("")
-    const [selectedHash, setSelectedHash] = useState<string>("sha256")
+const useHashComputation = (input: string, selectedHash: string) => {
     const [result, setResult] = useState<string>("")
     const [error, setError] = useState("")
 
-    const selectedFunction = HASH_FUNCTIONS.find((h) => h.id === selectedHash)
-
-    const computeHash = () => {
+    const computeHash = useCallback(() => {
         try {
             setError("")
             const trimmedInput = input.trim()
@@ -219,11 +207,9 @@ const HashFunctions = () => {
                     "Input must contain only hexadecimal characters (0-9, a-f, A-F)"
                 )
             }
-
             if (trimmedInput.length === 0) {
                 throw new Error("Input cannot be empty")
             }
-
             if (trimmedInput.length % 2 !== 0) {
                 throw new Error("Input must have an even number of characters")
             }
@@ -233,14 +219,61 @@ const HashFunctions = () => {
                 (h) => h.id === selectedHash
             )
             if (hashFunction) {
-                const output = hashFunction.compute(inputBuffer)
-                setResult(output)
+                setResult(hashFunction.compute(inputBuffer))
             }
         } catch (err: any) {
             setError("Invalid hex input: " + err.message)
             setResult("")
         }
-    }
+    }, [input, selectedHash])
+
+    useEffect(() => {
+        const debounceTimer = setTimeout(() => {
+            if (input.trim()) {
+                computeHash()
+            } else {
+                setResult("")
+                setError("")
+            }
+        }, 500)
+
+        return () => clearTimeout(debounceTimer)
+    }, [input, computeHash])
+
+    return { result, error }
+}
+
+const ResultDisplay = ({ result }: { result: string }) => {
+    if (!result) return null
+    return (
+        <div className="p-4 bg-vscode-input-light dark:bg-vscode-input-dark rounded-lg border border-vscode-border-light dark:border-vscode-border-dark">
+            <div className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark mb-2">
+                Result
+            </div>
+            <div className="font-mono text-sm break-all text-vscode-text-light dark:text-vscode-text-dark">
+                {result}
+            </div>
+        </div>
+    )
+}
+
+const ErrorDisplay = ({ error }: { error: string }) => {
+    if (!error) return null
+    return (
+        <div className="p-4 bg-vscode-error-light/20 dark:bg-vscode-error-dark/20 border border-vscode-error-light/30 dark:border-vscode-error-dark/30 rounded-lg text-vscode-error-light dark:text-vscode-error-dark">
+            {error}
+        </div>
+    )
+}
+
+const HashFunctions = () => {
+    const [input, setInput] = useState("")
+    const [selectedHash, setSelectedHash] = useState<string>("sha256")
+    const { result, error } = useHashComputation(input, selectedHash)
+
+    const selectedFunction = HASH_FUNCTIONS.find(
+        (h) => h.id === selectedHash
+    ) as HashFunction
 
     return (
         <div className="space-y-6 p-6 bg-vscode-background-light dark:bg-vscode-background-dark rounded-xl max-w-4xl mx-auto border border-vscode-border-light dark:border-vscode-border-dark shadow-sm">
@@ -267,36 +300,16 @@ const HashFunctions = () => {
                         ))}
                     </div>
 
-                    {selectedFunction && (
-                        <ExampleInputs
-                            examples={selectedFunction.exampleInputs}
-                            onSelectExample={setInput}
-                        />
-                    )}
-
-                    <HashInput
-                        input={input}
-                        onInputChange={setInput}
-                        onCompute={computeHash}
+                    <ExampleInputs
+                        examples={selectedFunction.exampleInputs}
+                        onSelectExample={setInput}
                     />
+
+                    <HashInput input={input} onInputChange={setInput} />
                 </div>
 
-                {error && (
-                    <div className="p-4 bg-vscode-error-light/20 dark:bg-vscode-error-dark/20 border border-vscode-error-light/30 dark:border-vscode-error-dark/30 rounded-lg text-vscode-error-light dark:text-vscode-error-dark">
-                        {error}
-                    </div>
-                )}
-
-                {result && (
-                    <div className="p-4 bg-vscode-input-light dark:bg-vscode-input-dark rounded-lg border border-vscode-border-light dark:border-vscode-border-dark">
-                        <div className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark mb-2">
-                            Result
-                        </div>
-                        <div className="font-mono text-sm break-all text-vscode-text-light dark:text-vscode-text-dark">
-                            {result}
-                        </div>
-                    </div>
-                )}
+                <ErrorDisplay error={error} />
+                <ResultDisplay result={result} />
             </div>
         </div>
     )
