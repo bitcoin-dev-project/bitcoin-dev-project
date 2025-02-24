@@ -2,7 +2,8 @@
 import { useState } from "react"
 import * as bitcoin from "bitcoinjs-lib"
 import clsx from "clsx"
-import { Code } from "lucide-react"
+import { Code, Hash } from "lucide-react"
+import { motion } from "framer-motion"
 
 interface HashFunction {
     id: string
@@ -141,24 +142,28 @@ interface ExampleInputsProps {
 }
 
 const ExampleInputs = ({ examples, onSelectExample }: ExampleInputsProps) => (
-    <div className="bg-vscode-input-light dark:bg-vscode-input-dark p-4 rounded-lg">
-        <div className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark mb-2">
-            Example Test Values:
+    <div className="bg-gray-50 dark:bg-black p-4 rounded-lg border-2 border-orange-500/20">
+        <div className="flex items-center gap-2 mb-4">
+            <Code className="w-4 h-4 text-orange-500" />
+            <div className="text-sm font-semibold text-vscode-text-light dark:text-vscode-text-dark">
+                Example Test Values
+            </div>
         </div>
-        <div className="space-y-2">
+        <div className="flex flex-col gap-3">
             {examples.map((example, i) => (
-                <div
+                <motion.div
                     key={i}
-                    className="px-2 rounded border border-vscode-border-light dark:border-vscode-border-dark cursor-pointer hover:bg-vscode-background-light dark:hover:bg-vscode-background-dark"
+                    className="bg-white dark:bg-vscode-input-dark p-3 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark cursor-pointer hover:border-orange-500 transition-colors"
                     onClick={() => onSelectExample(example.value)}
+                    whileHover={{ scale: 1.01 }}
                 >
-                    <p className="font-mono text-xs break-all text-vscode-text-light dark:text-vscode-text-dark">
+                    <div className="font-mono text-xs break-all text-vscode-text-light dark:text-vscode-text-dark bg-gray-50 dark:bg-black p-2 rounded">
                         {example.value}
-                    </p>
-                    <p className="text-xs text-vscode-text-light dark:text-vscode-text-dark opacity-80 mt-1 break-words">
+                    </div>
+                    <p className="text-xs text-vscode-text-light dark:text-vscode-text-dark opacity-80 mt-2">
                         {example.description}
                     </p>
-                </div>
+                </motion.div>
             ))}
         </div>
     </div>
@@ -171,21 +176,29 @@ interface HashInputProps {
 }
 
 const HashInput = ({ input, onInputChange, onCompute }: HashInputProps) => (
-    <div className="space-y-2">
-        <textarea
-            value={input}
-            onChange={(e) => onInputChange(e.target.value)}
-            placeholder="Enter hex value (e.g., 02a79cd900a43af6c1c6ff9e)"
-            className="w-full p-3 border-2 border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-vscode-input-light dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200"
-            rows={3}
-        />
-        <button
-            onClick={onCompute}
-            className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 focus:ring-2 focus:ring-orange-500/50 focus:outline-none"
-        >
-            <Code className="h-5 w-5" />
-            Compute Hash
-        </button>
+    <div className="bg-white dark:bg-vscode-input-dark p-4 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark">
+        <div className="flex items-center gap-2 mb-4">
+            <Hash className="w-4 h-4" />
+            <div className="text-sm font-semibold text-vscode-text-light dark:text-vscode-text-dark">
+                Custom Input
+            </div>
+        </div>
+        <div className="space-y-3">
+            <textarea
+                value={input}
+                onChange={(e) => onInputChange(e.target.value)}
+                placeholder="Enter hex value (e.g., 02a79cd900a43af6c1c6ff9e)"
+                className="w-full p-3 border-2 border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-gray-50 dark:bg-black text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200"
+                rows={3}
+            />
+            <button
+                onClick={onCompute}
+                className="w-full bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 focus:ring-2 focus:ring-orange-500/50 focus:outline-none"
+            >
+                <Code className="h-5 w-5" />
+                Compute Hash
+            </button>
+        </div>
     </div>
 )
 
