@@ -126,5 +126,23 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/4135",
+    "publishedAt": "2025-02-26T17:06:24Z",
+    "title": "`SighashCache::p2wsh_signature_hash` is broken when the script contains `OP_CODESEPARATOR`",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/4136",
+    "publishedAt": "2025-02-26T18:21:23Z",
+    "title": "Something about PSBT signing is very messed up",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
