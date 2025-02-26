@@ -123,7 +123,9 @@
     "publishedAt": "2025-02-24T18:56:18Z",
     "title": "Bug: App crashes when clicking Light / Dark mode toggle",
     "labels": [
-      "bug"
+      "bug",
+      "good first issue",
+      "up for grabs"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   }
