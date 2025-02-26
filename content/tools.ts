@@ -11,6 +11,14 @@ export const tools = {
             items: [
                 {
                     description:
+                        "The foundational document that introduced Bitcoin, explaining its decentralized, peer-to-peer electronic cash system.",
+                    image: "/images/tools/bitcoin-whitepaper.png",
+                    title: "Bitcoin Whitepaper",
+                    subTitle: "",
+                    link: "/bitcoin.pdf"
+                },
+                {
+                    description:
                         "The best source to stay up to date with technical developments.",
                     image: "/images/tools/optech.jpg",
                     title: "Bitcoin Optech",
