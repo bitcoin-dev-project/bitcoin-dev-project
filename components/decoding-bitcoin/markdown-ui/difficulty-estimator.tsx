@@ -85,6 +85,32 @@ const StatCard: React.FC<StatCardProps> = ({
     </div>
 )
 
+const BlockProgress: React.FC<BlockProgressProps> = ({ remainingBlocks }) => (
+    <div
+        className="mt-4 bg-vscode-hover-dark p-2 rounded-lg overflow-hidden"
+        style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, 6px)",
+            gap: "2px",
+            justifyContent: "center"
+        }}
+    >
+        {Array.from({ length: 2016 }).map((_, i) => (
+            <div
+                key={i}
+                style={{ width: "6px", height: "6px" }}
+                className={clsx(
+                    "transition-colors duration-300 rounded-sm",
+                    i < 2016 - remainingBlocks
+                        ? "bg-orange-500"
+                        : "bg-orange-500/20"
+                )}
+            />
+        ))}
+    </div>
+)
+
+
 const DifficultyEstimator = () => {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
@@ -313,6 +339,10 @@ const DifficultyEstimator = () => {
                                     </div>
                                 </div>
                             </div>
+
+                            <BlockProgress
+                                remainingBlocks={difficultyData.remainingBlocks}
+                            />
                         </div>
                     </div>
 
