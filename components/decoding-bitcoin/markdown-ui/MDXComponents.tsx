@@ -27,6 +27,9 @@ import TransactionCreation from "@/src/components/TransactionCreation"
 import TransactionAnimationPlayer from "@/content/transaction-animation-player"
 import TransactionDecoder from "./transaction-decoder"
 import ReorgCalculator from "./reorg-calculator"
+import HashFunctions from "./hash-functions"
+import DifficultyEstimator from "./difficulty-estimator"
+
 export const components: MDXComponents = {
     Image,
     CustomLink,
@@ -56,5 +59,7 @@ export const components: MDXComponents = {
     TransactionCreation,
     TransactionAnimationPlayer,
     TransactionDecoder,
-    ReorgCalculator
+    ReorgCalculator,
+    HashFunctions,
+    DifficultyEstimator
 }
