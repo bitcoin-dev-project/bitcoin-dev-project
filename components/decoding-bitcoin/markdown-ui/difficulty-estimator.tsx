@@ -52,6 +52,16 @@ interface BlockProgressProps {
     remainingBlocks: number
 }
 
+interface ChartTooltipProps {
+    active?: boolean
+    payload?: Array<{
+        payload: {
+            date: string
+        }
+        value: number
+    }>
+}
+
 const formatTimeRemaining = (remainingMilliseconds: number) => {
     const remainingSeconds = remainingMilliseconds / 1000
     const days = Math.floor(remainingSeconds / (24 * 3600))
@@ -110,6 +120,16 @@ const BlockProgress: React.FC<BlockProgressProps> = ({ remainingBlocks }) => (
     </div>
 )
 
+const ChartTooltip: React.FC<ChartTooltipProps> = ({ active, payload }) => {
+    if (!active || !payload?.length) return null
+
+    return (
+        <div className="bg-vscode-hover-dark p-2 rounded-lg border border-vscode-border-dark text-sm">
+            <p>Date: {payload[0].payload.date}</p>
+            <p>Hashrate: {payload[0].value.toFixed(2)} EH/s</p>
+        </div>
+    )
+}
 
 const DifficultyEstimator = () => {
     const [loading, setLoading] = useState(true)
@@ -346,8 +366,48 @@ const DifficultyEstimator = () => {
                         </div>
                     </div>
 
+                    <div className="mt-6">
+                        <h3 className="text-sm font-medium mb-4">
+                            Network Hashrate History (365 Days)
+                        </h3>
+                        <div className="h-64 w-full">
+                            <ResponsiveContainer width="100%" height="100%">
+                                <LineChart
+                                    data={difficultyData.historicalData}
+                                    margin={{
+                                        top: 10,
+                                        right: 20,
+                                        bottom: 20,
+                                        left: 25
+                                    }}
+                                >
+                                    <XAxis
+                                        dataKey="date"
+                                        stroke="#888"
+                                        angle={-45}
+                                        textAnchor="end"
+                                        height={60}
+                                        tick={{ fontSize: 12 }}
+                                    />
+                                    <YAxis
+                                        stroke="#888"
+                                        domain={["auto", "auto"]}
+                                        tick={{ fontSize: 12 }}
+                                    />
+                                    <Tooltip content={<ChartTooltip />} />
+                                    <Line
+                                        type="monotone"
+                                        dataKey="hashrate"
+                                        stroke="#f97316"
+                                        strokeWidth={2}
+                                        dot={false}
+                                    />
+                                </LineChart>
+                            </ResponsiveContainer>
                         </div>
                     </div>
+                </div>
+            </div>
         </motion.div>
     )
 }
