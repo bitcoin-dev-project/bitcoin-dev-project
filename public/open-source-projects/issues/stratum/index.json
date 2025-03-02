@@ -267,17 +267,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/1266",
-    "publishedAt": "2024-11-28T16:45:12Z",
-    "title": "Investigate ghost processes in tproxy and JDC",
-    "labels": [
-      "bug",
-      "roles",
-      "integration-tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/1279",
     "publishedAt": "2024-12-09T10:17:03Z",
     "title": "Prevent tproxy from panicing if downstream address is unavailable",
@@ -309,16 +298,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/1349",
-    "publishedAt": "2025-01-16T08:05:37Z",
-    "title": "Change JDC behavior on shutdown",
-    "labels": [
-      "bug",
-      "roles"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/1397",
     "publishedAt": "2025-01-24T16:48:46Z",
     "title": "Pool role doesn't start when using P2TR output_script_type",
@@ -326,27 +305,6 @@
       "bug",
       "sv2 pool",
       "roles"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1418",
-    "publishedAt": "2025-01-29T22:16:14Z",
-    "title": "JDS connects to wrong RPC port on Integration Tests",
-    "labels": [
-      "bug",
-      "integration-tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1420",
-    "publishedAt": "2025-01-29T22:45:24Z",
-    "title": "JDC does not exchange messages with TP in Integration Tests",
-    "labels": [
-      "bug",
-      "integration-tests",
-      "blocker"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
@@ -362,12 +320,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/1473",
-    "publishedAt": "2025-02-11T17:49:40Z",
-    "title": "`binary_sv2` procedural macro (in `derive_codec_sv2` cannot serialize messages with fields named `data`)",
+    "url": "https://github.com/stratum-mining/stratum/issues/1516",
+    "publishedAt": "2025-02-28T14:43:56Z",
+    "title": "JDC sets a wrong `prev_hash` on a `non-future` job when it receives multiple sequential SetNewPrevHash messages from TP after it",
     "labels": [
       "bug",
-      "binary-sv2"
+      "job-declarator-client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }

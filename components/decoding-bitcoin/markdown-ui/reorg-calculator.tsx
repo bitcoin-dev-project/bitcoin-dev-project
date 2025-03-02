@@ -32,15 +32,10 @@ const ReorgCalculator = () => {
         const lambda = z * qp
 
         let sum = 0
-        for (let k = 0; k <= z; k++) {
+        for (let k = 0; k < z; k++) {
             let logPoisson = k * Math.log(lambda) - lambda - logFactorial(k)
             let poisson = Math.exp(logPoisson)
-
-            if (k === z) {
-                sum += poisson
-            } else {
-                sum += poisson * (1 - Math.pow(qp, z - k))
-            }
+            sum += poisson * (1 - Math.pow(qp, z - k))
         }
 
         return 1 - sum

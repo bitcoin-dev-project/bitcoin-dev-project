@@ -1024,17 +1024,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/8108",
-    "publishedAt": "2023-10-23T05:10:13Z",
-    "title": "chainntfn: unable to get missed blocks: starting height is greater than ending height",
-    "labels": [
-      "bug",
-      "notifications",
-      "chain handling"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/8120",
     "publishedAt": "2023-10-27T12:03:57Z",
     "title": "[bug]: Spend-Output monitoring might have a rare edge case where it misses the spend of an output.",
@@ -1119,18 +1108,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/8210",
-    "publishedAt": "2023-11-20T16:47:18Z",
-    "title": "chainntnfs: found data race in unit test",
-    "labels": [
-      "bug",
-      "test flake",
-      "P1",
-      "chain handling"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/8263",
     "publishedAt": "2023-12-08T11:25:01Z",
     "title": "[bug]: logs heavily spammed by `[ERR] CRTR: error computing probability to node:`",
@@ -1148,6 +1125,26 @@
     "labels": [
       "bug",
       "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8318",
+    "publishedAt": "2023-12-28T15:36:12Z",
+    "title": "[bug]: Golangs grpc-streamer might not recycle bad connections causing a deadlock when runnning lnd with an active HTLC Interceptor",
+    "labels": [
+      "bug",
+      "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8328",
+    "publishedAt": "2024-01-01T22:29:22Z",
+    "title": "Sats stuck in Limbo - \"maturity_height\": 0 and \"blocks_til_maturity\": 0",
+    "labels": [
+      "bug",
+      "HTLC"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }

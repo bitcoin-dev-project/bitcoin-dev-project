@@ -424,5 +424,24 @@
       "module-database"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1845",
+    "publishedAt": "2025-02-19T19:42:35Z",
+    "title": "Multipath descriptor network association wrong",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1848",
+    "publishedAt": "2025-02-20T16:30:42Z",
+    "title": "`FilterIter` may not handle reorgs properly.",
+    "labels": [
+      "bug",
+      "tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
