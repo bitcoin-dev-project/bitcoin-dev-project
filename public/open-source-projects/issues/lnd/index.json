@@ -889,17 +889,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7848",
-    "publishedAt": "2023-07-21T13:43:01Z",
-    "title": "[bug]: Logic races in ChannelArbitrator/ChainArbitrator",
-    "labels": [
-      "bug",
-      "contracts",
-      "shutdown"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7868",
     "publishedAt": "2023-08-04T00:19:00Z",
     "title": "[bug]: failed funding broadcast doesn't remove pending channels and unlock UTXOs",
@@ -1145,6 +1134,15 @@
     "labels": [
       "bug",
       "HTLC"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8331",
+    "publishedAt": "2024-01-02T19:48:35Z",
+    "title": "[bug]: Channel down. Connectivity good. Logs showing ping-pong ok. \"...read next header: EOF\"",
+    "labels": [
+      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
