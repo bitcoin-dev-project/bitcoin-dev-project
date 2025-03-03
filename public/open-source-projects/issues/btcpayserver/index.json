@@ -62,16 +62,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6614",
-    "publishedAt": "2025-02-27T11:23:12Z",
-    "title": "[Bug]: JS-Modal is missing contact us link at end of invoice",
-    "labels": [
-      "Bug",
-      "UI / UX",
-      "Checkout"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
