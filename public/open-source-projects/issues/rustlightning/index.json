@@ -1,14 +1,5 @@
 [
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/58",
-    "publishedAt": "2018-07-20T01:33:53Z",
-    "title": "BOLT 10 DNS",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/324",
     "publishedAt": "2019-03-25T18:13:21Z",
     "title": "Add Test for same-payment_hash-different-CLTV HTLC sorting",
