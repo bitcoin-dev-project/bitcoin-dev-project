@@ -444,5 +444,15 @@
       "module-wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1873",
+    "publishedAt": "2025-03-06T02:42:46Z",
+    "title": "Make Sqlite PersistedWallet<Connection> Send+Sync",
+    "labels": [
+      "bug",
+      "module-wallet"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
