@@ -99,7 +99,7 @@
   {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/220",
     "publishedAt": "2025-02-20T02:33:34Z",
-    "title": "Sim-ln cannot connect to CLN node",
+    "title": "Bug: sim-ln cannot connect to CLN node",
     "labels": [
       "bug"
     ],
