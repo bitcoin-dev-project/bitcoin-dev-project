@@ -452,5 +452,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1878",
+    "publishedAt": "2025-03-07T22:11:28Z",
+    "title": "Mismatch between Core's and `example_wallet_rpc` mature balance",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
