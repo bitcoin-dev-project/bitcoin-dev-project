@@ -320,16 +320,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/1516",
-    "publishedAt": "2025-02-28T14:43:56Z",
-    "title": "JDC sets a wrong `prev_hash` on a `non-future` job when it receives multiple sequential SetNewPrevHash messages from TP after it",
-    "labels": [
-      "bug",
-      "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/1534",
     "publishedAt": "2025-03-06T12:48:42Z",
     "title": "`hashrate_from_target` function in `roles_logic_sv2::utils` can trigger an `arithmetic operation overflow`",
