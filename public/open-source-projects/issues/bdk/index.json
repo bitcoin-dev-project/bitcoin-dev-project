@@ -443,5 +443,14 @@
       "module-wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1877",
+    "publishedAt": "2025-03-07T17:56:25Z",
+    "title": "Can not create a new wallet address for a core RPC forked altcoin",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
