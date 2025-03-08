@@ -456,7 +456,7 @@
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1878",
     "publishedAt": "2025-03-07T22:11:28Z",
-    "title": "Mismatch between Core's and `example_wallet_rpc` mature balance",
+    "title": "Mismatch between Bitcoin Core's and BDK's mature balance",
     "labels": [
       "bug"
     ],
