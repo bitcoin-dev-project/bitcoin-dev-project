@@ -135,14 +135,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
-  },
-  {
-    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/4195",
-    "publishedAt": "2025-03-05T14:42:35Z",
-    "title": "`Xpriv::decode` doesn't check that 45th byte is 0",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
