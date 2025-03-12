@@ -55,16 +55,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/176",
-    "publishedAt": "2024-03-25T15:41:33Z",
-    "title": "Validation: Do not allow defined activity with zero amount",
-    "labels": [
-      "good first issue",
-      "Robustness"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/185",
     "publishedAt": "2024-04-26T19:30:26Z",
     "title": "Robustness: Improve Test Coverage of Repo",
