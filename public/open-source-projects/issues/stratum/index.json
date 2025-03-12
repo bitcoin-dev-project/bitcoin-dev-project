@@ -339,16 +339,5 @@
       "job-declarator-client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1560",
-    "publishedAt": "2025-03-12T13:42:47Z",
-    "title": "need to remove `translator-proxy-old-share` and revert #910",
-    "labels": [
-      "bug",
-      "translator proxy",
-      "message-generator"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
