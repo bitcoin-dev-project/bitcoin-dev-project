@@ -97,14 +97,5 @@
       "help wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/566",
-    "publishedAt": "2025-03-07T16:24:33Z",
-    "title": "Independent features must be checked in CI",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
