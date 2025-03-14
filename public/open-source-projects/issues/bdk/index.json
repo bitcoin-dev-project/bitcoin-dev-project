@@ -448,7 +448,8 @@
     "publishedAt": "2025-03-07T22:11:28Z",
     "title": "Mismatch between Bitcoin Core's and BDK's mature balance",
     "labels": [
-      "bug"
+      "bug",
+      "discussion"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
