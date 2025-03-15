@@ -87,5 +87,15 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/551",
+    "publishedAt": "2025-02-24T17:38:51Z",
+    "title": "Try preserving privacy for transactions greater than 2 outputs",
+    "labels": [
+      "enhancement",
+      "help wanted"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]

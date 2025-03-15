@@ -293,15 +293,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1517",
-    "publishedAt": "2024-07-18T11:38:45Z",
-    "title": "Appending changesets to `Store` after opening causes overwriting",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1548",
     "publishedAt": "2024-08-12T15:56:09Z",
     "title": "MissingNonWitnessUtxo even before signing",
@@ -415,20 +406,48 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1827",
-    "publishedAt": "2025-02-08T20:55:23Z",
-    "title": "[bdk 0.29] Syncing a Wallet that received many small UTXOs panics with SQLite error",
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1845",
+    "publishedAt": "2025-02-19T19:42:35Z",
+    "title": "Multipath descriptor network association wrong",
     "labels": [
-      "bug",
-      "module-blockchain",
-      "module-database"
+      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1845",
-    "publishedAt": "2025-02-19T19:42:35Z",
-    "title": "Multipath descriptor network association wrong",
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1848",
+    "publishedAt": "2025-02-20T16:30:42Z",
+    "title": "`FilterIter` may not handle reorgs properly.",
+    "labels": [
+      "bug",
+      "tests"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1868",
+    "publishedAt": "2025-03-03T19:50:57Z",
+    "title": "Display implementations should not expose `Debug` output",
+    "labels": [
+      "good first issue",
+      "module-wallet"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1878",
+    "publishedAt": "2025-03-07T22:11:28Z",
+    "title": "Mismatch between Bitcoin Core's and BDK's mature balance",
+    "labels": [
+      "bug",
+      "discussion"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1892",
+    "publishedAt": "2025-03-15T08:51:18Z",
+    "title": "A bug for generating testnet descriptor?",
     "labels": [
       "bug"
     ],

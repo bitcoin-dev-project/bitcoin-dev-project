@@ -42,14 +42,6 @@
         "lang": ["Go"],
         "issue": "https://github.com/lightningnetwork/lnd/issues"
     },
-    "payjoin": {
-        "repo_url": "https://github.com/payjoin/rust-payjoin",
-        "name": "rust-payjoin",
-        "org": "payjoin",
-        "tags": ["rust", "bitcoin", "privacy", "fees"],
-        "lang": ["Rust"],
-        "issue": "https://github.com/payjoin/rust-payjoin/issues"
-    },
     "polar": {
         "repo_url": "https://github.com/jamaljsr/polar",
         "name": "polar",
@@ -151,6 +143,14 @@
         "tags": ["lightning", "simulator", "cli"],
         "lang": ["Rust", "Shell"],
         "issue": "https://github.com/bitcoin-dev-project/sim-ln/issues"
+    },
+    "payjoin": {
+        "repo_url": "https://github.com/payjoin/rust-payjoin",
+        "name": "rust-payjoin",
+        "org": "payjoin",
+        "tags": ["rust", "bitcoin", "privacy", "fees"],
+        "lang": ["Rust"],
+        "issue": "https://github.com/payjoin/rust-payjoin/issues"
     },
     "warnet": {
         "repo_url": "https://github.com/bitcoin-dev-project/warnet",
