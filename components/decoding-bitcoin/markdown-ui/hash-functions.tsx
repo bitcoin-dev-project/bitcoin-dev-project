@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback } from "react"
 import * as bitcoin from "bitcoinjs-lib"
 import clsx from "clsx"
-import { Code, Hash } from "lucide-react"
+import { Code, Hash, ArrowRight, Info } from "lucide-react"
 import { motion } from "framer-motion"
 
 interface HashFunction {
@@ -110,24 +110,43 @@ const HashFunctionCard = ({
 }: HashFunctionCardProps) => (
     <div
         className={clsx(
-            "p-4 rounded-lg border-2 cursor-pointer transition-colors",
+            "p-4 rounded-lg border-2 cursor-pointer transition-all hover:shadow-md",
             isSelected
-                ? "border-orange-500 bg-orange-50 dark:bg-orange-900/20"
+                ? "border-orange-500 bg-orange-50 dark:bg-orange-900/20 shadow-md"
                 : "border-vscode-border-light dark:border-vscode-border-dark hover:border-orange-300"
         )}
         onClick={() => onSelect(hash.id)}
     >
-        <h3 className="font-medium text-vscode-text-light dark:text-vscode-text-dark">
-            {hash.name}
-        </h3>
-        <p className="mt-1 text-sm text-vscode-text-light dark:text-vscode-text-dark opacity-80">
+        <div className="flex items-center gap-2">
+            <div
+                className={clsx(
+                    "w-8 h-8 rounded-full flex items-center justify-center",
+                    isSelected
+                        ? "bg-orange-500"
+                        : "bg-gray-200 dark:bg-gray-700"
+                )}
+            >
+                <Hash
+                    className={clsx(
+                        "w-4 h-4",
+                        isSelected
+                            ? "text-white"
+                            : "text-gray-600 dark:text-gray-300"
+                    )}
+                />
+            </div>
+            <h3 className="font-medium text-vscode-text-light dark:text-vscode-text-dark">
+                {hash.name}
+            </h3>
+        </div>
+        <p className="mt-2 text-sm text-vscode-text-light dark:text-vscode-text-dark opacity-80">
             {hash.description}
         </p>
-        <div className="mt-2">
+        <div className="mt-3">
             <div className="text-xs font-medium text-vscode-text-light dark:text-vscode-text-dark mb-1">
                 Used in Bitcoin for:
             </div>
-            <ul className="list-disc list-inside text-xs text-vscode-text-light dark:text-vscode-text-dark opacity-80">
+            <ul className="list-disc list-inside text-xs text-vscode-text-light dark:text-vscode-text-dark opacity-80 space-y-1">
                 {hash.bitcoinUsage.map((usage, i) => (
                     <li key={i}>{usage}</li>
                 ))}
@@ -142,9 +161,11 @@ interface ExampleInputsProps {
 }
 
 const ExampleInputs = ({ examples, onSelectExample }: ExampleInputsProps) => (
-    <div className="bg-gray-50 dark:bg-black p-4 rounded-lg border-2 border-orange-500/20">
+    <div className="bg-gray-50 dark:bg-black/40 p-4 rounded-lg border border-orange-500/20 shadow-sm">
         <div className="flex items-center gap-2 mb-4">
-            <Code className="w-4 h-4 text-orange-500" />
+            <div className="bg-orange-100 dark:bg-orange-900/30 p-2 rounded-md">
+                <Code className="w-4 h-4 text-orange-500" />
+            </div>
             <div className="text-sm font-semibold text-vscode-text-light dark:text-vscode-text-dark">
                 Example Test Values
             </div>
@@ -153,9 +174,10 @@ const ExampleInputs = ({ examples, onSelectExample }: ExampleInputsProps) => (
             {examples.map((example, i) => (
                 <motion.div
                     key={i}
-                    className="bg-white dark:bg-vscode-input-dark p-3 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark cursor-pointer hover:border-orange-500 transition-colors"
+                    className="bg-white dark:bg-vscode-input-dark p-3 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark cursor-pointer hover:border-orange-500 transition-all hover:shadow-md"
                     onClick={() => onSelectExample(example.value)}
                     whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.99 }}
                 >
                     <div className="font-mono text-xs break-all text-vscode-text-light dark:text-vscode-text-dark bg-gray-50 dark:bg-black p-2 rounded">
                         {example.value}
@@ -175,9 +197,11 @@ interface HashInputProps {
 }
 
 const HashInput = ({ input, onInputChange }: HashInputProps) => (
-    <div className="bg-white dark:bg-vscode-input-dark p-4 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark">
+    <div className="bg-white dark:bg-vscode-input-dark p-4 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark shadow-sm">
         <div className="flex items-center gap-2 mb-4">
-            <Hash className="w-4 h-4" />
+            <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-md">
+                <Hash className="w-4 h-4 text-blue-500" />
+            </div>
             <div className="text-sm font-semibold text-vscode-text-light dark:text-vscode-text-dark">
                 Custom Input
             </div>
@@ -187,9 +211,13 @@ const HashInput = ({ input, onInputChange }: HashInputProps) => (
                 value={input}
                 onChange={(e) => onInputChange(e.target.value)}
                 placeholder="Enter hex value (e.g., 02a79cd900a43af6c1c6ff9e)"
-                className="w-full p-3 border-2 border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-gray-50 dark:bg-black text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200"
+                className="w-full p-3 border-2 border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-gray-50 dark:bg-black text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                 rows={3}
             />
+            <div className="text-xs text-gray-500 dark:text-gray-400 italic">
+                Input must be a valid hexadecimal string with an even number of
+                characters
+            </div>
         </div>
     </div>
 )
@@ -246,29 +274,76 @@ const useHashComputation = (input: string, selectedHash: string) => {
 const ResultDisplay = ({ result }: { result: string }) => {
     if (!result) return null
     return (
-        <div className="p-4 bg-vscode-input-light dark:bg-vscode-input-dark rounded-lg border border-vscode-border-light dark:border-vscode-border-dark">
-            <div className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark mb-2">
-                Result
+        <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800 shadow-sm"
+        >
+            <div className="flex items-center gap-2 mb-2">
+                <div className="bg-green-100 dark:bg-green-800/50 p-1.5 rounded-md">
+                    <svg
+                        className="w-4 h-4 text-green-600 dark:text-green-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                        />
+                    </svg>
+                </div>
+                <div className="text-sm font-medium text-green-800 dark:text-green-400">
+                    Hash Result
+                </div>
             </div>
-            <div className="font-mono text-sm break-all text-vscode-text-light dark:text-vscode-text-dark">
+            <div className="font-mono text-sm break-all bg-white dark:bg-black/50 p-3 rounded border border-green-200 dark:border-green-800 text-vscode-text-light dark:text-vscode-text-dark">
                 {result}
             </div>
-        </div>
+        </motion.div>
     )
 }
 
 const ErrorDisplay = ({ error }: { error: string }) => {
     if (!error) return null
     return (
-        <div className="p-4 bg-vscode-error-light/20 dark:bg-vscode-error-dark/20 border border-vscode-error-light/30 dark:border-vscode-error-dark/30 rounded-lg text-vscode-error-light dark:text-vscode-error-dark">
-            {error}
-        </div>
+        <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg shadow-sm"
+        >
+            <div className="flex items-center gap-2">
+                <div className="bg-red-100 dark:bg-red-800/50 p-1.5 rounded-md">
+                    <svg
+                        className="w-4 h-4 text-red-600 dark:text-red-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                    </svg>
+                </div>
+                <div className="text-sm font-medium text-red-800 dark:text-red-400">
+                    {error}
+                </div>
+            </div>
+        </motion.div>
     )
 }
 
 const HashFunctions = () => {
     const [input, setInput] = useState("")
     const [selectedHash, setSelectedHash] = useState<string>("sha256")
+    const [showInfo, setShowInfo] = useState(false)
     const { result, error } = useHashComputation(input, selectedHash)
 
     const selectedFunction = HASH_FUNCTIONS.find(
@@ -276,40 +351,155 @@ const HashFunctions = () => {
     ) as HashFunction
 
     return (
-        <div className="space-y-6 p-6 bg-vscode-background-light dark:bg-vscode-background-dark rounded-xl max-w-4xl mx-auto border border-vscode-border-light dark:border-vscode-border-dark shadow-sm">
-            <div className="space-y-4">
-                <div>
-                    <h1 className="text-2xl font-bold text-vscode-text-light dark:text-vscode-text-dark mb-2">
-                        Bitcoin Hash Functions
-                    </h1>
-                    <p className="text-vscode-text-light dark:text-vscode-text-dark opacity-80">
-                        Select a hash function and enter a hex value to compute
-                        its hash
-                    </p>
-                </div>
+        <div className="bg-white dark:bg-vscode-background-dark rounded-xl max-w-4xl mx-auto border border-vscode-border-light dark:border-vscode-border-dark shadow-lg overflow-hidden">
+            {/* Header */}
+            <div className="bg-gradient-to-r from-orange-500 to-dark-200 p-4 text-white">
+                <h1 className="text-xl font-bold flex items-center gap-2">
+                    <Hash className="w-5 h-5" />
+                    Bitcoin Hash Functions
+                </h1>
+            </div>
 
-                <div className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Main content */}
+            <div className="p-5">
+                {/* Hash Function Selector */}
+                <div className="mb-6">
+                    <div className="flex items-center justify-between mb-2">
+                        <label className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark">
+                            Select Hash Function
+                        </label>
+                        <button
+                            onClick={() => setShowInfo(!showInfo)}
+                            className="text-xs flex items-center gap-1 text-orange-500 hover:text-orange-600"
+                        >
+                            <Info className="w-3 h-3" />
+                            {showInfo ? "Hide details" : "Show details"}
+                        </button>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
                         {HASH_FUNCTIONS.map((hash) => (
-                            <HashFunctionCard
+                            <button
                                 key={hash.id}
-                                hash={hash}
-                                isSelected={selectedHash === hash.id}
-                                onSelect={setSelectedHash}
-                            />
+                                onClick={() => setSelectedHash(hash.id)}
+                                className={clsx(
+                                    "py-2 px-3 rounded-md text-sm font-medium transition-all",
+                                    selectedHash === hash.id
+                                        ? "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border-l-4 border-orange-500"
+                                        : "bg-gray-100 dark:bg-gray-800 text-vscode-text-light dark:text-vscode-text-dark hover:bg-orange-50 dark:hover:bg-orange-900/10 border-l-4 border-transparent"
+                                )}
+                            >
+                                {hash.name}
+                            </button>
                         ))}
                     </div>
-
-                    <ExampleInputs
-                        examples={selectedFunction.exampleInputs}
-                        onSelectExample={setInput}
-                    />
-
-                    <HashInput input={input} onInputChange={setInput} />
                 </div>
 
-                <ErrorDisplay error={error} />
-                <ResultDisplay result={result} />
+                {/* Hash Function Info (Collapsible) */}
+                {showInfo && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="mb-6 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark"
+                    >
+                        <h3 className="font-medium text-vscode-text-light dark:text-vscode-text-dark mb-2">
+                            {selectedFunction.name}
+                        </h3>
+                        <p className="text-sm text-vscode-text-light dark:text-vscode-text-dark opacity-80 mb-3">
+                            {selectedFunction.description}
+                        </p>
+                        <div className="text-xs font-medium text-vscode-text-light dark:text-vscode-text-dark mb-1">
+                            Used in Bitcoin for:
+                        </div>
+                        <ul className="list-disc list-inside text-xs text-vscode-text-light dark:text-vscode-text-dark opacity-80 space-y-1 pl-2">
+                            {selectedFunction.bitcoinUsage.map((usage, i) => (
+                                <li key={i}>{usage}</li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                )}
+
+                {/* Input Section */}
+                <div className="mb-6">
+                    <label className="block text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark mb-2">
+                        Input (Hex Format)
+                    </label>
+                    <div className="flex flex-col gap-2">
+                        <textarea
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            placeholder="Enter hex value (e.g., 02a79cd900a43af6c1c6ff9e)"
+                            className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                            rows={2}
+                        />
+                        <div className="text-xs text-vscode-text-light dark:text-vscode-text-dark opacity-70">
+                            Input must be a valid hexadecimal string
+                        </div>
+                    </div>
+                </div>
+
+                {/* Example Values */}
+                <div className="mb-6">
+                    <div className="flex items-center justify-between mb-2">
+                        <label className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark">
+                            Example Values
+                        </label>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        {selectedFunction.exampleInputs.map((example, i) => (
+                            <button
+                                key={i}
+                                onClick={() => setInput(example.value)}
+                                className="text-xs py-1 px-2 bg-gray-100 dark:bg-gray-800 text-vscode-text-light dark:text-vscode-text-dark rounded border border-vscode-border-light dark:border-vscode-border-dark hover:bg-orange-50 dark:hover:bg-orange-900/10 transition-colors"
+                                title={example.description}
+                            >
+                                Example {i + 1}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Error Display */}
+                {error && (
+                    <div className="mb-6 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm flex items-center gap-2">
+                        <svg
+                            className="w-4 h-4 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                        </svg>
+                        {error}
+                    </div>
+                )}
+
+                {/* Result Display */}
+                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark overflow-hidden">
+                    <div className="bg-gray-100 dark:bg-gray-700 px-4 py-2 border-b border-vscode-border-light dark:border-vscode-border-dark">
+                        <div className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark flex items-center gap-2">
+                            <ArrowRight className="w-4 h-4 text-orange-500" />
+                            Result: {selectedFunction.name}
+                        </div>
+                    </div>
+                    <div className="p-4">
+                        {result ? (
+                            <div className="font-mono text-sm break-all bg-white dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
+                                {result}
+                            </div>
+                        ) : (
+                            <div className="text-sm text-vscode-text-light dark:text-vscode-text-dark opacity-70 italic">
+                                Enter a valid hex input to see the hash result
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
         </div>
     )
