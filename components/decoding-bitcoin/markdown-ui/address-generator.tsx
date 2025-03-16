@@ -150,7 +150,7 @@ const EXAMPLE_INPUTS = {
 }
 
 // Add near top of file
-type AddressType = "p2pkh" | "p2sh" | "p2wpkh" | "p2wsh" | "p2tr";
+type AddressType = "p2pkh" | "p2sh" | "p2wpkh" | "p2wsh" | "p2tr"
 
 const AddressGenerator = () => {
     const [addressType, setAddressType] = useState<AddressType>("p2pkh")
@@ -376,7 +376,9 @@ const AddressGenerator = () => {
                         {ADDRESS_TYPES.map((type) => (
                             <button
                                 key={type.id}
-                                onClick={() => setAddressType(type.id as AddressType)}
+                                onClick={() =>
+                                    setAddressType(type.id as AddressType)
+                                }
                                 className={clsx(
                                     "py-2 px-3 text-center rounded-md text-sm font-medium transition-colors flex flex-col items-center justify-center h-16",
                                     addressType === type.id
@@ -403,16 +405,20 @@ const AddressGenerator = () => {
                             <div className="text-sm text-gray-500 dark:text-gray-400">
                                 Examples:
                             </div>
-                            {EXAMPLE_INPUTS[addressType as AddressType]?.map((example, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => setInputData(example.value)}
-                                    className="text-sm py-1 px-2.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-orange-50 dark:hover:bg-orange-900/10"
-                                    title={example.description}
-                                >
-                                    {i + 1}
-                                </button>
-                            ))}
+                            {EXAMPLE_INPUTS[addressType as AddressType]?.map(
+                                (example, i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() =>
+                                            setInputData(example.value)
+                                        }
+                                        className="text-sm py-1 px-2.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md border border-gray-200 dark:border-gray-700 hover:bg-orange-50 dark:hover:bg-orange-900/10"
+                                        title={example.description}
+                                    >
+                                        {i + 1}
+                                    </button>
+                                )
+                            )}
                             <button
                                 onClick={generateRandomInputData}
                                 className="text-sm py-1 px-2 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-300 rounded-md border border-orange-200 dark:border-orange-800 hover:bg-orange-200 dark:hover:bg-orange-900/30 flex items-center gap-1"
