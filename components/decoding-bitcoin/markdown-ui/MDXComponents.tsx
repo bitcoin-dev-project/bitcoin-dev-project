@@ -28,6 +28,8 @@ import TransactionAnimationPlayer from "@/content/transaction-animation-player"
 import TransactionDecoder from "./transaction-decoder"
 import ReorgCalculator from "./reorg-calculator"
 import HashFunctions from "./hash-functions"
+import AddressGenerator from "./address-generator"
+import { ByteTools } from "./byte-tools"
 export const components: MDXComponents = {
     Image,
     CustomLink,
@@ -58,5 +60,7 @@ export const components: MDXComponents = {
     TransactionAnimationPlayer,
     TransactionDecoder,
     ReorgCalculator,
-    HashFunctions
+    HashFunctions,
+    AddressGenerator,
+    ByteTools
 }
