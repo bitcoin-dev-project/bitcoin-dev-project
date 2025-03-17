@@ -440,7 +440,9 @@
     "publishedAt": "2025-03-15T08:51:18Z",
     "title": "A bug for generating testnet descriptor?",
     "labels": [
-      "bug"
+      "bug",
+      "documentation",
+      "discussion"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }

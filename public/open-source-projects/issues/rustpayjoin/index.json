@@ -50,16 +50,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/487",
-    "publishedAt": "2025-01-16T01:37:20Z",
-    "title": "Remove `.unwrap()`, even in Tests",
-    "labels": [
-      "good first issue",
-      "tech debt"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/503",
     "publishedAt": "2025-01-21T23:58:59Z",
     "title": "Add docstrings for undocumented components",
