@@ -112,9 +112,8 @@ export default function CommunityDashboardClient({
                                                     ? "bg-orange-500 text-white"
                                                     : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600"
                                             }
-                                            ${week > currentWeek ? "opacity-50 cursor-not-allowed" : ""}
+                                            ${week > currentWeek ? "opacity-50" : ""}
                                         `}
-                                        disabled={week > currentWeek}
                                     >
                                         {week}
                                     </button>
@@ -163,13 +162,12 @@ export default function CommunityDashboardClient({
                                                     onClick={() =>
                                                         setSelectedWeek(week)
                                                     }
-                                                    disabled={isLocked}
                                                     className={`
                                                         w-full flex items-center gap-3 p-4
                                                         transition-colors duration-200
                                                         hover:bg-gray-50 dark:hover:bg-gray-700/40
                                                         ${isSelected ? "bg-orange-50 dark:bg-orange-900/20 border-l-2 border-orange-500" : ""}
-                                                        ${isLocked ? "opacity-50 cursor-not-allowed" : ""}
+                                                        ${isLocked ? "opacity-50" : ""}
                                                     `}
                                                 >
                                                     <div
