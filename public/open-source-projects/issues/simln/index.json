@@ -77,16 +77,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/217",
-    "publishedAt": "2025-02-07T19:15:45Z",
-    "title": "Bug: Interaction between simulation file path and results directory",
-    "labels": [
-      "bug",
-      "Medium Priority"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/222",
     "publishedAt": "2025-02-24T00:56:04Z",
     "title": "Bug: count in defined activity produces count-1 events (one less than expected)",
