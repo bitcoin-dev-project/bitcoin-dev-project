@@ -15,6 +15,16 @@ export const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
         typeof getTimeUntilCall
     > | null>(null)
 
+    // Format the time based on the time object in weeklyCall
+    const formattedTime = weeklyCall.time
+        ? `${weeklyCall.time.hour}:${weeklyCall.time.minute.toString().padStart(2, "0")}`
+        : "20:00"
+
+    // Get day of week from the date
+    const dayOfWeek = new Date(weeklyCall.date).toLocaleDateString("en-US", {
+        weekday: "long"
+    })
+
     useEffect(() => {
         setTimeUntil(getTimeUntilCall(weeklyCall))
 
@@ -38,7 +48,7 @@ export const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
                         </p>
                     </div>
                     <p className="text-xs text-gray-600 dark:text-gray-400 hidden md:block">
-                        Every Friday • 8:00 AM (Bali)
+                        {`${dayOfWeek} • ${formattedTime} (${weeklyCall.time?.timeZone?.split("/").pop() || "Bali"})`}
                     </p>
                 </div>
             </div>
