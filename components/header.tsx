@@ -66,20 +66,22 @@ export function Header() {
                         />
                         <Link
                             href="/career"
-                            className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100"
+                            className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 
+                            hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-300 ease-in-out
+                            "
                         >
                             Career
                         </Link>
 
                         <Link
                             href="/tools"
-                            className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100"
+                            className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-300 ease-in-out"
                         >
                             Tools
                         </Link>
                         <Link
                             href="/about"
-                            className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100"
+                            className="text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-300 ease-in-out"
                         >
                             About
                         </Link>
