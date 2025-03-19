@@ -87,5 +87,16 @@
       "help wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/591",
+    "publishedAt": "2025-03-18T22:15:41Z",
+    "title": "Rename `PayjoinProposal::extract_v2_req` and add docstring",
+    "labels": [
+      "documentation",
+      "good first issue",
+      "api"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
