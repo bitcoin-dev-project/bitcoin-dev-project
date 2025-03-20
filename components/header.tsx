@@ -250,7 +250,7 @@ function PopoverNavigation({
             <PopoverButton
                 as="button"
                 onClick={() => setOpen(!isOpen)}
-                className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100"
+                className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-300 ease-in-out px-4 py-2"
                 ref={contentRef}
             >
                 {navItem}
