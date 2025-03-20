@@ -193,15 +193,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/915",
-    "publishedAt": "2023-03-20T18:06:43Z",
-    "title": "Sqlite db race condition",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/998",
     "publishedAt": "2023-05-29T08:02:32Z",
     "title": "Feature imcompatibility of `rpc` and `async-interface`",
@@ -416,16 +407,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1878",
-    "publishedAt": "2025-03-07T22:11:28Z",
-    "title": "Mismatch between Bitcoin Core's and BDK's mature balance",
-    "labels": [
-      "bug",
-      "discussion"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1892",
     "publishedAt": "2025-03-15T08:51:18Z",
     "title": "A bug for generating testnet descriptor?",
@@ -440,15 +421,6 @@
     "url": "https://github.com/bitcoindevkit/bdk/issues/1898",
     "publishedAt": "2025-03-18T11:13:52Z",
     "title": "panic (assertion) in try_filter_chain_txouts",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1900",
-    "publishedAt": "2025-03-19T12:45:13Z",
-    "title": "Taproot Miniscript 2/3 threshold descriptor wallet is broken",
     "labels": [
       "bug"
     ],
