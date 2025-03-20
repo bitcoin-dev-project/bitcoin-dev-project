@@ -478,5 +478,15 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/31873",
+    "publishedAt": "2025-02-14T22:10:00Z",
+    "title": "guix: Unable to reproduce macOS SDK tarball on Fedora 40",
+    "labels": [
+      "Bug",
+      "Build system"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
