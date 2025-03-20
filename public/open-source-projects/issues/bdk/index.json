@@ -175,24 +175,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/826",
-    "publishedAt": "2022-12-24T17:25:02Z",
-    "title": "There's no way to set connect timeout for the Esplora backend client",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/859",
-    "publishedAt": "2023-02-10T09:20:42Z",
-    "title": "RPC sync failure ",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/998",
     "publishedAt": "2023-05-29T08:02:32Z",
     "title": "Feature imcompatibility of `rpc` and `async-interface`",
