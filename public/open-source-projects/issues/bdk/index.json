@@ -454,5 +454,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1900",
+    "publishedAt": "2025-03-19T12:45:13Z",
+    "title": "Taproot Miniscript 2/3 threshold descriptor wallet is broken",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
