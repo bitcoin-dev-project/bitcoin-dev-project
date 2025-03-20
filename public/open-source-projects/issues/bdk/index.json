@@ -68,31 +68,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/618",
-    "publishedAt": "2022-06-03T01:11:23Z",
-    "title": "Use `srcipthash_subscribe` when syncing `ElectrumBlockchain`",
-    "labels": [
-      "bug",
-      "discussion"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/642",
     "publishedAt": "2022-06-28T02:38:54Z",
     "title": "timestamp timelocks are not satisfied",
     "labels": [
       "bug",
       "module-wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/650",
-    "publishedAt": "2022-07-02T19:05:21Z",
-    "title": "CI: `blockchain::esplora::bdk_blockchain_tests::test_sync_stop_gap_20` occationally fails",
-    "labels": [
-      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -143,15 +124,6 @@
       "bug",
       "discussion",
       "module-coinselection"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/749",
-    "publishedAt": "2022-09-10T20:35:14Z",
-    "title": "Error syncing wallet via RPC client on macOS system",
-    "labels": [
-      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
