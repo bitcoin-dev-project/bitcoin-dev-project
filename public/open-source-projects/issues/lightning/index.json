@@ -328,5 +328,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
+  },
+  {
+    "url": "https://github.com/ElementsProject/lightning/issues/8169",
+    "publishedAt": "2025-03-18T13:44:15Z",
+    "title": "`listfunds` missing closed channel output",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
