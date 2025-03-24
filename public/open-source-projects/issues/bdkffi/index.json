@@ -53,5 +53,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/706",
+    "publishedAt": "2025-03-24T18:05:42Z",
+    "title": "Small error in `Amount` API",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
