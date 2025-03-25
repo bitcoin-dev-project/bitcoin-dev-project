@@ -139,15 +139,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2827",
-    "publishedAt": "2024-01-12T22:33:31Z",
-    "title": "`test_restored_packages_retry` is brittle",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/2851",
     "publishedAt": "2024-01-24T22:44:50Z",
     "title": "Change max_value_in_flight based on channel being public",
