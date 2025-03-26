@@ -45,7 +45,8 @@
     "publishedAt": "2025-01-14T15:33:23Z",
     "title": "Accomodate Updated BIP 78 Spec",
     "labels": [
-      "good first issue"
+      "good first issue",
+      "help wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
@@ -77,6 +78,17 @@
     "labels": [
       "enhancement",
       "help wanted"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/583",
+    "publishedAt": "2025-03-16T15:38:12Z",
+    "title": "InputPair's lack of a constructor seems to cause mistakes",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
