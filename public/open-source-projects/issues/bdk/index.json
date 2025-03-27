@@ -50,20 +50,20 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/559",
-    "publishedAt": "2022-03-07T12:47:11Z",
-    "title": "`maybe_async` complicates isomorphic use-cases",
+    "url": "https://github.com/bitcoindevkit/bdk/issues/529",
+    "publishedAt": "2022-01-17T05:11:29Z",
+    "title": "BDK should store signers in the same list",
     "labels": [
-      "bug"
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/598",
-    "publishedAt": "2022-05-05T17:08:10Z",
-    "title": "The `rpc` blockchain tests don't work with Bitcoin Core 23.0",
+    "url": "https://github.com/bitcoindevkit/bdk/issues/588",
+    "publishedAt": "2022-04-19T02:56:01Z",
+    "title": "Extend wallet::export module to also import/export the Caravan wallet format",
     "labels": [
-      "bug"
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -78,31 +78,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/655",
-    "publishedAt": "2022-07-06T12:40:08Z",
-    "title": "Test which xpubs in PSBTs are needed for HW to sign correctly",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/658",
     "publishedAt": "2022-07-07T19:03:54Z",
     "title": "`ElectrumBlockchain` requires a special check to not decrement index on sync. ",
     "labels": [
       "bug",
       "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/673",
-    "publishedAt": "2022-07-18T19:38:38Z",
-    "title": "Add an example showing how to open a pre-existing wallet",
-    "labels": [
-      "documentation",
-      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
