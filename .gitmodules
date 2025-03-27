@@ -2,3 +2,4 @@
 	path = public/decoding-bitcoin
 	url = https://github.com/bitcoin-dev-project/decoding-bitcoin/
 	branch = main
+	ignore = dirty
