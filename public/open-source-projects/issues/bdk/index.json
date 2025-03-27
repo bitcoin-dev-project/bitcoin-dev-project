@@ -11,31 +11,11 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/175",
-    "publishedAt": "2020-11-18T00:44:45Z",
-    "title": "Tests fail to compile for WASM target",
-    "labels": [
-      "bug",
-      "tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/253",
     "publishedAt": "2020-12-23T09:59:10Z",
     "title": "Redeposit should check address reuse",
     "labels": [
       "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/357",
-    "publishedAt": "2021-05-31T02:33:13Z",
-    "title": "Esplora blockchain fails reorg test",
-    "labels": [
-      "good first issue",
-      "module-blockchain"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
