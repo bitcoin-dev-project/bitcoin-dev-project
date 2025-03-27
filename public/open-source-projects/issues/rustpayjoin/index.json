@@ -102,15 +102,5 @@
       "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/599",
-    "publishedAt": "2025-03-22T02:10:04Z",
-    "title": "`v2` feature leave `send::v1::V1Context` private",
-    "labels": [
-      "bug",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
