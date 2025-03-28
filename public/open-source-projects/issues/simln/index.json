@@ -74,5 +74,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/240",
+    "publishedAt": "2025-03-28T04:34:38Z",
+    "title": "Bug: Clippy error for parsing.rs/get_node method",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
