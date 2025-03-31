@@ -218,14 +218,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/7106",
-    "publishedAt": "2025-03-28T04:04:52Z",
-    "title": "All clients rely on a single hardcoded server for pegins",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
