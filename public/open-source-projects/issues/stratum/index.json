@@ -1,124 +1,5 @@
 [
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/67",
-    "publishedAt": "2021-11-17T15:43:36Z",
-    "title": "refactor all the repetitive code in roles-logic-sv2 parsers file into macros",
-    "labels": [
-      "good first issue",
-      "help wanted",
-      "backlog"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/69",
-    "publishedAt": "2021-11-17T15:43:45Z",
-    "title": "refactor the proxy in order to take advantage of the new roles-logic-sv2 interface",
-    "labels": [
-      "good first issue",
-      "help wanted",
-      "sv2 proxy"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/70",
-    "publishedAt": "2021-11-17T15:49:45Z",
-    "title": "add test for interop cpp (it should try to build it and run the example)",
-    "labels": [
-      "good first issue",
-      "test"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/71",
-    "publishedAt": "2021-11-17T15:49:49Z",
-    "title": "add test for the other examples",
-    "labels": [
-      "good first issue",
-      "test"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/72",
-    "publishedAt": "2021-11-17T15:49:54Z",
-    "title": "when test use the various compilation flag",
-    "labels": [
-      "good first issue",
-      "test"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/81",
-    "publishedAt": "2021-11-17T15:57:53Z",
-    "title": "Use message-generator to perform integration tests on atypical configuration(s)",
-    "labels": [
-      "good first issue",
-      "test",
-      "message-generator"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/104",
-    "publishedAt": "2021-11-17T16:29:36Z",
-    "title": "Add SV2 Proxy Unit Tests",
-    "labels": [
-      "help wanted",
-      "test",
-      "sv2 proxy"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/243",
-    "publishedAt": "2022-09-21T23:18:17Z",
-    "title": "Fix broken fuzz test in test.yaml GHA for macos",
-    "labels": [
-      "bug",
-      "test",
-      "important"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/244",
-    "publishedAt": "2022-09-21T23:21:28Z",
-    "title": " Fix broken interop-test in test.yaml GHA for macos",
-    "labels": [
-      "good first issue",
-      "help wanted",
-      "test",
-      "important"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/245",
-    "publishedAt": "2022-09-21T23:24:15Z",
-    "title": "Fix broken interop-no-cargo-test in test.yaml GHA for macos",
-    "labels": [
-      "good first issue",
-      "help wanted",
-      "test",
-      "important"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/246",
-    "publishedAt": "2022-09-21T23:25:44Z",
-    "title": "Fix broken test.yaml GitHub Actions for macos",
-    "labels": [
-      "help wanted",
-      "tracker"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/375",
     "publishedAt": "2022-12-11T16:23:22Z",
     "title": "Rm 3rd-party `hex` crate dependency",
@@ -153,6 +34,7 @@
     "publishedAt": "2023-11-21T17:29:11Z",
     "title": "Feature flag to write logs to files instead of just stdout",
     "labels": [
+      "good first issue",
       "help wanted",
       "log"
     ],
@@ -179,30 +61,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/954",
-    "publishedAt": "2024-06-03T21:05:50Z",
-    "title": "MG message library",
-    "labels": [
-      "help wanted",
-      "important",
-      "message-generator"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/955",
-    "publishedAt": "2024-06-04T15:13:51Z",
-    "title": "MG tests reproducing #840",
-    "labels": [
-      "bug",
-      "help wanted",
-      "test",
-      "important",
-      "message-generator"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/979",
     "publishedAt": "2024-06-19T07:49:55Z",
     "title": "Speed up github action with sscache",
@@ -219,17 +77,6 @@
     "labels": [
       "bug",
       "translator proxy"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1028",
-    "publishedAt": "2024-07-03T08:57:34Z",
-    "title": "MG CI is too slow",
-    "labels": [
-      "good first issue",
-      "message-generator",
-      "ci/cd"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
