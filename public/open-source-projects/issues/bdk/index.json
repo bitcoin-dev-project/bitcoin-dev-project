@@ -340,5 +340,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1921",
+    "publishedAt": "2025-03-31T15:08:14Z",
+    "title": "wallet::Balance::trusted_pending AND TxBuilder::only_spend_change are broken",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
