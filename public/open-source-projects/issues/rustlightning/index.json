@@ -111,15 +111,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2346",
-    "publishedAt": "2023-06-08T23:37:51Z",
-    "title": "Log all sent + received onion messages",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/2348",
     "publishedAt": "2023-06-09T17:46:58Z",
     "title": "Improve block connection logging",
