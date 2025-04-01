@@ -102,24 +102,5 @@
       "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/614",
-    "publishedAt": "2025-03-31T15:58:34Z",
-    "title": "Payjoin directory should persist OHTTP keys",
-    "labels": [
-      "bug",
-      "payjoin-directory"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/615",
-    "publishedAt": "2025-03-31T16:17:26Z",
-    "title": "Clients should refetch OHTTP keys if they get a OHTTP key rejection",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
