@@ -51,16 +51,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/503",
-    "publishedAt": "2025-01-21T23:58:59Z",
-    "title": "Add docstrings for undocumented components",
-    "labels": [
-      "documentation",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/528",
     "publishedAt": "2025-02-05T18:50:10Z",
     "title": "Document and reference best practice for OHTTP Relay selection",
