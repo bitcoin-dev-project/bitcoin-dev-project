@@ -102,5 +102,15 @@
       "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/623",
+    "publishedAt": "2025-04-01T23:57:53Z",
+    "title": "`payjoin-cli` receive error: Invalid ohttp keys returned from directory",
+    "labels": [
+      "bug",
+      "payjoin-cli"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]

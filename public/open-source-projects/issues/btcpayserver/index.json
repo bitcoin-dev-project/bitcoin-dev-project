@@ -42,15 +42,5 @@
       "Design"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6647",
-    "publishedAt": "2025-04-01T19:58:55Z",
-    "title": "[Notifications] Plugin updates don't have an icon",
-    "labels": [
-      "UI / UX",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
