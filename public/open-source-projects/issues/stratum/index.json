@@ -114,6 +114,15 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
+    "url": "https://github.com/stratum-mining/stratum/issues/1260",
+    "publishedAt": "2024-11-19T14:51:30Z",
+    "title": "Fixing config naming across roles",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
     "url": "https://github.com/stratum-mining/stratum/issues/1266",
     "publishedAt": "2024-11-28T16:45:12Z",
     "title": "Investigate ghost processes in tproxy and JDC",
