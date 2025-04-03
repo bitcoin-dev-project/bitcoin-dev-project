@@ -39,15 +39,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/588",
-    "publishedAt": "2022-04-19T02:56:01Z",
-    "title": "Extend wallet::export module to also import/export the Caravan wallet format",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/642",
     "publishedAt": "2022-06-28T02:38:54Z",
     "title": "timestamp timelocks are not satisfied",
