@@ -117,17 +117,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1021",
-    "publishedAt": "2023-06-27T17:01:37Z",
-    "title": "Support multipath descriptors",
-    "labels": [
-      "new feature",
-      "good first issue",
-      "module-descriptor"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1134",
     "publishedAt": "2023-09-28T06:58:14Z",
     "title": "BIP 326 Anti Fee Sniping",
@@ -280,15 +269,6 @@
     "labels": [
       "bug",
       "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1845",
-    "publishedAt": "2025-02-19T19:42:35Z",
-    "title": "Multipath descriptor network association wrong",
-    "labels": [
-      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
