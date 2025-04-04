@@ -74,5 +74,15 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/252",
+    "publishedAt": "2025-04-04T13:45:09Z",
+    "title": "Testing: Test Features in upcoming 2.4 release",
+    "labels": [
+      "good first issue",
+      "help wanted"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
