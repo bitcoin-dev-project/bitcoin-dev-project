@@ -143,6 +143,20 @@ export default function BaseLayout({
     const ActionButtons = () => (
         <div className="flex items-center justify-between w-full max-w-3xl mx-auto">
             {/* Left side - Completion actions */}
+         
+
+            {/* Right side - Suggest Edits */}
+            <motion.a
+                href={githubEditUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800/50 transition-colors"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+            >
+                <GitHubIcon className="w-4 h-4 mr-2" />
+                Suggest Edits
+            </motion.a>
             <div className="flex items-center gap-4">
                 <AnimatePresence mode="wait">
                     {isCompleted ? (
@@ -205,19 +219,6 @@ export default function BaseLayout({
                     )}
                 </AnimatePresence>
             </div>
-
-            {/* Right side - Suggest Edits */}
-            <motion.a
-                href={githubEditUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800/50 transition-colors"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-            >
-                <GitHubIcon className="w-4 h-4 mr-2" />
-                Suggest Edits
-            </motion.a>
         </div>
     )
 
