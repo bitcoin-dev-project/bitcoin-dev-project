@@ -174,15 +174,5 @@
       "roles"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1617",
-    "publishedAt": "2025-04-01T13:58:16Z",
-    "title": "tProxy sends `UpdateChannel` upstream every minute",
-    "labels": [
-      "bug",
-      "translator proxy"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
