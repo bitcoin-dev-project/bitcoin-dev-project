@@ -81,5 +81,15 @@
       "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/643",
+    "publishedAt": "2025-04-10T17:50:13Z",
+    "title": "Make payjoin version enum, even if only for internal use",
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
