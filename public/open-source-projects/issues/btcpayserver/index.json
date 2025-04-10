@@ -60,5 +60,23 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6665",
+    "publishedAt": "2025-04-10T15:03:38Z",
+    "title": "[Bug]: QR Code Scanner in Bitcoin Send dialog should remove \"BITCOIN:\" prefix pefore putting it in the destination field",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6667",
+    "publishedAt": "2025-04-10T21:06:56Z",
+    "title": "Improve Bitcoin Wallet Labels to show Title of Payment Request, not Id",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]

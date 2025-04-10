@@ -88,7 +88,19 @@
     "title": "Make payjoin version enum, even if only for internal use",
     "labels": [
       "enhancement",
-      "good first issue"
+      "good first issue",
+      "tech debt"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/645",
+    "publishedAt": "2025-04-10T18:49:04Z",
+    "title": "Implement `Eq`/`PartialEq` for error types",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "tech debt"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
