@@ -131,6 +131,15 @@ export function Navigation({
             "expandedChildren",
             JSON.stringify(expandedChildren)
         )
+
+        // Store manually closed state
+        Object.keys(expandedTopics).forEach(key => {
+            if (!expandedTopics[key]) {
+                localStorage.setItem(`manuallyClosed_${key}`, 'true')
+            } else {
+                localStorage.removeItem(`manuallyClosed_${key}`)
+            }
+        })
     }, [expandedTopics])
 
     // normalize paths
@@ -204,10 +213,14 @@ export function Navigation({
     }, [posts, groupedPosts, sortedCategories])
 
     const toggleTopic = useCallback((topicHref: string) => {
-        setExpandedTopics((prev) => ({
-            ...prev,
-            [topicHref]: !prev[topicHref]
-        }))
+        setExpandedTopics((prev) => {
+            // If we're toggling a topic that's currently expanded, just close it
+            if (prev[topicHref]) {
+                return { ...prev, [topicHref]: false }
+            }
+            // Otherwise, expand it
+            return { ...prev, [topicHref]: true }
+        })
     }, [])
 
     // Update expanded state when pathname changes
@@ -220,7 +233,10 @@ export function Navigation({
                     (link.href === pathname ||
                         link.children.some((child) => child.href === pathname))
                 ) {
-                    newExpandedState[link.href] = true
+                    // Only expand if it's not already expanded and not manually closed
+                    if (!expandedTopics[link.href] && !localStorage.getItem(`manuallyClosed_${link.href}`)) {
+                        newExpandedState[link.href] = true
+                    }
                 }
             })
         })
@@ -248,9 +264,26 @@ export function Navigation({
                         : []
             }
             localStorage.setItem("lastVisitedTopic", JSON.stringify(topicData))
+
+            // Store current scroll position
+            const navContainer = document.querySelector('.overflow-y-auto')
+            if (navContainer) {
+                localStorage.setItem('navScrollPosition', navContainer.scrollTop.toString())
+            }
         },
         [expandedTopics]
     )
+
+    // Restore scroll position on mount
+    useEffect(() => {
+        const savedScrollPosition = localStorage.getItem('navScrollPosition')
+        if (savedScrollPosition) {
+            const navContainer = document.querySelector('.overflow-y-auto')
+            if (navContainer) {
+                navContainer.scrollTop = parseInt(savedScrollPosition)
+            }
+        }
+    }, [])
 
     return (
         <nav className={clsx("text-md lg:text-sm font-medium", className)}>
@@ -297,7 +330,7 @@ export function Navigation({
                 </Link>
             </div>
 
-            <ul role="list" className="space-y-6">
+            <ul role="list" className="space-y-6 overflow-y-auto">
                 {navigation.map((section) => (
                     <li key={section.title}>
                         <h2 className="font-display font-bold text-gray-900 dark:text-white mb-2">
@@ -357,7 +390,7 @@ export function Navigation({
                                             link.children.length > 0 && (
                                                 <span
                                                     className={clsx(
-                                                        "flex-shrink-0 ml-auto mr-3 text-xs p-2",
+                                                        "flex-shrink-0 ml-auto mr-3 text-xs p-2 flex items-center gap-1",
                                                         link.href === pathname
                                                             ? "text-orange-500"
                                                             : "text-gray-400"
@@ -367,6 +400,9 @@ export function Navigation({
                                                         toggleTopic(link.href)
                                                     }}
                                                 >
+                                                    {link.children.some(child => child.href === pathname) && (
+                                                        <span className="w-2 h-2 rounded-full bg-orange-500" />
+                                                    )}
                                                     {expandedTopics[
                                                         link.href
                                                     ] ? (
