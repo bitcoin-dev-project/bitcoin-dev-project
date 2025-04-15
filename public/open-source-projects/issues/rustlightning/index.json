@@ -111,15 +111,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2346",
-    "publishedAt": "2023-06-08T23:37:51Z",
-    "title": "Log all sent + received onion messages",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/2348",
     "publishedAt": "2023-06-09T17:46:58Z",
     "title": "Improve block connection logging",
@@ -135,15 +126,6 @@
     "labels": [
       "good first issue",
       "Pathfinding"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2827",
-    "publishedAt": "2024-01-12T22:33:31Z",
-    "title": "`test_restored_packages_retry` is brittle",
-    "labels": [
-      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
@@ -169,6 +151,15 @@
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/3561",
     "publishedAt": "2025-01-24T15:57:28Z",
     "title": "Add a reason enum to `HTLCDestination` in some variants",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
+  },
+  {
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/3679",
+    "publishedAt": "2025-03-21T20:45:08Z",
+    "title": "Document that `accept_forwards_to_priv_channels` does not apply for intercepted payments that we manually forward",
     "labels": [
       "good first issue"
     ],

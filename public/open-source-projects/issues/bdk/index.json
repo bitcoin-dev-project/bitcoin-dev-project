@@ -1,217 +1,5 @@
 [
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/66",
-    "publishedAt": "2020-07-27T03:58:39Z",
-    "title": "Integrated TOR proxy",
-    "labels": [
-      "documentation",
-      "good first issue",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/175",
-    "publishedAt": "2020-11-18T00:44:45Z",
-    "title": "Tests fail to compile for WASM target",
-    "labels": [
-      "bug",
-      "tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/253",
-    "publishedAt": "2020-12-23T09:59:10Z",
-    "title": "Redeposit should check address reuse",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/357",
-    "publishedAt": "2021-05-31T02:33:13Z",
-    "title": "Esplora blockchain fails reorg test",
-    "labels": [
-      "good first issue",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/524",
-    "publishedAt": "2022-01-11T23:59:46Z",
-    "title": "Feerate should be returned from Transaction construction",
-    "labels": [
-      "new feature",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/559",
-    "publishedAt": "2022-03-07T12:47:11Z",
-    "title": "`maybe_async` complicates isomorphic use-cases",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/598",
-    "publishedAt": "2022-05-05T17:08:10Z",
-    "title": "The `rpc` blockchain tests don't work with Bitcoin Core 23.0",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/618",
-    "publishedAt": "2022-06-03T01:11:23Z",
-    "title": "Use `srcipthash_subscribe` when syncing `ElectrumBlockchain`",
-    "labels": [
-      "bug",
-      "discussion"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/642",
-    "publishedAt": "2022-06-28T02:38:54Z",
-    "title": "timestamp timelocks are not satisfied",
-    "labels": [
-      "bug",
-      "module-wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/650",
-    "publishedAt": "2022-07-02T19:05:21Z",
-    "title": "CI: `blockchain::esplora::bdk_blockchain_tests::test_sync_stop_gap_20` occationally fails",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/655",
-    "publishedAt": "2022-07-06T12:40:08Z",
-    "title": "Test which xpubs in PSBTs are needed for HW to sign correctly",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/658",
-    "publishedAt": "2022-07-07T19:03:54Z",
-    "title": "`ElectrumBlockchain` requires a special check to not decrement index on sync. ",
-    "labels": [
-      "bug",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/673",
-    "publishedAt": "2022-07-18T19:38:38Z",
-    "title": "Add an example showing how to open a pre-existing wallet",
-    "labels": [
-      "documentation",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/699",
-    "publishedAt": "2022-08-03T09:09:49Z",
-    "title": "Write tests to improve code coverage ",
-    "labels": [
-      "good first issue",
-      "tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/702",
-    "publishedAt": "2022-08-04T08:44:39Z",
-    "title": "REDB backend",
-    "labels": [
-      "good first issue",
-      "discussion"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/706",
-    "publishedAt": "2022-08-09T03:07:50Z",
-    "title": "Coin selection should include checks to avoid creating ambiguous transaction history.",
-    "labels": [
-      "bug",
-      "discussion",
-      "module-coinselection"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/749",
-    "publishedAt": "2022-09-10T20:35:14Z",
-    "title": "Error syncing wallet via RPC client on macOS system",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/771",
-    "publishedAt": "2022-10-01T03:40:51Z",
-    "title": "We may overshoot `nLockTime` and `nSequence` values when building a transaction.",
-    "labels": [
-      "bug",
-      "module-wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/778",
-    "publishedAt": "2022-10-07T03:04:40Z",
-    "title": "Reqwest to Esplora panics in WASM",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/826",
-    "publishedAt": "2022-12-24T17:25:02Z",
-    "title": "There's no way to set connect timeout for the Esplora backend client",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/859",
-    "publishedAt": "2023-02-10T09:20:42Z",
-    "title": "RPC sync failure ",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/915",
-    "publishedAt": "2023-03-20T18:06:43Z",
-    "title": "Sqlite db race condition",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/998",
     "publishedAt": "2023-05-29T08:02:32Z",
     "title": "Feature imcompatibility of `rpc` and `async-interface`",
@@ -230,178 +18,23 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1021",
-    "publishedAt": "2023-06-27T17:01:37Z",
-    "title": "Support multipath descriptors",
-    "labels": [
-      "new feature",
-      "good first issue",
-      "module-descriptor"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1134",
-    "publishedAt": "2023-09-28T06:58:14Z",
-    "title": "BIP 326 Anti Fee Sniping",
-    "labels": [
-      "new feature",
-      "good first issue",
-      "module-wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1173",
-    "publishedAt": "2023-10-12T11:11:44Z",
-    "title": "Merge `tx_data_traits.rs` into `chain_data.rs`.",
-    "labels": [
-      "good first issue",
-      "module-blockchain",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1297",
-    "publishedAt": "2024-01-23T18:47:03Z",
-    "title": "The `TxGraph.list_chain_txs()` method doesn't behave as you'd expect from the docs",
-    "labels": [
-      "documentation",
-      "good first issue",
-      "module-wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1504",
-    "publishedAt": "2024-07-08T14:59:11Z",
-    "title": "The `url` dependency does not prevent URL homograph attacks",
-    "labels": [
-      "bug",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1507",
-    "publishedAt": "2024-07-09T13:02:02Z",
-    "title": "Remove `Anchor` trait and make anchors unique to `(Txid, BlockId)`",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1548",
-    "publishedAt": "2024-08-12T15:56:09Z",
-    "title": "MissingNonWitnessUtxo even before signing",
-    "labels": [
-      "bug",
-      "discussion"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1577",
-    "publishedAt": "2024-08-27T10:25:57Z",
-    "title": "Address gap limit?",
-    "labels": [
-      "bug",
-      "new feature",
-      "discussion"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1618",
     "publishedAt": "2024-09-19T15:51:13Z",
     "title": "Test CLI examples using a regtest node in CI",
     "labels": [
       "good first issue",
       "tests",
-      "ci"
+      "github_actions"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1630",
-    "publishedAt": "2024-09-28T07:47:57Z",
-    "title": "After the transaction is removed, the re-synchronization is still on the transaction list.",
-    "labels": [
-      "bug",
-      "duplicate",
-      "discussion"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1707",
-    "publishedAt": "2024-11-14T04:42:09Z",
-    "title": "Consider unconfirmed ancestors in tx fee estimation",
-    "labels": [
-      "bug",
-      "module-wallet",
-      "audit"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1743",
-    "publishedAt": "2024-11-22T10:54:06Z",
-    "title": "cancel_tx has no effect",
-    "labels": [
-      "bug",
-      "documentation",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1754",
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1936",
     "publishedAt": "2024-12-03T12:02:57Z",
     "title": "Move `TxTemplate` to `bdk_testenv` and make it better",
     "labels": [
       "good first issue",
       "tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1788",
-    "publishedAt": "2025-01-02T14:01:11Z",
-    "title": "Inconsistent `KeychainTxOutIndex` state after db reload",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1815",
-    "publishedAt": "2025-01-30T02:37:42Z",
-    "title": "Add spent trait to improve sent_and_received()",
-    "labels": [
-      "good first issue",
-      "module-wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1817",
-    "publishedAt": "2025-02-01T08:58:25Z",
-    "title": "Never panic based on remote-provided inputs",
-    "labels": [
-      "bug",
-      "module-blockchain"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1845",
-    "publishedAt": "2025-02-19T19:42:35Z",
-    "title": "Multipath descriptor network association wrong",
-    "labels": [
-      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -416,33 +49,11 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1868",
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1933",
     "publishedAt": "2025-03-03T19:50:57Z",
     "title": "Display implementations should not expose `Debug` output",
     "labels": [
-      "good first issue",
-      "module-wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1878",
-    "publishedAt": "2025-03-07T22:11:28Z",
-    "title": "Mismatch between Bitcoin Core's and BDK's mature balance",
-    "labels": [
-      "bug",
-      "discussion"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1892",
-    "publishedAt": "2025-03-15T08:51:18Z",
-    "title": "A bug for generating testnet descriptor?",
-    "labels": [
-      "bug",
-      "documentation",
-      "discussion"
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -450,15 +61,6 @@
     "url": "https://github.com/bitcoindevkit/bdk/issues/1898",
     "publishedAt": "2025-03-18T11:13:52Z",
     "title": "panic (assertion) in try_filter_chain_txouts",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1900",
-    "publishedAt": "2025-03-19T12:45:13Z",
-    "title": "Taproot Miniscript 2/3 threshold descriptor wallet is broken",
     "labels": [
       "bug"
     ],

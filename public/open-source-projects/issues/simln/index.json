@@ -67,21 +67,21 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/214",
-    "publishedAt": "2025-01-27T16:24:24Z",
-    "title": "Refactor: Move parsing into its own module",
-    "labels": [
-      "good first issue",
-      "Code Health"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/222",
     "publishedAt": "2025-02-24T00:56:04Z",
     "title": "Bug: count in defined activity produces count-1 events (one less than expected)",
     "labels": [
       "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/252",
+    "publishedAt": "2025-04-04T13:45:09Z",
+    "title": "Testing: Test Features in upcoming 2.4 release",
+    "labels": [
+      "good first issue",
+      "help wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }

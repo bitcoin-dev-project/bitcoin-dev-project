@@ -328,5 +328,24 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
+  },
+  {
+    "url": "https://github.com/ElementsProject/lightning/issues/8164",
+    "publishedAt": "2025-03-14T21:47:16Z",
+    "title": "`txprepare` does not use provided `feerate` argument correctly",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
+  },
+  {
+    "url": "https://github.com/ElementsProject/lightning/issues/8231",
+    "publishedAt": "2025-04-11T11:43:05Z",
+    "title": "docker image broken due to sqlite not supporting a query.",
+    "labels": [
+      "bug",
+      "db"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]

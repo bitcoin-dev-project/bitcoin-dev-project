@@ -428,17 +428,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7104",
-    "publishedAt": "2022-11-02T08:07:09Z",
-    "title": "[bug]: Unknown Unconfirmed Balance",
-    "labels": [
-      "bug",
-      "P3",
-      "utxo sweeping"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7107",
     "publishedAt": "2022-11-02T20:24:55Z",
     "title": "[bug]: garbage collect `batch-replay` bucket in `sphinxreplay.db`",
@@ -496,18 +485,6 @@
       "beginner",
       "good first issue",
       "P2"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7181",
-    "publishedAt": "2022-11-19T22:22:25Z",
-    "title": "[bug]: sweep transaction not recognized by on-chain wallet",
-    "labels": [
-      "bug",
-      "P1",
-      "utxo sweeping",
-      "mempool"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
@@ -968,17 +945,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/8001",
-    "publishedAt": "2023-09-18T08:21:09Z",
-    "title": "[bug]: Sats remain pending",
-    "labels": [
-      "bug",
-      "utxo sweeping",
-      "needs triage"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/8018",
     "publishedAt": "2023-09-20T16:44:36Z",
     "title": "[bug]: Node not Using Correct Fee Estimates During Channel Commitment Updates",
@@ -1143,6 +1109,36 @@
     "title": "[bug]: Channel down. Connectivity good. Logs showing ping-pong ok. \"...read next header: EOF\"",
     "labels": [
       "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8357",
+    "publishedAt": "2024-01-08T21:40:41Z",
+    "title": "[bug]: Channel opening show as pending open, despite transaction already being minet",
+    "labels": [
+      "bug",
+      "channel management"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8366",
+    "publishedAt": "2024-01-10T11:31:42Z",
+    "title": "[bug]: Restoring a node with SCB file after counterparty force closed channel long ago generates a pending_force_close channel that remains forever",
+    "labels": [
+      "bug",
+      "SCB"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8368",
+    "publishedAt": "2024-01-10T17:42:42Z",
+    "title": "pathfinding/routing",
+    "labels": [
+      "bug",
+      "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }

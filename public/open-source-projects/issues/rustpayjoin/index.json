@@ -45,36 +45,19 @@
     "publishedAt": "2025-01-14T15:33:23Z",
     "title": "Accomodate Updated BIP 78 Spec",
     "labels": [
-      "good first issue"
+      "good first issue",
+      "help wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/503",
-    "publishedAt": "2025-01-21T23:58:59Z",
-    "title": "Add docstrings for undocumented components",
+    "url": "https://github.com/payjoin/rust-payjoin/issues/528",
+    "publishedAt": "2025-02-05T18:50:10Z",
+    "title": "Document and reference best practice for OHTTP Relay selection",
     "labels": [
       "documentation",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/535",
-    "publishedAt": "2025-02-13T04:49:11Z",
-    "title": "`select_first_candidate` returns a `InternalSelectionError::NotFound`",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/545",
-    "publishedAt": "2025-02-20T01:57:50Z",
-    "title": "`pjos=0` bool value inverts the BIP78 spec",
-    "labels": [
-      "bug",
-      "good first issue"
+      "help wanted",
+      "payjoin-cli"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
@@ -89,11 +72,45 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/591",
-    "publishedAt": "2025-03-18T22:15:41Z",
-    "title": "Rename `PayjoinProposal::extract_v2_req` and add docstring",
+    "url": "https://github.com/payjoin/rust-payjoin/issues/583",
+    "publishedAt": "2025-03-16T15:38:12Z",
+    "title": "InputPair's lack of a constructor seems to cause mistakes",
     "labels": [
-      "documentation",
+      "enhancement",
+      "good first issue",
+      "api"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/643",
+    "publishedAt": "2025-04-10T17:50:13Z",
+    "title": "Make payjoin version enum, even if only for internal use",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "tech debt"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/645",
+    "publishedAt": "2025-04-10T18:49:04Z",
+    "title": "Implement `Eq`/`PartialEq` for error types",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "api",
+      "tech debt"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/647",
+    "publishedAt": "2025-04-14T13:28:09Z",
+    "title": "De-dup ImplementationError ",
+    "labels": [
+      "enhancement",
       "good first issue",
       "api"
     ],

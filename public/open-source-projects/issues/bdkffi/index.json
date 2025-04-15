@@ -1,24 +1,5 @@
 [
   {
-    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/222",
-    "publishedAt": "2022-11-03T21:42:31Z",
-    "title": "Custom Signer ",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/294",
-    "publishedAt": "2023-01-12T04:27:51Z",
-    "title": "Add miniscript policy compiler function",
-    "labels": [
-      "enhancement",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/571",
     "publishedAt": "2024-07-10T19:38:30Z",
     "title": "bdkFFI.framework/bdkFFI does not contain a slice for arm64e-apple-macosx21.1",
