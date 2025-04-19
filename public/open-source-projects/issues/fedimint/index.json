@@ -76,15 +76,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/3784",
-    "publishedAt": "2023-11-29T06:12:55Z",
-    "title": "Setting gateway password with & character has undesired effects in CLI",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/4124",
     "publishedAt": "2024-01-24T17:50:39Z",
     "title": "setup restart when some peers have consensus running",
