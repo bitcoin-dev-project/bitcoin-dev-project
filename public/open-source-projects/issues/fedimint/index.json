@@ -10,16 +10,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/1728",
-    "publishedAt": "2023-02-21T16:57:36Z",
-    "title": "Tests shouldn't be included in code coverage stats",
-    "labels": [
-      "good first issue",
-      "testing"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/2190",
     "publishedAt": "2023-04-11T14:45:18Z",
     "title": "notification endpoints cleanup",
