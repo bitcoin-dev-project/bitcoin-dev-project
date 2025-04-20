@@ -53,15 +53,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6662",
-    "publishedAt": "2025-04-10T04:49:34Z",
-    "title": "Add confirmation for deletion of Email Rules and use the opportunity to create new client side pattern",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6665",
     "publishedAt": "2025-04-10T15:03:38Z",
     "title": "[Bug]: QR Code Scanner in Bitcoin Send dialog should remove \"BITCOIN:\" prefix pefore putting it in the destination field",

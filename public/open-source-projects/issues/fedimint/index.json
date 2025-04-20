@@ -104,24 +104,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/4847",
-    "publishedAt": "2024-04-05T18:02:16Z",
-    "title": "Include our ./docs/ files in documentaiton generated on https://docs.fedimint.org/",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4886",
-    "publishedAt": "2024-04-09T01:55:51Z",
-    "title": "Fedimintd getting stuck if bitcoind was initializing",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/5013",
     "publishedAt": "2024-04-18T20:44:02Z",
     "title": "Panic on Wallet startup",
