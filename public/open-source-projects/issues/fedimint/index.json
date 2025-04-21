@@ -104,26 +104,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/5013",
-    "publishedAt": "2024-04-18T20:44:02Z",
-    "title": "Panic on Wallet startup",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/5276",
-    "publishedAt": "2024-05-13T14:48:34Z",
-    "title": "Lightning payment can go into refund state when it actually succeeded",
-    "labels": [
-      "bug",
-      "lightning",
-      "client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/5329",
     "publishedAt": "2024-05-21T02:28:30Z",
     "title": "Support `watch_script_history` for bitcoind backends",
