@@ -104,16 +104,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/5329",
-    "publishedAt": "2024-05-21T02:28:30Z",
-    "title": "Support `watch_script_history` for bitcoind backends",
-    "labels": [
-      "bug",
-      "wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/5916",
     "publishedAt": "2024-08-26T09:43:22Z",
     "title": "Update `fedimint_tonic_lnd` deps",
