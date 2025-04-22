@@ -131,5 +131,24 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/7215",
+    "publishedAt": "2025-04-11T17:15:24Z",
+    "title": "Add decoding tool for DKG join codes",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/7253",
+    "publishedAt": "2025-04-17T17:38:40Z",
+    "title": "`devimint-env-pre-dkg` broken on v0.7",
+    "labels": [
+      "bug",
+      "dev env"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
