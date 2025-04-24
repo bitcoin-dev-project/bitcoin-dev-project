@@ -56,14 +56,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1898",
-    "publishedAt": "2025-03-18T11:13:52Z",
-    "title": "panic (assertion) in try_filter_chain_txouts",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
