@@ -104,16 +104,5 @@
       "tech debt"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/647",
-    "publishedAt": "2025-04-14T13:28:09Z",
-    "title": "De-dup ImplementationError ",
-    "labels": [
-      "enhancement",
-      "good first issue",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
