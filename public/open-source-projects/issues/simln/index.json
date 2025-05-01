@@ -74,5 +74,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/260",
+    "publishedAt": "2025-05-01T13:36:06Z",
+    "title": "Bug: Docker Build Broken",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
