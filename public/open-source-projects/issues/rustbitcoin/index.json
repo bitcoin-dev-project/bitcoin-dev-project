@@ -135,5 +135,16 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/4442",
+    "publishedAt": "2025-05-05T01:11:44Z",
+    "title": "`impl Div<NonZeroU64> for {Amount,FeeRate,Weight} { type Output = Self; ... }`",
+    "labels": [
+      "good first issue",
+      "dead-easy",
+      "1.0-wanted"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
