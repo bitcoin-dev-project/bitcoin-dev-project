@@ -141,15 +141,5 @@
       "dev env"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/7394",
-    "publishedAt": "2025-05-05T22:40:03Z",
-    "title": "Prerelease body is incorrect for releases",
-    "labels": [
-      "bug",
-      "CI"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
