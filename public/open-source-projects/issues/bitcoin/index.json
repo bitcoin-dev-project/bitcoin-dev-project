@@ -186,8 +186,7 @@
     "title": "CI failure: `ThreadSanitizer: data race /usr/lib/llvm-12/bin/../include/c++/v1/ios:523:12 in std::__1::ios_base::width() const`",
     "labels": [
       "Bug",
-      "Tests",
-      "CI failed"
+      "Tests"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
