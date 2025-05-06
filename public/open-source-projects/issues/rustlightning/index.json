@@ -155,5 +155,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
+  },
+  {
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/3770",
+    "publishedAt": "2025-05-06T15:14:07Z",
+    "title": "Make MonitorUpdatingPersister change persist type based on size",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   }
 ]
