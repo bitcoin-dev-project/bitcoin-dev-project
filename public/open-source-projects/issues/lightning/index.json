@@ -319,14 +319,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/8157",
-    "publishedAt": "2025-03-12T01:58:12Z",
-    "title": "DNS fallback causes long hang after gossip_store deleted",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]
