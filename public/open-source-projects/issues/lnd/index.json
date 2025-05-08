@@ -1050,17 +1050,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/8263",
-    "publishedAt": "2023-12-08T11:25:01Z",
-    "title": "[bug]: logs heavily spammed by `[ERR] CRTR: error computing probability to node:`",
-    "labels": [
-      "bug",
-      "logging",
-      "P3"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/8299",
     "publishedAt": "2023-12-20T13:45:46Z",
     "title": "[bug]: `max-commit-fee-rate-anchors` ignored at force close, much higher fee used.",
@@ -1137,6 +1126,16 @@
       "bug",
       "P2",
       "init"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8391",
+    "publishedAt": "2024-01-17T17:24:50Z",
+    "title": "[bug]: can't bump fee of a coop closed channel",
+    "labels": [
+      "bug",
+      "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
