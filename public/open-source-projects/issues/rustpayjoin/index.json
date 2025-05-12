@@ -93,5 +93,15 @@
       "tech debt"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/693",
+    "publishedAt": "2025-05-12T20:27:07Z",
+    "title": "prepare_psbt should selectively copy instead of selectively clearing",
+    "labels": [
+      "good first issue",
+      "receive"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
