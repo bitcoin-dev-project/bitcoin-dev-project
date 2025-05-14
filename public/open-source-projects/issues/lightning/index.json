@@ -150,16 +150,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
-    "url": "https://github.com/ElementsProject/lightning/issues/4912",
-    "publishedAt": "2021-11-09T01:01:50Z",
-    "title": "plugin-bcli returning \"\\n\" instead of line break in the logfile",
-    "labels": [
-      "logging",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
     "url": "https://github.com/ElementsProject/lightning/issues/5127",
     "publishedAt": "2022-03-24T10:36:46Z",
     "title": "Allow setting fee limits on offerout",
