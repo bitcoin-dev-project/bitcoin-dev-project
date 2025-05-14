@@ -103,5 +103,16 @@
       "receive"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/694",
+    "publishedAt": "2025-05-14T12:24:13Z",
+    "title": "`payjoin-cli` bug: `Error: Replied with error: The receiver rejected the original PSBT.` with default values",
+    "labels": [
+      "bug",
+      "payjoin-cli",
+      "receive"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
