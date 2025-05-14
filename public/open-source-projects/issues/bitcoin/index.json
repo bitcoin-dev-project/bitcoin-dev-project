@@ -132,16 +132,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/20943",
-    "publishedAt": "2021-01-15T09:39:20Z",
-    "title": "wallet: balance gone when tx broadcast failed",
-    "labels": [
-      "Bug",
-      "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/21627",
     "publishedAt": "2021-04-06T20:58:58Z",
     "title": "Potential data race on fHavePruned flag",
