@@ -141,15 +141,5 @@
       "dev env"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/7433",
-    "publishedAt": "2025-05-12T11:30:24Z",
-    "title": "Operation id collision between LN sends and recurring receives",
-    "labels": [
-      "bug",
-      "lightning"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
