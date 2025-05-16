@@ -456,5 +456,14 @@
       "Build system"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/32531",
+    "publishedAt": "2025-05-16T13:54:49Z",
+    "title": "Change functional tests to trigger reorg by reconsiderblock",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
