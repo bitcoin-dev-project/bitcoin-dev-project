@@ -339,7 +339,8 @@
     "publishedAt": "2023-01-30T23:31:39Z",
     "title": "listunspent, fundrawtransaction, getwalletinfo locks wallet for any other operation",
     "labels": [
-      "Bug"
+      "Bug",
+      "Wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
