@@ -460,7 +460,7 @@
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/32531",
     "publishedAt": "2025-05-16T13:54:49Z",
-    "title": "Change functional tests to trigger reorg by reconsiderblock",
+    "title": "avoid using invalidateblock to directly test reorg behavior",
     "labels": [
       "good first issue"
     ],
