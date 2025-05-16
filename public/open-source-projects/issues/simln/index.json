@@ -93,5 +93,15 @@
       "Code Health"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/269",
+    "publishedAt": "2025-05-16T19:32:11Z",
+    "title": "Feature Request: Ability to exclude sim_node from random activity",
+    "labels": [
+      "feature",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
