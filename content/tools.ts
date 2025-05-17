@@ -95,6 +95,14 @@ export const tools = {
                         "Monitor and analyze the emergent behaviors of P2P networks",
                     image: "/images/projects/warnet.png",
                     link: "https://warnet.dev"
+                },
+                {
+                    title: "SimLN",
+                    subTitle: "",
+                    description:
+                        "Instantly simulate real-world Lightning network activity",
+                    image: "/images/projects/simln.jpg",
+                    link: "https://simln.dev"
                 }
             ]
         }
