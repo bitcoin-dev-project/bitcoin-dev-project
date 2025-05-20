@@ -126,5 +126,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/1212",
+    "publishedAt": "2025-05-19T22:27:36Z",
+    "title": "Bug: eclair v0.12.0 docker image: eclair crashes when trying to open channels",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   }
 ]
