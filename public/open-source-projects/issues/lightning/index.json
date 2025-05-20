@@ -5,7 +5,7 @@
     "title": "Unable to connect to peer : Bad file descriptor",
     "labels": [
       "bug",
-      "state::needinfo"
+      "status::needinfo"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
@@ -16,7 +16,6 @@
     "labels": [
       "bug",
       "onchaind",
-      "fee",
       "testnet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
@@ -27,20 +26,7 @@
     "title": "Crashing when withdrawing funds",
     "labels": [
       "bug",
-      "wallet",
       "crash"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/3001",
-    "publishedAt": "2019-08-27T14:58:44Z",
-    "title": "Proposal: `routetricks` plugin",
-    "labels": [
-      "help wanted",
-      "routing",
-      "plugin",
-      "pay-plugin"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
@@ -72,7 +58,6 @@
     "title": "Setting manual channel closure fee (question)",
     "labels": [
       "feature",
-      "closingd",
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
@@ -134,8 +119,7 @@
     "publishedAt": "2021-08-16T16:39:42Z",
     "title": "channel leases: restrict channel fee updates for leased channels to be less than committed rates",
     "labels": [
-      "good first issue",
-      "channel-lease"
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
@@ -277,8 +261,7 @@
     "publishedAt": "2023-12-09T15:12:19Z",
     "title": "CoreLN not properly detecting force close UTXOs",
     "labels": [
-      "bug",
-      "wallet"
+      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
