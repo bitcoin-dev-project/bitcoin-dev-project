@@ -104,14 +104,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6744",
-    "publishedAt": "2025-05-21T08:44:45Z",
-    "title": "[Bug]:Fiat text input disappears if you remove the BTC amount you've previously entered entirely",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
