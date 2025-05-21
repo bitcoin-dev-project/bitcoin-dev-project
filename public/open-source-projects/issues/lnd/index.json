@@ -670,16 +670,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7530",
-    "publishedAt": "2023-03-20T21:56:34Z",
-    "title": "[bug]: `total_network_capacity` from GetNetworkInfo on a neutrino node can display wildly inconsistent results ",
-    "labels": [
-      "bug",
-      "needs triage"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7547",
     "publishedAt": "2023-03-29T16:27:17Z",
     "title": "[bug]: `last_update` timestamp is in the future for a node",
@@ -1136,6 +1126,18 @@
     "labels": [
       "bug",
       "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8393",
+    "publishedAt": "2024-01-18T01:26:14Z",
+    "title": "[bug]: Strictly enforce link-level message ordering to rule out race conditions",
+    "labels": [
+      "bug",
+      "code health",
+      "advanced",
+      "spec"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
