@@ -35,7 +35,8 @@
     "title": "Assertion `setBlockIndexCandidates.count(pindex)' failed",
     "labels": [
       "Bug",
-      "Validation"
+      "Validation",
+      "CI failed"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
