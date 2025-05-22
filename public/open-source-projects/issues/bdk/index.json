@@ -56,5 +56,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/1965",
+    "publishedAt": "2025-05-22T11:53:00Z",
+    "title": "Persist `tx_graph::ChangeSet::first_seen`",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
