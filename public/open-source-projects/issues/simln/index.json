@@ -103,5 +103,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/270",
+    "publishedAt": "2025-05-22T01:09:04Z",
+    "title": "unresolved import in sim-cli parsing.rs file",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
