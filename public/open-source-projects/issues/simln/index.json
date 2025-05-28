@@ -85,16 +85,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   },
   {
-    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/267",
-    "publishedAt": "2025-05-14T16:33:14Z",
-    "title": "simln-lib: `SimNetwork` async trait",
-    "labels": [
-      "good first issue",
-      "Code Health"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/269",
     "publishedAt": "2025-05-16T19:32:11Z",
     "title": "Feature Request: Ability to exclude sim_node from random activity",
