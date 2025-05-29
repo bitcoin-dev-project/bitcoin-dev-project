@@ -54,19 +54,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6406",
-    "publishedAt": "2024-11-16T10:07:02Z",
-    "title": "[Bug]: email activation for new users can't be turned of for private registration via API",
-    "labels": [
-      "Bug",
-      "UI / UX",
-      "API",
-      "Server Settings",
-      "Email"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6653",
     "publishedAt": "2025-04-05T16:45:11Z",
     "title": "In Email Rules show \"Send the email to the buyer\" checkbox only if trigger supports it",
