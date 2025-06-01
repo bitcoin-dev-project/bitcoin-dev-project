@@ -91,5 +91,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6763",
+    "publishedAt": "2025-05-31T04:06:01Z",
+    "title": "Ask for confirmation to display QR code for Server Admins in POS",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
