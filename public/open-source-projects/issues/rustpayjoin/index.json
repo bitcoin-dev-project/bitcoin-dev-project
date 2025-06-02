@@ -84,22 +84,22 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/688",
+    "publishedAt": "2025-05-06T20:02:44Z",
+    "title": "Clean up re-exports",
+    "labels": [
+      "good first issue",
+      "tech debt"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/723",
     "publishedAt": "2025-05-30T16:01:55Z",
     "title": "Python UniFFI submodules",
     "labels": [
       "good first issue",
       "ffi"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/724",
-    "publishedAt": "2025-05-30T16:14:29Z",
-    "title": "Rename RelayState to RelayManager in payjoin-cli",
-    "labels": [
-      "good first issue",
-      "payjoin-cli"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
