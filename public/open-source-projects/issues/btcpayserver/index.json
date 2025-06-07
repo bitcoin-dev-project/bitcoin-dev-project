@@ -100,5 +100,17 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6772",
+    "publishedAt": "2025-06-06T21:12:26Z",
+    "title": "Don't show payment method selector if there's only a single payment method or in Bitcoin case Unified QR is selected",
+    "labels": [
+      "Enhancement",
+      "UI / UX",
+      "good first issue",
+      "Checkout"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
