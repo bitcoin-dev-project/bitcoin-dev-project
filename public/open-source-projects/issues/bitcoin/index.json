@@ -202,15 +202,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/24450",
-    "publishedAt": "2022-02-28T06:28:16Z",
-    "title": "Apparently CJDNS network does not work with Tor on mainnet.",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/24612",
     "publishedAt": "2022-03-18T14:35:49Z",
     "title": "[flatpak]  - I cannot choose or change datadir when running from flatpak",
