@@ -121,5 +121,15 @@
       "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6792",
+    "publishedAt": "2025-06-13T21:28:11Z",
+    "title": "Allow updating Payment Request as Settled if there are settled invoices",
+    "labels": [
+      "Enhancement",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
