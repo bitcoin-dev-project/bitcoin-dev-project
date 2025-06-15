@@ -225,19 +225,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/5932",
-    "publishedAt": "2021-11-04T19:20:51Z",
-    "title": "Add Channel ID parametre to ForwardingHistoryRequest",
-    "labels": [
-      "enhancement",
-      "rpc",
-      "beginner",
-      "feature request",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/5972",
     "publishedAt": "2021-11-13T22:38:40Z",
     "title": "Only log \"insufficient bandwidth\" if this applies to all channels to that peer",
@@ -423,7 +410,7 @@
       "bug",
       "database",
       "htlcswitch",
-      "P1"
+      "P0"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
@@ -1138,6 +1125,18 @@
       "routing",
       "fees",
       "P2"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8415",
+    "publishedAt": "2024-01-23T20:28:42Z",
+    "title": "[bug]: neutrino does not activate channels confirmed when network was down until two restarts",
+    "labels": [
+      "bug",
+      "neutrino",
+      "P2",
+      "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }

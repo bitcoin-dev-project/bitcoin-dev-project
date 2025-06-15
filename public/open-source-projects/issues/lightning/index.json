@@ -273,5 +273,15 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
+  },
+  {
+    "url": "https://github.com/ElementsProject/lightning/issues/8318",
+    "publishedAt": "2025-06-05T03:13:32Z",
+    "title": "bkpr-listincome doesn't filter `onchain_fee` income events when start_time and end_time range is provided",
+    "labels": [
+      "bug",
+      "bookkeeper"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
 ]

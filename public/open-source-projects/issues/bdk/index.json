@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/998",
-    "publishedAt": "2023-05-29T08:02:32Z",
-    "title": "Feature imcompatibility of `rpc` and `async-interface`",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/999",
-    "publishedAt": "2023-05-29T08:49:23Z",
-    "title": "`error::MissingCachedScripts` and `error::MiniscriptPsbtError` are not exported",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1618",
     "publishedAt": "2024-09-19T15:51:13Z",
     "title": "Test CLI examples using a regtest node in CI",

@@ -54,19 +54,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6406",
-    "publishedAt": "2024-11-16T10:07:02Z",
-    "title": "[Bug]: email activation for new users can't be turned of for private registration via API",
-    "labels": [
-      "Bug",
-      "UI / UX",
-      "API",
-      "Server Settings",
-      "Email"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6653",
     "publishedAt": "2025-04-05T16:45:11Z",
     "title": "In Email Rules show \"Send the email to the buyer\" checkbox only if trigger supports it",
@@ -106,10 +93,41 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6751",
-    "publishedAt": "2025-05-24T03:19:45Z",
-    "title": "Sort stores by name when displayed in dropdowns and archive list",
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6763",
+    "publishedAt": "2025-05-31T04:06:01Z",
+    "title": "Ask for confirmation to display QR code for Server Admins in POS",
     "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6772",
+    "publishedAt": "2025-06-06T21:12:26Z",
+    "title": "Don't show payment method selector if there's only a single payment method or in Bitcoin case Unified QR is selected",
+    "labels": [
+      "Enhancement",
+      "UI / UX",
+      "good first issue",
+      "Checkout"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6780",
+    "publishedAt": "2025-06-10T11:34:21Z",
+    "title": "[Bug]: 0 amount invoices no longer work as free items in POS, but generate any amount",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6792",
+    "publishedAt": "2025-06-13T21:28:11Z",
+    "title": "Allow updating Payment Request as Settled if there are settled invoices",
+    "labels": [
+      "Enhancement",
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"

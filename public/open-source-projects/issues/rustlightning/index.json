@@ -120,6 +120,15 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2462",
+    "publishedAt": "2023-07-29T05:21:46Z",
+    "title": "Allow self-payment",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
+  },
+  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/2720",
     "publishedAt": "2023-11-09T01:37:38Z",
     "title": "add probing code",
@@ -160,15 +169,6 @@
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/3779",
     "publishedAt": "2025-05-15T11:43:51Z",
     "title": "HRN: Emit new event type when Offer has been received and validated",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/3780",
-    "publishedAt": "2025-05-15T11:49:00Z",
-    "title": "HRN: Allow to set `payer_note` on `ChannelManager::pay_for_offer_from_human_readable_name`",
     "labels": [
       "good first issue"
     ],
