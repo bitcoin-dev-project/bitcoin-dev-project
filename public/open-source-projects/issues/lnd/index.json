@@ -287,18 +287,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/6584",
-    "publishedAt": "2022-05-27T09:16:54Z",
-    "title": "Document Sphinx replay DB (Decayed Log Db)",
-    "labels": [
-      "onion routing",
-      "beginner",
-      "documentation",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/6603",
     "publishedAt": "2022-05-31T17:44:57Z",
     "title": "Sending incorrect onion error for \"peer offline\"",
@@ -1136,6 +1124,17 @@
       "bug",
       "neutrino",
       "P2",
+      "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8443",
+    "publishedAt": "2024-01-30T19:22:19Z",
+    "title": "tlsmanager: implement hot swap of ephemeral cert with wallet unlocker when encrypted TLS keys are used ",
+    "labels": [
+      "bug",
+      "tls",
       "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
