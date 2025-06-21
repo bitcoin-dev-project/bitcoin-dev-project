@@ -29,6 +29,11 @@ module.exports = () => {
                     destination: "https://grant-common-app.vercel.app/"
                 },
                 {
+                    source: "/api/:path*",
+                    destination:
+                        "https://grant-common-app.vercel.app/api/:path*"
+                },
+                {
                     source: "/logos/:path*",
                     destination:
                         "https://grant-common-app.vercel.app/logos/:path*"
