@@ -20,30 +20,6 @@ module.exports = () => {
         },
         async rewrites() {
             return [
-                // Handle Next.js Image optimization for grants app assets
-                {
-                    source: "/_next/image",
-                    destination:
-                        "https://grant-common-app.vercel.app/_next/image",
-                    has: [
-                        {
-                            type: "query",
-                            key: "url",
-                            value: "(/logos/.*|/grants/.*)"
-                        }
-                    ]
-                },
-                // Strip /grants prefix when forwarding to grants app
-                {
-                    source: "/grants/_next/:path*",
-                    destination:
-                        "https://grant-common-app.vercel.app/_next/:path*"
-                },
-                {
-                    source: "/grants/logos/:path*",
-                    destination:
-                        "https://grant-common-app.vercel.app/logos/:path*"
-                },
                 {
                     source: "/grants/:path*",
                     destination: "https://grant-common-app.vercel.app/:path*"
@@ -51,6 +27,11 @@ module.exports = () => {
                 {
                     source: "/grants",
                     destination: "https://grant-common-app.vercel.app/"
+                },
+                {
+                    source: "/logos/:path*",
+                    destination:
+                        "https://grant-common-app.vercel.app/logos/:path*"
                 }
             ]
         }
