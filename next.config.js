@@ -21,12 +21,12 @@ module.exports = () => {
         async rewrites() {
             return [
                 {
-                    source: '/grants',
-                    destination: 'https://grant-common-app.vercel.app/'
+                    source: "/grants",
+                    destination: "https://grant-common-app.vercel.app/"
                 },
                 {
-                    source: '/grants/:path*',
-                    destination: 'https://grant-common-app.vercel.app/:path*'
+                    source: "/grants/:path*",
+                    destination: "https://grant-common-app.vercel.app/:path*"
                 }
             ]
         }
