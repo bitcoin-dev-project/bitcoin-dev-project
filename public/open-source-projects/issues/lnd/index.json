@@ -391,18 +391,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7107",
-    "publishedAt": "2022-11-02T20:24:55Z",
-    "title": "[bug]: garbage collect `batch-replay` bucket in `sphinxreplay.db`",
-    "labels": [
-      "bug",
-      "database",
-      "htlcswitch",
-      "P0"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7111",
     "publishedAt": "2022-11-03T15:01:39Z",
     "title": "[bug]: allow stopping of lnd during recovery rescan, properly resume after restart",
@@ -1137,6 +1125,19 @@
       "advanced",
       "htlcswitch",
       "force closes"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8470",
+    "publishedAt": "2024-02-09T16:21:12Z",
+    "title": "[feature]: BumpFee: return raw tx hex on success",
+    "labels": [
+      "enhancement",
+      "rpc",
+      "beginner",
+      "fees",
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
