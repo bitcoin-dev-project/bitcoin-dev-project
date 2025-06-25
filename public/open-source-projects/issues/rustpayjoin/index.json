@@ -93,5 +93,14 @@
       "ffi"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/804",
+    "publishedAt": "2025-06-25T10:58:37Z",
+    "title": "De-dup pj_uri construction in receiver session history",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
