@@ -1,36 +1,5 @@
 [
   {
-    "url": "https://github.com/ElementsProject/lightning/issues/2482",
-    "publishedAt": "2019-03-18T14:53:30Z",
-    "title": "Unable to connect to peer : Bad file descriptor",
-    "labels": [
-      "bug",
-      "status::needinfo"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/2530",
-    "publishedAt": "2019-04-04T21:26:52Z",
-    "title": "HTLC Claim TX being rejected for too low of feerate",
-    "labels": [
-      "bug",
-      "onchaind",
-      "testnet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/2763",
-    "publishedAt": "2019-06-21T02:34:06Z",
-    "title": "Crashing when withdrawing funds",
-    "labels": [
-      "bug",
-      "crash"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
     "url": "https://github.com/ElementsProject/lightning/issues/3207",
     "publishedAt": "2019-10-25T18:58:14Z",
     "title": "Plugin notification for when UTXOs are spent?",
@@ -152,135 +121,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
-    "url": "https://github.com/ElementsProject/lightning/issues/6093",
-    "publishedAt": "2023-03-14T08:04:20Z",
-    "title": "pip deploy insie the CI fails",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6163",
-    "publishedAt": "2023-04-08T10:27:53Z",
-    "title": "Peer transient failure in CLOSINGD_SIGEXCHANGE: closingd WARNING: Bad closing_signed signature",
-    "labels": [
-      "bug",
-      "lnd-compat"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6291",
-    "publishedAt": "2023-05-29T23:15:06Z",
-    "title": "Broadcast failure on 0 conf channel still considers the channel okay.",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6571",
-    "publishedAt": "2023-08-16T05:19:16Z",
-    "title": "Hodlinvoice fail",
-    "labels": [
-      "bug",
-      "plugin",
-      "in diagnostic"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6626",
-    "publishedAt": "2023-08-27T00:49:00Z",
-    "title": "cln_plugin panicking on 23.08 block_added subscription",
-    "labels": [
-      "bug",
-      "rust"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6637",
-    "publishedAt": "2023-08-29T21:59:45Z",
-    "title": "Python path dependency crashing on NixOS",
-    "labels": [
-      "bug",
-      "build"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6716",
-    "publishedAt": "2023-09-24T09:23:41Z",
-    "title": "cln restart loop caused by fee overflow",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6795",
-    "publishedAt": "2023-10-18T19:13:06Z",
-    "title": "bug: `cln-plugin` cannot properly parse IP addresses",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6799",
-    "publishedAt": "2023-10-21T23:13:56Z",
-    "title": "Status is saying to wait 8000 years. ",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6891",
-    "publishedAt": "2023-11-22T17:17:12Z",
-    "title": "Dual-funded channel opening issues",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
     "url": "https://github.com/ElementsProject/lightning/issues/6909",
     "publishedAt": "2023-11-30T08:44:16Z",
     "title": "Documentation of listsendpays",
     "labels": [
       "docs",
       "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/6929",
-    "publishedAt": "2023-12-09T15:12:19Z",
-    "title": "CoreLN not properly detecting force close UTXOs",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/7172",
-    "publishedAt": "2024-03-25T14:09:39Z",
-    "title": "bitcoind: bad-txns-inputs-missingorspent on sendrawtransaction",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
-    "url": "https://github.com/ElementsProject/lightning/issues/8318",
-    "publishedAt": "2025-06-05T03:13:32Z",
-    "title": "bkpr-listincome doesn't filter `onchain_fee` income events when start_time and end_time range is provided",
-    "labels": [
-      "bug",
-      "bookkeeper"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   }
