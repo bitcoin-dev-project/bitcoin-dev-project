@@ -165,5 +165,15 @@
       "roles"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1773",
+    "publishedAt": "2025-06-27T22:49:30Z",
+    "title": "JDC gets a `RequestTransactionDataError` error from TP (error code `template-id-not-found`)",
+    "labels": [
+      "bug",
+      "job-declarator-client"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
