@@ -75,16 +75,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/688",
-    "publishedAt": "2025-05-06T20:02:44Z",
-    "title": "Clean up re-exports",
-    "labels": [
-      "good first issue",
-      "tech debt"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/739",
     "publishedAt": "2025-06-03T22:52:58Z",
     "title": "FFI Tracking Issue",
