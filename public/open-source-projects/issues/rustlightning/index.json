@@ -174,5 +174,14 @@
       "Take a Friday Leave a Friday"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
+  },
+  {
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/3909",
+    "publishedAt": "2025-07-03T12:46:39Z",
+    "title": "Expose `channel_reserve_satoshis` via `ChannelParameters` in `OpenChannelRequest`",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   }
 ]
