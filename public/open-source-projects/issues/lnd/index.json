@@ -808,16 +808,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7899",
-    "publishedAt": "2023-08-18T23:07:55Z",
-    "title": "[bug]: Generating mobile framework and swift files for ios",
-    "labels": [
-      "bug",
-      "mobile"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7933",
     "publishedAt": "2023-08-28T11:58:20Z",
     "title": "[bug]: subsystem contractcourt/sweeper improvements",
@@ -1049,17 +1039,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/8383",
-    "publishedAt": "2024-01-15T15:13:28Z",
-    "title": "[bug]: a height hint greater than 0 must be provided",
-    "labels": [
-      "bug",
-      "P2",
-      "init"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/8391",
     "publishedAt": "2024-01-17T17:24:50Z",
     "title": "[bug]: can't bump fee of a coop closed channel",
@@ -1138,6 +1117,31 @@
       "beginner",
       "fees",
       "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8530",
+    "publishedAt": "2024-03-07T18:30:12Z",
+    "title": "[bug]: lncli listpayments --count_total_payments should honor --creation_date_start --creation_date_end",
+    "labels": [
+      "bug",
+      "rpc",
+      "beginner",
+      "good first issue",
+      "lncli"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8531",
+    "publishedAt": "2024-03-07T22:32:37Z",
+    "title": "[bug]: Channel force close due to short database outage and resulting channel failure",
+    "labels": [
+      "bug",
+      "database",
+      "P1",
+      "force closes"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
