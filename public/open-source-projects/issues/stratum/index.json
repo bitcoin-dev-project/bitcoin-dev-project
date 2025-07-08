@@ -30,17 +30,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/677",
-    "publishedAt": "2023-11-21T17:29:11Z",
-    "title": "Feature flag to write logs to files instead of just stdout",
-    "labels": [
-      "good first issue",
-      "help wanted",
-      "log"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/782",
     "publishedAt": "2024-03-04T13:30:18Z",
     "title": "address todos in the jds added PR761",
