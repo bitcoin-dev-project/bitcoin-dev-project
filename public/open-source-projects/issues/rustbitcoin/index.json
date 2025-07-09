@@ -154,5 +154,17 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/4694",
+    "publishedAt": "2025-07-08T22:48:53Z",
+    "title": "docs: Ideas for documenting `units 1.0.0`",
+    "labels": [
+      "help wanted",
+      "C-units",
+      "doc",
+      "1.0-wanted"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
