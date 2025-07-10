@@ -30,17 +30,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/16444",
-    "publishedAt": "2019-07-23T19:44:51Z",
-    "title": "Assertion `setBlockIndexCandidates.count(pindex)' failed",
-    "labels": [
-      "Bug",
-      "Validation",
-      "CI failed"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/17020",
     "publishedAt": "2019-10-02T11:46:27Z",
     "title": "contrib: makeseeds.py improvements",
