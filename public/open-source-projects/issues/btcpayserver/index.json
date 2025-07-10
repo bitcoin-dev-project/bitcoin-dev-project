@@ -121,16 +121,5 @@
       "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6810",
-    "publishedAt": "2025-06-26T06:24:05Z",
-    "title": "Allow Fallback Exchange Rate to Be Enabled via API",
-    "labels": [
-      "Bug",
-      "API",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
