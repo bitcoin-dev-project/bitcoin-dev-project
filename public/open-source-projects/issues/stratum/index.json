@@ -156,16 +156,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/1773",
-    "publishedAt": "2025-06-27T22:49:30Z",
-    "title": "JDC gets a `RequestTransactionDataError` error from TP (error code `template-id-not-found`)",
-    "labels": [
-      "bug",
-      "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/1789",
     "publishedAt": "2025-07-04T18:38:55Z",
     "title": "`ParseMiningMessagesFromDownstream` has no `handle_close_channel`",
