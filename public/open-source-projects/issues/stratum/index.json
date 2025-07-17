@@ -134,17 +134,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/1397",
-    "publishedAt": "2025-01-24T16:48:46Z",
-    "title": "Pool role doesn't start when using P2TR output_script_type",
-    "labels": [
-      "bug",
-      "sv2 pool",
-      "roles"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/1431",
     "publishedAt": "2025-01-31T16:18:42Z",
     "title": "Incorrect Task Status Handling in translator_sv2",
