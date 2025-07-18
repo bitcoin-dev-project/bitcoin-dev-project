@@ -94,5 +94,14 @@
       "payjoin-cli"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/889",
+    "publishedAt": "2025-07-18T21:40:23Z",
+    "title": "Dead code warning for 'SHARED_CONTEXT_TWO' in payjoin crate",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
