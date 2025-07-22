@@ -45,15 +45,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1101",
-    "publishedAt": "2021-09-29T19:24:57Z",
-    "title": "Randomize `PendingHTLCsForwardable::time_forwardable` internally",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/1139",
     "publishedAt": "2021-10-25T20:16:17Z",
     "title": "Create fresh destination/shutdown scripts for each channel in `KeysManager`",
