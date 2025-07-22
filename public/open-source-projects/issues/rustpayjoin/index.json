@@ -91,5 +91,16 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/893",
+    "publishedAt": "2025-07-22T16:46:08Z",
+    "title": "`std::time::SystemTime` has nanosecond precision but Payjoin only sees u32 UnixTime second precision",
+    "labels": [
+      "good first issue",
+      "api",
+      "tech debt"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
