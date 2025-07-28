@@ -114,15 +114,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6780",
-    "publishedAt": "2025-06-10T11:34:21Z",
-    "title": "[Bug]: 0 amount invoices no longer work as free items in POS, but generate any amount",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6863",
     "publishedAt": "2025-07-24T21:59:01Z",
     "title": "Investigate and fix number separators usage on crowdfund page",
