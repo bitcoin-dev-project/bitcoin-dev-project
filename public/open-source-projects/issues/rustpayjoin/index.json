@@ -102,5 +102,15 @@
       "tech debt"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/906",
+    "publishedAt": "2025-07-29T14:53:24Z",
+    "title": "`restore_original_utxo` not able to restore fields critical to signing",
+    "labels": [
+      "bug",
+      "api"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
