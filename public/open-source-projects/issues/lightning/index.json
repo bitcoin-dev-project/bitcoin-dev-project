@@ -37,7 +37,8 @@
     "title": "cleanup: Use the `-rpcwait` when waiting for bitcoind to warm up",
     "labels": [
       "cleanup",
-      "good first issue"
+      "good first issue",
+      "BOUNTY! 🫰"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
@@ -107,7 +108,8 @@
     "title": "Turn on strict tables for SQLITE3 when running integration tests",
     "labels": [
       "testing",
-      "good first issue"
+      "good first issue",
+      "BOUNTY! 🫰"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
