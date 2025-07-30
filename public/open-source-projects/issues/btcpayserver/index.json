@@ -112,5 +112,14 @@
       "Checkout"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6874",
+    "publishedAt": "2025-07-30T11:38:21Z",
+    "title": "[Bug]: Minor visual time icon bug in the wallet transaction view",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
