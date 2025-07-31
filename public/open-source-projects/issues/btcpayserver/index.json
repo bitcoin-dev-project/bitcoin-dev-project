@@ -93,15 +93,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6763",
-    "publishedAt": "2025-05-31T04:06:01Z",
-    "title": "Ask for confirmation to display QR code for Server Admins in POS",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6772",
     "publishedAt": "2025-06-06T21:12:26Z",
     "title": "Don't show payment method selector if there's only a single payment method or in Bitcoin case Unified QR is selected",
@@ -110,15 +101,6 @@
       "UI / UX",
       "good first issue",
       "Checkout"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6874",
-    "publishedAt": "2025-07-30T11:38:21Z",
-    "title": "[Bug]: Minor visual time icon bug in the wallet transaction view",
-    "labels": [
-      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
