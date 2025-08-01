@@ -103,5 +103,14 @@
       "Checkout"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/6880",
+    "publishedAt": "2025-08-01T01:48:49Z",
+    "title": "[Bug]: Uninstall warning button icon too close when plugin is a dependency",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
