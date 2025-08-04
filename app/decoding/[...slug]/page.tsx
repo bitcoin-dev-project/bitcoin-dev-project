@@ -8,11 +8,13 @@ import { components } from "@/components/decoding-bitcoin/markdown-ui/MDXCompone
 import siteMetadata from "@/data/siteMetadata"
 import { getAuthorDetails, getTopicData } from "@/utils/content-utils"
 import TopicBanner from "@/components/decoding-bitcoin/layouts/TopicBanner"
+import FullWidthLayout from "@/components/decoding-bitcoin/layouts/FullWidthLayout"
 
 const defaultLayout = "TopicLayout"
 const layouts = {
     TopicLayout,
-    TopicBanner
+    TopicBanner,
+    FullWidthLayout
 }
 type LayoutKey = keyof typeof layouts
 
