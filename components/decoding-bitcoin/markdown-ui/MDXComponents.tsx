@@ -30,6 +30,8 @@ import ReorgCalculator from "./reorg-calculator"
 import HashFunctions from "./hash-functions"
 import AddressGenerator from "./address-generator"
 import { ByteTools } from "./byte-tools"
+import InteractiveRoadmap from "../roadmap/InteractiveRoadmap"
+
 export const components: MDXComponents = {
     Image,
     CustomLink,
@@ -62,5 +64,6 @@ export const components: MDXComponents = {
     ReorgCalculator,
     HashFunctions,
     AddressGenerator,
-    ByteTools
+    ByteTools,
+    InteractiveRoadmap
 }
