@@ -148,7 +148,7 @@ export default function FullWidthLayout({
                     {isHomePage && <Hero />}
 
                     <motion.div
-                        className={`w-full px-0 ${isRoadmapPage ? 'py-0 mt-0' : 'py-16 mt-12'}`}
+                        className={`w-full px-0 ${isRoadmapPage ? "py-0 mt-0" : "py-16 mt-12"}`}
                         animate={{
                             filter: isNavOpen ? "blur(4px)" : "blur(0px)"
                         }}
@@ -164,9 +164,7 @@ export default function FullWidthLayout({
                                     />
                                 </div>
                             )}
-                            <div className="w-full">
-                                {children}
-                            </div>
+                            <div className="w-full">{children}</div>
                         </article>
                         <div className="px-4 mt-8">
                             <PrevNextLinks prev={prev} next={next} />
@@ -189,7 +187,9 @@ export default function FullWidthLayout({
                     </div>
 
                     {/* Desktop Main Content - FULL WIDTH */}
-                    <div className={`min-w-0 flex-auto lg:mx-0 lg:max-w-none lg:pr-0 w-full ${isRoadmapPage ? 'pb-0' : 'pb-16'}`}>
+                    <div
+                        className={`min-w-0 flex-auto lg:mx-0 lg:max-w-none lg:pr-0 w-full ${isRoadmapPage ? "pb-0" : "pb-16"}`}
+                    >
                         {isHomePage && <Hero />}
                         <article className="w-full">
                             {!isRoadmapPage && (
@@ -201,9 +201,7 @@ export default function FullWidthLayout({
                                     />
                                 </div>
                             )}
-                            <div className="w-full px-0">
-                                {children}
-                            </div>
+                            <div className="w-full px-0">{children}</div>
                         </article>
                         <div className="px-8 xl:px-16">
                             <PrevNextLinks prev={prev} next={next} />
@@ -213,4 +211,4 @@ export default function FullWidthLayout({
             </div>
         </div>
     )
-} 
+}

@@ -23,10 +23,10 @@ interface SvgatorPlayer {
 }
 
 interface OpCodeExplorerProps {
-    initialView?: 'compact' | 'expanded'
+    initialView?: "compact" | "expanded"
 }
 
-const OpCodeExplorer = ({ initialView = 'expanded' }: OpCodeExplorerProps) => {
+const OpCodeExplorer = ({ initialView = "expanded" }: OpCodeExplorerProps) => {
     const [selectedOpCode, setSelectedOpCode] = useState<
         keyof typeof opcodeData
     >(Object.keys(opcodeData)[0] as keyof typeof opcodeData)
@@ -36,7 +36,9 @@ const OpCodeExplorer = ({ initialView = 'expanded' }: OpCodeExplorerProps) => {
     const [isPlaying, setIsPlaying] = useState(false)
     const [hasStarted, setHasStarted] = useState(false)
     const [totalSteps, setTotalSteps] = useState(4)
-    const [isExpandedView, setIsExpandedView] = useState(initialView === 'expanded')
+    const [isExpandedView, setIsExpandedView] = useState(
+        initialView === "expanded"
+    )
     const svgRef = useRef<HTMLObjectElement | null>(null)
     const playerRef = useRef<SvgatorPlayer | null>(null)
     const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null)
