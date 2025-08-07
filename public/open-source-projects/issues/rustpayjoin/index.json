@@ -82,16 +82,5 @@
       "tech debt"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/925",
-    "publishedAt": "2025-08-04T16:43:31Z",
-    "title": "`change_vout` is not used after the `WantsFeeRange` recv. typestate",
-    "labels": [
-      "good first issue",
-      "receive",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]

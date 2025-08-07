@@ -47,5 +47,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2010",
+    "publishedAt": "2025-08-07T11:48:28Z",
+    "title": "`bdk_electrum` v0.23.1 release bumped to API-incompatible dependencies on a patch release.",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
