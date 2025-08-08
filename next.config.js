@@ -22,21 +22,19 @@ module.exports = () => {
             return [
                 {
                     source: "/grants/:path*",
-                    destination: "https://grant-common-app.vercel.app/:path*"
+                    destination: "https://grants.bitcoindevs.xyz/:path*"
                 },
                 {
                     source: "/grants",
-                    destination: "https://grant-common-app.vercel.app/"
+                    destination: "https://grants.bitcoindevs.xyz/"
                 },
                 {
                     source: "/api/:path*",
-                    destination:
-                        "https://grant-common-app.vercel.app/api/:path*"
+                    destination: "https://grants.bitcoindevs.xyz/api/:path*"
                 },
                 {
                     source: "/logos/:path*",
-                    destination:
-                        "https://grant-common-app.vercel.app/logos/:path*"
+                    destination: "https://grants.bitcoindevs.xyz/logos/:path*"
                 }
             ]
         }
