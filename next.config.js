@@ -18,16 +18,22 @@ module.exports = () => {
         images: {
             domains: ["avatars.githubusercontent.com"]
         },
-        async rewrites() {
+        async redirects() {
             return [
                 {
                     source: "/grants/:path*",
-                    destination: "https://grants.bitcoindevs.xyz/:path*"
+                    destination: "https://grants.bitcoindevs.xyz/:path*",
+                    permanent: false
                 },
                 {
                     source: "/grants",
-                    destination: "https://grants.bitcoindevs.xyz/"
-                },
+                    destination: "https://grants.bitcoindevs.xyz/",
+                    permanent: false
+                }
+            ]
+        },
+        async rewrites() {
+            return [
                 {
                     source: "/api/:path*",
                     destination: "https://grants.bitcoindevs.xyz/api/:path*"
