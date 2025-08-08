@@ -30,13 +30,11 @@ module.exports = () => {
                 },
                 {
                     source: "/api/:path*",
-                    destination:
-                        "https://grants.bitcoindevs.xyz/api/:path*"
+                    destination: "https://grants.bitcoindevs.xyz/api/:path*"
                 },
                 {
                     source: "/logos/:path*",
-                    destination:
-                        "https://grants.bitcoindevs.xyz/logos/:path*"
+                    destination: "https://grants.bitcoindevs.xyz/logos/:path*"
                 }
             ]
         }
