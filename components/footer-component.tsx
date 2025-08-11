@@ -55,15 +55,12 @@ const FooterComponent = () => {
                                 }
                             },
                             {
-                                entity: "linkedIn",
+                                entity: "linkedin",
                                 entityLink:
                                     "https://www.linkedin.com/company/bitcoin-dev-project/",
                                 iconProps: {
                                     className: "hover:text-orange-400"
                                 },
-                                icon: (
-                                    <LinkedinIcon width="100%" height="auto" />
-                                )
                             }
                         ]}
                     />
