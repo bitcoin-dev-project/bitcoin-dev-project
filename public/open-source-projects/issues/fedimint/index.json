@@ -136,7 +136,7 @@
   {
     "url": "https://github.com/fedimint/fedimint/issues/7650",
     "publishedAt": "2025-08-15T12:42:30Z",
-    "title": "Race condition in `recurringd`: invoice indices are being skipped",
+    "title": "Atomicity bug in `recurringd`: invoice indices are being skipped",
     "labels": [
       "bug"
     ],
