@@ -71,5 +71,14 @@
       "tech debt"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/932",
+    "publishedAt": "2025-08-06T14:06:30Z",
+    "title": "Test coverage for `JsonReply::from<ReplyableError::Implementation>`",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
