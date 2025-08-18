@@ -402,19 +402,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7123",
-    "publishedAt": "2022-11-07T04:22:45Z",
-    "title": "[feature]: Allow persisting dynamic configured alias when not set in lnd.conf or arguments",
-    "labels": [
-      "enhancement",
-      "beginner",
-      "config",
-      "good first issue",
-      "bug fix"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7160",
     "publishedAt": "2022-11-16T14:33:36Z",
     "title": "[bug]: lncli payinvoice --fee_limit 100 fails with the reason: FAILURE_REASON_TIMEOUT ",
@@ -1142,6 +1129,17 @@
       "database",
       "P1",
       "force closes"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8579",
+    "publishedAt": "2024-03-25T12:15:08Z",
+    "title": "[bug]: `lntest` hangs when attempting to create a 7th LND node",
+    "labels": [
+      "bug",
+      "itests",
+      "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
