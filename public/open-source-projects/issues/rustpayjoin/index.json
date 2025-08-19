@@ -73,17 +73,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/966",
-    "publishedAt": "2025-08-18T15:03:14Z",
-    "title": "Fix RPC error message regression",
-    "labels": [
-      "documentation",
-      "good first issue",
-      "payjoin-cli"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/968",
     "publishedAt": "2025-08-18T17:54:03Z",
     "title": "Change fetch_ohttp_keys to timeout more quickly",
