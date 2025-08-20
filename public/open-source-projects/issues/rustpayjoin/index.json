@@ -82,5 +82,15 @@
       "api"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/978",
+    "publishedAt": "2025-08-20T15:39:15Z",
+    "title": "Ffi layer runtime issues",
+    "labels": [
+      "bug",
+      "tech debt"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
