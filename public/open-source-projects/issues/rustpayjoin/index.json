@@ -1,15 +1,5 @@
 [
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/402",
-    "publishedAt": "2024-11-20T20:27:12Z",
-    "title": "Take arguments by reference where possible",
-    "labels": [
-      "good first issue",
-      "tech debt"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/480",
     "publishedAt": "2025-01-14T15:33:23Z",
     "title": "Accomodate Updated BIP 78 Spec",
