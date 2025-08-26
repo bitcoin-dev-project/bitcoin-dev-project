@@ -61,6 +61,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/865",
+    "publishedAt": "2025-07-10T17:47:00Z",
+    "title": "`cargo doc` improvements tracking issue",
+    "labels": [
+      "good first issue",
+      "api"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/867",
     "publishedAt": "2025-07-10T19:31:23Z",
     "title": "Migrate payjoin-cli Sled db to sqlite3",
