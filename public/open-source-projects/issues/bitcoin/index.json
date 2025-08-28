@@ -132,16 +132,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/22518",
-    "publishedAt": "2021-07-21T14:22:02Z",
-    "title": "0.21.1 native descriptor wallet showing incorrect value for `spendable`",
-    "labels": [
-      "Bug",
-      "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/22559",
     "publishedAt": "2021-07-26T21:35:29Z",
     "title": "net: redundant connections with a single peer",
