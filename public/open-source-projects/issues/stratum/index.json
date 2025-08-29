@@ -154,5 +154,15 @@
       "roles-logic-sv2"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1847",
+    "publishedAt": "2025-08-29T17:51:07Z",
+    "title": "`DeclareMiningJob` has wrong/misleading field names inside `job_declaration_sv2`",
+    "labels": [
+      "bug",
+      "spec incompatibility"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
