@@ -45,25 +45,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1139",
-    "publishedAt": "2021-10-25T20:16:17Z",
-    "title": "Create fresh destination/shutdown scripts for each channel in `KeysManager`",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1563",
-    "publishedAt": "2022-06-23T21:35:17Z",
-    "title": "Don't Always Broadcast latest state on startup if we'd previously closed-without-broadcast",
-    "labels": [
-      "good first issue",
-      "Take a Friday Leave a Friday"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/1667",
     "publishedAt": "2022-08-13T21:40:16Z",
     "title": "do performance benchmarking of LDK",
