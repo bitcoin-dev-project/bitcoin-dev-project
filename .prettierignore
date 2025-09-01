@@ -1,3 +1,7 @@
 # Ignore artifacts
 scripts/*
 public/open-source-projects/issues/*
+
+# Ignore markdown files
+*.md
+*.mdx

@@ -298,32 +298,32 @@ export function Navigation({
                 </Link>
             </div>
 
-            {/* Add Roadmap Section */}
+            {/* Add Explainers Section */}
             <div className="mb-8">
                 <Link
-                    href="/decoding/interactive-roadmap"
+                    href="/explainers"
                     className={clsx(
                         "group flex items-center px-4 py-3 rounded-lg transition-all duration-200",
-                        "bg-gradient-to-r from-blue-500/10 to-blue-500/5",
-                        "border border-blue-500/20 hover:border-blue-500/40",
-                        "hover:from-blue-500/15 hover:to-blue-500/10"
+                        "bg-gradient-to-r from-purple-500/10 to-purple-500/5",
+                        "border border-purple-500/20 hover:border-purple-500/40",
+                        "hover:from-purple-500/15 hover:to-purple-500/10"
                     )}
                 >
                     <div className="flex items-center flex-1 min-w-0">
-                        <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-blue-500/20 mr-3">
-                            <Icons.FaRoute className="w-4 h-4 text-blue-500" />
+                        <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-purple-500/20 mr-3">
+                            <Icons.FaLightbulb className="w-4 h-4 text-purple-500" />
                         </div>
                         <div>
-                            <h3 className="text-sm font-semibold text-blue-500 dark:text-blue-400">
-                                Development Roadmap
+                            <h3 className="text-sm font-semibold text-purple-500 dark:text-purple-400">
+                                Explainers
                             </h3>
                             <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">
-                                Interactive learning path
+                                Visual guides & diagrams
                             </p>
                         </div>
                     </div>
                     <div className="flex-shrink-0 ml-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ArrowRight className="w-4 h-4 text-blue-500" />
+                        <ArrowRight className="w-4 h-4 text-purple-500" />
                     </div>
                 </Link>
             </div>
