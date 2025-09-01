@@ -12,7 +12,7 @@ export const metadata = genPageMetadata({
     openGraph: {
         images: [
             {
-                url: "https://bitcoindevs.xyz/images/pages-thumbnails/good-first-issues.png",
+                url: "https://bitcoindevs.xyz/images/pages-thumbnails/good-first-issues.webp",
                 alt: "Good First Issues"
             }
         ],
@@ -24,7 +24,7 @@ export const metadata = genPageMetadata({
     },
     twitter: {
         images: [
-            "https://bitcoindevs.xyz/images/pages-thumbnails/good-first-issues.png"
+            "https://bitcoindevs.xyz/images/pages-thumbnails/good-first-issues.webp"
         ],
         card: "summary_large_image",
         title: "Good First Issues | Bitcoin Dev Project",
