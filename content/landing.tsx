@@ -1,7 +1,7 @@
 import { BitcoinIcon } from "lucide-react"
 
 import screenshotTopics from "@/public/images/hero/screenshots/topics.webp"
-import screenshotGoodFirstIssues from "@/public/images/hero/screenshots/good-first-issues.png"
+import screenshotGoodFirstIssues from "@/public/images/hero/screenshots/good-first-issues.webp"
 import screenshotBitcoinSearch from "@/public/images/hero/screenshots/bitcoin_search.webp"
 import screenshotBitcoinTLDR from "@/public/images/hero/screenshots/bitcoin_tldr.webp"
 import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoin-transacripts.webp"
