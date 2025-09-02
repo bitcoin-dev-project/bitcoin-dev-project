@@ -103,5 +103,16 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1030",
+    "publishedAt": "2025-09-02T16:21:35Z",
+    "title": "Clean up `payjoin::uri` interface by making existing modules public",
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "api"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
