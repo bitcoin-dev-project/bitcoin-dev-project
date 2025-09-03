@@ -38,14 +38,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1982",
-    "publishedAt": "2025-06-26T22:11:32Z",
-    "title": "Add `populate_anchor_cache` method to `BdkElectrumClient`",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
