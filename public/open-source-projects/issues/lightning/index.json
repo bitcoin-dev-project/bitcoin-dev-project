@@ -32,17 +32,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
   },
   {
-    "url": "https://github.com/ElementsProject/lightning/issues/3505",
-    "publishedAt": "2020-02-11T15:17:46Z",
-    "title": "cleanup: Use the `-rpcwait` when waiting for bitcoind to warm up",
-    "labels": [
-      "cleanup",
-      "good first issue",
-      "BOUNTY! 🫰"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
-  },
-  {
     "url": "https://github.com/ElementsProject/lightning/issues/3542",
     "publishedAt": "2020-02-21T19:01:42Z",
     "title": "feature request: config option to change default fundchannel feerate",
