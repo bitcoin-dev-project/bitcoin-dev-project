@@ -316,16 +316,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/27219",
-    "publishedAt": "2023-03-07T11:14:10Z",
-    "title": "`combinepsbt` RPC does not work with P2TR inputs",
-    "labels": [
-      "Bug",
-      "PSBT"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/27975",
     "publishedAt": "2023-06-26T09:14:38Z",
     "title": "fuzz: Use-of-uninitialized-value in evutil_inet_pton",
