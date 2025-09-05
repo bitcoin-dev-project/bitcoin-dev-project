@@ -1,15 +1,5 @@
 [
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/369",
-    "publishedAt": "2024-10-16T19:00:25Z",
-    "title": "Upgrade or replace `bitcoind` in integration tests",
-    "labels": [
-      "good first issue",
-      "tech debt"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/402",
     "publishedAt": "2024-11-20T20:27:12Z",
     "title": "Audit API to take arguments by reference where possible before v1.0 release",
