@@ -13,7 +13,8 @@
     "publishedAt": "2024-07-18T19:47:53Z",
     "title": "MacOS Build Error",
     "labels": [
-      "bug"
+      "bug",
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
