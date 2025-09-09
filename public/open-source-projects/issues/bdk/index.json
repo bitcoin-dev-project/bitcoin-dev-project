@@ -21,16 +21,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1848",
-    "publishedAt": "2025-02-20T16:30:42Z",
-    "title": "`FilterIter` may not handle reorgs properly.",
-    "labels": [
-      "bug",
-      "tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1933",
     "publishedAt": "2025-03-03T19:50:57Z",
     "title": "Display implementations should not expose `Debug` output",

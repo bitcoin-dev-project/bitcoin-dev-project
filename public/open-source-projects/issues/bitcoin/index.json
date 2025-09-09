@@ -256,18 +256,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/26362",
-    "publishedAt": "2022-10-21T11:52:40Z",
-    "title": "signed overflow in coinstats index",
-    "labels": [
-      "Brainstorming",
-      "Bug",
-      "UTXO Db and Indexes",
-      "RPC/REST/ZMQ"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/26442",
     "publishedAt": "2022-11-01T19:52:36Z",
     "title": "Use of undocumented/undefined boost::signals2 behavior in wallet",
