@@ -94,15 +94,5 @@
       "Checkout"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6907",
-    "publishedAt": "2025-09-03T11:03:36Z",
-    "title": "[Bug]: Date column header isn't aligned",
-    "labels": [
-      "Bug",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
