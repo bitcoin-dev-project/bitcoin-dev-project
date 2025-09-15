@@ -107,6 +107,14 @@ export const curriculums = {
                         description:
                             "The Bitcoin Core PR Review Club is a monthly online meetup for discussing PRs and boosting your understanding of the codebase.",
                         link: "https://bitcoincore.reviews"
+                    },
+                    {
+                        image: "/images/curriculums/bitcoin-infra-development/rabbit-extra.jpg",
+                        title: "Cryptography Camp Workbook",
+                        subTitle: "",
+                        description:
+                            "A comprehensive workbook covering cryptographic signatures, discrete-logarithm-based multiparty signatures, and security proofs. Develop skills to formalize security notions for cryptographic primitives through hands-on exercises.",
+                        link: "https://github.com/cryptography-camp/workbook"
                     }
                 ]
             },
