@@ -21,6 +21,7 @@ export default function ExplainersPage() {
     const [showFilters, setShowFilters] = useState(false)
     const [selectedTopic, setSelectedTopic] = useState<any>(null)
     const [isSlideViewerOpen, setIsSlideViewerOpen] = useState(false)
+    const [expandedTags, setExpandedTags] = useState<Set<string>>(new Set())
 
     const filteredTopics = useMemo(() => {
         return explainerTopics.filter((topic) => {
@@ -65,6 +66,19 @@ export default function ExplainersPage() {
     const closeSlideViewer = () => {
         setIsSlideViewerOpen(false)
         setSelectedTopic(null)
+    }
+
+    const toggleTagExpansion = (topicId: string, event: React.MouseEvent) => {
+        event.stopPropagation() // Prevent card click
+        setExpandedTags(prev => {
+            const newSet = new Set(prev)
+            if (newSet.has(topicId)) {
+                newSet.delete(topicId)
+            } else {
+                newSet.add(topicId)
+            }
+            return newSet
+        })
     }
 
     return (
@@ -239,19 +253,31 @@ export default function ExplainersPage() {
 
                                 {/* Tags */}
                                 <div className="flex flex-wrap gap-1 mt-3">
-                                    {topic.tags.slice(0, 3).map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="text-xs text-[#f1760d] dark:text-[#f1760d] bg-orange-50 dark:bg-orange-900/20 px-2 py-1 rounded-md"
-                                        >
-                                            #{tag}
-                                        </span>
-                                    ))}
-                                    {topic.tags.length > 3 && (
-                                        <span className="text-xs text-gray-500 dark:text-gray-400">
-                                            +{topic.tags.length - 3} more
-                                        </span>
-                                    )}
+                                    {(() => {
+                                        const isExpanded = expandedTags.has(topic.id)
+                                        const visibleTags = isExpanded ? topic.tags : topic.tags.slice(0, 3)
+                                        
+                                        return (
+                                            <>
+                                                {visibleTags.map((tag) => (
+                                                    <span
+                                                        key={tag}
+                                                        className="text-xs text-[#f1760d] dark:text-[#f1760d] bg-orange-50 dark:bg-orange-900/20 px-2 py-1 rounded-md"
+                                                    >
+                                                        #{tag}
+                                                    </span>
+                                                ))}
+                                                {topic.tags.length > 3 && (
+                                                    <button
+                                                        onClick={(e) => toggleTagExpansion(topic.id, e)}
+                                                        className="text-xs text-gray-500 dark:text-gray-400 hover:text-[#f1760d] dark:hover:text-[#f1760d] transition-colors cursor-pointer"
+                                                    >
+                                                        {isExpanded ? 'show less' : `+${topic.tags.length - 3} more`}
+                                                    </button>
+                                                )}
+                                            </>
+                                        )
+                                    })()}
                                 </div>
                             </div>
                         </div>
