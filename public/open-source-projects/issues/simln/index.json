@@ -72,5 +72,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/304",
+    "publishedAt": "2025-09-15T12:08:58Z",
+    "title": "Bug: Excluded channels contribute to random activity generation",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
