@@ -154,16 +154,5 @@
       "roles-logic-sv2"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1878",
-    "publishedAt": "2025-09-16T11:11:34Z",
-    "title": "JDS panics in `clear_declared_mining_job`",
-    "labels": [
-      "bug",
-      "job-declarator-server",
-      "roles"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
