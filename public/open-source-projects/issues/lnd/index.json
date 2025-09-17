@@ -782,17 +782,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7933",
-    "publishedAt": "2023-08-28T11:58:20Z",
-    "title": "[bug]: subsystem contractcourt/sweeper improvements",
-    "labels": [
-      "bug",
-      "HTLC",
-      "utxo sweeping"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7959",
     "publishedAt": "2023-09-05T11:31:44Z",
     "title": "[bug]: LND Suddenly lots of force closes, `Error while broadcasting transaction`",
@@ -1139,6 +1128,17 @@
       "database",
       "P2",
       "kvdb"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8639",
+    "publishedAt": "2024-04-10T17:23:31Z",
+    "title": "[bug]: FAILURE_REASON_NO_ROUTE to a local channel - not fee related",
+    "labels": [
+      "bug",
+      "graph",
+      "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
