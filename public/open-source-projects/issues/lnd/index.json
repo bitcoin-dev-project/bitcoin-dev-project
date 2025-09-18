@@ -690,17 +690,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7694",
-    "publishedAt": "2023-05-15T02:05:58Z",
-    "title": "[bug]: Receiving \"unable to find node\" for a direct peer",
-    "labels": [
-      "bug",
-      "graph",
-      "needs triage"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7738",
     "publishedAt": "2023-06-01T04:51:58Z",
     "title": "[bug]: Unannounced channel opens in inactive state.",
@@ -1139,6 +1128,18 @@
       "bug",
       "graph",
       "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8645",
+    "publishedAt": "2024-04-13T05:33:15Z",
+    "title": "[bug]: Remote Signer: ImportAccount: incorrect coin type in derivation path on testnet",
+    "labels": [
+      "bug",
+      "wallet",
+      "P2",
+      "psbt"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
