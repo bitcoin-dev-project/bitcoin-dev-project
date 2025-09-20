@@ -62,5 +62,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1096",
+    "publishedAt": "2025-09-20T19:55:45Z",
+    "title": "There's a TODO comment in the bech32 test that needs to be completed. The test should assert that the encoded bech32 string is uppercase.",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
