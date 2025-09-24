@@ -46,5 +46,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2045",
+    "publishedAt": "2025-09-24T02:09:33Z",
+    "title": "test(electrum): keeps failing in CI with timeout errors",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
