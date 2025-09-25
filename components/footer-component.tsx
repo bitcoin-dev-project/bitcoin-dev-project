@@ -2,7 +2,6 @@
 
 import React from "react"
 import { Footer } from "@bitcoin-dev-project/bdp-ui"
-import { LinkedinIcon } from "lucide-react"
 
 function Wrapper({
     className,
@@ -55,15 +54,12 @@ const FooterComponent = () => {
                                 }
                             },
                             {
-                                entity: "linkedIn",
+                                entity: "linkedin",
                                 entityLink:
                                     "https://www.linkedin.com/company/bitcoin-dev-project/",
                                 iconProps: {
                                     className: "hover:text-orange-400"
                                 },
-                                icon: (
-                                    <LinkedinIcon width="100%" height="auto" />
-                                )
                             }
                         ]}
                     />
@@ -72,7 +68,7 @@ const FooterComponent = () => {
                         entityLink="https://bitcoindevs.xyz"
                         entityName="Bitcoin Dev Project"
                     />
-                    <Footer.Feedback feedbackLink="https://cryptpad.fr/form/#/2/form/view/3P2CsohsHOkcH7C+WdtX0-tvqjBHqXnAmz5D9yx0e04" />
+                    <Footer.Feedback feedbackLink="https://forms.gle/aLtBMjAeLZiKCFxn8" />
                 </Footer>
             </Wrapper>
         </div>
