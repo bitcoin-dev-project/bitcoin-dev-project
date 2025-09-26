@@ -20,14 +20,5 @@
       "needs conceptual review"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin-dev-project/warnet/issues/427",
-    "publishedAt": "2024-08-14T15:32:38Z",
-    "title": "bug: deploy-logging fails on Digital Ocean",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
