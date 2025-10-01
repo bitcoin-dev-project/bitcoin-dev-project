@@ -9,15 +9,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/529",
-    "publishedAt": "2020-03-03T19:00:43Z",
-    "title": "ChannelManager public interface tests",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/1667",
     "publishedAt": "2022-08-13T21:40:16Z",
     "title": "do performance benchmarking of LDK",
