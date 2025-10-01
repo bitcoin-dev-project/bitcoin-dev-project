@@ -157,7 +157,7 @@ export default function Career() {
                                     <li>
                                         <a
                                             className="text-orange"
-                                            href="https://brink.homerun.co/grants"
+                                            href="https://brink.dev/programs#grants"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             data-umami-event={`funding-org-brink-clicked`}
