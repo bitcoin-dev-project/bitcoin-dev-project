@@ -143,7 +143,6 @@ export default function BaseLayout({
     const ActionButtons = () => (
         <div className="flex items-center justify-between w-full max-w-3xl mx-auto">
             {/* Left side - Completion actions */}
-         
 
             {/* Right side - Suggest Edits */}
             <motion.a
