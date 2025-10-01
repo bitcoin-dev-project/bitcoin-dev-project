@@ -9,36 +9,9 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/484",
-    "publishedAt": "2020-02-10T00:57:48Z",
-    "title": "Add assumevalid option for channel announcements",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/528",
-    "publishedAt": "2020-03-03T18:30:23Z",
-    "title": "Rewrite unit tests for peer_handler module",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/529",
     "publishedAt": "2020-03-03T19:00:43Z",
     "title": "ChannelManager public interface tests",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/744",
-    "publishedAt": "2020-10-20T17:48:57Z",
-    "title": "Add test case: stale ChannelManager --> force closes (+ preimage claim still OK)",
     "labels": [
       "good first issue"
     ],
