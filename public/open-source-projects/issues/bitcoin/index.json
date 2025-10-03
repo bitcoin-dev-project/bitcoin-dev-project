@@ -434,14 +434,5 @@
       "Utils/log/libs"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/33532",
-    "publishedAt": "2025-10-03T12:35:38Z",
-    "title": "version 30.0 as tested 2.9.1.0",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
