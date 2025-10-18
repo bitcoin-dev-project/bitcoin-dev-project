@@ -455,5 +455,14 @@
       "P2P"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/33648",
+    "publishedAt": "2025-10-18T05:16:18Z",
+    "title": "Dj",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
