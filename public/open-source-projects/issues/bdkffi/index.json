@@ -44,14 +44,5 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/877",
-    "publishedAt": "2025-10-10T11:57:33Z",
-    "title": "Invalid memory access in Swift",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
