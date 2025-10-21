@@ -41,18 +41,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/17145",
-    "publishedAt": "2019-10-15T05:11:34Z",
-    "title": "GUI event loop should be block free",
-    "labels": [
-      "Brainstorming",
-      "GUI",
-      "Refactoring",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/17289",
     "publishedAt": "2019-10-28T19:51:28Z",
     "title": "contrib: Autogenerate bash completion",
@@ -305,16 +293,6 @@
       "Tests",
       "Consensus",
       "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/29398",
-    "publishedAt": "2024-02-07T09:47:49Z",
-    "title": "Internal bug detected: Fee needed > fee paid",
-    "labels": [
-      "Bug",
-      "Wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
