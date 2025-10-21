@@ -73,24 +73,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/18625",
-    "publishedAt": "2020-04-13T15:02:01Z",
-    "title": "untrust vs unsafe ?",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/19496",
-    "publishedAt": "2020-07-11T20:24:40Z",
-    "title": "Use of C++ undefined behavior in various `IteratorComparators`",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/19886",
     "publishedAt": "2020-09-05T17:57:44Z",
     "title": "noban permission probably shouldn't give additional permissions implcitly",
@@ -137,16 +119,6 @@
     "title": "net: redundant connections with a single peer",
     "labels": [
       "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/22613",
-    "publishedAt": "2021-08-03T00:01:22Z",
-    "title": "Net code contains some UB -- violations of strict aliasing rules in C++",
-    "labels": [
-      "Bug",
-      "P2P"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
