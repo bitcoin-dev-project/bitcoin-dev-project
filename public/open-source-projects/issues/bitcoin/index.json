@@ -135,7 +135,8 @@
     "publishedAt": "2022-03-18T14:35:49Z",
     "title": "[flatpak]  - I cannot choose or change datadir when running from flatpak",
     "labels": [
-      "Bug"
+      "Bug",
+      "GUI"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
