@@ -102,5 +102,15 @@
       "job-declarator-server"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/1961",
+    "publishedAt": "2025-10-23T11:08:36Z",
+    "title": "Pool panics after error on share validation",
+    "labels": [
+      "bug",
+      "sv2 pool"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
