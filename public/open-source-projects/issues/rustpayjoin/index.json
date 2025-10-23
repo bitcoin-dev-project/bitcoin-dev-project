@@ -90,5 +90,15 @@
       "payjoin-cli"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1174",
+    "publishedAt": "2025-10-23T20:32:15Z",
+    "title": "payjoin-directory exposes metrics even if --metrics-port is not provided",
+    "labels": [
+      "bug",
+      "payjoin-directory"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
