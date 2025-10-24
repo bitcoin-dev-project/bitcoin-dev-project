@@ -85,7 +85,7 @@
   {
     "url": "https://github.com/payjoin/rust-payjoin/issues/1174",
     "publishedAt": "2025-10-23T20:32:15Z",
-    "title": "payjoin-directory exposes metrics even if --metrics-port is not provided",
+    "title": "payjoin-directory should not expose /metrics publicly",
     "labels": [
       "bug",
       "payjoin-directory"
