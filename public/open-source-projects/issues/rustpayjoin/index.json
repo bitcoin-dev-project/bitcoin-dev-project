@@ -64,15 +64,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/1154",
-    "publishedAt": "2025-10-08T17:54:15Z",
-    "title": "payjoin-cli receiver returns a 500 error after a successful payjoin.",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/1169",
     "publishedAt": "2025-10-22T15:35:31Z",
     "title": "payjoin-cli receiver response causing reqwest failure with `InvalidContentType`",
