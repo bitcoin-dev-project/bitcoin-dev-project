@@ -222,7 +222,9 @@ const config: Config = {
             },
             fontFamily: {
                 brawler: ["var(--brawler-font)"],
-                inter: ["var(--inter-font)"]
+                inter: ["var(--inter-font)"],
+                quicksand: ["var(--quicksand-font)"],
+                montserrat: ["var(--montserrat-font)"]
             },
             fontSize: {
                 lg: ["17px", "28px"]
