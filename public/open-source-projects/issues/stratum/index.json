@@ -9,17 +9,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/427",
-    "publishedAt": "2023-01-31T22:46:33Z",
-    "title": "Create config option for backup Template Providers",
-    "labels": [
-      "help wanted",
-      "sv2 pool",
-      "template provider"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/476",
     "publishedAt": "2023-03-05T11:37:21Z",
     "title": "make safe look safer",
@@ -30,76 +19,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/782",
-    "publishedAt": "2024-03-04T13:30:18Z",
-    "title": "address todos in the jds added PR761",
-    "labels": [
-      "good first issue",
-      "job-declarator-server"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/920",
-    "publishedAt": "2024-05-21T12:24:49Z",
-    "title": "JDC does not receive shares anymore from Translator if two new blocks are found in few seconds",
-    "labels": [
-      "bug",
-      "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/979",
     "publishedAt": "2024-06-19T07:49:55Z",
     "title": "Speed up github action with sscache",
     "labels": [
       "good first issue",
       "help wanted"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1053",
-    "publishedAt": "2024-07-16T09:14:31Z",
-    "title": "Pool is not properly checking the SetCustomMiningJob message received",
-    "labels": [
-      "bug",
-      "sv2 pool"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1082",
-    "publishedAt": "2024-08-07T14:29:39Z",
-    "title": "JDC should stop sending shares upstream if pool prev hash is different from JDC prev hash",
-    "labels": [
-      "bug",
-      "job declarator",
-      "job-declarator-client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1138",
-    "publishedAt": "2024-08-22T08:23:01Z",
-    "title": "SRI most important, but NOT critical bugs",
-    "labels": [
-      "bug",
-      "backlog",
-      "tracker",
-      "roles"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1292",
-    "publishedAt": "2024-12-11T15:16:39Z",
-    "title": "JDS Unable to establish connection when Tproxy is activated",
-    "labels": [
-      "bug",
-      "translator proxy",
-      "job-declarator-server"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   },
