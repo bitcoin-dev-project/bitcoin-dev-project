@@ -8,12 +8,29 @@ const config: Config = {
         "./node_modules/pliny/**/*.js",
         "./layouts/**/*.{js,ts,tsx}",
         "./public/decoding-bitcoin/**/*.mdx",
-        "node_modules/@bitcoin-dev-project/bdp-ui/dist/**/*.{js,mjs,jsx,ts,tsx}"
+        "node_modules/@bitcoin-dev-project/bdp-ui/dist/**/*.{js,mjs,jsx,ts,tsx}",
+        "../bdp-ui/dist/**/*.{js,ts,jsx,tsx}"
+
     ],
     darkMode: "class",
     theme: {
         extend: {
             colors: {
+                // Temporary
+                   "brand-card-bg": "var(--brand-card-bg)",
+                   "brand-green": "var(--brand-green)",
+                brand:{
+                    orange:{
+                        100:"#F6F0E6"
+                    },
+                    dark:{
+                        DEFAULT:"#201E1E"
+                    },
+                    gray:{
+                        DEFAULT:"#EFE9DE",
+                        100:"#E1DBD0",
+                    }
+                },
                 orange: {
                     DEFAULT: "#f1760f",
                     "50": "#fff8eb",
@@ -70,6 +87,7 @@ const config: Config = {
                     "900": "#3b3b3e",
                     "950": "#1c1c1e"
                 },
+                
                 // VS Code Theme Colors
                 vscode: {
                     background: {
