@@ -1,11 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind typography;
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
+    --brand-card-bg: #EFE9DE; 
+    --brand-green:#0E9158;
 }
 
 body {
