@@ -27,16 +27,5 @@
       "help wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/1984",
-    "publishedAt": "2025-10-31T21:54:25Z",
-    "title": "arithmetic overflows in `binary_sv2`",
-    "labels": [
-      "bug",
-      "binary-sv2",
-      "fuzz"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
