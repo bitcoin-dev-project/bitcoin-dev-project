@@ -1,6 +1,7 @@
 # Ignore artifacts
 scripts/*
 public/open-source-projects/issues/*
+public/learn/*
 
 # Ignore markdown files
 *.md

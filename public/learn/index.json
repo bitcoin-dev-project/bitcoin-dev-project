@@ -1,0 +1,257 @@
+{
+  "items": [
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide"
+      ],
+      "bannerColor": "#FFF6EB",
+      "byBDP": "true",
+      "logo": "/images/learn/BTLDR.webp",
+      "title": "Bitcoin TLDR",
+      "description": "Bitcoin-dev and Lightning-dev mailing list summaries and discovery.",
+      "link": "https://tldr.bitcoinsearch.xyz/"
+    },
+    {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide",
+        "tool"
+      ],
+      "bannerColor": "#FFFFFF",
+      "byBDP": "true",
+      "logo": "/images/learn/Btranscripts.webp",
+      "title": "Bitcoin Transcripts",
+      "description": "Peruse archives of transcribed talks, podcasts and lectures.",
+      "link": "https://btctranscripts.com/"
+    },
+    {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide",
+        "tool"
+      ],
+      "bannerColor": "#181925",
+      "byBDP": "true",
+      "logo": "/images/learn/bsearch.webp",
+      "title": "Bitcoin Search",
+      "description": "The technical bitcoin search engine we deserve.",
+      "link": "https://bitcoinsearch.xyz/"
+    },
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide",
+        "tool"
+      ],
+      "bannerColor": "#FFFFFF",
+      "logo": "/images/learn/boptech.webp",
+      "title": "Bitcoin Optech",
+      "description": "The best source to stay up to date with technical developments.",
+      "link": "https://bitcoinops.org/"
+    },
+    {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "tool"
+      ],
+      "bannerColor": "#181925",
+      "byBDP": "true",
+      "logo": "/images/learn/chatbtc.webp",
+      "title": "ChatBTC",
+      "description": "Chat with your favorite bitcoin sources and authors.",
+      "link": "https://chat.bitcoinsearch.xyz/"
+    },
+    {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "interactive"
+      ],
+      "bannerColor": "#5E8189",
+      "byBDP": "true",
+      "logo": "/images/learn/savingsatoshi.webp",
+      "title": "Saving Satoshi",
+      "description": "An interactive science fiction game designed to inspire a generation to fall in love with bitcoin.",
+      "link": "https://chat.bitcoinsearch.xyz/"
+    },
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "seminar",
+        "tool"
+      ],
+      "bannerColor": "#E2D8C4",
+      "byBDP": "true",
+      "logo": "/images/learn/learnrust.webp",
+      "title": "The Bitcoiner's Intro to Rust",
+      "description": "Build a raw transaction decoder from scratch in Rust. Topics covered include types, data structures, references, stack and the heap, traits, error handling and more.",
+      "link": "https://btcdemy.thinkific.com/courses/intro-to-rust"
+    },
+    {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide"
+      ],
+      "bannerColor": "#ECD4B5",
+      "logo": "/images/learn/books.webp",
+      "title": "Bitcoin Development Philosophy",
+      "description": "Insights and understanding into bitcoin's design trade-offs & development philosophy.",
+      "link": "https://bitcoindevphilosophy.com/"
+    },
+    {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide"
+      ],
+      "bannerColor": "#ECD4B5",
+      "logo": "/images/learn/books.webp",
+      "title": "Mastering Bitcoin",
+      "description": "The classic Bitcoin technical resource—enhanced and expanded in its third edition.",
+      "link": "https://github.com/bitcoinbook/bitcoinbook"
+    },
+    {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide"
+      ],
+      "bannerColor": "#ECD4B5",
+      "logo": "/images/learn/books.webp",
+      "title": "Mastering Lightning",
+      "description": "The most comprehensive technical book on Lightning, prepare for real complexity.",
+      "link": "https://github.com/lnbook/lnbook"
+    },
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide",
+        "seminar"
+      ],
+      "bannerColor": "#D1E2F3",
+      "logo": "/images/learn/computer.webp",
+      "title": "Tinybitcoinkeeper",
+      "description": "Playfully explore Bitcoin’s network dynamics with 150 lines of Python.",
+      "link": "https://github.com/willcl-ark/tinybitcoinpeer"
+    },
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide",
+        "seminar"
+      ],
+      "bannerColor": "#D1E2F3",
+      "logo": "/images/learn/computer.webp",
+      "title": "Learn Bitcoin From Command Line",
+      "description": "Hands-on guide to node-based transactions, scripting, and hidden-services setup.",
+      "link": "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line"
+    },
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide",
+        "seminar"
+      ],
+      "bannerColor": "#D1E2F3",
+      "logo": "/images/learn/computer.webp",
+      "title": "Transaction Tutorial",
+      "description": "Master SegWit, Taproot, sighashes, and timelocks with local Bitcoin scripting.",
+      "link": "https://github.com/chaincodelabs/bitcoin-tx-tutorial"
+    },
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "seminar"
+      ],
+      "bannerColor": "#ECD4B5",
+      "logo": "/images/learn/books.webp",
+      "title": "Chaincode Lightning",
+      "description": "Curated program on Lightning development with discussions and hands-on cohort sessions.",
+      "link": "https://learning.chaincode.com/#seminars"
+    },
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide"
+      ],
+      "bannerColor": "#D1E2F3",
+      "logo": "/images/learn/computer.webp",
+      "title": "Building on LN",
+      "description": "Build a Lightning graph visualizer, paid-invoice ownership game, and TypeScript.",
+      "link": "https://buildonln.com/"
+    },
+    {
+      "difficulty": "hard",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide",
+        "seminar"
+      ],
+      "bannerColor": "#D1E2F3",
+      "logo": "/images/learn/computer.webp",
+      "title": "Schnorr Taproot",
+      "description": "Learn Schnorr signatures, MuSig aggregation, and Taproot hands-on in Jupyter.",
+      "link": "https://bitcoinops.org/en/schnorr-taproot-workshop/"
+    },
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "guide",
+        "seminar"
+      ],
+      "bannerColor": "#D1E2F3",
+      "logo": "/images/learn/computer.webp",
+      "title": "Cryptography camp workbook",
+      "description": "Learn cryptographic security and proofs through a practical, hands-on workbook.",
+      "link": "https://github.com/cryptography-camp/workbook"
+    }
+  ]
+}

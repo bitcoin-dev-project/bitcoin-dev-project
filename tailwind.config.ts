@@ -9,8 +9,6 @@ const config: Config = {
         "./layouts/**/*.{js,ts,tsx}",
         "./public/decoding-bitcoin/**/*.mdx",
         "node_modules/@bitcoin-dev-project/bdp-ui/dist/**/*.{js,mjs,jsx,ts,tsx}",
-        "../bdp-ui/dist/**/*.{js,ts,jsx,tsx}"
-
     ],
     darkMode: "class",
     theme: {
@@ -20,12 +18,17 @@ const config: Config = {
                    "brand-card-bg": "var(--brand-card-bg)",
                    "brand-green": "var(--brand-green)",
                 brand:{
+                    DEFAULT:"#F6F0E6",
+                    stroke:{
+                        "on-base":"#E1DBD0",
+                    },
                     orange:{
                         100:"#F6F0E6"
                     },
                     dark:{
-                        DEFAULT:"#201E1E"
+                        DEFAULT:"#201E1E" 
                     },
+                    
                     gray:{
                         DEFAULT:"#EFE9DE",
                         100:"#E1DBD0",
