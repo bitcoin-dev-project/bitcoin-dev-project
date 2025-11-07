@@ -1,13 +1,12 @@
 "use client"
 
-import { Pill } from "@bitcoin-dev-project/bdp-ui"
 import {
     BdpTag,
     BookIcon,
     RightArrowIcon
 } from "@bitcoin-dev-project/bdp-ui/icons"
 import Image from "next/image"
-import { RebrandedHeader } from "@/components/rebranded-header"
+import AsideGoTO from "@/components/aside-go-to"
 
 type Props = {
     content: string | React.ReactNode
@@ -32,35 +31,9 @@ const Item = ({ content, title }: Props) => (
 export default function Career() {
     return (
         <div className="min-h-screen bg-[#F6F0E6] font-quicksand">
-            <RebrandedHeader />
             <div className="flex flex-col p-14 max-sm:p-7 my-0 max-w-7xl mx-auto">
                 <div className="flex gap-12 max-lg:flex-col">
-                    {/* Left Sidebar */}
-                    <aside className="w-96 max-lg:w-full flex-shrink-0 flex flex-col gap-6">
-                        {/* GO TO Section */}
-                        <div className="flex flex-col gap-4">
-                            <h2 className="text-2xl font-bold text-black font-montserrat">
-                                GO TO
-                            </h2>
-                            <div className="flex gap-3 flex-wrap">
-                                <Pill selected={false}>Learn</Pill>
-                                <Pill selected={false}>Contribute</Pill>
-                                <Pill selected={true}>Get Funded</Pill>
-                            </div>
-                        </div>
-
-                        {/* Hot Air Balloon Image */}
-                        <div className="mt-4">
-                            <Image
-                                src="/images/hotair-balloon.png"
-                                alt="Hot Air Balloon"
-                                width={400}
-                                height={600}
-                                className="w-full h-auto"
-                            />
-                        </div>
-                    </aside>
-
+                        <AsideGoTO selected="career" />
                     {/* Main Content Area */}
                     <div className="flex flex-col flex-1 gap-y-10">
                         <div className="flex flex-col gap-6">
