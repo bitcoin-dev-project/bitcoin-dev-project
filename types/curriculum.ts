@@ -15,5 +15,10 @@ export type TagType = "guide" | "seminar" | "tool" | "interactive"
 export type Difficulty = "easy" | "medium" | "hard"
 
 export interface ICurriculum {
-    allCurriculum: Curriculum[]
+    allCurriculum?: Curriculum[]
+}
+
+export type FilterDifficulty = {
+    count: number;
+    level: Difficulty;
 }
