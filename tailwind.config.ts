@@ -17,16 +17,20 @@ const config: Config = {
                 // Temporary
                    "brand-card-bg": "var(--brand-card-bg)",
                    "brand-green": "var(--brand-green)",
+                   "brand-light-100": "var(--brand-light-100)",
+                   "brand-dark-100": "var(--brand-dark-100)",
+                   "brand-orange-100": "var(--brand-orange-100)",
                 brand:{
                     DEFAULT:"#F6F0E6",
                     stroke:{
                         "on-base":"#E1DBD0",
                     },
                     orange:{
-                        100:"#F6F0E6"
+                        DEFAULT:"#F6F0E6"
                     },
                     dark:{
-                        DEFAULT:"#201E1E" 
+                        DEFAULT:"#201E1E" ,
+                        100:"#201E1E"
                     },
                     
                     gray:{

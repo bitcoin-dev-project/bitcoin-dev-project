@@ -4,6 +4,10 @@ import { BDPCard } from "@bitcoin-dev-project/bdp-ui"
 import React from "react"
 
 const CardContainers: React.FC<ICurriculum> = ({ allCurriculum }) => {
+    if (!allCurriculum) {
+        return null
+    }
+
     return (
         <div className="grid md:grid-cols-2 justify-between w-full gap-5">
             {allCurriculum.map((curriculum, index) => (
