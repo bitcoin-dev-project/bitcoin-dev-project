@@ -24,9 +24,12 @@
             "@/data/*": ["data/*"],
             "@/layouts/*": ["components/decoding-bitcoin/layouts/*"],
             "@/css/*": ["css/*"],
-            "contentlayer/generated": ["./.contentlayer/generated"]
+            "contentlayer/generated": ["./.contentlayer/generated"],
+            "pliny/*": ["node_modules/pliny/*"]
         },
-        "moduleResolution": "node"
+        "moduleResolution": "bundler",
+        "resolvePackageJsonExports": true,
+        "resolvePackageJsonImports": true
     },
     "include": [
         "next-env.d.ts",

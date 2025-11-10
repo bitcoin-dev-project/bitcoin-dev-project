@@ -11,6 +11,7 @@ module.exports = () => {
     const plugins = [withContentlayer, withBundleAnalyzer]
     return plugins.reduce((acc, next) => next(acc), {
         reactStrictMode: true,
+        transpilePackages: ["@bitcoin-dev-project/bdp-ui"],
         pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
         eslint: {
             dirs: ["app", "components", "layouts", "scripts"]
