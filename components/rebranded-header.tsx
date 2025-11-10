@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { RightArrowIcon } from "@bitcoin-dev-project/bdp-ui/icons"
 
 export function RebrandedHeader() {
     return (
@@ -25,19 +24,15 @@ export function RebrandedHeader() {
                     <div className="flex items-center gap-6">
                         <Link
                             href="/about"
-                            className="text-black font-semibold hover:text-gray-700 transition-colors"
+                            className="text-black font-medium hover:text-gray-700 transition-colors text-base"
                         >
                             About
                         </Link>
                         <Link
-                            href="/"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-[#EB5234] text-[#F6F0E6] font-semibold rounded-[10px] hover:bg-[#d94428] transition-all duration-200 hover:scale-105"
+                            href="/explore"
+                            className="px-6 py-3 bg-[#EB5234] text-white font-medium rounded-[10px] hover:opacity-90 transition-all duration-200 text-base"
                         >
-                            <span>Start exploring</span>
-                            <RightArrowIcon
-                                width={14}
-                                className="text-[#F6F0E6]"
-                            />
+                            Start exploring
                         </Link>
                     </div>
                 </div>

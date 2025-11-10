@@ -1,12 +1,9 @@
 import { Barlow, Montserrat, Quicksand } from "next/font/google"
 import type { Metadata } from "next"
 import "./globals.css"
-import { Header } from "@/components/header"
-import { ThemeProvider } from "next-themes"
 import "remark-github-blockquote-alert/alert.css"
 import siteMetadata from "@/data/siteMetadata"
-import FooterComponent from "@/components/footer-component"
-import { ConditionalHeader } from "@/components/conditional-header"
+import { ConditionalBody } from "@/components/conditional-body"
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteMetadata.siteUrl),
@@ -77,6 +74,8 @@ export default function RootLayout({
 }: {
     children: React.ReactNode
 }) {
+    const fontVariables = `${barlow.variable} ${quicksand.variable} ${montserrat.variable}`
+
     return (
         <html
             lang={siteMetadata.language}
@@ -95,18 +94,9 @@ export default function RootLayout({
                     href="/feed.xml"
                 />
             </head>
-            <body
-                className={`${barlow.variable} ${quicksand.variable} ${montserrat.variable} bg-white dark:bg-black text-vscode-text-light dark:text-vscode-text-dark`}
-            >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme={siteMetadata.theme}
-                >
-                    <ConditionalHeader />
-                    <main>{children}</main>
-                    <FooterComponent />
-                </ThemeProvider>
-            </body>
+            <ConditionalBody fontVariables={fontVariables}>
+                {children}
+            </ConditionalBody>
         </html>
     )
 }
