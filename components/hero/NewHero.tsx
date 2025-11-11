@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import BDPLogoWhite from "../assets/BDPLogoWhite"
 
 export function NewHero() {
     const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
@@ -115,14 +116,7 @@ export function NewHero() {
             {/* Navigation */}
             <nav className="relative z-10 flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 h-20">
                 <Link href="/" className="flex items-center flex-shrink-0">
-                    <Image
-                        src="/images/bdp-logo-white.png"
-                        alt="BDP Logo"
-                        width={120}
-                        height={40}
-                        className="h-10 w-auto"
-                        priority
-                    />
+                  <BDPLogoWhite />
                 </Link>
                 <div className="flex items-center gap-6">
                     <Link

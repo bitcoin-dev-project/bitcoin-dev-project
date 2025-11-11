@@ -26,7 +26,7 @@ export const REBRANDMOTTOS: MottosNav[] = [
     },
     {
         name: "Get Funded",
-        slug: "career"
+        slug: "get-funded"
     }
 ]
 export const FILTERSGUIDE: FilterResourceType[] = [

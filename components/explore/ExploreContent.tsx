@@ -45,7 +45,6 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                     >
                         <ToolIcon className="w-6 h-6 text-white" />
                     </span>
-                    {/* Tap Cursor Icon - Orange */}
                     <span 
                         className="inline-flex items-center justify-center w-12 h-12 rounded-full relative z-10 -ml-3 border-2"
                         style={{ backgroundColor: '#D18616', borderColor: '#ECD4B5' }}
@@ -69,7 +68,7 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                     
                     {activeSection === 'learn' ? (
                         <Link 
-                            href="/decoding"
+                            href="/learn"
                             className="px-6 py-2 border-2 rounded-full text-gray-700 hover:opacity-90 transition-all font-medium font-quicksand"
                             style={{ backgroundColor: '#EFE9DE', borderColor: 'rgba(169, 164, 155, 0.75)' }}
                         >
@@ -105,7 +104,7 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                     
                     {activeSection === 'contribute' ? (
                         <Link 
-                            href="/good-first-issues"
+                            href="/contribute"
                             className="px-6 py-2 border-2 rounded-full text-gray-700 hover:opacity-90 transition-all font-medium font-quicksand"
                             style={{ backgroundColor: '#EFE9DE', borderColor: 'rgba(169, 164, 155, 0.75)' }}
                         >
@@ -140,7 +139,7 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                     
                     {activeSection === 'funded' ? (
                         <Link 
-                            href="/career"
+                            href="/get-funded"
                             className="px-6 py-2 border-2 rounded-full text-gray-700 hover:opacity-90 transition-all font-medium font-quicksand"
                             style={{ backgroundColor: '#EFE9DE', borderColor: 'rgba(169, 164, 155, 0.75)' }}
                         >

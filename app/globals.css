@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind typography;
 
 @import "@bitcoin-dev-project/bdp-ui/styles.css";
 :root {

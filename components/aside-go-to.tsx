@@ -34,6 +34,7 @@ const AsideGoTO: React.FC<IGoTO> = ({ selected, allCurriculum, path }) => {
                                         selectChange(mottos.slug)
                                     }}
                                     selected={mottos.slug === selected}
+                                    className={`${mottos.slug === selected ?"!bg-[#201E1E99] border-none" :""} !rounded-xl max-w-[max-content] py-0.5 px-2`}
                                 >
                                     {mottos.name}
                                 </Pill>
@@ -41,7 +42,7 @@ const AsideGoTO: React.FC<IGoTO> = ({ selected, allCurriculum, path }) => {
                         </div>
                     </div>
 
-                    {selected === "career" && (
+                    {selected === "get-funded" && (
                         <div className="mt-4">
                             <Image
                                 src="/images/hotair-balloon.png"
@@ -53,11 +54,11 @@ const AsideGoTO: React.FC<IGoTO> = ({ selected, allCurriculum, path }) => {
                         </div>
                     )}
 
-                    {selected !== "career" && (
+                    {selected !== "get-funded" && (
                         <Filters allCurriculum={allCurriculum} path={path} />
                     )}
                 </aside>
-                {selected !== "career" && (
+                {selected !== "get-funded" && (
                     <div className="hidden lg:flex lg:flex-col font-quicksand gap-1.5 border rounded-lg p-2 border-brand-stroke-on-base">
                         {FILTERSGUIDE.map((guide) => (
                             <div key={guide.tag} className="flex items-center">

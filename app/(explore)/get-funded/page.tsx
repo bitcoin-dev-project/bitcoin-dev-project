@@ -30,22 +30,22 @@ const Item = ({ content, title }: Props) => (
 
 export default function Career() {
     return (
-        <div className="min-h-screen bg-[#F6F0E6] font-quicksand">
-            <div className="flex flex-col p-14 max-sm:p-7 my-0 max-w-7xl mx-auto">
+        <div className="min-h-screen bg-[#F6F0E6] font-quicksand text-brand-dark">
+            <div className="flex flex-col max-sm:p-7 my-0 max-w-7xl mx-auto">
                 <div className="flex gap-12 max-lg:flex-col">
-                        <AsideGoTO selected="career" />
-                    {/* Main Content Area */}
+                    <div className=" lg:w-[300px] flex flex-col gap-6">
+                        <AsideGoTO selected="get-funded" />
+                    </div>
                     <div className="flex flex-col flex-1 gap-y-10">
                         <div className="flex flex-col gap-6">
                             <h1 className="text-[58px] max-lg:text-[42px] font-bold leading-tight text-black font-montserrat">
                                 GET FUNDED
                             </h1>
-                            <p className="text-xl text-black max-w-4xl font-quicksand">
+                            <p className="text-xl text-brand-dark max-w-4xl font-quicksand">
                                 Learn how grants support full-time bitcoin
                                 development.
                             </p>
 
-                            {/* get-funded-hero.png Image with BDP Tag - Card Container */}
                             <div
                                 className="my-6 rounded-lg border-2"
                                 style={{

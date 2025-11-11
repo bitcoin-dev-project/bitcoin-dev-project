@@ -19,9 +19,8 @@ export default function Explore() {
 
     return (
         <>
-            <RebrandedHeader />
             <Wrapper>
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-16 py-16 px-8 max-sm:px-4 min-h-[calc(100vh-80px)]">
+                <div className="flex flex-col text-brand-dark lg:flex-row items-center justify-between gap-16 py-16 px-8 max-sm:px-4 min-h-[calc(100vh-80px)]">
                     {/* Left Content */}
                     <ExploreContent onSectionChange={setActiveSection} />
 

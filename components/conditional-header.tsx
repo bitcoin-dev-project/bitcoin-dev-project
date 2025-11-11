@@ -8,7 +8,7 @@ export function ConditionalHeader() {
     const pathname = usePathname()
 
     // Hide old header on rebranded pages
-    const rebrandedPages = ["/projects", "/career", "/about", "/explore", "/", "/learn", "/contribute"]
+    const rebrandedPages = ["/projects", "/get-funded", "/about", "/explore",   "/learn", "/contribute"]
     const isRebrandedPage = rebrandedPages.some((page) =>
         pathname === page || (page !== "/" && pathname?.startsWith(page))
     )
@@ -16,6 +16,10 @@ export function ConditionalHeader() {
     if (isRebrandedPage) {
         return <RebrandedHeader />
     }
+    if(pathname === "/"){
+        return <></>
+    }
+
 
     return <Header />
 }

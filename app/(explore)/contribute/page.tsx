@@ -9,7 +9,7 @@ const ContributePage = () => {
     const { filteredCurriculum: allCurriculum } = useCurriculum()
 
     return (
-        <div className="w-full text-brand-dark flex gap-[90px]">
+        <div className="w-full text-brand-dark flex flex-col lg:flex-row gap-[90px]">
             <div className="w-[300px] flex flex-col gap-6">
                 <AsideGoTO selected="contribute" allCurriculum={allCurriculum} />
             </div>

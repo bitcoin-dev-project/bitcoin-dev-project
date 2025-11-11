@@ -74,10 +74,7 @@ export function PhotoSlider() {
     }
 
     return (
-        <div className="w-full pb-16 px-8 max-sm:px-4">
-            <h2 className="text-3xl max-md:text-2xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-                Our Community in Action
-            </h2>
+        <div className="w-full py-16 px-8 max-sm:px-4">
             
             <div className="relative max-w-7xl mx-auto">
                 {/* Previous Button */}

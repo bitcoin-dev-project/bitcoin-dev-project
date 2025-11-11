@@ -166,7 +166,6 @@ const projects: ProjectCard[] = [
 export default function Projects() {
     return (
         <div className="min-h-screen bg-[#F6F0E6] font-quicksand">
-            <RebrandedHeader />
             <div className="max-w-7xl mx-auto">
                 {/* Hero */}
                 <section className="px-4 sm:px-6 lg:px-8 xl:px-12 pt-16 pb-12">

@@ -98,7 +98,11 @@ const Filters: React.FC<IFilters> = () => {
                                     onClick={() => handleDifficultyClick(level)}
                                     className={`cursor-pointer transition-opacity`}
                                 >
-                                    <Leaf selected={difficulty === level} leavesCount={count} withBorder />
+                                    <Leaf
+                                        selected={difficulty === level}
+                                        leavesCount={count}
+                                        withBorder
+                                    />
                                 </div>
                             ))}
                         </div>
@@ -124,7 +128,7 @@ const Filters: React.FC<IFilters> = () => {
                 className={`fixed bottom-0 flex flex-col gap-10 left-0 right-0 bg-brand rounded-t-3xl shadow-2xl py-10 px-5 z-10 transition-transform duration-300 ease-in-out lg:hidden ${
                     isFilterOpen ? "translate-y-0" : "translate-y-full"
                 }`}
-                style={{ height: "70vh" }}
+                style={{ minHeight: "70vh" }}
             >
                 <div className="flex flex-col gap-5">
                     <h3 className="font-extrabold font-montserrat text-[22px]">
@@ -144,7 +148,9 @@ const Filters: React.FC<IFilters> = () => {
                     </div>
                 </div>
                 <div className="flex flex-col gap-5">
-                    <h3 className="font-extrabold font-montserrat text-[22px]">SORT & FILTER</h3>
+                    <h3 className="font-extrabold font-montserrat text-[22px]">
+                        SORT & FILTER
+                    </h3>
                     <div className="flex flex-col font-quicksand gap-2">
                         <p>Filter by resource type</p>
                         <div className="flex lg:hidden flex-wrap gap-2">
@@ -170,12 +176,22 @@ const Filters: React.FC<IFilters> = () => {
                                     onClick={() => handleDifficultyClick(level)}
                                     className={`cursor-pointer transition-opacity`}
                                 >
-                                    <Leaf selected={difficulty === level} leavesCount={count} withBorder />
+                                    <Leaf
+                                        selected={difficulty === level}
+                                        leavesCount={count}
+                                        withBorder
+                                    />
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
+                <Button
+                    label="Clear Filters"
+                    variant="rebrand"
+                    onClick={clearFilters}
+                    className="block lg:hidden"
+                ></Button>
             </div>
         </>
     )

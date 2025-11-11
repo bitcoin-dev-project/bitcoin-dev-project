@@ -57,7 +57,7 @@ export type MottosNav = {
     name:string;
     slug:Mottos;
 }
-export type Mottos = "learn" | "contribute" | "career"
+export type Mottos = "learn" | "contribute" | "career" | "get-funded"
 
 // Filters
 export interface FilterResourceType {
