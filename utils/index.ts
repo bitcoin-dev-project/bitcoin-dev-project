@@ -1,4 +1,5 @@
-import type { IssueCardElement } from "../types"
+import { Difficulty, FilterDifficulty } from "@/types/curriculum"
+import type { FilterResourceType, IssueCardElement, MottosNav } from "../types"
 
 export const SORTOPTIONS = ["sort", "random", "newest first", "oldest first"]
 
@@ -14,6 +15,44 @@ export const FILTERTAGS = [
     "owner"
 ]
 
+export const REBRANDMOTTOS: MottosNav[] = [
+    {
+        name: "Learn",
+        slug: "learn"
+    },
+    {
+        name: "Contribute",
+        slug: "contribute"
+    },
+    {
+        name: "Get Funded",
+        slug: "get-funded"
+    }
+]
+export const FILTERSGUIDE: FilterResourceType[] = [
+    {
+        tag: "guide",
+        description: "Instructional, step-by-step"
+    },
+    {
+        tag: "tool",
+        description: "Lecture, talks"
+    },
+    {
+        tag: "interactive",
+        description: "Interactive, hands-on"
+    },
+    {
+        tag: "seminar",
+        description: "Utility or reference to explore"
+    }
+]
+
+export const FILTERDIFFICULTY: FilterDifficulty[] = [
+    { count: 1, level: "easy" },
+    { count: 2, level: "medium" },
+    { count: 3, level: "hard" }
+]
 export function getValues({
     key,
     issues

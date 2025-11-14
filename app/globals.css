@@ -1,11 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind typography;
+
+@import "@bitcoin-dev-project/bdp-ui/styles.css";
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
+    --brand-card-bg: #EFE9DE; 
+    --brand-green:#0E9158;
+    --brand-dark-100:#201E1E;
+    --brand-orange-100:#EB5234;
+    --brand-light-100:#F6F0E6;
 }
 
 body {
@@ -37,6 +43,21 @@ body {
     animation: shimmer 2s infinite;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
 .prose {
     max-width: unset;
 }
@@ -53,4 +74,18 @@ body {
 
 .animate-smooth-blink {
     animation: smoothBlink 1s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
 }

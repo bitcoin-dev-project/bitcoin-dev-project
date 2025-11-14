@@ -1,11 +1,9 @@
-import { Barlow } from "next/font/google"
+import { Barlow, Montserrat, Quicksand } from "next/font/google"
 import type { Metadata } from "next"
 import "./globals.css"
-import { Header } from "@/components/header"
-import { ThemeProvider } from "next-themes"
 import "remark-github-blockquote-alert/alert.css"
 import siteMetadata from "@/data/siteMetadata"
-import FooterComponent from "@/components/footer-component"
+import { ConditionalBody } from "@/components/conditional-body"
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteMetadata.siteUrl),
@@ -55,11 +53,29 @@ const barlow = Barlow({
     subsets: ["latin"]
 })
 
+const quicksand = Quicksand({
+    weight: ["300", "400", "500", "600", "700"],
+    variable: "--quicksand-font",
+    preload: true,
+    display: "swap",
+    subsets: ["latin"]
+})
+
+const montserrat = Montserrat({
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+    variable: "--montserrat-font",
+    preload: true,
+    display: "swap",
+    subsets: ["latin"]
+})
+
 export default function RootLayout({
     children
 }: {
     children: React.ReactNode
 }) {
+    const fontVariables = `${barlow.variable} ${quicksand.variable} ${montserrat.variable}`
+
     return (
         <html
             lang={siteMetadata.language}
@@ -78,18 +94,9 @@ export default function RootLayout({
                     href="/feed.xml"
                 />
             </head>
-            <body
-                className={`${barlow.className}  bg-white dark:bg-black text-vscode-text-light dark:text-vscode-text-dark`}
-            >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme={siteMetadata.theme}
-                >
-                    <Header />
-                    <main>{children}</main>
-                    <FooterComponent />
-                </ThemeProvider>
-            </body>
+            <ConditionalBody fontVariables={fontVariables}>
+                {children}
+            </ConditionalBody>
         </html>
     )
 }

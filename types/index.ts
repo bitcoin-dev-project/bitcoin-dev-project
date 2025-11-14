@@ -1,3 +1,4 @@
+import { TagType } from "@bitcoin-dev-project/bdp-ui"
 import { ImageProps } from "next/image"
 
 export type ProjectProperties = {
@@ -51,3 +52,17 @@ export interface IFeature {
     icon?: ImageProps["src"]
     link: string
 }
+
+export type MottosNav = {
+    name:string;
+    slug:Mottos;
+}
+export type Mottos = "learn" | "contribute" | "career" | "get-funded"
+
+// Filters
+export interface FilterResourceType {
+    tag:TagType;
+    description: string;
+}
+
+// Curriculum for learn
