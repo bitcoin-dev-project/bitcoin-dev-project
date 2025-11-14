@@ -782,19 +782,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7964",
-    "publishedAt": "2023-09-07T11:22:53Z",
-    "title": "[feature]: allow configuring upfront shutdown address in `lnd.conf`",
-    "labels": [
-      "enhancement",
-      "beginner",
-      "config",
-      "privacy",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7973",
     "publishedAt": "2023-09-11T14:59:59Z",
     "title": "[bug]: Channel not propagating in gossip and unable to update policies",
@@ -1140,6 +1127,17 @@
       "database",
       "data-race",
       "dependencies"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8671",
+    "publishedAt": "2024-04-20T00:02:49Z",
+    "title": "[bug]: Running LND becomes very slow on macOS (arm64) compared to Linux (ubuntu 22.04 aarch64)",
+    "labels": [
+      "bug",
+      "P3",
+      "performance"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
