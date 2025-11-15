@@ -27,15 +27,5 @@
       "help wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
-    "url": "https://github.com/stratum-mining/stratum/issues/2001",
-    "publishedAt": "2025-11-14T18:34:29Z",
-    "title": "`channels_sv2` server channels are not properly marking past jobs as stale",
-    "labels": [
-      "bug",
-      "channels-sv2"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
