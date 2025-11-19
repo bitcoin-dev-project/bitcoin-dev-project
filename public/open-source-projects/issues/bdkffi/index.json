@@ -35,5 +35,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/912",
+    "publishedAt": "2025-11-19T22:06:17Z",
+    "title": "bdk-swift Tests folder",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
