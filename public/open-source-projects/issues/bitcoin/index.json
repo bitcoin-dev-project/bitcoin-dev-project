@@ -395,16 +395,5 @@
       "P2P"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/33806",
-    "publishedAt": "2025-11-06T10:53:58Z",
-    "title": "malloc: Failed to allocate segment from range group - out of space",
-    "labels": [
-      "Bug",
-      "macOS",
-      "Resource usage"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
