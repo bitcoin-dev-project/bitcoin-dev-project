@@ -167,12 +167,11 @@ export default function Projects() {
     return (
         <div className="min-h-screen bg-[#F6F0E6] font-quicksand">
             <div className="max-w-7xl mx-auto">
-                {/* Hero */}
-                <section className="px-4 sm:px-6 lg:px-8 xl:px-12 pt-16 pb-12">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6 text-center font-montserrat">
+                <section className="px-4 sm:px-6 lg:px-8 xl:px-12 pt-5 pb-12 flex flex-col gap-5 lg:text-center">
+                    <h1 className="text-[2rem]  lg:text-6xl font-extrabold text-black font-montserrat">
                         Discover Open Source Projects
                     </h1>
-                    <p className="text-lg sm:text-xl text-black max-w-4xl font-light leading-relaxed text-center mx-auto">
+                    <p className="text-lg sm:text-xl text-black max-w-4xl font-light leading-relaxed  mx-auto">
                         It takes some work to go from curiosity to contribution.
                         But that path is not often laid out clearly. Below are
                         some stepping stones that will help you make your first
@@ -181,7 +180,6 @@ export default function Projects() {
                     </p>
                 </section>
 
-                {/* Grid */}
                 <section className="px-4 sm:px-6 lg:px-8 xl:px-12 pb-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {projects.map((project, i) => (

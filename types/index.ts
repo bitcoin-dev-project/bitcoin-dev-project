@@ -1,5 +1,6 @@
 import { TagType } from "@bitcoin-dev-project/bdp-ui"
 import { ImageProps } from "next/image"
+import { ComponentType } from "react"
 
 export type ProjectProperties = {
     name: string
@@ -66,3 +67,15 @@ export interface FilterResourceType {
 }
 
 // Curriculum for learn
+
+export interface FooterLinkItem {
+  name: string;
+  link: string;
+  target?: "_blank" | "_self" | "_parent" | "_top";
+  component?: ComponentType<any>;
+}
+
+export interface FooterSection {
+  name: string;
+  links: FooterLinkItem[];
+}

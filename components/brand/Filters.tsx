@@ -61,7 +61,7 @@ const Filters: React.FC<IFilters> = () => {
                         >
                             Resource name or Description
                         </label>
-                        <Search id="search" onChange={handleInputChange} />
+                        <Search className="w-full" id="search" onChange={handleInputChange} />
                     </div>
 
                     <div className="flex lg:flex-col gap-2">
@@ -113,7 +113,7 @@ const Filters: React.FC<IFilters> = () => {
                         variant="rebrand"
                         onClick={clearFilters}
                         className="hidden lg:block"
-                    ></Button>
+                    />
                 </div>
             </div>
 

@@ -82,10 +82,10 @@ body {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-2px);
     }
 }
 
 .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 0.5s ease-in-out infinite;
 }
