@@ -19,7 +19,7 @@ const Testimonial: React.FC<ITestimonial> = ({
 }) => {
     return (
         <div
-            className="sticky top-[100px] z-20 mb-44 w-full md:min-h-[250px] md:max-w-[65%] 2xl:max-w-full mx-auto" 
+            className="sticky top-[100px] z-20 mb-44 w-full flex flex-col justify-center md:min-h-[330px] md:max-w-[65%] 2xl:max-w-full mx-auto" 
             style={{
                 transform: "translateY(0)",
                 color,
@@ -27,7 +27,7 @@ const Testimonial: React.FC<ITestimonial> = ({
                 borderColor: color
             }}
         >
-            <div className="relative border border-solid rounded-none h-full md:p-[20px] md:pt-[36px]">
+            <div className="relative rounded-none h-full md:p-[20px] md:pt-[36px]">
                 <span
                     className="absolute top-[10px] left-[16px] h-3 w-3 rounded-full"
                     style={{ backgroundColor: color,  borderColor: color }}

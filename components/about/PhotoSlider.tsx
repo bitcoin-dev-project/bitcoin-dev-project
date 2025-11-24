@@ -72,7 +72,6 @@ export function PhotoSlider() {
     return (
         <div className="w-full py-16 pl-4 lg:pl-8">
             <div className="relative  w-full">
-
                 <div
                     ref={scrollContainerRef}
                     onScroll={checkScroll}

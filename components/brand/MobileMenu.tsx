@@ -17,7 +17,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: { isOpen?: boolean; setIsOpen:Dispatc
     return (
         <div
             className={clsx(
-                `flex flex-col gap-12 z-50 top-0 bg-brand px-5 py-3 transition-all duration-700 ease-in-out`,
+                `flex flex-col gap-12 z-50 top-0 bg-brand px-5 py-3 transition-all duration-100 ease-in-out`,
                 {
                     "fixed h-screen w-screen overflow-hidden opacity-100": isOpen,
                     "z-[-10] absolute opacity-0": !isOpen
