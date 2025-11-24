@@ -34,16 +34,16 @@ export default function About() {
     return (
         <>
             <Wrapper>
-                <div className="flex flex-col mx-auto my-0 text-brand-dark">
-                    {/* Hero Section with Content */}
-                    <div className="py-16 px-8 max-sm:px-4">
+                <div className="flex flex-col my-0 text-brand-dark">
+                    
+                    <div className="py-10 lg:py-16 px-4 lg:px-8 max-sm:px-4">
                         {/* Hero Title */}
                         <h1 className="font-montserrat text-[2rem] md:text-[2.5rem] lg:text-[3.5rem] text-center font-bold flex  mb-[92px] lg:mb-[116px] flex-col gap-0">
                            <span className="leading-none">About The Bitcoin</span> <span>Dev Project</span>
                         </h1>
 
                         {/* Content Sections */}
-                        <div className="max-w-4xl mx-auto space-y-16 max-md:space-y-12">
+                        <div className="max-w-4xl mx-auto flex flex-col gap-10">
                             {/* WHY Section */}
                             <section className="space-y-6 text-brand-dark">
                                 <h2 className="text-3xl max-md:text-2xl font-bold  uppercase tracking-wider font-montserrat">
@@ -74,7 +74,7 @@ export default function About() {
                             </section>
 
                             {/* WHO Section */}
-                            <section className="space-y-6 text-brand-dark">
+                            <section className="text-brand-dark flex flex-col gap-2.5">
                                 <h2 className="text-3xl max-md:text-2xl font-bold uppercase tracking-wider font-montserrat">
                                     WHO
                                 </h2>
@@ -114,10 +114,9 @@ export default function About() {
                             </section>
                         </div>
                     </div>
-
-                    <PhotoSlider />
                 </div>
             </Wrapper>
+                                <PhotoSlider />
         </>
     )
 }

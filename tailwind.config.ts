@@ -26,7 +26,8 @@ const config: Config = {
                         "on-base":"#E1DBD0",
                     },
                     orange:{
-                        DEFAULT:"#F6F0E6"
+                        DEFAULT:"#F6F0E6",
+                        100:"#EB5234",
                     },
                     dark:{
                         DEFAULT:"#201E1E" ,
@@ -36,6 +37,11 @@ const config: Config = {
                     gray:{
                         DEFAULT:"#EFE9DE",
                         100:"#E1DBD0",
+                        200:"#A9A49B",
+                        300:"#6C6C6C"
+                    },
+                    blue:{
+                        200:"#4B7389"
                     }
                 },
                 orange: {
@@ -230,6 +236,10 @@ const config: Config = {
                     light: "#f1760f", // A light orange color
                     dark: "#d18616" // A darker orange for dark mode
                 }
+            },
+            backgroundImage:{
+                footer:"url('/images/footer.webp')",
+                "footer-mobile":"url('/images/footer-mobile.webp')",
             },
             keyframes: {
                 updown: {
