@@ -132,5 +132,15 @@
       "lightning"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/8004",
+    "publishedAt": "2025-11-25T14:30:03Z",
+    "title": "Reissue on recovery causes panic",
+    "labels": [
+      "bug",
+      "client"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
