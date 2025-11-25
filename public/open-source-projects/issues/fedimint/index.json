@@ -142,5 +142,14 @@
       "client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/8008",
+    "publishedAt": "2025-11-25T21:34:58Z",
+    "title": "Gatewayd stops processing payments",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
