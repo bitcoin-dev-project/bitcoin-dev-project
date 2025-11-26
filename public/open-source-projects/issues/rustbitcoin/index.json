@@ -60,16 +60,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   },
   {
-    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/1458",
-    "publishedAt": "2022-12-11T05:25:39Z",
-    "title": "Fixed-size consensus types should have `from_consensus_bytes(bytes: &[u8; N])`",
-    "labels": [
-      "minor API Change",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
-  },
-  {
     "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/1494",
     "publishedAt": "2022-12-20T21:31:13Z",
     "title": "CI: Test every commit ",
