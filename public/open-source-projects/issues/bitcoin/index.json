@@ -337,15 +337,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/32531",
-    "publishedAt": "2025-05-16T13:54:49Z",
-    "title": "avoid using invalidateblock to directly test reorg behavior",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/32849",
     "publishedAt": "2025-07-01T13:57:25Z",
     "title": "Internal bug detected: FinalizeAndExtractPSBT(psbtx_copy, mtx)",
