@@ -36,7 +36,7 @@ const FooterComponent = () => {
                                     key={subLink.name}
                                         href={subLink.link}
                                         target={subLink.target}
-                                        className="bg-brand-gray text-brand-gray-200/75  border rounded-[4px] w-[44px] h-[44px] flex items-center justify-center  border-brand-gray-100"
+                                        className="bg-brand-gray text-brand-gray-200/75 hover:text-brand-orange-100  border rounded-[4px] w-[44px] h-[44px] flex items-center justify-center  border-brand-gray-100"
                                     >
                                         {subLink?.component && (
                                             <subLink.component/>
