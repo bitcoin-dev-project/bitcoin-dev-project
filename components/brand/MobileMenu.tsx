@@ -17,16 +17,16 @@ const MobileMenu = ({ isOpen, setIsOpen }: { isOpen?: boolean; setIsOpen:Dispatc
     return (
         <div
             className={clsx(
-                `flex flex-col gap-12 z-50 top-0 bg-brand px-5 py-3 transition-all duration-100 ease-in-out`,
+                `flex flex-col gap-12 z-50 top-0 bg-brand px-5 py-3 justify-start transition-all duration-100 ease-in-out`,
                 {
                     "fixed h-screen w-screen overflow-hidden opacity-100": isOpen,
                     "z-[-10] absolute opacity-0": !isOpen
                 }
             )}
         >
-            <div className="flex flex-row items-center justify-between">
+            <div className="flex flex-row items-center justify-between h-20">
                 <BDPLogoRed />
-                <MobileClose onClick={onClose} role="button" />
+                <MobileClose onClick={onClose} role="button" className="w-8 h-8" />
             </div>
 
             <div className="flex flex-col pt-4">
@@ -68,7 +68,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: { isOpen?: boolean; setIsOpen:Dispatc
                                     className="bg-brand-orange-100 text-brand-orange text-2xl p-1  border rounded-[4px] w-[40px] h-[40px] flex items-center justify-center  border-brand-gray-100"
                                 >
                                     {subLink?.component && (
-                                        <subLink.component />
+                                        <subLink.component className="w-5" />
                                     )}
                                 </a>
                             ))}

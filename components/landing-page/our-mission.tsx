@@ -29,7 +29,7 @@ const OurMission = () => {
                 <div className="grid lg:grid-cols-2 gap-4 lg:gap-16 items-center">
                     <div className="flex flex-col gap-6 lg:gap-[60px] lg:max-w-[484px]">
                         <div className="flex flex-col gap-2 items-center lg:items-start">
-                            <h2 className="text-2xl font-bold text-[#2C2C2C]  text-center lg:text-left leading-[1.2] font-montserrat">
+                            <h2 className="text-2xl leading-[1.75rem] font-bold text-[#2C2C2C]  text-center lg:text-left  font-montserrat">
                                 WHAT IS THE BITCOIN DEV PROJECT ?
                             </h2>
                             <p className="text-xl text-[#2C2C2C] leading-relaxed font-quicksand text-center lg:text-left">

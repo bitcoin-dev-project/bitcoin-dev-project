@@ -11,13 +11,13 @@ const siteMetadata = {
     topicsRepo: "https://github.com/bitcoin-dev-project/decoding-bitcoin",
     siteLogo: "/public/hero.jpg",
     socialBanner:
-        "https://bitcoindevs.xyz/images/pages-thumbnails/social-banner.jpg",
+        "https://bitcoindevs.xyz/images/pages-thumbnails/bdp-rebrand-preview.webp",
     github: "https://github.com/bitcoin-dev-project/",
     x: "https://x.com/Bitcoin_Devs",
     locale: "en-US",
     twitter: {
         images: [
-            "https://bitcoindevs.xyz/images/pages-thumbnails/social-banner.jpg"
+            "https://bitcoindevs.xyz/images/pages-thumbnails/bdp-rebrand-preview.webp"
         ],
         card: "summary_large_image",
         link: "https://x.com/Bitcoin_Devs"

@@ -1,5 +1,7 @@
+import { number } from "bitcoinjs-lib/src/script"
+import clsx from "clsx"
 import Image from "next/image"
-import React from "react"
+import React, { use } from "react"
 
 interface ITestimonial {
     color: string
@@ -8,6 +10,7 @@ interface ITestimonial {
     title: string
     logo?: string
     quote: string
+    index:number
 }
 const Testimonial: React.FC<ITestimonial> = ({
     color,
@@ -15,42 +18,45 @@ const Testimonial: React.FC<ITestimonial> = ({
     author,
     title,
     logo,
-    quote
+    quote,
+    index,
 }) => {
     return (
         <div
-            className="sticky top-[100px] z-20 mb-44 w-full flex flex-col justify-center md:min-h-[330px] md:max-w-[65%] 2xl:max-w-full mx-auto" 
+            className={clsx("sticky z-20 border mb-20 w-full flex flex-col md:min-h-[218px] max-md:!max-w-[85%] !md:max-w-[unset] 2xl:max-w-full mx-auto")}
             style={{
                 transform: "translateY(0)",
                 color,
+                top: `${100 + index * 40}px`,
                 backgroundColor: bgColor,
-                borderColor: color
+                borderColor: color,
+                maxWidth:`${65 + (index * 5)}%`,
+                minHeight: `${218 + (index * 2)}px`
             }}
         >
-            <div className="relative rounded-none h-full md:p-[20px] md:pt-[36px]">
+            <div className="relative rounded-none h-full px-2.5 pt-[30px] pb-2.5 ">
                 <span
-                    className="absolute top-[10px] left-[16px] h-3 w-3 rounded-full"
+                    className="absolute top-[10px] left-[10px] h-3 w-3 rounded-full"
                     style={{ backgroundColor: color,  borderColor: color }}
                 />
                 <span
-                    className="absolute top-[10px] right-[16px] h-3 w-3 rounded-full"
+                    className="absolute top-[10px] right-[10px] h-3 w-3 rounded-full"
                     style={{ backgroundColor: color }}
                 />
 
-                <div className="rounded-[22px]  px-8 py-8 bg-brand-orange">
+                <div className="rounded-xl  px-5 py-5 bg-brand-orange h-full">
                     <div className="flex items-start gap-4">
                         <span className="text-3xl leading-none select-none" style={{color}}>
                             ❝
                         </span>
-                        <p className="font-quicksand  text-[20px] md:text-[21px] leading-[1.85] tracking-[0.005em]" style={{color}}>
+                        <p className="font-quicksand text-xl md:text-2xl leading-[1] tracking-[0%]" style={{color}}>
                             {quote}
                         </p>
                     </div>
 
                     <div className="flex items-center justify-between mt-5">
-                        {/* Logo on the left */}
                        
-                            <div className="w-12 h-12 relative flex-shrink-0">
+                            <div className="w-8 h-8 relative flex-shrink-0">
                               {logo && (   <Image
                                     src={logo}
                                     alt="Spiral"
@@ -60,11 +66,11 @@ const Testimonial: React.FC<ITestimonial> = ({
                             </div>
                     
 
-                        <div className="text-right" style={{color}}>
-                            <p className="font-montserrat font-semibold text-[16px]" >
+                        <div className="text-right font-quicksand" style={{color}}>
+                            <p className=" font-bold text-base" >
                                 {author}
                             </p>
-                            <p className="font-quicksand  text-[14px]">
+                            <p className="font-quicksand  text-base">
                                 {title}
                             </p>
                         </div>

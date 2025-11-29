@@ -246,42 +246,69 @@ export const FEATUREDPRODUCTS = [
 
 export const TESTIMONIALS = [
     {
-        quote: "The variety of free, open-source material that BDP provides is nothing short of impressive. They make exactly the kinds of tools & education that developers need.",
+        quote: "The variety of free, open-source material that the Bitcoin Dev Project provides is nothing short of impressive. They make exactly the kinds of tools & education that developers need.",
         author: "Steve Lee",
         title: "Lead, Spiral",
-        color: "#EC4182",
-        logo: "/images/testimonials/spiral-logo.svg",
-        bgColor: "#F5D7E2"
+        logo: "/images/testimonials/spiral-orange.webp",
+        color: "#CC7400",
+        bgColor: "#ECD4B5"
     },
     {
         quote: "I'd highly recommend people interested in contributing to Bitcoin start their journey at BDP.",
         author: "Anthony Milton",
         title: "Independent Bitcoin Researcher",
         color: "#CC7400",
-        bgColor: "#ECD4B5"
+        bgColor: "#ECD4B5",
+        logo: "/images/testimonials/bitcoin-orange.webp"
     },
     {
         quote: "The BDP is a welcoming community. It guided me to the right learning modules and tools, which helped me land a full-time job in bitcoin development!",
         author: "Matthew Vuk",
         title: "Researcher, Second",
-        color: "#396BEB",
-        bgColor: "#D1E2F3",
-        logo: "/images/testimonials/second-logo.svg"
+        color: "#CC7400",
+        bgColor: "#ECD4B5",
+
+        logo: "/images/testimonials/second.webp"
+    },
+    {
+        quote: "You’ve got the Bitcoin Dev Project’s tools, guides, and me. Honestly, that’s an unfair advantage. Build something great… or at least something that compiles. I’ll be napping on a warm node.",
+        author: "Holocat",
+        title: "Surprisingly helpful holographic cat",
+        color: "#CC7400",
+        bgColor: "#ECD4B5",
+        logo: "/images/testimonials/holocat.webp"
     }
 ]
 
 export const FAQS = [
     {
-        question: "Do you offer funding for contributors?",
+        question: "What is the Bitcoin Dev Project ?",
+        answer: "The Bitcoin Dev Project is an initiative to support developers who are trying to get more involved with bitcoin open-source software (BOSS). It’s designed to help curious coders become more confident and successful in bitcoin tech."
+    },
+    {
+        question: "What is BOSS ?",
+        answer: "Bitcoin Open-Source Software. If you’re familiar with the FOSS acronym (free and open-source software), you can think of bitcoin + FOSS = BOSS. Find examples of BOSS projects here."
+    },
+    {
+        question: "Why would I consider a career in BOSS ?",
+        answer: "Working in BOSS means tackling interesting, challenging engineering problems alongside some of the brightest minds in the world. It means writing code that has real, global impact, and experiencing a level of professional freedom rare in traditional careers. In this permissionless, merit-based ecosystem, great work speaks for itself, and contributions from everyday BOSS developers shape the future of bitcoin."
+    },
+    {
+        question: "Who is this for ?",
+        answer: `The Bitcoin Dev Project is made for both existing and aspiring BOSS developers. It doesn’t matter if you know your way around a bitcoin code base or two, or are entirely new to the protocol. Here you’ll find tools and resources to help you learn about the tech, make your first contributions, and stay up-to-date with the larger bitcoin developer community.
+Much of the material that BDP provides requires some level of coding ability. At the very least, a curiosity about the technical aspects of bitcoin is a must. If you aren’t confident in your programming skills, we recommend attending a coding bootcamp or doing a self paced course. Python is an excellent language to start with, as it opens the door to the many bitcoin books and courses that use Python for code exercises. Other popular languages in the BOSS ecosystem include Rust, C++, and JavaScript. `
+    },
+    {
+        question: "How much does it cost?",
+        answer: "Nothing! The Bitcoin Dev Project is 100% free and open-source."
+    },
+    {
+        question: "Do you have content on other cryptos or projects?",
+        answer: "No. The Bitcoin Dev Project is exclusively focused on bitcoin."
+    },
+    {
+        question: "Do you offer funding or grants ?",
         answer: "Not directly, but we help you find it. Read about how to get funded or directly use our common application resource to reach multiple bitcoin funding organizations with one form."
-    },
-    {
-        question: "How can I get started with Bitcoin development?",
-        answer: "Start by exploring our Decoding Bitcoin curriculum, which provides structured learning paths for developers at all levels."
-    },
-    {
-        question: "What resources do you provide for learning?",
-        answer: "We offer free educational content, interactive tools like Saving Satoshi, and comprehensive documentation to help you learn Bitcoin development."
     },
     {
         question: "How can I contribute to open-source Bitcoin projects?",

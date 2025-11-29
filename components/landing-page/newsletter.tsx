@@ -51,17 +51,17 @@ const Newsletter = () => {
     return (
         <div className="py-24 relative z-50">
             <div className="max-w-7xl mx-auto px-4 lg:px-8">
-                <div className="bg-[#EFE9DE] border-2 border-[#E1DBD0] rounded-[40px] overflow-visible relative">
+                <div className="bg-[#EFE9DE] border-2 border-[#E1DBD0] rounded-[20px] lg:rounded-[40px] overflow-visible relative">
                     <div className="absolute -top-8 -right-3 lg:-top-12 lg:-right-12 z-10">
                         <Image
                             src="/images/mail-icon.svg"
                             alt="Newsletter"
-                            width={120}
+                            width={167}
                             height={120}
-                            className="w-20 h-20 lg:w-32 lg:h-32 drop-shadow-lg"
+                            className="w-20 h-20 lg:w-[167px] lg:h-32 drop-shadow-lg"
                         />
                     </div>
-                    <div className="grid lg:grid-cols-2 items-stretch max-w-full overflow-hidden rounded-[40px]">
+                    <div className="grid lg:grid-cols-2 items-stretch max-w-full lg:gap-x-20 overflow-hidden rounded-[40px]">
                         <div className="space-y-8 p-5 md:p-12 lg:p-16">
                             <div className="flex items-center">
                                 <Image
@@ -129,12 +129,12 @@ const Newsletter = () => {
 
                         <div className="relative flex lg:items-end min-h-[384px] h-full lg:pr-12">
                             <div className="absolute left-0 sm:left-[25%] lg:left-0 h-[384px] w-full bottom-[-30px] sm:bottom-0 ">
-                                <div className="relative h-[384px]">
+                                <div className="relative h-[450px]  md:h-[384px]">
                                     <Image
                                         src="/images/newsletter-preview.webp"
                                         alt="Bitcoin TLDR Newsletter Preview"
                                         fill
-                                        className="object-contain absolute object-left w-[475px] h-[384px] bottom-0"
+                                        className="object-contain absolute object-left w-full px-7 h-[349px] md:w-[475px] md:h-[384px] -bottom- md:bottom-0"
                                     />
                                 </div>
                             </div>

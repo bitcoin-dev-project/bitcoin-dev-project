@@ -1,6 +1,6 @@
 import { TagType } from "@bitcoin-dev-project/bdp-ui"
 import { ImageProps } from "next/image"
-import { ComponentType } from "react"
+import { ComponentType, SVGProps } from "react"
 
 export type ProjectProperties = {
     name: string
@@ -72,7 +72,7 @@ export interface FooterLinkItem {
   name: string;
   link: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
-  component?: ComponentType<any>;
+  component?: ComponentType<SVGProps<SVGSVGElement>>;
 }
 
 export interface FooterSection {
