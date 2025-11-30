@@ -21,6 +21,8 @@ const FeaturedProduct = () => {
                     {FEATUREDPRODUCTS.map((product, index) => (
                         <a
                             key={product.name}
+                            href={product.link}
+                            target={product?.target}
                             className="relative cursor-pointer rounded-[20px] overflow-hidden aspect-[3/4] transition-all duration-500 bg-brand-gray border border-brand-stroke-on-base flex flex-col"
                             onMouseEnter={() => setHoveredProduct(index)}
                             onMouseLeave={() => setHoveredProduct(null)}

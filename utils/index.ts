@@ -223,6 +223,8 @@ export const FEATUREDPRODUCTS = [
         image: "/images/products/decoding-bitcoin.webp",
         users: "50+",
         action: "Studied by",
+        link:"/decoding",
+        target:"_blank",
         description:
             "A self-paced educational platform that introduces key Bitcoin concepts through visual explanations and exercises."
     },
@@ -231,6 +233,8 @@ export const FEATUREDPRODUCTS = [
         image: "/images/products/saving-satoshi.webp",
         users: "1.5k+",
         action: "Played by",
+        link:"https://savingsatoshi.com/",
+        target:"_blank",
         description:
             "An interactive science fiction game designed to inspire a generation to fall in love with bitcoin."
     },
@@ -239,6 +243,8 @@ export const FEATUREDPRODUCTS = [
         image: "/images/products/chat-btc.webp",
         users: "1.5k+",
         action: "Used by",
+        link:"https://chat.bitcoinsearch.xyz/",
+         target:"_blank",
         description:
             "An interactive science fiction game designed to inspire a generation to fall in love with bitcoin."
     }
