@@ -28,7 +28,7 @@ const projects: ProjectCard[] = [
         logo: "/images/projects/bitcoin-core-logo.svg",
         bgColor: "bg-[#1c1c1e]",
         textColor: "text-white",
-        link: "https://github.com/bitcoin/bitcoin",
+        link: "/good-first-issues?page=1&repo=bitcoin",
         github: "bitcoin/bitcoin"
     },
     {
@@ -37,7 +37,7 @@ const projects: ProjectCard[] = [
         logo: "/images/projects/ldk.svg",
         bgColor: "bg-[#2952e3]",
         textColor: "text-white",
-        link: "https://github.com/lightningdevkit/rust-lightning",
+        link: "/good-first-issues?page=1&repo=rust-lightning",
         github: "lightningdevkit/rust-lightning"
     },
     {
@@ -46,7 +46,7 @@ const projects: ProjectCard[] = [
             "A Golang implementation and the most widely run full node on the lightning network",
         logo: "/images/projects/lnd.svg",
         bgColor: "bg-white",
-        link: "https://github.com/lightningnetwork/lnd",
+        link: "/good-first-issues?page=1&repo=lnd",
         github: "lightningnetwork/lnd"
     },
     {
@@ -234,7 +234,6 @@ function ProjectCardComponent({ project }: { project: ProjectCard }) {
                     {/* CTA: Good First Issues */}
                     <Link
                         href={project.link}
-                        target="_blank"
                         rel="noopener noreferrer"
                         className="relative inline-flex items-center h-8 rounded-[20px] font-semibold text-xs transition-all hover:scale-105
                 bg-[#E1DBD0] border-2 border-[#C7C1B6] text-black overflow-hidden self-start"

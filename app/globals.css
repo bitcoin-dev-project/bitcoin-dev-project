@@ -87,7 +87,7 @@ body {
 }
 
 .animate-float {
-    animation: float 0.5s ease-in-out infinite;
+    animation: float 1s ease-in-out infinite;
 }
 
 input:-webkit-autofill,

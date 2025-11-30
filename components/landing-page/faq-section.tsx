@@ -18,14 +18,14 @@ const FaqSection = () => {
                     {FAQS.map((faq, index) => (
                         <div
                             key={index}
-                            className="bg-[#EFE9DE] border-2 border-[#E1DBD0] rounded-2xl overflow-hidden"
+                            className="bg-[#EFE9DE] border border-brand-gray-100 rounded-2xl overflow-hidden"
                         >
-                            {/* Question Header */}
+
                             <button
                                 onClick={() => toggleFaq(index)}
-                                className="w-full flex items-center justify-between p-6 text-left hover:bg-brand transition-colors"
+                                className="w-full flex items-center justify-between p-5  md:p-6 text-left hover:bg-brand transition-colors"
                             >
-                                <span className="text-xl  text-brand-dark font-quicksand pr-4">
+                                <span className="text-xl  text-brand-dark font-quicksand">
                                     {faq.question}
                                 </span>
                                 <span className="text-xl text-brand-dark flex-shrink-0">
@@ -35,7 +35,7 @@ const FaqSection = () => {
 
                             {expandedFaq === index && (
                                 <div className="px-6 pb-6">
-                                    <p className="text-base text-[#2C2C2C] leading-relaxed font-quicksand">
+                                    <p className="text-xl text-[#2C2C2C] leading-relaxed font-quicksand">
                                         {faq.answer}
                                     </p>
                                 </div>

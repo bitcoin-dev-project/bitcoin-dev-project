@@ -263,7 +263,10 @@ const config: Config = {
             },
             fontSize: {
                 lg: ["17px", "28px"]
-            }
+            },
+                maxWidth: {
+            'desktop-max': '1440px',
+      },
         }
     },
     plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")]

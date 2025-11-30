@@ -26,7 +26,7 @@ const FeaturedProduct = () => {
                             onMouseLeave={() => setHoveredProduct(null)}
                         >
                             <div
-                                className={`relative h-[70%] w-[calc(100%-1.5rem)] mb-2 mt-3 mx-3  rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${
+                                className={`relative h-[70%] w-[calc(100%-1.5rem)] mb-2 mt-3 mx-auto  rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${
                                     hoveredProduct === index
                                         ? "md:h-[60%] lg:h-[75%] md:w-[calc(100%-1.5rem)] md:mt-3 md:mx-3 md:mb-2"
                                         : "md:h-full md:w-full md:mt-0 md:mx-0 md:mb-0"
@@ -63,7 +63,7 @@ const FeaturedProduct = () => {
                                         : "md:opacity-0"
                                 }`}
                             >
-                                <p className="text-brand-dark text-base font-quicksand leading-none lg:leading-[1.2]">
+                                <p className="text-brand-dark text-[1.125rem] font-quicksand leading-none lg:leading-[1.2]">
                                     {product.description}
                                 </p>
                             </div>
