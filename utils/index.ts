@@ -224,7 +224,7 @@ export const FEATUREDPRODUCTS = [
         users: "50+",
         action: "Studied by",
         link:"/decoding",
-        target:"_blank"
+        target:"_blank",
         description:
             "A self-paced educational platform that introduces key Bitcoin concepts through visual explanations and exercises."
     },
