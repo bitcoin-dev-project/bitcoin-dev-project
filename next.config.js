@@ -29,6 +29,11 @@ module.exports = () => {
                     source: "/grants",
                     destination: "https://grants.bitcoindevs.xyz/",
                     permanent: false
+                },
+                {
+                    source: "/blog/20251202_GlowUp",
+                    destination: "https://medium.com/@bitcoindevs/glow-up-95008146d653",
+                    permanent: false
                 }
             ]
         },
