@@ -32,7 +32,8 @@ module.exports = () => {
                 },
                 {
                     source: "/blog/20251202_GlowUp",
-                    destination: "https://medium.com/@bitcoindevs/glow-up-95008146d653",
+                    destination:
+                        "https://medium.com/@bitcoindevs/glow-up-95008146d653",
                     permanent: false
                 }
             ]
