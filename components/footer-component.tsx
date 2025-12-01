@@ -20,7 +20,7 @@ const FooterComponent = () => {
                             >
                                 {link.links.map((sublink) => (
                                     <a
-                                    key={sublink.name}
+                                        key={sublink.name}
                                         className="cursor-pointer text-nowrap hover:text-brand-orange-100"
                                         href={sublink.link}
                                     >
@@ -33,13 +33,13 @@ const FooterComponent = () => {
                             <div className="flex flex-row gap-2 mt-2.5">
                                 {link.links.map((subLink) => (
                                     <a
-                                    key={subLink.name}
+                                        key={subLink.name}
                                         href={subLink.link}
                                         target={subLink.target}
                                         className="bg-brand-gray text-brand-gray-200/75 hover:text-brand-orange-100  border rounded-[4px] w-[44px] h-[44px] flex items-center justify-center  border-brand-gray-100"
                                     >
                                         {subLink?.component && (
-                                            <subLink.component/>
+                                            <subLink.component />
                                         )}
                                     </a>
                                 ))}

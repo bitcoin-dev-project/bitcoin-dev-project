@@ -95,7 +95,7 @@ const Newsletter = () => {
                                         type="email"
                                         placeholder="Enter email"
                                         id="mce-EMAIL"
-                                         disabled={loading}
+                                        disabled={loading}
                                         required
                                         value={email}
                                         onChange={(e) =>

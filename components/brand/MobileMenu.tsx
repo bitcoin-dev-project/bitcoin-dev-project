@@ -7,11 +7,17 @@ import Link from "next/link"
 import ArrowIcon from "../assets/ArrowIcon"
 import clsx from "clsx"
 
-const MobileMenu = ({ isOpen, setIsOpen }: { isOpen?: boolean; setIsOpen:Dispatch<SetStateAction<boolean>> }) => {
+const MobileMenu = ({
+    isOpen,
+    setIsOpen
+}: {
+    isOpen?: boolean
+    setIsOpen: Dispatch<SetStateAction<boolean>>
+}) => {
     const [socialLinks] = useState(
         FOOTERLINKS.filter((link) => link.name === "contact")
     )
-    const onClose = ()=>{
+    const onClose = () => {
         setIsOpen(!isOpen)
     }
     return (
@@ -19,14 +25,19 @@ const MobileMenu = ({ isOpen, setIsOpen }: { isOpen?: boolean; setIsOpen:Dispatc
             className={clsx(
                 `flex flex-col gap-12 z-50 top-0 bg-brand px-5 py-3 justify-start transition-all duration-100 ease-in-out`,
                 {
-                    "fixed h-screen w-screen overflow-hidden opacity-100": isOpen,
+                    "fixed h-screen w-screen overflow-hidden opacity-100":
+                        isOpen,
                     "z-[-10] absolute opacity-0": !isOpen
                 }
             )}
         >
             <div className="flex flex-row items-center justify-between h-20">
                 <BDPLogoRed />
-                <MobileClose onClick={onClose} role="button" className="w-8 h-8" />
+                <MobileClose
+                    onClick={onClose}
+                    role="button"
+                    className="w-8 h-8"
+                />
             </div>
 
             <div className="flex flex-col pt-4">

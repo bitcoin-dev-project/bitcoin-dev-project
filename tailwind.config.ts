@@ -8,40 +8,40 @@ const config: Config = {
         "./node_modules/pliny/**/*.js",
         "./layouts/**/*.{js,ts,tsx}",
         "./public/decoding-bitcoin/**/*.mdx",
-        "node_modules/@bitcoin-dev-project/bdp-ui/dist/**/*.{js,mjs,jsx,ts,tsx}",
+        "node_modules/@bitcoin-dev-project/bdp-ui/dist/**/*.{js,mjs,jsx,ts,tsx}"
     ],
     darkMode: "class",
     theme: {
         extend: {
             colors: {
                 // Temporary
-                   "brand-card-bg": "var(--brand-card-bg)",
-                   "brand-green": "var(--brand-green)",
-                   "brand-light-100": "var(--brand-light-100)",
-                   "brand-dark-100": "var(--brand-dark-100)",
-                   "brand-orange-100": "var(--brand-orange-100)",
-                brand:{
-                    DEFAULT:"#F6F0E6",
-                    stroke:{
-                        "on-base":"#E1DBD0",
+                "brand-card-bg": "var(--brand-card-bg)",
+                "brand-green": "var(--brand-green)",
+                "brand-light-100": "var(--brand-light-100)",
+                "brand-dark-100": "var(--brand-dark-100)",
+                "brand-orange-100": "var(--brand-orange-100)",
+                brand: {
+                    DEFAULT: "#F6F0E6",
+                    stroke: {
+                        "on-base": "#E1DBD0"
                     },
-                    orange:{
-                        DEFAULT:"#F6F0E6",
-                        100:"#EB5234",
+                    orange: {
+                        DEFAULT: "#F6F0E6",
+                        100: "#EB5234"
                     },
-                    dark:{
-                        DEFAULT:"#201E1E" ,
-                        100:"#201E1E"
+                    dark: {
+                        DEFAULT: "#201E1E",
+                        100: "#201E1E"
                     },
-                    
-                    gray:{
-                        DEFAULT:"#EFE9DE",
-                        100:"#E1DBD0",
-                        200:"#A9A49B",
-                        300:"#6C6C6C"
+
+                    gray: {
+                        DEFAULT: "#EFE9DE",
+                        100: "#E1DBD0",
+                        200: "#A9A49B",
+                        300: "#6C6C6C"
                     },
-                    blue:{
-                        200:"#4B7389"
+                    blue: {
+                        200: "#4B7389"
                     }
                 },
                 orange: {
@@ -100,7 +100,7 @@ const config: Config = {
                     "900": "#3b3b3e",
                     "950": "#1c1c1e"
                 },
-                
+
                 // VS Code Theme Colors
                 vscode: {
                     background: {
@@ -237,9 +237,9 @@ const config: Config = {
                     dark: "#d18616" // A darker orange for dark mode
                 }
             },
-            backgroundImage:{
-                footer:"url('/images/footer.webp')",
-                "footer-mobile":"url('/images/footer-mobile.webp')",
+            backgroundImage: {
+                footer: "url('/images/footer.webp')",
+                "footer-mobile": "url('/images/footer-mobile.webp')"
             },
             keyframes: {
                 updown: {
@@ -264,9 +264,9 @@ const config: Config = {
             fontSize: {
                 lg: ["17px", "28px"]
             },
-                maxWidth: {
-            'desktop-max': '1440px',
-      },
+            maxWidth: {
+                "desktop-max": "1440px"
+            }
         }
     },
     plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")]

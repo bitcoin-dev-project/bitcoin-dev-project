@@ -42,7 +42,7 @@ export function PhotoSlider() {
         {
             src: "/images/about/bdp-in-waterloo.webp",
             alt: "Bitcoin Presentation",
-            badge: "",
+            badge: ""
         }
     ]
     const infiniteScroll = [...photos, ...photos, ...photos]

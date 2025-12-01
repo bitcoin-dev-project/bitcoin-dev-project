@@ -34,7 +34,7 @@ const AsideGoTO: React.FC<IGoTO> = ({ selected, allCurriculum, path }) => {
                                         selectChange(mottos.slug)
                                     }}
                                     selected={mottos.slug === selected}
-                                    className={`${mottos.slug === selected ?"!bg-[#201E1E99] border-none" :""} !rounded-xl max-w-[max-content] py-0.5 px-2`}
+                                    className={`${mottos.slug === selected ? "!bg-[#201E1E99] border-none" : ""} !rounded-xl max-w-[max-content] py-0.5 px-2`}
                                 >
                                     {mottos.name}
                                 </Pill>

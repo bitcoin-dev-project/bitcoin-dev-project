@@ -17,9 +17,17 @@ export function ConditionalBody({
     const pathname = usePathname()
 
     // Apply rebranded background color to these pages
-    const rebrandedPages = ["/projects", "/get", "/about", "/explore", "/", "/career"]
-    const isRebrandedPage = rebrandedPages.some((page) =>
-        pathname === page || (page !== "/" && pathname?.startsWith(page))
+    const rebrandedPages = [
+        "/projects",
+        "/get",
+        "/about",
+        "/explore",
+        "/",
+        "/career"
+    ]
+    const isRebrandedPage = rebrandedPages.some(
+        (page) =>
+            pathname === page || (page !== "/" && pathname?.startsWith(page))
     )
 
     const bodyClass = isRebrandedPage
@@ -38,4 +46,3 @@ export function ConditionalBody({
         </body>
     )
 }
-

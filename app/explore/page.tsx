@@ -6,15 +6,15 @@ import { ExploreContent } from "@/components/explore/ExploreContent"
 import Image from "next/image"
 import { useState } from "react"
 
-type Section = 'learn' | 'contribute' | 'funded'
+type Section = "learn" | "contribute" | "funded"
 
 export default function Explore() {
-    const [activeSection, setActiveSection] = useState<Section>('learn')
+    const [activeSection, setActiveSection] = useState<Section>("learn")
 
     const images = {
-        learn: '/images/explore/backpack-illustration.png',
-        contribute: '/images/explore/contribute-illustration.png',
-        funded: '/images/explore/funded-illustration.png'
+        learn: "/images/explore/backpack-illustration.png",
+        contribute: "/images/explore/contribute-illustration.png",
+        funded: "/images/explore/funded-illustration.png"
     }
 
     return (
@@ -26,7 +26,7 @@ export default function Explore() {
 
                     {/* Right Image - Changes based on active section */}
                     <div className="flex-1 max-w-2xl w-full">
-                        <Image 
+                        <Image
                             key={activeSection}
                             src={images[activeSection]}
                             alt={`${activeSection} illustration`}

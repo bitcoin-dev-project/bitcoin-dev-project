@@ -11,7 +11,9 @@ export function NewMission() {
                             OUR MISSION
                         </h2>
                         <p className="text-2xl text-gray-800 leading-relaxed font-quicksand">
-                            We make tools and resources so that anyone, anywhere has the opportunity to learn and contribute to Bitcoin tech.
+                            We make tools and resources so that anyone, anywhere
+                            has the opportunity to learn and contribute to
+                            Bitcoin tech.
                         </p>
                     </div>
 
@@ -38,4 +40,3 @@ export function NewMission() {
         </section>
     )
 }
-

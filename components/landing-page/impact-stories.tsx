@@ -30,7 +30,11 @@ const ImpactStories = () => {
 
                 <div className="relative -mt-[430%]  md:-mt-[100%]  px-4 lg:px-12">
                     {TESTIMONIALS.map((testimonial, index) => (
-                        <Testimonial key={testimonial.title} index={index} {...testimonial} />
+                        <Testimonial
+                            key={testimonial.title}
+                            index={index}
+                            {...testimonial}
+                        />
                     ))}
                     <div className="h-[100px]"></div>
                 </div>
