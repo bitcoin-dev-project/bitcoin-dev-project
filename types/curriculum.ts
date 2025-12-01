@@ -19,6 +19,6 @@ export interface ICurriculum {
 }
 
 export type FilterDifficulty = {
-    count: number;
-    level: Difficulty;
+    count: number
+    level: Difficulty
 }
