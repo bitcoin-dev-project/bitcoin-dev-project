@@ -14,6 +14,36 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
+                // Temporary
+                "brand-card-bg": "var(--brand-card-bg)",
+                "brand-green": "var(--brand-green)",
+                "brand-light-100": "var(--brand-light-100)",
+                "brand-dark-100": "var(--brand-dark-100)",
+                "brand-orange-100": "var(--brand-orange-100)",
+                brand: {
+                    DEFAULT: "#F6F0E6",
+                    stroke: {
+                        "on-base": "#E1DBD0"
+                    },
+                    orange: {
+                        DEFAULT: "#F6F0E6",
+                        100: "#EB5234"
+                    },
+                    dark: {
+                        DEFAULT: "#201E1E",
+                        100: "#201E1E"
+                    },
+
+                    gray: {
+                        DEFAULT: "#EFE9DE",
+                        100: "#E1DBD0",
+                        200: "#A9A49B",
+                        300: "#6C6C6C"
+                    },
+                    blue: {
+                        200: "#4B7389"
+                    }
+                },
                 orange: {
                     DEFAULT: "#f1760f",
                     "50": "#fff8eb",
@@ -70,6 +100,7 @@ const config: Config = {
                     "900": "#3b3b3e",
                     "950": "#1c1c1e"
                 },
+
                 // VS Code Theme Colors
                 vscode: {
                     background: {
@@ -206,6 +237,10 @@ const config: Config = {
                     dark: "#d18616" // A darker orange for dark mode
                 }
             },
+            backgroundImage: {
+                footer: "url('/images/footer.webp')",
+                "footer-mobile": "url('/images/footer-mobile.webp')"
+            },
             keyframes: {
                 updown: {
                     "0%, 100%": { transform: "translateY(0)" },
@@ -222,10 +257,15 @@ const config: Config = {
             },
             fontFamily: {
                 brawler: ["var(--brawler-font)"],
-                inter: ["var(--inter-font)"]
+                inter: ["var(--inter-font)"],
+                quicksand: ["var(--quicksand-font)"],
+                montserrat: ["var(--montserrat-font)"]
             },
             fontSize: {
                 lg: ["17px", "28px"]
+            },
+            maxWidth: {
+                "desktop-max": "1440px"
             }
         }
     },

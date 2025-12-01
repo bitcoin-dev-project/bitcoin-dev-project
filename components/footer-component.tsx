@@ -1,81 +1,54 @@
 "use client"
 
-import React from "react"
-import { Footer } from "@bitcoin-dev-project/bdp-ui"
-import { LinkedinIcon } from "lucide-react"
-
-function Wrapper({
-    className,
-    ...props
-}: React.ComponentPropsWithoutRef<"div">) {
-    return (
-        <div
-            className={`w-full max-w-[1920px] px-4 lg:px-10 2xl:px-[60px] mx-auto ${className}`}
-            {...props}
-        />
-    )
-}
+import { FOOTERLINKS } from "@/utils"
+import clsx from "clsx"
 
 const FooterComponent = () => {
     return (
-        <div className="flex flex-col items-center justify-center w-full">
-            <div className="border-b-[0.5px] border-b-gray-custom-400 w-full"></div>
-            <Wrapper className="py-10 w-full">
-                <Footer>
-                    <Footer.Socials
-                        platforms={[
-                            {
-                                entity: "github",
-                                entityLink:
-                                    "https://github.com/bitcoin-dev-project/bitcoin-dev-project",
-                                iconProps: {
-                                    className: "hover:text-orange-400"
-                                }
-                            },
-                            {
-                                entity: "discord",
-                                entityLink: "https://discord.gg/EAy9XMufbY",
-                                iconProps: {
-                                    className: "hover:text-orange-400"
-                                }
-                            },
-                            {
-                                entity: "twitter",
-                                entityLink: "https://twitter.com/Bitcoin_Devs",
-                                iconProps: {
-                                    className: "hover:text-orange-400"
-                                }
-                            },
-                            {
-                                entity: "nostr",
-                                entityLink:
-                                    "https://njump.me/npub10p33xu03t8q7d9nxtks63dq4gmt4v4d3ppd5lcdp4rg9hxsd0f8q7mn2l2",
-                                iconProps: {
-                                    className: "hover:text-orange-400"
-                                }
-                            },
-                            {
-                                entity: "linkedIn",
-                                entityLink:
-                                    "https://www.linkedin.com/company/bitcoin-dev-project/",
-                                iconProps: {
-                                    className: "hover:text-orange-400"
-                                },
-                                icon: (
-                                    <LinkedinIcon width="100%" height="auto" />
-                                )
-                            }
-                        ]}
-                    />
-                    <Footer.Public dashboardLink="https://visits.bitcoindevs.xyz/share/El4tCqIKLIhJIq9y/bitcoin-dev-project" />
-                    <Footer.About
-                        entityLink="https://bitcoindevs.xyz"
-                        entityName="Bitcoin Dev Project"
-                    />
-                    <Footer.Feedback feedbackLink="https://cryptpad.fr/form/#/2/form/view/3P2CsohsHOkcH7C+WdtX0-tvqjBHqXnAmz5D9yx0e04" />
-                </Footer>
-            </Wrapper>
-        </div>
+        <footer className="relative min-h-[944px] md:min-h-[1000px] lg:min-h-[766px] pt-20 lg:pt-[129px]  bg-brand bg-footer-mobile md:bg-footer bg-cover bg-bottom bg-no-repeat  lg:bg-cover">
+            <div className="flex flex-col p-5 lg:flex-row w-full gap-10 max-w-[583px] lg:mx-auto justify-between font-quicksand font-bold">
+                {FOOTERLINKS.map((link) => (
+                    <div key={link.name}>
+                        <h6 className="text-sm text-brand-orange-100 uppercase">
+                            {link.name}
+                        </h6>
+                        {link.name !== "contact" && (
+                            <div
+                                className={clsx(
+                                    "flex flex-col font-quicksand font-normal mt-2.5 gap-2.5 text-brand-dark capitalize"
+                                )}
+                            >
+                                {link.links.map((sublink) => (
+                                    <a
+                                        key={sublink.name}
+                                        className="cursor-pointer text-nowrap hover:text-brand-orange-100"
+                                        href={sublink.link}
+                                    >
+                                        {sublink.name}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                        {link.name === "contact" && (
+                            <div className="flex flex-row gap-2 mt-2.5">
+                                {link.links.map((subLink) => (
+                                    <a
+                                        key={subLink.name}
+                                        href={subLink.link}
+                                        target={subLink.target}
+                                        className="bg-brand-gray text-brand-gray-200/75 hover:text-brand-orange-100  border rounded-[4px] w-[44px] h-[44px] flex items-center justify-center  border-brand-gray-100"
+                                    >
+                                        {subLink?.component && (
+                                            <subLink.component />
+                                        )}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </footer>
     )
 }
 

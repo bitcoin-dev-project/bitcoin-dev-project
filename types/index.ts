@@ -1,4 +1,6 @@
+import { TagType } from "@bitcoin-dev-project/bdp-ui"
 import { ImageProps } from "next/image"
+import { ComponentType, SVGProps } from "react"
 
 export type ProjectProperties = {
     name: string
@@ -50,4 +52,30 @@ export interface IFeature {
     image: ImageProps["src"]
     icon?: ImageProps["src"]
     link: string
+}
+
+export type MottosNav = {
+    name: string
+    slug: Mottos
+}
+export type Mottos = "learn" | "contribute" | "career" | "get-funded"
+
+// Filters
+export interface FilterResourceType {
+    tag: TagType
+    description: string
+}
+
+// Curriculum for learn
+
+export interface FooterLinkItem {
+    name: string
+    link: string
+    target?: "_blank" | "_self" | "_parent" | "_top"
+    component?: ComponentType<SVGProps<SVGSVGElement>>
+}
+
+export interface FooterSection {
+    name: string
+    links: FooterLinkItem[]
 }

@@ -1,11 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind typography;
+
+@import "@bitcoin-dev-project/bdp-ui/styles.css";
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
+    --brand-card-bg: #efe9de;
+    --brand-green: #0e9158;
+    --brand-dark-100: #201e1e;
+    --brand-orange-100: #eb5234;
+    --brand-light-100: #f6f0e6;
 }
 
 body {
@@ -37,6 +43,21 @@ body {
     animation: shimmer 2s infinite;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
 .prose {
     max-width: unset;
 }
@@ -53,4 +74,33 @@ body {
 
 .animate-smooth-blink {
     animation: smoothBlink 1s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+.animate-float {
+    animation: float 1s ease-in-out infinite;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    background-clip: content-box !important;
+    -webkit-text-fill-color: #000000 !important;
+    transition: background-color 5000s ease-in-out 0s !important;
 }

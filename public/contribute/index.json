@@ -1,0 +1,55 @@
+{
+    "items": [
+        {
+            "difficulty": "medium",
+            "tags": ["products"],
+            "tagList": ["tool"],
+            "bannerColor": "#0E9158",
+            "byBDP": "true",
+            "logo": "/images/contribute/good-first-issues.webp",
+            "title": "Good first issues",
+            "description": "Discover beginner-friendly issues from BOSS projects to start contributing today.",
+            "link": "/good-first-issues"
+        },
+        {
+            "difficulty": "medium",
+            "tags": ["products"],
+            "tagList": ["tool"],
+            "bannerColor": "#272624",
+            "logo": "/images/contribute/boss-projects.webp",
+            "title": "Boss Projects",
+            "description": "Explore curated bitcoin open source software (₿OSS) projects",
+            "link": "/projects"
+        },
+        {
+            "difficulty": "hard",
+            "tags": ["products"],
+            "tagList": ["seminar"],
+            "bannerColor": "#F5D7E2",
+            "logo": "/images/contribute/folder.webp",
+            "title": "LDK Review Club",
+            "description": "Biweekly LDK sessions mentoring newcomers into full-fledged contributors.",
+            "link": "https://ldk.reviews/"
+        },
+        {
+            "difficulty": "hard",
+            "tags": ["products"],
+            "tagList": ["guide"],
+            "bannerColor": "#ECD4B5",
+            "logo": "/images/learn/books.webp",
+            "title": "Bitcoin Core Onboarding",
+            "description": "Covers bitcoin’s technical architecture and social aspects of decentralized development.",
+            "link": "https://bitcoincore.academy/"
+        },
+        {
+            "difficulty": "medium",
+            "tags": ["products"],
+            "tagList": ["seminar"],
+            "bannerColor": "#FBFBFB",
+            "logo": "/images/contribute/folder.webp",
+            "title": "PR Review Club (Bitcoin Core)",
+            "description": "Regular online meetups to review PRs.",
+            "link": "https://bitcoincore.reviews/"
+        }
+    ]
+}

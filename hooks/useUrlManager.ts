@@ -6,7 +6,7 @@ export const useUrlManager = () => {
     const router = useRouter()
     const pathname = usePathname()
     const searchParams = useSearchParams()
-    const urlParams = new URLSearchParams(searchParams)
+    const urlParams = new URLSearchParams(Array.from(searchParams.entries()))
 
     const currentFilterValuesAndKeys = FILTERTAGS.flatMap((key) => {
         if (!urlParams.has(key)) {
