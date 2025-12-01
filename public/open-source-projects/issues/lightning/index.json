@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "url": "https://github.com/ElementsProject/lightning/issues/8738",
+    "publishedAt": "2025-11-28T03:11:50Z",
+    "title": "Refactor bcli Plugin from Asynchronous Multi-threaded to Synchronous Single-threaded Architecture",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/12729539?v=4"
+  }
+]
