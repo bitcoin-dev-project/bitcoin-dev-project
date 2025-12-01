@@ -19,7 +19,6 @@ const StackedWins = () => {
                     </div>
 
                     <div className="relative flex items-center justify-center">
-                     
                         <div className="relative w-full max-w-2xl aspect-[768/881] z-20">
                             <Image
                                 src="/images/stacked-wins.webp"

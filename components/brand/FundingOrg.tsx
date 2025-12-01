@@ -6,12 +6,19 @@ export interface IFundingOrg {
     logo: string
     name: string
     description: string
-    size?: string;
-    width?: number;
-    height?: number;
+    size?: string
+    width?: number
+    height?: number
 }
-const FundingOrg: React.FC<IFundingOrg> = ({ logo, name, description, size, width, height }) => {
-    const imgSize =  size
+const FundingOrg: React.FC<IFundingOrg> = ({
+    logo,
+    name,
+    description,
+    size,
+    width,
+    height
+}) => {
+    const imgSize = size
     return (
         <a className="relative rounded-lg bg-brand-gray px-2 py-7 min-h-[195px] flex flex-col  items-center">
             <div className="absolute top-2 left-2 w-3 h-3 rounded-full bg-brand-gray-100" />
@@ -20,16 +27,20 @@ const FundingOrg: React.FC<IFundingOrg> = ({ logo, name, description, size, widt
             <div className="absolute bottom-2 right-2 w-3 h-3 rounded-full bg-brand-gray-100" />
 
             <div className="rounded-lg text-center p-2">
-                <div className={clsx("mb-3 flex justify-center items-center relative overflow-hidden", imgSize)}>
-                 
-                        <Image
-                            src={logo}
-                            alt={`${name} logo`}
-                            objectFit="contain"
-                            width={width || 100}
-                            height={height || 100}
-                            objectPosition="center"
-                        />
+                <div
+                    className={clsx(
+                        "mb-3 flex justify-center items-center relative overflow-hidden",
+                        imgSize
+                    )}
+                >
+                    <Image
+                        src={logo}
+                        alt={`${name} logo`}
+                        objectFit="contain"
+                        width={width || 100}
+                        height={height || 100}
+                        objectPosition="center"
+                    />
                 </div>
                 <h3 className="font-bold text-lg text-gray-500 font-montserrat mb-2">
                     {name}

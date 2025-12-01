@@ -6,9 +6,13 @@ import BDPMenu from "../assets/BDPMenu"
 import BDPLogoWhite from "../assets/BDPLogoWhite"
 import BDPMobileIcon from "../assets/BDPMobileIcon"
 
-const HeroPage = ({setIsOpen}:{setIsOpen:Dispatch<SetStateAction<boolean>>}) => {
-    const onOpen = ()=>{
-        setIsOpen(prev=>!prev)
+const HeroPage = ({
+    setIsOpen
+}: {
+    setIsOpen: Dispatch<SetStateAction<boolean>>
+}) => {
+    const onOpen = () => {
+        setIsOpen((prev) => !prev)
     }
     return (
         <div className="relative min-h-screen overflow-visible">

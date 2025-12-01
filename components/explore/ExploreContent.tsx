@@ -2,16 +2,22 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { RightArrowIcon, BookIcon, MicIcon, ToolIcon, TapCursorIcon } from "@bitcoin-dev-project/bdp-ui/icons"
+import {
+    RightArrowIcon,
+    BookIcon,
+    MicIcon,
+    ToolIcon,
+    TapCursorIcon
+} from "@bitcoin-dev-project/bdp-ui/icons"
 
-type Section = 'learn' | 'contribute' | 'funded'
+type Section = "learn" | "contribute" | "funded"
 
 interface ExploreContentProps {
     onSectionChange: (section: Section) => void
 }
 
 export function ExploreContent({ onSectionChange }: ExploreContentProps) {
-    const [activeSection, setActiveSection] = useState<Section>('learn')
+    const [activeSection, setActiveSection] = useState<Section>("learn")
 
     const handleSectionClick = (section: Section) => {
         setActiveSection(section)
@@ -22,32 +28,46 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
         <div className="flex-1 max-w-2xl">
             {/* Title with Icons */}
             <h1 className="text-6xl max-lg:text-5xl max-md:text-4xl font-bold mb-16 leading-tight font-montserrat">
-                Explore your path<br />to bitcoin{" "}
+                Explore your path
+                <br />
+                to bitcoin{" "}
                 <span className="inline-flex items-center">
                     {/* Book Icon - Pink */}
-                    <span 
+                    <span
                         className="inline-flex items-center justify-center w-12 h-12 rounded-full relative z-40 border-2"
-                        style={{ backgroundColor: '#EC4182', borderColor: '#F5D7E2' }}
+                        style={{
+                            backgroundColor: "#EC4182",
+                            borderColor: "#F5D7E2"
+                        }}
                     >
                         <BookIcon className="w-6 h-6 text-white" />
                     </span>
                     {/* Mic Icon - Purple */}
-                    <span 
+                    <span
                         className="inline-flex items-center justify-center w-12 h-12 rounded-full relative z-30 -ml-3 border-2"
-                        style={{ backgroundColor: '#7762B9', borderColor: '#CABFEF' }}
+                        style={{
+                            backgroundColor: "#7762B9",
+                            borderColor: "#CABFEF"
+                        }}
                     >
                         <MicIcon className="w-6 h-6 text-white" />
                     </span>
                     {/* Tool Icon - Blue */}
-                    <span 
+                    <span
                         className="inline-flex items-center justify-center w-12 h-12 rounded-full relative z-20 -ml-3 border-2"
-                        style={{ backgroundColor: '#396BEB', borderColor: '#D1E2F3' }}
+                        style={{
+                            backgroundColor: "#396BEB",
+                            borderColor: "#D1E2F3"
+                        }}
                     >
                         <ToolIcon className="w-6 h-6 text-white" />
                     </span>
-                    <span 
+                    <span
                         className="inline-flex items-center justify-center w-12 h-12 rounded-full relative z-10 -ml-3 border-2"
-                        style={{ backgroundColor: '#D18616', borderColor: '#ECD4B5' }}
+                        style={{
+                            backgroundColor: "#D18616",
+                            borderColor: "#ECD4B5"
+                        }}
                     >
                         <TapCursorIcon className="w-6 h-6 text-white" />
                     </span>
@@ -55,9 +75,9 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
             </h1>
 
             {/* LEARN Section */}
-            <section 
+            <section
                 className="mb-8 pb-8 border-b border-gray-300"
-                onMouseEnter={() => handleSectionClick('learn')}
+                onMouseEnter={() => handleSectionClick("learn")}
             >
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-4">
@@ -65,35 +85,43 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                             LEARN
                         </h2>
                     </div>
-                    
-                    {activeSection === 'learn' ? (
-                        <Link 
+
+                    {activeSection === "learn" ? (
+                        <Link
                             href="/learn"
                             className="px-6 py-2 border-2 rounded-full text-gray-700 hover:opacity-90 transition-all font-medium font-quicksand"
-                            style={{ backgroundColor: '#EFE9DE', borderColor: 'rgba(169, 164, 155, 0.75)' }}
+                            style={{
+                                backgroundColor: "#EFE9DE",
+                                borderColor: "rgba(169, 164, 155, 0.75)"
+                            }}
                         >
                             View Resources
                         </Link>
                     ) : (
-                        <div className="w-12 h-12 rounded-full flex items-center justify-center transition-all" style={{ backgroundColor: '#EFE9DE' }}>
+                        <div
+                            className="w-12 h-12 rounded-full flex items-center justify-center transition-all"
+                            style={{ backgroundColor: "#EFE9DE" }}
+                        >
                             <RightArrowIcon className="w-6 h-6 text-gray-900" />
                         </div>
                     )}
                 </div>
-                
-                {activeSection === 'learn' && (
+
+                {activeSection === "learn" && (
                     <div className="animate-fadeIn">
                         <p className="text-lg text-gray-700 leading-relaxed font-quicksand">
-                            Discover how bitcoin really works, from first steps to deep dives. The Bitcoin Dev Project helps you grow, explore, and learn at your own pace.
+                            Discover how bitcoin really works, from first steps
+                            to deep dives. The Bitcoin Dev Project helps you
+                            grow, explore, and learn at your own pace.
                         </p>
                     </div>
                 )}
             </section>
 
             {/* CONTRIBUTE Section */}
-            <section 
+            <section
                 className="mb-8 pb-8 border-b border-gray-300"
-                onMouseEnter={() => handleSectionClick('contribute')}
+                onMouseEnter={() => handleSectionClick("contribute")}
             >
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-4">
@@ -101,61 +129,77 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                             CONTRIBUTE
                         </h2>
                     </div>
-                    
-                    {activeSection === 'contribute' ? (
-                        <Link 
+
+                    {activeSection === "contribute" ? (
+                        <Link
                             href="/contribute"
                             className="px-6 py-2 border-2 rounded-full text-gray-700 hover:opacity-90 transition-all font-medium font-quicksand"
-                            style={{ backgroundColor: '#EFE9DE', borderColor: 'rgba(169, 164, 155, 0.75)' }}
+                            style={{
+                                backgroundColor: "#EFE9DE",
+                                borderColor: "rgba(169, 164, 155, 0.75)"
+                            }}
                         >
                             View Resources
                         </Link>
                     ) : (
-                        <div className="w-12 h-12 rounded-full flex items-center justify-center transition-all" style={{ backgroundColor: '#EFE9DE' }}>
+                        <div
+                            className="w-12 h-12 rounded-full flex items-center justify-center transition-all"
+                            style={{ backgroundColor: "#EFE9DE" }}
+                        >
                             <RightArrowIcon className="w-6 h-6 text-gray-900" />
                         </div>
                     )}
                 </div>
-                
-                {activeSection === 'contribute' && (
+
+                {activeSection === "contribute" && (
                     <div className="animate-fadeIn">
                         <p className="text-lg text-gray-700 leading-relaxed font-quicksand">
-                            Join the bitcoin open-source movement. These resources help you go from curious observer to confident contributor. Guiding your first steps to building, collaborating, and giving back.
+                            Join the bitcoin open-source movement. These
+                            resources help you go from curious observer to
+                            confident contributor. Guiding your first steps to
+                            building, collaborating, and giving back.
                         </p>
                     </div>
                 )}
             </section>
 
             {/* GET FUNDED Section */}
-            <section
-                onMouseEnter={() => handleSectionClick('funded')}
-            >
+            <section onMouseEnter={() => handleSectionClick("funded")}>
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-4">
                         <h2 className="text-4xl max-md:text-3xl font-bold text-gray-900 font-montserrat">
                             GET FUNDED
                         </h2>
                     </div>
-                    
-                    {activeSection === 'funded' ? (
-                        <Link 
+
+                    {activeSection === "funded" ? (
+                        <Link
                             href="/get-funded"
                             className="px-6 py-2 border-2 rounded-full text-gray-700 hover:opacity-90 transition-all font-medium font-quicksand"
-                            style={{ backgroundColor: '#EFE9DE', borderColor: 'rgba(169, 164, 155, 0.75)' }}
+                            style={{
+                                backgroundColor: "#EFE9DE",
+                                borderColor: "rgba(169, 164, 155, 0.75)"
+                            }}
                         >
                             View Resources
                         </Link>
                     ) : (
-                        <div className="w-12 h-12 rounded-full flex items-center justify-center transition-all" style={{ backgroundColor: '#EFE9DE' }}>
+                        <div
+                            className="w-12 h-12 rounded-full flex items-center justify-center transition-all"
+                            style={{ backgroundColor: "#EFE9DE" }}
+                        >
                             <RightArrowIcon className="w-6 h-6 text-gray-900" />
                         </div>
                     )}
                 </div>
-                
-                {activeSection === 'funded' && (
+
+                {activeSection === "funded" && (
                     <div className="animate-fadeIn">
                         <p className="text-lg text-gray-700 leading-relaxed font-quicksand">
-                            Ready to make an impact? Secure a grant to launch your full-time career in bitcoin open-source development by working on the hardest and most interesting problems.
+                            Ready to make an impact? Secure a grant to launch
+                            your full-time career in bitcoin open-source
+                            development by working on the hardest and most
+                            interesting problems.
                         </p>
                     </div>
                 )}

@@ -20,7 +20,6 @@ const FaqSection = () => {
                             key={index}
                             className="bg-[#EFE9DE] border border-brand-gray-100 rounded-2xl overflow-hidden"
                         >
-
                             <button
                                 onClick={() => toggleFaq(index)}
                                 className="w-full flex items-center justify-between p-5  md:p-6 text-left hover:bg-brand transition-colors"

@@ -7,11 +7,11 @@
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
-    --brand-card-bg: #EFE9DE; 
-    --brand-green:#0E9158;
-    --brand-dark-100:#201E1E;
-    --brand-orange-100:#EB5234;
-    --brand-light-100:#F6F0E6;
+    --brand-card-bg: #efe9de;
+    --brand-green: #0e9158;
+    --brand-dark-100: #201e1e;
+    --brand-orange-100: #eb5234;
+    --brand-light-100: #f6f0e6;
 }
 
 body {
@@ -99,8 +99,8 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-  background-clip: content-box !important;
-  -webkit-text-fill-color: #000000 !important;
-  transition: background-color 5000s ease-in-out 0s !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    background-clip: content-box !important;
+    -webkit-text-fill-color: #000000 !important;
+    transition: background-color 5000s ease-in-out 0s !important;
 }
