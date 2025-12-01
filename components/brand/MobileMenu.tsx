@@ -49,7 +49,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: { isOpen?: boolean; setIsOpen:Dispatc
                 <div>
                     <Image
                         src={"/images/pangolin-mobile-menu.webp"}
-                        alt="A Pangolin with Construction helment"
+                        alt="A Pangolin with Construction helmet"
                         width={377}
                         height={251}
                     />
