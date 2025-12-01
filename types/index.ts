@@ -55,27 +55,27 @@ export interface IFeature {
 }
 
 export type MottosNav = {
-    name:string;
-    slug:Mottos;
+    name: string
+    slug: Mottos
 }
 export type Mottos = "learn" | "contribute" | "career" | "get-funded"
 
 // Filters
 export interface FilterResourceType {
-    tag:TagType;
-    description: string;
+    tag: TagType
+    description: string
 }
 
 // Curriculum for learn
 
 export interface FooterLinkItem {
-  name: string;
-  link: string;
-  target?: "_blank" | "_self" | "_parent" | "_top";
-  component?: ComponentType<SVGProps<SVGSVGElement>>;
+    name: string
+    link: string
+    target?: "_blank" | "_self" | "_parent" | "_top"
+    component?: ComponentType<SVGProps<SVGSVGElement>>
 }
 
 export interface FooterSection {
-  name: string;
-  links: FooterLinkItem[];
+    name: string
+    links: FooterLinkItem[]
 }

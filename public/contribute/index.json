@@ -2,12 +2,8 @@
     "items": [
         {
             "difficulty": "medium",
-            "tags": [
-                "products"
-            ],
-            "tagList": [
-                "tool"
-            ],
+            "tags": ["products"],
+            "tagList": ["tool"],
             "bannerColor": "#0E9158",
             "byBDP": "true",
             "logo": "/images/contribute/good-first-issues.webp",
@@ -17,12 +13,8 @@
         },
         {
             "difficulty": "medium",
-            "tags": [
-                "products"
-            ],
-            "tagList": [
-                "tool"
-            ],
+            "tags": ["products"],
+            "tagList": ["tool"],
             "bannerColor": "#272624",
             "logo": "/images/contribute/boss-projects.webp",
             "title": "Boss Projects",
@@ -31,12 +23,8 @@
         },
         {
             "difficulty": "hard",
-            "tags": [
-                "products"
-            ],
-            "tagList": [
-                "seminar"
-            ],
+            "tags": ["products"],
+            "tagList": ["seminar"],
             "bannerColor": "#F5D7E2",
             "logo": "/images/contribute/folder.webp",
             "title": "LDK Review Club",
@@ -45,12 +33,8 @@
         },
         {
             "difficulty": "hard",
-            "tags": [
-                "products"
-            ],
-            "tagList": [
-                "guide"
-            ],
+            "tags": ["products"],
+            "tagList": ["guide"],
             "bannerColor": "#ECD4B5",
             "logo": "/images/learn/books.webp",
             "title": "Bitcoin Core Onboarding",
@@ -59,12 +43,8 @@
         },
         {
             "difficulty": "medium",
-            "tags": [
-                "products"
-            ],
-            "tagList": [
-                "seminar"
-            ],
+            "tags": ["products"],
+            "tagList": ["seminar"],
             "bannerColor": "#FBFBFB",
             "logo": "/images/contribute/folder.webp",
             "title": "PR Review Club (Bitcoin Core)",
