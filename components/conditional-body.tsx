@@ -6,6 +6,7 @@ import siteMetadata from "@/data/siteMetadata"
 import { ConditionalBackground } from "./conditional-background"
 import { ConditionalHeader } from "./conditional-header"
 import FooterComponent from "./footer-component"
+import BossBanner from "./banner/BossBanner"
 
 export function ConditionalBody({
     children,
@@ -38,6 +39,7 @@ export function ConditionalBody({
         <body className={bodyClass}>
             <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
                 <ConditionalBackground>
+                    <BossBanner />
                     <ConditionalHeader />
                     <main>{children}</main>
                     <FooterComponent />

@@ -6,12 +6,12 @@ const BANNER_KEY = "queuer-banner"
 
 const defaultStyles = {
     container:
-        "dark:text-bdp-white dark:shadow-dark-light gap-2 flex items-center justify-between w-full px-2 sm:px-4 shadow-md transition-all duration-200 ease-in-out text-center",
+        "gap-2 flex items-center justify-between w-full px-2 sm:px-4 shadow-md transition-all duration-200 ease-in-out text-center",
     bannerInfoContainer: `flex flex-col flex-[1_1_auto]`,
-    headingText: "font-semibold text-sm md:text-lg",
+    headingText: "font-semibold text-brand-dark text-sm md:text-lg",
     bodyText: "text-sm md:text-base",
-    link: "text-bdp-accent underline font-semibold text-xs md:text-sm",
-    icon: "text-bdp-lightGrey hover:text-red-500 transition-all duration-200 ease-in-out",
+    link: "text-brand-orange-100 underline font-semibold text-xs md:text-sm",
+    icon: "text-orange-500  transition-all duration-200 ease-in-out",
     boss: "text-bdp-accent text-base md:text-lg"
 } as const
 
@@ -36,9 +36,7 @@ const BossBanner = () => {
     }, [])
 
     return (
-        <div
-            className={`w-full dark:bg-black bg-white sticky top-[60px] -z-20`}
-        >
+        <div className={`w-full bg-white sticky top-0 z-[60] font-quicksand`}>
             <div
                 data-show-banner={showBanner}
                 data-has-heading
@@ -55,7 +53,7 @@ const BossBanner = () => {
                         <span
                             className={clsx(
                                 defaultStyles.boss,
-                                "dark:text-orange-400 text-orange-500"
+                                "text-orange-500"
                             )}
                         >
                             {" "}
@@ -69,9 +67,9 @@ const BossBanner = () => {
                             defaultStyles.link,
                             "dark:text-orange-400 text-orange-500"
                         )}
-                        href={"https://learning.chaincode.com/#BOSS"}
+                        href="https://bosschallenge.xyz"
                     >
-                        APPLY TODAY
+                        APPLY FOR THE ₿OSS CHALLENGE TODAY
                     </a>
                 </div>
                 <button
