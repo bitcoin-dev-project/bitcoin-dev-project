@@ -97,16 +97,17 @@ export default function Career() {
                                         <h2 className="text-base lg:text-xl font-semibold font-montserrat">
                                             Common Application
                                         </h2>
-                                        <div
-                                            role="button"
-                                            tabIndex={0}
+                                        <a
+                                            href="https://grants.bitcoindevs.xyz/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="w-full justify-center gap-2.5 lg:w-auto flex flex-row p-2.5 rounded-[10px] bg-brand-dark"
                                         >
                                             <BDPStars />
                                             <p className="text-sm font-bold lg:text-left text-brand">
                                                 Submit Application
                                             </p>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
