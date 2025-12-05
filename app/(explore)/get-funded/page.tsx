@@ -100,7 +100,7 @@ export default function Career() {
                                         <a
                                             href="https://grants.bitcoindevs.xyz/"
                                             target="_blank"
-                                            rel="noopener noreferrer"
+                                            rel="noopener strict-origin"
                                             className="w-full justify-center gap-2.5 lg:w-auto flex flex-row p-2.5 rounded-[10px] bg-brand-dark"
                                         >
                                             <BDPStars />
