@@ -59,7 +59,7 @@ const FeaturedProduct = () => {
                             </div>
 
                             <div
-                                className={`absolute bottom-6 left-3 right-3 px-4 transition-opacity duration-500 ${
+                                className={`md:absolute md:bottom-6 md:left-3 md:right-3 px-4 mt-2 md:transition-opacity md:duration-500 ${
                                     hoveredProduct === index
                                         ? " md:opacity-100"
                                         : "md:opacity-0"
