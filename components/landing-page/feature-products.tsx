@@ -23,15 +23,15 @@ const FeaturedProduct = () => {
                             key={product.name}
                             href={product.link}
                             target={product?.target}
-                            className="relative cursor-pointer rounded-[20px] overflow-hidden aspect-[3/4] transition-all duration-500 bg-brand-gray border border-brand-stroke-on-base flex flex-col"
+                            className="relative cursor-pointer rounded-[20px] overflow-hidden aspect-[3/4] transition-all duration-500 bg-brand-gray border border-brand-stroke-on-base flex flex-col justify-between"
                             onMouseEnter={() => setHoveredProduct(index)}
                             onMouseLeave={() => setHoveredProduct(null)}
                         >
                             <div
-                                className={`relative h-[70%] w-[calc(100%-1.5rem)] mb-2 mt-3 mx-auto  rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${
+                                className={`relative flex-1 w-[calc(100%-1.5rem)] mb-2 mt-3 mx-auto  rounded-2xl overflow-hidden transition-all duration-500 ease-in-out ${
                                     hoveredProduct === index
-                                        ? "md:h-[60%] lg:h-[75%] md:w-[calc(100%-1.5rem)] md:mt-3 md:mx-3 md:mb-2"
-                                        : "md:h-full md:w-full md:mt-0 md:mx-0 md:mb-0"
+                                        ? "md:flex-[0.75] md:w-[calc(100%-1.5rem)] md:mt-3 md:mx-3 md:mb-2"
+                                        : "md:flex-1 md:w-full md:mt-0 md:mx-0 md:mb-0"
                                 }`}
                             >
                                 <Image
@@ -59,13 +59,13 @@ const FeaturedProduct = () => {
                             </div>
 
                             <div
-                                className={`md:absolute md:bottom-6 md:left-3 md:right-3 px-4 mt-2 md:transition-opacity md:duration-500 ${
+                                className={`md:absolute md:bottom-6 md:left-3 md:right-3 px-4 pb-4 md:transition-opacity md:duration-500 ${
                                     hoveredProduct === index
                                         ? " md:opacity-100"
                                         : "md:opacity-0"
                                 }`}
                             >
-                                <p className="text-brand-dark text-[1.125rem] font-quicksand leading-none lg:leading-[1.2]">
+                                <p className="text-brand-dark text-base md:text-lg lg:text-[1.125rem] font-quicksand leading-relaxed md:leading-normal lg:leading-[1.2]">
                                     {product.description}
                                 </p>
                             </div>
