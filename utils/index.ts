@@ -246,7 +246,7 @@ export const FEATUREDPRODUCTS = [
         link: "https://chat.bitcoinsearch.xyz/",
         target: "_blank",
         description:
-            "An interactive science fiction game designed to inspire a generation to fall in love with bitcoin."
+            "A conversational learning tool that helps users explore bitcoin topics through interactive, AI-guided chats."
     }
 ]
 
