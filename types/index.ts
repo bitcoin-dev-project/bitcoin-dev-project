@@ -1,6 +1,6 @@
-import { TagType } from "@bitcoin-dev-project/bdp-ui"
 import { ImageProps } from "next/image"
 import { ComponentType, SVGProps } from "react"
+import { TagType } from "./curriculum"
 
 export type ProjectProperties = {
     name: string

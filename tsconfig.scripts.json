@@ -9,5 +9,5 @@
         "skipLibCheck": true
     },
     "include": ["helpers/**/*.ts", "utils/**/*.ts", "types/**/*.ts"],
-    "exclude": ["utils/content-utils.ts"]
+    "exclude": ["utils/content-utils.ts", "utils/index.ts"]
 }
