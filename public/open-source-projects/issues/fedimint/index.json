@@ -1,27 +1,8 @@
 [
   {
-    "url": "https://github.com/fedimint/fedimint/issues/1344",
-    "publishedAt": "2023-01-16T17:35:13Z",
-    "title": "1-click deployments",
-    "labels": [
-      "good first issue",
-      "deployment"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/2190",
     "publishedAt": "2023-04-11T14:45:18Z",
     "title": "notification endpoints cleanup",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/2257",
-    "publishedAt": "2023-04-19T21:00:18Z",
-    "title": "Convert (most) logging statements to use pre-defined logging targets",
     "labels": [
       "good first issue"
     ],
@@ -149,6 +130,16 @@
     "title": "Gatewayd stops processing payments",
     "labels": [
       "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/8101",
+    "publishedAt": "2025-12-20T17:50:33Z",
+    "title": "Investigate potential race condition in LNv1 reucrringd registration",
+    "labels": [
+      "bug",
+      "client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }

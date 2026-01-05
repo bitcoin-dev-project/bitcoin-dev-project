@@ -45,15 +45,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6653",
-    "publishedAt": "2025-04-05T16:45:11Z",
-    "title": "In Email Rules show \"Send the email to the buyer\" checkbox only if trigger supports it",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6667",
     "publishedAt": "2025-04-10T21:06:56Z",
     "title": "Improve Bitcoin Wallet Labels to show Title of Payment Request, not Id",
@@ -80,28 +71,6 @@
       "Enhancement",
       "API",
       "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6772",
-    "publishedAt": "2025-06-06T21:12:26Z",
-    "title": "Don't show payment method selector if there's only a single payment method or in Bitcoin case Unified QR is selected",
-    "labels": [
-      "Enhancement",
-      "UI / UX",
-      "good first issue",
-      "Checkout"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6991",
-    "publishedAt": "2025-11-12T09:51:32Z",
-    "title": "[Bug]: Don't display `Create a new wallet` on the wallet creation flow, if the server settings disable hot and watch only wallet creation",
-    "labels": [
-      "good first issue",
-      "Wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }

@@ -73,12 +73,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/1172",
-    "publishedAt": "2025-10-23T20:09:45Z",
-    "title": "payjoin-cli `resume` command fails when any session has expired",
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1250",
+    "publishedAt": "2025-12-29T10:42:24Z",
+    "title": "JS bindings should include `io` functionality",
     "labels": [
-      "bug",
-      "payjoin-cli"
+      "good first issue",
+      "ffi"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
