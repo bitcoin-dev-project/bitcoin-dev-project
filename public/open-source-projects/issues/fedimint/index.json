@@ -57,6 +57,17 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
+    "url": "https://github.com/fedimint/fedimint/issues/3630",
+    "publishedAt": "2023-11-17T09:18:59Z",
+    "title": "Modularize `fedimint-cli` commands",
+    "labels": [
+      "good first issue",
+      "client",
+      "cli"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
     "url": "https://github.com/fedimint/fedimint/issues/4584",
     "publishedAt": "2024-03-16T15:01:57Z",
     "title": "Versions support tracking",
