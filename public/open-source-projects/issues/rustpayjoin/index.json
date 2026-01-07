@@ -81,5 +81,15 @@
       "ffi"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1258",
+    "publishedAt": "2026-01-07T15:31:48Z",
+    "title": "payjoin-cli RPC errors are obscured",
+    "labels": [
+      "good first issue",
+      "payjoin-cli"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
