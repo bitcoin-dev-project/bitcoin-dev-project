@@ -32,6 +32,15 @@ const projects: ProjectCard[] = [
         github: "bitcoin/bitcoin"
     },
     {
+        title: "Floresta",
+        description: "Floresta is a lightweight and embeddable Bitcoin client.",
+        logo: "/images/projects/floresta-logo.svg",
+        bgColor: "bg-[#1c1c1e]",
+        textColor: "text-white",
+        link: "/good-first-issues?page=1&repo=Floresta",
+        github: "getfloresta/Floresta"
+    },
+    {
         title: "Lightning Dev Kit",
         description: "A complete lightning implementation packaged as an SDK",
         logo: "/images/projects/ldk.svg",

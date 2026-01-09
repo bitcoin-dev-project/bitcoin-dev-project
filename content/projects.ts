@@ -20,6 +20,17 @@ export const projects = {
                     repo: "bitcoin"
                 },
                 {
+                    title: "Floresta",
+                    subTitle:
+                        "A lightweight and embeddable Bitcoin client, built for sovereignty.",
+                    description:
+                        "Floresta is a lightweight and embeddable Bitcoin client designed for users and applications that want strong validation guarantees without the operational overhead of traditional full nodes.  It can be run as a standalone fully validating node or embedded as a library, allowing developers to reuse the same client components across different applications and deployments.",
+                    image: "/images/projects/floresta-logo.png",
+                    link: "/good-first-issues?page=1&repo=Floresta",
+                    github: "https://github.com/getfloresta/Floresta",
+                    repo: "Floresta"
+                },
+                {
                     title: "Lightning Development Kit",
                     subTitle: "",
                     description:
