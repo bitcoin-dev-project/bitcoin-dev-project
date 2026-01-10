@@ -35,25 +35,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6204",
-    "publishedAt": "2024-09-09T03:43:08Z",
-    "title": "Better URL input UX",
-    "labels": [
-      "good first issue",
-      "Design"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6667",
-    "publishedAt": "2025-04-10T21:06:56Z",
-    "title": "Improve Bitcoin Wallet Labels to show Title of Payment Request, not Id",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6697",
     "publishedAt": "2025-04-25T02:10:45Z",
     "title": "[Bug]: Keypad POS won't display \"Any amount\" items",
@@ -71,6 +52,26 @@
       "Enhancement",
       "API",
       "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/7091",
+    "publishedAt": "2026-01-10T11:07:58Z",
+    "title": "Add support for search, specifically for TX id inside the wallet view",
+    "labels": [
+      "good first issue",
+      "Wallet"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/7092",
+    "publishedAt": "2026-01-10T11:16:33Z",
+    "title": "Standardize Wallet View: Add Date Filter for Transactions",
+    "labels": [
+      "good first issue",
+      "Wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
