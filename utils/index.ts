@@ -49,7 +49,7 @@ export const FILTERSGUIDE: FilterResourceType[] = [
     },
     {
         tag: "tool",
-        description: "Lecture, talks"
+        description: "Utility or reference to explore"
     },
     {
         tag: "interactive",
@@ -57,7 +57,7 @@ export const FILTERSGUIDE: FilterResourceType[] = [
     },
     {
         tag: "seminar",
-        description: "Utility or reference to explore"
+        description: "Lecture, talks"
     }
 ]
 
