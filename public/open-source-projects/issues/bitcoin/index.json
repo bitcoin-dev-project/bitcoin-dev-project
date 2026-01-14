@@ -358,6 +358,17 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
+    "url": "https://github.com/bitcoin/bitcoin/issues/33940",
+    "publishedAt": "2025-11-24T14:11:12Z",
+    "title": "Memory leak when using IPC mining interface",
+    "labels": [
+      "Bug",
+      "Resource usage",
+      "interfaces"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
     "url": "https://github.com/bitcoin/bitcoin/issues/34086",
     "publishedAt": "2025-12-17T04:16:29Z",
     "title": "doc: Use multi-path descriptors in descriptors.md and linked tests.",
