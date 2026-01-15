@@ -265,6 +265,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
+    "url": "https://github.com/bitcoin/bitcoin/issues/28635",
+    "publishedAt": "2023-10-11T08:56:02Z",
+    "title": "Test calling addnode more than once (and MAX_ADDNODE_CONNECTIONS)",
+    "labels": [
+      "Bug",
+      "RPC/REST/ZMQ"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
     "url": "https://github.com/bitcoin/bitcoin/issues/28648",
     "publishedAt": "2023-10-13T10:24:00Z",
     "title": "test: Write assumeutxo tests",
