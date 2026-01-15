@@ -317,6 +317,26 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
+    "url": "https://github.com/bitcoin/bitcoin/issues/32173",
+    "publishedAt": "2025-03-31T11:50:20Z",
+    "title": "validation: `CheckBlockIndex` crashes during block reconsideration",
+    "labels": [
+      "Bug",
+      "Validation"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/32201",
+    "publishedAt": "2025-04-02T16:20:19Z",
+    "title": "BIP32: Maximal length of derivation paths and depth of extended keys",
+    "labels": [
+      "Bug",
+      "Questions and Help"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
     "url": "https://github.com/bitcoin/bitcoin/issues/32849",
     "publishedAt": "2025-07-01T13:57:25Z",
     "title": "Internal bug detected: FinalizeAndExtractPSBT(psbtx_copy, mtx)",
@@ -333,6 +353,16 @@
     "labels": [
       "Bug",
       "Block storage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/33208",
+    "publishedAt": "2025-08-17T11:29:44Z",
+    "title": "Indexes stuck on unknown best block after unclean shutdown",
+    "labels": [
+      "Bug",
+      "UTXO Db and Indexes"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
@@ -364,6 +394,17 @@
       "Bug",
       "Build system",
       "Upstream"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/33923",
+    "publishedAt": "2025-11-21T22:05:01Z",
+    "title": "should concurrent IPC requests directed to the same thread cause a crash?",
+    "labels": [
+      "Brainstorming",
+      "Bug",
+      "interfaces"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
