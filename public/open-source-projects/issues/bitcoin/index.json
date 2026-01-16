@@ -265,6 +265,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
+    "url": "https://github.com/bitcoin/bitcoin/issues/27843",
+    "publishedAt": "2023-06-09T14:52:59Z",
+    "title": "ThreadI2PAcceptIncoming temporarily bypasses 125 connection ceiling",
+    "labels": [
+      "Bug",
+      "Net"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
     "url": "https://github.com/bitcoin/bitcoin/issues/28635",
     "publishedAt": "2023-10-11T08:56:02Z",
     "title": "Test calling addnode more than once (and MAX_ADDNODE_CONNECTIONS)",
