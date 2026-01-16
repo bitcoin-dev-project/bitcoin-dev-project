@@ -102,9 +102,29 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
+    "url": "https://github.com/bitcoin/bitcoin/issues/21647",
+    "publishedAt": "2021-04-10T00:36:28Z",
+    "title": "RPC importprunedfunds doesn't allow importing spending txs, only receiving txs",
+    "labels": [
+      "Wallet",
+      "RPC/REST/ZMQ",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
     "url": "https://github.com/bitcoin/bitcoin/issues/22559",
     "publishedAt": "2021-07-26T21:35:29Z",
     "title": "net: redundant connections with a single peer",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/22592",
+    "publishedAt": "2021-07-31T17:44:31Z",
+    "title": "LeakSanitizer detects memory leak if CDBWrapper ctor fails",
     "labels": [
       "Bug"
     ],
