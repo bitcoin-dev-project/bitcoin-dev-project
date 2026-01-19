@@ -24,7 +24,7 @@
         {
             "difficulty": "hard",
             "tags": ["products"],
-            "tagList": ["seminar"],
+            "tagList": ["interactive"],
             "bannerColor": "#F5D7E2",
             "logo": "/images/contribute/folder.webp",
             "title": "LDK Review Club",
@@ -44,7 +44,7 @@
         {
             "difficulty": "medium",
             "tags": ["products"],
-            "tagList": ["seminar"],
+            "tagList": ["interactive"],
             "bannerColor": "#FBFBFB",
             "logo": "/images/contribute/folder.webp",
             "title": "PR Review Club (Bitcoin Core)",
