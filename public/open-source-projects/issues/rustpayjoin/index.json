@@ -91,5 +91,16 @@
       "payjoin-cli"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1276",
+    "publishedAt": "2026-01-19T15:07:01Z",
+    "title": "Expose PSBT input error index in FFI error types",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "ffi"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
