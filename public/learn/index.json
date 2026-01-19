@@ -24,7 +24,7 @@
         "guide",
         "tool"
       ],
-      "bannerColor": "#FFFFFF",
+      "bannerColor": "#F6931A",
       "byBDP": "true",
       "logo": "/images/learn/Btranscripts.webp",
       "title": "Bitcoin Transcripts",
@@ -252,6 +252,68 @@
       "title": "Cryptography camp workbook",
       "description": "Learn cryptographic security and proofs through a practical, hands-on workbook.",
       "link": "https://github.com/cryptography-camp/workbook"
+    },
+    {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "byBDP": "true",
+      "tagList": [
+        "guide"
+      ],
+      "bannerColor": "#D5BBA4",
+      "logo": "/images/learn/bitcoin-whitepaper.webp",
+      "title": "The Bitcoin Whitepaper",
+      "description": "The foundational document that introduced Bitcoin, explaining it's decentralized, P2P, electronic cash system.",
+      "link": "https://bitcoin.org/en/bitcoin-paper"
+    },
+    {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "byBDP": "true",
+      "tagList": [
+        "guide"
+      ],
+      "bannerColor": "#F5F5F5",
+      "logo": "/images/learn/decoding-bitcoin.webp",
+      "title": "Decoding Bitcoin",
+      "description": "Self-paced educational platform that covers key bitcoin concepts through visual explanations and exercises.",
+      "link": "https://bitcoindevs.xyz/decoding"
+    },
+    {
+      "difficulty": "medium",
+      "tags": [
+        "products"
+      ],
+      "byBDP": "true",
+      "tagList": [
+        "tool",
+        "interactive"
+      ],
+      "bannerColor": "#F5F5F5",
+      "logo": "/images/learn/simln.webp",
+      "title": "simLN",
+      "description": "Instantly simulate real-world lightning network activity.",
+      "link": "https://github.com/bitcoin-dev-project/sim-ln"
+    },
+    {
+      "difficulty": "hard",
+      "tags": [
+        "products"
+      ],
+      "byBDP": "true",
+      "tagList": [
+        "tool",
+        "interactive"
+      ],
+      "bannerColor": "#160C12",
+      "logo": "/images/learn/bitcoin-whitepaper.webp",
+      "title": "Warnet",
+      "description": "Monitor and analyze emergent behaviors of P2P networks.",
+      "link": "https://warnet.dev/"
     }
   ]
 }
