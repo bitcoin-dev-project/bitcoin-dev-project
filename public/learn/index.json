@@ -306,7 +306,8 @@
       ],
       "byBDP": "true",
       "tagList": [
-        "guide"
+        "tool",
+        "interactive"
       ],
       "bannerColor": "#160C12",
       "logo": "/images/learn/bitcoin-whitepaper.webp",
