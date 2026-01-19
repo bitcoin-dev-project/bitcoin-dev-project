@@ -97,10 +97,7 @@
       "tags": [
         "products"
       ],
-      "tagList": [
-        "seminar",
-        "tool"
-      ],
+      "tagList": ["interactive", "tool"],
       "bannerColor": "#E2D8C4",
       "byBDP": "true",
       "logo": "/images/learn/learnrust.webp",
@@ -155,10 +152,7 @@
       "tags": [
         "products"
       ],
-      "tagList": [
-        "guide",
-        "seminar"
-      ],
+      "tagList": ["guide", "interactive"], 
       "bannerColor": "#D1E2F3",
       "logo": "/images/learn/computer.webp",
       "title": "Tinybitcoinkeeper",
@@ -170,10 +164,7 @@
       "tags": [
         "products"
       ],
-      "tagList": [
-        "guide",
-        "seminar"
-      ],
+      "tagList": ["guide", "interactive"], 
       "bannerColor": "#D1E2F3",
       "logo": "/images/learn/computer.webp",
       "title": "Learn Bitcoin From Command Line",
@@ -185,10 +176,7 @@
       "tags": [
         "products"
       ],
-      "tagList": [
-        "guide",
-        "seminar"
-      ],
+      "tagList": ["guide", "interactive"], 
       "bannerColor": "#D1E2F3",
       "logo": "/images/learn/computer.webp",
       "title": "Transaction Tutorial",
@@ -228,10 +216,7 @@
       "tags": [
         "products"
       ],
-      "tagList": [
-        "guide",
-        "seminar"
-      ],
+      "tagList": ["interactive"],
       "bannerColor": "#D1E2F3",
       "logo": "/images/learn/computer.webp",
       "title": "Schnorr Taproot",
