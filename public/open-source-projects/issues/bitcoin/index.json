@@ -487,5 +487,14 @@
       "interfaces"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/34326",
+    "publishedAt": "2026-01-17T15:56:13Z",
+    "title": "node uptime wrong",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]

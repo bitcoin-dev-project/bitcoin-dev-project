@@ -64,15 +64,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/1169",
-    "publishedAt": "2025-10-22T15:35:31Z",
-    "title": "payjoin-cli receiver response causing reqwest failure with `InvalidContentType`",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/1250",
     "publishedAt": "2025-12-29T10:42:24Z",
     "title": "JS bindings should include `io` functionality",
