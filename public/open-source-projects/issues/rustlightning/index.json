@@ -56,15 +56,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2462",
-    "publishedAt": "2023-07-29T05:21:46Z",
-    "title": "Allow self-payment",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/2720",
     "publishedAt": "2023-11-09T01:37:38Z",
     "title": "add probing code",
