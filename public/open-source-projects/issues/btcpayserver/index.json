@@ -18,7 +18,8 @@
     "labels": [
       "Bug",
       "UI / UX",
-      "Plugin"
+      "Plugin",
+      "Dashboard"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
@@ -60,6 +61,17 @@
     "labels": [
       "good first issue",
       "Wallet"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/7117",
+    "publishedAt": "2026-01-19T21:59:48Z",
+    "title": "[Bug]: Form with empty email field cannot be send",
+    "labels": [
+      "good first issue",
+      "Stores",
+      "Form"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
