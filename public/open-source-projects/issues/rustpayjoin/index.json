@@ -93,5 +93,16 @@
       "ffi"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1288",
+    "publishedAt": "2026-01-22T08:26:34Z",
+    "title": "Switch from `reqwest` to `bitreq`",
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "tracking"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
