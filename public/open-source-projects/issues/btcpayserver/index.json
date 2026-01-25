@@ -24,16 +24,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6697",
-    "publishedAt": "2025-04-25T02:10:45Z",
-    "title": "[Bug]: Keypad POS won't display \"Any amount\" items",
-    "labels": [
-      "good first issue",
-      "PoS"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/6727",
     "publishedAt": "2025-05-14T08:06:31Z",
     "title": "Greenfield API - Improvements tracker",
