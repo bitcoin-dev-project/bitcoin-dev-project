@@ -1,14 +1,5 @@
 [
   {
-    "url": "https://github.com/stratum-mining/stratum/issues/375",
-    "publishedAt": "2022-12-11T16:23:22Z",
-    "title": "Rm 3rd-party `hex` crate dependency",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
-  },
-  {
     "url": "https://github.com/stratum-mining/stratum/issues/476",
     "publishedAt": "2023-03-05T11:37:21Z",
     "title": "make safe look safer",
