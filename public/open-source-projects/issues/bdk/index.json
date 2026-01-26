@@ -55,14 +55,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2095",
-    "publishedAt": "2026-01-15T19:56:27Z",
-    "title": "Question re: when `LocalChain::apply_update` invalidates checkpoints",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
