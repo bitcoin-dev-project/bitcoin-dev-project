@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense } from "react"
 
 import RepositoryIssues from "@/components/repository-issues"
 import { getRepoIssues } from "@/lib/get-repo-issues"
@@ -38,7 +38,15 @@ const Contribute = async () => {
     const issues = await getRepoIssues()
     return (
         <main className="mx-auto">
-            <RepositoryIssues issues={issues} />
+            <Suspense
+                fallback={
+                    <div className="w-full min-h-[calc(100vh-88px)] flex items-center justify-center">
+                        Loading...
+                    </div>
+                }
+            >
+                <RepositoryIssues issues={issues} />
+            </Suspense>
         </main>
     )
 }
