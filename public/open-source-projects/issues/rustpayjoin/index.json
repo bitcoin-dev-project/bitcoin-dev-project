@@ -104,5 +104,15 @@
       "tracking"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1300",
+    "publishedAt": "2026-01-26T16:10:26Z",
+    "title": ".gitignorganization",
+    "labels": [
+      "documentation",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
