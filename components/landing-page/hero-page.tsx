@@ -29,7 +29,7 @@ const HeroPage = ({
                 />
             </div>
 
-            <nav className="relative z-10 flex items-center justify-between max-w-desktop-max mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 h-20">
+            <nav className="sticky top-0 z-50 flex items-center justify-between max-w-desktop-max mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 h-20">
                 <Link href="/" className="flex items-center flex-shrink-0">
                     <BDPLogoWhite className="lg:w-[119px] hidden lg:block" />
                     <BDPMobileIcon className="w-[45px] lg:hidden" />
