@@ -177,8 +177,8 @@
         "products"
       ],
       "tagList": ["guide", "interactive"], 
-      "bannerColor": "#201E1E",
-      "logo": "/images/learn/codechain.png",
+      "bannerColor": "#FFFEDC",
+      "logo": "/images/learn/TransactionTutorial.png",
       "title": "Transaction Tutorial",
       "description": "Master SegWit, Taproot, sighashes, and timelocks with local Bitcoin scripting.",
       "link": "https://github.com/chaincodelabs/bitcoin-tx-tutorial"
@@ -191,8 +191,8 @@
       "tagList": [
         "seminar"
       ],
-      "bannerColor": "#ECD4B5",
-      "logo": "/images/learn/books.webp",
+      "bannerColor": "#201E1E",
+      "logo": "/images/learn/codechain.png",
       "title": "Chaincode Lightning",
       "description": "Curated program on Lightning development with discussions and hands-on cohort sessions.",
       "link": "https://learning.chaincode.com/#seminars"
