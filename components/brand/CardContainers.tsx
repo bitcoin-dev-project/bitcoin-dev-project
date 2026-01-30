@@ -9,7 +9,7 @@ const CardContainers: React.FC<ICurriculum> = ({ allCurriculum }) => {
     }
 
     return (
-        <div className="grid md:grid-cols-2 justify-between w-full gap-5">
+        <div className="learn-cards-container grid md:grid-cols-2 justify-between w-full gap-5">
             {allCurriculum.map((curriculum, index) => (
                 <BDPCard
                     key={`${curriculum.title}-${curriculum.link}-${index}`}
