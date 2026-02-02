@@ -18,25 +18,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/1672",
-    "publishedAt": "2022-08-15T21:27:22Z",
-    "title": "Set the new `dont_forward` bit in channel_update messages",
-    "labels": [
-      "good first issue",
-      "Take a Friday Leave a Friday"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2087",
-    "publishedAt": "2023-03-08T20:31:49Z",
-    "title": "Expose HTLCs in `ChannelDetails`",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/2264",
     "publishedAt": "2023-05-04T19:01:06Z",
     "title": "Expose current dust exposure",
