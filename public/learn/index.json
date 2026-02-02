@@ -128,7 +128,7 @@
         "guide"
       ],
       "bannerColor": "#DEE6FF",
-      "logo": "/images/learn/MasteringBitcoin.png",
+      "logo": "/images/learn/masterbitcoin.webp",
       "title": "Mastering Bitcoin",
       "description": "The classic Bitcoin technical resource—enhanced and expanded in its third edition.",
       "link": "https://github.com/bitcoinbook/bitcoinbook"
@@ -142,7 +142,7 @@
         "guide"
       ],
       "bannerColor": "#CEE8C0",
-      "logo": "/images/learn/MasteringLightening.png",
+      "logo": "/images/learn/masterlightining.webp",
       "title": "Mastering Lightning",
       "description": "The most comprehensive technical book on Lightning, prepare for real complexity.",
       "link": "https://github.com/lnbook/lnbook"
@@ -166,7 +166,7 @@
       ],
       "tagList": ["guide", "interactive"], 
       "bannerColor": "#FFD1B6",
-      "logo": "/images/learn/LearnBitcoinFromCLI.png",
+      "logo": "/images/learn/learnbitcoinfromcli.webp",
       "title": "Learn Bitcoin From Command Line",
       "description": "Hands-on guide to node-based transactions, scripting, and hidden-services setup.",
       "link": "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line"
@@ -178,7 +178,7 @@
       ],
       "tagList": ["guide", "interactive"], 
       "bannerColor": "#FFFEDC",
-      "logo": "/images/learn/TransactionTutorial.png",
+      "logo": "/images/learn/transactiontutorial.webp",
       "title": "Transaction Tutorial",
       "description": "Master SegWit, Taproot, sighashes, and timelocks with local Bitcoin scripting.",
       "link": "https://github.com/chaincodelabs/bitcoin-tx-tutorial"
@@ -192,7 +192,7 @@
         "seminar"
       ],
       "bannerColor": "#201E1E",
-      "logo": "/images/learn/codechain.png",
+      "logo": "/images/learn/chaincode.webp",
       "title": "Chaincode Lightning",
       "description": "Curated program on Lightning development with discussions and hands-on cohort sessions.",
       "link": "https://learning.chaincode.com/#seminars"
@@ -206,7 +206,7 @@
         "guide"
       ],
       "bannerColor": "#BAB6FF",
-      "logo": "/images/learn/BuildingonLN.png",
+      "logo": "/images/learn/buildingonln.webp",
       "title": "Building on LN",
       "description": "Build a Lightning graph visualizer, paid-invoice ownership game, and TypeScript.",
       "link": "https://buildonln.com/"
@@ -218,7 +218,7 @@
       ],
       "tagList": ["interactive"],
       "bannerColor": "#F7E6D2",
-      "logo": "/images/learn/SchnorrTaproot.png",
+      "logo": "/images/learn/schnorrtaproot.webp",
       "title": "Schnorr Taproot",
       "description": "Learn Schnorr signatures, MuSig aggregation, and Taproot hands-on in Jupyter.",
       "link": "https://bitcoinops.org/en/schnorr-taproot-workshop/"
@@ -233,7 +233,7 @@
         "seminar"
       ],
       "bannerColor": "#D4D4D4",
-      "logo": "/images/learn/Cryptographycampbook.png",
+      "logo": "/images/learn/cryptographycampbook.webp",
       "title": "Cryptography camp workbook",
       "description": "Learn cryptographic security and proofs through a practical, hands-on workbook.",
       "link": "https://github.com/cryptography-camp/workbook"
