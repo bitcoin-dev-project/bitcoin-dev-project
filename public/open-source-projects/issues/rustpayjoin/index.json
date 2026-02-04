@@ -120,7 +120,8 @@
     "publishedAt": "2026-02-04T14:32:04Z",
     "title": "Add Fuzzing CI job on pull requests to confirm it functions properly",
     "labels": [
-      "good first issue"
+      "good first issue",
+      "fuzz"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
