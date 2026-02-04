@@ -114,5 +114,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1313",
+    "publishedAt": "2026-02-04T14:32:04Z",
+    "title": "Add Fuzzing CI job on pull requests to confirm it functions properly",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
