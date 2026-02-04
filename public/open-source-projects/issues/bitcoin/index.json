@@ -427,17 +427,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/33548",
-    "publishedAt": "2025-10-06T11:36:32Z",
-    "title": "`test_bitcoin-qt`: segfault under LTO (CMAKE_INTERPROCEDURAL_OPTIMIZATION=ON)",
-    "labels": [
-      "Bug",
-      "Build system",
-      "Upstream"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/33923",
     "publishedAt": "2025-11-21T22:05:01Z",
     "title": "should concurrent IPC requests directed to the same thread cause a crash?",
