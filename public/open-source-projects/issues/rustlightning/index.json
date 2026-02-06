@@ -91,5 +91,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
+  },
+  {
+    "url": "https://github.com/lightningdevkit/rust-lightning/issues/4391",
+    "publishedAt": "2026-02-05T23:16:00Z",
+    "title": "Add counterparty node ids (+ user channel ids) to `TransactionType`",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   }
 ]
