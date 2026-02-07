@@ -31,7 +31,7 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                 Explore your path
                 <br />
                 to bitcoin{" "}
-                <span className="inline-flex items-center">
+                <span className="inline-flex items-end">
                     {/* Book Icon - Pink */}
                     <span
                         className="inline-flex items-center justify-center w-12 h-12 rounded-full relative z-40 border-2"
@@ -76,7 +76,7 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
 
             {/* LEARN Section */}
             <section
-                className="mb-8 pb-8 border-b border-gray-300"
+                className="mb-8 pb-8 border-b border-[#E1DBD0]"
                 onMouseEnter={() => handleSectionClick("learn")}
             >
                 <div className="flex items-center justify-between mb-6">
@@ -89,10 +89,11 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                     {activeSection === "learn" ? (
                         <Link
                             href="/learn"
-                            className="px-6 py-2 border-2 rounded-full text-gray-700 hover:opacity-90 transition-all font-medium font-quicksand"
+                            className="px-4 py-1 md:py-2 border-2 rounded-full hover:opacity-90 transition-all text-base font-bold font-quicksand"
                             style={{
                                 backgroundColor: "#EFE9DE",
-                                borderColor: "rgba(169, 164, 155, 0.75)"
+                                borderColor: "rgba(169, 164, 155, 0.75)",
+                                color: "rgba(32, 30, 30, 0.6)"
                             }}
                         >
                             View Resources
@@ -109,7 +110,7 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
 
                 {activeSection === "learn" && (
                     <div className="animate-fadeIn">
-                        <p className="text-lg text-gray-700 leading-relaxed font-quicksand">
+                        <p className="text-[20px] text-gray-700 leading-relaxed font-quicksand">
                             Discover how bitcoin really works, from first steps
                             to deep dives. The Bitcoin Dev Project helps you
                             grow, explore, and learn at your own pace.
@@ -120,7 +121,7 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
 
             {/* CONTRIBUTE Section */}
             <section
-                className="mb-8 pb-8 border-b border-gray-300"
+                className="mb-8 pb-8 border-b border-[#E1DBD0]"
                 onMouseEnter={() => handleSectionClick("contribute")}
             >
                 <div className="flex items-center justify-between mb-6">
@@ -133,10 +134,11 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                     {activeSection === "contribute" ? (
                         <Link
                             href="/contribute"
-                            className="px-6 py-2 border-2 rounded-full text-gray-700 hover:opacity-90 transition-all font-medium font-quicksand"
+                            className="px-4 py-1 md:py-2 border-2 rounded-full hover:opacity-90 transition-all text-base font-bold font-quicksand"
                             style={{
                                 backgroundColor: "#EFE9DE",
-                                borderColor: "rgba(169, 164, 155, 0.75)"
+                                borderColor: "rgba(169, 164, 155, 0.75)",
+                                color: "rgba(32, 30, 30, 0.6)"
                             }}
                         >
                             View Resources
@@ -153,7 +155,7 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
 
                 {activeSection === "contribute" && (
                     <div className="animate-fadeIn">
-                        <p className="text-lg text-gray-700 leading-relaxed font-quicksand">
+                        <p className="text-[20px] text-gray-700 leading-relaxed font-quicksand">
                             Join the bitcoin open-source movement. These
                             resources help you go from curious observer to
                             confident contributor. Guiding your first steps to
@@ -175,10 +177,11 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
                     {activeSection === "funded" ? (
                         <Link
                             href="/get-funded"
-                            className="px-6 py-2 border-2 rounded-full text-gray-700 hover:opacity-90 transition-all font-medium font-quicksand"
+                            className="px-4 py-1 md:py-2 border-2 rounded-full hover:opacity-90 transition-all text-base font-bold font-quicksand"
                             style={{
                                 backgroundColor: "#EFE9DE",
-                                borderColor: "rgba(169, 164, 155, 0.75)"
+                                borderColor: "rgba(169, 164, 155, 0.75)",
+                                color: "rgba(32, 30, 30, 0.6)"
                             }}
                         >
                             View Resources
@@ -195,7 +198,7 @@ export function ExploreContent({ onSectionChange }: ExploreContentProps) {
 
                 {activeSection === "funded" && (
                     <div className="animate-fadeIn">
-                        <p className="text-lg text-gray-700 leading-relaxed font-quicksand">
+                        <p className="text-[20px] text-gray-700 leading-relaxed font-quicksand">
                             Ready to make an impact? Secure a grant to launch
                             your full-time career in bitcoin open-source
                             development by working on the hardest and most
