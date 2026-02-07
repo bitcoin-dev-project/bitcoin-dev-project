@@ -8,7 +8,19 @@ configureMailchimp()
 
 export async function POST(request: NextRequest) {
     try {
-        const body = await request.json()
+        let body
+        try {
+            body = await request.json()
+        } catch {
+            return new Response(
+                JSON.stringify({ error: "Invalid or empty request body" }),
+                {
+                    status: 400,
+                    headers: { "content-type": "application/json" }
+                }
+            )
+        }
+
         if (!body.email) {
             throw new Error("Email is required")
         }
