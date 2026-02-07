@@ -133,9 +133,7 @@ export default function DecodingLayout({ children }: { children: ReactNode }) {
                 </div>
 
                 {/* Mobile Main Content */}
-                <div className="">
-                    {children}
-                </div>
+                <div className="">{children}</div>
             </div>
 
             {/* Desktop */}
