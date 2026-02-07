@@ -43,13 +43,13 @@ const AsideGoTO: React.FC<IGoTO> = ({ selected, allCurriculum, path }) => {
                     </div>
 
                     {selected === "get-funded" && (
-                        <div className="mt-4">
+                        <div className="mt-10">
                             <Image
                                 src="/images/hotair-balloon.png"
                                 alt="Hot Air Balloon"
-                                width={400}
-                                height={600}
-                                className="w-full h-auto"
+                                width={500}
+                                height={750}
+                                className="w-full h-auto scale-110"
                             />
                         </div>
                     )}

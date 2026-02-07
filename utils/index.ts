@@ -74,7 +74,8 @@ export const FUNDINGORGANISATION: IFundingOrg[] = [
         description:
             "Bitcoin R&D arm of Block, distributing grants since 2019.",
         width: 36,
-        height: 36
+        height: 36,
+        url: "https://spiral.xyz/"
     },
     {
         logo: "/images/get-funded/brink.webp",
@@ -83,7 +84,8 @@ export const FUNDINGORGANISATION: IFundingOrg[] = [
             "A 501c3, focused on funding Bitcoin Core devs, since 2020.",
         size: "min-w-[85px] min-h-[32px]",
         width: 85,
-        height: 32
+        height: 32,
+        url: "https://brink.dev/"
     },
     {
         logo: "/images/get-funded/hrf.webp",
@@ -91,7 +93,8 @@ export const FUNDINGORGANISATION: IFundingOrg[] = [
         description: " A 501c3 that has been distributing grants since 2020.",
         size: "min-w-[85px] min-h-[32px]",
         width: 36,
-        height: 27
+        height: 27,
+        url: "https://hrf.org/"
     },
     {
         logo: "/images/get-funded/open-sats.webp",
@@ -99,7 +102,8 @@ export const FUNDINGORGANISATION: IFundingOrg[] = [
         description: "A 501c3, established in 2021.",
         size: "min-w-[85px] min-h-[32px]",
         width: 39,
-        height: 25
+        height: 25,
+        url: "https://opensats.org/"
     }
 ]
 

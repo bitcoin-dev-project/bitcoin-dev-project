@@ -9,6 +9,7 @@ export interface IFundingOrg {
     size?: string
     width?: number
     height?: number
+    url?: string
 }
 const FundingOrg: React.FC<IFundingOrg> = ({
     logo,
@@ -16,11 +17,12 @@ const FundingOrg: React.FC<IFundingOrg> = ({
     description,
     size,
     width,
-    height
+    height,
+    url
 }) => {
     const imgSize = size
     return (
-        <a className="relative rounded-lg bg-brand-gray px-2 py-7 min-h-[195px] flex flex-col  items-center">
+        <a href={url} target="_blank" rel="noopener noreferrer" className="relative rounded-lg bg-brand-gray px-2 py-7 min-h-[195px] flex flex-col  items-center hover:scale-[1.02] transition-transform">
             <div className="absolute top-2 left-2 w-3 h-3 rounded-full bg-brand-gray-100" />
             <div className="absolute top-2 right-2 w-3 h-3 rounded-full  bg-brand-gray-100" />
             <div className="absolute bottom-2 left-2 w-3 h-3 rounded-full bg-brand-gray-100" />

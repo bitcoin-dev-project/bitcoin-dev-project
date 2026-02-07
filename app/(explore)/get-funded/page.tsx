@@ -79,15 +79,12 @@ export default function Career() {
                                             className="w-full object-cover min-h-[126px] lg:min-h-[277px] h-auto"
                                         />
 
-                                        <div
-                                            className="absolute bottom-3 left-3 flex items-center gap-1 px-2 py-1 rounded-[12px] border bg-[#F6F0E6]"
-                                            style={{ borderColor: "#A9A49B" }}
-                                        >
+                                        <div className="absolute z-10 top-3 left-3 bg-[#F6F0E6] border border-[#A9A49B] rounded-[12px] px-2 py-1 flex items-center gap-1">
                                             <BdpTag
                                                 width={16}
-                                                className="text-black w-6 lg:w-4"
+                                                className="text-black"
                                             />
-                                            <span className="text-[11px] md:text-sm font-medium text-black">
+                                            <span className="text-sm font-medium text-black">
                                                 By BDP
                                             </span>
                                         </div>
