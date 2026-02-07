@@ -112,3 +112,11 @@ select:-webkit-autofill:focus {
     height: auto;
     object-fit: contain;
 }
+
+.learn-cards-container > a {
+    transition: border-color 0.2s ease;
+}
+
+.learn-cards-container > a:hover {
+    border-color: rgba(169, 164, 155, 0.75);
+}
