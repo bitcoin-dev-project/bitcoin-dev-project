@@ -5,7 +5,7 @@ import clsx from "clsx"
 
 const FooterComponent = () => {
     return (
-        <footer className="relative min-h-[944px] md:min-h-[1000px] lg:min-h-[766px] pt-20 lg:pt-[129px]  bg-brand bg-footer-mobile md:bg-footer bg-cover bg-bottom bg-no-repeat  lg:bg-cover">
+        <footer className="relative min-h-[944px] md:min-h-[1000px] lg:min-h-[766px] pt-12 lg:pt-16  bg-brand bg-footer-mobile md:bg-footer bg-cover bg-bottom bg-no-repeat  lg:bg-cover">
             <div className="flex flex-col p-5 lg:flex-row w-full gap-10 max-w-[583px] lg:mx-auto justify-between font-quicksand font-bold">
                 {FOOTERLINKS.map((link) => (
                     <div key={link.name}>
@@ -30,16 +30,16 @@ const FooterComponent = () => {
                             </div>
                         )}
                         {link.name === "contact" && (
-                            <div className="flex flex-row gap-2 mt-2.5">
+                            <div className="flex flex-row gap-3 mt-2.5">
                                 {link.links.map((subLink) => (
                                     <a
                                         key={subLink.name}
                                         href={subLink.link}
                                         target={subLink.target}
-                                        className="bg-brand-gray text-brand-gray-200/75 hover:text-brand-orange-100  border rounded-[4px] w-[44px] h-[44px] flex items-center justify-center  border-brand-gray-100"
+                                        className="bg-brand-gray text-brand-gray-200/75 hover:text-brand-orange-100 hover:bg-brand-orange-100/10 hover:border-brand-orange-100 border rounded-[6px] w-[52px] h-[52px] flex items-center justify-center border-brand-gray-100 transition-all duration-200 hover:scale-110"
                                     >
                                         {subLink?.component && (
-                                            <subLink.component />
+                                            <subLink.component className="w-6 h-6" />
                                         )}
                                     </a>
                                 ))}
