@@ -44,11 +44,9 @@ const categoryOrder = [
 ]
 
 export function Navigation({
-    content,
     className,
     onLinkClick
 }: {
-    content: CoreContent<Topic>
     className?: string
     onLinkClick?: React.MouseEventHandler<HTMLAnchorElement>
 }) {
@@ -211,25 +209,21 @@ export function Navigation({
         }))
     }, [])
 
-    // Update expanded state when pathname changes
+    // Auto-expand a parent topic only when navigating to one of its children.
+    // This avoids overriding the user's explicit collapse when clicking a parent.
     useEffect(() => {
-        const newExpandedState: Record<string, boolean> = {}
         navigation.forEach((section) => {
             section.links.forEach((link) => {
                 if (
                     link.children &&
-                    (link.href === pathname ||
-                        link.children.some((child) => child.href === pathname))
+                    link.children.some((child) => child.href === pathname)
                 ) {
-                    newExpandedState[link.href] = true
+                    setExpandedTopics((prev) => {
+                        if (prev[link.href]) return prev
+                        return { ...prev, [link.href]: true }
+                    })
                 }
             })
-        })
-        setExpandedTopics((prev) => {
-            const updated = { ...prev, ...newExpandedState }
-            return JSON.stringify(updated) !== JSON.stringify(prev)
-                ? updated
-                : prev
         })
     }, [pathname, navigation])
 
