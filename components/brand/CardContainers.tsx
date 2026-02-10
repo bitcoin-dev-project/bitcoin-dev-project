@@ -2,10 +2,15 @@
 import { ICurriculum } from "@/types/curriculum"
 import { BDPCard } from "@bitcoin-dev-project/bdp-ui"
 import React from "react"
+import ResourceNotFound from "./ResourceNotFound"
 
 const CardContainers: React.FC<ICurriculum> = ({ allCurriculum }) => {
     if (!allCurriculum) {
         return null
+    }
+
+    if (allCurriculum.length === 0) {
+        return <ResourceNotFound />
     }
 
     return (
@@ -13,7 +18,7 @@ const CardContainers: React.FC<ICurriculum> = ({ allCurriculum }) => {
             {allCurriculum.map((curriculum, index) => (
                 <BDPCard
                     key={`${curriculum.title}-${curriculum.link}-${index}`}
-                    onClick={() => {}}
+                    onClick={() => { }}
                     {...curriculum}
                 />
             ))}
