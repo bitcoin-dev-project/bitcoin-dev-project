@@ -10,7 +10,6 @@ const GoodFirstIssuesFooter = () => {
                bg-black bg-cover bg-bottom bg-no-repeat
                bg-[url('/images/mobilebgdarkfooter.webp')] md:bg-[url('/images/bgdarkfooter.webp')]"
         >
-               
             {/* CONTENT */}
             <div className="relative z-10 flex flex-col p-5 lg:flex-row w-full gap-10 max-w-[583px] lg:mx-auto justify-between font-quicksand font-bold text-white">
                 {FOOTERLINKS.map((link) => (
