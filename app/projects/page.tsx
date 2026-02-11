@@ -194,9 +194,9 @@ export default function Projects() {
 
 function ProjectCardComponent({ project }: { project: ProjectCard }) {
     return (
-        <div className="relative flex h-full flex-col rounded-[16px] border-2 border-[#e1dbd0] bg-[#efe9de] overflow-hidden p-2">
+        <div className="relative flex h-full flex-col rounded-[16px] border border-[#e1dbd0] bg-[#efe9de] overflow-hidden p-2">
             {/* INNER BORDER - Card Content Area */}
-            <div className="flex flex-col h-full border-2 border-[#e1dbd0] rounded-[14px] overflow-hidden">
+            <div className="flex flex-col h-full border border-[#e1dbd0] rounded-[14px] overflow-hidden">
                 {/* IMAGE SECTION - Full width, no padding */}
                 <div className="relative w-full">
                     {/* BDP tag positioned on top of image */}
@@ -224,10 +224,10 @@ function ProjectCardComponent({ project }: { project: ProjectCard }) {
 
                 {/* BOTTOM / CONTENT SECTION */}
                 <div className="bg-[#efe9de] text-black p-4 flex flex-1 flex-col">
-                    <h3 className="text-2xl font-bold mb-2 font-montserrat">
+                    <h3 className="text-[17px] font-bold mb-2 font-montserrat leading-tight">
                         {project.title}
                     </h3>
-                    <p className="text-base mb-4 flex-1 opacity-70">
+                    <p className="text-base opacity-70 mb-6">
                         {project.description}
                     </p>
 
@@ -235,22 +235,22 @@ function ProjectCardComponent({ project }: { project: ProjectCard }) {
                     <Link
                         href={project.link}
                         rel="noopener noreferrer"
-                        className="relative inline-flex items-center h-8 rounded-[20px] font-semibold text-xs transition-all hover:scale-105
-                bg-[#E1DBD0] border-2 border-[#C7C1B6] text-black overflow-hidden self-start"
+                        className="group relative mt-auto inline-flex items-center h-10 rounded-[24px] font-semibold text-base transition-all hover:scale-105 hover:bg-[#D4CEC1]
+                bg-[#E1DBD0] border border-[#C7C1B6] text-black overflow-hidden self-start"
                     >
                         {/* Inner circle on left - full height, matches button height */}
-                        <span className="absolute -left-[2px] -top-[2px] h-8 w-8 rounded-full border-2 border-[#C7C1B6] flex items-center justify-center flex-shrink-0">
-                            <GithubNewIcon width={14} className="text-black" />
+                        <span className="absolute -left-[1px] -top-[1px] h-10 w-10 rounded-full border border-[#C7C1B6] flex items-center justify-center flex-shrink-0 transition-colors group-hover:bg-[#C7C1B6]">
+                            <GithubNewIcon width={20} className="text-black" />
                         </span>
 
                         {/* Text content */}
-                        <span className="ml-10 mr-2.5">
+                        <span className="ml-12 mr-3">
                             {project.buttonText || "Good First Issues"}
                         </span>
 
                         {/* Arrow */}
-                        <span className="mr-2.5">
-                            <RightArrowIcon width={12} className="text-black" />
+                        <span className="mr-3">
+                            <RightArrowIcon width={16} className="text-black" />
                         </span>
                     </Link>
                 </div>
