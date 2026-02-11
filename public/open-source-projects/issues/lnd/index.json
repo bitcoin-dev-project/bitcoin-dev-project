@@ -702,19 +702,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7749",
-    "publishedAt": "2023-06-07T01:36:33Z",
-    "title": "[feature]: ask password quickly after start",
-    "labels": [
-      "enhancement",
-      "wallet",
-      "beginner",
-      "up for grabs",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7784",
     "publishedAt": "2023-06-22T09:48:56Z",
     "title": "[bug]: unknown error poping up. self payment but with intermediate routing fees?",
@@ -1138,6 +1125,16 @@
       "bug",
       "P3",
       "performance"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/8679",
+    "publishedAt": "2024-04-23T14:36:42Z",
+    "title": "[documentation] [feature]: sample-lnd.conf makes misleading or wrong statement about env var expansion",
+    "labels": [
+      "bug",
+      "needs triage"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
