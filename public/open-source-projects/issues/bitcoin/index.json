@@ -30,37 +30,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/17020",
-    "publishedAt": "2019-10-02T11:46:27Z",
-    "title": "contrib: makeseeds.py improvements",
-    "labels": [
-      "P2P",
-      "Scripts and tools",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/17289",
-    "publishedAt": "2019-10-28T19:51:28Z",
-    "title": "contrib: Autogenerate bash completion",
-    "labels": [
-      "Feature",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/17506",
-    "publishedAt": "2019-11-18T14:04:12Z",
-    "title": "gen-manpages output depends on build options, so needs to check them",
-    "labels": [
-      "Scripts and tools",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/19886",
     "publishedAt": "2020-09-05T17:57:44Z",
     "title": "noban permission probably shouldn't give additional permissions implcitly",
@@ -211,8 +180,7 @@
     "publishedAt": "2022-09-01T21:21:36Z",
     "title": "combinerawtransaction confusing with distinct transactions",
     "labels": [
-      "Bug",
-      "good first issue"
+      "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
@@ -305,18 +273,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/28648",
-    "publishedAt": "2023-10-13T10:24:00Z",
-    "title": "test: Write assumeutxo tests",
-    "labels": [
-      "Wallet",
-      "Tests",
-      "Consensus",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/29422",
     "publishedAt": "2024-02-11T18:07:52Z",
     "title": "Assertion chainman().ActiveChain()[height] fails on startup on memory-constrained system",
@@ -343,16 +299,6 @@
     "labels": [
       "Bug",
       "Data corruption"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/31293",
-    "publishedAt": "2024-11-15T08:54:02Z",
-    "title": "Discover() will not run if listening on any address with an explicit bind=0.0.0.0",
-    "labels": [
-      "P2P",
-      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
