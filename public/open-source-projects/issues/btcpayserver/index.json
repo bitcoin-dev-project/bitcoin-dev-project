@@ -53,5 +53,16 @@
       "Wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
+  },
+  {
+    "url": "https://github.com/btcpayserver/btcpayserver/issues/7109",
+    "publishedAt": "2026-01-16T04:21:31Z",
+    "title": "[Feature]: Improve label system to work when we have 10+ labels",
+    "labels": [
+      "good first issue",
+      "Design",
+      "Label"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
