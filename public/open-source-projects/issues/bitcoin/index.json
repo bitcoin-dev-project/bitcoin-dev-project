@@ -312,6 +312,17 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
+    "url": "https://github.com/bitcoin/bitcoin/issues/32576",
+    "publishedAt": "2025-05-21T10:05:58Z",
+    "title": "test: `tool_wallet.py` references no-longer used CI",
+    "labels": [
+      "Windows",
+      "Tests",
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
     "url": "https://github.com/bitcoin/bitcoin/issues/32849",
     "publishedAt": "2025-07-01T13:57:25Z",
     "title": "Internal bug detected: FinalizeAndExtractPSBT(psbtx_copy, mtx)",
@@ -421,6 +432,16 @@
     "labels": [
       "Bug",
       "Validation"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/34573",
+    "publishedAt": "2026-02-12T11:31:49Z",
+    "title": "bug: uncaught exception from RPC invocation during shutdown",
+    "labels": [
+      "Bug",
+      "RPC/REST/ZMQ"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
