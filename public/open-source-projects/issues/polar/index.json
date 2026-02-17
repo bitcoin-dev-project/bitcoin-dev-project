@@ -150,7 +150,9 @@
     "publishedAt": "2026-02-15T15:33:46Z",
     "title": "Bug: Batch-opened channels not fully displayed in graph designer",
     "labels": [
-      "bug"
+      "bug",
+      "good first issue",
+      "up for grabs"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   }
