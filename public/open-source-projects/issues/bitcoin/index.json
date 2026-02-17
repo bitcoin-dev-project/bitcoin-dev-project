@@ -417,7 +417,7 @@
   {
     "url": "https://github.com/bitcoin/bitcoin/issues/34354",
     "publishedAt": "2026-01-20T15:07:00Z",
-    "title": "test `wallet_assumeutxo.py` is failing intermittently: wallet.cpp:543  RestoreWallet  Assertion `fs::is_empty(wallet_path)' failed. ",
+    "title": "test `wallet_assumeutxo.py` / wallet_backup.py is failing intermittently: wallet.cpp:543  RestoreWallet  Assertion `fs::is_empty(wallet_path)' failed. ",
     "labels": [
       "Bug",
       "Wallet",
