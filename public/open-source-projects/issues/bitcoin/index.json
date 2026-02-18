@@ -282,16 +282,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/32173",
-    "publishedAt": "2025-03-31T11:50:20Z",
-    "title": "validation: `CheckBlockIndex` crashes during block reconsideration",
-    "labels": [
-      "Bug",
-      "Validation"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/32201",
     "publishedAt": "2025-04-02T16:20:19Z",
     "title": "BIP32: Maximal length of derivation paths and depth of extended keys",
