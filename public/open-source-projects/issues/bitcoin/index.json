@@ -109,16 +109,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/24612",
-    "publishedAt": "2022-03-18T14:35:49Z",
-    "title": "[flatpak]  - I cannot choose or change datadir when running from flatpak",
-    "labels": [
-      "Bug",
-      "GUI"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/25094",
     "publishedAt": "2022-05-09T15:16:14Z",
     "title": "Hidden service created by `--torcontrol` does not accept connections (General SOCKS server failure)",
@@ -308,17 +298,6 @@
     "labels": [
       "Bug",
       "Questions and Help"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/32576",
-    "publishedAt": "2025-05-21T10:05:58Z",
-    "title": "test: `tool_wallet.py` references no-longer used CI",
-    "labels": [
-      "Windows",
-      "Tests",
-      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
