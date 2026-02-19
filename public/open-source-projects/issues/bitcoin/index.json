@@ -403,15 +403,5 @@
       "Validation"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/34573",
-    "publishedAt": "2026-02-12T11:31:49Z",
-    "title": "bug: uncaught exception from RPC invocation during shutdown",
-    "labels": [
-      "Bug",
-      "RPC/REST/ZMQ"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
