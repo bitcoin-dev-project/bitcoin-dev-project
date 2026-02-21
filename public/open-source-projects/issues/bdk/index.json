@@ -21,15 +21,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2021",
-    "publishedAt": "2025-09-09T05:09:32Z",
-    "title": "Ensure `CheckPoint` chain methods validate and link via previous blockhash",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2088",
     "publishedAt": "2026-01-03T21:39:04Z",
     "title": "`CanonicalReason::Assumed` should map to `ChainPosition::Confirmed` if a direct anchor exists",
