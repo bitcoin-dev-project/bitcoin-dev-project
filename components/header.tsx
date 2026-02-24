@@ -14,7 +14,6 @@ import {
 } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import { ChevronDownIcon } from "@heroicons/react/20/solid"
-import { ThemeToggle } from "./dark-mode-toggle"
 import { callsToAction, contributions, products } from "@/content/landing"
 import useOnclickOut from "@/hooks/useOnclickOut"
 import { classNames } from "@/utils/content-utils"
@@ -85,7 +84,6 @@ export function Header() {
                         >
                             About
                         </Link>
-                        <ThemeToggle />
                     </PopoverGroup>
                 </nav>
             </div>
@@ -208,9 +206,7 @@ export function Header() {
                                     About
                                 </Link>
                             </div>
-                            <div className="py-6">
-                                <ThemeToggle />
-                            </div>
+                            <div className="py-6"></div>
                         </div>
                     </div>
                 </DialogPanel>
