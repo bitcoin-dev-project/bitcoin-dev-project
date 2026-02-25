@@ -17,9 +17,9 @@ export function RebrandedHeader() {
     }
     return (
         <>
-            <header className="bg-brand-orange ">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                    <div className="flex items-center justify-between h-20">
+            <header className="bg-brand-orange sticky top-0 z-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
+                    <div className="flex items-center justify-between h-20 ">
                         <Link href="/">
                             <BDPLogo />
                         </Link>
