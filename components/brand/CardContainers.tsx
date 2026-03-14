@@ -16,11 +16,15 @@ const CardContainers: React.FC<ICurriculum> = ({ allCurriculum }) => {
     return (
         <div className="learn-cards-container grid md:grid-cols-2 justify-between w-full gap-5">
             {allCurriculum.map((curriculum, index) => (
-                <BDPCard
+                <div 
                     key={`${curriculum.title}-${curriculum.link}-${index}`}
-                    onClick={() => { }}
-                    {...curriculum}
-                />
+                    className="rounded-2xl transition-all duration-300 hover:ring-1 hover:ring-[rgba(169,164,155,0.75)] hover:shadow-sm"
+                >
+                    <BDPCard
+                        onClick={() => { }}
+                        {...curriculum}
+                    />
+                </div>
             ))}
         </div>
     )
