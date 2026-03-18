@@ -197,23 +197,33 @@ export const NAVLINKS = [
 export const FEATUREDLOGOS = [
     {
         name: "Summer of Bitcoin",
-        logo: "/images/hero/summer-of-bitcoin.webp"
+        logo: "/images/hero/summer-of-bitcoin.webp",
+        link: "https://medium.com/@nandiniarora584/from-oops-wrong-link-to-saving-satoshi-my-bitcoin-design-summer-adventure-fe6e4a0f75da",
+        target: "_blank"
     },
     {
         name: "Coindesk",
-        logo: "/images/hero/coin-desk.webp"
+        logo: "/images/hero/coin-desk.webp",
+        link: "https://www.coindesk.com/tech/2023/08/07/its-chatgpt-but-for-bitcoin-new-ai-tool-avoids-hallucinations",
+        target: "_blank"
     },
     {
         name: "Btrust",
-        logo: "/images/hero/btrust.webp"
+        logo: "/images/hero/btrust.webp",
+        link: "https://pathways.btrust.tech/resource-hub#open-source-cheat-sheets",
+        target: "_blank"
     },
     {
         name: "Stacker News",
-        logo: "/images/hero/stacker-news.webp"
+        logo: "/images/hero/stacker-news.webp",
+        link: "https://www.youtube.com/watch?v=CBOhiw1yAWY&t=2010s",
+        target: "_blank"
     },
     {
         name: "Stephan Livera",
-        logo: "/images/hero/stephan-livera.webp"
+        logo: "/images/hero/stephan-livera.webp",
+        link: "https://stephanlivera.com/episode/620/",
+        target: "_blank"
     }
 ]
 

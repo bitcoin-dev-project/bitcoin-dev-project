@@ -110,7 +110,10 @@ const HeroPage = ({
                         {FEATUREDLOGOS.map((item) => (
                             <a
                                 key={item.name}
-                                className="relative rounded-xl w-[153px] h-[109px] md:w-48 md:h-32 flex flex-col items-center justify-center transition-all"
+                                href={item.link}
+                                target={item.target ?? "_blank"}
+                                rel="noreferrer"
+                                className="relative rounded-xl w-[153px] h-[109px] md:w-48 md:h-32 flex flex-col items-center justify-center transition-all duration-200 hover:scale-110 hover:-translate-y-1"
                             >
                                 <div className="text-center flex flex-col items-center justify-center gap-3">
                                     <Image
