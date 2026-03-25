@@ -221,8 +221,7 @@ export const FEATUREDPRODUCTS = [
     {
         name: "Decoding Bitcoin",
         image: "/images/products/decoding-bitcoin.webp",
-        users: "50+",
-        action: "Studied by",
+        action: "Featured in Code Orange Devs",
         link: "/decoding",
         target: "_blank",
         description:
@@ -231,8 +230,7 @@ export const FEATUREDPRODUCTS = [
     {
         name: "Saving Satoshi",
         image: "/images/products/saving-satoshi.webp",
-        users: "1.5k+",
-        action: "Played by",
+        action: "Learn Bitcoin with the holocat",
         link: "https://savingsatoshi.com/",
         target: "_blank",
         description:
@@ -241,8 +239,7 @@ export const FEATUREDPRODUCTS = [
     {
         name: "ChatBTC",
         image: "/images/products/chat-btc.webp",
-        users: "1.5k+",
-        action: "Used by",
+        action: "Like GPT, but for Bitcoin",
         link: "https://chat.bitcoinsearch.xyz/",
         target: "_blank",
         description:
