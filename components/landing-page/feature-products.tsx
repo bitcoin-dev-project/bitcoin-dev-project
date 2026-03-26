@@ -47,8 +47,7 @@ const FeaturedProduct = () => {
                                     <div className="inline-flex items-center gap-2 bg-brand-gray border border-[#A9A49B]/75 rounded-full px-2 py-1">
                                         <div className="w-2 h-2 bg-black rounded-full"></div>
                                         <span className="text-xs sm:text-sm font-normal text-brand-dark font-quicksand">
-                                            {product.action} {product.users}{" "}
-                                            users
+                                            {product.action}{" "}
                                         </span>
                                     </div>
 
