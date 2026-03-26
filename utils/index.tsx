@@ -311,8 +311,8 @@ export const FAQS: FAQItem[] = [
         answer: (
             <>
                 Bitcoin Open-Source Software. If you’re familiar with the FOSS
-                acronym (free and open-source software), you can think of bitcoin
-                + FOSS = BOSS. Find examples of{" "}
+                acronym (free and open-source software), you can think of
+                bitcoin + FOSS = BOSS. Find examples of{" "}
                 <a
                     href="https://bitcoindevs.xyz/projects"
                     target="_blank"
@@ -329,11 +329,13 @@ export const FAQS: FAQItem[] = [
         question: "Why would I consider a career in BOSS ?",
         answer: (
             <>
-                Working in BOSS means tackling interesting, challenging engineering problems
-                alongside some of the brightest minds in the world. It means writing code that
-                has real, global impact, and experiencing a level of professional freedom rare in traditional careers. 
-                In this permissionless, merit-based ecosystem, great work speaks for itself, and contributions
-                from everyday BOSS developers shape the future of bitcoin.
+                Working in BOSS means tackling interesting, challenging
+                engineering problems alongside some of the brightest minds in
+                the world. It means writing code that has real, global impact,
+                and experiencing a level of professional freedom rare in
+                traditional careers. In this permissionless, merit-based
+                ecosystem, great work speaks for itself, and contributions from
+                everyday BOSS developers shape the future of bitcoin.
             </>
         )
     },
@@ -341,25 +343,33 @@ export const FAQS: FAQItem[] = [
         question: "Who is this for ?",
         answer: (
             <>
-                The Bitcoin Dev Project is made for both existing and aspiring BOSS developers. It doesn’t matter if you know your way around a bitcoin code base or two, or are entirely new to the protocol. Here you’ll find tools and resources to help you learn about the tech, make your first contributions, and stay up-to-date with the larger bitcoin developer community.
-Much of the material that BDP provides requires some level of coding ability. At the very least, a curiosity about the technical aspects of bitcoin is a must. If you aren’t confident in your programming skills, we recommend attending a coding bootcamp or doing a self paced course. Python is an excellent language to start with, as it opens the door to the many bitcoin books and courses that use Python for code exercises. Other popular languages in the BOSS ecosystem include Rust, C++, and JavaScript.
+                The Bitcoin Dev Project is made for both existing and aspiring
+                BOSS developers. It doesn’t matter if you know your way around a
+                bitcoin code base or two, or are entirely new to the protocol.
+                Here you’ll find tools and resources to help you learn about the
+                tech, make your first contributions, and stay up-to-date with
+                the larger bitcoin developer community. Much of the material
+                that BDP provides requires some level of coding ability. At the
+                very least, a curiosity about the technical aspects of bitcoin
+                is a must. If you aren’t confident in your programming skills,
+                we recommend attending a coding bootcamp or doing a self paced
+                course. Python is an excellent language to start with, as it
+                opens the door to the many bitcoin books and courses that use
+                Python for code exercises. Other popular languages in the BOSS
+                ecosystem include Rust, C++, and JavaScript.
             </>
         )
     },
     {
         question: "How much does it cost?",
         answer: (
-            <>
-                Nothing! The Bitcoin Dev Project is 100% free and open-source.
-            </>
+            <>Nothing! The Bitcoin Dev Project is 100% free and open-source.</>
         )
     },
     {
         question: "Do you have content on other cryptos or projects?",
         answer: (
-            <>
-                No. The Bitcoin Dev Project is exclusively focused on bitcoin.
-            </>
+            <>No. The Bitcoin Dev Project is exclusively focused on bitcoin.</>
         )
     },
     {
