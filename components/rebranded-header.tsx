@@ -31,7 +31,7 @@ export function RebrandedHeader() {
                                 About
                             </Link>
                             <Link
-                                href="/explore"
+                                href="/learn"
                                 className="px-3 py-2.5 font-quicksand capitalize bg-[#EB5234] text-white font-bold rounded-[10px] hover:opacity-90 transition-all duration-200 text-base"
                             >
                                 <span>Start exploring</span>

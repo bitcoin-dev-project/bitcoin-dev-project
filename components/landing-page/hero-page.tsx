@@ -42,7 +42,7 @@ const HeroPage = ({
                         About
                     </Link>
                     <Link
-                        href="/explore"
+                        href="/learn"
                         className="px-3 capitalize py-3 bg-white text-brand-orange-100 font-bold rounded-[10px] hover:opacity-90 transition-all duration-200 text-base leading-none"
                     >
                         Start exploring
@@ -78,7 +78,7 @@ const HeroPage = ({
                         </p>
 
                         <div className="pt-2">
-                            <Link href="/explore">
+                            <Link href="/learn">
                                 <button className="bg-white text-brand-orange-100 font-bold px-2.5 py-2.5 rounded-[10px] leading-none hover:opacity-90 transition-opacity font-quicksand text-base">
                                     Start Exploring Bitcoin Tech
                                 </button>

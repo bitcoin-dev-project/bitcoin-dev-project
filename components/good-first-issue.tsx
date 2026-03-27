@@ -28,7 +28,7 @@ const GoodFirstIssuesNavbar = ({
                     About
                 </Link>
                 <Link
-                    href="/explore"
+                    href="/learn"
                     className="px-3 capitalize py-3 bg-brand-orange-100 text-white font-bold rounded-[10px] hover:opacity-90 transition-all duration-200 text-base leading-none"
                 >
                     Start exploring
