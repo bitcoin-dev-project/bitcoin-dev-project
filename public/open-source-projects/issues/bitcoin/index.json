@@ -342,17 +342,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/33923",
-    "publishedAt": "2025-11-21T22:05:01Z",
-    "title": "should concurrent IPC requests directed to the same thread cause a crash?",
-    "labels": [
-      "Brainstorming",
-      "Bug",
-      "interfaces"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/33940",
     "publishedAt": "2025-11-24T14:11:12Z",
     "title": "Memory leak when using IPC mining interface",
@@ -374,33 +363,11 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/34250",
-    "publishedAt": "2026-01-10T22:51:23Z",
-    "title": "crash during IPC cleanup after `interruptWait()` is called",
+    "url": "https://github.com/bitcoin/bitcoin/issues/34902",
+    "publishedAt": "2026-03-23T13:33:49Z",
+    "title": "Add test coverage for bump fee calculation failure in feebumper",
     "labels": [
-      "Bug",
-      "interfaces"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/34354",
-    "publishedAt": "2026-01-20T15:07:00Z",
-    "title": "test `wallet_assumeutxo.py` / wallet_backup.py is failing intermittently: wallet.cpp:543  RestoreWallet  Assertion `fs::is_empty(wallet_path)' failed. ",
-    "labels": [
-      "Bug",
-      "Wallet",
-      "CI failed"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/34503",
-    "publishedAt": "2026-02-04T12:11:16Z",
-    "title": "validation: CheckBlockIndex() const: Assertion `!c->setBlockIndexCandidates.contains(const_cast<CBlockIndex*>(pindex))` failed",
-    "labels": [
-      "Bug",
-      "Validation"
+      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }

@@ -68,30 +68,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/4584",
-    "publishedAt": "2024-03-16T15:01:57Z",
-    "title": "Versions support tracking",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/4691",
     "publishedAt": "2024-03-23T05:04:25Z",
     "title": "Refactoring ideas",
     "labels": [
       "good first issue",
       "refactor"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
-    "url": "https://github.com/fedimint/fedimint/issues/4817",
-    "publishedAt": "2024-04-03T20:56:57Z",
-    "title": "Automate nix flake update PRs",
-    "labels": [
-      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },

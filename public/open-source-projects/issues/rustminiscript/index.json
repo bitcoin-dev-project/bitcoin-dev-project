@@ -17,14 +17,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
-  },
-  {
-    "url": "https://github.com/rust-bitcoin/rust-miniscript/issues/320",
-    "publishedAt": "2022-03-22T15:41:50Z",
-    "title": "Support for sortedmulti_a",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
