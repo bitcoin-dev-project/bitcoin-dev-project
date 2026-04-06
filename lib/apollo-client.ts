@@ -4,7 +4,6 @@
     See https://github.com/apollographql/apollo-client-nextjs?tab=readme-ov-file#usage for more details.
 */
 
-import "server-only"
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client"
 import fetch from "cross-fetch"
 import dotenv from "dotenv"
