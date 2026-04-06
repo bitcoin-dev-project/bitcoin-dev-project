@@ -5,7 +5,7 @@ import React, { Dispatch, SetStateAction } from "react"
 import BDPMenu from "../assets/BDPMenu"
 import BDPLogoWhite from "../assets/BDPLogoWhite"
 import BDPMobileIcon from "../assets/BDPMobileIcon"
-import { ChevronDown } from "lucide-react"
+import StartExploringDropdown from "@/components/StartExploringDropdown"
 
 const HeroPage = ({
     setIsOpen
@@ -42,42 +42,7 @@ const HeroPage = ({
                     >
                         About
                     </Link>
-                    <div className="relative group">
-                        {/* Button */}
-                        <button className="px-3 py-3 bg-white text-brand-orange-100 font-bold rounded-[10px] transition-all duration-200 text-base leading-none flex items-center gap-1 font-quicksand hover:bg-gray-50">
-                            Start Exploring
-                            <ChevronDown
-                                className="w-4 h-4 ml-0.5 mt-1 transition-transform duration-200 group-hover:rotate-180"
-                                strokeWidth={3.5}
-                            />
-                        </button>
-
-                        {/* Dropdown */}
-                        <div className="absolute right-0 mt-2 w-44 rounded-xl shadow-lg bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <div className="flex flex-col py-2 text-base font-quicksand text-black">
-                                <Link
-                                    href="/learn"
-                                    className="px-4 py-2 hover:text-brand-orange-100 transition-colors"
-                                >
-                                    Learn
-                                </Link>
-
-                                <Link
-                                    href="/contribute"
-                                    className="px-4 py-2 hover:text-brand-orange-100 transition-colors"
-                                >
-                                    Contribute
-                                </Link>
-
-                                <Link
-                                    href="/get-funded"
-                                    className="px-4 py-2 hover:text-brand-orange-100 transition-colors"
-                                >
-                                    Get Funded
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+                    <StartExploringDropdown variant="light" />
                 </div>
                 <BDPMenu onClick={onOpen} className="text-white lg:hidden" />
             </nav>

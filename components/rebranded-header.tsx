@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation"
 import clsx from "clsx"
 import MobileMenu from "./brand/MobileMenu"
 import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import StartExploringDropdown from "@/components/StartExploringDropdown"
 
 export function RebrandedHeader() {
     const pathname = usePathname()
@@ -31,61 +31,7 @@ export function RebrandedHeader() {
                             >
                                 About
                             </Link>
-                            <div className="relative group">
-                                {/* Button */}
-                                <button
-                                    className={clsx(
-                                        "px-3 py-2.5 font-quicksand capitalize font-bold rounded-[10px] transition-all duration-200 text-base flex items-center gap-1",
-                                        {
-                                            "bg-brand-orange text-[#EB5234] hover:bg-brand-orange-100":
-                                                isHomepage,
-                                            "bg-[#EB5234] text-white hover:opacity-90":
-                                                !isHomepage
-                                        }
-                                    )}
-                                >
-                                    Start Exploring
-                                    <span className="text-sm">
-                                        <ChevronDown
-                                            className="w-4 h-4 ml-0.8 mt-1 transition-transform duration-200 group-hover:rotate-180"
-                                            strokeWidth={3.5}
-                                        />
-                                    </span>
-                                </button>
-
-                                {/* Dropdown */}
-                                <div
-                                    className={clsx(
-                                        "absolute right-0 mt-2 w-44 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200",
-                                        {
-                                            "bg-brand-orange": !isHomepage
-                                        }
-                                    )}
-                                >
-                                    <div className="flex flex-col py-2 text-base font-quicksand text-black">
-                                        <Link
-                                            href="/learn"
-                                            className="px-4 py-2 hover:text-[#EB5234] transition-colors"
-                                        >
-                                            Learn
-                                        </Link>
-
-                                        <Link
-                                            href="/contribute"
-                                            className="px-4 py-2 hover:text-[#EB5234] transition-colors"
-                                        >
-                                            Contribute
-                                        </Link>
-
-                                        <Link
-                                            href="/get-funded"
-                                            className="px-4 py-2 hover:text-[#EB5234] transition-colors"
-                                        >
-                                            Get Funded
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
+                            <StartExploringDropdown variant={isHomepage ? "light" : "dark"} />
                         </div>
                         <BDPMenu
                             onClick={onOpen}
