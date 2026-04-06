@@ -18,7 +18,7 @@ const CardContainers: React.FC<ICurriculum> = ({ allCurriculum }) => {
             {allCurriculum.map((curriculum, index) => (
                 <BDPCard
                     key={`${curriculum.title}-${curriculum.link}-${index}`}
-                    onClick={() => { }}
+                    onClick={() => {}}
                     {...curriculum}
                 />
             ))}
