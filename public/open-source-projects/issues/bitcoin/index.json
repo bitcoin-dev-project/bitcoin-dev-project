@@ -361,14 +361,5 @@
       "Needs Conceptual Review"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/34902",
-    "publishedAt": "2026-03-23T13:33:49Z",
-    "title": "Add test coverage for bump fee calculation failure in feebumper",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
