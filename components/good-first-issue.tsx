@@ -21,6 +21,12 @@ const GoodFirstIssuesNavbar = ({
                 <BDPLogoDark className="lg:w-[119px] hidden lg:block" />
                 <BDPMobileIcon className="w-[45px] lg:hidden" />
             </Link>
+                <Link
+                    href="/about"
+                    className="text-white font-medium hover:opacity-80 transition-opacity text-base"
+                >
+                    About
+                </Link>
             <StartExploringDropdown variant="dark" />
             <BDPMenu onClick={onOpen} className="text-white lg:hidden" />
         </nav>
