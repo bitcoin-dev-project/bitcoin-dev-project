@@ -1086,17 +1086,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/8884",
-    "publishedAt": "2024-07-01T19:52:37Z",
-    "title": "[bug]: payment_failure_reason > 0 when payment status = SUCCEEDED ",
-    "labels": [
-      "bug",
-      "payments",
-      "refactoring"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/8928",
     "publishedAt": "2024-07-23T13:50:43Z",
     "title": "[bug]: panic in `Broadcaster` found in CI",
@@ -1136,6 +1125,16 @@
     "labels": [
       "bug",
       "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/9055",
+    "publishedAt": "2024-09-01T22:45:38Z",
+    "title": "[bug]: Failed recover on-chain testnet funds with neutrino",
+    "labels": [
+      "bug",
+      "neutrino"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }

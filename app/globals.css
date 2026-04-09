@@ -117,7 +117,7 @@ select:-webkit-autofill:focus {
     outline: 1px solid transparent;
     transition: outline-color 0.2s ease-in;
 }
- 
+
 .learn-cards-container a:hover {
     outline-color: rgba(169, 164, 155, 0.75);
 }

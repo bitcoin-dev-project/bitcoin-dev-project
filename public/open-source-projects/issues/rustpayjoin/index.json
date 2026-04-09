@@ -74,16 +74,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/1258",
-    "publishedAt": "2026-01-07T15:31:48Z",
-    "title": "payjoin-cli RPC errors are obscured",
-    "labels": [
-      "good first issue",
-      "payjoin-cli"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/1276",
     "publishedAt": "2026-01-19T15:07:01Z",
     "title": "Expose PSBT input error index in FFI error types",
@@ -112,6 +102,28 @@
     "labels": [
       "documentation",
       "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1394",
+    "publishedAt": "2026-03-07T18:30:02Z",
+    "title": "payjoin-cli \"send\" doesn't propagate `process_response` errors correctly",
+    "labels": [
+      "bug",
+      "good first issue",
+      "payjoin-cli"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1421",
+    "publishedAt": "2026-03-18T04:21:49Z",
+    "title": "Harden mailroom against metadata side channels",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "payjoin-mailroom"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }

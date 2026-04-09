@@ -1,17 +1,5 @@
 [
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/444",
-    "publishedAt": "2018-12-10T23:29:17Z",
-    "title": "RTL Language Support",
-    "labels": [
-      "Enhancement",
-      "Translation",
-      "good first issue",
-      "Invoice"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/5191",
     "publishedAt": "2023-07-25T17:42:56Z",
     "title": "[Dashboard] Support for Custom Ordering of Dashboard widgets",
@@ -24,43 +12,12 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   },
   {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/6727",
-    "publishedAt": "2025-05-14T08:06:31Z",
-    "title": "Greenfield API - Improvements tracker",
-    "labels": [
-      "Enhancement",
-      "API",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/7091",
-    "publishedAt": "2026-01-10T11:07:58Z",
-    "title": "Add support for search, specifically for TX id inside the wallet view",
-    "labels": [
-      "good first issue",
-      "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
     "url": "https://github.com/btcpayserver/btcpayserver/issues/7092",
     "publishedAt": "2026-01-10T11:16:33Z",
     "title": "Standardize Wallet View: Add Date Filter for Transactions",
     "labels": [
       "good first issue",
       "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/7109",
-    "publishedAt": "2026-01-16T04:21:31Z",
-    "title": "[Feature]: Improve label system to work when we have 10+ labels",
-    "labels": [
-      "good first issue",
-      "Label"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }

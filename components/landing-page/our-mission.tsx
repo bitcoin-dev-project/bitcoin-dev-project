@@ -24,7 +24,7 @@ const Mission = ({
 }
 const OurMission = () => {
     return (
-        <div className="bg-[#F5EFE7] pt-[144px]">
+        <div className="bg-[#F5EFE7] py-12 sm:py-16 md:py-20 lg:py-24">
             <div className="max-w-7xl mx-auto px-8">
                 <div className="grid lg:grid-cols-2 gap-4 lg:gap-16 items-center">
                     <div className="flex flex-col gap-6 lg:gap-[60px] lg:max-w-[484px]">

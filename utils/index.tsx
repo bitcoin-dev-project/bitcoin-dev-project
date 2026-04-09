@@ -1,3 +1,4 @@
+import { ReactNode } from "react"
 import { FilterDifficulty } from "@/types/curriculum"
 import type {
     FilterResourceType,
@@ -194,6 +195,33 @@ export const NAVLINKS = [
     }
 ]
 
+export const BITCOINPATHS = [
+    {
+        image: "/images/explore/backpack-illustration.png",
+        title: "Learn",
+        description:
+            "Discover how bitcoin really works, from first steps to deep dives.",
+        link: "/learn",
+        cta: "View Resources"
+    },
+    {
+        image: "/images/explore/contribute-illustration.png",
+        title: "Contribute",
+        description:
+            "These resources help you go from curious observer to confident contributor.",
+        link: "/contribute",
+        cta: "View Resources"
+    },
+    {
+        image: "/images/explore/funded-illustration.png",
+        title: "Get Funded",
+        description:
+            "Secure a grant to launch your full-time career in bitcoin open-source development.",
+        link: "/get-funded",
+        cta: "View Resources"
+    }
+]
+
 export const FEATUREDLOGOS = [
     {
         name: "Summer of Bitcoin",
@@ -293,41 +321,135 @@ export const TESTIMONIALS = [
     }
 ]
 
-export const FAQS = [
+export const FAQS: FAQItem[] = [
     {
         question: "What is the Bitcoin Dev Project ?",
-        answer: "The Bitcoin Dev Project is an initiative to support developers who are trying to get more involved with bitcoin open-source software (BOSS). It’s designed to help curious coders become more confident and successful in bitcoin tech."
+        answer: (
+            <>
+                The Bitcoin Dev Project is an initiative to support developers
+                who are trying to get more involved with bitcoin open-source
+                software (BOSS). It’s designed to help curious coders become
+                more confident and successful in bitcoin tech.
+            </>
+        )
     },
     {
         question: "What is BOSS ?",
-        answer: "Bitcoin Open-Source Software. If you’re familiar with the FOSS acronym (free and open-source software), you can think of bitcoin + FOSS = BOSS. Find examples of BOSS projects here."
+        answer: (
+            <>
+                Bitcoin Open-Source Software. If you’re familiar with the FOSS
+                acronym (free and open-source software), you can think of
+                bitcoin + FOSS = BOSS. Find examples of{" "}
+                <a
+                    href="https://bitcoindevs.xyz/projects"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-orange-500 hover:no-underline transition"
+                >
+                    BOSS projects
+                </a>{" "}
+                here.
+            </>
+        )
     },
     {
         question: "Why would I consider a career in BOSS ?",
-        answer: "Working in BOSS means tackling interesting, challenging engineering problems alongside some of the brightest minds in the world. It means writing code that has real, global impact, and experiencing a level of professional freedom rare in traditional careers. In this permissionless, merit-based ecosystem, great work speaks for itself, and contributions from everyday BOSS developers shape the future of bitcoin."
+        answer: (
+            <>
+                Working in BOSS means tackling interesting, challenging
+                engineering problems alongside some of the brightest minds in
+                the world. It means writing code that has real, global impact,
+                and experiencing a level of professional freedom rare in
+                traditional careers. In this permissionless, merit-based
+                ecosystem, great work speaks for itself, and contributions from
+                everyday BOSS developers shape the future of bitcoin.
+            </>
+        )
     },
     {
         question: "Who is this for ?",
-        answer: `The Bitcoin Dev Project is made for both existing and aspiring BOSS developers. It doesn’t matter if you know your way around a bitcoin code base or two, or are entirely new to the protocol. Here you’ll find tools and resources to help you learn about the tech, make your first contributions, and stay up-to-date with the larger bitcoin developer community.
-Much of the material that BDP provides requires some level of coding ability. At the very least, a curiosity about the technical aspects of bitcoin is a must. If you aren’t confident in your programming skills, we recommend attending a coding bootcamp or doing a self paced course. Python is an excellent language to start with, as it opens the door to the many bitcoin books and courses that use Python for code exercises. Other popular languages in the BOSS ecosystem include Rust, C++, and JavaScript. `
+        answer: (
+            <>
+                The Bitcoin Dev Project is made for both existing and aspiring
+                BOSS developers. It doesn’t matter if you know your way around a
+                bitcoin code base or two, or are entirely new to the protocol.
+                Here you’ll find tools and resources to help you learn about the
+                tech, make your first contributions, and stay up-to-date with
+                the larger bitcoin developer community. Much of the material
+                that BDP provides requires some level of coding ability. At the
+                very least, a curiosity about the technical aspects of bitcoin
+                is a must. If you aren’t confident in your programming skills,
+                we recommend attending a coding bootcamp or doing a self paced
+                course. Python is an excellent language to start with, as it
+                opens the door to the many bitcoin books and courses that use
+                Python for code exercises. Other popular languages in the BOSS
+                ecosystem include Rust, C++, and JavaScript.
+            </>
+        )
     },
     {
         question: "How much does it cost?",
-        answer: "Nothing! The Bitcoin Dev Project is 100% free and open-source."
+        answer: (
+            <>Nothing! The Bitcoin Dev Project is 100% free and open-source.</>
+        )
     },
     {
         question: "Do you have content on other cryptos or projects?",
-        answer: "No. The Bitcoin Dev Project is exclusively focused on bitcoin."
+        answer: (
+            <>No. The Bitcoin Dev Project is exclusively focused on bitcoin.</>
+        )
     },
     {
         question: "Do you offer funding or grants ?",
-        answer: "Not directly, but we help you find it. Read about how to get funded or directly use our common application resource to reach multiple bitcoin funding organizations with one form."
+        answer: (
+            <>
+                Not directly, but we help you find it. Read about how to{" "}
+                <a
+                    href="https://bitcoindevs.xyz/get-funded"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-orange-500 hover:no-underline transition"
+                >
+                    get funded
+                </a>{" "}
+                or directly use our{" "}
+                <a
+                    href="https://grants.bitcoindevs.xyz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-orange-500 hover:no-underline transition"
+                >
+                    common application
+                </a>{" "}
+                resource to reach multiple bitcoin funding organizations with
+                one form.
+            </>
+        )
     },
     {
         question: "How can I contribute to open-source Bitcoin projects?",
-        answer: "Check out our good first issues section and join our community events to connect with other contributors and find projects that match your skills."
+        answer: (
+            <>
+                Check out our{" "}
+                <a
+                    href="https://bitcoindevs.xyz/good-first-issues"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-orange-500 hover:no-underline transition"
+                >
+                    good first issues
+                </a>{" "}
+                section and join our community events to connect with other
+                contributors and find projects that match your skills.
+            </>
+        )
     }
 ]
+
+export type FAQItem = {
+    question: string
+    answer: ReactNode
+}
 
 export const MISSIONS = [
     {

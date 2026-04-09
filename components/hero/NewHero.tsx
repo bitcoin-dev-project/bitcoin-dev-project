@@ -11,6 +11,7 @@ import ImpactStories from "../landing-page/impact-stories"
 import Newsletter from "../landing-page/newsletter"
 import FaqSection from "../landing-page/faq-section"
 import MobileMenu from "../brand/MobileMenu"
+import ExploreSection from "../landing-page/explore-section"
 
 export function NewHero() {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
@@ -22,6 +23,7 @@ export function NewHero() {
                 setIsOpen={setIsMobileNavOpen}
             />
             <HeroPage setIsOpen={setIsMobileNavOpen} />
+            <ExploreSection />
             <OurMission />
             <FeaturedProduct />
             <StackedWins />
