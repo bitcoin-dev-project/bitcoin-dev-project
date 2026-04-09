@@ -184,16 +184,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/26442",
-    "publishedAt": "2022-11-01T19:52:36Z",
-    "title": "Use of undocumented/undefined boost::signals2 behavior in wallet",
-    "labels": [
-      "Bug",
-      "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/26484",
     "publishedAt": "2022-11-10T17:07:02Z",
     "title": "Error: Cannot resolve -bind address: 'bitcoind:8334=onion'",
