@@ -28,8 +28,8 @@ const GoodFirstIssuesNavbar = ({
                 >
                     About
                 </Link>
-            <StartExploringDropdown variant="dark" />
-             </div>   
+                <StartExploringDropdown variant="dark" />
+            </div>
             <BDPMenu onClick={onOpen} className="text-white lg:hidden" />
         </nav>
     )
