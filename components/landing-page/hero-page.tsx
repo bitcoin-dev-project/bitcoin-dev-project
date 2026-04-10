@@ -5,6 +5,7 @@ import React, { Dispatch, SetStateAction } from "react"
 import BDPMenu from "../assets/BDPMenu"
 import BDPLogoWhite from "../assets/BDPLogoWhite"
 import BDPMobileIcon from "../assets/BDPMobileIcon"
+import StartExploringDropdown from "@/components/StartExploringDropdown"
 
 const HeroPage = ({
     setIsOpen
@@ -41,12 +42,7 @@ const HeroPage = ({
                     >
                         About
                     </Link>
-                    <Link
-                        href="/learn"
-                        className="px-3 capitalize py-3 bg-white text-brand-orange-100 font-bold rounded-[10px] hover:opacity-90 transition-all duration-200 text-base leading-none"
-                    >
-                        Start exploring
-                    </Link>
+                    <StartExploringDropdown variant="light" />
                 </div>
                 <BDPMenu onClick={onOpen} className="text-white lg:hidden" />
             </nav>

@@ -5,6 +5,7 @@ import BDPLogoDark from "./assets/BDPLogoDark"
 import BDPMobileIcon from "./assets/BDPMobileIcon"
 import BDPMenu from "./assets/BDPMenu"
 import React, { Dispatch, SetStateAction } from "react"
+import StartExploringDropdown from "@/components/StartExploringDropdown"
 
 const GoodFirstIssuesNavbar = ({
     setIsOpen
@@ -27,12 +28,7 @@ const GoodFirstIssuesNavbar = ({
                 >
                     About
                 </Link>
-                <Link
-                    href="/learn"
-                    className="px-3 capitalize py-3 bg-brand-orange-100 text-white font-bold rounded-[10px] hover:opacity-90 transition-all duration-200 text-base leading-none"
-                >
-                    Start exploring
-                </Link>
+                <StartExploringDropdown variant="dark" />
             </div>
             <BDPMenu onClick={onOpen} className="text-white lg:hidden" />
         </nav>

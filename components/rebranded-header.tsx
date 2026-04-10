@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation"
 import clsx from "clsx"
 import MobileMenu from "./brand/MobileMenu"
 import { useState } from "react"
+import StartExploringDropdown from "@/components/StartExploringDropdown"
 
 export function RebrandedHeader() {
     const pathname = usePathname()
@@ -30,12 +31,9 @@ export function RebrandedHeader() {
                             >
                                 About
                             </Link>
-                            <Link
-                                href="/learn"
-                                className="px-3 py-2.5 font-quicksand capitalize bg-[#EB5234] text-white font-bold rounded-[10px] hover:opacity-90 transition-all duration-200 text-base"
-                            >
-                                <span>Start exploring</span>
-                            </Link>
+                            <StartExploringDropdown
+                                variant={isHomepage ? "light" : "dark"}
+                            />
                         </div>
                         <BDPMenu
                             onClick={onOpen}
