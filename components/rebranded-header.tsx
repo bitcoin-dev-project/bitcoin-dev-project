@@ -31,7 +31,9 @@ export function RebrandedHeader() {
                             >
                                 About
                             </Link>
-                            <StartExploringDropdown variant={isHomepage ? "light" : "dark"} />
+                            <StartExploringDropdown
+                                variant={isHomepage ? "light" : "dark"}
+                            />
                         </div>
                         <BDPMenu
                             onClick={onOpen}
