@@ -25,7 +25,8 @@ const MobileMenu = ({
             className={clsx(
                 "flex flex-col gap-12 top-0 bg-brand px-5 py-3 justify-start transition-all duration-100 ease-in-out",
                 {
-                    "fixed inset-0 h-screen w-screen overflow-hidden opacity-100 z-[999]": isOpen,
+                    "fixed inset-0 h-screen w-screen overflow-hidden opacity-100 z-[999]":
+                        isOpen,
                     "hidden opacity-0": !isOpen
                 }
             )}
