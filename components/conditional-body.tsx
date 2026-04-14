@@ -21,7 +21,6 @@ export function ConditionalBody({
         "/projects",
         "/get",
         "/about",
-        "/explore",
         "/",
         "/career"
     ]

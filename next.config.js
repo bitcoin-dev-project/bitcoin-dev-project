@@ -36,7 +36,12 @@ module.exports = () => {
                     destination:
                         "https://medium.com/@bitcoindevs/glow-up-95008146d653",
                     permanent: false
-                }
+                },
+                {
+                    source: '/explore',
+                    destination: '/learn',
+                    permanent: true
+                },
             ]
         },
         async rewrites() {
