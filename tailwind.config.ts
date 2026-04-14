@@ -239,7 +239,9 @@ const config: Config = {
             },
             backgroundImage: {
                 footer: "url('/images/footer.webp')",
-                "footer-mobile": "url('/images/footer-mobile.webp')"
+                "footer-mobile": "url('/images/footer-mobile.webp')",
+                "dark-footer": "url('/images/bgdarkfooter.webp')",
+                "dark-footer-mobile": "url('/images/mobilebgdarkfooter.webp')"
             },
             keyframes: {
                 updown: {
