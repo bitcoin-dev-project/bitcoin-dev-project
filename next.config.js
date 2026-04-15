@@ -38,10 +38,10 @@ module.exports = () => {
                     permanent: false
                 },
                 {
-                    source: '/explore',
-                    destination: '/learn',
+                    source: "/explore",
+                    destination: "/learn",
                     permanent: true
-                },
+                }
             ]
         },
         async rewrites() {
