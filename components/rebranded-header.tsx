@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import BDPLogo from "./assets/BDPLogo"
+import BDPLogoDark from "./assets/BDPLogoDark"
 import BDPMenu from "./assets/BDPMenu"
 import { usePathname } from "next/navigation"
 import clsx from "clsx"
@@ -12,22 +13,34 @@ import StartExploringDropdown from "@/components/StartExploringDropdown"
 export function RebrandedHeader() {
     const pathname = usePathname()
     const isHomepage = pathname === "/"
+    const isDecoding = pathname?.startsWith("/decoding")
+    const isDarkMode = isDecoding
     const [isOpen, setIsOpen] = useState(false)
     const onOpen = () => {
         setIsOpen((prev) => !prev)
     }
     return (
         <>
-            <header className="bg-brand-orange sticky top-0 z-50">
+            <header
+                className={clsx(
+                    "sticky top-0 z-50",
+                    isDarkMode ? "bg-black" : "bg-brand-orange"
+                )}
+            >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
                     <div className="flex items-center justify-between h-20 ">
                         <Link href="/">
-                            <BDPLogo />
+                            {isDarkMode ? <BDPLogoDark /> : <BDPLogo />}
                         </Link>
                         <div className="hidden items-center gap-6 lg:flex lg:flex-row">
                             <Link
                                 href="/about"
-                                className="text-black font-quicksand hover:text-gray-700 transition-colors text-base"
+                                className={clsx(
+                                    "font-quicksand transition-colors text-base",
+                                    isDarkMode
+                                        ? "text-white hover:text-gray-300"
+                                        : "text-black hover:text-gray-700"
+                                )}
                             >
                                 About
                             </Link>
@@ -38,8 +51,8 @@ export function RebrandedHeader() {
                         <BDPMenu
                             onClick={onOpen}
                             className={clsx("lg:hidden", {
-                                isHomepage: "text-white",
-                                "text-black": !isHomepage
+                                "text-white": isHomepage || isDarkMode,
+                                "text-black": !isHomepage && !isDarkMode
                             })}
                         />
                     </div>

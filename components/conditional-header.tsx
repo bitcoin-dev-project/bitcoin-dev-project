@@ -14,7 +14,8 @@ export function ConditionalHeader() {
         "/about",
         "/explore",
         "/learn",
-        "/contribute"
+        "/contribute",
+        "/decoding"
     ]
     const isRebrandedPage = rebrandedPages.some(
         (page) =>
