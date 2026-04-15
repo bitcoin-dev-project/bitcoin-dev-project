@@ -12,7 +12,6 @@ export function ConditionalHeader() {
         "/projects",
         "/get-funded",
         "/about",
-        "/explore",
         "/learn",
         "/contribute",
         "/decoding"

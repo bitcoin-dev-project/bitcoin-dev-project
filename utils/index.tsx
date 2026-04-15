@@ -191,7 +191,7 @@ export const NAVLINKS = [
     },
     {
         name: "Explore",
-        link: "/explore"
+        link: "/learn"
     }
 ]
 
