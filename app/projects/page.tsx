@@ -56,6 +56,7 @@ const projects: ProjectCard[] = [
         logo: "/images/projects/core-lightning.svg",
         bgColor: "bg-[#1c1c1e]",
         textColor: "text-white",
+        buttonText: "View Repository",
         link: "https://github.com/ElementsProject/lightning",
         github: "ElementsProject/lightning"
     },
@@ -65,7 +66,7 @@ const projects: ProjectCard[] = [
             "A Scala implementation of the lightning network, focusing on the mobile use case",
         logo: "/images/projects/eclair-logo.svg",
         bgColor: "bg-white",
-        link: "https://github.com/ACINQ/eclair",
+        link: "/good-first-issues?page=1&repo=eclair",
         github: "ACINQ/eclair"
     },
     {
@@ -74,7 +75,7 @@ const projects: ProjectCard[] = [
         logo: "/images/projects/bdk.svg",
         bgColor: "bg-[#f7931a]",
         textColor: "text-white",
-        link: "https://github.com/bitcoindevkit/bdk",
+        link: "/good-first-issues?page=1&repo=bdk",
         github: "bitcoindevkit/bdk"
     },
     {
@@ -94,7 +95,7 @@ const projects: ProjectCard[] = [
         logo: "/images/projects/payjoin.svg",
         bgColor: "bg-[#c7397c]",
         textColor: "text-white",
-        link: "https://github.com/payjoin/rust-payjoin",
+        link: "/good-first-issues?page=1&repo=rust-payjoin",
         github: "payjoin/rust-payjoin"
     },
     {
@@ -103,7 +104,7 @@ const projects: ProjectCard[] = [
             "Free, open-source and self-hosted, bitcoin payment processor",
         logo: "/images/projects/btc-pay.svg",
         bgColor: "bg-white",
-        link: "https://github.com/btcpayserver/btcpayserver",
+        link: "/good-first-issues?page=1&repo=btcpayserver",
         github: "btcpayserver/btcpayserver"
     },
     {
@@ -112,7 +113,7 @@ const projects: ProjectCard[] = [
             "A modular protocol to custody and transact bitcoin in a community context",
         logo: "/images/projects/fedimint.svg",
         bgColor: "bg-white",
-        link: "https://github.com/fedimint/fedimint",
+        link: "/good-first-issues?page=1&repo=fedimint",
         github: "fedimint/fedimint"
     },
     {
@@ -121,7 +122,7 @@ const projects: ProjectCard[] = [
         logo: "/images/projects/stratum-v2.svg",
         bgColor: "bg-[#0f212e]",
         textColor: "text-white",
-        link: "https://github.com/stratum-mining/stratum",
+        link: "/good-first-issues?page=1&repo=stratum",
         github: "stratum-mining/stratum"
     },
     {
@@ -130,7 +131,7 @@ const projects: ProjectCard[] = [
             "A series of projects to implement various bitcoin protocols in Rust",
         logo: "/images/projects/rust-btc-logo.svg",
         bgColor: "bg-white",
-        link: "https://github.com/rust-bitcoin/rust-bitcoin",
+        link: "/good-first-issues?page=1&repo=rust-bitcoin",
         github: "rust-bitcoin/rust-bitcoin"
     },
     {
@@ -139,7 +140,7 @@ const projects: ProjectCard[] = [
             "One-click lightning networks for local app development and testing",
         logo: "/images/projects/polar.svg",
         bgColor: "bg-white",
-        link: "https://github.com/jamaljsr/polar",
+        link: "/good-first-issues?page=1&repo=polar",
         github: "jamaljsr/polar"
     },
     {
@@ -149,7 +150,7 @@ const projects: ProjectCard[] = [
         bgColor: "bg-[#1c1c1e]",
         textColor: "text-white",
         showBdpTag: true,
-        link: "https://github.com/bitcoin-dev-project/warnet",
+        link: "/good-first-issues?page=1&repo=warnet",
         github: "bitcoin-dev-project/warnet"
     },
     {
@@ -158,7 +159,7 @@ const projects: ProjectCard[] = [
         logo: "/images/projects/simln.svg",
         bgColor: "bg-white",
         showBdpTag: true,
-        link: "https://github.com/bitcoin-dev-project/sim-ln",
+        link: "/good-first-issues?page=1&repo=sim-ln",
         github: "bitcoin-dev-project/sim-ln"
     }
 ]
@@ -198,7 +199,12 @@ function ProjectCardComponent({ project }: { project: ProjectCard }) {
             {/* INNER BORDER - Card Content Area */}
             <div className="flex flex-col h-full border border-[#e1dbd0] rounded-[14px] overflow-hidden">
                 {/* IMAGE SECTION - Full width, no padding */}
-                <div className="relative w-full">
+                <Link
+                    href={`https://github.com/${project.github}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative w-full block"
+                >
                     {/* BDP tag positioned on top of image */}
                     {project.showBdpTag && (
                         <div className="absolute z-10 top-3 left-3 bg-[#F6F0E6] border border-[#A9A49B] rounded-[12px] px-2 py-1 flex items-center gap-1">
@@ -220,13 +226,18 @@ function ProjectCardComponent({ project }: { project: ProjectCard }) {
                             priority={false}
                         />
                     </div>
-                </div>
+                </Link>
 
                 {/* BOTTOM / CONTENT SECTION */}
                 <div className="bg-[#efe9de] text-black p-4 flex flex-1 flex-col">
-                    <h3 className="text-[17px] font-bold mb-2 font-montserrat leading-tight">
-                        {project.title}
-                    </h3>
+                    <Link
+                        href={`https://github.com/${project.github}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[17px] font-bold mb-2 font-montserrat leading-tight hover:underline"
+                    >
+                        <h3>{project.title}</h3>
+                    </Link>
                     <p className="text-base opacity-70 mb-6">
                         {project.description}
                     </p>
