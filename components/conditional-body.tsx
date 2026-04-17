@@ -17,9 +17,7 @@ export function ConditionalBody({
     const pathname = usePathname()
 
     return (
-        <body
-            className={`${fontVariables} text-vscode-text-light dark:text-vscode-text-dark`}
-        >
+        <body className={`${fontVariables} text-vscode-text-light dark:text-vscode-text-dark`}>
             <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
                 <ConditionalBackground>
                     {pathname !== "/" && <RebrandedHeader />}

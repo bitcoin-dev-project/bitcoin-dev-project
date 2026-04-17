@@ -5,5 +5,9 @@ export function ConditionalBackground({
 }: {
     children: React.ReactNode
 }) {
-    return <div className="bg-[#F6F0E6] min-h-screen">{children}</div>
+    return (
+        <div className="bg-[#F6F0E6] min-h-screen">
+            {children}
+        </div>
+    )
 }

@@ -9,6 +9,6 @@ export function ConditionalHeader() {
     if (pathname === "/") {
         return <></>
     }
-
     return <RebrandedHeader />
 }
+
