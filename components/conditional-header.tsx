@@ -6,7 +6,6 @@ import { RebrandedHeader } from "./rebranded-header"
 export function ConditionalHeader() {
     const pathname = usePathname()
 
-
     if (pathname === "/") {
         return <></>
     }
