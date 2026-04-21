@@ -27,16 +27,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/3300",
-    "publishedAt": "2023-09-27T19:50:26Z",
-    "title": "On start print consensus versions",
-    "labels": [
-      "good first issue",
-      "consensus"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/3557",
     "publishedAt": "2023-11-09T15:24:07Z",
     "title": "Properly handle lagging broadcast channel in SM notifier",
