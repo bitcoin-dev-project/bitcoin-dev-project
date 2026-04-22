@@ -9,7 +9,6 @@ export function ConditionalBackground({
 }) {
     const pathname = usePathname()
 
-    // Apply rebranded background color to these pages
     const rebrandedPages = ["/projects", "/career", "/about", "/"]
     const isRebrandedPage = rebrandedPages.some(
         (page) =>
