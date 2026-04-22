@@ -16,8 +16,18 @@ export function ConditionalBody({
 }) {
     const pathname = usePathname()
 
+    const rebrandedPages = ["/projects", "/get", "/about", "/", "/career"]
+    const isRebrandedPage = rebrandedPages.some(
+        (page) =>
+            pathname === page || (page !== "/" && pathname?.startsWith(page))
+    )
+
+    const bodyClass = isRebrandedPage
+        ? `${fontVariables} text-vscode-text-light dark:text-vscode-text-dark`
+        : `${fontVariables} bg-white dark:bg-black text-vscode-text-light dark:text-vscode-text-dark`
+
     return (
-        <body className={`${fontVariables} text-vscode-text-light dark:text-vscode-text-dark`}>
+        <body className={bodyClass}>
             <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
                 <ConditionalBackground>
                     {pathname !== "/" && <RebrandedHeader />}
