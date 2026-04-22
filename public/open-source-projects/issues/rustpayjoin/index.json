@@ -95,17 +95,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/1394",
-    "publishedAt": "2026-03-07T18:30:02Z",
-    "title": "payjoin-cli \"send\" doesn't propagate `process_response` errors correctly",
-    "labels": [
-      "bug",
-      "good first issue",
-      "payjoin-cli"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/1421",
     "publishedAt": "2026-03-18T04:21:49Z",
     "title": "Harden mailroom against metadata side channels",
