@@ -104,5 +104,15 @@
       "payjoin-mailroom"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1501",
+    "publishedAt": "2026-04-23T06:46:47Z",
+    "title": "Nix flake installs dart 3.9.4, but uniffi-dart requires 3.10 minimum",
+    "labels": [
+      "bug",
+      "dependencies"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
