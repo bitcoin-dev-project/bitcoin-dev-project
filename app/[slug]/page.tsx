@@ -19,7 +19,7 @@ export default function Curriculum({
         <header className="w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex items-center justify-between h-20">
-                    <Link href="https://bitcoindevs.xyz/">
+                    <Link href="/">
                     <Image
                         src="/images/bdp-logo.png"
                         alt="bdp logo"
