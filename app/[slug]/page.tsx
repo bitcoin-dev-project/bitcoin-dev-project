@@ -30,12 +30,12 @@ export default function Curriculum({
                     </Link>
 
                     <div className="flex items-center gap-4 md:gap-6">
-                    <Link href="https://bitcoindevs.xyz/about" className="text-gray-700 text-sm md:text-base font-quicksand hover:text-gray-700 transition-colors">
+                    <Link href="/about" className="text-gray-700 text-sm md:text-base font-quicksand hover:text-gray-700 transition-colors">
                         About
                     </Link>
 
                     <Link
-                        href="https://bitcoindevs.xyz/explore"
+                        href="/explore"
                         className="bg-[#EB5234] text-white px-3 py-2.5 rounded-[10px] text-sm md:text-base font-bold font-quicksand capitalize hover:opacity-90 transition-all duration-200"
                     >
                         <span>Start exploring</span>
@@ -57,7 +57,7 @@ export default function Curriculum({
 
             <p className="text-[24px] md:text-[36px] font-semibold text-black leading-tight">
                 Go back to{" "}
-                <Link href="https://bitcoindevs.xyz/">
+                <Link href="/">
                 <span className="underline">homepage</span>
                 </Link>
             </p>
