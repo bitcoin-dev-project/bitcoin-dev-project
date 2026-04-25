@@ -19,8 +19,8 @@ interface CurriculumContextProps {
     filteredCurriculum: Curriculum[]
     search: string
     setSearch: Dispatch<SetStateAction<string>>
-    difficulty: Difficulty | ""
-    setDifficulty: (value: Difficulty | "") => void
+    difficulty: Difficulty[]
+    setDifficulty: Dispatch<SetStateAction<Difficulty[]>>
     selectedTags: TagType[]
     setSelectedTags: Dispatch<SetStateAction<TagType[]>>
     handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void
@@ -41,7 +41,7 @@ export const CurriculumProvider = ({
     path
 }: CurriculumProviderProps) => {
     const [search, setSearch] = useState("")
-    const [difficulty, setDifficulty] = useState<Difficulty | "">("")
+    const [difficulty, setDifficulty] = useState<Difficulty[]>([])
     const [selectedTags, setSelectedTags] = useState<TagType[]>([])
     const [curriculum, setCurriculum] = useState<Curriculum[]>([])
 
@@ -52,9 +52,10 @@ export const CurriculumProvider = ({
                 item.title.toLowerCase().includes(lowerSearch) ||
                 item.description.toLowerCase().includes(lowerSearch)
 
-            const matchesDifficulty = difficulty
-                ? item.difficulty === difficulty
-                : true
+            const matchesDifficulty =
+                difficulty.length === 0
+                    ? true
+                    : difficulty.includes(item.difficulty)
 
             const matchesTags =
                 selectedTags.length === 0
@@ -71,7 +72,7 @@ export const CurriculumProvider = ({
 
     const clearFilters = useCallback(() => {
         setSearch("")
-        setDifficulty("")
+        setDifficulty([])
         setSelectedTags([])
     }, [])
 
