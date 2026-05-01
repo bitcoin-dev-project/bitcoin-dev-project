@@ -18,16 +18,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
   },
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/2264",
-    "publishedAt": "2023-05-04T19:01:06Z",
-    "title": "Expose current dust exposure",
-    "labels": [
-      "good first issue",
-      "Take a Friday Leave a Friday"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/2348",
     "publishedAt": "2023-06-09T17:46:58Z",
     "title": "Improve block connection logging",
