@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useMemo } from "react"
-import { Metadata } from "next"
 import { Search, Filter, Eye, ChevronRight, Play } from "lucide-react"
 import Image from "next/image"
 import SlideViewer from "@/components/explainers/SlideViewer"

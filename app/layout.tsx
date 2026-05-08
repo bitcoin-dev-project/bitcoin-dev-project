@@ -12,6 +12,7 @@ export const metadata: Metadata = {
         template: `%s | ${siteMetadata.title}`
     },
     description: siteMetadata.description,
+    keywords: siteMetadata.keywords,
     openGraph: {
         title: siteMetadata.title,
         description: siteMetadata.description,
@@ -40,8 +41,11 @@ export const metadata: Metadata = {
     },
     twitter: {
         title: siteMetadata.title,
+        description: siteMetadata.description,
         card: "summary_large_image",
-        images: [siteMetadata.socialBanner]
+        images: [siteMetadata.socialBanner],
+        site: siteMetadata.twitterHandle,
+        creator: siteMetadata.twitterHandle
     }
 }
 

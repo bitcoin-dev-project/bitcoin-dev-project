@@ -14,6 +14,7 @@ const siteMetadata = {
         "https://bitcoindevs.xyz/images/pages-thumbnails/bdp-rebrand-preview.webp",
     github: "https://github.com/bitcoin-dev-project/",
     x: "https://x.com/Bitcoin_Devs",
+    twitterHandle: "@Bitcoin_Devs",
     locale: "en-US",
     twitter: {
         images: [

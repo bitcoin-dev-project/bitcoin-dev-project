@@ -4,6 +4,22 @@ import { curriculums, type KnownCurriculums } from "@/content/curriculums"
 import { slugify } from "@/utils/slugify"
 import Link from "next/link"
 import Image from "next/image"
+import { genPageMetadata } from "@/app/seo"
+import type { Metadata } from "next"
+
+export async function generateMetadata({
+    params
+}: {
+    params: { slug: KnownCurriculums }
+}): Promise<Metadata> {
+    const curriculum = curriculums[params.slug]
+    if (!curriculum) return {}
+
+    return genPageMetadata({
+        title: curriculum.title,
+        description: curriculum.description
+    })
+}
 
 export default function Curriculum({
     params
