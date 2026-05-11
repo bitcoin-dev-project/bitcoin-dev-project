@@ -114,5 +114,18 @@
       "client"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/8573",
+    "publishedAt": "2026-05-11T08:04:47Z",
+    "title": "Gateway/LND failures reach client as opaque `ErrorMessage: Invalid request`",
+    "labels": [
+      "bug",
+      "client",
+      "logging",
+      "debugging",
+      "smol"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
