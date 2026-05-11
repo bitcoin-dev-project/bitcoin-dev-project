@@ -3,7 +3,7 @@ import { genPageMetadata } from "../seo"
 import { PhotoSlider } from "@/components/about/PhotoSlider"
 
 export const metadata = genPageMetadata({
-    title: "About | Bitcoin Dev Project",
+    title: "About",
     keywords: "bitcoin, open source, good first issues, bitcoin development",
     description:
         "Our goal is to provide newcomers with resources and support for your bitcoin open source development journey.",

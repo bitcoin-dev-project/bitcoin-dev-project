@@ -5,7 +5,7 @@ import { getRepoIssues } from "@/lib/get-repo-issues"
 import { genPageMetadata } from "../seo"
 
 export const metadata = genPageMetadata({
-    title: "Good First Issues | Bitcoin Dev Project",
+    title: "Good First Issues",
     keywords: "bitcoin, open source, good first issues, bitcoin development",
     description:
         "Explore Good First Issues from vetted Bitcoin open-source projects and start making impactful contributions today!",
