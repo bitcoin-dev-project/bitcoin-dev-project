@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next"
 import { allTopics } from "contentlayer/generated"
 import siteMetadata from "@/data/siteMetadata"
+import { getAllCommunities } from "@/lib/utils/communities"
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const siteUrl = siteMetadata.siteUrl
@@ -11,10 +12,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: post.lastmod || post.date
         }))
 
+    const communityRoutes = getAllCommunities().map((community) => ({
+        url: `${siteUrl}/decoding/communities/${community.id}`,
+        lastModified: community.currentCohort.endDate
+    }))
+
     const routes = [
         "",
         "decoding",
-        "career",
+        "about",
+        "explainers",
+        "learn",
+        "contribute",
+        "get-funded",
+        "decoding/communities",
         "good-first-issues",
         "projects",
         "tools",
@@ -25,5 +36,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date().toISOString().split("T")[0]
     }))
 
-    return [...routes, ...topicRoutes]
+    return [...routes, ...topicRoutes, ...communityRoutes]
 }
