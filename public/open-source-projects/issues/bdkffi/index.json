@@ -25,5 +25,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/1002",
+    "publishedAt": "2026-05-14T08:32:56Z",
+    "title": "Add test showing descriptors that are not supported",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
