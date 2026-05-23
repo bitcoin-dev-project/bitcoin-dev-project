@@ -7,7 +7,7 @@ const FaqSection = () => {
         setExpandedFaq(expandedFaq === index ? null : index)
     }
     return (
-        <div className="bg-[#F5EFE7] py-24">
+        <div className="bg-[#F5EFE7] py-24 relative">
             <div className="max-w-4xl mx-auto px-5 lg:px-8">
                 <h2 className="text-2xl font-bold text-brand-dark text-center mb-12 font-montserrat">
                     FREQUENTLY ASKED QUESTIONS
