@@ -342,5 +342,14 @@
       "Needs Conceptual Review"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/35373",
+    "publishedAt": "2026-05-25T18:16:20Z",
+    "title": "Improve settings.json error message to mention full disk as possible cause",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
