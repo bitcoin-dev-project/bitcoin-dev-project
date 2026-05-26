@@ -137,14 +137,5 @@
       "1.0-wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
-  },
-  {
-    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/6230",
-    "publishedAt": "2026-05-25T01:59:18Z",
-    "title": "Update `cargo-semver-checks` job to hard fail on breaks to 1.0 crates",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
