@@ -15,7 +15,7 @@ export const curriculums = {
                     "Get started with these text based sources to firm up your technical foundation and learn about the philosophy behind Bitcoin Core development.",
                 items: [
                     {
-                        image: "/images/curriculums/bitcoin-infra-development/mastering-btc.jpg",
+                        image: "/images/curriculums/bitcoin-infra-development/mastering-btc.webp",
                         title: "Mastering Bitcoin",
                         subTitle: "",
                         description:
@@ -23,7 +23,7 @@ export const curriculums = {
                         link: "https://github.com/bitcoinbook/bitcoinbook"
                     },
                     {
-                        image: "/images/curriculums/dev-philosophy.jpg",
+                        image: "/images/curriculums/dev-philosophy.webp",
                         title: "Bitcoin Development Philosophy",
                         subTitle: "",
                         description:
@@ -46,7 +46,7 @@ export const curriculums = {
                         link: "https://learning.chaincode.com/#seminars"
                     },
                     {
-                        image: "/images/curriculums/bitcoin-infra-development/learn-bitcoin-from-command-line.jpg",
+                        image: "/images/curriculums/bitcoin-infra-development/learn-bitcoin-from-command-line.webp",
                         title: "Learn Bitcoin from the Command Line",
                         subTitle: "",
                         description:
@@ -54,7 +54,7 @@ export const curriculums = {
                         link: "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line"
                     },
                     {
-                        image: "/images/curriculums/bitcoin-infra-development/transaction-tutorial.jpg",
+                        image: "/images/curriculums/bitcoin-infra-development/transaction-tutorial.webp",
                         title: "Transaction Tutorial",
                         subTitle: "",
                         description:
@@ -62,7 +62,7 @@ export const curriculums = {
                         link: "https://github.com/chaincodelabs/bitcoin-tx-tutorial"
                     },
                     {
-                        image: "/images/curriculums/bitcoin-infra-development/minesim.jpg",
+                        image: "/images/curriculums/bitcoin-infra-development/minesim.webp",
                         title: "Minesim",
                         subTitle: "",
                         description:
@@ -70,7 +70,7 @@ export const curriculums = {
                         link: "https://github.com/LarryRuane/minesim"
                     },
                     {
-                        image: "/images/curriculums/bitcoin-infra-development/tiny-bitcoin-peer.jpg",
+                        image: "/images/curriculums/bitcoin-infra-development/tiny-bitcoin-peer.webp",
                         title: "Tinybitcoinpeer",
                         subTitle: "",
                         description:
@@ -78,7 +78,7 @@ export const curriculums = {
                         link: "https://github.com/willcl-ark/tinybitcoinpeer"
                     },
                     {
-                        image: "/images/curriculums/bitcoin-infra-development/schnorr-taproot-workshop.jpg",
+                        image: "/images/curriculums/bitcoin-infra-development/schnorr-taproot-workshop.webp",
                         title: "Schnorr Taproot Workshop",
                         subTitle: "",
                         description:
@@ -93,7 +93,7 @@ export const curriculums = {
                     "By now you have leveled up in the safety of reading and tutorials. It is time to start doing the work you came to do. Explore the codebase and start building your review skills.",
                 items: [
                     {
-                        image: "/images/curriculums/bitcoin-infra-development/onboarding-to-bitcoin-core.jpg",
+                        image: "/images/curriculums/bitcoin-infra-development/onboarding-to-bitcoin-core.webp",
                         title: "Onboarding to Bitcoin Core",
                         subTitle: "",
                         description:
@@ -101,7 +101,7 @@ export const curriculums = {
                         link: "https://bitcoincore.academy"
                     },
                     {
-                        image: "/images/curriculums/bitcoin-infra-development/bitcoin-pr-review-club.jpg",
+                        image: "/images/curriculums/bitcoin-infra-development/bitcoin-pr-review-club.webp",
                         title: "Bitcoin Core PR Review Club",
                         subTitle: "",
                         description:
@@ -109,7 +109,7 @@ export const curriculums = {
                         link: "https://bitcoincore.reviews"
                     },
                     {
-                        image: "/images/curriculums/bitcoin-infra-development/rabbit-extra.jpg",
+                        image: "/images/curriculums/bitcoin-infra-development/rabbit-extra.webp",
                         title: "Cryptography Camp Workbook",
                         subTitle: "",
                         description:
@@ -145,7 +145,7 @@ export const curriculums = {
                         link: "https://learning.chaincode.com/#seminars"
                     },
                     {
-                        image: "/images/curriculums/dev-philosophy.jpg",
+                        image: "/images/curriculums/dev-philosophy.webp",
                         title: "Bitcoin Development Philosophy",
                         subTitle: "",
                         description:
@@ -153,7 +153,7 @@ export const curriculums = {
                         link: "https://bitcoindevphilosophy.com/"
                     },
                     {
-                        image: "/images/curriculums/lightning-infra-development/building-on-ln.jpg",
+                        image: "/images/curriculums/lightning-infra-development/building-on-ln.webp",
                         title: "Building on LN",
                         subTitle: "",
                         description:
@@ -168,7 +168,7 @@ export const curriculums = {
                     "Explore some of the stickier details of lightning with code review and further reading. After this, it is time to begin contributing to the lightning network implementation of your choice.",
                 items: [
                     {
-                        image: "/images/curriculums/lightning-infra-development/ldk-pr-review-club.jpg",
+                        image: "/images/curriculums/lightning-infra-development/ldk-pr-review-club.webp",
                         title: "LDK PR Review Club",
                         subTitle: "",
                         description:
@@ -176,7 +176,7 @@ export const curriculums = {
                         link: "https://ldk.reviews"
                     },
                     {
-                        image: "/images/curriculums/lightning-infra-development/mastering-lightning.jpg",
+                        image: "/images/curriculums/lightning-infra-development/mastering-lightning.webp",
                         title: "Mastering Lightning",
                         subTitle: "",
                         description:

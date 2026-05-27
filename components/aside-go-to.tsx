@@ -45,7 +45,7 @@ const AsideGoTO: React.FC<IGoTO> = ({ selected, allCurriculum, path }) => {
                     {selected === "get-funded" && (
                         <div className="mt-4">
                             <Image
-                                src="/images/hotair-balloon.png"
+                                src="/images/hotair-balloon.webp"
                                 alt="Hot Air Balloon"
                                 width={400}
                                 height={600}

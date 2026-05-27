@@ -14,7 +14,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "The reference implementation of the bitcoin protocol",
-                    image: "/images/projects/bitcoin-core-logo.png",
+                    image: "/images/projects/bitcoin-core-logo.svg",
                     link: "https://github.com/bitcoin/bitcoin",
                     github: "https://github.com/bitcoin/bitcoin",
                     repo: "bitcoin"
@@ -24,7 +24,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A complete lightning implementation packaged as an SDK",
-                    image: "/images/projects/ldk.png",
+                    image: "/images/projects/ldk.svg",
                     link: "/good-first-issues?page=1&repo=rust-lightning",
                     github: "https://github.com/lightningdevkit",
                     repo: "rust-lightning"
@@ -34,7 +34,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A Golang implementation and the most widely run full node on the lightning network",
-                    image: "/images/projects/lnd.png",
+                    image: "/images/projects/lnd.svg",
                     link: "/good-first-issues?page=1&repo=lnd",
                     github: "https://github.com/lightningnetwork/lnd",
                     repo: "lnd"
@@ -44,7 +44,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A lightweight, highly customizable and standard compliant implementation of the lightning protocol implementation written in C",
-                    image: "/images/projects/core-lightning.png",
+                    image: "/images/projects/core-lightning.svg",
                     link: "https://github.com/ElementsProject/lightning",
                     github: "https://github.com/ElementsProject/lightning",
                     repo: "lightning"
@@ -54,7 +54,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A scala implementation of the lightning network, focusing on the mobile use case",
-                    image: "/images/projects/eclair-logo.png",
+                    image: "/images/projects/eclair-logo.svg",
                     link: "/good-first-issues?page=1&repo=eclair",
                     github: "https://github.com/ACINQ/eclair",
                     repo: "eclair"
@@ -63,7 +63,7 @@ export const projects = {
                     title: "Bitcoin Development Kit",
                     subTitle: "",
                     description: "Seamlessly build cross platform wallets",
-                    image: "/images/projects/bdk.png",
+                    image: "/images/projects/bdk.svg",
                     link: "/good-first-issues?page=1&repo=bdk",
                     github: "https://github.com/bitcoindevkit",
                     repo: "bdk"
@@ -73,7 +73,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Optimized C library for elliptic curve operations on secp256k1",
-                    image: "/images/projects/secp256k1.png",
+                    image: "/images/projects/secp256k1.svg",
                     link: "https://github.com/bitcoin-core/secp256k1",
                     github: "https://github.com/bitcoin-core/secp256k1"
                 },
@@ -82,7 +82,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Scale Bitcoin, save fees, and preserve privacy all at once.",
-                    image: "/images/projects/payjoin.png",
+                    image: "/images/projects/payjoin.svg",
                     link: "good-first-issues?page=1&repo=rust-payjoin",
                     github: "https://github.com/payjoin",
                     repo: "rust-payjoin"
@@ -92,7 +92,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Free, open-source and self-hosted, bitcoin payment processor",
-                    image: "/images/projects/btc-pay.png",
+                    image: "/images/projects/btc-pay.svg",
                     link: "/good-first-issues?page=1&repo=btcpayserver",
                     github: "https://github.com/btcpayserver",
                     repo: "btcpayserver"
@@ -102,7 +102,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A modular protocol to custody and transact bitcoin in a community context",
-                    image: "/images/projects/fedimint.png",
+                    image: "/images/projects/fedimint.svg",
                     link: "/good-first-issues?page=1&repo=fedimint",
                     github: "https://github.com/fedimint",
                     repo: "fedimint"
@@ -112,7 +112,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "The next generation protocol for pooled mining",
-                    image: "/images/projects/stratum-v2.png",
+                    image: "/images/projects/stratum-v2.svg",
                     link: "/good-first-issues?page=1&repo=stratum",
                     github: "https://github.com/stratum-mining",
                     repo: "stratum"
@@ -122,7 +122,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "A series of projects to implement various bitcoin protocols in Rust",
-                    image: "/images/projects/rust-btc-logo.png",
+                    image: "/images/projects/rust-btc-logo.svg",
                     link: "/good-first-issues?page=1&repo=rust-bitcoin",
                     github: "https://github.com/rust-bitcoin",
                     repo: "rust-bitcoin"
@@ -132,7 +132,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "One-click lightning networks for local app development and testing",
-                    image: "/images/projects/polar.jpg",
+                    image: "/images/projects/polar.svg",
                     link: "/good-first-issues?page=1&repo=polar",
                     github: "https://github.com/jamaljsr/polar",
                     repo: "polar"
@@ -142,7 +142,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Monitor and analyze emergent behaviors of P2P networks",
-                    image: "/images/projects/warnet.jpg",
+                    image: "/images/projects/warnet.svg",
                     link: "/good-first-issues?page=1&repo=warnet",
                     github: "https://github.com/bitcoin-dev-project/warnet",
                     repo: "warnet"
@@ -152,7 +152,7 @@ export const projects = {
                     subTitle: "",
                     description:
                         "Instantly simulate real-world lightning network activity",
-                    image: "/images/projects/simln.jpg",
+                    image: "/images/projects/simln.svg",
                     link: "/good-first-issues?page=1&repo=sim-ln",
                     github: "https://github.com/bitcoin-dev-project/sim-ln",
                     repo: "sim-ln"

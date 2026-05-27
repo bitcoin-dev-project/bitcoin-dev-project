@@ -63,7 +63,7 @@ export const learnSection = createSection({
         {
             description: "Discover bitcoin and lightning open source projects",
             btnText: "Dive In",
-            src: "/images/projects.jpg",
+            src: "/images/projects.webp",
             title: "Projects",
             shortTitle: "Projects",
             slug: "/projects"
@@ -71,7 +71,7 @@ export const learnSection = createSection({
         {
             description: " Begin a career in bitcoin open source development ",
             btnText: "Start",
-            src: "/images/lightning-infra-development.jpg",
+            src: "/images/lightning-infra-development.webp",
             title: "Career",
             shortTitle: "Career",
             slug: "/career"

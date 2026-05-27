@@ -15,7 +15,7 @@ import { FaDiscord } from "react-icons/fa"
 import { motion } from "framer-motion"
 
 import { Button } from "./Button"
-import blurOrangeImage from "@/public/images/topics-hero/blur-orange.png"
+import blurOrangeImage from "@/public/images/topics-hero/blur-orange.webp"
 import blurIndigoImage from "@/public/images/topics-hero/blur-indigo.png"
 import { HeroBackground } from "@/public/images/topics-hero/HeroBackground"
 

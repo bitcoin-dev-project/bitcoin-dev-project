@@ -23,7 +23,9 @@ export const metadata = genPageMetadata({
     openGraph: {
         images: [
             {
-                url: "https://bitcoindevs.xyz/images/pages-thumbnails/about.png",
+                url: "https://bitcoindevs.xyz/images/pages-thumbnails/about.webp",
+                width: 1200,
+                height: 630,
                 alt: "About BDP"
             }
         ],
@@ -34,7 +36,7 @@ export const metadata = genPageMetadata({
             "Our goal is to provide newcomers with resources and support for your bitcoin open source development journey."
     },
     twitter: {
-        images: ["https://bitcoindevs.xyz/images/pages-thumbnails/about.png"],
+        images: ["https://bitcoindevs.xyz/images/pages-thumbnails/about.webp"],
         card: "summary_large_image",
         title: "About | Bitcoin Dev Project",
         creator: "@Bitcoin_Devs",

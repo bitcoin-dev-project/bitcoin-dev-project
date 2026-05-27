@@ -12,9 +12,9 @@ export default function Explore() {
     const [activeSection, setActiveSection] = useState<Section>("learn")
 
     const images = {
-        learn: "/images/explore/backpack-illustration.png",
-        contribute: "/images/explore/contribute-illustration.png",
-        funded: "/images/explore/funded-illustration.png"
+        learn: "/images/explore/backpack-illustration.webp",
+        contribute: "/images/explore/contribute-illustration.webp",
+        funded: "/images/explore/funded-illustration.webp"
     }
 
     return (

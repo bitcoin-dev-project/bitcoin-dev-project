@@ -13,6 +13,8 @@ export const metadata = genPageMetadata({
         images: [
             {
                 url: "https://bitcoindevs.xyz/images/pages-thumbnails/good-first-issues.webp",
+                width: 1200,
+                height: 630,
                 alt: "Good First Issues"
             }
         ],

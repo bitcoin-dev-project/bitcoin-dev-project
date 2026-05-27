@@ -5,15 +5,29 @@ interface PageSEOProps {
     title: string
     description?: string
     image?: string
+    alt?: string
     openGraph?: Metadata["openGraph"]
     twitter?: Metadata["twitter"]
     [key: string]: unknown
+}
+
+const SOCIAL_IMAGE_WIDTH = 1200
+const SOCIAL_IMAGE_HEIGHT = 630
+
+function getSocialImage(image: string, alt?: string) {
+    return {
+        url: image,
+        width: SOCIAL_IMAGE_WIDTH,
+        height: SOCIAL_IMAGE_HEIGHT,
+        alt
+    }
 }
 
 export function genPageMetadata({
     title,
     description,
     image,
+    alt,
     openGraph: ogOverride,
     twitter: twitterOverride,
     ...rest
@@ -26,7 +40,12 @@ export function genPageMetadata({
             description: description || siteMetadata.description,
             url: "./",
             siteName: siteMetadata.title,
-            images: image ? [image] : [siteMetadata.socialBanner],
+            images: [
+                getSocialImage(
+                    image || siteMetadata.socialBanner,
+                    alt || siteMetadata.title
+                )
+            ],
             locale: "en_US",
             type: "website",
             ...ogOverride

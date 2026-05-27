@@ -48,10 +48,10 @@ export default function Curriculum({
                     {/* RIGHT IMAGE */}
                     <div className="w-[220px] md:w-[360px] lg:w-[420px] flex justify-center">
                         <Image
-                            src="/images/404.png"
+                            src="/images/404.webp"
                             alt="404 illustration"
                             width={420}
-                            height={420}
+                            height={630}
                             sizes="(max-width: 768px) 220px, (max-width: 1024px) 360px, 420px"
                             className="w-full h-auto"
                             priority

@@ -12,7 +12,9 @@ export const metadata = genPageMetadata({
     openGraph: {
         images: [
             {
-                url: "https://bitcoindevs.xyz/images/pages-thumbnails/tools.png",
+                url: "https://bitcoindevs.xyz/images/pages-thumbnails/tools.webp",
+                width: 1200,
+                height: 630,
                 alt: "bitcoin tools"
             }
         ],
@@ -23,7 +25,7 @@ export const metadata = genPageMetadata({
             "From Learning to Action: Dive Into Bitcoin Development. Explore tools crafted to support your learning, building, and contributions in the Bitcoin ecosystem."
     },
     twitter: {
-        images: ["https://bitcoindevs.xyz/images/pages-thumbnails/tools.png"],
+        images: ["https://bitcoindevs.xyz/images/pages-thumbnails/tools.webp"],
         card: "summary_large_image",
         title: "Bitcoin tools and resources",
         creator: "@Bitcoin_Devs",

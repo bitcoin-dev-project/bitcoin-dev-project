@@ -6,7 +6,7 @@ const ResourceNotFound: React.FC = () => {
         <div className="learn-cards-container grid md:grid-cols-2 justify-between w-full gap-5">
             <div className="border border-brand-stroke-on-base p-4 pb-[22px] rounded-2xl bg-brand-card-bg w-full md:max-w-[375px] flex items-center overflow-hidden">
                 <Image
-                    src="/images/hedgehog-not-found.png"
+                    src="/images/hedgehog-not-found.webp"
                     alt="Hedgehog mascot - no resources found"
                     width={600}
                     height={600}
