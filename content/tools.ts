@@ -85,7 +85,7 @@ export const tools = {
                     subTitle: "",
                     description:
                         "One-click lightning networks for local app development and testing",
-                    image: "/images/projects/polar.jpg",
+                    image: "/images/projects/polar.svg",
                     link: "https://lightningpolar.com"
                 },
                 {
@@ -93,7 +93,7 @@ export const tools = {
                     subTitle: "",
                     description:
                         "Monitor and analyze the emergent behaviors of P2P networks",
-                    image: "/images/projects/warnet.png",
+                    image: "/images/projects/warnet.svg",
                     link: "https://warnet.dev"
                 },
                 {
@@ -101,7 +101,7 @@ export const tools = {
                     subTitle: "",
                     description:
                         "Instantly simulate real-world Lightning network activity",
-                    image: "/images/projects/simln.jpg",
+                    image: "/images/projects/simln.svg",
                     link: "https://simln.dev"
                 }
             ]

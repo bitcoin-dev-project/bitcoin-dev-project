@@ -6,7 +6,7 @@ export const metadata = genPageMetadata({
         "Discover vetted Bitcoin open source projects and find your first contribution — from Bitcoin Core and Lightning to BDK, LDK, and more.",
     keywords:
         "bitcoin open source, bitcoin projects, bitcoin core, lightning network, bitcoin contribution, bitcoin development, LDK, LND, BDK",
-    image: "https://bitcoindevs.xyz/images/pages-thumbnails/projects.png",
+    image: "https://bitcoindevs.xyz/images/pages-thumbnails/projects.webp",
     alt: "Bitcoin projects"
 })
 

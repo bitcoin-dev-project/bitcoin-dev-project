@@ -197,7 +197,7 @@ export const NAVLINKS = [
 
 export const BITCOINPATHS = [
     {
-        image: "/images/explore/backpack-illustration.png",
+        image: "/images/explore/backpack-illustration.webp",
         title: "Learn",
         description:
             "Discover how bitcoin really works, from first steps to deep dives.",
@@ -205,7 +205,7 @@ export const BITCOINPATHS = [
         cta: "View Resources"
     },
     {
-        image: "/images/explore/contribute-illustration.png",
+        image: "/images/explore/contribute-illustration.webp",
         title: "Contribute",
         description:
             "These resources help you go from curious observer to confident contributor.",
@@ -213,7 +213,7 @@ export const BITCOINPATHS = [
         cta: "View Resources"
     },
     {
-        image: "/images/explore/funded-illustration.png",
+        image: "/images/explore/funded-illustration.webp",
         title: "Get Funded",
         description:
             "Secure a grant to launch your full-time career in bitcoin open-source development.",
@@ -685,15 +685,15 @@ export function shuffle(data: IssueCardElement[]) {
 export const swapImageUrl = (name: string, imageUrl: string) => {
     switch (name) {
         case "polar":
-            return "/images/projects/polar.jpg"
+            return "/images/projects/polar.svg"
         case "lnd":
-            return "/images/projects/lnd.png"
+            return "/images/projects/lnd.svg"
         case "eclair":
-            return "/images/projects/eclair-logo.png"
+            return "/images/projects/eclair-logo.svg"
         case "warnet":
-            return "/images/projects/warnet.jpg"
+            return "/images/projects/warnet.svg"
         case "sim-ln":
-            return "/images/projects/simln.jpg"
+            return "/images/projects/simln.svg"
         default:
             return imageUrl
     }

@@ -22,10 +22,11 @@ const HeroPage = ({
                 style={{ height: "calc(100% + 80px)" }}
             >
                 <Image
-                    src="/images/hero/rebranded/sky-background.png"
+                    src="/images/hero/rebranded/sky-background.webp"
                     alt="Sky background"
                     fill
                     className="object-cover"
+                    sizes="100vw"
                     priority
                 />
             </div>
@@ -89,6 +90,7 @@ const HeroPage = ({
                                 alt="Open Source, Open Doors - Floating Island Portal"
                                 fill
                                 className="object-contain w-[951px]"
+                                sizes="(min-width: 1024px) 50vw, 100vw"
                                 priority
                             />
                         </div>

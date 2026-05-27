@@ -6,7 +6,7 @@ export const metadata = genPageMetadata({
         "Visual guides and interactive explanations to help you understand Bitcoin concepts through carefully crafted slides and diagrams.",
     keywords:
         "bitcoin explainers, bitcoin concepts, bitcoin diagrams, bitcoin guides, bitcoin learning, bitcoin technology, bitcoin development",
-    image: "https://bitcoindevs.xyz/images/pages-thumbnails/explainers.png",
+    image: "https://bitcoindevs.xyz/images/pages-thumbnails/explainers.webp",
     alt: "Bitcoin Explainers"
 })
 

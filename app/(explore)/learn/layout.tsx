@@ -6,7 +6,7 @@ export const metadata = genPageMetadata({
         "A curated library of guides, tools, and workshops for every skill level.",
     keywords:
         "bitcoin learning, bitcoin guides, bitcoin workshops, bitcoin development, bitcoin tutorials, learn bitcoin",
-    image: "https://bitcoindevs.xyz/images/pages-thumbnails/learn.png",
+    image: "https://bitcoindevs.xyz/images/pages-thumbnails/learn.webp",
     alt: "Bitcoin learning"
 })
 

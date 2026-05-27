@@ -17,6 +17,7 @@ module.exports = () => {
             dirs: ["app", "components", "layouts", "scripts"]
         },
         images: {
+            formats: ["image/avif", "image/webp"],
             domains: ["avatars.githubusercontent.com"]
         },
         async redirects() {
