@@ -342,15 +342,5 @@
       "Needs Conceptual Review"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/35399",
-    "publishedAt": "2026-05-27T23:37:32Z",
-    "title": "[rfc] Remove good first issues label and template",
-    "labels": [
-      "Brainstorming",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
