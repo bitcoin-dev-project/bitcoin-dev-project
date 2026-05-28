@@ -28,5 +28,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2217",
+    "publishedAt": "2026-05-28T16:56:08Z",
+    "title": "KeychainTxOutIndex returns stale SPK cache entries in per-call ChangeSets",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
