@@ -170,7 +170,7 @@ function IssueCard({
                         {issue.imageUrl ? (
                             <Image
                                 src={issue?.imageUrl}
-                                alt={`${issue.repo}-repository-image`}
+                                alt={`${issue.repo} repository logo`}
                                 className="w-6 h-6 rounded-md"
                                 width={24}
                                 height={24}

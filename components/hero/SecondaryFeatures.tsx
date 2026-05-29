@@ -68,7 +68,7 @@ function FeaturesMobile() {
                                 <Image
                                     className="object-center w-full h-full"
                                     src={feature.image}
-                                    alt=""
+                                    alt={feature.imageAlt}
                                 />
                             </div>
                         </div>
@@ -141,7 +141,7 @@ function FeaturesDesktop() {
                                                 <Image
                                                     className="w-full transition-transform duration-300 ease-in-out"
                                                     src={feature.image}
-                                                    alt=""
+                                                    alt={feature.imageAlt}
                                                     sizes="52.75rem"
                                                 />
                                             </div>

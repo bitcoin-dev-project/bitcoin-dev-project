@@ -74,6 +74,7 @@ export const primaryFeatures = [
         description:
             "Breaking complex Decoding Bitcoin in a simple way. A resource rich with Visuals and animations to simplify complex technical Bitcoin concepts",
         image: screenshotTopics,
+        imageAlt: "Decoding Bitcoin topics interface screenshot",
         released: false,
         checks: [
             "Collection of visuals and animations to help you",
@@ -85,6 +86,7 @@ export const primaryFeatures = [
         description:
             "Explore curated bitcoin open source software (₿OSS) projects to get off of ₿OSS 0.",
         image: screenshotGoodFirstIssues,
+        imageAlt: "Good First Issues project issue explorer screenshot",
         released: true,
         checks: [
             "Explore curated ₿OSS projects",
@@ -100,6 +102,7 @@ export const tools: Array<IFeature> = [
             "The interactive learning experience to help you become confident in Bitcoin development.",
         summary: "",
         image: screenshotDecodingBitcoin,
+        imageAlt: "Decoding Bitcoin interactive learning interface screenshot",
         link: "https://bitcoindevs.xyz/decoding"
     },
     {
@@ -107,6 +110,7 @@ export const tools: Array<IFeature> = [
         description: "The Bitcoiner's Intro to Rust",
         summary: "",
         image: screenshotBTCdemy,
+        imageAlt: "BTCdemy Bitcoin and Rust course homepage screenshot",
         icon: logoBTCdemy,
         link: "https://btcdemy.thinkific.com/"
     },
@@ -115,6 +119,7 @@ export const tools: Array<IFeature> = [
         description: "Save bitcoin by coding through a sci-fi epic",
         summary: "",
         image: screenshotSavingSatoshi,
+        imageAlt: "Saving Satoshi coding game homepage screenshot",
         icon: logoSavingSatoshi,
         link: "https://savingsatoshi.com"
     },
@@ -123,6 +128,8 @@ export const tools: Array<IFeature> = [
         description: "Explore vetted Free Open Source Software (FOSS) projects",
         summary: "",
         image: screenshotGoodFirstIssues,
+        imageAlt:
+            "Good First Issues Bitcoin open source issues dashboard screenshot",
         icon: logoBitcoinTranscript,
         link: "https://bitcoindevs.xyz/good-first-issues"
     },
@@ -132,6 +139,7 @@ export const tools: Array<IFeature> = [
             "Earn sats by reviewing and editing AI-generated transcripts",
         summary: "",
         image: screenshotBitcoinTranscriptReview,
+        imageAlt: "Bitcoin Transcripts Review editing dashboard screenshot",
         icon: logoBitcoinTranscript,
         link: "https://review.btctranscripts.com"
     },
@@ -141,6 +149,7 @@ export const tools: Array<IFeature> = [
         description: "The technical bitcoin search engine we deserve.",
         summary: "",
         image: screenshotBitcoinSearch,
+        imageAlt: "Bitcoin Search technical search engine screenshot",
         icon: logoBitcoinSearch,
         link: "https://bitcoinsearch.xyz"
     },
@@ -150,6 +159,7 @@ export const tools: Array<IFeature> = [
             "Making it easier to engage with Delving Bitcoin, and Bitcoin and Lightning-dev mailing lists",
         summary: "",
         image: screenshotBitcoinTLDR,
+        imageAlt: "Bitcoin TLDR mailing list summary screenshot",
         icon: logoBitcoinTLDR,
         link: "https://tldr.bitcoinsearch.xyz"
     },
@@ -159,6 +169,7 @@ export const tools: Array<IFeature> = [
             "Historical archives of transcribed talks, podcasts and lectures",
         summary: "",
         image: screenshotBitcoinTranscript,
+        imageAlt: "Bitcoin Transcripts archive screenshot",
         icon: logoBitcoinTranscript,
         link: "https://btctranscripts.com"
     },
@@ -167,6 +178,7 @@ export const tools: Array<IFeature> = [
         description: "Chat with your favorite bitcoin sources and authors.",
         summary: "",
         image: screenshotChatBTC,
+        imageAlt: "ChatBTC conversational Bitcoin search interface screenshot",
         icon: logoChatBTC,
         link: "https://chat.bitcoinsearch.xyz"
     },
@@ -176,6 +188,7 @@ export const tools: Array<IFeature> = [
             "Monitor and analyze the emergent behaviors of P2P networks",
         summary: "",
         image: screenshotWarnet,
+        imageAlt: "Warnet Bitcoin network monitoring dashboard screenshot",
         link: "https://warnet.dev"
     },
     {
@@ -183,6 +196,7 @@ export const tools: Array<IFeature> = [
         description: "Instantly simulate real-world Lightning network activity",
         summary: "",
         image: screenshotSimLN,
+        imageAlt: "SimLN Lightning network simulation dashboard screenshot",
         link: "https://simln.dev"
     }
 ]
@@ -246,13 +260,7 @@ export const navigation = {
             name: "X",
             href: "https://x.com/Bitcoin_Devs",
             icon: (props: any) => (
-                <Image
-                    src={xIcon}
-                    alt="Discord"
-                    width={20}
-                    height={20}
-                    {...props}
-                />
+                <Image src={xIcon} alt="X" width={20} height={20} {...props} />
             )
         },
         {
@@ -261,7 +269,7 @@ export const navigation = {
             icon: (props: any) => (
                 <Image
                     src={githubIcon}
-                    alt="Discord"
+                    alt="GitHub"
                     width={20}
                     height={20}
                     {...props}
