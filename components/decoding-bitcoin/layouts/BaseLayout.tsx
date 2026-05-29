@@ -192,7 +192,7 @@ export default function BaseLayout({
                             <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] mb-8 sm:mb-16">
                                 <Image
                                     src={content.bannerImage}
-                                    alt="Project image"
+                                    alt={`${title} project banner`}
                                     layout="fill"
                                     objectFit="cover"
                                 />
@@ -234,7 +234,7 @@ export default function BaseLayout({
                         <div className="relative w-full h-[600px] mb-16">
                             <Image
                                 src={content.bannerImage}
-                                alt="Project image"
+                                alt={`${title} project banner`}
                                 layout="fill"
                                 objectFit="cover"
                             />

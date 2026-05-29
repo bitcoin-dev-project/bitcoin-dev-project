@@ -167,7 +167,7 @@ export function PrimaryFeatures() {
                                             <Image
                                                 className="w-full"
                                                 src={feature.image}
-                                                alt=""
+                                                alt={feature.imageAlt}
                                                 priority
                                                 sizes="(min-width: 1024px) 50rem, (min-width: 640px) 100vw, 30rem"
                                             />

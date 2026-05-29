@@ -50,6 +50,7 @@ export interface IFeature {
     summary: string
     description: string
     image: ImageProps["src"]
+    imageAlt: string
     icon?: ImageProps["src"]
     link: string
 }
