@@ -6,7 +6,6 @@ import screenshotBitcoinSearch from "@/public/images/hero/screenshots/bitcoin_se
 import screenshotBitcoinTLDR from "@/public/images/hero/screenshots/bitcoin_tldr.webp"
 import screenshotBitcoinTranscript from "@/public/images/hero/screenshots/bitcoin-transacripts.webp"
 import screenshotBitcoinTranscriptReview from "@/public/images/hero/screenshots/bitcoin-transcript-review.webp"
-import screenshotChatBTC from "@/public/images/hero/screenshots/chatBTC.webp"
 import screenshotSavingSatoshi from "@/public/images/hero/screenshots/saving_satoshi.webp"
 import screenshotDecodingBitcoin from "@/public/images/hero/screenshots/decoding-bitcoin.webp"
 import screenshotBTCdemy from "@/public/images/hero/screenshots/btc-demy.webp"
@@ -16,7 +15,7 @@ import logoBitcoinSearch from "@/public/images/tools/bitcoin-search.webp"
 import logoBitcoinTLDR from "@/public/images/tools/bitcoin-tldr.webp"
 import logoBitcoinTranscript from "@/public/images/tools/bitcoin-transcripts.webp"
 import logoTrRev from "@/public/images/tools/bitcoin-transcripts-review.webp"
-import logoChatBTC from "@/public/images/tools/chat-btc.webp"
+
 import logoSavingSatoshi from "@/public/images/tools/saving-satoshi.webp"
 import logoBTCdemy from "@/public/images/tools/btc-demy.webp"
 import discordIcon from "@/public/images/hero/socials/discord.svg"
@@ -174,15 +173,6 @@ export const tools: Array<IFeature> = [
         link: "https://btctranscripts.com"
     },
     {
-        name: "ChatBTC",
-        description: "Chat with your favorite bitcoin sources and authors.",
-        summary: "",
-        image: screenshotChatBTC,
-        imageAlt: "ChatBTC conversational Bitcoin search interface screenshot",
-        icon: logoChatBTC,
-        link: "https://chat.bitcoinsearch.xyz"
-    },
-    {
         name: "Warnet",
         description:
             "Monitor and analyze the emergent behaviors of P2P networks",
@@ -224,11 +214,6 @@ export const values = [
 
 export const hero = [
     [
-        {
-            name: "ChatBTC",
-            logo: logoChatBTC,
-            url: "https://chat.bitcoinsearch.xyz"
-        },
         {
             name: "Bitcoin Search",
             logo: logoBitcoinSearch,
