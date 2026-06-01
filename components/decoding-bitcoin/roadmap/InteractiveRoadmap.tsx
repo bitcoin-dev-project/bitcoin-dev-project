@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from "framer-motion"
+import * as m from "framer-motion/m"
 import TransactionCreation from "../../../src/components/TransactionCreation"
 import OpCodeExplorer from "../markdown-ui/opcode-explorer"
 
@@ -46,7 +46,7 @@ export default function InteractiveRoadmap() {
                     />
 
                     {/* Floating Bitcoin image at position 129, 442 */}
-                    <motion.img
+                    <m.img
                         src="/images/decoding-bitcoin-img.webp"
                         alt="Floating Bitcoin"
                         className="absolute pointer-events-none"
@@ -70,7 +70,7 @@ export default function InteractiveRoadmap() {
                     />
 
                     {/* Transaction roadmap image at position 1105.8, 1920.31 */}
-                    <motion.img
+                    <m.img
                         src="/images/tx-roadmap.webp"
                         alt="Transaction Roadmap"
                         className="absolute pointer-events-none"
@@ -107,7 +107,7 @@ export default function InteractiveRoadmap() {
                     />
 
                     {/* Curve Taproot image at position 500.87, 4891.53 */}
-                    <motion.img
+                    <m.img
                         src="/images/curve-taproot.webp"
                         alt="Curve Taproot"
                         className="absolute pointer-events-none"

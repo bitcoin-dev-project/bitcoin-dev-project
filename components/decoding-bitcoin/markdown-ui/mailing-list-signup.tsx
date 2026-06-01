@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 import { FaEnvelope, FaCheckCircle } from "react-icons/fa"
 
 const MailingListSignup: React.FC = () => {
@@ -63,7 +64,7 @@ const MailingListSignup: React.FC = () => {
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className="flex items-center space-x-4 z-10 mb-5">
-                <motion.div
+                <m.div
                     animate={{
                         y: isHovered ? -5 : 0,
                         rotate: isHovered ? -10 : 0
@@ -74,7 +75,7 @@ const MailingListSignup: React.FC = () => {
                         size={32}
                         className="text-orange-500 dark:text-orange-400"
                     />
-                </motion.div>
+                </m.div>
                 <div>
                     <h3 className="text-lg font-bold">TLDR Newsletter</h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -107,7 +108,7 @@ const MailingListSignup: React.FC = () => {
                         className="flex-grow px-3 py-2 text-sm rounded-md sm:rounded-r-none mb-2 sm:mb-0 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-vscode-navigation-dark text-gray-800 dark:text-white border border-gray-300 dark:border-gray-600"
                         required
                     />
-                    <motion.button
+                    <m.button
                         type="submit"
                         className="px-4 py-2 bg-orange-500 text-white text-sm font-bold rounded-md sm:rounded-l-none focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-orange-600 transition-colors duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -115,7 +116,7 @@ const MailingListSignup: React.FC = () => {
                         disabled={loading}
                     >
                         {loading ? "Subscribing..." : "Subscribe"}
-                    </motion.button>
+                    </m.button>
                 </div>
             </form>
 
@@ -126,7 +127,7 @@ const MailingListSignup: React.FC = () => {
 
             <AnimatePresence>
                 {(mailchimpResponse || error) && (
-                    <motion.div
+                    <m.div
                         className="mt-4 text-xs sm:text-sm font-medium"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -138,11 +139,11 @@ const MailingListSignup: React.FC = () => {
                             </p>
                         )}
                         {error && <p className="text-red-500">{error}</p>}
-                    </motion.div>
+                    </m.div>
                 )}
             </AnimatePresence>
 
-            <motion.div
+            <m.div
                 className="absolute inset-0 bg-orange-100 dark:bg-orange-900 opacity-0"
                 initial={{ scale: 0, x: "100%", y: "-100%" }}
                 animate={{

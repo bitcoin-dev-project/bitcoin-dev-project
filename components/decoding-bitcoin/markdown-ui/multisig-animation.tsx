@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect, useRef } from "react"
-import { motion } from "framer-motion"
+import * as m from "framer-motion/m"
 import {
     RefreshCw,
     Maximize2,
@@ -239,14 +239,14 @@ const ConnectingLine = ({
         }`}
     >
         {isAnimating && (
-            <motion.div
+            <m.div
                 className="absolute -left-2 top-0"
                 initial={{ y: -20 }}
                 animate={{ y: 148 }}
                 transition={{ duration: 1 }}
             >
                 <Key className="text-yellow-500" size={20} />
-            </motion.div>
+            </m.div>
         )}
     </div>
 )
@@ -292,7 +292,7 @@ const MultisigWallet = ({
         </p>
         <div className="flex justify-around mb-4">
             {signatures.map((signed, index) => (
-                <motion.div
+                <m.div
                     key={index}
                     initial={false}
                     style={{
@@ -316,7 +316,7 @@ const MultisigWallet = ({
                 >
                     {signed && <Key className="text-white" size={12} />}
                     {animatingKey === index && (
-                        <motion.div
+                        <m.div
                             className="w-full h-full rounded-full bg-yellow-500 flex items-center justify-center"
                             animate={{ opacity: [0, 1] }}
                             transition={{
@@ -326,9 +326,9 @@ const MultisigWallet = ({
                             }}
                         >
                             <Key className="text-white" size={12} />
-                        </motion.div>
+                        </m.div>
                     )}
-                </motion.div>
+                </m.div>
             ))}
         </div>
     </div>

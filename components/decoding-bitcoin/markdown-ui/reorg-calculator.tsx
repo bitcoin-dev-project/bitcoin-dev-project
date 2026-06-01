@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 import {
     Percent,
     Hash,
@@ -133,13 +134,13 @@ const ReorgCalculator = () => {
     }
 
     return (
-        <motion.div
+        <m.div
             className="w-full max-w-2xl mx-auto py-1"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <motion.div
+            <m.div
                 className={`rounded-lg shadow-md overflow-hidden bg-vscode-container-dark ${colors.accent} transition-colors duration-500`}
             >
                 <div className="bg-vscode-titleBar-dark p-4 flex items-center justify-between">
@@ -169,7 +170,7 @@ const ReorgCalculator = () => {
 
                 <AnimatePresence>
                     {showFormula && (
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
@@ -198,13 +199,13 @@ const ReorgCalculator = () => {
                                     proportion
                                 </p>
                             </div>
-                        </motion.div>
+                        </m.div>
                     )}
                 </AnimatePresence>
 
                 <AnimatePresence>
                     {showInfo && (
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
@@ -244,7 +245,7 @@ const ReorgCalculator = () => {
                                 which assumes average block timing to match
                                 Satoshi's original probability model.
                             </p>
-                        </motion.div>
+                        </m.div>
                     )}
                 </AnimatePresence>
 
@@ -339,7 +340,7 @@ const ReorgCalculator = () => {
                         <div
                             className={`relative h-2 ${colors.input} rounded-full mb-3`}
                         >
-                            <motion.div
+                            <m.div
                                 className={`absolute h-full rounded-full ${colors.indicator}`}
                                 initial={{ width: "0%" }}
                                 animate={{ width: `${probability * 100}%` }}
@@ -418,8 +419,8 @@ const ReorgCalculator = () => {
                         </div>
                     </div>
                 </div>
-            </motion.div>
-        </motion.div>
+            </m.div>
+        </m.div>
     )
 }
 

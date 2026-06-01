@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 import {
     ArrowRight,
     CheckCircle,
@@ -120,7 +121,7 @@ const Quiz = ({
                     <div className="space-y-2 mb-4">
                         {questions[currentQuestion].options.map(
                             (option, index) => (
-                                <motion.button
+                                <m.button
                                     key={index}
                                     onClick={() => handleAnswerClick(option)}
                                     disabled={showExplanation}
@@ -148,7 +149,7 @@ const Quiz = ({
                                         damping: 17
                                     }}
                                 >
-                                    <motion.span
+                                    <m.span
                                         className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs
                               border-2 ${
                                   selectedAnswer === option && !showExplanation
@@ -172,14 +173,14 @@ const Quiz = ({
                               }`}
                                     >
                                         {index + 1}
-                                    </motion.span>
+                                    </m.span>
                                     <span className="flex-grow">{option}</span>
                                     <AnimatePresence>
                                         {showExplanation &&
                                             option ===
                                                 questions[currentQuestion]
                                                     .correctAnswer && (
-                                                <motion.div
+                                                <m.div
                                                     initial={{
                                                         opacity: 0,
                                                         scale: 0
@@ -197,10 +198,10 @@ const Quiz = ({
                                                         className="text-vscode-success-light dark:text-vscode-success-dark"
                                                         size={20}
                                                     />
-                                                </motion.div>
+                                                </m.div>
                                             )}
                                     </AnimatePresence>
-                                </motion.button>
+                                </m.button>
                             )
                         )}
                     </div>
@@ -232,7 +233,7 @@ const Quiz = ({
 
                     <AnimatePresence>
                         {showExplanation && (
-                            <motion.div
+                            <m.div
                                 className={`mt-4 p-3 rounded-lg text-sm ${
                                     isCorrect
                                         ? "bg-vscode-success-light dark:bg-vscode-success-dark text-vscode-text-light dark:text-vscode-text-dark"
@@ -260,12 +261,12 @@ const Quiz = ({
                                     </span>
                                 </div>
                                 <p>{questions[currentQuestion].explanation}</p>
-                            </motion.div>
+                            </m.div>
                         )}
                     </AnimatePresence>
                 </>
             ) : (
-                <motion.div
+                <m.div
                     className="mt-4 p-5 rounded-lg bg-vscode-background-light dark:bg-vscode-background-dark text-vscode-text-light dark:text-vscode-text-dark"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -300,7 +301,7 @@ const Quiz = ({
                             RESET QUIZ
                         </Button>
                     </div>
-                </motion.div>
+                </m.div>
             )}
         </div>
     )

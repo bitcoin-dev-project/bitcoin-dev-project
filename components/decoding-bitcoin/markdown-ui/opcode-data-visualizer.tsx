@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react"
-import { motion } from "framer-motion"
+import * as m from "framer-motion/m"
 import { OpcodeSVG } from "@/public/opCodeSVG"
 
 interface OpcodeInfo {
@@ -130,7 +130,7 @@ const OpCodeInfo: React.FC<OpCodeInfoProps> = ({
     funFact
 }) => {
     return (
-        <motion.div
+        <m.div
             className="max-w-3xl mx-auto bg-vscode-container-light dark:bg-vscode-container-dark rounded-xl overflow-hidden shadow-lg border border-vscode-lineNumber-light dark:border-vscode-lineNumber-dark"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
@@ -171,6 +171,6 @@ const OpCodeInfo: React.FC<OpCodeInfoProps> = ({
                     </div>
                 )}
             </div>
-        </motion.div>
+        </m.div>
     )
 }

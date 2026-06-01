@@ -4,7 +4,8 @@ import React, { useState, useEffect, useCallback } from "react"
 import * as bitcoin from "bitcoinjs-lib"
 import bs58 from "bs58"
 import { ArrowsRightLeftIcon } from "@heroicons/react/24/solid"
-import { AnimatePresence, motion } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 
 interface P2SHEncoderProps {
     initialScriptHash?: string
@@ -133,7 +134,7 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                     />
                                     <AnimatePresence>
                                         {isAnimating && (
-                                            <motion.button
+                                            <m.button
                                                 key="animating-button"
                                                 onClick={
                                                     handleGenerateRandomScriptHash
@@ -143,10 +144,10 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                                 exit={{ opacity: 1 }}
                                             >
                                                 <ArrowsRightLeftIcon className="h-5 w-5" />
-                                            </motion.button>
+                                            </m.button>
                                         )}
                                         {!isAnimating && (
-                                            <motion.button
+                                            <m.button
                                                 key="static-button"
                                                 onClick={
                                                     handleGenerateRandomScriptHash
@@ -155,7 +156,7 @@ const P2SHEncoder: React.FC<P2SHEncoderProps> = ({
                                                 initial={{ opacity: 1 }}
                                             >
                                                 <ArrowsRightLeftIcon className="h-5 w-5" />
-                                            </motion.button>
+                                            </m.button>
                                         )}
                                     </AnimatePresence>
                                 </div>

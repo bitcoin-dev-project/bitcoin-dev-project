@@ -1,4 +1,3 @@
-import { number } from "bitcoinjs-lib/src/script"
 import clsx from "clsx"
 import Image from "next/image"
 import React, { use } from "react"

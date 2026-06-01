@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect, useCallback, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 
 interface Field {
     name: string
@@ -100,7 +101,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
     }
 
     return (
-        <motion.div
+        <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -120,7 +121,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                     </div>
                 </div>
                 <div className="w-full bg-vscode-lineNumber-light dark:bg-vscode-lineNumber-dark h-2 rounded-full">
-                    <motion.div
+                    <m.div
                         className="bg-orange-500 h-2 rounded-full"
                         initial={{ width: "0%" }}
                         animate={{
@@ -139,7 +140,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
             <div className="p-6 bg-vscode-background-light dark:bg-vscode-background-dark">
                 <AnimatePresence mode="wait">
                     {gameState === GameState.Explanation && (
-                        <motion.div
+                        <m.div
                             key="explanation"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -149,18 +150,18 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                                 Welcome to the {title}! Your task is to identify
                                 different parts of the hex string.
                             </p>
-                            <motion.button
+                            <m.button
                                 onClick={startGame}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-600"
                             >
                                 Start Challenge
-                            </motion.button>
-                        </motion.div>
+                            </m.button>
+                        </m.div>
                     )}
                     {gameState === GameState.Playing && (
-                        <motion.div
+                        <m.div
                             key="question"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -173,7 +174,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                                 </span>{" "}
                                 in the hex string.
                             </p>
-                            <motion.div
+                            <m.div
                                 className="bg-vscode-input-light dark:bg-vscode-input-dark p-4 rounded-md overflow-x-auto mb-4"
                                 animate={{
                                     backgroundColor: isIncorrect
@@ -184,7 +185,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                             >
                                 <div className="hex-container font-mono text-sm">
                                     {hexString.split("").map((char, index) => (
-                                        <motion.span
+                                        <m.span
                                             key={index}
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
@@ -203,14 +204,14 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                                             onClick={() => handleClick(index)}
                                         >
                                             {char}
-                                        </motion.span>
+                                        </m.span>
                                     ))}
                                 </div>
-                            </motion.div>
-                        </motion.div>
+                            </m.div>
+                        </m.div>
                     )}
                     {gameState === GameState.ShowingResult && (
-                        <motion.div
+                        <m.div
                             key="result"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -225,15 +226,15 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                             <p className="text-xl font-semibold text-orange-500 mb-6">
                                 Final Score: {score}/{fields.length}
                             </p>
-                            <motion.button
+                            <m.button
                                 onClick={resetGame}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-600"
                             >
                                 Play Again
-                            </motion.button>
-                        </motion.div>
+                            </m.button>
+                        </m.div>
                     )}
                 </AnimatePresence>
             </div>
@@ -253,7 +254,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                         >
                             Hint
                         </button>
-                        <motion.button
+                        <m.button
                             onClick={nextQuestion}
                             disabled={!isAnswered}
                             whileHover={{ scale: isAnswered ? 1.05 : 1 }}
@@ -267,7 +268,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                             {currentStep < fields.length - 1
                                 ? "Next"
                                 : "Show Result"}
-                        </motion.button>
+                        </m.button>
                     </>
                 )}
             </div>
@@ -277,7 +278,7 @@ const HexTransactionHighlighter: React.FC<HexHighlighterProps> = ({
                     white-space: pre-wrap;
                 }
             `}</style>
-        </motion.div>
+        </m.div>
     )
 }
 
