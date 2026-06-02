@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from "react"
 import { Sandpack } from "@codesandbox/sandpack-react"
-import { motion, AnimatePresence } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 import { CodeIcon, PencilIcon, ArrowLeftIcon } from "lucide-react"
 import { gruvboxDark } from "@codesandbox/sandpack-themes"
 
@@ -56,7 +57,7 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
     }
 
     return (
-        <motion.div
+        <m.div
             className="max-w-5xl mx-auto py-4 full-width"
             variants={containerVariants}
             initial="hidden"
@@ -69,7 +70,7 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                         P2PK ScriptPubKey Decoder Exercise
                     </div>
                     {selectedLanguage && (
-                        <motion.button
+                        <m.button
                             onClick={() => setSelectedLanguage(null)}
                             className="text-sm bg-vscode-button-light dark:bg-vscode-button-dark px-3 py-1 rounded-md hover:bg-orange-500 hover:text-white transition-colors duration-200 flex items-center"
                             whileHover={{ scale: 1.05 }}
@@ -77,7 +78,7 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                         >
                             <ArrowLeftIcon className="w-4 h-4 mr-1" />
                             Change Language
-                        </motion.button>
+                        </m.button>
                     )}
                 </div>
 
@@ -85,7 +86,7 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                 <div className="p-4">
                     <AnimatePresence mode="wait">
                         {!selectedLanguage ? (
-                            <motion.div
+                            <m.div
                                 key="language-selection"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -116,7 +117,7 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                                     />
                                 </div>
                                 <div className="absolute inset-0 z-10 flex flex-col justify-center items-center bg-[#FFFFFF66] dark:bg-[#1E1E1E66] text-black dark:text-white backdrop-blur-[1px]">
-                                    <motion.div
+                                    <m.div
                                         initial={{ opacity: 0, y: -20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{
@@ -132,11 +133,11 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                                             Choose your preferred language to
                                             begin
                                         </p>
-                                    </motion.div>
+                                    </m.div>
                                     <div className="flex justify-center space-x-4">
                                         {["javascript", "python"].map(
                                             (lang) => (
-                                                <motion.button
+                                                <m.button
                                                     key={lang}
                                                     onClick={() =>
                                                         handleLanguageSelect(
@@ -156,14 +157,14 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                                                     <span className="capitalize">
                                                         {lang}
                                                     </span>
-                                                </motion.button>
+                                                </m.button>
                                             )
                                         )}
                                     </div>
                                 </div>
-                            </motion.div>
+                            </m.div>
                         ) : (
-                            <motion.div
+                            <m.div
                                 key="editor"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -206,12 +207,12 @@ const ExerciseSelector: React.FC<ExerciseSelectorProps> = ({
                                         </div>
                                     )}
                                 </div>
-                            </motion.div>
+                            </m.div>
                         )}
                     </AnimatePresence>
                 </div>
             </div>
-        </motion.div>
+        </m.div>
     )
 }
 

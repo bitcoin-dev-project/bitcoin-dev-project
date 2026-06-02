@@ -12,7 +12,7 @@ import {
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer"
 import { allTopics } from "@/.contentlayer/generated"
 import { FaDiscord } from "react-icons/fa"
-import { motion } from "framer-motion"
+import * as m from "framer-motion/m"
 
 import { Button } from "./Button"
 import blurOrangeImage from "@/public/images/topics-hero/blur-orange.webp"
@@ -227,7 +227,7 @@ const ContinueReadingComp: React.FC<{
                         </div>
 
                         {/* Improved Discord card */}
-                        <motion.a
+                        <m.a
                             href="https://discord.gg/EAy9XMufbY"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -239,7 +239,7 @@ const ContinueReadingComp: React.FC<{
                             <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-xl opacity-10 blur-lg"></div>
                             <div className="relative bg-white/45 dark:bg-gray-800/45 rounded-xl p-6 transition-all duration-300 group-hover:bg-indigo-50/90 dark:group-hover:bg-indigo-900/30">
                                 <div className="flex items-center space-x-3 mb-3">
-                                    <motion.div
+                                    <m.div
                                         animate={{
                                             y: isHovered ? -5 : 0,
                                             rotate: isHovered ? -10 : 0
@@ -254,7 +254,7 @@ const ContinueReadingComp: React.FC<{
                                             size={30}
                                             className="text-indigo-500 dark:text-indigo-400"
                                         />
-                                    </motion.div>
+                                    </m.div>
                                     <h2 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                                         Join our Community
                                     </h2>
@@ -263,7 +263,7 @@ const ContinueReadingComp: React.FC<{
                                     Connect with fellow Bitcoin enthusiasts, get
                                     support, and stay updated.
                                 </p>
-                                <motion.div
+                                <m.div
                                     className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                     animate={{ x: isHovered ? [0, 10, 0] : 0 }}
                                     transition={{
@@ -273,9 +273,9 @@ const ContinueReadingComp: React.FC<{
                                     }}
                                 >
                                     <ArrowRightIcon className="h-6 w-6 text-indigo-500 dark:text-indigo-400" />
-                                </motion.div>
+                                </m.div>
                             </div>
-                        </motion.a>
+                        </m.a>
                     </div>
                 </div>
             </div>

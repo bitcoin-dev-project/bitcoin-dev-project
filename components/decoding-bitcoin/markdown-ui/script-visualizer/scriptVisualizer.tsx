@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback, useMemo } from "react"
 import { PlayIcon, PauseIcon, FastForwardIcon, RewindIcon } from "lucide-react"
-import { motion } from "framer-motion"
+import * as m from "framer-motion/m"
 import {
     ScriptExecutionConfig,
     scriptExecutionConfigs
@@ -298,7 +298,7 @@ export default function ScriptStackVisualizer({
                                         ></object>
                                     </div>
                                     <div className="border border-gray-300 dark:border-vscode-input-dark p-3 rounded-lg bg-gray-100 dark:bg-vscode-background-dark flex items-center justify-center">
-                                        <motion.div
+                                        <m.div
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.9 }}
                                         >
@@ -312,8 +312,8 @@ export default function ScriptStackVisualizer({
                                                     handleStepChange("prev")
                                                 }
                                             />
-                                        </motion.div>
-                                        <motion.div
+                                        </m.div>
+                                        <m.div
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.9 }}
                                         >
@@ -328,8 +328,8 @@ export default function ScriptStackVisualizer({
                                                     onClick={handlePlay}
                                                 />
                                             )}
-                                        </motion.div>
-                                        <motion.div
+                                        </m.div>
+                                        <m.div
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.9 }}
                                         >
@@ -344,9 +344,9 @@ export default function ScriptStackVisualizer({
                                                     handleStepChange("next")
                                                 }
                                             />
-                                        </motion.div>
+                                        </m.div>
                                         <div className="flex-grow bg-gray-300 dark:bg-vscode-input-dark h-2 rounded-full">
-                                            <motion.div
+                                            <m.div
                                                 className="bg-orange-500 h-2 rounded-full"
                                                 initial={{ width: "0%" }}
                                                 animate={{

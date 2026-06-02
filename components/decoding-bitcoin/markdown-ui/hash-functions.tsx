@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react"
 import * as bitcoin from "bitcoinjs-lib"
 import clsx from "clsx"
 import { Code, Hash, ArrowRight, Info } from "lucide-react"
-import { motion } from "framer-motion"
+import * as m from "framer-motion/m"
 
 interface HashFunction {
     id: string
@@ -172,7 +172,7 @@ const ExampleInputs = ({ examples, onSelectExample }: ExampleInputsProps) => (
         </div>
         <div className="flex flex-col gap-3">
             {examples.map((example, i) => (
-                <motion.div
+                <m.div
                     key={i}
                     className="bg-white dark:bg-vscode-input-dark p-3 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark cursor-pointer hover:border-orange-500 transition-all hover:shadow-md"
                     onClick={() => onSelectExample(example.value)}
@@ -185,7 +185,7 @@ const ExampleInputs = ({ examples, onSelectExample }: ExampleInputsProps) => (
                     <p className="text-xs text-vscode-text-light dark:text-vscode-text-dark opacity-80 mt-2">
                         {example.description}
                     </p>
-                </motion.div>
+                </m.div>
             ))}
         </div>
     </div>
@@ -274,7 +274,7 @@ const useHashComputation = (input: string, selectedHash: string) => {
 const ResultDisplay = ({ result }: { result: string }) => {
     if (!result) return null
     return (
-        <motion.div
+        <m.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800 shadow-sm"
@@ -303,14 +303,14 @@ const ResultDisplay = ({ result }: { result: string }) => {
             <div className="font-mono text-sm break-all bg-white dark:bg-black/50 p-3 rounded border border-green-200 dark:border-green-800 text-vscode-text-light dark:text-vscode-text-dark">
                 {result}
             </div>
-        </motion.div>
+        </m.div>
     )
 }
 
 const ErrorDisplay = ({ error }: { error: string }) => {
     if (!error) return null
     return (
-        <motion.div
+        <m.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg shadow-sm"
@@ -336,7 +336,7 @@ const ErrorDisplay = ({ error }: { error: string }) => {
                     {error}
                 </div>
             </div>
-        </motion.div>
+        </m.div>
     )
 }
 
@@ -396,7 +396,7 @@ const HashFunctions = () => {
 
                 {/* Hash Function Info (Collapsible) */}
                 {showInfo && (
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
@@ -416,7 +416,7 @@ const HashFunctions = () => {
                                 <li key={i}>{usage}</li>
                             ))}
                         </ul>
-                    </motion.div>
+                    </m.div>
                 )}
 
                 {/* Input Section */}

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import * as m from "framer-motion/m"
 
 interface CircularProgressProps {
     progress: number
@@ -35,7 +35,7 @@ export const CircularProgress = ({
                     stroke={secondaryColor}
                     strokeWidth={strokeWidth}
                 />
-                <motion.circle
+                <m.circle
                     cx={center}
                     cy={center}
                     r={radius}

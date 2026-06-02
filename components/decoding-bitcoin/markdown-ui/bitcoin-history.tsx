@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import { motion, useAnimation } from "framer-motion"
+import * as m from "framer-motion/m"
+import { useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import Image from "next/image"
 import { ExternalLinkIcon } from "lucide-react"
@@ -58,7 +59,7 @@ export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
 }) => {
     return (
         <div className="container mx-auto px-4 py-8 bg-vscode-background-light dark:bg-vscode-background-dark text-vscode-text-light dark:text-vscode-text-dark">
-            <motion.div
+            <m.div
                 className="relative mb-24 text-center"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -93,7 +94,7 @@ export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
                         height={100}
                     />
                 </div>
-            </motion.div>
+            </m.div>
             <div className="relative space-y-12 md:space-y-16">
                 {historyEvents.map((event, index) => (
                     <React.Fragment key={event.id}>
@@ -105,7 +106,7 @@ export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
                 ))}
             </div>
 
-            <motion.div
+            <m.div
                 className="mt-32 text-center opacity-70 text-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 0.7, y: 0 }}
@@ -121,7 +122,7 @@ export const BitcoinHistory: React.FC<BitcoinHistoryProps> = ({
                     0xb10c
                     <ExternalLinkIcon size={14} className="ml-1" />
                 </a>
-            </motion.div>
+            </m.div>
         </div>
     )
 }
@@ -220,7 +221,7 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
             case "image":
             case "gif":
                 return (
-                    <motion.div
+                    <m.div
                         initial="hidden"
                         animate={imageControls}
                         variants={imageVariants}
@@ -232,11 +233,11 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
                             height={200}
                             className="rounded-lg mx-auto md:mx-0"
                         />
-                    </motion.div>
+                    </m.div>
                 )
             case "video":
                 return (
-                    <motion.div
+                    <m.div
                         initial="hidden"
                         animate={imageControls}
                         variants={imageVariants}
@@ -247,11 +248,11 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
                             className="rounded-lg shadow-md mx-auto md:mx-0"
                             style={{ maxWidth: "100%", height: "auto" }}
                         />
-                    </motion.div>
+                    </m.div>
                 )
             case "svg":
                 return (
-                    <motion.div
+                    <m.div
                         initial="hidden"
                         animate={imageControls}
                         variants={imageVariants}
@@ -264,7 +265,7 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
                             width={300}
                             height={200}
                         />
-                    </motion.div>
+                    </m.div>
                 )
             default:
                 return null
@@ -272,18 +273,18 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
     }
 
     return (
-        <motion.div
+        <m.div
             ref={ref}
             className={`flex flex-col md:flex-row items-start mb-8 md:mb-12 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
             initial="hidden"
             animate={controls}
             variants={containerVariants}
         >
-            <motion.div
+            <m.div
                 className={`w-full md:w-7/12 ${index % 2 === 0 ? "md:text-left md:pr-8" : "md:text-right md:pl-8"} mb-6 md:mb-0`}
                 variants={childVariants}
             >
-                <motion.div
+                <m.div
                     className={`flex flex-col ${index % 2 === 0 ? "items-start" : "items-end"} mb-2`}
                     variants={childVariants}
                 >
@@ -296,23 +297,23 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
                         </span>
                     </div>
                     <h3 className="text-2xl font-bold mb-2">{event.title}</h3>
-                </motion.div>
+                </m.div>
                 {event.paragraphs.map((paragraph, pIndex) => (
-                    <motion.p
+                    <m.p
                         key={pIndex}
                         className={`mt-3 font-extralight ${index % 2 === 0 ? "text-left" : "text-right"}`}
                         variants={childVariants}
                     >
                         {paragraph}
-                    </motion.p>
+                    </m.p>
                 ))}
                 {event.links && event.links.length > 0 && (
-                    <motion.div
+                    <m.div
                         className={`mt-4 flex flex-wrap ${index % 2 === 0 ? "justify-start" : "justify-end"} gap-2`}
                         variants={childVariants}
                     >
                         {event.links.map((link, lIndex) => (
-                            <motion.button
+                            <m.button
                                 key={lIndex}
                                 onClick={() =>
                                     window.open(
@@ -333,20 +334,20 @@ const EventItem: React.FC<{ event: HistoryEvent; index: number }> = ({
                             >
                                 {link.label}
                                 <ExternalLinkIcon size={12} className="ml-1" />
-                            </motion.button>
+                            </m.button>
                         ))}
-                    </motion.div>
+                    </m.div>
                 )}
-            </motion.div>
+            </m.div>
             {event.media && (
-                <motion.div
+                <m.div
                     className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pl-8" : "md:pr-8"}`}
                     variants={childVariants}
                 >
                     {renderMedia()}
-                </motion.div>
+                </m.div>
             )}
-        </motion.div>
+        </m.div>
     )
 }
 
@@ -365,7 +366,7 @@ const ConnectingLine: React.FC<{ index: number }> = ({ index }) => {
     }, [controls, inView])
 
     return (
-        <motion.div
+        <m.div
             className="w-full my-8 md:my-12 hidden md:block"
             ref={ref}
             initial="hidden"
@@ -393,6 +394,6 @@ const ConnectingLine: React.FC<{ index: number }> = ({ index }) => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
-        </motion.div>
+        </m.div>
     )
 }

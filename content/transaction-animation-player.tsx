@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react"
 import { PlayIcon, PauseIcon, FastForwardIcon, RewindIcon } from "lucide-react"
-import { motion } from "framer-motion"
+import * as m from "framer-motion/m"
 
 interface SvgatorPlayer {
     ready: (callback: () => void) => void
@@ -99,7 +99,7 @@ export default function TransactionAnimationPlayer({
             {/* Control Panel */}
             <div className="border border-gray-300 dark:border-vscode-input-dark p-3 rounded-lg bg-gray-100 dark:bg-vscode-background-dark flex items-center justify-center">
                 <div className="flex items-center gap-4">
-                    <motion.div
+                    <m.div
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
@@ -111,14 +111,14 @@ export default function TransactionAnimationPlayer({
                             } transition-colors duration-300`}
                             onClick={() => handleStepChange("prev")}
                         />
-                    </motion.div>
+                    </m.div>
 
                     {/* Step indicator */}
                     <span className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark min-w-[80px] text-center">
                         {currentSvgIndex + 1} of {svgPaths.length}
                     </span>
 
-                    <motion.div
+                    <m.div
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
@@ -130,11 +130,11 @@ export default function TransactionAnimationPlayer({
                             } transition-colors duration-300`}
                             onClick={() => handleStepChange("next")}
                         />
-                    </motion.div>
+                    </m.div>
                 </div>
 
                 <div className="flex-grow ml-4 bg-gray-300 dark:bg-vscode-input-dark h-2 rounded-full">
-                    <motion.div
+                    <m.div
                         className="bg-orange-500 h-2 rounded-full"
                         initial={{ width: "0%" }}
                         animate={{

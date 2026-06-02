@@ -10,9 +10,25 @@ import {
 } from "pliny/utils/contentlayer"
 import { Topic, allTopics } from "@/.contentlayer/generated"
 import { useState, useEffect, useCallback, useMemo } from "react"
-import { motion } from "framer-motion"
-import { FaChevronRight, FaChevronDown, FaCheck } from "react-icons/fa"
-import * as Icons from "react-icons/fa"
+import * as m from "framer-motion/m"
+import {
+    FaCheck,
+    FaChevronDown,
+    FaChevronRight,
+    FaClipboardList,
+    FaDiscord,
+    FaFileCode,
+    FaFileSignature,
+    FaHandshake,
+    FaHashtag,
+    FaHistory,
+    FaKey,
+    FaLightbulb,
+    FaQuestionCircle,
+    FaRoute,
+    FaTools,
+    FaUsers
+} from "react-icons/fa"
 import { ArrowRight } from "lucide-react"
 
 interface NavigationLink {
@@ -42,6 +58,20 @@ const categoryOrder = [
     "References",
     "Contribution"
 ]
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+    FaClipboardList,
+    FaDiscord,
+    FaFileCode,
+    FaFileSignature,
+    FaHandshake,
+    FaHashtag,
+    FaHistory,
+    FaKey,
+    FaRoute,
+    FaTools,
+    FaUsers
+}
 
 export function Navigation({
     className,
@@ -228,8 +258,7 @@ export function Navigation({
     }, [pathname, navigation])
 
     const getIcon = useCallback((iconName: string) => {
-        const IconComponent =
-            Icons[iconName as keyof typeof Icons] || Icons.FaQuestionCircle
+        const IconComponent = iconMap[iconName] ?? FaQuestionCircle
         return <IconComponent className="inline-block mr-2 text-current" />
     }, [])
 
@@ -275,7 +304,7 @@ export function Navigation({
                 >
                     <div className="flex items-center flex-1 min-w-0">
                         <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-orange-500/20 mr-3">
-                            <Icons.FaUsers className="w-4 h-4 text-orange-500" />
+                            <FaUsers className="w-4 h-4 text-orange-500" />
                         </div>
                         <div>
                             <h3 className="text-sm font-semibold text-orange-500 dark:text-orange-400">
@@ -305,7 +334,7 @@ export function Navigation({
                 >
                     <div className="flex items-center flex-1 min-w-0">
                         <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-purple-500/20 mr-3">
-                            <Icons.FaLightbulb className="w-4 h-4 text-purple-500" />
+                            <FaLightbulb className="w-4 h-4 text-purple-500" />
                         </div>
                         <div>
                             <h3 className="text-sm font-semibold text-purple-500 dark:text-purple-400">
@@ -540,7 +569,7 @@ const EmailSubscription = () => {
                     className="flex-grow px-3 py-1 text-sm bg-transparent border-b border-gray-300 focus:border-orange-500 focus:outline-none dark:border-gray-700 dark:text-gray-300"
                     required
                 />
-                <motion.button
+                <m.button
                     type="submit"
                     className="ml-2 px-3 py-1 text-sm font-medium text-orange-500 hover:text-orange-600 focus:outline-none"
                     whileHover={{ scale: 1.05 }}
@@ -548,7 +577,7 @@ const EmailSubscription = () => {
                     disabled={loading}
                 >
                     {loading ? "Subscribing..." : "Subscribe"}
-                </motion.button>
+                </m.button>
             </form>
             {mailchimpResponse && (
                 <p className="mt-2 text-sm text-green-500">

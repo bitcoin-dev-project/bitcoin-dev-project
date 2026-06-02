@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import * as m from "framer-motion/m"
 import React from "react"
 
 interface OpcodeSVGProps extends React.ComponentPropsWithoutRef<"svg"> {
@@ -98,7 +98,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 stroke="#f1760f"
             />
 
-            <motion.rect
+            <m.rect
                 id="op_push_bytes"
                 x="106.5"
                 y="463.5"
@@ -120,7 +120,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 fill="black"
             />
 
-            <motion.rect
+            <m.rect
                 id="op_push_data_1"
                 x="248.5"
                 y="463.5"
@@ -142,7 +142,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 fill="black"
             />
 
-            <motion.rect
+            <m.rect
                 id="op_push_data_2"
                 x="415.5"
                 y="463.5"
@@ -163,7 +163,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 fill="black"
             />
 
-            <motion.rect
+            <m.rect
                 id="op_push_data_4"
                 x="648.5"
                 y="463.5"
@@ -184,7 +184,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 fill="black"
             />
 
-            <motion.line
+            <m.line
                 x1="232"
                 y1="404.5"
                 x2="89"
@@ -192,7 +192,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 stroke="#fbd28c"
                 strokeWidth="3"
             />
-            <motion.line
+            <m.line
                 x1="382"
                 y1="404.5"
                 x2="233"
@@ -200,7 +200,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 stroke="#8C8C8C"
                 strokeWidth="3"
             />
-            <motion.line
+            <m.line
                 x1="382"
                 y1="404.5"
                 x2="233"
@@ -208,7 +208,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 stroke="#f9b450"
                 strokeWidth="3"
             />
-            <motion.line
+            <m.line
                 x1="581.999"
                 y1="404.5"
                 x2="382.999"
@@ -216,7 +216,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 stroke="#8C8C8C"
                 strokeWidth="3"
             />
-            <motion.line
+            <m.line
                 x1="581.999"
                 y1="404.5"
                 x2="382.999"
@@ -224,7 +224,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 stroke="#f7931a"
                 strokeWidth="3"
             />
-            <motion.line
+            <m.line
                 x1="839"
                 y1="404.5"
                 x2="583"
@@ -232,7 +232,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 stroke="#8C8C8C"
                 strokeWidth="3"
             />
-            <motion.line
+            <m.line
                 x1="839"
                 y1="404.5"
                 x2="583"
@@ -240,7 +240,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 stroke="#f1760f"
                 strokeWidth="3"
             />
-            <motion.line
+            <m.line
                 x1="839"
                 y1="404.5"
                 x2="583"
@@ -248,7 +248,7 @@ export function OpcodeSVG({ svgRef, ...props }: OpcodeSVGProps) {
                 stroke="#8C8C8C"
                 strokeWidth="3"
             />
-            <motion.line
+            <m.line
                 x1="839"
                 y1="404.5"
                 x2="583"

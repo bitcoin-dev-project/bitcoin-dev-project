@@ -1,5 +1,6 @@
 "use client"
-import { motion, AnimatePresence } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
 const TransactionParts = [
@@ -188,7 +189,7 @@ export default function TransactionCreation({
             <div className="flex flex-col gap-3">
                 {/* Transaction Structure */}
                 <div className="overflow-x-auto">
-                    <motion.div
+                    <m.div
                         className="flex flex-nowrap gap-1 p-2 min-w-max"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -440,14 +441,14 @@ export default function TransactionCreation({
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
 
                 {/* Two Column Layout for Details and Byte Viewer */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                     {/* Enhanced Details Panel */}
                     <AnimatePresence mode="wait">
-                        <motion.div
+                        <m.div
                             key={activeSection}
                             className="bg-white dark:bg-gray-800 p-4 rounded-lg lg:order-1 shadow-sm"
                             initial={{ opacity: 0 }}
@@ -513,7 +514,7 @@ export default function TransactionCreation({
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </m.div>
                     </AnimatePresence>
 
                     {/* Enhanced Byte Viewer */}
@@ -525,7 +526,7 @@ export default function TransactionCreation({
                             {transactionFields[activeSection].example
                                 .match(/.{1,2}/g)
                                 ?.map((byte, index) => (
-                                    <motion.div
+                                    <m.div
                                         key={index}
                                         className="flex flex-col items-center"
                                         initial={{ opacity: 0 }}
@@ -538,7 +539,7 @@ export default function TransactionCreation({
                                         <div className="text-xs text-gray-500 mt-1">
                                             Byte {index + 1}
                                         </div>
-                                    </motion.div>
+                                    </m.div>
                                 ))}
                         </div>
                     </div>
@@ -577,7 +578,7 @@ function TransactionBlock({
     const byteWidth = getByteWidth(field.size)
 
     return (
-        <motion.div
+        <m.div
             className={`${byteWidth} p-2 rounded-md transition-all h-[64px] flex flex-col justify-between ${
                 !isEnabled
                     ? "opacity-30 bg-gray-100 text-gray-400 dark:bg-gray-800/30 dark:text-gray-500 cursor-not-allowed"
@@ -606,6 +607,6 @@ function TransactionBlock({
                     ))
                 )}
             </div>
-        </motion.div>
+        </m.div>
     )
 }

@@ -1,36 +1,61 @@
+import dynamic from "next/dynamic"
 import TOCInline from "pliny/ui/TOCInline"
 import BlogNewsletterForm from "pliny/ui/BlogNewsletterForm"
 import type { MDXComponents } from "mdx/types"
 import CustomLink from "./Link"
 import Image from "./Image"
 import SvgDisplay from "./script-visualizer/SvgDisplay"
-import ScriptStackVisualizer from "./script-visualizer/scriptVisualizer"
-import TransactionsDisplay from "./transaction-serializer/TransactionDisplay"
-import { QuickLink, QuickLinks } from "./QuickLinks"
-import Hint from "./Hints"
-import MinimalVideoPlayer from "./minimal-video-player"
-import ExpandableAlert from "./expandable-alert"
-import P2SHEncoder from "./address-encoder"
-import OpcodeDataVisualizer from "./opcode-data-visualizer"
-import OpCodeExplorer from "./opcode-explorer"
-import MultisigAnimation from "./multisig-animation"
-import SandpackComponent from "./sandpack"
-import Quiz from "./Quiz"
-import StackSimulator from "./stack-simulator"
-import { CodeSnippet } from "./code-snippet"
-import ExerciseSelector from "./exercise-selector"
-import MailingListSignup from "./mailing-list-signup"
-import { BitcoinHistory } from "./bitcoin-history"
-import HexTransactionHighlighter from "./hex-transaction-highlighter"
-import DiscordInvite from "./discord-invite"
-import TransactionCreation from "@/src/components/TransactionCreation"
-import TransactionAnimationPlayer from "@/content/transaction-animation-player"
-import TransactionDecoder from "./transaction-decoder"
-import ReorgCalculator from "./reorg-calculator"
-import HashFunctions from "./hash-functions"
-import AddressGenerator from "./address-generator"
-import { ByteTools } from "./byte-tools"
-import InteractiveRoadmap from "../roadmap/InteractiveRoadmap"
+
+const ScriptStackVisualizer = dynamic(
+    () => import("./script-visualizer/scriptVisualizer")
+)
+const TransactionsDisplay = dynamic(
+    () => import("./transaction-serializer/TransactionDisplay")
+)
+const QuickLinks = dynamic(() =>
+    import("./QuickLinks").then((m) => ({ default: m.QuickLinks }))
+)
+const QuickLink = dynamic(() =>
+    import("./QuickLinks").then((m) => ({ default: m.QuickLink }))
+)
+const Hint = dynamic(() => import("./Hints"))
+const MinimalVideoPlayer = dynamic(() => import("./minimal-video-player"))
+const ExpandableAlert = dynamic(() => import("./expandable-alert"))
+const P2SHEncoder = dynamic(() => import("./address-encoder"))
+const OpcodeDataVisualizer = dynamic(() => import("./opcode-data-visualizer"))
+const OpCodeExplorer = dynamic(() => import("./opcode-explorer"))
+const MultisigAnimation = dynamic(() => import("./multisig-animation"))
+const SandpackComponent = dynamic(() => import("./sandpack"), { ssr: false })
+const Quiz = dynamic(() => import("./Quiz"))
+const StackSimulator = dynamic(() => import("./stack-simulator"))
+const CodeSnippet = dynamic(() => import("./code-snippet"))
+const ExerciseSelector = dynamic(() => import("./exercise-selector"), {
+    ssr: false
+})
+const MailingListSignup = dynamic(() => import("./mailing-list-signup"))
+const BitcoinHistory = dynamic(() =>
+    import("./bitcoin-history").then((m) => ({ default: m.BitcoinHistory }))
+)
+const HexTransactionHighlighter = dynamic(
+    () => import("./hex-transaction-highlighter")
+)
+const DiscordInvite = dynamic(() => import("./discord-invite"))
+const TransactionCreation = dynamic(
+    () => import("@/src/components/TransactionCreation")
+)
+const TransactionAnimationPlayer = dynamic(
+    () => import("@/content/transaction-animation-player")
+)
+const TransactionDecoder = dynamic(() => import("./transaction-decoder"))
+const ReorgCalculator = dynamic(() => import("./reorg-calculator"))
+const HashFunctions = dynamic(() => import("./hash-functions"))
+const AddressGenerator = dynamic(() => import("./address-generator"))
+const ByteTools = dynamic(() =>
+    import("./byte-tools").then((m) => ({ default: m.ByteTools }))
+)
+const InteractiveRoadmap = dynamic(
+    () => import("../roadmap/InteractiveRoadmap")
+)
 
 export const components: MDXComponents = {
     Image,

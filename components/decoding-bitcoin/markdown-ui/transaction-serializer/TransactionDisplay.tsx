@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 import { Network } from "bitcoinjs-lib"
 import TransactionDecoder, { DecodedTransaction } from "./decodeTransaction"
 
@@ -157,7 +158,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                 >
                     <AnimatePresence>
                         {displayedItems.map((item, index) => (
-                            <motion.button
+                            <m.button
                                 key={index}
                                 onClick={() =>
                                     handleDetailChange(item, index, type)
@@ -216,14 +217,14 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                                             {satoshisToBTC(item.value)} BTC
                                         </div>
                                     )}
-                            </motion.button>
+                            </m.button>
                         ))}
                     </AnimatePresence>
                 </div>
                 {!isExpanded && remainingCount > 0 && (
                     <div className="absolute bottom-0 left-0 right-0">
                         <div className="h-12 bg-gradient-to-t from-vscode-background-light dark:from-vscode-background-dark to-transparent"></div>
-                        <motion.button
+                        <m.button
                             onClick={() =>
                                 setExpandedSections((prev) => ({
                                     ...prev,
@@ -235,7 +236,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                             whileTap={{ scale: 0.98 }}
                         >
                             Show all {type} ({remainingCount} remaining)
-                        </motion.button>
+                        </m.button>
                     </div>
                 )}
             </div>

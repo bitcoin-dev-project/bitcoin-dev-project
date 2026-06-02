@@ -1,4 +1,4 @@
-import { BitcoinIcon } from "lucide-react"
+import { BitcoinIcon, Bitcoin, Github } from "lucide-react"
 
 import screenshotTopics from "@/public/images/hero/screenshots/topics.webp"
 import screenshotGoodFirstIssues from "@/public/images/hero/screenshots/good-first-issues.webp"
@@ -22,8 +22,7 @@ import logoBTCdemy from "@/public/images/tools/btc-demy.webp"
 import discordIcon from "@/public/images/hero/socials/discord.svg"
 import githubIcon from "@/public/images/hero/socials/github.svg"
 import xIcon from "@/public/images/hero/socials/x.svg"
-import { GitHubLogoIcon } from "@radix-ui/react-icons"
-import { Bitcoin } from "lucide-react"
+
 import {
     BoltIcon,
     ChartPieIcon,
@@ -212,7 +211,7 @@ export const values = [
         description:
             "Everything we do is open source. We want your reviews and contributions",
         href: "https://github.com/bitcoin-dev-project/bitcoin-dev-project",
-        icon: GitHubLogoIcon
+        icon: Github
     },
     {
         name: "BITCOIN TECH",

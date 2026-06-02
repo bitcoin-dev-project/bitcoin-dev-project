@@ -10,8 +10,8 @@ import { TopicHeader } from "../topic/TopicHeader"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-
-import { motion, AnimatePresence } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 import { CheckCircle, Loader2, ArrowRight } from "lucide-react"
 import React from "react"
 import { GitHubIcon } from "@/public/images/topics-hero/GitHubIcon"
@@ -104,7 +104,7 @@ export default function BaseLayout({
 
     const ActionButtons = () => (
         <div className="flex items-center justify-between w-full max-w-3xl mx-auto">
-            <motion.a
+            <m.a
                 href={githubEditUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,18 +114,18 @@ export default function BaseLayout({
             >
                 <GitHubIcon className="w-4 h-4 mr-2" />
                 Suggest Edits
-            </motion.a>
+            </m.a>
             <div className="flex items-center gap-4">
                 <AnimatePresence mode="wait">
                     {isCompleted ? (
-                        <motion.div
+                        <m.div
                             className="flex items-center gap-4"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 20 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <motion.button
+                            <m.button
                                 onClick={toggleCompleted}
                                 className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-600 transition-colors"
                                 whileHover={{ scale: 1.02 }}
@@ -133,29 +133,29 @@ export default function BaseLayout({
                             >
                                 <CheckCircle className="w-4 h-4 mr-2" />
                                 Completed
-                            </motion.button>
+                            </m.button>
 
                             {next?.path && (
-                                <motion.div
+                                <m.div
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.2 }}
                                 >
                                     <Link href={`/${next.path}`}>
-                                        <motion.button
+                                        <m.button
                                             className="inline-flex items-center px-4 py-2 text-sm font-medium border-2 border-orange-500 text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-500/10 rounded-md transition-colors"
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}
                                         >
                                             Next Topic
                                             <ArrowRight className="w-4 h-4 ml-2" />
-                                        </motion.button>
+                                        </m.button>
                                     </Link>
-                                </motion.div>
+                                </m.div>
                             )}
-                        </motion.div>
+                        </m.div>
                     ) : (
-                        <motion.button
+                        <m.button
                             onClick={toggleCompleted}
                             className="inline-flex items-center px-4 py-2 text-sm font-medium text-orange-500 border-2 border-orange-500 rounded-md hover:bg-orange-50 dark:hover:bg-orange-500/10 transition-colors"
                             whileHover={{ scale: 1.02 }}
@@ -173,7 +173,7 @@ export default function BaseLayout({
                             {isLoading
                                 ? "Marking as Complete..."
                                 : "Mark as Complete"}
-                        </motion.button>
+                        </m.button>
                     )}
                 </AnimatePresence>
             </div>

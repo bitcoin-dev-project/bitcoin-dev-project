@@ -9,7 +9,8 @@ import {
     CopyIcon,
     CheckIcon
 } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import * as m from "framer-motion/m"
+import { AnimatePresence } from "framer-motion"
 import clsx from "clsx"
 
 interface ExpandableAlertProps {
@@ -149,7 +150,7 @@ export default function ExpandableAlert({
                             onMouseLeave={() => setIsHovered(false)}
                             className={`flex items-center text-base font-bold mt-3 ${headerColor}`}
                         >
-                            <motion.div
+                            <m.div
                                 animate={{
                                     y: isHovered ? (isExpanded ? -3 : 3) : 0,
                                     transition: { duration: 0.2 }
@@ -166,14 +167,14 @@ export default function ExpandableAlert({
                                         className="w-5 h-5"
                                     />
                                 )}
-                            </motion.div>
+                            </m.div>
                             <span className="ml-2">
                                 {isExpanded ? "Show less" : "Show more"}
                             </span>
                         </button>
                         <AnimatePresence>
                             {isExpanded && (
-                                <motion.div
+                                <m.div
                                     initial={{ opacity: 0, height: 0 }}
                                     animate={{ opacity: 1, height: "auto" }}
                                     exit={{ opacity: 0, height: 0 }}
@@ -181,7 +182,7 @@ export default function ExpandableAlert({
                                     className="mt-3 "
                                 >
                                     {expandedContent}
-                                </motion.div>
+                                </m.div>
                             )}
                         </AnimatePresence>
                     </>
