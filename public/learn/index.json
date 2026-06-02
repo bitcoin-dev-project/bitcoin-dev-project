@@ -68,21 +68,6 @@
         "products"
       ],
       "tagList": [
-        "tool"
-      ],
-      "bannerColor": "#181925",
-      "byBDP": "true",
-      "logo": "/images/learn/chatbtc.webp",
-      "title": "ChatBTC",
-      "description": "Chat with your favorite bitcoin sources and authors.",
-      "link": "https://chat.bitcoinsearch.xyz/"
-    },
-    {
-      "difficulty": "easy",
-      "tags": [
-        "products"
-      ],
-      "tagList": [
         "interactive"
       ],
       "bannerColor": "#5E8189",

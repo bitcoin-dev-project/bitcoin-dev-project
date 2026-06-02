@@ -7,11 +7,6 @@ export const toolsData = [
         src: "/images/tools/bitcoin-transcripts-review.webp"
     },
     {
-        name: "Chat BTC",
-        href: "https://chat.bitcoinsearch.xyz",
-        src: "/images/tools/chat-btc.webp"
-    },
-    {
         name: "Saving Satoshi",
         href: "https://savingsatoshi.com",
         src: "/images/tools/saving-satoshi.webp"

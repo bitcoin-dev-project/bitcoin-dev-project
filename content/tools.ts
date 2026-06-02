@@ -26,14 +26,6 @@ export const tools = {
                     link: "https://bitcoinops.org"
                 },
                 {
-                    description:
-                        "Chat with your favorite bitcoin sources and authors.",
-                    image: "/images/tools/chat-btc.webp",
-                    title: "Chat BTC",
-                    subTitle: "",
-                    link: "https://chat.bitcoinsearch.xyz"
-                },
-                {
                     image: "/images/tools/bitcoin-search.webp",
                     description:
                         "The technical bitcoin search engine we deserve.",
