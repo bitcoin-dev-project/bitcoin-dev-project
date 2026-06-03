@@ -54,16 +54,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/1019",
-    "publishedAt": "2025-08-29T14:47:17Z",
-    "title": "`cargo test -p payjoin` fails",
-    "labels": [
-      "bug",
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/1250",
     "publishedAt": "2025-12-29T10:42:24Z",
     "title": "JS bindings should include `io` functionality",
