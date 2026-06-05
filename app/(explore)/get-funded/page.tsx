@@ -6,19 +6,20 @@ import {
     RightArrowIcon
 } from "@bitcoin-dev-project/bdp-ui/icons"
 import Image from "next/image"
-import AsideGoTO from "@/components/aside-go-to"
 import BDPStars from "@/components/assets/BDPStarts"
 import Quotes from "@/components/assets/Quotes"
 import { FUNDINGORGANISATION } from "@/utils"
 import FundingOrg from "@/components/brand/FundingOrg"
+import GetFundedSidebar from "@/components/get-funded/get-funded-sidebar"
 
 type Props = {
     content: string | React.ReactNode
     title?: string
+    id?: string
 }
 
-const Item = ({ content, title }: Props) => (
-    <div className="flex flex-col gap-3">
+const Item = ({ content, title, id }: Props) => (
+    <div id={id} className="flex flex-col gap-3 scroll-mt-24">
         {title && (
             <h2 className="text-xl lg:text-2xl font-semibold text-brand-dark/85 leading-normal font-montserrat">
                 {title}
@@ -35,10 +36,10 @@ export default function Career() {
         <div className="min-h-screen bg-[#F6F0E6] font-quicksand text-brand-dark">
             <div className="flex flex-col my-0 max-w-7xl mx-auto">
                 <div className="flex gap-12 flex-col lg:flex-row">
-                    <div className="w-full lg:w-[300px] flex order-2 lg:order-1 flex-col gap-6">
-                        <AsideGoTO selected="get-funded" />
+                    <div className="w-full lg:w-[300px] flex order-1 flex-col gap-6">
+                        <GetFundedSidebar />
                     </div>
-                    <div className="flex flex-col flex-1 gap-y-10 order-1 lg:order-2">
+                    <div className="flex flex-col flex-1 gap-y-10 order-2">
                         <div className="flex flex-col gap-5">
                             <h1 className="text-[2rem] leading-none lg:text-[3.5rem] font-bold text-black font-montserrat">
                                 GET FUNDED
@@ -50,6 +51,7 @@ export default function Career() {
                         </div>
                         <div className="flex flex-col gap-10">
                             <Item
+                                id="apply"
                                 title="One form, multiple opportunities"
                                 content={
                                     <>
@@ -68,7 +70,10 @@ export default function Career() {
                                 }
                             />
 
-                            <div className="rounded-2xl max-w-lg mx-auto border border-brand-gray-100">
+                            <div
+                                id="common-application"
+                                className="rounded-2xl max-w-lg mx-auto border border-brand-gray-100 scroll-mt-24"
+                            >
                                 <div className="rounded-2xl p-2 flex flex-col gap-3">
                                     <div className="relative rounded-2xl overflow-hidden">
                                         <Image
@@ -129,10 +134,14 @@ export default function Career() {
                                         </p>
                                     </>
                                 }
+                                id="why-consider"
                                 title="Why consider a career in bitcoin open source development?"
                             />
 
-                            <div className="rounded-xl border bg-brand-gray border-brand-gray-100 p-2.5">
+                            <div
+                                id="adam-article"
+                                className="rounded-xl border bg-brand-gray border-brand-gray-100 p-2.5 scroll-mt-24"
+                            >
                                 <div className="border border-dashed border-gray-300 rounded-lg p-2.5">
                                     <div className="flex items-start gap-1 mb-4">
                                         <Quotes className="min-w-4" />
@@ -258,6 +267,7 @@ export default function Career() {
                                         </p>
                                     </>
                                 }
+                                id="earning-a-grant"
                                 title="Earning a grant for full-time bitcoin open source work"
                             />
 
@@ -273,6 +283,7 @@ export default function Career() {
                                         </p>
                                     </>
                                 }
+                                id="organisations"
                                 title="Funding Organizations"
                             />
 
