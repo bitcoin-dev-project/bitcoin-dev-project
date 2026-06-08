@@ -92,6 +92,21 @@ export type QA = {
     answer: React.ReactNode
 }
 
+/** Short summary shown on the "Paths and Stories" carousel card. */
+export type PathStoryCard = {
+    /** Accent colour theme for the card (name, quote mark, chips). */
+    accent: "blue" | "orange" | "pink"
+    /** Optional role override shown on the card (falls back to person.role). */
+    role?: string
+    quote: string
+    focus: string
+    fundingOrg?: string
+    /** Closing line; `highlight` (if set) renders inside a tinted chip. */
+    summary: { highlight?: string; text: string }
+    /** Optional "AT A GLANCE" bullet list. */
+    atAGlance?: string[]
+}
+
 export type PathStory = {
     slug: string
     name: string
@@ -99,6 +114,7 @@ export type PathStory = {
     avatar?: string
     /** false => page exists but content is still pending (e.g. Chuks) */
     available: boolean
+    card: PathStoryCard
     qa: QA[]
 }
 
@@ -107,7 +123,25 @@ export const PATH_STORIES: PathStory[] = [
         slug: "stickies-v",
         name: "stickies - v",
         role: "Bitcoin Core Contributor, Host Of London BitDevs",
+        avatar: "/images/get-funded/people/stickies-v.webp",
         available: true,
+        card: {
+            accent: "blue",
+            role: "Bitcoin Core Contributor | Brink",
+            quote: "Being helpful mattered more than being visible",
+            focus: "bitcoinkernel, code review, core infrastructure",
+            summary: {
+                highlight: "Funded after ~9 months",
+                text: "of consistent contribution"
+            },
+            atAGlance: [
+                "Works on Bitcoin Core + bitcoinkernel",
+                "Funded full-time by Brink",
+                "Self-taught, learned C++ from scratch",
+                "Built consistency through review clubs",
+                "Active in BitDevs community"
+            ]
+        },
         qa: [
             {
                 question:
@@ -160,7 +194,7 @@ export const PATH_STORIES: PathStory[] = [
                             users would need. I&apos;m involved with both
                             authoring and reviewing relevant PRs, and I also
                             maintain{" "}
-                            <ExtLink href="https://github.com/stickies-v">
+                            <ExtLink href="https://github.com/stickies-v/py-bitcoinkernel">
                                 Python language bindings
                             </ExtLink>{" "}
                             for bitcoinkernel.
@@ -397,7 +431,17 @@ export const PATH_STORIES: PathStory[] = [
         slug: "beulah",
         name: "Beulah",
         role: "Cryptography Researcher",
+        avatar: "/images/get-funded/people/beulah.webp",
         available: true,
+        card: {
+            accent: "orange",
+            quote: "You have to develop your own judgment about what's technically sound, what's worth pursuing, and what's ready to share.",
+            focus: "Nested MuSig2 in the secp256k1-zkp library",
+            fundingOrg: "Second + Vora",
+            summary: {
+                text: "Transitioned from backend dev → funded cryptography researcher"
+            }
+        },
         qa: [
             {
                 question:
@@ -406,7 +450,7 @@ export const PATH_STORIES: PathStory[] = [
                     <p>
                         I&apos;m Beulah Evanjalin, a math and cryptography
                         enthusiast working on{" "}
-                        <ExtLink href="https://delvingbitcoin.org/">
+                        <ExtLink href="https://bitcoinops.org/en/topics/musig/">
                             Nested MuSig2
                         </ExtLink>
                         , which is an advanced multi-signature scheme for
@@ -446,7 +490,7 @@ export const PATH_STORIES: PathStory[] = [
                         </p>
                         <p>
                             Why does this matter? Think about something like{" "}
-                            <ExtLink href="https://ark-protocol.org/">
+                            <ExtLink href="https://bitcoinops.org/en/topics/ark/">
                                 Ark
                             </ExtLink>
                             , where an operator server needs to sign
@@ -612,8 +656,20 @@ export const PATH_STORIES: PathStory[] = [
         slug: "chuks",
         name: "Chuks",
         role: "Lightning Developer",
-        // TODO: content pending — fill `qa` with Chuks's Q&A once provided.
+        avatar: "/images/get-funded/people/chuks.webp",
+        // TODO: full Q&A content pending — fill `qa` once provided. Card summary
+        // below is transcribed from the get-funded Figma carousel.
         available: false,
+        card: {
+            accent: "pink",
+            quote: "Three months after I graduated from the Chaincode BOSS 2025 program, I was able to show enough proof-of-work to get a Btrust Starter grant.",
+            focus: "LDK, Human Readable Addresses, Splice Batching",
+            fundingOrg: "Btrust",
+            summary: {
+                highlight: "Funded within ~3 months",
+                text: "after entering BOSS"
+            }
+        },
         qa: []
     }
 ]
