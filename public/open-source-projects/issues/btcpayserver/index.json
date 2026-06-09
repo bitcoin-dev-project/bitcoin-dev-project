@@ -10,14 +10,5 @@
       "Dashboard"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
-  },
-  {
-    "url": "https://github.com/btcpayserver/btcpayserver/issues/7384",
-    "publishedAt": "2026-05-31T08:51:41Z",
-    "title": "[Bug]: Invoice Date Filter - Date Selector Widget closes month list when clicked",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/31132886?v=4"
   }
 ]
