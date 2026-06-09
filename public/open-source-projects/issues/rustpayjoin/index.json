@@ -85,6 +85,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1383",
+    "publishedAt": "2026-03-05T21:18:11Z",
+    "title": "Regression on payjoin-cli when using bitcoind with older versions.",
+    "labels": [
+      "bug",
+      "payjoin-cli"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/1421",
     "publishedAt": "2026-03-18T04:21:49Z",
     "title": "Harden mailroom against metadata side channels",
