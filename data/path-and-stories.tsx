@@ -657,9 +657,7 @@ export const PATH_STORIES: PathStory[] = [
         name: "Chuks",
         role: "Lightning Developer",
         avatar: "/images/get-funded/people/chuks.webp",
-        // TODO: full Q&A content pending — fill `qa` once provided. Card summary
-        // below is transcribed from the get-funded Figma carousel.
-        available: false,
+        available: true,
         card: {
             accent: "pink",
             quote: "Three months after I graduated from the Chaincode BOSS 2025 program, I was able to show enough proof-of-work to get a Btrust Starter grant.",
@@ -670,7 +668,150 @@ export const PATH_STORIES: PathStory[] = [
                 text: "after entering BOSS"
             }
         },
-        qa: []
+        qa: [
+            {
+                question:
+                    "Who are you, what do you work on, and how are you funded?",
+                answer: (
+                    <p>
+                        My name is Chuks and I am a software developer with 9+
+                        years professional experience. I currently contribute to{" "}
+                        <ExtLink href="https://lightningdevkit.org/">
+                            LDK/LDK-Node
+                        </ExtLink>{" "}
+                        with support from{" "}
+                        <ExtLink href="https://www.btrust.tech/">
+                            Btrust
+                        </ExtLink>
+                        .
+                    </p>
+                )
+            },
+            {
+                question:
+                    "What areas do you specialize in and what is your day-to-day like?",
+                answer: (
+                    <p>
+                        I recently{" "}
+                        <ExtLink href="https://github.com/bitcoin/bips/blob/master/bip-0353.mediawiki">
+                            integrated{" "}
+                            <strong className="font-semibold">BIP-353</strong>{" "}
+                            into LDK-Node
+                        </ExtLink>
+                        , which uses DNSSEC infrastructure to allow users to
+                        send payments to Human-Readable Names—a huge win for
+                        privacy and usability. Currently, I&apos;m researching
+                        and implementing{" "}
+                        <ExtLink href="https://bitcoinops.org/en/topics/splicing/">
+                            Splice
+                        </ExtLink>{" "}
+                        Batching to significantly reduce on-chain fees by
+                        consolidating multiple transactions into a single
+                        splice. My day-to-day is a mix of proactive rebasing,
+                        deep-diving into PRs in the LDK repos to stay
+                        synchronized with the ecosystem, and engaging with peer
+                        reviews.
+                    </p>
+                )
+            },
+            {
+                question:
+                    "What was your entrypoint into bitcoin open-source software (BOSS)? What is your background and how did you get started?",
+                answer: (
+                    <>
+                        <p>
+                            The first time I encountered BOSS was in September
+                            2024 when I integrated LNBITS into a web-app I was
+                            working on. The first time I got in-depth knowledge
+                            of BOSS was in December 2024 when I signed-up for
+                            the{" "}
+                            <ExtLink href="https://learning.chaincode.com/">
+                                Chaincode BOSS
+                            </ExtLink>{" "}
+                            2025 program. We were given a challenge that
+                            required us exploring the{" "}
+                            <ExtLink href="https://github.com/bitcoin/bitcoin">
+                                Bitcoin Core codebase
+                            </ExtLink>
+                            .
+                        </p>
+                        <Callout>
+                            The Chaincode BOSS 2025 program was my official
+                            entry point as it provided the clarity I needed to
+                            start making meaningful contributions.
+                        </Callout>
+                        <p>
+                            Before BOSS 2025, I was a freelance Software dev
+                            building &amp; maintaining web &amp; mobile apps for
+                            clients in Nigeria. I was also working on my own
+                            start-up projects (which I still do).
+                        </p>
+                    </>
+                )
+            },
+            {
+                question:
+                    "What has the journey been like to get to where you are now? How did you get funded for the first time?",
+                answer: (
+                    <p>
+                        <strong className="font-semibold">
+                            The journey has been rewarding! All the time spent
+                            getting familiar with the ecosystem eventually paid
+                            off.
+                        </strong>{" "}
+                        Three months after I graduated from the Chaincode BOSS
+                        2025 program, I was able to show enough proof-of-work to
+                        get a Btrust Starter grant.
+                    </p>
+                )
+            },
+            {
+                question:
+                    "What is your favorite thing about working in BOSS (bitcoin open-source software)?",
+                answer: (
+                    <>
+                        <p>
+                            Working in BOSS is the perfect hack for my career as
+                            it aligns perfectly with my need for freedom to
+                            choose the work I do and determine the impact I am
+                            able to make. I quit my 9 - 5 Software Dev job
+                            during COVID to focus on freelancing and building a
+                            start-up.
+                        </p>
+                        <Callout>
+                            Working in BOSS has given me great stability
+                            that&apos;s even better than what I had when I was
+                            doing 9 - 5, but with the added benefit of not
+                            taking away my freedom to choose what to work on and
+                            how much impact I can make.
+                        </Callout>
+                    </>
+                )
+            },
+            {
+                question:
+                    "What are some of the unique challenges of working in BOSS? What are things that may sound unexpected to people outside of the ecosystem?",
+                answer: (
+                    <p>
+                        Working in BOSS is almost like being an entrepreneur, it
+                        gets lonely at times and a whole lot of times you need
+                        to rely on your decision-making skills in order to
+                        navigate the ecosystem effectively. You need to be
+                        willing to admit what you do not know and be open to
+                        learning. It also requires self-motivation and focus.
+                    </p>
+                )
+            },
+            {
+                question: "How is this different from other jobs you have had?",
+                answer: (
+                    <p>
+                        The freedom is unmatched. It&apos;s like a hybrid of 9 -
+                        5 work and entrepreneurship.
+                    </p>
+                )
+            }
+        ]
     }
 ]
 
