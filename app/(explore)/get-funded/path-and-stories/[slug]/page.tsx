@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { genPageMetadata } from "@/app/seo"
 import GetFundedSidebar from "@/components/get-funded/get-funded-sidebar"
+import ScrollToTop from "@/components/get-funded/scroll-to-top"
 import {
     PATH_STORIES,
     getPathStory,
@@ -63,12 +64,11 @@ export default function PathStoryPage({
     if (!person) notFound()
 
     return (
-        <div className="flex w-full flex-col text-brand-dark lg:flex-row lg:gap-[90px]">
-            <div className="flex flex-col lg:w-[300px]">
-                <GetFundedSidebar />
-            </div>
+        <div className="mx-auto flex w-full max-w-3xl flex-col text-brand-dark">
+            <ScrollToTop />
+            <GetFundedSidebar />
 
-            <article className="flex max-w-3xl flex-1 flex-col gap-y-10">
+            <article className="flex flex-col gap-y-10">
                 <header className="flex items-center gap-5">
                     <Avatar person={person} />
                     <div className="flex flex-col gap-2">

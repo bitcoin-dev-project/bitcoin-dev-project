@@ -1,10 +1,6 @@
 import React from "react"
 
-/**
- * Inline hyperlink used throughout the get-funded path-and-stories content.
- * Per the Figma spec all hyperlinks are underlined and use the "bdp orange"
- * text colour (brand-orange-100 / #EB5234).
- */
+/** Inline hyperlink: underlined and "bdp orange" (brand-orange-100), per Figma. */
 export const ExtLink = ({
     href,
     children
@@ -22,12 +18,9 @@ export const ExtLink = ({
     </a>
 )
 
-/**
- * Highlighted quote / tip box that appears inside some answers.
- * Inset box with a left "bdp orange" bar on a muted background.
- */
+/** Highlighted quote/tip box with a left "bdp orange" bar. */
 export const Callout = ({ children }: { children: React.ReactNode }) => (
-    <div className="rounded-r-lg border-l-[3px] border-brand-orange-100 bg-brand-gray/70 px-5 py-4 italic text-brand-dark/90">
+    <div className="rounded-r-lg border-l-[3px] border-brand-orange-100 bg-brand-gray px-5 py-4 italic text-brand-dark/90">
         {children}
     </div>
 )

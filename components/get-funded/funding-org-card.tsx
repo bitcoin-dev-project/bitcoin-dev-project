@@ -21,17 +21,17 @@ const Row = ({ label, value }: { label: string; value: string }) => (
 )
 
 const FundingOrgCard = ({ org }: { org: FundingOrgDetail }) => (
-    <div className="relative flex flex-col gap-4 rounded-xl border border-brand-gray-100 bg-brand-gray px-5 py-7">
+    <div className="relative flex flex-col gap-4 rounded-xl border border-brand-gray-100 bg-brand-card px-5 py-7">
         <CornerDots />
 
-        <div className="flex h-9 items-center">
+        <div className="flex h-10 items-center">
             {org.logo ? (
                 <Image
                     src={org.logo}
                     alt={`${org.name} logo`}
                     width={org.logoWidth ?? 90}
                     height={org.logoHeight ?? 32}
-                    className="h-auto w-auto max-h-9 object-contain"
+                    className="h-7 w-auto object-contain"
                 />
             ) : (
                 <span className="font-montserrat text-lg font-bold text-brand-dark/70">

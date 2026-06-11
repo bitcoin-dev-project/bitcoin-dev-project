@@ -2,10 +2,7 @@
 
 import { useState } from "react"
 
-/**
- * Inline expandable text. Shows `children` only after the reader clicks
- * "Read more"; collapses again on "Read less".
- */
+/** Inline expandable text toggled by a "Read more" / "Read less" button. */
 const ReadMore = ({ children }: { children: React.ReactNode }) => {
     const [open, setOpen] = useState(false)
 

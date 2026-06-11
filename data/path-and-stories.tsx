@@ -2,13 +2,8 @@ import React from "react"
 import { Callout, ExtLink } from "@/components/get-funded/get-funded-ui"
 
 /**
- * Reusable navigation index for the get-funded page and its sub-pages.
- * Section titles map to the groups in the Figma left panel. Items whose href
- * contains a hash (#) point to a section anchor on the main get-funded page;
- * items with a `slug` are the path-and-stories sub-pages.
- *
- * NOTE: external link URLs below are best-effort canonical guesses inferred
- * from the Figma text and should be confirmed against the Figma hyperlinks.
+ * Navigation index for the get-funded page and its sub-pages. Items with a
+ * hash (#) target a section on the main page; items with a slug are sub-pages.
  */
 export type NavItem = { label: string; href: string; slug?: string }
 export type NavSection = { title: string; href?: string; items: NavItem[] }
@@ -92,19 +87,14 @@ export type QA = {
     answer: React.ReactNode
 }
 
-/** Short summary shown on the "Paths and Stories" carousel card. */
+/** Summary shown on the "Paths and Stories" carousel card. */
 export type PathStoryCard = {
-    /** Accent colour theme for the card (name, quote mark, chips). */
-    accent: "blue" | "orange" | "pink"
-    /** Optional role override shown on the card (falls back to person.role). */
+    /** Card-only role override; falls back to person.role. */
     role?: string
     quote: string
     focus: string
-    fundingOrg?: string
-    /** Closing line; `highlight` (if set) renders inside a tinted chip. */
-    summary: { highlight?: string; text: string }
-    /** Optional "AT A GLANCE" bullet list. */
-    atAGlance?: string[]
+    fundingOrg: string
+    fundingStory: string
 }
 
 export type PathStory = {
@@ -112,7 +102,7 @@ export type PathStory = {
     name: string
     role: string
     avatar?: string
-    /** false => page exists but content is still pending (e.g. Chuks) */
+    /** false => page exists but the interview content is still pending */
     available: boolean
     card: PathStoryCard
     qa: QA[]
@@ -126,21 +116,11 @@ export const PATH_STORIES: PathStory[] = [
         avatar: "/images/get-funded/people/stickies-v.webp",
         available: true,
         card: {
-            accent: "blue",
             role: "Bitcoin Core Contributor | Brink",
             quote: "Being helpful mattered more than being visible",
             focus: "bitcoinkernel, code review, core infrastructure",
-            summary: {
-                highlight: "Funded after ~9 months",
-                text: "of consistent contribution"
-            },
-            atAGlance: [
-                "Works on Bitcoin Core + bitcoinkernel",
-                "Funded full-time by Brink",
-                "Self-taught, learned C++ from scratch",
-                "Built consistency through review clubs",
-                "Active in BitDevs community"
-            ]
+            fundingOrg: "Brink",
+            fundingStory: "Funded after ~9 months of consistent contribution"
         },
         qa: [
             {
@@ -281,9 +261,12 @@ export const PATH_STORIES: PathStory[] = [
                             About 9 months after I started (gently) contributing
                             to Bitcoin Core, my BOSS &quot;career&quot; started
                             when I was offered the chance to help with teaching
-                            and mentoring the first Qala &quot;(now BTrust
-                            Builders)&quot; cohorts, and then shortly
-                            there-after was offered a full-time grant by{" "}
+                            and mentoring the first Qala{" "}
+                            <span className="italic">
+                                (now BTrust Builders)
+                            </span>{" "}
+                            cohorts, and then shortly there-after was offered a
+                            full-time grant by{" "}
                             <ExtLink href="https://brink.dev">Brink</ExtLink> to
                             start contributing to Bitcoin Core, which I&apos;ve
                             been doing since mid-2022.
@@ -291,11 +274,11 @@ export const PATH_STORIES: PathStory[] = [
                         <Callout>
                             Each funding organization has different criteria and
                             priorities. In my case, I think the most important
-                            drivers behind getting a grant despite not having a
-                            meaningful OSS track record were that I kept showing
-                            up consistently for multiple months, and that I
-                            tried focusing on being helpful rather than on being
-                            visible.
+                            drivers behind getting a grant despite not yet
+                            having a meaningful OSS track record were that I
+                            kept showing up consistently for multiple months,
+                            and that I tried focusing on being helpful rather
+                            than on being visible.
                         </Callout>
                         <p>
                             In my first months, I attended a lot of review
@@ -434,13 +417,11 @@ export const PATH_STORIES: PathStory[] = [
         avatar: "/images/get-funded/people/beulah.webp",
         available: true,
         card: {
-            accent: "orange",
             quote: "You have to develop your own judgment about what's technically sound, what's worth pursuing, and what's ready to share.",
             focus: "Nested MuSig2 in the secp256k1-zkp library",
             fundingOrg: "Second + Vora",
-            summary: {
-                text: "Transitioned from backend dev → funded cryptography researcher"
-            }
+            fundingStory:
+                "Transitioned from backend dev → funded cryptography researcher"
         },
         qa: [
             {
@@ -659,14 +640,10 @@ export const PATH_STORIES: PathStory[] = [
         avatar: "/images/get-funded/people/chuks.webp",
         available: true,
         card: {
-            accent: "pink",
             quote: "Three months after I graduated from the Chaincode BOSS 2025 program, I was able to show enough proof-of-work to get a Btrust Starter grant.",
             focus: "LDK, Human Readable Addresses, Splice Batching",
             fundingOrg: "Btrust",
-            summary: {
-                highlight: "Funded within ~3 months",
-                text: "after entering BOSS"
-            }
+            fundingStory: "Funded within ~3 months after entering BOSS"
         },
         qa: [
             {

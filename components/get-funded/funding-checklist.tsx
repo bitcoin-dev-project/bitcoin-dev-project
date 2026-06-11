@@ -45,9 +45,8 @@ const CheckBox = ({
 )
 
 /**
- * Interactive "Check off your funding prep" checklist. State is local — it
- * resets on reload and is purely a self-tracking aid for the reader. The card
- * is styled as a tear-off "ticket" with a scalloped left edge and dashed line.
+ * Interactive "Check off your funding prep" checklist; state is local (resets
+ * on reload). Styled as a tear-off ticket with a scalloped left edge.
  */
 const FundingChecklist = () => {
     const [checked, setChecked] = useState<Record<string, boolean>>({})
@@ -55,7 +54,7 @@ const FundingChecklist = () => {
         setChecked((prev) => ({ ...prev, [key]: !prev[key] }))
 
     return (
-        <div className="relative overflow-hidden rounded-2xl bg-brand-gray">
+        <div className="relative overflow-hidden rounded-2xl bg-brand-card">
             {/* Scalloped left edge (page-coloured notches) */}
             <div
                 aria-hidden
@@ -74,7 +73,6 @@ const FundingChecklist = () => {
             />
 
             <div className="py-7 pl-14 pr-5 lg:pl-20 lg:pr-10">
-                {/* Header */}
                 <div className="mb-6 flex items-center gap-3 border-b border-brand-gray-100 pb-5 sm:gap-4">
                     <Image
                         src="/images/get-funded/checklist.webp"
@@ -98,7 +96,6 @@ const FundingChecklist = () => {
                     </a>
                 </div>
 
-                {/* Items */}
                 <div className="flex flex-col gap-5">
                     {FUNDING_CHECKLIST.map((item) => {
                         const key = item.label
@@ -134,11 +131,11 @@ const FundingChecklist = () => {
                 </div>
 
                 <p className="mt-7 border-t border-brand-gray-100 pt-5 font-quicksand text-sm italic text-brand-dark/60">
-                    Note: just because you finish this checklist doesn&apos;t
-                    mean you&apos;ll be developer-ready — it may take multiple
-                    applications and a lot of prep to land a grant. It&apos;s
-                    like dating: not every project and grantor is a compatible
-                    match. Don&apos;t give up!
+                    Note: Just because you finish this checklist doesn&apos;t
+                    mean you&apos;re necessarily ready – it may take multiple
+                    applications and projects to land a grant. It&apos;s like
+                    dating: not every project and grantor is compatible.
+                    Don&apos;t give up!
                 </p>
             </div>
         </div>
