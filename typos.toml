@@ -12,6 +12,11 @@ extend-ignore-re = [
   "\\/\\/[^\n]*"               # Ignore double slash comments in code
 ]
 
+# Legitimate words the spell-checker mistakes for typos.
+[default.extend-words]
+chuks = "chuks"               # "Chuks" is a contributor's name
+mena = "mena"                 # "MENA" = Middle East & North Africa
+
 [files]
 extend-exclude = [
     "**/node_modules/**",      # Exclude all node_modules directories

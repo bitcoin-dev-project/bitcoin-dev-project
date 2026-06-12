@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import clsx from "clsx"
-import { Check, Download } from "lucide-react"
+import { Check } from "lucide-react"
 import { FUNDING_CHECKLIST } from "@/data/get-funded"
 
 const CheckBox = ({
@@ -66,34 +66,28 @@ const FundingChecklist = () => {
                     backgroundRepeat: "repeat-y"
                 }}
             />
-            {/* Dashed tear line */}
+            {/* Dashed tear line (long dashes) */}
             <div
                 aria-hidden
-                className="pointer-events-none absolute inset-y-6 left-10 border-l border-dashed border-brand-gray-200"
+                className="pointer-events-none absolute inset-y-6 left-10 w-px"
+                style={{
+                    backgroundImage:
+                        "repeating-linear-gradient(to bottom, #A9A49B 0 10px, transparent 10px 18px)"
+                }}
             />
 
             <div className="py-7 pl-14 pr-5 lg:pl-20 lg:pr-10">
-                <div className="mb-6 flex items-center gap-3 border-b border-brand-gray-100 pb-5 sm:gap-4">
+                <div className="mb-6 flex items-end justify-center gap-3 border-b border-brand-gray-100 sm:gap-4">
                     <Image
                         src="/images/get-funded/checklist.webp"
                         alt=""
-                        width={120}
-                        height={80}
-                        className="h-14 w-auto shrink-0 lg:h-20"
+                        width={317}
+                        height={240}
+                        className="h-16 w-auto shrink-0 lg:h-24"
                     />
-                    <h3 className="flex-1 font-montserrat text-lg font-bold italic text-brand-dark lg:text-2xl">
+                    <h3 className="pb-3 font-montserrat text-lg font-semibold italic text-brand-dark lg:text-2xl">
                         Check off your funding prep
                     </h3>
-                    <a
-                        href="/images/get-funded/funding-prep-checklist.pdf"
-                        download
-                        className="inline-flex shrink-0 items-center gap-2 rounded-full border border-brand-gray-200 px-3 py-2 font-quicksand text-sm font-medium text-brand-dark/60 transition-colors hover:border-brand-orange-100 hover:text-brand-orange-100 lg:px-4"
-                    >
-                        <Download className="h-4 w-4" />
-                        <span className="hidden sm:inline">
-                            Download Checklist
-                        </span>
-                    </a>
                 </div>
 
                 <div className="flex flex-col gap-5">
