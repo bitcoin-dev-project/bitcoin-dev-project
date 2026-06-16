@@ -144,44 +144,61 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     }
 ]
 
+export type ChecklistLink = {
+    text: string
+    url: string
+}
+
 export type ChecklistItem = {
     label: string
-    children?: string[]
+    links?: ChecklistLink[]
+    children?: { label: string; links?: ChecklistLink[] }[]
 }
 
 export const FUNDING_CHECKLIST: ChecklistItem[] = [
     {
-        label: "Explore projects in the BOSS ecosystem",
-        children: ["Run them locally, read the documentation, review some PRs"]
+        label: "Join a study group to solidify your knowledge (Bitshala, Code Orange, Btrust, and B4OS are all great)",
+        links: [
+            { text: "Bitshala", url: "https://bitshala.org/cohorts/" },
+            { text: "Code Orange", url: "https://codeorange.dev/" },
+            { text: "Btrust", url: "https://pathways.btrust.tech/" },
+            { text: "B4OS", url: "https://b4os.dev/" }
+        ]
     },
     {
-        label: "Brainstorm what you can offer the BOSS space",
-        children: ["Take stock of the skills you have and the skills you need"]
+        label: "Explore projects in the BOSS ecosystem. Read the documentation, run them locally, review some PRs.",
+        links: [
+            { text: "BOSS ecosystem", url: "https://bitcoindevs.xyz/projects" }
+        ]
     },
     {
         label: "Build your network",
         children: [
-            "Attend a local Bitdev meetup",
-            "Join a study group",
-            "Attend conferences and events",
-            "Start your own meetup or group",
-            "Follow projects and people you're interested in"
+            {
+                label: "Attend a local BitDevs meetup. Don't have one in your city? Start one!",
+                links: [
+                    { text: "BitDevs", url: "https://bitdevs.org/cities" }
+                ]
+            },
+            { label: "Attend conferences and events"},
+            { label: "Find some local bitcoiners or devs and start your own meetup"},
+            { label: "Follow projects and people you're interested in on GitHub and social media"}
         ]
+    },
+    {
+        label: "Decide what you want to work on. Here are things to consider:",
+        children: [
+            { label: "What areas of bitcoin excite you most?" },
+            { label: "Are there any projects you find particularly interesting?" },
+            { label: "What can you offer with the skills you already have?" },
+            { label: "What knowledge gaps do you need to fill?" },
+        ]
+    },
+    {
+        label: "By this point you will have met some people along your journey. Share your goals and ask them if you’re heading in the right direction."
     },
     {
         label: "Learn about funding organizations and what you want in a grant"
-    },
-    {
-        label: "Decide what you want to work on. Things to consider:",
-        children: [
-            "What you want your project to be",
-            "What you're most passionate about",
-            "What you find most interesting",
-            "Where you can add value"
-        ]
-    },
-    {
-        label: "Find other people to ask if you're heading in the right direction"
     }
 ]
 
