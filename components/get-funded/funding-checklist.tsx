@@ -136,7 +136,7 @@ const FundingChecklist = () => {
                                 {item.children && (
                                     <div className="ml-8 flex flex-col gap-5 sm:ml-12">
                                         {item.children.map((child) => {
-                                            const childKey = `${key}::${child}`
+                                            const childKey = `${key}::${child.label}`
                                             return (
                                                 <CheckBox
                                                     key={childKey}
@@ -146,7 +146,8 @@ const FundingChecklist = () => {
                                                     onToggle={() =>
                                                         toggle(childKey)
                                                     }
-                                                    label={child}
+                                                    label={child.label}
+                                                    links={child.links}
                                                 />
                                             )
                                         })}

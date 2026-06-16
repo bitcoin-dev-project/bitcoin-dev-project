@@ -152,7 +152,7 @@ export type ChecklistLink = {
 export type ChecklistItem = {
     label: string
     links?: ChecklistLink[]
-    children?: string[]
+    children?: { label: string; links?: ChecklistLink[] }[]
 }
 
 export const FUNDING_CHECKLIST: ChecklistItem[] = [
@@ -174,19 +174,24 @@ export const FUNDING_CHECKLIST: ChecklistItem[] = [
     {
         label: "Build your network",
         children: [
-            "Attend a local BitDevs meetup. Don't have one in your city? Start one!",
-            "Attend conferences and events",
-            "Find some local bitcoiners or devs and start your own meetup",
-            "Follow projects and people you're interested in on GitHub and social media"
+            {
+                label: "Attend a local BitDevs meetup. Don't have one in your city? Start one!",
+                links: [
+                    { text: "BitDevs", url: "https://bitdevs.org/cities" }
+                ]
+            },
+            { label: "Attend conferences and events"},
+            { label: "Find some local bitcoiners or devs and start your own meetup"},
+            { label: "Follow projects and people you're interested in on GitHub and social media"}
         ]
     },
     {
         label: "Decide what you want to work on. Here are things to consider:",
         children: [
-            "What areas of bitcoin excite you most?",
-            "Are there any projects you find particularly interesting?",
-            "What can you offer with the skills you already have?",
-            "What knowledge gaps do you need to fill?",
+            { label: "What areas of bitcoin excite you most?" },
+            { label: "Are there any projects you find particularly interesting?" },
+            { label: "What can you offer with the skills you already have?" },
+            { label: "What knowledge gaps do you need to fill?" },
         ]
     },
     {
