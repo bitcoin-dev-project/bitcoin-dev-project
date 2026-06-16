@@ -6,7 +6,7 @@ import { Callout, ExtLink } from "@/components/get-funded/get-funded-ui"
  * hash (#) target a section on the main page; items with a slug are sub-pages.
  */
 export type NavItem = { label: string; href: string; slug?: string }
-export type NavSection = { title: string; href?: string; items: NavItem[] }
+export type NavSection = { title: string; href?: string; items: NavItem[]; columnIndex?: number}
 
 export const PATH_STORIES_BASE = "/get-funded/path-and-stories"
 
@@ -16,69 +16,43 @@ export const NAV_SECTIONS: NavSection[] = [
         href: "/get-funded",
         items: [
             {
-                label: "Why consider a BOSS development ?",
+                label: "Why consider a career in bitcoin?",
                 href: "/get-funded#why-consider"
             },
             {
-                label: "Earning a grant for full-time BOSS work",
+                label: "How grants work",
                 href: "/get-funded#earning-a-grant"
             },
             {
-                label: "Adam's article about getting funded",
+                label: "Guide for grant seekers",
                 href: "/get-funded#adam-article"
             }
-        ]
+        ],
+        columnIndex: 1
     },
     {
         title: "PATHS AND STORIES",
-        items: [
-            {
-                label: "Stickies-v - Proof over visibility",
-                href: `${PATH_STORIES_BASE}/stickies-v`,
-                slug: "stickies-v"
-            },
-            {
-                label: "Chuks - Building from community",
-                href: `${PATH_STORIES_BASE}/chuks`,
-                slug: "chuks"
-            },
-            {
-                label: "Beulah - Design to bitcoin",
-                href: `${PATH_STORIES_BASE}/beulah`,
-                slug: "beulah"
-            }
-        ]
+        href: "/get-funded#paths-and-stories",
+        items: [],
+        columnIndex: 1
     },
     {
-        title: "TIPS AND CHECKLIST",
-        items: [
-            {
-                label: "Checklist to getting funded",
-                href: "/get-funded#checklist"
-            }
-        ]
+        title: "CHECKLIST",
+        href: "/get-funded#checklist",
+        items: [],
+        columnIndex: 2
     },
     {
-        title: "ORGANISATIONS",
-        items: [
-            {
-                label: "View Organisations",
-                href: "/get-funded#organisations"
-            }
-        ]
+        title: "FUNDING ORGANIZATIONS",
+        href: "/get-funded#organizations",
+        items: [],
+        columnIndex: 2
     },
     {
         title: "APPLY",
-        items: [
-            {
-                label: "One form, multiple applications",
-                href: "/get-funded#apply"
-            },
-            {
-                label: "Common Application",
-                href: "/get-funded#common-application"
-            }
-        ]
+        href: "/get-funded#apply",
+        items: [],
+        columnIndex: 2
     }
 ]
 

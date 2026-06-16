@@ -183,7 +183,7 @@ export default function Career() {
                                 </div>
 
                                 <a
-                                    href="https://adamjonas.com/"
+                                    href="https://adamjonas.com/bitcoin/funding/grants/grants-bitcoin-open-source/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="relative inline-flex h-8 items-center overflow-hidden rounded-[20px] border-2 border-[#C7C1B6] bg-[#E1DBD0] text-xs font-semibold text-black transition-all hover:scale-105"
@@ -234,7 +234,7 @@ export default function Career() {
                     </section>
 
                     <section
-                        id="organisations"
+                        id="organizations"
                         className="flex scroll-mt-24 flex-col gap-5"
                     >
                         <div className="flex flex-col gap-2">
@@ -243,7 +243,7 @@ export default function Career() {
                             </SectionHeading>
                             <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
                                 Various exchanges and individuals have sponsored
-                                devs in the past, but the below orgs have become
+                                devs in the past, but the organizations below have become
                                 the main distributors of grants over the last
                                 couple of years.
                             </p>
