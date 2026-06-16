@@ -144,14 +144,26 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     }
 ]
 
+export type ChecklistLink = {
+    text: string
+    url: string
+}
+
 export type ChecklistItem = {
     label: string
+    links?: ChecklistLink[]
     children?: string[]
 }
 
 export const FUNDING_CHECKLIST: ChecklistItem[] = [
     {
-        label: "Join a study group to solidify your knowledge Bitshala, Code Orange, Btrust, and B4OS are all great)"
+        label: "Join a study group to solidify your knowledge (Bitshala, Code Orange, Btrust, and B4OS are all great)",
+        links: [
+            { text: "Bitshala", url: "https://bitshala.org/" },
+            { text: "Code Orange", url: "https://codeorange.dev/" },
+            { text: "Btrust", url: "https://www.btrust.tech/" },
+            { text: "B4OS", url: "https://b4os.dev/" }
+        ]
     },
     {
         label: "Explore projects in the BOSS ecosystem. Read the documentation, run them locally, review some PRs.",

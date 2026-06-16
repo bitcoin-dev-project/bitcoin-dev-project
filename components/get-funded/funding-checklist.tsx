@@ -4,24 +4,55 @@ import { useState } from "react"
 import Image from "next/image"
 import clsx from "clsx"
 import { Check } from "lucide-react"
-import { FUNDING_CHECKLIST } from "@/data/get-funded"
+import { FUNDING_CHECKLIST, type ChecklistLink } from "@/data/get-funded"
+
+/**
+ * Render a label string, turning any segments listed in `links` into anchors.
+ * Link clicks stop propagation so they open the URL instead of toggling the row.
+ */
+const renderLabel = (label: string, links?: ChecklistLink[]) => {
+    if (!links?.length) return label
+
+    const escaped = links.map((l) =>
+        l.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    )
+    const parts = label.split(new RegExp(`(${escaped.join("|")})`, "g"))
+
+    return parts.map((part, i) => {
+        const link = links.find((l) => l.text === part)
+        if (!link) return part
+        return (
+            <a
+                key={i}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="text-brand-orange-100 underline underline-offset-2 transition-colors hover:text-brand-orange-200"
+            >
+                {part}
+            </a>
+        )
+    })
+}
 
 const CheckBox = ({
     checked,
     onToggle,
-    label
+    label,
+    links
 }: {
     checked: boolean
     onToggle: () => void
     label: string
+    links?: ChecklistLink[]
 }) => (
-    <button
-        type="button"
-        onClick={onToggle}
-        aria-pressed={checked}
-        className="flex items-center gap-4 text-left font-quicksand"
-    >
-        <span
+    <div className="flex items-center gap-4 text-left font-quicksand">
+        <button
+            type="button"
+            onClick={onToggle}
+            aria-pressed={checked}
+            aria-label={label}
             className={clsx(
                 "flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border transition-colors",
                 checked
@@ -30,18 +61,19 @@ const CheckBox = ({
             )}
         >
             {checked && <Check className="h-4 w-4" strokeWidth={3} />}
-        </span>
+        </button>
         <span
+            onClick={onToggle}
             className={clsx(
-                "text-lg leading-snug transition-colors",
+                "cursor-pointer text-lg leading-snug transition-colors",
                 checked
                     ? "text-brand-dark/50 line-through"
                     : "text-brand-dark/90"
             )}
         >
-            {label}
+            {renderLabel(label, links)}
         </span>
-    </button>
+    </div>
 )
 
 /**
@@ -99,6 +131,7 @@ const FundingChecklist = () => {
                                     checked={!!checked[key]}
                                     onToggle={() => toggle(key)}
                                     label={item.label}
+                                    links={item.links}
                                 />
                                 {item.children && (
                                     <div className="ml-8 flex flex-col gap-5 sm:ml-12">
