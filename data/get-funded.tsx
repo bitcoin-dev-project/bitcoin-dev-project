@@ -159,14 +159,17 @@ export const FUNDING_CHECKLIST: ChecklistItem[] = [
     {
         label: "Join a study group to solidify your knowledge (Bitshala, Code Orange, Btrust, and B4OS are all great)",
         links: [
-            { text: "Bitshala", url: "https://bitshala.org/" },
+            { text: "Bitshala", url: "https://bitshala.org/cohorts/" },
             { text: "Code Orange", url: "https://codeorange.dev/" },
-            { text: "Btrust", url: "https://www.btrust.tech/" },
+            { text: "Btrust", url: "https://pathways.btrust.tech/" },
             { text: "B4OS", url: "https://b4os.dev/" }
         ]
     },
     {
         label: "Explore projects in the BOSS ecosystem. Read the documentation, run them locally, review some PRs.",
+        links: [
+            { text: "BOSS ecosystem", url: "https://bitcoindevs.xyz/projects" }
+        ]
     },
     {
         label: "Build your network",
@@ -187,11 +190,10 @@ export const FUNDING_CHECKLIST: ChecklistItem[] = [
         ]
     },
     {
-        label: "Learn about funding organizations and what you want in a grant"
+        label: "By this point you will have met some people along your journey. Share your goals and ask them if you’re heading in the right direction."
     },
-
     {
-        label: "Find other people to ask if you're heading in the right direction"
+        label: "Learn about funding organizations and what you want in a grant"
     }
 ]
 
