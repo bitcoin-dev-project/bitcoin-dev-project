@@ -21,14 +21,14 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
         logo: "/images/get-funded/brink.webp",
         logoWidth: 319,
         logoHeight: 120,
-        focus: "Protocol development",
+        focus: "Securing, testing, reviewing, and maintaining node software",
         scope: "Global",
         bullets: [
-            "501(c)(3) nonprofit funding Bitcoin development since 2020",
+            "501(c)(3) nonprofit funding bitcoin development since 2020",
             "Primarily supports work on the base protocol",
-            "Also funds research on scalability, usability, and Layer 2 (e.g. Lightning)",
-            "Offers 1-year grants",
-            "Has a physical office"
+            "Also funds research on scalability, usability, and Layer 2 (i.e. Lightning)",
+            "Physical office in London",
+            "Grants available for either remote or onsite work"
         ],
         url: "https://brink.dev/"
     },
@@ -41,7 +41,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
         scope: "Global",
         bullets: [
             "Bitcoin R&D initiative by Block",
-            "Grants paid in BTC",
+            "Full time grants paid in BTC",
             "Open to individuals and teams",
             "Projects must be free and open source",
             "Projects cannot have a business or profit motive"
@@ -58,10 +58,10 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
         bullets: [
             "501(c)(3) nonprofit funding since 2021",
             "Strong emphasis on free and open-source software (FOSS)",
-            "Supports projects improving Bitcoin's security, accessibility, and decentralization",
-            "Offers both small grants and long-term support (LTS)",
-            "Transparent grant decision process",
-            "$32.8M+ awarded across 380+ grants (as of 2026)"
+            "Supports projects that improve bitcoin's security, accessibility, and decentralization",
+            "Grants have flexible funding amounts and duration",
+            "Transparent, multi-step grant selection process",
+            "$34.9M+ awarded across 401+ grants in 40+ countries (as of 6/2026)"
         ],
         url: "https://opensats.org/"
     },
@@ -89,11 +89,11 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
         focus: "Freedom tech, censorship resistance",
         scope: "Global",
         bullets: [
-            "501(c)(3) nonprofit funding since 2020",
-            "Supports work empowering people in restrictive environments",
-            "Funds developers, activists, translators, and community builders",
-            "Strong mission alignment required",
-            "$8.5M+ awarded across 280+ grants"
+            "Nonpartisan, nonprofit promoting and protecting human rights globally",
+            "Mission driven. Focused on making bitcoin a powerful tool for human rights defenders operating in challenging political environments",
+            "Funds developers, activists, educators, UI/UX designers, and community builders",
+            "Looking for projects with real world impact that empower everyday citizens to use uncensorable money in their struggle for democracy",
+            "Funding bitcoin projects since 2020. $8.5M+ awarded across 280+ grants (as of 6/2026)"
         ],
         url: "https://hrf.org/devfund/"
     },
@@ -105,11 +105,11 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
         focus: "Bitcoin development",
         scope: "Global",
         bullets: [
-            "Awards a limited number of grants each year",
-            "12-month grants with monthly payments",
+            "12-month grants with monthly payments in bitcoin",
             "$50K–$150K per developer",
-            "Grant stacking allowed (up to $250K/year cap)",
-            "Includes interview process before approval"
+            "Grant stacking permitted (up to $400K/year cap)",
+            "Includes interview process before approval",
+            "Wholly funded by Maelstrom, the family office of Arthur Hayes"
         ],
         url: "https://maelstrom.fund/"
     },
@@ -119,26 +119,26 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
         logoWidth: 676,
         logoHeight: 120,
         focus: "Brazilian bitcoin developers",
-        scope: "Brazil / LATAM",
+        scope: "Brazil & the wider Latin American region",
         bullets: [
-            "Nonprofit focused on growing Bitcoin dev talent in Brazil",
-            "Supports open-source contributors",
-            "Provides training + funding",
-            "1-year grants for established developers"
+            "Nonprofit research and development center focused on growing bitcoin dev talent in Brazil",
+            "Invests in people at all stages, not just those already proven",
+            "In-person workshops, meetups, and retreats",
+            "1-year grants for established Brazilian developers"
         ],
         url: "https://vinteum.org/"
     },
     {
-        name: "BDK (Bitcoin Dev Kit)",
+        name: "Bitcoin Dev Kit Foundation",
         logo: "/images/get-funded/bdk.webp",
         logoWidth: 117,
         logoHeight: 120,
         focus: "Contributors to Bitcoin Dev Kit",
         scope: "Global",
         bullets: [
-            "Supports contributors working on BDK",
+            "Supports contributors working on the BDK suite of libraries and supporting projects",
             "Offers both part-time and full-time grants",
-            "Focused on improving Bitcoin developer infrastructure"
+            "Project based grants that do not necessarily need to be coding. They could be research, testing, docs, etc."
         ],
         url: "https://bitcoindevkit.org/"
     }
@@ -200,7 +200,7 @@ export const WORKSPACES: ResourceLink[] = [
     { name: "Brink", detail: "London", url: "https://brink.dev/" },
     { name: "2140", detail: "Amsterdam", url: "https://2140.dev/" },
     {
-        name: "Localhost",
+        name: "Localhost Research",
         detail: "San Francisco Bay Area",
         url: "https://lclhost.org/"
     }

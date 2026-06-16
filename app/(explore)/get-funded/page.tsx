@@ -266,14 +266,21 @@ export default function Career() {
                     </Tip>
 
                     <section className="flex flex-col gap-3">
-                        <SectionHeading>
-                            Workspaces for funded builders
-                        </SectionHeading>
+                        <SectionHeading>Employment</SectionHeading>
                         <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
-                            Already have a grant but need a place to work? These
-                            organizations offer office space and collaborative
-                            environments for Bitcoin developers with existing
-                            funding.
+                            A growing number of organizations employ developers
+                            to work full-time on bitcoin open-source software.
+                            Beyond salary and employment benefits, these places
+                            provide office space and unique opportunities for
+                            in-person engagement.
+                        </p>
+                        <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
+                            These roles offer something that is difficult to
+                            replicate remotely. Working right next to other
+                            bitcoin devs can open the door to all kinds of
+                            collaboration like impromptu brainstorming and
+                            whiteboarding sessions and conversations that
+                            facilitate quick feedback loops.
                         </p>
                         <ResourceLinks links={WORKSPACES} />
                     </section>
@@ -289,15 +296,6 @@ export default function Career() {
                             platforms.
                         </p>
                         <ResourceLinks links={CROWDFUNDING} />
-                        <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
-                            Projects like{" "}
-                            <ExtLink href="https://payjoindevkit.org/">
-                                Payjoin Dev Kit
-                            </ExtLink>{" "}
-                            used crowdfunding and community support to help
-                            build Bitcoin privacy tooling and developer
-                            infrastructure.
-                        </p>
                     </section>
 
                     <section
@@ -308,12 +306,14 @@ export default function Career() {
                             One form, multiple opportunities
                         </SectionHeading>
                         <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
-                            Get your work in front of multiple bitcoin grant
-                            organizations with a single application. Fill out
-                            the form once, select which funding providers to
-                            send it to, and submit. Each organization receives a
-                            copy of your application and will reach out if
-                            interested. Apply today to fast-track your funding.
+                            Ready to apply? Get your work in front of multiple
+                            bitcoin grant organizations with a single
+                            application. Fill out the form once, select which
+                            funding providers to send it to, and submit. Each
+                            organization receives a copy of your application and
+                            will reach out if interested. Apply today and get one
+                            step closer towards becoming a funded bitcoin
+                            contributor.
                         </p>
                     </section>
 
