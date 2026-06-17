@@ -96,9 +96,9 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/1603",
-    "publishedAt": "2026-06-04T22:00:46Z",
-    "title": "Payjoin-cli records an unresumable session event",
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1651",
+    "publishedAt": "2026-06-17T13:33:18Z",
+    "title": "Replaying the event log results in \"expired\" error for successfully completed sessions",
     "labels": [
       "bug"
     ],
