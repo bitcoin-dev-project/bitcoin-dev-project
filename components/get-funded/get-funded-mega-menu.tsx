@@ -17,6 +17,41 @@ const GetFundedMegaMenu = ({ isDarkMode }: { isDarkMode?: boolean }) => {
     const [open, setOpen] = useState(false)
     const close = () => setOpen(false)
 
+    const MenuColumn = ({ sections, close }: { sections: typeof NAV_SECTIONS; close: () => void }) => (
+        <div className="flex flex-col gap-y-6">
+            {sections.map((section) => (
+                <div key={section.title} className="flex flex-col gap-2.5">
+                    {section.href ? (
+                        <Link
+                            href={section.href}
+                            onClick={close}
+                            className="font-montserrat text-xs font-bold uppercase tracking-wide text-brand-dark/50 transition-colors hover:text-brand-orange-100"
+                        >
+                            {section.title}
+                        </Link>
+                    ) : (
+                        <h3 className="font-montserrat text-xs font-bold uppercase tracking-wide text-brand-dark/50">
+                            {section.title}
+                        </h3>
+                    )}
+                    <ul className="flex flex-col gap-2">
+                        {section.items.map((item) => (
+                            <li key={item.href}>
+                                <Link
+                                    href={item.href}
+                                    onClick={close}
+                                    className="font-quicksand text-sm leading-snug text-brand-dark/80 transition-colors hover:text-brand-orange-100"
+                                >
+                                    {item.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+    )
+
     return (
         <div
             className="relative"
@@ -63,40 +98,13 @@ const GetFundedMegaMenu = ({ isDarkMode }: { isDarkMode?: boolean }) => {
                     open ? "visible opacity-100" : "invisible opacity-0"
                 )}
             >
-                <div className="grid w-[36rem] grid-cols-2 gap-x-10 gap-y-6 rounded-2xl border border-black/5 bg-[#F3EFEA] p-6 shadow-lg">
-                    {NAV_SECTIONS.map((section) => (
-                        <div
-                            key={section.title}
-                            className="flex flex-col gap-2.5"
-                        >
-                            {section.href ? (
-                                <Link
-                                    href={section.href}
-                                    onClick={close}
-                                    className="font-montserrat text-xs font-bold uppercase tracking-wide text-brand-dark/50 transition-colors hover:text-brand-orange-100"
-                                >
-                                    {section.title}
-                                </Link>
-                            ) : (
-                                <h3 className="font-montserrat text-xs font-bold uppercase tracking-wide text-brand-dark/50">
-                                    {section.title}
-                                </h3>
-                            )}
-                            <ul className="flex flex-col gap-2">
-                                {section.items.map((item) => (
-                                    <li key={item.href}>
-                                        <Link
-                                            href={item.href}
-                                            onClick={close}
-                                            className="font-quicksand text-sm leading-snug text-brand-dark/80 transition-colors hover:text-brand-orange-100"
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+             <div className="flex w-[36rem] gap-x-10 rounded-2xl border border-black/5 bg-[#F3EFEA] p-6 shadow-lg">
+                <div className="flex flex-col gap-y-6">
+                    <MenuColumn sections={NAV_SECTIONS.filter(s => s.columnIndex === 1)} close={close} />
+                </div>
+                <div className="flex flex-col gap-y-6">
+                    <MenuColumn sections={NAV_SECTIONS.filter(s => s.columnIndex === 2)} close={close} />
+                </div>
                 </div>
             </div>
         </div>
