@@ -21,7 +21,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
         logo: "/images/get-funded/brink.webp",
         logoWidth: 319,
         logoHeight: 120,
-        focus: "Securing, testing, reviewing, and maintaining node software",
+        focus: "Securing, testing, reviewing, & maintaining node software",
         scope: "Global",
         bullets: [
             "501(c)(3) nonprofit funding bitcoin development since 2020",
@@ -30,7 +30,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
             "Physical office in London",
             "Grants available for either remote or onsite work"
         ],
-        url: "https://brink.dev/"
+        url: "https://brink.dev/programs"
     },
     {
         name: "Spiral",
@@ -46,7 +46,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
             "Projects must be free and open source",
             "Projects cannot have a business or profit motive"
         ],
-        url: "https://spiral.xyz/"
+        url: "https://spiral.xyz/#grants"
     },
     {
         name: "OpenSats",
@@ -63,7 +63,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
             "Transparent, multi-step grant selection process",
             "$34.9M+ awarded across 401+ grants in 40+ countries (as of 6/2026)"
         ],
-        url: "https://opensats.org/"
+        url: "https://opensats.org/apply"
     },
     {
         name: "Btrust",
@@ -73,13 +73,13 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
         focus: "Builders in the Global South",
         scope: "Africa, India, LATAM, MENA, Southeast Asia",
         bullets: [
-            "Founded with support from Jack Dorsey and Jay-Z",
-            "Focuses on underrepresented regions",
-            "Starter Grants: 6-month funding for new contributors",
-            "BOSC: Long-term grants with mentorship + peer support",
-            "Includes training, standups, and community support"
+            "Established in 2021 with a generous founding donation from Jack Dorsey and Jay-Z",
+            "Focused on Africa and regions of the global south where bitcoin development is less common",
+            "Starter Grants: 6-months of funding for new contributors",
+            "Btrust Open-Source Cohort: Long-term grants with mentorship & peer support",
+            "Long term grants have a team like structure that includes training, management, and project relations"
         ],
-        url: "https://www.btrust.tech/"
+        url: "https://www.btrust.tech/grants"
     },
     {
         name: "HRF (Human Rights Foundation)",
@@ -111,7 +111,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
             "Includes interview process before approval",
             "Wholly funded by Maelstrom, the family office of Arthur Hayes"
         ],
-        url: "https://maelstrom.fund/"
+        url: "https://maelstrom.fund/bitcoin-grant-program/"
     },
     {
         name: "Vinteum",
@@ -140,7 +140,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
             "Offers both part-time and full-time grants",
             "Project based grants that do not necessarily need to be coding. They could be research, testing, docs, etc."
         ],
-        url: "https://bitcoindevkit.org/"
+        url: "https://bitcoindevkit.org/foundation/grants"
     }
 ]
 
