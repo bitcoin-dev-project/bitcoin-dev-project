@@ -118,7 +118,7 @@ const FundingChecklist = () => {
                         className="h-16 w-auto shrink-0 lg:h-24"
                     />
                     <h3 className="pb-3 font-montserrat text-lg font-semibold italic text-brand-dark lg:text-2xl">
-                        Check off your funding prep
+                        Prepare for Funding
                     </h3>
                 </div>
 

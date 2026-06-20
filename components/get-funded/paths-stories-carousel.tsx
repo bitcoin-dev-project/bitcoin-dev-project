@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useRef } from "react"
 import { ChevronLeft, ChevronRight, Maximize2 } from "lucide-react"
 import Quotes from "@/components/assets/Quotes"
+import CornerDots from "@/components/assets/CornerDots"
 import {
     PATH_STORIES,
     PATH_STORIES_BASE,
@@ -35,11 +36,11 @@ const Avatar = ({ person }: { person: PathStory }) => {
 }
 
 const InfoRow = ({ label, value }: { label: string; value: string }) => (
-    <p className="font-quicksand text-base leading-snug lg:text-lg">
-        <span className="font-medium uppercase text-brand-dark underline underline-offset-2">
+    <p className="flex gap-2 font-quicksand text-base leading-snug lg:text-lg">
+        <span className="w-52 shrink-0 font-bold uppercase text-brand-dark/70">
             {label}
         </span>{" "}
-        : <span className="text-brand-dark/70">{value}</span>
+        <span className="text-brand-dark/70">{value}</span>
     </p>
 )
 
@@ -49,7 +50,8 @@ const StoryCard = ({ person }: { person: PathStory }) => {
 
     return (
         <div className="h-full rounded-2xl border border-brand-gray-100 bg-brand-card p-2.5">
-            <div className="flex h-full flex-col gap-6 rounded-xl border border-dashed border-brand-gray-200 p-5 lg:p-7">
+            <div className="relative flex h-full flex-col gap-6 rounded-xl p-5 lg:p-7">
+                <CornerDots />
                 <div className="flex items-center gap-4">
                     <Avatar person={person} />
                     <div className="flex flex-col gap-1">
@@ -66,6 +68,8 @@ const StoryCard = ({ person }: { person: PathStory }) => {
                     <Quotes className="mt-1.5 shrink-0" width={18} />
                     <p>{card.quote}</p>
                 </div>
+
+                <hr className="border-grand-gray-100" />
 
                 <div className="flex flex-col gap-3">
                     <InfoRow label="Focus" value={card.focus} />
@@ -99,19 +103,23 @@ const PathsStoriesCarousel = () => {
     return (
         <div className="flex flex-col gap-4">
             {/* One card shown at a time; the next peeks to signal more. */}
-            <div
-                ref={trackRef}
-                className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            >
-                {PATH_STORIES.map((person) => (
-                    <div
-                        key={person.slug}
-                        data-story-card
-                        className="w-[88%] shrink-0 snap-start sm:w-[90%]"
-                    >
-                        <StoryCard person={person} />
-                    </div>
-                ))}
+            <div className="relative">
+                <div
+                    ref={trackRef}
+                    className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                >
+                    {PATH_STORIES.map((person) => (
+                        <div
+                            key={person.slug}
+                            data-story-card
+                            className="w-[88%] shrink-0 snap-start sm:w-[90%]"
+                        >
+                            <StoryCard person={person} />
+                        </div>
+                    ))}
+                <div className="w-12 shrink-0" />
+            </div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-[#f7f0e6]" />
             </div>
 
             <div className="flex items-center justify-center gap-3">

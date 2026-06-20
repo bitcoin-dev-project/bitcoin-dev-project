@@ -91,10 +91,10 @@ export const PATH_STORIES: PathStory[] = [
         available: true,
         card: {
             role: "Bitcoin Core Contributor | Brink",
-            quote: "Being helpful mattered more than being visible",
+            quote: "I kept showing up consistently for multiple months..., I tried focusing on being helpful rather than on being visible.",
             focus: "bitcoinkernel, code review, core infrastructure",
             fundingOrg: "Brink",
-            fundingStory: "Funded after ~9 months of consistent contribution"
+            fundingStory: "Self-taught Python programmer that used books, seminars, and code review sessions to learn C++ and Bitcoin Core"
         },
         qa: [
             {
@@ -393,9 +393,9 @@ export const PATH_STORIES: PathStory[] = [
         card: {
             quote: "You have to develop your own judgment about what's technically sound, what's worth pursuing, and what's ready to share.",
             focus: "Nested MuSig2 in the secp256k1-zkp library",
-            fundingOrg: "Second + Vora",
+            fundingOrg: "Second, Vora",
             fundingStory:
-                "Transitioned from backend dev → funded cryptography researcher"
+                "Transitioned from backend dev to funded cryptography researcher"
         },
         qa: [
             {

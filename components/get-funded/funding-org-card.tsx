@@ -1,15 +1,7 @@
 import Image from "next/image"
 import { RightArrowIcon } from "@bitcoin-dev-project/bdp-ui/icons"
 import type { FundingOrgDetail } from "@/data/get-funded"
-
-const CornerDots = () => (
-    <>
-        <div className="absolute top-2 left-2 h-3 w-3 rounded-full bg-brand-gray-100" />
-        <div className="absolute top-2 right-2 h-3 w-3 rounded-full bg-brand-gray-100" />
-        <div className="absolute bottom-2 left-2 h-3 w-3 rounded-full bg-brand-gray-100" />
-        <div className="absolute bottom-2 right-2 h-3 w-3 rounded-full bg-brand-gray-100" />
-    </>
-)
+import CornerDots from "@/components/assets/CornerDots"
 
 const Row = ({ label, value }: { label: string; value: string }) => (
     <div className="flex gap-2 text-sm font-quicksand">

@@ -7,6 +7,7 @@ export type FundingOrgDetail = {
     name: string
     /** path under /public, or undefined to show a text fallback */
     logo?: string
+    logoHover?: string
     logoWidth?: number
     logoHeight?: number
     focus: string
@@ -19,6 +20,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     {
         name: "Brink",
         logo: "/images/get-funded/brink.webp",
+        logoHover: "/images/get-funded/brink-hover.webp",
         logoWidth: 319,
         logoHeight: 120,
         focus: "Securing, testing, reviewing, & maintaining node software",
@@ -35,6 +37,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     {
         name: "Spiral",
         logo: "/images/get-funded/spiral.webp",
+        logoHover: "/images/get-funded/spiral-hover.webp",
         logoWidth: 106,
         logoHeight: 120,
         focus: "Bitcoin & open-source innovation",
@@ -51,6 +54,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     {
         name: "OpenSats",
         logo: "/images/get-funded/open-sats.webp",
+        logoHover: "/images/get-funded/open-sats-hover.webp",
         logoWidth: 185,
         logoHeight: 120,
         focus: "FOSS, decentralization",
@@ -68,6 +72,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     {
         name: "Btrust",
         logo: "/images/get-funded/btrust.webp",
+        logoHover: "/images/get-funded/btrust-hover.webp",
         logoWidth: 280,
         logoHeight: 120,
         focus: "Builders in the Global South",
@@ -84,6 +89,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     {
         name: "HRF (Human Rights Foundation)",
         logo: "/images/get-funded/hrf.webp",
+        logoHover: "/images/get-funded/hrf-hover.webp",
         logoWidth: 162,
         logoHeight: 120,
         focus: "Freedom tech, censorship resistance",
@@ -100,6 +106,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     {
         name: "Maelstrom",
         logo: "/images/get-funded/maelstrom.webp",
+        logoHover: "/images/get-funded/maelstrom-hover.webp",
         logoWidth: 695,
         logoHeight: 120,
         focus: "Bitcoin development",
@@ -116,6 +123,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     {
         name: "Vinteum",
         logo: "/images/get-funded/vinteum.webp",
+        logoHover: "/images/get-funded/vinteum-hover.webp",
         logoWidth: 676,
         logoHeight: 120,
         focus: "Brazilian bitcoin developers",
@@ -131,6 +139,7 @@ export const FUNDING_ORGS: FundingOrgDetail[] = [
     {
         name: "Bitcoin Dev Kit Foundation",
         logo: "/images/get-funded/bdk.webp",
+        logoHover: "/images/get-funded/bdk-hover.webp",
         logoWidth: 117,
         logoHeight: 120,
         focus: "Contributors to Bitcoin Dev Kit",

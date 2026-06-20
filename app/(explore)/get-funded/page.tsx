@@ -28,7 +28,7 @@ const Tip = ({ children }: { children: React.ReactNode }) => (
         <h3 className="mb-1 font-montserrat text-lg font-bold uppercase text-brand-dark lg:text-xl">
             Tip
         </h3>
-        <p className="font-quicksand text-base leading-[1.5] text-brand-dark/70 lg:text-lg">
+        <p className="font-quicksand text-base leading-[1.5] text-brand-dark/70 lg:text-lg italic">
             {children}
         </p>
     </div>
@@ -57,9 +57,9 @@ export default function Career() {
                         <h1 className="font-montserrat text-[2rem] font-bold leading-none text-black lg:text-[3.5rem]">
                             GET FUNDED
                         </h1>
-                        <p className="max-w-4xl font-quicksand text-lg text-brand-dark lg:text-xl">
+                        <p className="max-w-4xl font-quicksand text-lg text-brand-dark lg:text-xl italic">
                             Learn how grants support full-time bitcoin
-                            development.
+                            development
                         </p>
                     </div>
 
@@ -69,7 +69,7 @@ export default function Career() {
                     >
                         <SectionHeading>
                             Why consider a career in bitcoin open source
-                            development?
+                            software (BOSS)?
                         </SectionHeading>
                         <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
                             If you aspire to have professional freedom, work on
@@ -149,7 +149,7 @@ export default function Career() {
                         id="adam-article"
                         className="scroll-mt-24 rounded-xl border border-brand-gray-100 bg-brand-card p-2.5"
                     >
-                        <div className="rounded-lg border border-dashed border-gray-300 p-2.5">
+                        <div className="rounded-lg p-2.5">
                             <div className="mb-4 flex items-start gap-1">
                                 <Quotes className="min-w-4" />
                                 <p className="font-quicksand text-2xl italic">
@@ -173,11 +173,8 @@ export default function Career() {
                                         className="h-auto w-[145px]"
                                     />
                                     <div className="font-quicksand">
-                                        <p className="text-sm font-normal">
-                                            By Adam Jonas
-                                        </p>
-                                        <p className="text-sm text-[#494744] opacity-75">
-                                            Founder
+                                        <p className="text-sm italic text-[#494744] opacity-75">
+                                            Adam Jonas, Bitcoin Dev Project Founder
                                         </p>
                                     </div>
                                 </div>
@@ -210,13 +207,12 @@ export default function Career() {
 
                     <section
                         id="paths-and-stories"
-                        className="flex scroll-mt-24 flex-col gap-5"
+                        className="flex scroll-mt-24 flex-col gap-5 pt-16"
                     >
                         <div className="flex flex-col gap-2">
-                            <SectionHeading>Paths and Stories</SectionHeading>
-                            <p className="font-quicksand text-lg lg:text-xl">
-                                Here are three real journeys from first
-                                contribution to funded work.
+                            <SectionHeading>Paths and stories</SectionHeading>
+                            <p className="font-quicksand text-lg lg:text-xl pb-4">
+                                Meet contributors who turned their BOSS contributions into full-time work
                             </p>
                         </div>
                         <PathsStoriesCarousel />
@@ -224,24 +220,28 @@ export default function Career() {
 
                     <section
                         id="checklist"
-                        className="flex scroll-mt-24 flex-col gap-5"
+                        className="flex scroll-mt-24 flex-col gap-5 pt-16"
                     >
                         <SectionHeading>
-                            A simple checklist to help you get ready to apply
-                            for funding.
+                            Checklist
                         </SectionHeading>
+                        <p className="font-quicksand text-lg lg:text-xl pb-4">
+                            A strong funding application starts well before you apply. Before submitting anything, 
+                            take the time to get these pieces in place. These items will help you build a strong 
+                            foundation and make the entire process smoother.
+                        </p>
                         <FundingChecklist />
                     </section>
 
                     <section
                         id="organizations"
-                        className="flex scroll-mt-24 flex-col gap-5"
+                        className="flex scroll-mt-24 flex-col gap-5 pt-16"
                     >
                         <div className="flex flex-col gap-2">
                             <SectionHeading>
-                                Funding Organizations
+                                Grant organizations
                             </SectionHeading>
-                            <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
+                            <p className="font-quicksand text-lg leading-[1.4] lg:text-xl pb-4">
                                 Various exchanges and individuals have sponsored
                                 devs in the past, but the organizations below have become
                                 the main distributors of grants over the last
@@ -265,7 +265,7 @@ export default function Career() {
                         code contributions.
                     </Tip>
 
-                    <section className="flex flex-col gap-3">
+                    <section className="flex flex-col gap-3 pt-16">
                         <SectionHeading>Employment</SectionHeading>
                         <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
                             A growing number of organizations employ developers
@@ -274,7 +274,7 @@ export default function Career() {
                             provide office space and unique opportunities for
                             in-person engagement.
                         </p>
-                        <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
+                        <p className="font-quicksand text-lg leading-[1.4] lg:text-xl pb-4">
                             These roles offer something that is difficult to
                             replicate remotely. Working right next to other
                             bitcoin devs can open the door to all kinds of
@@ -285,7 +285,7 @@ export default function Career() {
                         <ResourceLinks links={WORKSPACES} />
                     </section>
 
-                    <section className="flex flex-col gap-3">
+                    <section className="flex flex-col gap-3 pt-16">
                         <SectionHeading>
                             Crowdfunding your project
                         </SectionHeading>
@@ -300,7 +300,7 @@ export default function Career() {
 
                     <section
                         id="apply"
-                        className="flex scroll-mt-24 flex-col gap-3"
+                        className="flex scroll-mt-24 flex-col gap-3 pt-16"
                     >
                         <SectionHeading>
                             One form, multiple opportunities
