@@ -13,26 +13,37 @@ const CornerDots = () => (
 
 const Row = ({ label, value }: { label: string; value: string }) => (
     <div className="flex gap-2 text-sm font-quicksand">
-        <span className="w-14 shrink-0 font-bold uppercase text-brand-dark/50">
+        <span className="w-14 shrink-0 font-bold uppercase" style={{ color: '#ec5136'}}>
             {label}
         </span>
-        <span className="text-brand-dark/80">{value}</span>
+        <span className="text-brand-dark/80 italic">{value}</span>
     </div>
 )
 
 const FundingOrgCard = ({ org }: { org: FundingOrgDetail }) => (
-    <div className="relative flex flex-col gap-4 rounded-xl border border-brand-gray-100 bg-brand-card px-5 py-7">
+    <div className="group relative flex flex-col gap-4 rounded-xl border border-brand-gray-100 bg-brand-card px-5 py-7">
         <CornerDots />
 
-        <div className="flex h-10 items-center">
+        <div className="relative flex h-10 items-center">
             {org.logo ? (
-                <Image
-                    src={org.logo}
-                    alt={`${org.name} logo`}
-                    width={org.logoWidth ?? 90}
-                    height={org.logoHeight ?? 32}
-                    className="h-7 w-auto object-contain"
-                />
+                <>
+                    <Image
+                        src={org.logo}
+                        alt={`${org.name} logo`}
+                        width={org.logoWidth ?? 90}
+                        height={org.logoHeight ?? 32}
+                        className="h-7 w-auto object-contain transition-opacity group-hover:opacity-0"
+                    />
+                    {org.logoHover && (
+                    <Image
+                        src={org.logoHover}
+                        alt={`${org.name} logo`}
+                        width={org.logoWidth ?? 90}
+                        height={org.logoHeight ?? 32}
+                        className="absolute h-7 w-auto object-contain opacity-0 transition-opacity group-hover:opacity-100"
+                    />
+                    )}
+                </>
             ) : (
                 <span className="font-montserrat text-lg font-bold text-brand-dark/70">
                     {org.name}
@@ -46,6 +57,8 @@ const FundingOrgCard = ({ org }: { org: FundingOrgDetail }) => (
             <Row label="Scope" value={org.scope} />
         </div>
 
+        <hr className="border-grand-gray-100" />
+
         <ul className="flex flex-col gap-1.5 font-quicksand text-sm text-brand-dark/80">
             {org.bullets.map((bullet) => (
                 <li key={bullet} className="flex gap-2">
@@ -55,15 +68,17 @@ const FundingOrgCard = ({ org }: { org: FundingOrgDetail }) => (
             ))}
         </ul>
 
-        <a
-            href={org.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-auto inline-flex w-max items-center gap-2 self-end rounded-[10px] border border-brand-gray-100 bg-brand px-3 py-2 font-quicksand text-sm font-semibold text-brand-dark transition-colors hover:border-brand-orange-100 hover:text-brand-orange-100"
-        >
-            View Organization
-            <RightArrowIcon width={12} className="text-current" />
-        </a>
+        <div className="mt-auto self-end pt-4 pb-2 w-full">
+            <a
+                href={org.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="justify-center flex w-full items-center gap-2 rounded-[10px] border border-brand-gray-100 bg-brand px-3 py-2 font-quicksand text-sm font-semibold text-brand-dark transition-colors hover:border-brand-orange-100 hover:text-brand-orange-100"
+            >
+                Learn More
+                <RightArrowIcon width={12} className="text-current" />
+            </a>
+        </div>
     </div>
 )
 
