@@ -47,6 +47,12 @@ export default async function Page() {
     const { prev, next, post, authorDetails, mainContent, jsonLd } =
         getTopicData(slug)
 
+    const pageComponents = Object.fromEntries(
+        Object.entries(components).filter(([key]) =>
+            (post.usedComponents as string[]).includes(key)
+        )
+    )
+
     return (
         <>
             <script
@@ -61,7 +67,7 @@ export default async function Page() {
             >
                 <MDXLayoutRenderer
                     code={post.body.code}
-                    components={components}
+                    components={pageComponents}
                     toc={post.toc}
                 />
             </TopicLayout>
