@@ -287,12 +287,12 @@ export default function Career() {
 
                     <section className="flex flex-col gap-3 pt-16">
                         <SectionHeading>
-                            Crowdfunding your project
+                            Crowdfunding
                         </SectionHeading>
                         <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
                             If you do not yet have funding or want
                             community-backed support, you can launch your own
-                            project through Bitcoin-focused crowdfunding
+                            project through these bitcoin-focused crowdfunding
                             platforms.
                         </p>
                         <ResourceLinks links={CROWDFUNDING} />
