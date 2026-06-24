@@ -273,6 +273,15 @@ export const FEATUREDPRODUCTS = [
         target: "_blank",
         description:
             "An interactive science fiction game designed to inspire a generation to fall in love with bitcoin."
+    },
+    {
+        name: "Bitcoin Transcripts",
+        image: "/images/products/transcripts.webp",
+        action: "Archive of bitcoin tech transcripts",
+        link: "https://btctranscripts.com/",
+        target: "_blank",
+        description:
+            "1000+ transcripts of technical bitcoin talks, podcasts and other types of audio."
     }
 ]
 
