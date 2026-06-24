@@ -365,7 +365,9 @@ export default function CommunitiesPage() {
                                                 <div className="text-sm">
                                                     <span className="text-gray-600 dark:text-gray-400">
                                                         {new Date(
-                                                            community.currentCohort.startDate
+                                                            community
+                                                                .currentCohort
+                                                                .startDate
                                                         ) <= new Date()
                                                             ? "Started"
                                                             : "Starts"}
