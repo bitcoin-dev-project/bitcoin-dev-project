@@ -259,20 +259,20 @@ export const FEATUREDPRODUCTS = [
     {
         name: "Decoding Bitcoin",
         image: "/images/products/decoding-bitcoin.webp",
-        action: "Featured in Code Orange Devs",
+        action: "Learn by doing",
         link: "/decoding",
         target: "_blank",
         description:
-            "A self-paced educational platform that introduces key Bitcoin concepts through visual explanations and exercises."
+            "Self-paced educational platform covering key bitcoin concepts through visual explanations and exercises."
     },
     {
         name: "Saving Satoshi",
         image: "/images/products/saving-satoshi.webp",
-        action: "Learn Bitcoin with the holocat",
+        action: "Code-based bitcoin adventure",
         link: "https://savingsatoshi.com/",
         target: "_blank",
         description:
-            "An interactive science fiction game designed to inspire a generation to fall in love with bitcoin."
+            "Interactive RPG using storytelling and gaming mechanics to onboard curious coders into the developer ecosystem."
     },
     {
         name: "Bitcoin Transcripts",
@@ -281,7 +281,7 @@ export const FEATUREDPRODUCTS = [
         link: "https://btctranscripts.com/",
         target: "_blank",
         description:
-            "1000+ transcripts of technical bitcoin talks, podcasts and other types of audio."
+            "Over one thousand transcripts of technical bitcoin talks, podcasts and other types of audio."
     }
 ]
 
