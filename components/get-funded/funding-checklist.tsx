@@ -161,8 +161,8 @@ const FundingChecklist = () => {
                 <p className="mt-7 border-t border-brand-gray-100 pt-5 font-quicksand text-sm italic text-brand-dark/60">
                     Note: Just because you finish this checklist doesn&apos;t
                     mean you&apos;re necessarily ready – it may take multiple
-                    applications and projects to land a grant.
-                    Don&apos;t give up!
+                    applications and projects to land a grant. Don&apos;t give
+                    up!
                 </p>
             </div>
         </div>

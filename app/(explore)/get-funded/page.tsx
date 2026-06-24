@@ -174,7 +174,8 @@ export default function Career() {
                                     />
                                     <div className="font-quicksand">
                                         <p className="text-sm italic text-[#494744] opacity-75">
-                                            Adam Jonas, Bitcoin Dev Project Founder
+                                            Adam Jonas, Bitcoin Dev Project
+                                            Founder
                                         </p>
                                     </div>
                                 </div>
@@ -212,7 +213,8 @@ export default function Career() {
                         <div className="flex flex-col gap-2">
                             <SectionHeading>Paths and stories</SectionHeading>
                             <p className="font-quicksand text-lg lg:text-xl pb-4">
-                                Meet contributors who turned their BOSS contributions into full-time work
+                                Meet contributors who turned their BOSS
+                                contributions into full-time work
                             </p>
                         </div>
                         <PathsStoriesCarousel />
@@ -222,13 +224,13 @@ export default function Career() {
                         id="checklist"
                         className="flex scroll-mt-24 flex-col gap-5 pt-16"
                     >
-                        <SectionHeading>
-                            Checklist
-                        </SectionHeading>
+                        <SectionHeading>Checklist</SectionHeading>
                         <p className="font-quicksand text-lg lg:text-xl pb-4">
-                            A strong funding application starts well before you apply. Before submitting anything, 
-                            take the time to get these pieces in place. These items will help you build a strong 
-                            foundation and make the entire process smoother.
+                            A strong funding application starts well before you
+                            apply. Before submitting anything, take the time to
+                            get these pieces in place. These items will help you
+                            build a strong foundation and make the entire
+                            process smoother.
                         </p>
                         <FundingChecklist />
                     </section>
@@ -238,14 +240,12 @@ export default function Career() {
                         className="flex scroll-mt-24 flex-col gap-5 pt-16"
                     >
                         <div className="flex flex-col gap-2">
-                            <SectionHeading>
-                                Grant organizations
-                            </SectionHeading>
+                            <SectionHeading>Grant organizations</SectionHeading>
                             <p className="font-quicksand text-lg leading-[1.4] lg:text-xl pb-4">
                                 Various exchanges and individuals have sponsored
-                                devs in the past, but the organizations below have become
-                                the main distributors of grants over the last
-                                couple of years.
+                                devs in the past, but the organizations below
+                                have become the main distributors of grants over
+                                the last couple of years.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -286,9 +286,7 @@ export default function Career() {
                     </section>
 
                     <section className="flex flex-col gap-3 pt-16">
-                        <SectionHeading>
-                            Crowdfunding
-                        </SectionHeading>
+                        <SectionHeading>Crowdfunding</SectionHeading>
                         <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
                             If you do not yet have funding or want
                             community-backed support, you can launch your own
@@ -311,8 +309,8 @@ export default function Career() {
                             application. Fill out the form once, select which
                             funding providers to send it to, and submit. Each
                             organization receives a copy of your application and
-                            will reach out if interested. Apply today and get one
-                            step closer towards becoming a funded bitcoin
+                            will reach out if interested. Apply today and get
+                            one step closer towards becoming a funded bitcoin
                             contributor.
                         </p>
                     </section>

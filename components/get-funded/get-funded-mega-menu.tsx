@@ -17,7 +17,13 @@ const GetFundedMegaMenu = ({ isDarkMode }: { isDarkMode?: boolean }) => {
     const [open, setOpen] = useState(false)
     const close = () => setOpen(false)
 
-    const MenuColumn = ({ sections, close }: { sections: typeof NAV_SECTIONS; close: () => void }) => (
+    const MenuColumn = ({
+        sections,
+        close
+    }: {
+        sections: typeof NAV_SECTIONS
+        close: () => void
+    }) => (
         <div className="flex flex-col gap-y-6">
             {sections.map((section) => (
                 <div key={section.title} className="flex flex-col gap-2.5">
@@ -98,13 +104,23 @@ const GetFundedMegaMenu = ({ isDarkMode }: { isDarkMode?: boolean }) => {
                     open ? "visible opacity-100" : "invisible opacity-0"
                 )}
             >
-             <div className="flex w-[36rem] gap-x-10 rounded-2xl border border-black/5 bg-[#F3EFEA] p-6 shadow-lg">
-                <div className="flex flex-col gap-y-6">
-                    <MenuColumn sections={NAV_SECTIONS.filter(s => s.columnIndex === 1)} close={close} />
-                </div>
-                <div className="flex flex-col gap-y-6">
-                    <MenuColumn sections={NAV_SECTIONS.filter(s => s.columnIndex === 2)} close={close} />
-                </div>
+                <div className="flex w-[36rem] gap-x-10 rounded-2xl border border-black/5 bg-[#F3EFEA] p-6 shadow-lg">
+                    <div className="flex flex-col gap-y-6">
+                        <MenuColumn
+                            sections={NAV_SECTIONS.filter(
+                                (s) => s.columnIndex === 1
+                            )}
+                            close={close}
+                        />
+                    </div>
+                    <div className="flex flex-col gap-y-6">
+                        <MenuColumn
+                            sections={NAV_SECTIONS.filter(
+                                (s) => s.columnIndex === 2
+                            )}
+                            close={close}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,7 +5,10 @@ import CornerDots from "@/components/assets/CornerDots"
 
 const Row = ({ label, value }: { label: string; value: string }) => (
     <div className="flex gap-2 text-sm font-quicksand">
-        <span className="w-14 shrink-0 font-bold uppercase" style={{ color: '#ec5136'}}>
+        <span
+            className="w-14 shrink-0 font-bold uppercase"
+            style={{ color: "#ec5136" }}
+        >
             {label}
         </span>
         <span className="text-brand-dark/80 italic">{value}</span>
@@ -27,13 +30,13 @@ const FundingOrgCard = ({ org }: { org: FundingOrgDetail }) => (
                         className="h-7 w-auto object-contain transition-opacity group-hover:opacity-0"
                     />
                     {org.logoHover && (
-                    <Image
-                        src={org.logoHover}
-                        alt={`${org.name} logo`}
-                        width={org.logoWidth ?? 90}
-                        height={org.logoHeight ?? 32}
-                        className="absolute h-7 w-auto object-contain opacity-0 transition-opacity group-hover:opacity-100"
-                    />
+                        <Image
+                            src={org.logoHover}
+                            alt={`${org.name} logo`}
+                            width={org.logoWidth ?? 90}
+                            height={org.logoHeight ?? 32}
+                            className="absolute h-7 w-auto object-contain opacity-0 transition-opacity group-hover:opacity-100"
+                        />
                     )}
                 </>
             ) : (

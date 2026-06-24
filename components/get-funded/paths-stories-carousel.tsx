@@ -117,9 +117,9 @@ const PathsStoriesCarousel = () => {
                             <StoryCard person={person} />
                         </div>
                     ))}
-                <div className="w-12 shrink-0" />
-            </div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-[#f7f0e6]" />
+                    <div className="w-12 shrink-0" />
+                </div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-[#f7f0e6]" />
             </div>
 
             <div className="flex items-center justify-center gap-3">

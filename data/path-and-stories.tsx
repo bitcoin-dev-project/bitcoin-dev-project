@@ -6,7 +6,12 @@ import { Callout, ExtLink } from "@/components/get-funded/get-funded-ui"
  * hash (#) target a section on the main page; items with a slug are sub-pages.
  */
 export type NavItem = { label: string; href: string; slug?: string }
-export type NavSection = { title: string; href?: string; items: NavItem[]; columnIndex?: number}
+export type NavSection = {
+    title: string
+    href?: string
+    items: NavItem[]
+    columnIndex?: number
+}
 
 export const PATH_STORIES_BASE = "/get-funded/path-and-stories"
 
@@ -94,7 +99,8 @@ export const PATH_STORIES: PathStory[] = [
             quote: "I kept showing up consistently for multiple months..., I tried focusing on being helpful rather than on being visible.",
             focus: "bitcoinkernel, code review, core infrastructure",
             fundingOrg: "Brink",
-            fundingStory: "Self-taught Python programmer that used books, seminars, and code review sessions to learn C++ and Bitcoin Core"
+            fundingStory:
+                "Self-taught Python programmer that used books, seminars, and code review sessions to learn C++ and Bitcoin Core"
         },
         qa: [
             {
