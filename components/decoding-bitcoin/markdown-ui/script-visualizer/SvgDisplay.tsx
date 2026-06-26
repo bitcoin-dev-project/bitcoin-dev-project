@@ -1,10 +1,8 @@
 import React from "react"
 import Image, { ImageProps } from "next/image"
 
-interface SvgDisplayProps extends Omit<
-    React.ComponentProps<"div">,
-    "width" | "height"
-> {
+interface SvgDisplayProps
+    extends Omit<React.ComponentProps<"div">, "width" | "height"> {
     src: string
     alt?: string
     width?: string | number
