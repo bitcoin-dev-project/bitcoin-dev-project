@@ -163,7 +163,7 @@ export default function Career() {
                                 </p>
                             </div>
 
-                            <div className="mt-4 flex items-end justify-between">
+                            <div className="mt-4 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
                                 <div className="flex flex-col gap-2">
                                     <Image
                                         src="/images/get-funded/signature.webp"
@@ -184,7 +184,7 @@ export default function Career() {
                                     href="https://adamjonas.com/bitcoin/funding/grants/grants-bitcoin-open-source/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="relative inline-flex h-8 items-center overflow-hidden rounded-[20px] border-2 border-[#C7C1B6] bg-[#E1DBD0] text-xs font-semibold text-black transition-all hover:scale-105"
+                                    className="relative inline-flex h-8 shrink-0 items-center overflow-hidden rounded-[20px] border-2 border-[#C7C1B6] bg-[#E1DBD0] text-xs font-semibold text-black transition-all hover:scale-105"
                                 >
                                     <span className="absolute -left-[2px] -top-[2px] flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border-2 border-[#C7C1B6]">
                                         <BookIcon

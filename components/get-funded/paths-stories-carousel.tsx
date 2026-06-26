@@ -36,11 +36,11 @@ const Avatar = ({ person }: { person: PathStory }) => {
 }
 
 const InfoRow = ({ label, value }: { label: string; value: string }) => (
-    <p className="flex gap-2 font-quicksand text-base leading-snug lg:text-lg">
-        <span className="w-52 shrink-0 font-bold uppercase text-brand-dark/70">
+    <p className="flex flex-col gap-0.5 font-quicksand text-base leading-snug sm:flex-row sm:gap-2 lg:text-lg">
+        <span className="font-bold uppercase text-brand-dark/70 sm:w-52 sm:shrink-0">
             {label}
-        </span>{" "}
-        <span className="text-brand-dark/70">{value}</span>
+        </span>
+        <span className="min-w-0 break-words text-brand-dark/70">{value}</span>
     </p>
 )
 

@@ -190,8 +190,16 @@ export const NAVLINKS = [
         link: "/about"
     },
     {
-        name: "Explore",
+        name: "Learn",
         link: "/learn"
+    },
+    {
+        name: "Contribute",
+        link: "/contribute"
+    },
+    {
+        name: "Get Funded",
+        link: "/get-funded"
     }
 ]
 
