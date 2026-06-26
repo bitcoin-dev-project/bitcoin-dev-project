@@ -29,6 +29,7 @@ const HeroPage = ({
                     sizes="100vw"
                     priority
                 />
+                <div className="absolute inset-0 bg-black/10" />
             </div>
 
             <nav className="sticky top-0 z-50 flex items-center justify-between max-w-desktop-max mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 h-20">
@@ -51,16 +52,8 @@ const HeroPage = ({
             <div className="relative pt-8 lg:pt-0 z-10 w-full px-4 lg:pl-16 max-w-desktop-max lg:mx-auto lg:px-8  pb-20">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between items-start">
                     <div className="flex flex-col gap-2 lg:max-w-[568px] w-full items-center lg:pt-32 lg:items-start">
-                        <div className="inline-block">
-                            <div className="px-2.5 py-1 bg-[#6CB3DD]/44 backdrop-blur-[8px] max-w-[max-content] rounded-full border border-white border-opacity-70">
-                                <p className="text-white text-xs lg:text-sm font-medium tracking-wide font-quicksand uppercase">
-                                    ● OPEN-SOURCE LEARNING, STREAMLINED
-                                </p>
-                            </div>
-                        </div>
-
                         {/* Main Heading */}
-                        <h1 className="text-[3.5rem] lg:text-[5.25rem] text-center lg:text-left font-bold text-white leading-none font-montserrat uppercase max-w-[568px]">
+                        <h1 className="text-[3.5rem] lg:text-[5.25rem] lg:mt-16 text-center lg:text-left font-bold text-white leading-none font-montserrat uppercase max-w-[568px]">
                             BUILD THE FUTURE OF MONEY
                         </h1>
 
@@ -70,8 +63,8 @@ const HeroPage = ({
                                 {" "}
                                 Bitcoin Dev Project{" "}
                             </span>{" "}
-                            provides free and open-source tools for you to learn
-                            and contribute to bitcoin development and products
+                            is an outreach initiative for developers that want
+                            to learn and contribute to bitcoin.
                         </p>
 
                         <div className="pt-2">

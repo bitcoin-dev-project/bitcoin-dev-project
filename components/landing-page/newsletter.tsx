@@ -85,7 +85,7 @@ const Newsletter = () => {
 
                             <div>
                                 <form
-                                    className="flex gap-3 max-w-xl"
+                                    className="flex flex-col sm:flex-row gap-3 max-w-xl"
                                     method="post"
                                     id="mc-embedded-subscribe-form"
                                     name="mc-embedded-subscribe-form"
@@ -101,7 +101,7 @@ const Newsletter = () => {
                                         onChange={(e) =>
                                             setEmail(e.target.value)
                                         }
-                                        className="flex-1 px-2.5 py-4 rounded-[10px] bg-brand-gray border-2 border-brand-gray-100 focus:border-brand-orange-100 focus:outline-none font-quicksand text-brand-dark placeholder:text-brand-gray-300"
+                                        className="flex-1 w-full px-2.5 py-4 rounded-[10px] bg-brand-gray border-2 border-brand-gray-100 focus:border-brand-orange-100 focus:outline-none font-quicksand text-brand-dark placeholder:text-brand-gray-300"
                                     />
                                     <button
                                         type="submit"

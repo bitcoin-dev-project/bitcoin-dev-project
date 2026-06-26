@@ -24,18 +24,22 @@ const Mission = ({
 }
 const OurMission = () => {
     return (
-        <div className="bg-[#F5EFE7] py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 border-t-[20px] border-b-[20px] border-blue-300">
             <div className="max-w-7xl mx-auto px-8">
                 <div className="grid lg:grid-cols-2 gap-4 lg:gap-16 items-center">
                     <div className="flex flex-col gap-6 lg:gap-[60px] lg:max-w-[484px]">
                         <div className="flex flex-col gap-2 items-center lg:items-start">
-                            <h2 className="text-2xl leading-[1.75rem] font-bold text-[#2C2C2C]  text-center lg:text-left  font-montserrat">
-                                WHAT IS THE BITCOIN DEV PROJECT ?
+                            <h2 className="text-4xl italic font-bold text-[#2C2C2C]  text-center lg:text-left font-montserrat pb-6">
+                                The Welcome Wagon of Bitcoin Development
                             </h2>
                             <p className="text-xl text-[#2C2C2C] leading-relaxed font-quicksand text-center lg:text-left">
-                                We make tools and resources so that anyone,
-                                anywhere has the opportunity to learn and
-                                contribute to Bitcoin tech.
+                                Here at the Bitcoin Dev Project, we believe
+                                everyone should have access to quality bitcoin
+                                technical resources. It shouldn't matter who you
+                                are or where you live. From established bitcoin
+                                contributors, to aspiring ones, our commitment
+                                lies in growing and strengthening the developer
+                                ecosystem.
                             </p>
                         </div>
                         <div className="flex flex-col gap-5   ">

@@ -7,9 +7,15 @@ import React from "react"
 export const ExploreSection = () => {
     return (
         <div className="bg-[#F5EFE7] pt-24">
-            <div className="max-w-7xl mx-auto px-8 py-12 sm:py-16 md:py-20 lg:py-24">
-                <h2 className="text-2xl leading-[1.75rem] font-bold text-[#2C2C2C] text-center uppercase font-montserrat">
-                    explore your path to bitcoin
+            <div className="max-w-7xl mx-auto px-8 py-12 sm:py-16 md:py-20 lg:py-24 mb-8">
+                <h1 className="text-4xl font-bold text-[#2C2C2C] text-center font-montserrat pb-16">
+                    Free Tools and Resources for Bitcoin Tech
+                </h1>
+                <h2 className="text-2xl leading-[1.75rem] text-[#2C2C2C] italic text-center font-quicksand">
+                    Bitcoin is for you, and bitcoin needs you. It takes a
+                    village to build and maintain decentralized freedom money.
+                    See how you can make it part of your developer journey
+                    today.
                 </h2>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 md:mt-16">
@@ -30,7 +36,7 @@ export const ExploreSection = () => {
                                 <h3 className="text-xl sm:text-2xl font-bold text-brand-dark uppercase font-montserrat">
                                     {path.title}
                                 </h3>
-                                <p className="text-brand-dark text-sm sm:text-base font-quicksand leading-relaxed">
+                                <p className="text-brand-dark text-sm sm:text-base font-quicksand leading-relaxed italic">
                                     {path.description}
                                 </p>
                                 <Link

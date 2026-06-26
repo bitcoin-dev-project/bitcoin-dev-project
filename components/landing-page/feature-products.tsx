@@ -8,12 +8,12 @@ const FeaturedProduct = () => {
         <div className="py-12 sm:py-16 md:py-20 lg:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col gap-12 sm:gap-16 lg:gap-20">
                 <div className="text-center max-w-[631px] mx-auto flex flex-col w-full gap-2 sm:gap-3">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-brand-dark uppercase font-montserrat">
-                        FEATURED PRODUCTS
+                    <h2 className="text-4xl sm:text-5xl font-bold text-brand-dark font-montserrat">
+                        Featured Products
                     </h2>
-                    <p className="text-base sm:text-lg md:text-xl text-brand-dark max-w-3xl mx-auto font-quicksand px-4 sm:px-0">
-                        Explore tools crafted to support you in learning,
-                        building, and contributing to the bitcoin ecosystem.
+                    <p className="text-base sm:text-lg md:text-xl text-brand-dark max-w-3xl mx-auto font-quicksand px-4 sm:px-0 mt-6 italic">
+                        Enjoy some of our most popular resources to support you
+                        in learning, building, and contributing to bitcoin
                     </p>
                 </div>
 

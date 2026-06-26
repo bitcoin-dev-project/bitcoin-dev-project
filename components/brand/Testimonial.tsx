@@ -32,7 +32,9 @@ const Testimonial: React.FC<ITestimonial> = ({
                 backgroundColor: bgColor,
                 borderColor: color,
                 maxWidth: `${65 + index * 5}%`,
-                minHeight: `${218 + index * 2}px`
+                minHeight: `${218 + index * 2}px`,
+                maxHeight: `calc(100vh - ${100 + index * 40}px - 20px)`,
+                overflowY: "auto"
             }}
         >
             <div className="relative rounded-none h-full px-2.5 pt-[30px] pb-2.5 ">
