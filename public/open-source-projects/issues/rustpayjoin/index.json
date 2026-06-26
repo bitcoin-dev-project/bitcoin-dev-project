@@ -21,17 +21,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/583",
-    "publishedAt": "2025-03-16T15:38:12Z",
-    "title": "InputPair's lack of a constructor seems to cause mistakes",
-    "labels": [
-      "enhancement",
-      "good first issue",
-      "api"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/739",
     "publishedAt": "2025-06-03T22:52:58Z",
     "title": "FFI Tracking Issue",
@@ -101,15 +90,6 @@
     "title": "Replaying the event log results in \"expired\" error for successfully completed sessions",
     "labels": [
       "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/1656",
-    "publishedAt": "2026-06-18T11:59:44Z",
-    "title": "`Receiver<Monitor>::check_payment` needs rename",
-    "labels": [
-      "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
