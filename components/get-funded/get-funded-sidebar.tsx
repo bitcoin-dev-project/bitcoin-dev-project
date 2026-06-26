@@ -78,7 +78,7 @@ const GetFundedSidebar = () => {
     const currentLabel = activeItem?.label ?? "Browse sections"
 
     return (
-        <div className="sticky top-0 z-30 -mx-4 mb-2 bg-brand/95 px-4 py-3 backdrop-blur lg:hidden">
+        <div className="sticky top-20 z-30 -mx-4 mb-2 bg-brand/95 px-4 py-3 backdrop-blur lg:hidden">
             <button
                 type="button"
                 onClick={() => setOpen((value) => !value)}

@@ -65,7 +65,7 @@ export default function Career() {
 
                     <section
                         id="why-consider"
-                        className="flex scroll-mt-24 flex-col gap-3"
+                        className="flex scroll-mt-40 lg:scroll-mt-24 flex-col gap-3"
                     >
                         <SectionHeading>
                             Why consider a career in bitcoin open source
@@ -84,7 +84,7 @@ export default function Career() {
 
                     <section
                         id="earning-a-grant"
-                        className="flex scroll-mt-24 flex-col gap-3"
+                        className="flex scroll-mt-40 lg:scroll-mt-24 flex-col gap-3"
                     >
                         <SectionHeading>
                             Earning a grant for full-time bitcoin open source
@@ -147,7 +147,7 @@ export default function Career() {
 
                     <div
                         id="adam-article"
-                        className="scroll-mt-24 rounded-xl border border-brand-gray-100 bg-brand-card p-2.5"
+                        className="scroll-mt-40 lg:scroll-mt-24 rounded-xl border border-brand-gray-100 bg-brand-card p-2.5"
                     >
                         <div className="rounded-lg p-2.5">
                             <div className="mb-4 flex items-start gap-1">
@@ -208,7 +208,7 @@ export default function Career() {
 
                     <section
                         id="paths-and-stories"
-                        className="flex scroll-mt-24 flex-col gap-5 pt-16"
+                        className="flex scroll-mt-40 lg:scroll-mt-24 flex-col gap-5 pt-16"
                     >
                         <div className="flex flex-col gap-2">
                             <SectionHeading>Paths and stories</SectionHeading>
@@ -222,7 +222,7 @@ export default function Career() {
 
                     <section
                         id="checklist"
-                        className="flex scroll-mt-24 flex-col gap-5 pt-16"
+                        className="flex scroll-mt-40 lg:scroll-mt-24 flex-col gap-5 pt-16"
                     >
                         <SectionHeading>Checklist</SectionHeading>
                         <p className="font-quicksand text-lg lg:text-xl pb-4">
@@ -237,7 +237,7 @@ export default function Career() {
 
                     <section
                         id="organizations"
-                        className="flex scroll-mt-24 flex-col gap-5 pt-16"
+                        className="flex scroll-mt-40 lg:scroll-mt-24 flex-col gap-5 pt-16"
                     >
                         <div className="flex flex-col gap-2">
                             <SectionHeading>Grant organizations</SectionHeading>
@@ -298,7 +298,7 @@ export default function Career() {
 
                     <section
                         id="apply"
-                        className="flex scroll-mt-24 flex-col gap-3 pt-16"
+                        className="flex scroll-mt-40 lg:scroll-mt-24 flex-col gap-3 pt-16"
                     >
                         <SectionHeading>
                             One form, multiple opportunities
@@ -317,7 +317,7 @@ export default function Career() {
 
                     <div
                         id="common-application"
-                        className="mx-auto w-full max-w-lg scroll-mt-24 rounded-2xl border border-brand-gray-100"
+                        className="mx-auto w-full max-w-lg scroll-mt-40 lg:scroll-mt-24 rounded-2xl border border-brand-gray-100"
                     >
                         <div className="flex flex-col gap-3 rounded-2xl p-2">
                             <div className="relative overflow-hidden rounded-2xl">
