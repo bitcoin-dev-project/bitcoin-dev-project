@@ -9,13 +9,18 @@ import clsx from "clsx"
 import MobileMenu from "./brand/MobileMenu"
 import { useState } from "react"
 import StartExploringDropdown from "@/components/StartExploringDropdown"
+<<<<<<< HEAD
 import GetFundedMegaMenu from "@/components/get-funded/get-funded-mega-menu"
+=======
+import { REBRANDMOTTOS } from "@/utils"
+>>>>>>> 20d250a (fix: move subnav to header for explore pages)
 
 export function RebrandedHeader() {
     const pathname = usePathname()
     const isHomepage = pathname === "/"
     const isDecoding = pathname?.startsWith("/decoding")
     const isDarkMode = isDecoding
+    const isSubnavPage = ["/learn", "/contribute", "/get-funded"].includes(pathname || "")
     const [isOpen, setIsOpen] = useState(false)
     const onOpen = () => {
         setIsOpen((prev) => !prev)
@@ -43,25 +48,27 @@ export function RebrandedHeader() {
                         <Link href="/">
                             {isDarkMode ? <BDPLogoDark /> : <BDPLogo />}
                         </Link>
-                        <nav className="hidden items-center gap-6 lg:flex lg:flex-row">
-                            <Link
-                                href="/learn"
-                                className={primaryLinkClass(
-                                    pathname?.startsWith("/learn") ?? false
-                                )}
-                            >
-                                Learn
-                            </Link>
-                            <Link
-                                href="/contribute"
-                                className={primaryLinkClass(
-                                    pathname?.startsWith("/contribute") ?? false
-                                )}
-                            >
-                                Contribute
-                            </Link>
-                            <GetFundedMegaMenu isDarkMode={isDarkMode} />
-                        </nav>
+                        {isSubnavPage && (
+                            <nav className="hidden items-center gap-6 lg:flex lg:flex-row">
+                                <Link
+                                    href="/learn"
+                                    className={primaryLinkClass(
+                                        pathname?.startsWith("/learn") ?? false
+                                    )}
+                                >
+                                    Learn
+                                </Link>
+                                <Link
+                                    href="/contribute"
+                                    className={primaryLinkClass(
+                                        pathname?.startsWith("/contribute") ?? false
+                                    )}
+                                >
+                                    Contribute
+                                </Link>
+                                <GetFundedMegaMenu isDarkMode={isDarkMode} />
+                            </nav>
+                        )}
                         <div className="hidden items-center gap-6 lg:flex lg:flex-row">
                             <Link
                                 href="/about"

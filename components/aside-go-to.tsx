@@ -22,25 +22,7 @@ const AsideGoTO: React.FC<IGoTO> = ({ selected, allCurriculum, path }) => {
         <>
             <div className="flex-col flex top-10 lg:sticky gap-6">
                 <aside className="flex-shrink-0 flex flex-col gap-6">
-                    <div className=" hidden lg:flex flex-col gap-4">
-                        <h2 className="text-xl font-bold text-brand-dark/60 font-montserrat">
-                            GO TO
-                        </h2>
-                        <div className="flex gap-2 flex-wrap font-quicksand">
-                            {REBRANDMOTTOS.map((mottos) => (
-                                <Pill
-                                    key={mottos.slug}
-                                    onClick={() => {
-                                        selectChange(mottos.slug)
-                                    }}
-                                    selected={mottos.slug === selected}
-                                    className={`${mottos.slug === selected ? "!bg-[#201E1E99] border-none" : ""} !rounded-xl max-w-[max-content] py-0.5 px-2`}
-                                >
-                                    {mottos.name}
-                                </Pill>
-                            ))}
-                        </div>
-                    </div>
+
 
                     {selected === "get-funded" && (
                         <div className="mt-4">
