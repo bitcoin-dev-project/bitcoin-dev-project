@@ -22,8 +22,6 @@ const AsideGoTO: React.FC<IGoTO> = ({ selected, allCurriculum, path }) => {
         <>
             <div className="flex-col flex top-10 lg:sticky gap-6">
                 <aside className="flex-shrink-0 flex flex-col gap-6">
-
-
                     {selected === "get-funded" && (
                         <div className="mt-4">
                             <Image

@@ -9,18 +9,16 @@ import clsx from "clsx"
 import MobileMenu from "./brand/MobileMenu"
 import { useState } from "react"
 import StartExploringDropdown from "@/components/StartExploringDropdown"
-<<<<<<< HEAD
 import GetFundedMegaMenu from "@/components/get-funded/get-funded-mega-menu"
-=======
-import { REBRANDMOTTOS } from "@/utils"
->>>>>>> 20d250a (fix: move subnav to header for explore pages)
 
 export function RebrandedHeader() {
     const pathname = usePathname()
     const isHomepage = pathname === "/"
     const isDecoding = pathname?.startsWith("/decoding")
     const isDarkMode = isDecoding
-    const isSubnavPage = ["/learn", "/contribute", "/get-funded"].includes(pathname || "")
+    const isSubnavPage = ["/learn", "/contribute", "/get-funded"].includes(
+        pathname || ""
+    )
     const [isOpen, setIsOpen] = useState(false)
     const onOpen = () => {
         setIsOpen((prev) => !prev)
@@ -61,7 +59,8 @@ export function RebrandedHeader() {
                                 <Link
                                     href="/contribute"
                                     className={primaryLinkClass(
-                                        pathname?.startsWith("/contribute") ?? false
+                                        pathname?.startsWith("/contribute") ??
+                                            false
                                     )}
                                 >
                                     Contribute
