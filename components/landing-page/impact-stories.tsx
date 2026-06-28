@@ -21,9 +21,9 @@ const ImpactStories = () => {
                         className="object-contain md:hidden"
                     />
 
-                    <div className="absolute left-1/2 -translate-x-1/2 top-[8.5%] text-center z-40">
-                        <h2 className="font-montserrat text-brand text-2xl text-nowrap font-extrabold leading-[1.2]">
-                            WORD ON THE STREET
+                    <div className="absolute left-1/2 -translate-x-1/2 md:top-[8.5%] top-[2.5%] text-center z-40">
+                        <h2 className="font-montserrat text-brand text-4xl font-bold px-4">
+                            What the Developer Community is Saying
                         </h2>
                     </div>
                 </div>

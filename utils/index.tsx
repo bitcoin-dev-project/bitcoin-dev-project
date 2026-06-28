@@ -287,7 +287,7 @@ export const FEATUREDPRODUCTS = [
 
 export const TESTIMONIALS = [
     {
-        quote: "The variety of free, open-source material that the Bitcoin Dev Project provides is nothing short of impressive. They make exactly the kinds of tools & education that developers need.",
+        quote: "The variety of free, open-source material that the Bitcoin Dev Project provides is nothing short of impressive. They make exactly the kinds of tools and education that developers need to cut through the noise and start generating signal of their own.",
         author: "Steve Lee",
         title: "Lead, Spiral",
         logo: "/images/testimonials/spiral-orange.webp",
@@ -295,7 +295,7 @@ export const TESTIMONIALS = [
         bgColor: "#ECD4B5"
     },
     {
-        quote: "I'd highly recommend people interested in contributing to Bitcoin start their journey at BDP.",
+        quote: "I found the Bitcoin Dev Project (BDP) while doing some initial prep for the BOSS (Bitcoin Open-Source Software) program. It was a great landing page that provided an idea of which bitcoin OS projects I could think about contributing to, good first issues in those projects, and an excellent learning resource in Decoding Bitcoin which interactively teaches various concepts. In fact, adding and improving some of the material in Decoding Bitcoin is where I made my first bitcoin contributions. I'd highly recommend people interested in contributing to the bitcoin ecosystem to start their journey at BDP and see where it takes them!",
         author: "Anthony Milton",
         title: "Independent Bitcoin Researcher",
         color: "#CC7400",
@@ -303,7 +303,7 @@ export const TESTIMONIALS = [
         logo: "/images/testimonials/bitcoin-orange.webp"
     },
     {
-        quote: "The BDP is a welcoming community. It guided me to the right learning modules and tools, which helped me land a full-time job in bitcoin development!",
+        quote: "Long ago I attended a Bitcoin Core dev meetup and felt completely lost, frustrated by the lack of reliable education resources - yet I knew the bitcoin community was my home. After many years in the dark, discovering the Bitcoin Dev Project illuminated everything for me. Its welcoming community and mentorship guided my attention to focus on the right learning modules, empowering my team to place second at TabConf 2024’s Warnet workshop. Shortly after I landed a role with a Bitcoin development team and today I’m fully immersed in the technical bitcoin ecosystem.",
         author: "Matthew Vuk",
         title: "Researcher, Second",
         color: "#CC7400",
@@ -454,16 +454,18 @@ export type FAQItem = {
 export const MISSIONS = [
     {
         title: "FOCUSED ON BITCOIN",
-        description: "100% concentrated on bitcoin and related technologies"
+        description:
+            "100% concentrated on bitcoin and related freedom technologies."
     },
     {
         title: "OPEN SOURCE",
-        description: "Built in the open with your contributions."
+        description:
+            "The Bitcoin Dev Project is always free. Always open-source."
     },
     {
         title: "BITCOIN TECH",
         description:
-            "We help developers learn, practice, and build with bitcoin."
+            "We love getting deep into the weeds of the protocols, code bases, standards, and everything in between."
     }
 ]
 

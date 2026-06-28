@@ -7,10 +7,10 @@ const StackedWins = () => {
             <div className="max-w-7xl mx-auto px-8">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="text-center lg:text-left space-y-3">
-                        <h2 className="text-2xl uppercase font-bold text-brand-dark leading-tight font-montserrat">
-                            STACKED WINS
+                        <h2 className="text-2xl font-bold text-brand-dark leading-tight font-montserrat">
+                            Stacked Wins
                         </h2>
-                        <p className="text-xl text-brand-dark leading-[1.75rem] font-quicksand">
+                        <p className="text-xl text-brand-dark leading-[1.75rem] font-quicksand italic">
                             What started with a few open-source tools is now a
                             growing movement. With every contributor, every
                             event, and every resource shared, we're building
