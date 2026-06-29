@@ -159,5 +159,15 @@
         "tags": ["bitcoin", "lightning", "simulator", "cli"],
         "lang": ["Python", "Shell"],
         "issue": "https://github.com/bitcoin-dev-project/warnet/issues"
+    },
+    "validating-lightning-signer": {
+        "repo_url": "https://gitlab.com/lightning-signer/validating-lightning-signer",
+        "name": "validating-lightning-signer",
+        "org": "lightning-signer",
+        "tags": ["lightning", "bitcoin", "security", "protocol"],
+        "lang": ["Rust"],
+        "issue": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/issues",
+        "platform": "gitlab",
+        "gitlab_labels": ["Starter Issue", "Help-Wanted"]
     }
 }
