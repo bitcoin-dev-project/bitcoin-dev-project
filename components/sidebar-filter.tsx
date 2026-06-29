@@ -43,8 +43,8 @@ const SidebarFilter = ({
             args: repos
         },
         {
-            title: "Organisations",
-            placeholder: "Search Organisations",
+            title: "Organizations",
+            placeholder: "Search Organizations",
             args: orgs
         }
     ]

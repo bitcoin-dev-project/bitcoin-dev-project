@@ -40,6 +40,8 @@ const config: Config = {
                         200: "#A9A49B",
                         300: "#6C6C6C"
                     },
+                    // get-funded card fill (lighter than brand-gray); from Figma
+                    card: "#FFFDF5",
                     blue: {
                         200: "#4B7389"
                     }

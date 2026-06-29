@@ -9,6 +9,7 @@ import clsx from "clsx"
 import MobileMenu from "./brand/MobileMenu"
 import { useState } from "react"
 import StartExploringDropdown from "@/components/StartExploringDropdown"
+import GetFundedMegaMenu from "@/components/get-funded/get-funded-mega-menu"
 
 export function RebrandedHeader() {
     const pathname = usePathname()
@@ -19,6 +20,16 @@ export function RebrandedHeader() {
     const onOpen = () => {
         setIsOpen((prev) => !prev)
     }
+
+    const primaryLinkClass = (active: boolean) =>
+        clsx(
+            "font-quicksand text-base transition-colors",
+            active
+                ? "text-brand-orange-100"
+                : isDarkMode
+                  ? "text-white hover:text-gray-300"
+                  : "text-black hover:text-gray-700"
+        )
     return (
         <>
             <header
@@ -32,14 +43,30 @@ export function RebrandedHeader() {
                         <Link href="/">
                             {isDarkMode ? <BDPLogoDark /> : <BDPLogo />}
                         </Link>
+                        <nav className="hidden items-center gap-6 lg:flex lg:flex-row">
+                            <Link
+                                href="/learn"
+                                className={primaryLinkClass(
+                                    pathname?.startsWith("/learn") ?? false
+                                )}
+                            >
+                                Learn
+                            </Link>
+                            <Link
+                                href="/contribute"
+                                className={primaryLinkClass(
+                                    pathname?.startsWith("/contribute") ?? false
+                                )}
+                            >
+                                Contribute
+                            </Link>
+                            <GetFundedMegaMenu isDarkMode={isDarkMode} />
+                        </nav>
                         <div className="hidden items-center gap-6 lg:flex lg:flex-row">
                             <Link
                                 href="/about"
-                                className={clsx(
-                                    "font-quicksand transition-colors text-base",
-                                    isDarkMode
-                                        ? "text-white hover:text-gray-300"
-                                        : "text-black hover:text-gray-700"
+                                className={primaryLinkClass(
+                                    pathname?.startsWith("/about") ?? false
                                 )}
                             >
                                 About
