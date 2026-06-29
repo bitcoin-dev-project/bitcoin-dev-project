@@ -322,5 +322,25 @@
       "Needs Conceptual Review"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/35007",
+    "publishedAt": "2026-04-05T13:13:50Z",
+    "title": "removeForReorg incorrectly evicts valid BIP68 transactions with mempool parents after invalidateblock",
+    "labels": [
+      "Bug",
+      "Mempool"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/35172",
+    "publishedAt": "2026-04-28T14:26:30Z",
+    "title": "txdb: Cursor warmup accepts malformed first coin key",
+    "labels": [
+      "Bug",
+      "Data corruption"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
