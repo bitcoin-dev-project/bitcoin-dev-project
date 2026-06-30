@@ -6,7 +6,8 @@ import clsx from "clsx"
 
 const FooterComponent = () => {
     const pathname = usePathname()
-    const isDecoding = pathname?.startsWith("/decoding")
+    const isDecoding =
+        pathname?.startsWith("/decoding") || pathname?.startsWith("/explainers")
 
     return (
         <footer
