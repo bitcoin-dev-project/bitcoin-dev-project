@@ -2,13 +2,6 @@
  * @jest-environment node
  */
 import { GET } from "./route"
-beforeAll(() => {
-  jest.spyOn(console, "error").mockImplementation(() => {})
-})
-
-afterAll(() => {
-  jest.restoreAllMocks()
-})
 
 it("should return data with status 200", async () => {
     // from app/.well-known/nostr.json/nostr.json
@@ -63,38 +56,48 @@ it("should return a 400 if the name parameter is missing", async () => {
     expect(response.status).toBe(400)
     expect(body.error).toBe(expectedError)
 })
-it("should return 500 when an unexpected error occurs", async () => {
-    const requestObj = {
-        nextUrl: {
-            searchParams: {
-                get: jest.fn(() => {
-                    throw new Error("Forced failure")
-                })
+describe("error handling (500 responses)", () => {
+    beforeEach(() => {
+        jest.spyOn(console, "error").mockImplementation(() => {})
+    })
+
+    afterEach(() => {
+        jest.restoreAllMocks()
+    })
+
+    it("should return 500 when an unexpected error occurs", async () => {
+        const requestObj = {
+            nextUrl: {
+                searchParams: {
+                    get: jest.fn(() => {
+                        throw new Error("Forced failure")
+                    })
+                }
             }
-        }
-    } as any
+        } as any
 
-    const response = await GET(requestObj)
-    const body = await response.json()
+        const response = await GET(requestObj)
+        const body = await response.json()
 
-    expect(response.status).toBe(500)
-    expect(body.error).toBe("Forced failure")
-})
+        expect(response.status).toBe(500)
+        expect(body.error).toBe("Forced failure")
+    })
 
-it("should return generic error if thrown value is not an Error", async () => {
-    const requestObj = {
-        nextUrl: {
-            searchParams: {
-                get: jest.fn(() => {
-                    throw "not-an-error"
-                })
+    it("should return generic error if thrown value is not an Error", async () => {
+        const requestObj = {
+            nextUrl: {
+                searchParams: {
+                    get: jest.fn(() => {
+                        throw "not-an-error"
+                    })
+                }
             }
-        }
-    } as any
+        } as any
 
-    const response = await GET(requestObj)
-    const body = await response.json()
+        const response = await GET(requestObj)
+        const body = await response.json()
 
-    expect(response.status).toBe(500)
-    expect(body.error).toBe("An Error Occurred")
+        expect(response.status).toBe(500)
+        expect(body.error).toBe("An Error Occurred")
+    })
 })
