@@ -9,15 +9,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/2836",
-    "publishedAt": "2023-07-25T14:13:08Z",
-    "title": "Improve tutorial in our docs",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/3121",
     "publishedAt": "2023-09-07T02:09:09Z",
     "title": "Investigate running some tests on ios simulator / android emulator",
