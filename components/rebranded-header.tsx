@@ -15,8 +15,7 @@ export function RebrandedHeader() {
     const pathname = usePathname()
     const isHomepage = pathname === "/"
     const isDecoding =
-        pathname?.startsWith("/decoding") ||
-        pathname?.startsWith("/explainers")
+        pathname?.startsWith("/decoding") || pathname?.startsWith("/explainers")
     const isDarkMode = isDecoding
     const [isOpen, setIsOpen] = useState(false)
     const onOpen = () => {
