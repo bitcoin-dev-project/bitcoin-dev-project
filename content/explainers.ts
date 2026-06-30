@@ -27,6 +27,32 @@ import explainersDataJson from "../public/decoding-bitcoin/static/explainers/exp
 export const explainerTopics: ExplainerTopic[] =
     explainersDataJson as ExplainerTopic[]
 
+// Lightweight shape used by the grid/cards — excludes the heavy `slides`
+// arrays so the listing page doesn't ship every slide to the client.
+export interface ExplainerCard {
+    id: string
+    title: string
+    description: string
+    category: string
+    difficulty: "Beginner" | "Intermediate" | "Advanced"
+    slideCount: number
+    tags: string[]
+    thumbnailUrl: string | null
+}
+
+export const getExplainerCards = (): ExplainerCard[] => {
+    return explainerTopics.map((topic) => ({
+        id: topic.id,
+        title: topic.title,
+        description: topic.description,
+        category: topic.category,
+        difficulty: topic.difficulty,
+        slideCount: topic.slideCount,
+        tags: topic.tags,
+        thumbnailUrl: topic.thumbnail ?? topic.slides?.[0]?.imageUrl ?? null
+    }))
+}
+
 // Utility functions
 export const getExplainerById = (id: string): ExplainerTopic | undefined => {
     return explainerTopics.find((topic) => topic.id === id)
