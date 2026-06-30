@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import {
     ChevronLeft,
     ChevronRight,
@@ -41,10 +41,25 @@ export default function SlideViewer({
     const [currentSlideIndex, setCurrentSlideIndex] =
         useState(initialSlideIndex)
     const [isZoomed, setIsZoomed] = useState(false)
+    const [isImageLoading, setIsImageLoading] = useState(true)
+    const closeButtonRef = useRef<HTMLButtonElement>(null)
+    const touchStartX = useRef<number | null>(null)
 
     useEffect(() => {
         setCurrentSlideIndex(initialSlideIndex)
     }, [initialSlideIndex])
+
+    // Show the loading spinner whenever we move to a new slide
+    useEffect(() => {
+        setIsImageLoading(true)
+    }, [currentSlideIndex])
+
+    // Move focus into the dialog when it opens (accessibility)
+    useEffect(() => {
+        if (isOpen) {
+            closeButtonRef.current?.focus()
+        }
+    }, [isOpen])
 
     useEffect(() => {
         if (isOpen) {
@@ -94,11 +109,32 @@ export default function SlideViewer({
         setCurrentSlideIndex(index)
     }
 
+    // Swipe navigation on the slide area (replaces a full-screen overlay
+    // that used to block taps on the controls)
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX
+    }
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (touchStartX.current === null) return
+        const diffX = touchStartX.current - e.changedTouches[0].clientX
+        if (Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+                goToNextSlide()
+            } else {
+                goToPrevSlide()
+            }
+        }
+        touchStartX.current = null
+    }
+
     const handleDownload = () => {
         const currentSlide = topic.slides[currentSlideIndex]
+        const ext =
+            currentSlide.imageUrl.split(".").pop()?.split("?")[0] || "png"
         const link = document.createElement("a")
         link.href = currentSlide.imageUrl
-        link.download = `${topic.title}-slide-${currentSlideIndex + 1}.jpg`
+        link.download = `${topic.title}-slide-${currentSlideIndex + 1}.${ext}`
         document.body.appendChild(link)
         link.click()
         document.body.removeChild(link)
@@ -127,7 +163,12 @@ export default function SlideViewer({
     const progress = ((currentSlideIndex + 1) / topic.slides.length) * 100
 
     return (
-        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm">
+        <div
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${topic.title} — slide viewer`}
+        >
             {/* Header */}
             <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/80 to-transparent p-6 z-10">
                 <div className="flex items-center justify-between">
@@ -145,6 +186,7 @@ export default function SlideViewer({
                             onClick={() => setIsZoomed(!isZoomed)}
                             className="p-2 text-white hover:text-gray-300 transition-colors"
                             title={isZoomed ? "Zoom out" : "Zoom in"}
+                            aria-label={isZoomed ? "Zoom out" : "Zoom in"}
                         >
                             {isZoomed ? (
                                 <ZoomOut className="w-5 h-5" />
@@ -156,6 +198,7 @@ export default function SlideViewer({
                             onClick={handleDownload}
                             className="p-2 text-white hover:text-gray-300 transition-colors"
                             title="Download slide"
+                            aria-label="Download slide"
                         >
                             <Download className="w-5 h-5" />
                         </button>
@@ -163,13 +206,16 @@ export default function SlideViewer({
                             onClick={handleShare}
                             className="p-2 text-white hover:text-gray-300 transition-colors"
                             title="Share"
+                            aria-label="Share"
                         >
                             <Share className="w-5 h-5" />
                         </button>
                         <button
+                            ref={closeButtonRef}
                             onClick={onClose}
                             className="p-2 text-white hover:text-gray-300 transition-colors"
                             title="Close (Esc)"
+                            aria-label="Close slide viewer"
                         >
                             <X className="w-6 h-6" />
                         </button>
@@ -188,13 +234,18 @@ export default function SlideViewer({
             </div>
 
             {/* Main Content */}
-            <div className="flex items-center justify-center h-full pt-20 pb-24 px-6">
+            <div
+                className="flex items-center justify-center h-full pt-20 pb-24 px-6"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+            >
                 {/* Previous Button */}
                 <button
                     onClick={goToPrevSlide}
                     disabled={currentSlideIndex === 0}
                     className="absolute left-6 top-1/2 transform -translate-y-1/2 p-3 text-white bg-black/50 rounded-full hover:bg-black/70 disabled:opacity-50 disabled:cursor-not-allowed transition-all z-10"
                     title="Previous slide (←)"
+                    aria-label="Previous slide"
                 >
                     <ChevronLeft className="w-6 h-6" />
                 </button>
@@ -203,14 +254,39 @@ export default function SlideViewer({
                 <div
                     className={`relative max-w-full max-h-full transition-transform duration-300 ${isZoomed ? "scale-150 cursor-move" : "cursor-default"}`}
                 >
+                    {/* Loading spinner — feedback while the next slide optimizes */}
+                    {isImageLoading && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-8 h-8 border-2 border-white/30 border-t-[#f1760d] rounded-full animate-spin" />
+                        </div>
+                    )}
                     <Image
+                        key={currentSlide.id}
                         src={currentSlide.imageUrl}
                         alt={currentSlide.altText}
                         width={800}
                         height={600}
-                        className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                        sizes="(max-width: 768px) 100vw, 80vw"
+                        onLoad={() => setIsImageLoading(false)}
+                        className={`max-w-full max-h-full object-contain rounded-lg shadow-2xl transition-opacity duration-200 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                         priority
                     />
+                    {/* Preload adjacent slides so navigation feels instant */}
+                    {[currentSlideIndex - 1, currentSlideIndex + 1].map((i) =>
+                        i >= 0 && i < topic.slides.length ? (
+                            <Image
+                                key={`preload-${topic.slides[i].id}`}
+                                src={topic.slides[i].imageUrl}
+                                alt=""
+                                width={800}
+                                height={600}
+                                sizes="(max-width: 768px) 100vw, 80vw"
+                                loading="eager"
+                                aria-hidden="true"
+                                className="absolute h-0 w-0 opacity-0 pointer-events-none -z-10"
+                            />
+                        ) : null
+                    )}
                 </div>
 
                 {/* Next Button */}
@@ -219,6 +295,7 @@ export default function SlideViewer({
                     disabled={currentSlideIndex === topic.slides.length - 1}
                     className="absolute right-6 top-1/2 transform -translate-y-1/2 p-3 text-white bg-black/50 rounded-full hover:bg-black/70 disabled:opacity-50 disabled:cursor-not-allowed transition-all z-10"
                     title="Next slide (→)"
+                    aria-label="Next slide"
                 >
                     <ChevronRight className="w-6 h-6" />
                 </button>
@@ -243,6 +320,7 @@ export default function SlideViewer({
                                 alt={`Slide ${index + 1}`}
                                 width={64}
                                 height={48}
+                                loading="lazy"
                                 className="w-full h-full object-cover"
                             />
                         </button>
@@ -257,43 +335,7 @@ export default function SlideViewer({
                         </p>
                     </div>
                 )}
-
-                {/* Touch Instructions */}
-                <div className="text-center mt-4">
-                    <p className="text-gray-400 text-xs">
-                        Use arrow keys or click the navigation buttons to browse
-                        slides
-                    </p>
-                </div>
             </div>
-
-            {/* Touch/Swipe Overlay for Mobile */}
-            <div
-                className="absolute inset-0 md:hidden"
-                onTouchStart={(e) => {
-                    const touch = e.touches[0]
-                    const startX = touch.clientX
-
-                    const handleTouchEnd = (endEvent: TouchEvent) => {
-                        const endTouch = endEvent.changedTouches[0]
-                        const endX = endTouch.clientX
-                        const diffX = startX - endX
-
-                        if (Math.abs(diffX) > 50) {
-                            // Minimum swipe distance
-                            if (diffX > 0) {
-                                goToNextSlide()
-                            } else {
-                                goToPrevSlide()
-                            }
-                        }
-
-                        document.removeEventListener("touchend", handleTouchEnd)
-                    }
-
-                    document.addEventListener("touchend", handleTouchEnd)
-                }}
-            />
         </div>
     )
 }

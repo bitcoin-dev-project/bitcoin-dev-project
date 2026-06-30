@@ -1,26 +1,18 @@
 "use client"
 
 import { useState, useMemo } from "react"
-import { Search, Filter, Eye, ChevronRight, Play } from "lucide-react"
+import { Search, ArrowRight, Layers } from "lucide-react"
 import Image from "next/image"
 import SlideViewer from "@/components/explainers/SlideViewer"
-import {
-    explainerTopics,
-    getAllCategories,
-    getAllDifficulties
-} from "@/content/explainers"
+import { explainerTopics, getAllCategories } from "@/content/explainers"
 
-const categories = getAllCategories()
-const difficulties = getAllDifficulties()
+const categories = ["All", ...getAllCategories()]
 
 export default function ExplainersPage() {
     const [searchTerm, setSearchTerm] = useState("")
     const [selectedCategory, setSelectedCategory] = useState("All")
-    const [selectedDifficulty, setSelectedDifficulty] = useState("All")
-    const [showFilters, setShowFilters] = useState(false)
     const [selectedTopic, setSelectedTopic] = useState<any>(null)
     const [isSlideViewerOpen, setIsSlideViewerOpen] = useState(false)
-    const [expandedTags, setExpandedTags] = useState<Set<string>>(new Set())
 
     const filteredTopics = useMemo(() => {
         return explainerTopics.filter((topic) => {
@@ -36,22 +28,19 @@ export default function ExplainersPage() {
             const matchesCategory =
                 selectedCategory === "All" ||
                 topic.category === selectedCategory
-            const matchesDifficulty =
-                selectedDifficulty === "All" ||
-                topic.difficulty === selectedDifficulty
 
-            return matchesSearch && matchesCategory && matchesDifficulty
+            return matchesSearch && matchesCategory
         })
-    }, [searchTerm, selectedCategory, selectedDifficulty])
+    }, [searchTerm, selectedCategory])
 
     const getDifficultyColor = (difficulty: string) => {
         switch (difficulty) {
             case "Beginner":
-                return "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400"
+                return "bg-amber-100 text-amber-800 dark:bg-amber-400/10 dark:text-amber-300"
             case "Intermediate":
-                return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400"
+                return "bg-orange-100 text-orange-800 dark:bg-orange-500/15 dark:text-orange-300"
             case "Advanced":
-                return "bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400"
+                return "bg-orange-200 text-orange-900 dark:bg-orange-700/25 dark:text-orange-400"
             default:
                 return "bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400"
         }
@@ -67,128 +56,63 @@ export default function ExplainersPage() {
         setSelectedTopic(null)
     }
 
-    const toggleTagExpansion = (topicId: string, event: React.MouseEvent) => {
-        event.stopPropagation() // Prevent card click
-        setExpandedTags((prev) => {
-            const newSet = new Set(prev)
-            if (newSet.has(topicId)) {
-                newSet.delete(topicId)
-            } else {
-                newSet.add(topicId)
-            }
-            return newSet
-        })
-    }
-
     return (
         <div className="min-h-screen bg-vscode-background-light dark:bg-vscode-background-dark">
-            {/* Header */}
-            <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
-                <div className="max-w-7xl mx-auto px-6 py-8">
-                    <div className="text-center mb-8">
-                        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                            Bitcoin Explainers
-                        </h1>
-                        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            Visual guides and interactive explanations to help
-                            you understand Bitcoin concepts through carefully
-                            crafted slides and diagrams.
-                        </p>
-                    </div>
+            {/* Hero */}
+            <div className="bg-white dark:bg-gradient-to-b dark:from-black dark:to-vscode-background-dark">
+                <div className="max-w-3xl mx-auto px-6 pt-12 pb-8 text-center">
+                    <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
+                        Bitcoin Explainers
+                    </h1>
+                    <p className="text-base text-gray-600 dark:text-gray-400">
+                        Visual guides and interactive explanations to help you
+                        understand Bitcoin concepts.
+                    </p>
 
-                    {/* Search and Filters */}
-                    <div className="max-w-4xl mx-auto">
-                        <div className="relative mb-6">
-                            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                            <input
-                                type="text"
-                                placeholder="Search topics, concepts, or tags..."
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full pl-12 pr-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-[#f1760d] focus:border-transparent transition-all"
-                            />
-                            <button
-                                onClick={() => setShowFilters(!showFilters)}
-                                className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                            >
-                                <Filter className="w-5 h-5" />
-                            </button>
-                        </div>
-
-                        {/* Filter Bar */}
-                        {showFilters && (
-                            <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 mb-6 space-y-4">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                                            Category
-                                        </label>
-                                        <select
-                                            value={selectedCategory}
-                                            onChange={(e) =>
-                                                setSelectedCategory(
-                                                    e.target.value
-                                                )
-                                            }
-                                            className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#f1760d] focus:border-transparent"
-                                        >
-                                            <option value="All">
-                                                All Categories
-                                            </option>
-                                            {categories.map((category) => (
-                                                <option
-                                                    key={category}
-                                                    value={category}
-                                                >
-                                                    {category}
-                                                </option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                                            Difficulty
-                                        </label>
-                                        <select
-                                            value={selectedDifficulty}
-                                            onChange={(e) =>
-                                                setSelectedDifficulty(
-                                                    e.target.value
-                                                )
-                                            }
-                                            className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#f1760d] focus:border-transparent"
-                                        >
-                                            {difficulties.map((difficulty) => (
-                                                <option
-                                                    key={difficulty}
-                                                    value={difficulty}
-                                                >
-                                                    {difficulty}
-                                                </option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
+                    {/* Search */}
+                    <div className="relative mt-8">
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+                        <input
+                            type="text"
+                            placeholder="Search explainers..."
+                            aria-label="Search explainers"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-[#f1760d] focus:border-transparent transition-all"
+                        />
                     </div>
+                </div>
+            </div>
+
+            {/* Category filter — plain text, no chrome */}
+            <div className="max-w-7xl mx-auto px-6 pt-8">
+                <div className="flex gap-x-6 overflow-x-auto whitespace-nowrap pb-1 sm:flex-wrap sm:justify-center text-sm [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setSelectedCategory(category)}
+                            className={`shrink-0 transition-colors ${
+                                selectedCategory === category
+                                    ? "text-[#f1760d] font-semibold"
+                                    : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                            }`}
+                        >
+                            {category}
+                        </button>
+                    ))}
                 </div>
             </div>
 
             {/* Topics Grid */}
             <div className="max-w-7xl mx-auto px-6 py-8">
-                <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                        Explore Topics ({filteredTopics.length})
-                    </h2>
-                </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredTopics.map((topic) => (
-                        <div
+                        <button
                             key={topic.id}
+                            type="button"
                             onClick={() => openSlideViewer(topic)}
-                            className="group bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg hover:shadow-[#f1760d]/10 transition-all duration-300 cursor-pointer"
+                            aria-label={`View ${topic.title} — ${topic.slideCount} slides`}
+                            className="group text-left w-full bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:border-[#f1760d]/40 hover:shadow-lg hover:shadow-[#f1760d]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f1760d] focus-visible:ring-offset-2 focus-visible:ring-offset-vscode-background-dark transition-all duration-300 cursor-pointer"
                         >
                             {/* Thumbnail */}
                             <div className="relative h-48 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 overflow-hidden">
@@ -198,22 +122,20 @@ export default function ExplainersPage() {
                                             src={topic.slides[0].imageUrl}
                                             alt={topic.slides[0].altText}
                                             fill
-                                            className="object-cover"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
                                         />
-                                        {/* Overlay */}
-                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-                                        {/* Play Button Overlay */}
-                                        <div className="absolute inset-0 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-                                            <div className="w-16 h-16 bg-[#f1760d]/80 rounded-full flex items-center justify-center backdrop-blur-sm">
-                                                <Play className="w-8 h-8 text-white ml-1" />
-                                            </div>
+                                        {/* Hover affordance — signals "open the deck", not a video */}
+                                        <div className="absolute inset-0 flex items-end p-4 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-white">
+                                                View slides
+                                                <ArrowRight className="w-4 h-4" />
+                                            </span>
                                         </div>
                                     </>
                                 ) : (
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-16 h-16 bg-[#f1760d]/20 rounded-full flex items-center justify-center">
-                                            <Play className="w-8 h-8 text-[#f1760d] dark:text-[#f1760d]" />
-                                        </div>
+                                    <div className="absolute inset-0 flex items-center justify-center text-[#f1760d]">
+                                        <Layers className="w-8 h-8" />
                                     </div>
                                 )}
                                 <div className="absolute top-4 right-4">
@@ -224,88 +146,35 @@ export default function ExplainersPage() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-6">
-                                <div className="flex items-start justify-between mb-3">
-                                    <div className="flex-1">
-                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-[#f1760d] dark:group-hover:text-[#f1760d] transition-colors">
-                                            {topic.title}
-                                        </h3>
-                                        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                                            {topic.description}
-                                        </p>
-                                    </div>
-                                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#f1760d] group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 ml-2" />
-                                </div>
+                            <div className="p-5">
+                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1.5 group-hover:text-[#f1760d] dark:group-hover:text-[#f1760d] transition-colors">
+                                    {topic.title}
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4">
+                                    {topic.description}
+                                </p>
 
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center space-x-2">
-                                        <span className="text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full">
-                                            {topic.category}
-                                        </span>
-                                        <span
-                                            className={`text-xs font-medium px-2 py-1 rounded-full ${getDifficultyColor(topic.difficulty)}`}
-                                        >
-                                            {topic.difficulty}
-                                        </span>
-                                    </div>
-                                </div>
-
-                                {/* Tags */}
-                                <div className="flex flex-wrap gap-1 mt-3">
-                                    {(() => {
-                                        const isExpanded = expandedTags.has(
-                                            topic.id
-                                        )
-                                        const visibleTags = isExpanded
-                                            ? topic.tags
-                                            : topic.tags.slice(0, 3)
-
-                                        return (
-                                            <>
-                                                {visibleTags.map((tag) => (
-                                                    <span
-                                                        key={tag}
-                                                        className="text-xs text-[#f1760d] dark:text-[#f1760d] bg-orange-50 dark:bg-orange-900/20 px-2 py-1 rounded-md"
-                                                    >
-                                                        #{tag}
-                                                    </span>
-                                                ))}
-                                                {topic.tags.length > 3 && (
-                                                    <button
-                                                        onClick={(e) =>
-                                                            toggleTagExpansion(
-                                                                topic.id,
-                                                                e
-                                                            )
-                                                        }
-                                                        className="text-xs text-gray-500 dark:text-gray-400 hover:text-[#f1760d] dark:hover:text-[#f1760d] transition-colors cursor-pointer"
-                                                    >
-                                                        {isExpanded
-                                                            ? "show less"
-                                                            : `+${topic.tags.length - 3} more`}
-                                                    </button>
-                                                )}
-                                            </>
-                                        )
-                                    })()}
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
+                                        {topic.category}
+                                    </span>
+                                    <span className="text-gray-300 dark:text-gray-600">
+                                        ·
+                                    </span>
+                                    <span
+                                        className={`text-xs font-medium px-2 py-0.5 rounded-full ${getDifficultyColor(topic.difficulty)}`}
+                                    >
+                                        {topic.difficulty}
+                                    </span>
                                 </div>
                             </div>
-                        </div>
+                        </button>
                     ))}
                 </div>
 
                 {filteredTopics.length === 0 && (
-                    <div className="text-center py-12">
-                        <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Search className="w-8 h-8 text-gray-400" />
-                        </div>
-                        <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                            No topics found
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300">
-                            Try adjusting your search terms or filters to find
-                            what you're looking for.
-                        </p>
+                    <div className="text-center py-16 text-gray-500 dark:text-gray-400">
+                        No explainers match your search.
                     </div>
                 )}
             </div>
