@@ -704,6 +704,8 @@ export const swapImageUrl = (name: string, imageUrl: string) => {
             return "/images/projects/warnet.svg"
         case "sim-ln":
             return "/images/projects/simln.svg"
+        case "validating-lightning-signer":
+            return "/images/projects/vls.webp"
         default:
             return imageUrl
     }

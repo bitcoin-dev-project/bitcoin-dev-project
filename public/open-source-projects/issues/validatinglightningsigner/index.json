@@ -1,0 +1,146 @@
+[
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/546",
+    "publishedAt": "2025-04-15T16:14:18.157Z",
+    "title": "Add Local Development Tooling to Mimic CI",
+    "labels": [
+      "Starter Issue",
+      "Workflow::Doing"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/540",
+    "publishedAt": "2025-02-26T13:14:00.095Z",
+    "title": "Better Expect Error Messages",
+    "labels": [
+      "Needs Input",
+      "Priority::Low",
+      "Starter Issue"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/507",
+    "publishedAt": "2024-08-25T14:25:22.850Z",
+    "title": "memory: eliminate unneeded cloning",
+    "labels": [
+      "Priority::Low",
+      "Starter Issue"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/497",
+    "publishedAt": "2024-05-27T23:06:30.276Z",
+    "title": "integration: need support for CLN's `dev-hsmd-fail-preapprove` and `dev-hsmd-no-preapprove-check`",
+    "labels": [
+      "Starter Issue",
+      "issueType::Bug"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/486",
+    "publishedAt": "2024-04-07T18:00:44.193Z",
+    "title": "stm32: improve usbserial device info presented to node host",
+    "labels": [
+      "Starter Issue",
+      "issueType::Bug"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/291",
+    "publishedAt": "2023-04-27T19:35:55.203Z",
+    "title": "Consider CLN Policy Limitation Plugin to enforce VLS compatible limits",
+    "labels": [
+      "Needs Input",
+      "Starter Issue"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/214",
+    "publishedAt": "2022-12-31T17:23:58.774Z",
+    "title": "Consider using plain hashing for heartbeat signing",
+    "labels": [
+      "MVP",
+      "Starter Issue"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/424",
+    "publishedAt": "2023-11-05T20:19:59.824Z",
+    "title": "Reference Implementation of VLS on Hardened Servers (Intel SGX / Amazon Nitro)",
+    "labels": [
+      "Help-Wanted",
+      "issueType::Change Request"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/416",
+    "publishedAt": "2023-10-17T00:22:05.233Z",
+    "title": "VLS Authority Levels",
+    "labels": [
+      "Help-Wanted",
+      "issueType::Change Request"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/414",
+    "publishedAt": "2023-10-16T17:17:50.141Z",
+    "title": "VLS Signed Audit Report for Signer Controlled Node",
+    "labels": [
+      "Help-Wanted",
+      "issueType::Change Request"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/202",
+    "publishedAt": "2022-12-15T17:45:30.611Z",
+    "title": "Submarine Swap Out",
+    "labels": [
+      "Help-Wanted",
+      "issueType::Change Request"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/201",
+    "publishedAt": "2022-12-15T17:45:08.900Z",
+    "title": "Submarine Swap In",
+    "labels": [
+      "Help-Wanted",
+      "issueType::Change Request"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/199",
+    "publishedAt": "2022-12-15T17:34:07.628Z",
+    "title": "Admin API for vlsd2",
+    "labels": [
+      "Help-Wanted",
+      "MVP",
+      "Needs Input",
+      "issueType::Change Request"
+    ],
+    "imageUrl": ""
+  },
+  {
+    "url": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/work_items/198",
+    "publishedAt": "2022-12-15T17:29:29.283Z",
+    "title": "Fuzz Testing VLS",
+    "labels": [
+      "Help-Wanted",
+      "MVP",
+      "Y1-SAB"
+    ],
+    "imageUrl": ""
+  }
+]
