@@ -342,5 +342,14 @@
       "Data corruption"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/35648",
+    "publishedAt": "2026-07-03T12:29:00Z",
+    "title": "ci: Built depends cache misses OS toolchain updates",
+    "labels": [
+      "Bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
