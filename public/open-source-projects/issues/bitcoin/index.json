@@ -273,16 +273,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/33208",
-    "publishedAt": "2025-08-17T11:29:44Z",
-    "title": "Indexes stuck on unknown best block after unclean shutdown",
-    "labels": [
-      "Bug",
-      "UTXO Db and Indexes"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/33266",
     "publishedAt": "2025-08-28T12:38:43Z",
     "title": "signet: disk-space-DoS due to low mining difficulty",
