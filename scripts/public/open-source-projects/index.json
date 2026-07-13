@@ -167,6 +167,7 @@
         "tags": ["lightning", "bitcoin", "security", "protocol"],
         "lang": ["Rust"],
         "issue": "https://gitlab.com/lightning-signer/validating-lightning-signer/-/issues",
-        "platform": "gitlab"
+        "platform": "gitlab",
+        "gitlab_labels": ["Starter Issue", "Help-Wanted"]
     }
 }
