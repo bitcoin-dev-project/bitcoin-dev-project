@@ -9,6 +9,8 @@ export type ProjectProperties = {
     issue: string
     tags: string[]
     lang: string[]
+    platform?: "github" | "gitlab"
+    gitlab_labels?: string[]
 }
 
 export type Projects = {
