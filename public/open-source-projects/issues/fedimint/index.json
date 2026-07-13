@@ -89,5 +89,17 @@
       "smol"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/8812",
+    "publishedAt": "2026-07-13T17:01:45Z",
+    "title": "Flaky CI: lnv2_mintv2_walletv2_lightning_payments times out over iroh",
+    "labels": [
+      "bug",
+      "CI",
+      "lightning",
+      "flaky test"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
