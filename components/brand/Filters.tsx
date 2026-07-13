@@ -38,7 +38,11 @@ const Filters: React.FC<IFilters> = () => {
     }
 
     const handleDifficultyClick = (level: Difficulty) => {
-        setDifficulty(difficulty === level ? "" : level)
+        setDifficulty((prev) =>
+            prev.includes(level)
+                ? prev.filter((d) => d !== level)
+                : [...prev, level]
+        )
     }
 
     return (
@@ -103,7 +107,7 @@ const Filters: React.FC<IFilters> = () => {
                                     className={`cursor-pointer transition-opacity`}
                                 >
                                     <Leaf
-                                        selected={difficulty === level}
+                                        selected={difficulty.includes(level)}
                                         leavesCount={count}
                                         withBorder
                                     />
@@ -181,7 +185,7 @@ const Filters: React.FC<IFilters> = () => {
                                     className={`cursor-pointer transition-opacity`}
                                 >
                                     <Leaf
-                                        selected={difficulty === level}
+                                        selected={difficulty.includes(level)}
                                         leavesCount={count}
                                         withBorder
                                     />
