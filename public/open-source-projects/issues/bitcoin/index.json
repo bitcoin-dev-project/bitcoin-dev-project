@@ -109,24 +109,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/25336",
-    "publishedAt": "2022-06-11T03:08:31Z",
-    "title": "Onlynet=ipv4 disables Tor advertisements",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/25669",
-    "publishedAt": "2022-07-21T18:43:24Z",
-    "title": "`externalip=...onion` ignored when onion/prox not set",
-    "labels": [
-      "Bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/25684",
     "publishedAt": "2022-07-23T12:57:40Z",
     "title": "-proxy does not work for addresses like 10.x.y.z",
