@@ -123,7 +123,7 @@ const HashFunctionCard = ({
                     "w-8 h-8 rounded-full flex items-center justify-center",
                     isSelected
                         ? "bg-orange-500"
-                        : "bg-gray-200 dark:bg-gray-700"
+                        : "bg-brand-gray-100 dark:bg-gray-700"
                 )}
             >
                 <Hash
@@ -161,7 +161,7 @@ interface ExampleInputsProps {
 }
 
 const ExampleInputs = ({ examples, onSelectExample }: ExampleInputsProps) => (
-    <div className="bg-gray-50 dark:bg-black/40 p-4 rounded-lg border border-orange-500/20 shadow-sm">
+    <div className="bg-brand-gray dark:bg-black/40 p-4 rounded-lg border border-orange-500/20 shadow-sm">
         <div className="flex items-center gap-2 mb-4">
             <div className="bg-orange-100 dark:bg-orange-900/30 p-2 rounded-md">
                 <Code className="w-4 h-4 text-orange-500" />
@@ -174,12 +174,12 @@ const ExampleInputs = ({ examples, onSelectExample }: ExampleInputsProps) => (
             {examples.map((example, i) => (
                 <m.div
                     key={i}
-                    className="bg-white dark:bg-vscode-input-dark p-3 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark cursor-pointer hover:border-orange-500 transition-all hover:shadow-md"
+                    className="bg-brand-card dark:bg-vscode-input-dark p-3 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark cursor-pointer hover:border-orange-500 transition-all hover:shadow-md"
                     onClick={() => onSelectExample(example.value)}
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.99 }}
                 >
-                    <div className="font-mono text-xs break-all text-vscode-text-light dark:text-vscode-text-dark bg-gray-50 dark:bg-black p-2 rounded">
+                    <div className="font-mono text-xs break-all text-vscode-text-light dark:text-vscode-text-dark bg-brand-gray dark:bg-black p-2 rounded">
                         {example.value}
                     </div>
                     <p className="text-xs text-vscode-text-light dark:text-vscode-text-dark opacity-80 mt-2">
@@ -197,7 +197,7 @@ interface HashInputProps {
 }
 
 const HashInput = ({ input, onInputChange }: HashInputProps) => (
-    <div className="bg-white dark:bg-vscode-input-dark p-4 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark shadow-sm">
+    <div className="bg-brand-card dark:bg-vscode-input-dark p-4 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark shadow-sm">
         <div className="flex items-center gap-2 mb-4">
             <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-md">
                 <Hash className="w-4 h-4 text-blue-500" />
@@ -211,7 +211,7 @@ const HashInput = ({ input, onInputChange }: HashInputProps) => (
                 value={input}
                 onChange={(e) => onInputChange(e.target.value)}
                 placeholder="Enter hex value (e.g., 02a79cd900a43af6c1c6ff9e)"
-                className="w-full p-3 border-2 border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-gray-50 dark:bg-black text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                className="w-full p-3 border-2 border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-brand-gray dark:bg-black text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                 rows={3}
             />
             <div className="text-xs text-gray-500 dark:text-gray-400 italic">
@@ -300,7 +300,7 @@ const ResultDisplay = ({ result }: { result: string }) => {
                     Hash Result
                 </div>
             </div>
-            <div className="font-mono text-sm break-all bg-white dark:bg-black/50 p-3 rounded border border-green-200 dark:border-green-800 text-vscode-text-light dark:text-vscode-text-dark">
+            <div className="font-mono text-sm break-all bg-brand-card dark:bg-black/50 p-3 rounded border border-green-200 dark:border-green-800 text-vscode-text-light dark:text-vscode-text-dark">
                 {result}
             </div>
         </m.div>
@@ -351,7 +351,7 @@ const HashFunctions = () => {
     ) as HashFunction
 
     return (
-        <div className="bg-white dark:bg-vscode-background-dark rounded-xl max-w-4xl mx-auto border border-vscode-border-light dark:border-vscode-border-dark shadow-lg overflow-hidden">
+        <div className="bg-brand-card dark:bg-vscode-background-dark rounded-xl max-w-4xl mx-auto border border-vscode-border-light dark:border-vscode-border-dark shadow-lg overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-orange-500 to-dark-200 p-4 text-white">
                 <h1 className="text-xl font-bold flex items-center gap-2">
@@ -385,7 +385,7 @@ const HashFunctions = () => {
                                     "py-2 px-3 rounded-md text-sm font-medium transition-all",
                                     selectedHash === hash.id
                                         ? "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border-l-4 border-orange-500"
-                                        : "bg-gray-100 dark:bg-gray-800 text-vscode-text-light dark:text-vscode-text-dark hover:bg-orange-50 dark:hover:bg-orange-900/10 border-l-4 border-transparent"
+                                        : "bg-brand-gray dark:bg-gray-800 text-vscode-text-light dark:text-vscode-text-dark hover:bg-orange-50 dark:hover:bg-orange-900/10 border-l-4 border-transparent"
                                 )}
                             >
                                 {hash.name}
@@ -400,7 +400,7 @@ const HashFunctions = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mb-6 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark"
+                        className="mb-6 bg-brand-gray dark:bg-gray-800/50 p-4 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark"
                     >
                         <h3 className="font-medium text-vscode-text-light dark:text-vscode-text-dark mb-2">
                             {selectedFunction.name}
@@ -429,7 +429,7 @@ const HashFunctions = () => {
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             placeholder="Enter hex value (e.g., 02a79cd900a43af6c1c6ff9e)"
-                            className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                            className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-brand-card dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                             rows={2}
                         />
                         <div className="text-xs text-vscode-text-light dark:text-vscode-text-dark opacity-70">
@@ -450,7 +450,7 @@ const HashFunctions = () => {
                             <button
                                 key={i}
                                 onClick={() => setInput(example.value)}
-                                className="text-xs py-1 px-2 bg-gray-100 dark:bg-gray-800 text-vscode-text-light dark:text-vscode-text-dark rounded border border-vscode-border-light dark:border-vscode-border-dark hover:bg-orange-50 dark:hover:bg-orange-900/10 transition-colors"
+                                className="text-xs py-1 px-2 bg-brand-gray dark:bg-gray-800 text-vscode-text-light dark:text-vscode-text-dark rounded border border-vscode-border-light dark:border-vscode-border-dark hover:bg-orange-50 dark:hover:bg-orange-900/10 transition-colors"
                                 title={example.description}
                             >
                                 Example {i + 1}
@@ -481,8 +481,8 @@ const HashFunctions = () => {
                 )}
 
                 {/* Result Display */}
-                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark overflow-hidden">
-                    <div className="bg-gray-100 dark:bg-gray-700 px-4 py-2 border-b border-vscode-border-light dark:border-vscode-border-dark">
+                <div className="bg-brand-gray dark:bg-gray-800/50 rounded-lg border border-vscode-border-light dark:border-vscode-border-dark overflow-hidden">
+                    <div className="bg-brand-gray dark:bg-gray-700 px-4 py-2 border-b border-vscode-border-light dark:border-vscode-border-dark">
                         <div className="text-sm font-medium text-vscode-text-light dark:text-vscode-text-dark flex items-center gap-2">
                             <ArrowRight className="w-4 h-4 text-orange-500" />
                             Result: {selectedFunction.name}
@@ -490,7 +490,7 @@ const HashFunctions = () => {
                     </div>
                     <div className="p-4">
                         {result ? (
-                            <div className="font-mono text-sm break-all bg-white dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
+                            <div className="font-mono text-sm break-all bg-brand-card dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
                                 {result}
                             </div>
                         ) : (

@@ -18,7 +18,7 @@ export const QuestionsSection = ({
                     Topics we'll cover in our weekly call
                 </p>
             </div>
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100/50 dark:bg-gray-800/50 rounded-lg">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-brand-gray/50 dark:bg-gray-800/50 rounded-lg">
                 <HiDocument className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                     {questions.length} topics
@@ -29,10 +29,10 @@ export const QuestionsSection = ({
             {questions.map((question, index) => (
                 <div
                     key={question.id}
-                    className="group relative p-4 rounded-xl bg-gray-50/50 hover:bg-gray-100/50 dark:bg-gray-800/20 dark:hover:bg-gray-800/30 transition-all duration-200"
+                    className="group relative p-4 rounded-xl bg-brand-gray/50 hover:bg-brand-gray/50 dark:bg-gray-800/20 dark:hover:bg-gray-800/30 transition-all duration-200"
                 >
                     <div className="flex items-center gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-brand-gray dark:bg-gray-800 flex items-center justify-center">
                             <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
                                 {(index + 1).toString().padStart(2, "0")}
                             </span>
@@ -48,7 +48,7 @@ export const QuestionsSection = ({
         </div>
         {questions.length === 0 && (
             <div className="text-center py-12">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100/50 dark:bg-gray-800/50 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-gray/50 dark:bg-gray-800/50 flex items-center justify-center">
                     <HiDocument className="w-8 h-8 text-gray-400 dark:text-gray-600" />
                 </div>
                 <h3 className="text-gray-700 dark:text-gray-400 font-medium">

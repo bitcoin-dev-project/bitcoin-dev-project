@@ -36,7 +36,7 @@ export const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
     }, [weeklyCall])
 
     return (
-        <div className="flex flex-col gap-3 bg-white/80 dark:bg-gray-800/40 rounded-xl p-4 border border-gray-200 dark:border-gray-700/50">
+        <div className="flex flex-col gap-3 bg-brand-card/80 dark:bg-gray-800/40 rounded-xl p-4 border border-brand-gray-100 dark:border-gray-700/50">
             <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[#5865F2]/10 flex items-center justify-center">
                     <FaDiscord className="w-4 h-4 text-[#5865F2]" />
@@ -131,7 +131,7 @@ export const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
                 <button
                     onClick={() => createCalendarEvent(weeklyCall)}
                     className="hidden md:flex w-full items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm
-                        bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 
+                        bg-brand-gray hover:bg-brand-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 
                         text-gray-900 dark:text-white transition-colors duration-200"
                 >
                     <HiCalendar className="w-4 h-4" />

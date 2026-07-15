@@ -1,13 +1,12 @@
 "use client"
 
-import { usePathname } from "next/navigation"
 import { FOOTERLINKS } from "@/utils"
 import clsx from "clsx"
 
 const FooterComponent = () => {
-    const pathname = usePathname()
-    const isDecoding =
-        pathname?.startsWith("/decoding") || pathname?.startsWith("/explainers")
+    // Footer follows the site's cream branding everywhere (including the
+    // decoding/explainers learning section) for a consistent look.
+    const isDecoding = false
 
     return (
         <footer

@@ -40,7 +40,7 @@ export const ResourceCard = ({ resource }: { resource: Resource }) => {
     const Icon = config.icon
 
     return (
-        <div className="group bg-white dark:bg-gray-800/40 rounded-xl p-4 hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-all duration-200">
+        <div className="group bg-brand-card dark:bg-gray-800/40 rounded-xl p-4 hover:bg-brand-gray dark:hover:bg-gray-700/40 transition-all duration-200">
             <div className="flex items-start gap-4">
                 <div className={`p-3 rounded-lg ${config.bgColor}`}>
                     <Icon className={`w-5 h-5 ${config.color}`} />

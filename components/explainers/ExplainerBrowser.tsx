@@ -45,7 +45,7 @@ export default function ExplainerBrowser({
             case "Advanced":
                 return "bg-orange-200 text-orange-900 dark:bg-orange-700/25 dark:text-orange-400"
             default:
-                return "bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400"
+                return "bg-brand-gray text-gray-800 dark:bg-gray-900/20 dark:text-gray-400"
         }
     }
 
@@ -81,7 +81,7 @@ export default function ExplainerBrowser({
                         aria-label="Search explainers"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-[#f1760d] focus:border-transparent transition-all"
+                        className="w-full pl-12 pr-4 py-3 rounded-xl border border-brand-gray-100 dark:border-white/10 bg-brand-card dark:bg-white/5 text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-[#f1760d] focus:border-transparent transition-all"
                     />
                 </div>
             </div>
@@ -114,7 +114,7 @@ export default function ExplainerBrowser({
                             type="button"
                             onClick={() => openTopic(card)}
                             aria-label={`View ${card.title} — ${card.slideCount} slides`}
-                            className="group text-left w-full bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:border-[#f1760d]/40 hover:shadow-lg hover:shadow-[#f1760d]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f1760d] focus-visible:ring-offset-2 focus-visible:ring-offset-vscode-background-dark transition-all duration-300 cursor-pointer"
+                            className="group text-left w-full bg-brand-card dark:bg-gray-800 rounded-xl border border-brand-gray-100 dark:border-gray-700 overflow-hidden hover:border-[#f1760d]/40 hover:shadow-lg hover:shadow-[#f1760d]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f1760d] focus-visible:ring-offset-2 focus-visible:ring-offset-vscode-background-dark transition-all duration-300 cursor-pointer"
                         >
                             {/* Thumbnail */}
                             <div className="relative h-48 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 overflow-hidden">
@@ -150,7 +150,7 @@ export default function ExplainerBrowser({
                                 )}
 
                                 <div className="absolute top-4 right-4">
-                                    <span className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-medium text-gray-600 dark:text-gray-300">
+                                    <span className="bg-brand-card/90 dark:bg-gray-800/90 backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-medium text-gray-600 dark:text-gray-300">
                                         {card.slideCount} slides
                                     </span>
                                 </div>

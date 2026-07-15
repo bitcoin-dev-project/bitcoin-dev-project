@@ -133,7 +133,7 @@ export const LearningResourcesSection = ({
                     ].map((section) => (
                         <div
                             key={section.type}
-                            className="bg-white dark:bg-gray-800/40 rounded-xl p-4 border border-gray-200 dark:border-gray-800"
+                            className="bg-brand-card dark:bg-gray-800/40 rounded-xl p-4 border border-brand-gray-100 dark:border-gray-800"
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 <div
@@ -159,7 +159,7 @@ export const LearningResourcesSection = ({
                                     /{section.items.length}
                                 </span>
                                 <div className="flex items-center gap-2">
-                                    <div className="h-1.5 w-16 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                    <div className="h-1.5 w-16 bg-brand-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
                                         <div
                                             className={`h-full bg-${section.color}-500 rounded-full transition-all duration-300`}
                                             style={{
@@ -213,8 +213,8 @@ export const LearningResourcesSection = ({
 }
 
 const ResourceSection = ({ section, completedTopics }: any) => (
-    <div className="bg-white dark:bg-gray-800/40 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800">
-        <div className="p-4 border-b border-gray-200 dark:border-gray-800">
+    <div className="bg-brand-card dark:bg-gray-800/40 rounded-xl overflow-hidden border border-brand-gray-100 dark:border-gray-800">
+        <div className="p-4 border-b border-brand-gray-100 dark:border-gray-800">
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <section.icon className="text-orange-500" />
@@ -229,7 +229,7 @@ const ResourceSection = ({ section, completedTopics }: any) => (
             </div>
         </div>
 
-        <div className="divide-y divide-gray-200 dark:divide-gray-700">
+        <div className="divide-y divide-brand-gray-100 dark:divide-gray-700">
             {section.items.map((resource: any, index: number) => (
                 <ResourceItem
                     key={resource.id}
@@ -246,8 +246,8 @@ const ResourceItem = ({ resource, index, buttonText }: any) => (
     <Link
         href={`/decoding/${resource.link}`}
         className={`
-            block p-4 hover:bg-gray-50 dark:hover:bg-gray-700/40 transition-colors duration-200
-            ${!resource.isCompleted && index === 0 ? "bg-gray-50 dark:bg-gray-800/20" : ""}
+            block p-4 hover:bg-brand-gray dark:hover:bg-gray-700/40 transition-colors duration-200
+            ${!resource.isCompleted && index === 0 ? "bg-brand-gray dark:bg-gray-800/20" : ""}
         `}
     >
         <div className="flex items-center gap-4">
@@ -257,7 +257,7 @@ const ResourceItem = ({ resource, index, buttonText }: any) => (
                         <FaCheckCircle className="text-orange-500" />
                     </div>
                 ) : (
-                    <div className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-lg bg-brand-gray dark:bg-gray-700 flex items-center justify-center">
                         <div className="w-4 h-4 rounded-full border-2 border-gray-300 dark:border-gray-600" />
                     </div>
                 )}

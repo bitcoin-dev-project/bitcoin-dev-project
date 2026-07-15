@@ -12,7 +12,7 @@ const DiscordInvite: React.FC = () => {
             href="https://discord.com/invite/EAy9XMufbY"
             target="_blank"
             rel="noopener noreferrer"
-            className="not-prose group flex items-center justify-between bg-white dark:bg-vscode-navigation-dark text-gray-800 dark:text-white rounded-xl p-6 max-w-md hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden relative border border-gray-200 dark:border-gray-700"
+            className="not-prose group flex items-center justify-between bg-brand-card dark:bg-vscode-navigation-dark text-gray-800 dark:text-white rounded-xl p-6 max-w-md hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden relative border border-brand-gray-100 dark:border-gray-700"
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
         >

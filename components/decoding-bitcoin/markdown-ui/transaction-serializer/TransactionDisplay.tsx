@@ -163,7 +163,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                                 onClick={() =>
                                     handleDetailChange(item, index, type)
                                 }
-                                className={`mb-2 w-full cursor-pointer rounded-lg p-2 border border-gray-200 dark:border-gray-700 ${
+                                className={`mb-2 w-full cursor-pointer rounded-lg p-2 border border-brand-gray-100 dark:border-gray-700 ${
                                     highlightIndex?.[
                                         type as keyof typeof highlightIndex
                                     ] === index
@@ -245,9 +245,9 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
 
     return (
         <div className="container mx-auto py-1">
-            <div className="rounded-lg overflow-hidden bg-[#f3f3f3] dark:bg-[#252526] shadow-md">
+            <div className="rounded-lg overflow-hidden bg-[#EFE9DE] dark:bg-[#252526] shadow-md">
                 {/* Header with updated layout for better spacing */}
-                <div className="bg-[#e1e1e1] dark:bg-[#3c3c3c] py-2 px-4">
+                <div className="bg-[#E1DBD0] dark:bg-[#3c3c3c] py-2 px-4">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                         <div className="flex-1 min-w-0">
                             {txTitle && (
@@ -324,7 +324,7 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
 
                     {/* Selected Detail */}
                     {selectedDetail && (
-                        <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
+                        <div className="mt-4 pt-3 border-t border-brand-gray-100 dark:border-gray-700">
                             <BitcoinTransactionViewer detail={selectedDetail} />
                         </div>
                     )}

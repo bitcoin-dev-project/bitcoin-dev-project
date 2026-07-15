@@ -29,15 +29,15 @@ export const GroupsSection = ({
                 return (
                     <div
                         key={group.groupId}
-                        className="bg-white dark:bg-gray-800/40 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden"
+                        className="bg-brand-card dark:bg-gray-800/40 rounded-xl border border-brand-gray-100 dark:border-gray-800 overflow-hidden"
                     >
                         {/* Group Header */}
-                        <div className="p-4 border-b border-gray-200 dark:border-gray-800">
+                        <div className="p-4 border-b border-brand-gray-100 dark:border-gray-800">
                             <div className="flex items-center justify-between mb-3">
                                 <h3 className="text-lg font-medium text-gray-900 dark:text-white">
                                     Group {group.groupId}
                                 </h3>
-                                <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                                <div className="flex items-center gap-2 px-3 py-1.5 bg-brand-gray dark:bg-gray-700 rounded-lg">
                                     <HiUserCircle className="w-4 h-4 text-gray-400 dark:text-gray-500" />
                                     <span className="text-sm text-gray-600 dark:text-gray-400">
                                         {groupData?.students.length} members
@@ -48,8 +48,8 @@ export const GroupsSection = ({
                             {/* Group Leaders */}
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Chaperon */}
-                                <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-100 dark:bg-gray-700">
-                                    <div className="w-10 h-10 rounded-lg bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
+                                <div className="flex items-center gap-3 p-3 rounded-lg bg-brand-gray dark:bg-gray-700">
+                                    <div className="w-10 h-10 rounded-lg bg-brand-gray-100 dark:bg-gray-600 flex items-center justify-center">
                                         <HiUserCircle className="w-6 h-6 text-gray-400 dark:text-gray-500" />
                                     </div>
                                     <div>
@@ -88,9 +88,9 @@ export const GroupsSection = ({
                                 {groupQuestions?.map((question, index) => (
                                     <div
                                         key={question.id}
-                                        className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800/20"
+                                        className="flex items-start gap-4 p-4 rounded-lg bg-brand-gray dark:bg-gray-800/20"
                                     >
-                                        <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center">
+                                        <div className="w-6 h-6 rounded-full bg-brand-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center">
                                             <span className="text-xs text-gray-600 dark:text-gray-400">
                                                 {index + 1}
                                             </span>
@@ -121,7 +121,7 @@ export const GroupsSection = ({
             {/* Empty State */}
             {weekData.groupAssignments.length === 0 && (
                 <div className="text-center py-12">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-gray dark:bg-gray-700 flex items-center justify-center">
                         <HiUserCircle className="w-8 h-8 text-gray-400 dark:text-gray-500" />
                     </div>
                     <h3 className="text-gray-600 dark:text-gray-400 font-medium">

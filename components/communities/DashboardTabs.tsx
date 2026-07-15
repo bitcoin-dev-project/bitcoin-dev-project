@@ -69,7 +69,7 @@ export const DashboardTabs = ({
         <LazyMotion features={domAnimation}>
             <div className="space-y-8">
                 {/* Enhanced Tab Navigation */}
-                <div className="border-b-2 border-gray-200 dark:border-gray-800">
+                <div className="border-b-2 border-brand-gray-100 dark:border-gray-800">
                     <div className="flex">
                         {tabs.map((tab) => (
                             <button
@@ -119,7 +119,7 @@ export const DashboardTabs = ({
                     )}
 
                     {activeTab === "Discussions" && (
-                        <div className="bg-white dark:bg-gray-800/40 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
+                        <div className="bg-brand-card dark:bg-gray-800/40 rounded-2xl p-6 border border-brand-gray-100 dark:border-gray-800">
                             <QuestionsSection
                                 questions={collectQuestions(currentWeekData)}
                                 weekNumber={weekNumber}
@@ -128,7 +128,7 @@ export const DashboardTabs = ({
                     )}
 
                     {activeTab === "Groups" && (
-                        <div className="bg-white dark:bg-gray-800/40 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
+                        <div className="bg-brand-card dark:bg-gray-800/40 rounded-2xl p-6 border border-brand-gray-100 dark:border-gray-800">
                             <GroupsSection
                                 weekData={currentWeekData}
                                 weekNumber={weekNumber}
@@ -139,7 +139,7 @@ export const DashboardTabs = ({
                     )}
 
                     {activeTab === "Resources" && (
-                        <div className="bg-white dark:bg-gray-800/40 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
+                        <div className="bg-brand-card dark:bg-gray-800/40 rounded-2xl p-6 border border-brand-gray-100 dark:border-gray-800">
                             <AdditionalResources weekData={currentWeekData} />
                         </div>
                     )}

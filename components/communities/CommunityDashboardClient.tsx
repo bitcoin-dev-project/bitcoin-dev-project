@@ -34,7 +34,7 @@ export default function CommunityDashboardClient({
     const totalWeeks = communityData.weeklyData.length
 
     return (
-        <div className="min-h-screen bg-white dark:bg-vscode-background-dark">
+        <div className="min-h-screen bg-vscode-background-light dark:bg-vscode-background-dark">
             {isCompleted && (
                 <div className="border-b border-green-500/20 bg-green-500/5">
                     <div className="max-w-7xl mx-auto px-4 py-3">
@@ -52,12 +52,12 @@ export default function CommunityDashboardClient({
             )}
 
             {/* Simplified Header */}
-            <div className="border-b border-gray-200 dark:border-gray-800">
+            <div className="border-b border-brand-gray-100 dark:border-gray-800">
                 <div className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex items-center gap-4">
                         <Link
                             href="/decoding/communities"
-                            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+                            className="p-2 rounded-lg bg-brand-gray dark:bg-gray-700 hover:bg-brand-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
                         >
                             <HiArrowLeft className="w-5 h-5 text-gray-400 dark:text-gray-500" />
                         </Link>
@@ -84,7 +84,7 @@ export default function CommunityDashboardClient({
             </div>
 
             {/* Mobile Week Navigation */}
-            <div className="md:hidden border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800/40">
+            <div className="md:hidden border-b border-brand-gray-100 dark:border-gray-800 bg-brand-card dark:bg-gray-800/40">
                 <div className="px-4 py-3">
                     <div className="flex items-center justify-between mb-3">
                         <h2 className="text-gray-900 dark:text-white font-medium">
@@ -110,7 +110,7 @@ export default function CommunityDashboardClient({
                                             ${
                                                 selectedWeek === week
                                                     ? "bg-orange-500 text-white"
-                                                    : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600"
+                                                    : "bg-brand-gray dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-brand-gray-100 dark:hover:bg-gray-600"
                                             }
                                             ${week > currentWeek ? "opacity-50" : ""}
                                         `}
@@ -134,13 +134,13 @@ export default function CommunityDashboardClient({
                             <WeeklyCallSection weekData={currentWeekData} />
                             {/* Desktop Week Navigation */}
                             <div className="hidden md:block">
-                                <div className="bg-white dark:bg-gray-800/40 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800">
-                                    <div className="p-4 border-b border-gray-200 dark:border-gray-800">
+                                <div className="bg-brand-card dark:bg-gray-800/40 rounded-xl overflow-hidden border border-brand-gray-100 dark:border-gray-800">
+                                    <div className="p-4 border-b border-brand-gray-100 dark:border-gray-800">
                                         <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                                             Course Timeline
                                         </h3>
                                     </div>
-                                    <div className="divide-y divide-gray-200 dark:divide-gray-700">
+                                    <div className="divide-y divide-brand-gray-100 dark:divide-gray-700">
                                         {Array.from(
                                             { length: totalWeeks },
                                             (_, i) => i + 1
@@ -165,7 +165,7 @@ export default function CommunityDashboardClient({
                                                     className={`
                                                         w-full flex items-center gap-3 p-4
                                                         transition-colors duration-200
-                                                        hover:bg-gray-50 dark:hover:bg-gray-700/40
+                                                        hover:bg-brand-gray dark:hover:bg-gray-700/40
                                                         ${isSelected ? "bg-orange-50 dark:bg-orange-900/20 border-l-2 border-orange-500" : ""}
                                                         ${isLocked ? "opacity-50" : ""}
                                                     `}
@@ -173,7 +173,7 @@ export default function CommunityDashboardClient({
                                                     <div
                                                         className={`
                                                         w-8 h-8 rounded-lg flex items-center justify-center shrink-0
-                                                        ${isLocked ? "bg-gray-100 dark:bg-gray-700" : isSelected ? "bg-orange-50 dark:bg-orange-900/20" : "bg-gray-50 dark:bg-gray-800/20"}
+                                                        ${isLocked ? "bg-brand-gray dark:bg-gray-700" : isSelected ? "bg-orange-50 dark:bg-orange-900/20" : "bg-brand-gray dark:bg-gray-800/20"}
                                                     `}
                                                     >
                                                         {isLocked ? (

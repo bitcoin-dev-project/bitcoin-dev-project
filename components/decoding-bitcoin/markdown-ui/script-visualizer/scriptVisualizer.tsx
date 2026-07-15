@@ -297,7 +297,7 @@ export default function ScriptStackVisualizer({
                                             role="img"
                                         ></object>
                                     </div>
-                                    <div className="border border-gray-300 dark:border-vscode-input-dark p-3 rounded-lg bg-gray-100 dark:bg-vscode-background-dark flex items-center justify-center">
+                                    <div className="border border-gray-300 dark:border-vscode-input-dark p-3 rounded-lg bg-brand-gray dark:bg-vscode-background-dark flex items-center justify-center">
                                         <m.div
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.9 }}

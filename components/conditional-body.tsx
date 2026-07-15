@@ -28,7 +28,13 @@ export function ConditionalBody({
 
     return (
         <body className={bodyClass}>
-            <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
+            {/* storageKey bump forces existing visitors (who have "dark" stored
+                under the old key) to pick up the new light default */}
+            <ThemeProvider
+                attribute="class"
+                defaultTheme={siteMetadata.theme}
+                storageKey="bdp-theme"
+            >
                 <ConditionalBackground>
                     {pathname !== "/" && <RebrandedHeader />}
                     <main>{children}</main>

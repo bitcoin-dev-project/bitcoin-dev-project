@@ -224,7 +224,7 @@ export default function SlideViewer({
 
                 {/* Progress Bar */}
                 <div className="mt-4">
-                    <div className="w-full bg-white/20 rounded-full h-1">
+                    <div className="w-full bg-brand-card/20 rounded-full h-1">
                         <div
                             className="bg-[#f1760d] h-1 rounded-full transition-all duration-300"
                             style={{ width: `${progress}%` }}

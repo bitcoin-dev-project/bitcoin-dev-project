@@ -74,9 +74,9 @@ export default function CommunitiesPage() {
 
     return (
         <LazyMotion features={domAnimation}>
-            <div className="min-h-screen bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-950">
-                <div className="relative border-b border-gray-200 dark:border-gray-800">
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-100/50 via-white to-transparent dark:from-orange-500/20 dark:via-black dark:to-transparent opacity-70" />
+            <div className="min-h-screen bg-vscode-background-light dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-950">
+                <div className="relative border-b border-brand-gray-100 dark:border-gray-800">
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-100/50 via-brand-card to-transparent dark:from-orange-500/20 dark:via-black dark:to-transparent opacity-70" />
                     <div className="relative max-w-7xl mx-auto px-4 py-12">
                         <m.div
                             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export default function CommunitiesPage() {
                                 </p>
                             </div>
 
-                            <div className="inline-flex items-center gap-6 px-6 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/30 border border-gray-200 dark:border-gray-700/50">
+                            <div className="inline-flex items-center gap-6 px-6 py-3 rounded-xl bg-brand-gray dark:bg-gray-800/30 border border-brand-gray-100 dark:border-gray-700/50">
                                 <div className="text-left">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                                         Want to use Decoding Bitcoin for your
@@ -135,14 +135,14 @@ export default function CommunitiesPage() {
                     </div>
                 </div>
 
-                <div className="sticky top-0 z-10 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800">
+                <div className="sticky top-0 z-10 bg-brand-card/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-brand-gray-100 dark:border-gray-800">
                     <div className="max-w-7xl mx-auto px-4 py-3">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-4">
                                 <Link
                                     href="/decoding"
-                                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 
-                                hover:bg-gray-200 dark:hover:bg-gray-800/80 hover:text-gray-900 dark:hover:text-white transition-all duration-200"
+                                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brand-gray dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 
+                                hover:bg-brand-gray-100 dark:hover:bg-gray-800/80 hover:text-gray-900 dark:hover:text-white transition-all duration-200"
                                 >
                                     <HiArrowRight className="w-4 h-4 rotate-180" />
                                     <span>Back</span>
@@ -162,7 +162,7 @@ export default function CommunitiesPage() {
                                             ${
                                                 filter === filterOption
                                                     ? "bg-orange-500 text-white"
-                                                    : "bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800/80 hover:text-gray-900 dark:hover:text-white"
+                                                    : "bg-brand-gray dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:bg-brand-gray-100 dark:hover:bg-gray-800/80 hover:text-gray-900 dark:hover:text-white"
                                             }
                                         `}
                                             >
@@ -181,7 +181,7 @@ export default function CommunitiesPage() {
                                 onChange={(e) =>
                                     setSelectedLanguage(e.target.value)
                                 }
-                                className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg
+                                className="px-3 py-1.5 bg-brand-gray dark:bg-gray-800/50 border border-brand-gray-100 dark:border-gray-700 rounded-lg
                                 text-gray-900 dark:text-gray-300 focus:outline-none focus:border-orange-500/50"
                             >
                                 {languages.map((lang) => (
@@ -206,8 +206,8 @@ export default function CommunitiesPage() {
                             >
                                 <Link
                                     href={`/decoding/communities/${community.id}`}
-                                    className="group block bg-white dark:bg-gray-800/30 hover:bg-gray-50 dark:hover:bg-gray-800/50 
-                                    rounded-xl border border-gray-200 dark:border-gray-700/50 overflow-hidden
+                                    className="group block bg-brand-card dark:bg-gray-800/30 hover:bg-brand-gray dark:hover:bg-gray-800/50 
+                                    rounded-xl border border-brand-gray-100 dark:border-gray-700/50 overflow-hidden
                                     transition-all duration-300 hover:border-orange-500/20
                                     hover:shadow-lg hover:shadow-orange-500/5"
                                 >
@@ -282,10 +282,10 @@ export default function CommunitiesPage() {
                                                 {community.description}
                                             </p>
 
-                                            <div className="bg-gray-50 dark:bg-gray-900/50 rounded-xl p-4 space-y-4">
+                                            <div className="bg-brand-gray dark:bg-gray-900/50 rounded-xl p-4 space-y-4">
                                                 <div className="grid grid-cols-2 gap-4">
                                                     <div className="flex items-center gap-3">
-                                                        <div className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+                                                        <div className="p-2 rounded-lg bg-brand-gray dark:bg-gray-800/50">
                                                             <HiUsers className="w-4 h-4 text-orange-500 dark:text-orange-400" />
                                                         </div>
                                                         <div>
@@ -302,7 +302,7 @@ export default function CommunitiesPage() {
                                                         </div>
                                                     </div>
                                                     <div className="flex items-center gap-3">
-                                                        <div className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+                                                        <div className="p-2 rounded-lg bg-brand-gray dark:bg-gray-800/50">
                                                             <FaDiscord className="w-4 h-4 text-[#5865F2]" />
                                                         </div>
                                                         <div>
@@ -335,7 +335,7 @@ export default function CommunitiesPage() {
                                                                 %
                                                             </span>
                                                         </div>
-                                                        <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-1.5 overflow-hidden">
+                                                        <div className="w-full bg-brand-gray-100 dark:bg-gray-800 rounded-full h-1.5 overflow-hidden">
                                                             <m.div
                                                                 initial={{
                                                                     width: 0
@@ -356,10 +356,10 @@ export default function CommunitiesPage() {
                                         </div>
                                     </div>
 
-                                    <div className="border-t border-gray-200 dark:border-gray-700/50 p-4 bg-gray-50 dark:bg-gray-900/30">
+                                    <div className="border-t border-brand-gray-100 dark:border-gray-700/50 p-4 bg-brand-gray dark:bg-gray-900/30">
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center gap-2">
-                                                <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+                                                <div className="w-8 h-8 rounded-full bg-brand-gray dark:bg-gray-800 flex items-center justify-center">
                                                     <HiClock className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                                                 </div>
                                                 <div className="text-sm">
@@ -395,7 +395,7 @@ export default function CommunitiesPage() {
                             animate={{ opacity: 1, y: 0 }}
                             className="text-center py-20"
                         >
-                            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-100 dark:bg-gray-800/50 flex items-center justify-center">
+                            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-gray dark:bg-gray-800/50 flex items-center justify-center">
                                 <FaRocket className="w-8 h-8 text-gray-400 dark:text-gray-600" />
                             </div>
                             <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-2">

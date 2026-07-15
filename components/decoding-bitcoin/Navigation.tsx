@@ -366,7 +366,7 @@ export function Navigation({
                                             "transition-colors duration-200 ease-in-out",
                                             link.href === pathname
                                                 ? "bg-orange-100 dark:bg-orange-900/20"
-                                                : "hover:bg-gray-100 dark:hover:bg-gray-800/50"
+                                                : "hover:bg-brand-gray dark:hover:bg-gray-800/50"
                                         )}
                                         onClick={() => toggleTopic(link.href)}
                                     >
@@ -447,7 +447,7 @@ export function Navigation({
                                                                     childLink.href ===
                                                                         pathname
                                                                         ? "bg-orange-100 dark:bg-orange-900/20"
-                                                                        : "hover:bg-gray-100 dark:hover:bg-gray-800/50"
+                                                                        : "hover:bg-brand-gray dark:hover:bg-gray-800/50"
                                                                 )}
                                                             >
                                                                 <div className="flex items-center min-w-0 flex-1">
@@ -556,7 +556,7 @@ const EmailSubscription = () => {
     }
 
     return (
-        <div className="my-6 border-t border-gray-200 mt-12 pt-4 dark:border-gray-800">
+        <div className="my-6 border-t border-brand-gray-100 mt-12 pt-4 dark:border-gray-800">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                 Bitcoin Only Newsletter
             </h3>
