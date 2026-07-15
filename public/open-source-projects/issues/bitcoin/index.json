@@ -316,6 +316,16 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
+    "url": "https://github.com/bitcoin/bitcoin/issues/35308",
+    "publishedAt": "2026-05-17T17:27:12Z",
+    "title": "BIP32: CExtKey::SetSeed missing validation of seed bit-length",
+    "labels": [
+      "Bug",
+      "Needs Conceptual Review"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
     "url": "https://github.com/bitcoin/bitcoin/issues/35648",
     "publishedAt": "2026-07-03T12:29:00Z",
     "title": "ci: Built depends cache misses OS toolchain updates",
