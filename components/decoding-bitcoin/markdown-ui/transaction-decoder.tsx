@@ -175,7 +175,7 @@ const TransactionDecoder = ({
 
     const AddressBadge = ({ address, type = null }: AddressBadgeProps) => {
         let addressType = type || "Unknown"
-        let color = "bg-gray-100 text-gray-800"
+        let color = "bg-brand-gray text-gray-800"
 
         // Detect type from address prefix if not explicitly provided
         if (!type) {

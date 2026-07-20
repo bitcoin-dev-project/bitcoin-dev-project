@@ -180,7 +180,7 @@ const ContinueReadingComp: React.FC<{
                         {/* Progress card */}
                         <div className="relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 rounded-xl opacity-20 blur-lg"></div>
-                            <div className="relative bg-white dark:bg-vscode-navButton-background-dark rounded-xl shadow-md p-6">
+                            <div className="relative bg-brand-card dark:bg-vscode-navButton-background-dark rounded-xl shadow-md p-6">
                                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                                     Your Progress
                                 </h2>
@@ -206,7 +206,7 @@ const ContinueReadingComp: React.FC<{
                                                 %
                                             </span>
                                         </div>
-                                        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                        <div className="w-full bg-brand-gray-100 dark:bg-gray-700 rounded-full h-2.5">
                                             <div
                                                 className="bg-orange-500 h-2.5 rounded-full transition-all duration-300 ease-in-out"
                                                 style={{
@@ -237,7 +237,7 @@ const ContinueReadingComp: React.FC<{
                             onHoverEnd={() => setIsHovered(false)}
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-xl opacity-10 blur-lg"></div>
-                            <div className="relative bg-white/45 dark:bg-gray-800/45 rounded-xl p-6 transition-all duration-300 group-hover:bg-indigo-50/90 dark:group-hover:bg-indigo-900/30">
+                            <div className="relative bg-brand-card/45 dark:bg-gray-800/45 rounded-xl p-6 transition-all duration-300 group-hover:bg-indigo-50/90 dark:group-hover:bg-indigo-900/30">
                                 <div className="flex items-center space-x-3 mb-3">
                                     <m.div
                                         animate={{

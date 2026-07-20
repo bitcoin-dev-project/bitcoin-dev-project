@@ -5,7 +5,7 @@ export function ByteTools() {
     const [activeTab, setActiveTab] = useState("reverse")
 
     return (
-        <div className="bg-white dark:bg-vscode-background-dark rounded-xl max-w-4xl mx-auto border border-vscode-border-light dark:border-vscode-border-dark shadow-lg overflow-hidden">
+        <div className="bg-brand-card dark:bg-vscode-background-dark rounded-xl max-w-4xl mx-auto border border-vscode-border-light dark:border-vscode-border-dark shadow-lg overflow-hidden">
             <div className="bg-gradient-to-r from-orange-500 to-dark-200 p-4 text-white">
                 <h1 className="text-xl font-bold flex items-center gap-2">
                     Byte Tools
@@ -21,7 +21,7 @@ export function ByteTools() {
                             className={`py-2 px-3 rounded-md text-sm font-medium transition-all ${
                                 activeTab === tab
                                     ? "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border-l-4 border-orange-500"
-                                    : "bg-gray-100 dark:bg-gray-800 text-vscode-text-light dark:text-vscode-text-dark hover:bg-orange-50 dark:hover:bg-orange-900/10 border-l-4 border-transparent"
+                                    : "bg-brand-gray dark:bg-gray-800 text-vscode-text-light dark:text-vscode-text-dark hover:bg-orange-50 dark:hover:bg-orange-900/10 border-l-4 border-transparent"
                             }`}
                         >
                             {tab === "reverse" && "Reverse Bytes"}
@@ -75,7 +75,7 @@ function ReverseBytes() {
                 </label>
                 <input
                     id="reverse-input"
-                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-brand-card dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                     placeholder="Enter hex bytes (e.g., 01020304)"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
@@ -100,7 +100,7 @@ function ReverseBytes() {
                 >
                     Result
                 </label>
-                <div className="font-mono text-sm break-all bg-white dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
+                <div className="font-mono text-sm break-all bg-brand-card dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
                     {output || "Result will appear here"}
                 </div>
             </div>
@@ -143,7 +143,7 @@ function EndianConverter() {
                 </label>
                 <select
                     id="endian-direction"
-                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg bg-brand-card dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                     value={direction}
                     onChange={(e) => setDirection(e.target.value)}
                 >
@@ -165,7 +165,7 @@ function EndianConverter() {
                 </label>
                 <input
                     id="endian-input"
-                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-brand-card dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                     placeholder="Enter hex value (e.g., 01020304)"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
@@ -190,7 +190,7 @@ function EndianConverter() {
                 >
                     Result
                 </label>
-                <div className="font-mono text-sm break-all bg-white dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
+                <div className="font-mono text-sm break-all bg-brand-card dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
                     {output || "Result will appear here"}
                 </div>
             </div>
@@ -236,7 +236,7 @@ function BaseConverter() {
                     </label>
                     <select
                         id="from-base"
-                        className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                        className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg bg-brand-card dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                         value={fromBase}
                         onChange={(e) => setFromBase(e.target.value)}
                     >
@@ -264,7 +264,7 @@ function BaseConverter() {
                     </label>
                     <select
                         id="to-base"
-                        className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                        className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg bg-brand-card dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                         value={toBase}
                         onChange={(e) => setToBase(e.target.value)}
                     >
@@ -293,7 +293,7 @@ function BaseConverter() {
                 </label>
                 <input
                     id="base-input"
-                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-brand-card dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                     placeholder={`Enter base ${fromBase} value`}
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
@@ -314,7 +314,7 @@ function BaseConverter() {
                 >
                     Result (Base {toBase})
                 </label>
-                <div className="font-mono text-sm break-all bg-white dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
+                <div className="font-mono text-sm break-all bg-brand-card dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
                     {output || "Result will appear here"}
                 </div>
             </div>
@@ -411,7 +411,7 @@ function CompactSize() {
                 </label>
                 <select
                     id="compact-mode"
-                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg bg-brand-card dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                     value={mode}
                     onChange={(e) => setMode(e.target.value)}
                 >
@@ -433,7 +433,7 @@ function CompactSize() {
                 </label>
                 <input
                     id="compact-input"
-                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-white dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                    className="w-full p-3 border border-vscode-input-border-light dark:border-vscode-input-border-dark rounded-lg font-mono text-sm bg-brand-card dark:bg-vscode-input-dark text-vscode-text-light dark:text-vscode-text-dark focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                     placeholder={
                         mode === "encode"
                             ? "Enter a number"
@@ -465,7 +465,7 @@ function CompactSize() {
                 >
                     Result
                 </label>
-                <div className="font-mono text-sm break-all bg-white dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
+                <div className="font-mono text-sm break-all bg-brand-card dark:bg-vscode-input-dark p-3 rounded border border-vscode-border-light dark:border-vscode-border-dark text-vscode-text-light dark:text-vscode-text-dark">
                     {output || "Result will appear here"}
                 </div>
             </div>

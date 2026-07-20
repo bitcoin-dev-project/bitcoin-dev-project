@@ -59,7 +59,7 @@ const MailingListSignup: React.FC = () => {
 
     return (
         <div
-            className="not-prose group bg-white dark:bg-vscode-navigation-dark text-gray-800 dark:text-white rounded-xl p-6 sm:p-8 max-w-md hover:shadow-lg transition-all duration-300 overflow-hidden relative border border-gray-200 dark:border-gray-700"
+            className="not-prose group bg-brand-card dark:bg-vscode-navigation-dark text-gray-800 dark:text-white rounded-xl p-6 sm:p-8 max-w-md hover:shadow-lg transition-all duration-300 overflow-hidden relative border border-brand-gray-100 dark:border-gray-700"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -105,7 +105,7 @@ const MailingListSignup: React.FC = () => {
                             setEmail(e.target.value)
                         }
                         placeholder="Enter your email"
-                        className="flex-grow px-3 py-2 text-sm rounded-md sm:rounded-r-none mb-2 sm:mb-0 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-vscode-navigation-dark text-gray-800 dark:text-white border border-gray-300 dark:border-gray-600"
+                        className="flex-grow px-3 py-2 text-sm rounded-md sm:rounded-r-none mb-2 sm:mb-0 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-brand-card dark:bg-vscode-navigation-dark text-gray-800 dark:text-white border border-gray-300 dark:border-gray-600"
                         required
                     />
                     <m.button

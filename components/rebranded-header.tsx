@@ -14,9 +14,9 @@ import GetFundedMegaMenu from "@/components/get-funded/get-funded-mega-menu"
 export function RebrandedHeader() {
     const pathname = usePathname()
     const isHomepage = pathname === "/"
-    const isDecoding =
-        pathname?.startsWith("/decoding") || pathname?.startsWith("/explainers")
-    const isDarkMode = isDecoding
+    // Header follows the site's cream branding everywhere (including the
+    // decoding/explainers learning section) for a consistent look.
+    const isDarkMode = false
     const isSubnavPage = ["/learn", "/contribute", "/get-funded"].includes(
         pathname || ""
     )

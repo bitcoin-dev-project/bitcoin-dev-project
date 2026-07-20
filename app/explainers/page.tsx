@@ -9,7 +9,7 @@ export default function ExplainersPage() {
     return (
         <div className="min-h-screen bg-vscode-background-light dark:bg-vscode-background-dark">
             {/* Hero — static, server-rendered for SEO */}
-            <div className="bg-white dark:bg-gradient-to-b dark:from-black dark:to-vscode-background-dark">
+            <div className="bg-vscode-background-light dark:bg-gradient-to-b dark:from-black dark:to-vscode-background-dark">
                 <div className="max-w-3xl mx-auto px-6 pt-12 pb-10 text-center">
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
                         Bitcoin Explainers

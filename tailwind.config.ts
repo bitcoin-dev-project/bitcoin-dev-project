@@ -106,15 +106,15 @@ const config: Config = {
                 // VS Code Theme Colors
                 vscode: {
                     background: {
-                        light: "#ffffff",
+                        light: "#F6F0E6", // brand cream — matches main site background
                         dark: "#1e1e1e"
                     },
                     navigation: {
-                        light: "#f0f0f0",
+                        light: "#EFE9DE", // brand gray — one step darker than background
                         dark: "#252526"
                     },
                     input: {
-                        light: "#f5f5f5",
+                        light: "#FFFDF5", // brand-card — warm near-white input
                         dark: "#3c3c3c"
                     },
                     text: {
@@ -122,11 +122,11 @@ const config: Config = {
                         dark: "#d4d4d4"
                     },
                     hover: {
-                        light: "#e1e1e1",
+                        light: "#E1DBD0", // brand-gray-100 — warm hover
                         dark: "#3c3c3c"
                     },
                     highlight: {
-                        light: "#f3f4f5",
+                        light: "#EFE9DE", // brand-gray — warm highlight
                         dark: "#2d2d2d"
                     },
                     selection: {
@@ -153,7 +153,7 @@ const config: Config = {
                     },
                     header: {
                         background: {
-                            light: "#f3f3f3",
+                            light: "#EFE9DE", // brand-gray — warm toolbar
                             dark: "#252526"
                         },
                         foreground: {
@@ -163,7 +163,7 @@ const config: Config = {
                     },
                     searchBar: {
                         background: {
-                            light: "#ffffff",
+                            light: "#FFFDF5", // brand-card — warm near-white
                             dark: "#1e1e1e"
                         },
                         foreground: {
@@ -173,7 +173,7 @@ const config: Config = {
                     },
                     navButton: {
                         background: {
-                            light: "#e1e1e1",
+                            light: "#E1DBD0", // brand-gray-100 — warm button
                             dark: "#3c3c3c"
                         },
                         foreground: {
@@ -182,7 +182,7 @@ const config: Config = {
                         }
                     },
                     container: {
-                        light: "#f3f3f3",
+                        light: "#EFE9DE", // brand-gray — warm panel
                         dark: "#252526"
                     },
                     success: {
@@ -194,15 +194,15 @@ const config: Config = {
                         dark: "#d32f2f" // Darker but not too intense red
                     },
                     file: {
-                        light: "#e1e1e1",
+                        light: "#E1DBD0", // brand-gray-100 — warm
                         dark: "#3c3c3c"
                     },
                     selectedFile: {
-                        light: "#007acc",
+                        light: "#f1760f", // brand orange — matches dark, active file
                         dark: "#f1760f"
                     },
                     sidebarBackground: {
-                        light: "#f3f3f3",
+                        light: "#EFE9DE", // brand-gray — warm sidebar
                         dark: "#252526"
                     },
                     sidebarForeground: {
@@ -210,7 +210,7 @@ const config: Config = {
                         dark: "#cccccc"
                     },
                     editorBackground: {
-                        light: "#ffffff",
+                        light: "#FFFDF5", // brand-card — warm near-white editor
                         dark: "#1e1e1e"
                     },
                     editorForeground: {
@@ -218,7 +218,7 @@ const config: Config = {
                         dark: "#d4d4d4"
                     },
                     titleBar: {
-                        light: "#e7e7e7",
+                        light: "#E1DBD0", // brand-gray-100 — warm title bar
                         dark: "#3c3c3c"
                     },
                     activityBar: {
@@ -230,7 +230,7 @@ const config: Config = {
                         dark: "#6b6b6b"
                     },
                     codeSnippetBackground: {
-                        light: "#f5f5f5", // Light gray for light mode
+                        light: "#EFE9DE", // brand-gray — warm code panel
                         dark: "#141414" // The color you specified for dark mode
                     }
                 },

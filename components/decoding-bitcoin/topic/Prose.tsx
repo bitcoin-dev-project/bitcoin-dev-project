@@ -23,7 +23,7 @@ export function Prose<T extends React.ElementType = "div">({
                 // link underline
                 "prose-a:no-underline prose-a:text-black dark:prose-a:text-white prose-a:shadow-[inset_0_calc(-1*var(--tw-prose-underline-size,2px))_0_0_var(--tw-prose-underline,theme(colors.orange.500))] dark:hover:prose-a:[--tw-prose-underline-size:3px]",
                 // inline code (not inside pre)
-                "prose-code:break-words prose-code:rounded-md prose-code:border prose-code:border-gray-200 prose-code:bg-[#f7f6f3] prose-code:px-1.5 prose-code:py-0.5 prose-code:before:content-[''] prose-code:after:content-['']",
+                "prose-code:break-words prose-code:rounded-md prose-code:border prose-code:border-brand-gray-100 prose-code:bg-[#f7f6f3] prose-code:px-1.5 prose-code:py-0.5 prose-code:before:content-[''] prose-code:after:content-['']",
                 "dark:prose-code:border-[#3a3a3b] dark:prose-code:bg-[#252526] dark:prose-code:brightness-125",
                 // code inside pre (remove background and border)
                 "[&_pre_code]:!bg-transparent [&_pre_code]:!border-0",

@@ -13,7 +13,7 @@ export default function Metadata({ badges }: { badges: string[] }) {
                     {badges.map((badge, index) => (
                         <Link href={`/tags/${badge}`} key={index} passHref>
                             <button>
-                                <span className="inline-flex items-center rounded-full bg-gray-50 dark:bg-gray-950 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                                <span className="inline-flex items-center rounded-full bg-brand-gray dark:bg-gray-950 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                                     {badge}
                                 </span>
                             </button>

@@ -18,7 +18,7 @@ const Hint = ({ hints }: HintProps) => {
     return (
         <div className="mx-auto py-2 mt-10">
             <div
-                className="bg-white rounded-lg border-l-4 border-[#ebb305] p-6 rounded-lg p-4 cursor-pointer transition-all duration-300 ease-in-out"
+                className="bg-brand-card rounded-lg border-l-4 border-[#ebb305] p-6 rounded-lg p-4 cursor-pointer transition-all duration-300 ease-in-out"
                 onClick={revealNextHint}
             >
                 {revealedHints < hints.length && (

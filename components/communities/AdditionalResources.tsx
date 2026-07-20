@@ -23,7 +23,7 @@ export const AdditionalResources = ({ weekData }: { weekData: WeeklyData }) => {
     return (
         <div className="space-y-6">
             {/* Simple Filter Tabs */}
-            <div className="flex items-center gap-2 border-b border-gray-200 dark:border-gray-800">
+            <div className="flex items-center gap-2 border-b border-brand-gray-100 dark:border-gray-800">
                 {resourceTypes.map((type) => (
                     <button
                         key={type.value}
