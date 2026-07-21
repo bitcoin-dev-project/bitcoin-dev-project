@@ -333,5 +333,15 @@
       "Bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/35764",
+    "publishedAt": "2026-07-21T14:03:18Z",
+    "title": "depends: `local_dir` cache invalidation can miss source changes",
+    "labels": [
+      "Bug",
+      "Build system"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]

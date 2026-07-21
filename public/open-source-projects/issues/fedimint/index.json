@@ -101,5 +101,15 @@
       "flaky test"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/8851",
+    "publishedAt": "2026-07-21T15:34:42Z",
+    "title": "gateway: liquidity-manager auth allowlist doesn't match /v1-prefixed routes (401 on versioned API)",
+    "labels": [
+      "bug",
+      "security"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
