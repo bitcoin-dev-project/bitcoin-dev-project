@@ -72,5 +72,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin-dev-project/sim-ln/issues/313",
+    "publishedAt": "2026-07-23T16:01:11Z",
+    "title": "Channel policy enforcement checks",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/141053413?v=4"
   }
 ]
