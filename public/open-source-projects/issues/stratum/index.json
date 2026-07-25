@@ -8,5 +8,15 @@
       "help wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
+  },
+  {
+    "url": "https://github.com/stratum-mining/stratum/issues/2231",
+    "publishedAt": "2026-07-23T20:43:30Z",
+    "title": "`channels_sv2::bip141::try_strip_bip141` needs tighter validation against `coinbase_tx_prefix` and `coinbase_tx_suffix`",
+    "labels": [
+      "bug",
+      "channels-sv2"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/78796858?v=4"
   }
 ]
