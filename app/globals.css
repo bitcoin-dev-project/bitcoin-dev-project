@@ -30,6 +30,42 @@ body {
     }
 }
 
+/* Slim, brand-tinted scrollbar for scroll containers (sidebar, panels).
+   Warm neutral thumb that turns brand-orange on hover; theme-aware. */
+.brand-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(60, 50, 40, 0.22) transparent;
+}
+.brand-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.brand-scrollbar::-webkit-scrollbar-track,
+.brand-scrollbar::-webkit-scrollbar-corner {
+    background: transparent;
+}
+.brand-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(60, 50, 40, 0.22);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-clip: content-box;
+}
+.brand-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(235, 82, 52, 0.6);
+    background-clip: content-box;
+}
+.dark .brand-scrollbar {
+    scrollbar-color: rgba(190, 190, 190, 0.25) transparent;
+}
+.dark .brand-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(190, 190, 190, 0.22);
+    background-clip: content-box;
+}
+.dark .brand-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(235, 82, 52, 0.65);
+    background-clip: content-box;
+}
+
 @keyframes shimmer {
     0% {
         left: -100%;

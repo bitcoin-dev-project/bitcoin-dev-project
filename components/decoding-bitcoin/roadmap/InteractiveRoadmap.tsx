@@ -248,8 +248,11 @@ export default function InteractiveRoadmap() {
                         aria-label="Go to Inputs InputCount Page"
                     />
 
-                    {/* Tagged Hashes link rectangle at position 257, 5609 */}
-                    <a
+                    {/* STASHED 2026-07-23: Tagged Hashes & Schnorr lessons moved to
+                        public/decoding-bitcoin/_stashed-lessons/ while the taproot
+                        module is rebuilt. Restore these two hotspots when the lessons
+                        return to /decoding. */}
+                    {/* <a
                         href="/decoding/tagged-hashes"
                         className="absolute block transition-colors duration-300 hover:bg-orange-500/30"
                         style={{
@@ -262,7 +265,6 @@ export default function InteractiveRoadmap() {
                         aria-label="Go to Tagged Hashes Page"
                     />
 
-                    {/* Schnorr Signature link rectangle */}
                     <a
                         href="/decoding/schnorr-signature"
                         className="absolute block transition-colors duration-300 hover:bg-orange-500/30"
@@ -274,7 +276,7 @@ export default function InteractiveRoadmap() {
                             borderRadius: "8px"
                         }}
                         aria-label="Go to Schnorr Signature Page"
-                    />
+                    /> */}
                 </div>
             </div>
         </div>

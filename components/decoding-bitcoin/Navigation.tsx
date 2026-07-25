@@ -15,21 +15,9 @@ import {
     FaCheck,
     FaChevronDown,
     FaChevronRight,
-    FaClipboardList,
-    FaDiscord,
-    FaFileCode,
-    FaFileSignature,
-    FaHandshake,
-    FaHashtag,
-    FaHistory,
-    FaKey,
     FaLightbulb,
-    FaQuestionCircle,
-    FaRoute,
-    FaTools,
     FaUsers
 } from "react-icons/fa"
-import { ArrowRight } from "lucide-react"
 
 interface NavigationLink {
     title: string
@@ -59,18 +47,54 @@ const categoryOrder = [
     "Contribution"
 ]
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-    FaClipboardList,
-    FaDiscord,
-    FaFileCode,
-    FaFileSignature,
-    FaHandshake,
-    FaHashtag,
-    FaHistory,
-    FaKey,
-    FaRoute,
-    FaTools,
-    FaUsers
+type DotState = "completed" | "active" | "todo"
+
+// One status marker that sits on the timeline rail.
+// completed = filled brand-green + check · active = orange dot · todo = hollow ring
+function StatusDot({
+    state,
+    size
+}: {
+    state: DotState
+    size: "parent" | "child"
+}) {
+    const parent = size === "parent"
+    if (state === "completed") {
+        return (
+            <span
+                className={clsx(
+                    "flex items-center justify-center rounded-full bg-brand-green",
+                    parent ? "h-[18px] w-[18px]" : "h-[14px] w-[14px]"
+                )}
+            >
+                <FaCheck
+                    className={clsx(
+                        "text-white",
+                        parent ? "h-2.5 w-2.5" : "h-2 w-2"
+                    )}
+                    aria-label="Completed"
+                />
+            </span>
+        )
+    }
+    if (state === "active") {
+        return (
+            <span
+                className={clsx(
+                    "rounded-full bg-orange-500 ring-4 ring-orange-500/15",
+                    parent ? "h-[9px] w-[9px]" : "h-[7px] w-[7px]"
+                )}
+            />
+        )
+    }
+    return (
+        <span
+            className={clsx(
+                "rounded-full border border-brand-gray-200 bg-vscode-navigation-light dark:border-gray-600 dark:bg-vscode-navigation-dark",
+                parent ? "h-[12px] w-[12px]" : "h-[9px] w-[9px]"
+            )}
+        />
+    )
 }
 
 export function Navigation({
@@ -239,15 +263,17 @@ export function Navigation({
         }))
     }, [])
 
-    // Auto-expand a parent topic only when navigating to one of its children.
-    // This avoids overriding the user's explicit collapse when clicking a parent.
+    // Auto-expand the section you're currently in — whether you're on the
+    // parent page itself or one of its children — so your context is open.
     useEffect(() => {
         navigation.forEach((section) => {
             section.links.forEach((link) => {
-                if (
-                    link.children &&
-                    link.children.some((child) => child.href === pathname)
-                ) {
+                const onChild = link.children?.some(
+                    (child) => child.href === pathname
+                )
+                const onSelf =
+                    link.href === pathname && (link.children?.length ?? 0) > 0
+                if (onChild || onSelf) {
                     setExpandedTopics((prev) => {
                         if (prev[link.href]) return prev
                         return { ...prev, [link.href]: true }
@@ -257,9 +283,22 @@ export function Navigation({
         })
     }, [pathname, navigation])
 
-    const getIcon = useCallback((iconName: string) => {
-        const IconComponent = iconMap[iconName] ?? FaQuestionCircle
-        return <IconComponent className="inline-block mr-2 text-current" />
+    // Scroll the active lesson to the middle of the sidebar on load / nav,
+    // scoped to the sidebar's own scroll container (never the main page).
+    const scrollActiveIntoView = useCallback((el: HTMLLIElement | null) => {
+        if (!el) return
+        const container = el.closest(".brand-scrollbar") as HTMLElement | null
+        if (!container) {
+            el.scrollIntoView({ block: "center" })
+            return
+        }
+        const cRect = container.getBoundingClientRect()
+        const eRect = el.getBoundingClientRect()
+        container.scrollTop +=
+            eRect.top -
+            cRect.top -
+            container.clientHeight / 2 +
+            eRect.height / 2
     }, [])
 
     const handleTopicClick = useCallback(
@@ -277,233 +316,303 @@ export function Navigation({
     )
 
     return (
-        <nav className={clsx("text-md lg:text-sm font-medium", className)}>
+        <nav className={clsx("text-md lg:text-sm font-normal", className)}>
             <Link
-                className="mb-6 flex flex-row items-center space-x-3 hover:no-underline"
+                className="mb-8 flex flex-row items-center gap-3 hover:no-underline"
                 href="/decoding"
             >
-                <div className="h-11 w-1 rounded-lg bg-[#e77429]"></div>
-                <div>
-                    <h6 className="mt-1 font-bold text-xl">Learn</h6>
-                    <div className="text-gray-600 dark:text-gray-400">
-                        Bitcoin, Privacy &amp; Decentralization
-                    </div>
-                </div>
+                <div className="h-6 w-1 rounded-full bg-[#e77429]"></div>
+                <h6 className="text-xl font-bold text-brand-dark-100 dark:text-white">
+                    Learn
+                </h6>
             </Link>
 
-            {/* Add Communities Section before the main navigation */}
-            <div className="mb-8">
+            {/* Secondary destinations — quiet links, not cards */}
+            <div className="mb-8 space-y-0.5">
                 <Link
                     href="/decoding/communities"
-                    className={clsx(
-                        "group flex items-center px-4 py-3 rounded-lg transition-all duration-200",
-                        "bg-gradient-to-r from-orange-500/10 to-orange-500/5",
-                        "border border-orange-500/20 hover:border-orange-500/40",
-                        "hover:from-orange-500/15 hover:to-orange-500/10"
-                    )}
+                    className="group flex items-center gap-2.5 rounded-md px-2 py-1.5 text-sm text-brand-gray-300 transition-colors hover:bg-brand-gray hover:text-brand-dark-100 dark:text-gray-400 dark:hover:bg-gray-800/40 dark:hover:text-gray-200"
                 >
-                    <div className="flex items-center flex-1 min-w-0">
-                        <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-orange-500/20 mr-3">
-                            <FaUsers className="w-4 h-4 text-orange-500" />
-                        </div>
-                        <div>
-                            <h3 className="text-sm font-semibold text-orange-500 dark:text-orange-400">
-                                Communities
-                            </h3>
-                            <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">
-                                Join study groups & cohorts
-                            </p>
-                        </div>
-                    </div>
-                    <div className="flex-shrink-0 ml-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ArrowRight className="w-4 h-4 text-orange-500" />
-                    </div>
+                    <FaUsers className="h-3.5 w-3.5 shrink-0 text-brand-gray-200 group-hover:text-orange-500 dark:text-gray-500" />
+                    Communities
                 </Link>
-            </div>
-
-            {/* Add Explainers Section */}
-            <div className="mb-8">
                 <Link
                     href="/explainers"
-                    className={clsx(
-                        "group flex items-center px-4 py-3 rounded-lg transition-all duration-200",
-                        "bg-gradient-to-r from-purple-500/10 to-purple-500/5",
-                        "border border-purple-500/20 hover:border-purple-500/40",
-                        "hover:from-purple-500/15 hover:to-purple-500/10"
-                    )}
+                    className="group flex items-center gap-2.5 rounded-md px-2 py-1.5 text-sm text-brand-gray-300 transition-colors hover:bg-brand-gray hover:text-brand-dark-100 dark:text-gray-400 dark:hover:bg-gray-800/40 dark:hover:text-gray-200"
                 >
-                    <div className="flex items-center flex-1 min-w-0">
-                        <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-purple-500/20 mr-3">
-                            <FaLightbulb className="w-4 h-4 text-purple-500" />
-                        </div>
-                        <div>
-                            <h3 className="text-sm font-semibold text-purple-500 dark:text-purple-400">
-                                Explainers
-                            </h3>
-                            <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">
-                                Visual guides & diagrams
-                            </p>
-                        </div>
-                    </div>
-                    <div className="flex-shrink-0 ml-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ArrowRight className="w-4 h-4 text-purple-500" />
-                    </div>
+                    <FaLightbulb className="h-3.5 w-3.5 shrink-0 text-brand-gray-200 group-hover:text-orange-500 dark:text-gray-500" />
+                    Explainers
                 </Link>
             </div>
 
-            <ul role="list" className="space-y-6">
-                {navigation.map((section) => (
-                    <li key={section.title}>
-                        <h2 className="font-display font-bold text-gray-900 dark:text-white mb-2">
-                            {section.title}
-                        </h2>
-                        <ul role="list" className="space-y-1 pl-2">
-                            {section.links.map((link) => (
-                                <li key={link.href} className="relative">
-                                    <div
-                                        className={clsx(
-                                            "flex items-center cursor-pointer rounded-md",
-                                            "transition-colors duration-200 ease-in-out",
-                                            link.href === pathname
-                                                ? "bg-orange-100 dark:bg-orange-900/20"
-                                                : "hover:bg-brand-gray dark:hover:bg-gray-800/50"
-                                        )}
-                                        onClick={() => toggleTopic(link.href)}
-                                    >
-                                        <div className="flex items-center min-w-0 flex-1">
-                                            <Link
-                                                href={link.href}
-                                                onClick={(e) => {
-                                                    e.stopPropagation()
-                                                    onLinkClick &&
-                                                        onLinkClick(e)
-                                                    handleTopicClick(link)
-                                                }}
-                                                className={clsx(
-                                                    "flex items-center flex-1 py-2 px-3 rounded-md min-w-0 group-hover:w-auto",
-                                                    link.href === pathname
-                                                        ? "text-orange-500"
-                                                        : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-                                                )}
-                                            >
-                                                {completedTopics.has(
-                                                    normalizePath(link.href)
-                                                ) ? (
-                                                    <div className="flex-shrink-0 w-5 h-5 mr-2 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-500/20">
-                                                        <FaCheck
-                                                            className="w-2.5 h-2.5 text-orange-500 dark:text-orange-400"
-                                                            aria-label="Completed"
-                                                        />
-                                                    </div>
-                                                ) : (
-                                                    link.icon && (
-                                                        <span className="flex-shrink-0">
-                                                            {getIcon(link.icon)}
-                                                        </span>
-                                                    )
-                                                )}
-                                                <span className="truncate mr-2 group-hover:truncate-none whitespace-normal">
-                                                    {link.title}
-                                                </span>
-                                            </Link>
-                                        </div>
-                                        {link.children &&
-                                            link.children.length > 0 && (
+            <ul role="list" className="space-y-7">
+                {navigation.map((section) => {
+                    const lessonLinks = section.links.flatMap((l) => [
+                        l,
+                        ...(l.children || [])
+                    ])
+                    const doneCount = lessonLinks.filter((l) =>
+                        completedTopics.has(normalizePath(l.href))
+                    ).length
+                    return (
+                        <li key={section.title}>
+                            <div className="mb-3 flex items-baseline justify-between gap-2">
+                                <h2 className="font-display text-sm font-bold text-brand-dark-100 dark:text-white">
+                                    {section.title}
+                                </h2>
+                                <span className="shrink-0 text-[11px] font-medium tabular-nums text-brand-gray-200 dark:text-gray-500">
+                                    {doneCount}/{lessonLinks.length}
+                                </span>
+                            </div>
+                            <ul role="list" className="relative">
+                                {section.links.map((link, i) => {
+                                    const isActive = link.href === pathname
+                                    const isDone = completedTopics.has(
+                                        normalizePath(link.href)
+                                    )
+                                    const state: DotState = isDone
+                                        ? "completed"
+                                        : isActive
+                                          ? "active"
+                                          : "todo"
+                                    const children = link.children ?? []
+                                    const hasChildren = children.length > 0
+                                    const isExpanded =
+                                        !!expandedTopics[link.href]
+                                    const showSpineBelow =
+                                        i < section.links.length - 1 ||
+                                        (hasChildren && isExpanded)
+                                    return (
+                                        <li
+                                            key={link.href}
+                                            className="relative"
+                                            ref={
+                                                isActive
+                                                    ? scrollActiveIntoView
+                                                    : undefined
+                                            }
+                                        >
+                                            {i > 0 && (
                                                 <span
-                                                    className={clsx(
-                                                        "flex-shrink-0 ml-auto mr-3 text-xs p-2",
-                                                        link.href === pathname
-                                                            ? "text-orange-500"
-                                                            : "text-gray-400"
-                                                    )}
-                                                    onClick={(e) => {
-                                                        e.stopPropagation()
-                                                        toggleTopic(link.href)
-                                                    }}
-                                                >
-                                                    {expandedTopics[
-                                                        link.href
-                                                    ] ? (
-                                                        <FaChevronDown className="w-3 h-3" />
-                                                    ) : (
-                                                        <FaChevronRight className="w-3 h-3" />
-                                                    )}
-                                                </span>
+                                                    aria-hidden
+                                                    className="absolute left-[12px] top-0 h-[18px] w-px bg-brand-gray-200 dark:bg-gray-700"
+                                                />
                                             )}
-                                    </div>
-                                    {link.children &&
-                                        link.children.length > 0 &&
-                                        expandedTopics[link.href] && (
-                                            <ul className="mt-1 space-y-1 pl-6">
-                                                {link.children.map(
-                                                    (childLink) => (
-                                                        <li
-                                                            key={childLink.href}
-                                                            className="relative"
+                                            {showSpineBelow && (
+                                                <span
+                                                    aria-hidden
+                                                    className="absolute left-[12px] top-[18px] bottom-0 w-px bg-brand-gray-200 dark:bg-gray-700"
+                                                />
+                                            )}
+                                            <span
+                                                aria-hidden={
+                                                    state !== "completed"
+                                                }
+                                                className="absolute left-[3px] top-[9px] z-10 flex h-[18px] w-[18px] items-center justify-center"
+                                            >
+                                                <StatusDot
+                                                    state={state}
+                                                    size="parent"
+                                                />
+                                            </span>
+                                            <div
+                                                className="flex items-stretch"
+                                                onClick={() =>
+                                                    hasChildren &&
+                                                    toggleTopic(link.href)
+                                                }
+                                            >
+                                                <span
+                                                    className="w-8 shrink-0"
+                                                    aria-hidden
+                                                />
+                                                <div
+                                                    className={clsx(
+                                                        "flex min-w-0 flex-1 items-center rounded-md transition-colors duration-150",
+                                                        isActive
+                                                            ? "bg-orange-500/10"
+                                                            : "hover:bg-brand-gray dark:hover:bg-gray-800/40"
+                                                    )}
+                                                >
+                                                    <Link
+                                                        href={link.href}
+                                                        title={link.title}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation()
+                                                            onLinkClick &&
+                                                                onLinkClick(e)
+                                                            handleTopicClick(
+                                                                link
+                                                            )
+                                                        }}
+                                                        className={clsx(
+                                                            "min-w-0 flex-1 truncate py-2 pl-2 pr-2 text-sm leading-snug",
+                                                            isActive
+                                                                ? "font-semibold text-orange-500"
+                                                                : isDone
+                                                                  ? "text-brand-gray-300 hover:text-orange-500 dark:text-gray-400"
+                                                                  : "text-brand-dark-100 hover:text-orange-500 dark:text-gray-200"
+                                                        )}
+                                                    >
+                                                        {link.title}
+                                                    </Link>
+                                                    {hasChildren && (
+                                                        <button
+                                                            type="button"
+                                                            aria-label={
+                                                                isExpanded
+                                                                    ? "Collapse"
+                                                                    : "Expand"
+                                                            }
+                                                            className={clsx(
+                                                                "mr-2 shrink-0 rounded p-1.5",
+                                                                isActive
+                                                                    ? "text-orange-500"
+                                                                    : "text-brand-gray-200 hover:text-brand-dark-100 dark:text-gray-500 dark:hover:text-gray-300"
+                                                            )}
+                                                            onClick={(e) => {
+                                                                e.stopPropagation()
+                                                                toggleTopic(
+                                                                    link.href
+                                                                )
+                                                            }}
                                                         >
-                                                            <div
-                                                                className={clsx(
-                                                                    "flex items-center rounded-md",
-                                                                    childLink.href ===
-                                                                        pathname
-                                                                        ? "bg-orange-100 dark:bg-orange-900/20"
-                                                                        : "hover:bg-brand-gray dark:hover:bg-gray-800/50"
-                                                                )}
-                                                            >
-                                                                <div className="flex items-center min-w-0 flex-1">
-                                                                    {completedTopics.has(
-                                                                        normalizePath(
-                                                                            childLink.href
-                                                                        )
-                                                                    ) && (
-                                                                        <div className="ml-3 w-5 h-5 flex-shrink-0 flex items-center justify-center rounded-full bg-orange-100 dark:bg-orange-500/20">
-                                                                            <FaCheck
-                                                                                className="w-2.5 h-2.5 text-orange-500 dark:text-orange-400"
-                                                                                aria-label="Completed"
-                                                                            />
-                                                                        </div>
+                                                            {isExpanded ? (
+                                                                <FaChevronDown className="h-2.5 w-2.5" />
+                                                            ) : (
+                                                                <FaChevronRight className="h-2.5 w-2.5" />
+                                                            )}
+                                                        </button>
+                                                    )}
+                                                </div>
+                                            </div>
+                                            {hasChildren && isExpanded && (
+                                                <ul
+                                                    role="list"
+                                                    className="relative"
+                                                >
+                                                    <span
+                                                        aria-hidden
+                                                        className="absolute left-[12px] top-0 h-[16px] w-[20px] rounded-bl-[10px] border-b border-l border-brand-gray-200 dark:border-gray-700"
+                                                    />
+                                                    {children.map(
+                                                        (child, ci) => {
+                                                            const childActive =
+                                                                child.href ===
+                                                                pathname
+                                                            const childDone =
+                                                                completedTopics.has(
+                                                                    normalizePath(
+                                                                        child.href
+                                                                    )
+                                                                )
+                                                            const childState: DotState =
+                                                                childDone
+                                                                    ? "completed"
+                                                                    : childActive
+                                                                      ? "active"
+                                                                      : "todo"
+                                                            const childLast =
+                                                                ci ===
+                                                                children.length -
+                                                                    1
+                                                            return (
+                                                                <li
+                                                                    key={
+                                                                        child.href
+                                                                    }
+                                                                    className="relative"
+                                                                    ref={
+                                                                        childActive
+                                                                            ? scrollActiveIntoView
+                                                                            : undefined
+                                                                    }
+                                                                >
+                                                                    {ci > 0 && (
+                                                                        <span
+                                                                            aria-hidden
+                                                                            className="absolute left-[32px] top-0 h-[16px] w-px bg-brand-gray-200 dark:bg-gray-700"
+                                                                        />
                                                                     )}
-                                                                    <Link
-                                                                        href={
-                                                                            childLink.href
+                                                                    {!childLast && (
+                                                                        <span
+                                                                            aria-hidden
+                                                                            className="absolute left-[32px] top-[16px] bottom-0 w-px bg-brand-gray-200 dark:bg-gray-700"
+                                                                        />
+                                                                    )}
+                                                                    <span
+                                                                        aria-hidden={
+                                                                            childState !==
+                                                                            "completed"
                                                                         }
-                                                                        onClick={(
-                                                                            e
-                                                                        ) => {
-                                                                            handleTopicClick(
-                                                                                childLink
-                                                                            )
-                                                                            onLinkClick &&
-                                                                                onLinkClick(
-                                                                                    e
-                                                                                )
-                                                                        }}
-                                                                        className={clsx(
-                                                                            "flex items-center flex-1 py-2 px-3 font-normal group-hover:w-auto",
-                                                                            childLink.href ===
-                                                                                pathname
-                                                                                ? "text-orange-500"
-                                                                                : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                                                                        )}
+                                                                        className="absolute left-[25px] top-[9px] z-10 flex h-[14px] w-[14px] items-center justify-center"
                                                                     >
-                                                                        <span className="truncate group-hover:truncate-none whitespace-normal">
-                                                                            {
-                                                                                childLink.title
+                                                                        <StatusDot
+                                                                            state={
+                                                                                childState
                                                                             }
-                                                                        </span>
-                                                                    </Link>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    )
-                                                )}
-                                            </ul>
-                                        )}
-                                </li>
-                            ))}
-                        </ul>
-                    </li>
-                ))}
+                                                                            size="child"
+                                                                        />
+                                                                    </span>
+                                                                    <div className="flex items-stretch">
+                                                                        <span
+                                                                            className="w-11 shrink-0"
+                                                                            aria-hidden
+                                                                        />
+                                                                        <div
+                                                                            className={clsx(
+                                                                                "flex min-w-0 flex-1 items-center rounded-md transition-colors duration-150",
+                                                                                childActive
+                                                                                    ? "bg-orange-500/10"
+                                                                                    : "hover:bg-brand-gray dark:hover:bg-gray-800/40"
+                                                                            )}
+                                                                        >
+                                                                            <Link
+                                                                                href={
+                                                                                    child.href
+                                                                                }
+                                                                                title={
+                                                                                    child.title
+                                                                                }
+                                                                                onClick={(
+                                                                                    e
+                                                                                ) => {
+                                                                                    handleTopicClick(
+                                                                                        child
+                                                                                    )
+                                                                                    onLinkClick &&
+                                                                                        onLinkClick(
+                                                                                            e
+                                                                                        )
+                                                                                }}
+                                                                                className={clsx(
+                                                                                    "min-w-0 flex-1 truncate py-1.5 pl-1 pr-2 text-[13px] leading-snug",
+                                                                                    childActive
+                                                                                        ? "font-medium text-orange-500"
+                                                                                        : childDone
+                                                                                          ? "text-brand-gray-300 hover:text-orange-500 dark:text-gray-500"
+                                                                                          : "text-brand-gray-300 hover:text-orange-500 dark:text-gray-400"
+                                                                                )}
+                                                                            >
+                                                                                {
+                                                                                    child.title
+                                                                                }
+                                                                            </Link>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            )
+                                                        }
+                                                    )}
+                                                </ul>
+                                            )}
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </li>
+                    )
+                })}
             </ul>
             <EmailSubscription />
         </nav>

@@ -245,23 +245,22 @@ const config: Config = {
                 "dark-footer": "url('/images/bgdarkfooter.webp')",
                 "dark-footer-mobile": "url('/images/mobilebgdarkfooter.webp')"
             },
-            keyframes: {
-                updown: {
-                    "0%, 100%": { transform: "translateY(0)" },
-                    "50%": { transform: "translateY(-10px)" }
-                },
-                leftright: {
-                    "0%, 100%": { transform: "translateX(0)" },
-                    "50%": { transform: "translateX(-10px)" }
-                }
-            },
-            animation: {
-                updown: "updown 2s infinite",
-                leftright: "leftright 1.5s infinite"
-            },
             fontFamily: {
-                brawler: ["var(--brawler-font)"],
-                inter: ["var(--inter-font)"],
+                inter: [
+                    "var(--font-inter)",
+                    "system-ui",
+                    "-apple-system",
+                    '"Segoe UI"',
+                    "sans-serif"
+                ],
+                // Lesson reading font (Prose body). Headings/UI stay on Inter.
+                serif: [
+                    "var(--font-source-serif)",
+                    "Georgia",
+                    "Cambria",
+                    '"Times New Roman"',
+                    "serif"
+                ],
                 quicksand: ["var(--quicksand-font)"],
                 montserrat: ["var(--montserrat-font)"]
             },
@@ -269,7 +268,11 @@ const config: Config = {
                 lg: ["17px", "28px"]
             },
             maxWidth: {
-                "desktop-max": "1440px"
+                "desktop-max": "1440px",
+                // Outer cap for the decoding lesson shell (nav · content · TOC).
+                // Was referenced as max-w-9xl but never defined, so the page
+                // had no cap and sprawled on wide screens.
+                "9xl": "116rem"
             }
         }
     },

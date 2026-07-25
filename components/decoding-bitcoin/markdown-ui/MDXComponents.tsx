@@ -29,6 +29,7 @@ const SandpackComponent = dynamic(() => import("./sandpack"), { ssr: false })
 const Quiz = dynamic(() => import("./Quiz"))
 const StackSimulator = dynamic(() => import("./stack-simulator"))
 const CodeSnippet = dynamic(() => import("./code-snippet"))
+const ScriptBlock = dynamic(() => import("./script-block"))
 const ExerciseSelector = dynamic(() => import("./exercise-selector"), {
     ssr: false
 })
@@ -56,6 +57,9 @@ const ByteTools = dynamic(() =>
 const InteractiveRoadmap = dynamic(
     () => import("../roadmap/InteractiveRoadmap")
 )
+const PythonPlayground = dynamic(() => import("./python-playground"), {
+    ssr: false
+})
 
 export const components: MDXComponents = {
     Image,
@@ -78,6 +82,7 @@ export const components: MDXComponents = {
     Quiz,
     StackSimulator,
     CodeSnippet,
+    ScriptBlock,
     ExerciseSelector,
     BitcoinHistory,
     MailingListSignup,
@@ -90,5 +95,6 @@ export const components: MDXComponents = {
     HashFunctions,
     AddressGenerator,
     ByteTools,
-    InteractiveRoadmap
+    InteractiveRoadmap,
+    PythonPlayground
 }

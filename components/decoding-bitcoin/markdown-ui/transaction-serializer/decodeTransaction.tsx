@@ -2,6 +2,8 @@ import {
     Transaction,
     payments,
     script as btcScript,
+    address as btcAddress,
+    networks,
     TxInput,
     Network
 } from "bitcoinjs-lib"
@@ -30,6 +32,8 @@ interface TransactionOutput {
     n: number
     scriptPubKey: ScriptDetail
     type: string
+    address?: string
+    opReturnData?: string
 }
 
 export interface DecodedTransaction {
@@ -81,17 +85,60 @@ class TransactionDecoder {
     }
 
     private decodeOutputs(): TransactionOutput[] {
-        return this.tx.outs.map(
-            (output, index): TransactionOutput => ({
+        return this.tx.outs.map((output, index): TransactionOutput => {
+            const type = this.classifyOutputScript(output.script)
+            return {
                 value: output.value,
                 n: index,
                 scriptPubKey: {
                     asm: this.toCustomASM(output.script),
                     hex: output.script.toString("hex")
                 },
-                type: this.classifyOutputScript(output.script)
-            })
-        )
+                type,
+                address: this.deriveAddress(output.script),
+                opReturnData:
+                    type === "OP_RETURN"
+                        ? this.decodeOpReturn(output.script)
+                        : undefined
+            }
+        })
+    }
+
+    // Best-effort address for an output script. Legacy and v0-witness
+    // scripts go through bitcoinjs directly; taproot (witness v1) is
+    // encoded as bech32m by hand because payments.p2tr needs initEccLib().
+    private deriveAddress(script: Buffer): string | undefined {
+        const net = this.network || networks.bitcoin
+        try {
+            return btcAddress.fromOutputScript(script, net)
+        } catch {
+            if (
+                script.length === 34 &&
+                script[0] === btcScript.OPS.OP_1 &&
+                script[1] === 0x20
+            ) {
+                try {
+                    return btcAddress.toBech32(script.slice(2), 1, net.bech32)
+                } catch {
+                    return undefined
+                }
+            }
+            return undefined
+        }
+    }
+
+    // Decode an OP_RETURN payload as text, but only when it is printable
+    // (the common "human message" case). Binary data returns undefined.
+    private decodeOpReturn(script: Buffer): string | undefined {
+        const decompiled = btcScript.decompile(script)
+        if (!decompiled) return undefined
+        const dataPush = decompiled.find((el): el is Buffer => isBuffer(el))
+        if (!dataPush) return undefined
+        const text = dataPush.toString("utf8")
+        const roundTrips = Buffer.from(text, "utf8").equals(dataPush)
+        // eslint-disable-next-line no-control-regex
+        const printable = !/[\x00-\x08\x0e-\x1f]/.test(text)
+        return roundTrips && printable ? text : undefined
     }
 
     private toCustomASM(scriptBuffer: Buffer): string {
@@ -122,6 +169,21 @@ class TransactionDecoder {
                 // console.error(`Error checking ${paymentFn.name}:`, e);
                 return false
             }
+        }
+
+        // OP_RETURN (nulldata): starts with OP_RETURN (0x6a)
+        if (script.length > 0 && script[0] === btcScript.OPS.OP_RETURN) {
+            return "OP_RETURN"
+        }
+
+        // P2TR: OP_1 (0x51) followed by a 32-byte witness program.
+        // Detected by bytes because payments.p2tr requires initEccLib().
+        if (
+            script.length === 34 &&
+            script[0] === btcScript.OPS.OP_1 &&
+            script[1] === 0x20
+        ) {
+            return "P2TR"
         }
 
         if (isOutput(payments.p2pk)) return "P2PK"

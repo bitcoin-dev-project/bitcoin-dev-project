@@ -32,29 +32,33 @@ export default function ExpandableAlert({
     const [isHovered, setIsHovered] = useState(false)
     const [isCopied, setIsCopied] = useState(false)
 
+    // Warm, semantic palette tuned to the cream brand. Kept distinct hues so
+    // levels stay readable, but dropped the cool tones (cyan/blue/purple) that
+    // clashed with the warm page: important -> brand orange, info -> warm stone,
+    // success -> emerald. warning/solution were already warm enough.
     const alertStyles = {
         important: {
-            borderColor: "border-blue-300 dark:border-blue-600",
-            bgColor: "bg-blue-50 dark:bg-blue-800/20",
-            headerColor: "!text-blue-700 dark:!text-blue-300",
+            borderColor: "border-orange-300 dark:border-orange-600",
+            bgColor: "bg-orange-50 dark:bg-orange-800/20",
+            headerColor: "!text-orange-700 dark:!text-orange-300",
             Icon: CheckCircleIcon
         },
         warning: {
-            borderColor: "border-yellow-300 dark:border-yellow-600",
-            bgColor: "bg-yellow-50 dark:bg-yellow-800/20",
-            headerColor: "!text-yellow-700 dark:!text-yellow-300",
+            borderColor: "border-amber-300 dark:border-amber-600",
+            bgColor: "bg-amber-50 dark:bg-amber-800/20",
+            headerColor: "!text-amber-700 dark:!text-amber-300",
             Icon: AlertTriangleIcon
         },
         info: {
-            borderColor: "border-cyan-300 dark:border-cyan-600",
-            bgColor: "bg-cyan-50 dark:bg-cyan-800/20",
-            headerColor: "!text-cyan-700 dark:!text-cyan-300",
+            borderColor: "border-stone-300 dark:border-stone-600",
+            bgColor: "bg-stone-100 dark:bg-stone-800/30",
+            headerColor: "!text-stone-600 dark:!text-stone-300",
             Icon: InfoIcon
         },
         success: {
-            borderColor: "border-purple-300 dark:border-purple-600",
-            bgColor: "bg-purple-50 dark:bg-purple-800/20",
-            headerColor: "!text-purple-700 dark:!text-purple-300",
+            borderColor: "border-emerald-300 dark:border-emerald-600",
+            bgColor: "bg-emerald-50 dark:bg-emerald-800/20",
+            headerColor: "!text-emerald-700 dark:!text-emerald-300",
             Icon: CheckCircleIcon
         },
         solution: {
