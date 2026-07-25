@@ -1,19 +1,34 @@
 "use client"
 
-import { ReactNode, useState, useEffect } from "react"
+import { ReactNode, useState, useEffect, useMemo } from "react"
 import { usePathname } from "next/navigation"
 import { Navigation } from "@/components/decoding-bitcoin/Navigation"
+import { TableOfContents } from "@/components/decoding-bitcoin/topic/TableOfContents"
+import { allTopics } from "@/.contentlayer/generated"
 import * as m from "framer-motion/m"
 import { LazyMotion, domAnimation, AnimatePresence } from "framer-motion"
 import { MoreVertical } from "lucide-react"
 import Link from "next/link"
 import React from "react"
 
+// "key-tweaking" -> "Key Tweaking", for path segments with no matching topic
+const humanizeSlug = (slug: string) =>
+    slug
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ")
+
 export default function DecodingLayout({ children }: { children: ReactNode }) {
     const pathname = usePathname()
     const [isNavOpen, setIsNavOpen] = useState(false)
     const [currentPath, setCurrentPath] = useState<string[]>([])
     const [isScrolled, setIsScrolled] = useState(false)
+
+    // slug -> title, so the breadcrumb reads "Tweaking Keys" instead of "key-tweaking"
+    const topicTitles = useMemo(
+        () => new Map(allTopics.map((topic) => [topic.slug, topic.title])),
+        []
+    )
 
     const isInsideTopic =
         pathname &&
@@ -59,20 +74,20 @@ export default function DecodingLayout({ children }: { children: ReactNode }) {
 
     // Communities pages render without the topic sidebar
     if (isCommunityPage) {
-        return <>{children}</>
+        return <div className="font-inter">{children}</div>
     }
 
     return (
         <LazyMotion features={domAnimation}>
-            <div className="flex w-full flex-col bg-vscode-background-light dark:bg-vscode-background-dark">
+            <div className="font-inter flex w-full flex-col bg-vscode-background-light dark:bg-vscode-background-dark">
                 {/* Mobile */}
                 <div className="lg:hidden w-full">
                     <div className="">
                         {/* File Tree and Navigation Toggle */}
                         <div
-                            className={`fixed left-0 right-0 z-20 flex items-center border-b border-gray-200 dark:border-gray-700 px-4 py-2 transition-all duration-300 ${
+                            className={`fixed left-0 right-0 z-20 flex items-center px-4 py-2 transition-all duration-300 ${
                                 isScrolled
-                                    ? "bg-white/0 dark:bg-gray-900/0 backdrop-blur-md"
+                                    ? "border-b border-brand-gray-100 bg-brand/80 backdrop-blur-md dark:border-gray-700 dark:bg-vscode-background-dark/80"
                                     : "bg-transparent"
                             }`}
                         >
@@ -95,7 +110,16 @@ export default function DecodingLayout({ children }: { children: ReactNode }) {
                                                     .join("/")}`}
                                                 className="hover:text-orange-500"
                                             >
-                                                {part}
+                                                {index === 0
+                                                    ? "Decoding"
+                                                    : (topicTitles.get(
+                                                          currentPath
+                                                              .slice(
+                                                                  1,
+                                                                  index + 1
+                                                              )
+                                                              .join("/")
+                                                      ) ?? humanizeSlug(part))}
                                             </Link>
                                         </React.Fragment>
                                     ))}
@@ -121,7 +145,7 @@ export default function DecodingLayout({ children }: { children: ReactNode }) {
                                         className="absolute inset-0 bg-black bg-opacity-50"
                                         onClick={toggleNav}
                                     />
-                                    <div className="absolute left-0 top-0 bottom-0 w-72 bg-white dark:bg-gray-900 overflow-y-auto">
+                                    <div className="brand-scrollbar absolute left-0 top-0 bottom-0 w-72 bg-white dark:bg-gray-900 overflow-y-auto">
                                         <div className="py-4 px-4">
                                             <Navigation
                                                 onLinkClick={toggleNav}
@@ -140,21 +164,29 @@ export default function DecodingLayout({ children }: { children: ReactNode }) {
 
                 {/* Desktop */}
                 <div className="hidden lg:relative lg:block">
-                    <div className="relative mx-auto flex w-full max-w-9xl flex-auto justify-center sm:pl-2 lg:pl-8 xl:pl-12">
-                        {/* Desktop Navigation — persistent across route changes */}
-                        <div className="lg:relative lg:flex-none border-r border-orange">
-                            {isInsideTopic && (
-                                <div className="absolute inset-y-0 right-0 w-[50vw] dark:bg-vscode-navigation-dark bg-vscode-navigation-light" />
-                            )}
-                            <div className="sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-4 xl:w-72 xl:pr-8">
+                    <div className="relative flex w-full max-w-12xl lg:px-6 xl:px-8">
+                        {/* Desktop Navigation — navigation-colored panel (the tint
+                            that used to be on the header), bled to the left edge */}
+                        <div className="lg:relative lg:flex-none lg:border-r lg:border-brand-gray-100 dark:lg:border-gray-700">
+                            <div className="pointer-events-none absolute inset-y-0 right-0 w-[50vw] bg-vscode-navigation-light dark:bg-vscode-navigation-dark" />
+                            <div className="brand-scrollbar sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-72 overflow-y-auto overflow-x-hidden py-16 pl-0.5 pr-4 xl:w-80 xl:pr-8">
                                 <Navigation />
                             </div>
                         </div>
 
                         {/* Desktop Main Content — only this slot updates on navigation */}
-                        <div className="min-w-0 max-w-3xl flex-auto pb-16 lg:mx-auto lg:max-w-none lg:pr-0">
+                        <div className="min-w-0 flex-auto pb-16">
                             {children}
                         </div>
+
+                        {/* Right rail — "On this page" (xl and up, inside a topic) */}
+                        {isInsideTopic && (
+                            <div className="hidden xl:block xl:w-80 xl:flex-none xl:pl-6">
+                                <div className="brand-scrollbar sticky top-[4.75rem] max-h-[calc(100vh-4.75rem)] overflow-y-auto py-16">
+                                    <TableOfContents />
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

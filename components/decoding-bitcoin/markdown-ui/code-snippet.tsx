@@ -2,7 +2,9 @@
 import { CheckIcon, ClipboardIcon } from "lucide-react"
 import React, { useState } from "react"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import { solarizedlight } from "react-syntax-highlighter/dist/esm/styles/prism"
+// Night Owl matches css/prism.css, which themes the markdown fenced code blocks,
+// so <CodeSnippet> and ```fences``` render as one consistent surface.
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism"
 
 type CodeSnippetProps = {
     code: string
@@ -17,7 +19,7 @@ export const CodeSnippet = ({
     highlightLines = [],
     showLineNumbers = false
 }: CodeSnippetProps) => {
-    const theme = solarizedlight
+    const theme = nightOwl
     const [isCopied, setIsCopied] = useState(false)
 
     const handleCopyClick = async () => {
@@ -31,13 +33,13 @@ export const CodeSnippet = ({
     }
 
     return (
-        <div className="relative rounded-lg bg-vscode-codeSnippetBackground-light dark:bg-vscode-codeSnippetBackground-dark border border-vscode-input-light dark:border-vscode-input-dark shadow-md overflow-hidden">
-            <div className="bg-vscode-titleBar-light dark:bg-vscode-titleBar-dark px-4 py-2 text-sm text-vscode-sidebarForeground-light dark:text-vscode-sidebarForeground-dark">
+        <div className="relative overflow-hidden rounded-lg bg-[#1e1e1e]">
+            <div className="bg-[#252526] px-4 py-2 text-sm text-[#9d9d9d]">
                 {language}
             </div>
             <button
                 onClick={handleCopyClick}
-                className="absolute right-2 top-2 flex items-center space-x-1 text-xs text-vscode-text-light dark:text-vscode-text-dark hover:text-vscode-selectedFile-light dark:hover:text-vscode-selectedFile-dark transition-colors"
+                className="absolute right-2 top-2 flex items-center space-x-1 text-xs text-[#9d9d9d] transition-colors hover:text-orange-500"
                 aria-label="Copy code"
             >
                 {isCopied ? (
@@ -62,6 +64,10 @@ export const CodeSnippet = ({
                         background: "transparent",
                         margin: 0
                     },
+                    'code[class*="language-"]': {
+                        ...theme['code[class*="language-"]'],
+                        background: "transparent"
+                    },
                     'pre[class*="language-"]::before': {
                         content: "none"
                     },
@@ -71,9 +77,6 @@ export const CodeSnippet = ({
                         textAlign: "center",
                         userSelect: "none",
                         opacity: "0.5"
-                    },
-                    ".token": {
-                        color: "var(--vscode-editorForeground-light)"
                     }
                 }}
                 customStyle={{
@@ -87,7 +90,7 @@ export const CodeSnippet = ({
                     textAlign: "center",
                     userSelect: "none",
                     opacity: "0.5",
-                    color: "var(--vscode-lineNumber-light)"
+                    color: "#858585"
                 }}
                 lineProps={(lineNumber) => {
                     const style: React.CSSProperties = { display: "block" }
@@ -106,8 +109,7 @@ export const CodeSnippet = ({
                         display: "block",
                         paddingLeft: showLineNumbers ? "1em" : "0.5em"
                     },
-                    className:
-                        "text-vscode-editorForeground-light dark:text-vscode-editorForeground-dark"
+                    className: "text-[#d4d4d4]"
                 }}
             >
                 {code}

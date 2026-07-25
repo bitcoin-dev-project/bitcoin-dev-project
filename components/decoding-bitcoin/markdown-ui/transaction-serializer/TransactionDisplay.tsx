@@ -38,50 +38,134 @@ interface TransactionItem {
     value?: number
     scriptSig?: ScriptDetail
     scriptPubKey?: ScriptDetail
+    // inputs
+    txid?: string
+    n?: number
+    sequence?: number
+    witness?: string[]
+    // outputs
+    address?: string
+    opReturnData?: string
 }
 
-const BitcoinTransactionViewer: React.FC<{ detail: ScriptDetail }> = ({
-    detail
-}) => {
-    const displayAsStack = (asm: string): JSX.Element[] => {
-        if (!asm) return []
-        const parts = asm.split(" ")
-        return parts.map((part, index) => (
-            <div
-                key={index}
-                className={
-                    part.startsWith("OP_")
-                        ? "font-bold text-orange-500"
-                        : "text-vscode-text-light dark:text-vscode-text-dark"
-                }
-            >
-                {part}
-            </div>
-        ))
-    }
-
+// Renders a script's ASM with opcodes highlighted, tokens flowing inline.
+const AsmView: React.FC<{ asm?: string }> = ({ asm }) => {
+    if (!asm) return <span className="opacity-60">empty</span>
     return (
-        <div className="h-full space-y-4 rounded-lg bg-vscode-background-light dark:bg-vscode-background-dark p-3 font-mono text-sm">
-            <div className="flex flex-col gap-3 lg:flex-row">
-                <div className="w-full p-2 lg:w-1/2">
-                    <strong className="mb-2 block text-sm text-orange-600 dark:text-orange-400">
-                        ASM:
-                    </strong>
-                    <div className="mt-1 whitespace-pre-wrap break-words rounded-md border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20 p-2 text-xs text-vscode-text-light dark:text-vscode-text-dark">
-                        {detail.asm
-                            ? displayAsStack(detail.asm)
-                            : "ASM data not available"}
-                    </div>
-                </div>
-                <div className="w-full p-2 lg:w-1/2">
-                    <strong className="mb-2 block text-sm text-orange-600 dark:text-orange-400">
-                        HEX:
-                    </strong>
-                    <div className="mt-1 whitespace-pre-wrap break-words rounded-md border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20 p-2 text-xs text-vscode-text-light dark:text-vscode-text-dark">
-                        {detail.hex || "HEX data not available"}
-                    </div>
-                </div>
+        <span className="break-all leading-relaxed">
+            {asm.split(" ").map((part, index) => (
+                <span
+                    key={index}
+                    className={
+                        part.startsWith("OP_")
+                            ? "mr-1 font-semibold text-orange-500"
+                            : "mr-1"
+                    }
+                >
+                    {part}
+                </span>
+            ))}
+        </span>
+    )
+}
+
+// One labelled row inside the detail panel (label left, value right).
+const DetailRow: React.FC<{
+    label: string
+    children: React.ReactNode
+}> = ({ label, children }) => (
+    <div className="flex flex-col gap-1 border-b border-brand-gray-100 dark:border-gray-700 py-2 last:border-0 lg:flex-row lg:gap-4">
+        <div className="w-full flex-shrink-0 text-xs font-medium uppercase tracking-wide text-vscode-text-light/60 dark:text-vscode-text-dark/60 lg:w-44">
+            {label}
+        </div>
+        <div className="min-w-0 flex-1 break-words font-mono text-xs text-vscode-text-light dark:text-vscode-text-dark">
+            {children}
+        </div>
+    </div>
+)
+
+// Item-aware detail panel: shows the fields that matter for an input vs an
+// output, mirroring what a block explorer surfaces.
+const TransactionItemDetail: React.FC<{
+    item: TransactionItem
+    kind: "inputs" | "outputs"
+    index: number
+    satoshisToBTC: (satoshis: number) => string
+}> = ({ item, kind, index, satoshisToBTC }) => {
+    const title = `${kind === "inputs" ? "Input" : "Output"} ${index + 1}`
+    return (
+        <div className="rounded-lg bg-vscode-background-light dark:bg-vscode-background-dark p-4">
+            <div className="mb-2 flex items-center justify-between">
+                <span className="text-sm font-semibold text-vscode-text-light dark:text-vscode-text-dark">
+                    {title}
+                </span>
+                <span className="rounded-full bg-orange-100 dark:bg-orange-900/50 px-2 py-1 text-xs text-orange-700 dark:text-orange-300">
+                    {kind === "inputs"
+                        ? `Prev Out: ${item.type || "Unknown"}`
+                        : item.type || "Unknown"}
+                </span>
             </div>
+
+            {kind === "outputs" ? (
+                <>
+                    {item.address && (
+                        <DetailRow label="Address">{item.address}</DetailRow>
+                    )}
+                    {item.value !== undefined && (
+                        <DetailRow label="Amount">
+                            {satoshisToBTC(item.value)} BTC
+                        </DetailRow>
+                    )}
+                    <DetailRow label="ScriptPubKey (ASM)">
+                        <AsmView asm={item.scriptPubKey?.asm} />
+                    </DetailRow>
+                    <DetailRow label="ScriptPubKey (HEX)">
+                        {item.scriptPubKey?.hex || "empty"}
+                    </DetailRow>
+                    {item.opReturnData && (
+                        <DetailRow label="OP_RETURN data">
+                            {item.opReturnData}
+                        </DetailRow>
+                    )}
+                    <DetailRow label="Type">{item.type || "Unknown"}</DetailRow>
+                </>
+            ) : (
+                <>
+                    {item.txid && (
+                        <DetailRow label="Previous output">
+                            {item.txid}:{item.n}
+                        </DetailRow>
+                    )}
+                    {item.sequence !== undefined && (
+                        <DetailRow label="nSequence">
+                            0x
+                            {item.sequence.toString(16).padStart(8, "0")}
+                        </DetailRow>
+                    )}
+                    {item.witness && item.witness.length > 0 && (
+                        <DetailRow label="Witness">
+                            <div className="space-y-1">
+                                {item.witness.map((w, i) => (
+                                    <div key={i} className="break-all">
+                                        {w || "(empty)"}
+                                    </div>
+                                ))}
+                            </div>
+                        </DetailRow>
+                    )}
+                    {item.scriptSig?.hex ? (
+                        <>
+                            <DetailRow label="ScriptSig (ASM)">
+                                <AsmView asm={item.scriptSig.asm} />
+                            </DetailRow>
+                            <DetailRow label="ScriptSig (HEX)">
+                                {item.scriptSig.hex}
+                            </DetailRow>
+                        </>
+                    ) : null}
+                    <DetailRow label="Type">{item.type || "Unknown"}</DetailRow>
+                </>
+            )}
         </div>
     )
 }
@@ -100,9 +184,11 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
 
     const [decodedTransaction, setDecodedTransaction] =
         useState<DecodedTransaction | null>(null)
-    const [selectedDetail, setSelectedDetail] = useState<ScriptDetail | null>(
-        null
-    )
+    const [selected, setSelected] = useState<{
+        item: TransactionItem
+        kind: "inputs" | "outputs"
+        index: number
+    } | null>(null)
     const [highlightedItemClicked, setHighlightedItemClicked] =
         useState<boolean>(false)
     const [expandedSections, setExpandedSections] = useState<{
@@ -117,29 +203,22 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
     }, [rawTx, network])
 
     const handleDetailChange = (
-        detail: any,
+        item: TransactionItem,
         index: number,
         type: "inputs" | "outputs"
     ): void => {
-        let newSelectedDetail: ScriptDetail | null = null
-
-        if ("scriptSig" in detail) {
-            newSelectedDetail =
-                selectedDetail === detail.scriptSig ? null : detail.scriptSig
-        } else if ("scriptPubKey" in detail) {
-            newSelectedDetail =
-                selectedDetail === detail.scriptPubKey
-                    ? null
-                    : detail.scriptPubKey
-        }
-
-        setSelectedDetail(newSelectedDetail)
+        // Toggle: clicking the open item closes it, otherwise open the new one.
+        setSelected((prev) =>
+            prev && prev.kind === type && prev.index === index
+                ? null
+                : { item, kind: type, index }
+        )
 
         if (
             highlightIndex &&
             highlightIndex[type as keyof typeof highlightIndex] === index
         ) {
-            setHighlightedItemClicked((prev) => !prev)
+            setHighlightedItemClicked(true)
         }
     }
 
@@ -163,12 +242,15 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                                 onClick={() =>
                                     handleDetailChange(item, index, type)
                                 }
-                                className={`mb-2 w-full cursor-pointer rounded-lg p-2 border border-brand-gray-100 dark:border-gray-700 ${
-                                    highlightIndex?.[
-                                        type as keyof typeof highlightIndex
-                                    ] === index
-                                        ? "bg-orange-100 dark:bg-orange-900/30 border-orange-300 dark:border-orange-700"
-                                        : "bg-vscode-input-light dark:bg-vscode-input-dark"
+                                className={`mb-2 w-full cursor-pointer rounded-lg p-2 border ${
+                                    selected?.kind === type &&
+                                    selected?.index === index
+                                        ? "border-orange-500 dark:border-orange-500 ring-1 ring-orange-500 bg-orange-50 dark:bg-orange-900/30"
+                                        : highlightIndex?.[
+                                                type as keyof typeof highlightIndex
+                                            ] === index
+                                          ? "bg-orange-100 dark:bg-orange-900/30 border-orange-300 dark:border-orange-700"
+                                          : "bg-vscode-input-light dark:bg-vscode-input-dark border-brand-gray-100 dark:border-gray-700"
                                 } hover:bg-vscode-hover-light dark:hover:bg-vscode-hover-dark transition-colors duration-200`}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
@@ -323,9 +405,14 @@ const TransactionsDisplay: React.FC<TransactionsDisplayProps> = ({
                     </div>
 
                     {/* Selected Detail */}
-                    {selectedDetail && (
+                    {selected && (
                         <div className="mt-4 pt-3 border-t border-brand-gray-100 dark:border-gray-700">
-                            <BitcoinTransactionViewer detail={selectedDetail} />
+                            <TransactionItemDetail
+                                item={selected.item}
+                                kind={selected.kind}
+                                index={selected.index}
+                                satoshisToBTC={satoshisToBTC}
+                            />
                         </div>
                     )}
                 </div>

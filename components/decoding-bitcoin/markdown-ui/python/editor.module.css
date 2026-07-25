@@ -1,0 +1,183 @@
+/* Fully-dark code surface with a line-number gutter — Night Owl palette.
+   One cohesive dark theme (no light/dark mixing), like an embedded editor. */
+
+.body {
+    position: relative;
+    overflow: hidden;
+    background: #1e1e1e;
+}
+
+/* Shared box model for the transparent textarea and the highlighted <pre>.
+   Every metric MUST match or the caret drifts off the glyphs. No wrap: long
+   lines scroll horizontally and stay 1:1 with the gutter numbers. */
+.code {
+    margin: 0;
+    border: 0;
+    padding: 1rem 1rem 1rem 0.5rem;
+    font-family:
+        ui-monospace, "SF Mono", "Fira Code", Menlo, Consolas,
+        "Liberation Mono", monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    letter-spacing: normal;
+    tab-size: 4;
+    white-space: pre;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+/* Editable layer: on top, transparent text, real caret, drives scrolling. */
+.textarea {
+    position: absolute;
+    inset: 0 0 0 3rem;
+    width: auto;
+    resize: none;
+    background: transparent;
+    color: transparent;
+    caret-color: #d6deeb;
+    outline: none;
+    overflow: auto;
+}
+
+/* Scrollbars tuned to the dark editor instead of the light OS default.
+   Applied to every scroll surface: the editor, the read-only helper view,
+   and the output pane. */
+.textarea,
+.preScroll,
+.scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 148, 148, 0.4) transparent;
+}
+
+.textarea::-webkit-scrollbar,
+.preScroll::-webkit-scrollbar,
+.scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.textarea::-webkit-scrollbar-track,
+.preScroll::-webkit-scrollbar-track,
+.scroll::-webkit-scrollbar-track,
+.textarea::-webkit-scrollbar-corner,
+.preScroll::-webkit-scrollbar-corner,
+.scroll::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.textarea::-webkit-scrollbar-thumb,
+.preScroll::-webkit-scrollbar-thumb,
+.scroll::-webkit-scrollbar-thumb {
+    background: rgba(148, 148, 148, 0.35);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-clip: content-box;
+}
+
+.textarea::-webkit-scrollbar-thumb:hover,
+.preScroll::-webkit-scrollbar-thumb:hover,
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(247, 147, 26, 0.6);
+    background-clip: content-box;
+}
+
+.textarea::selection {
+    background: #264f78;
+}
+
+/* Highlight layer behind the editable one: scroll-synced, non-interactive. */
+.pre {
+    position: absolute;
+    inset: 0 0 0 3rem;
+    pointer-events: none;
+    color: #d6deeb;
+    overflow: hidden;
+}
+
+/* Read-only helper file: same highlight layer, but it scrolls itself and stays
+   selectable so readers can copy. */
+.preScroll {
+    position: absolute;
+    inset: 0 0 0 3rem;
+    color: #d6deeb;
+    overflow: auto;
+}
+
+.gutter {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3rem;
+    overflow: hidden;
+    background: #1e1e1e;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    user-select: none;
+}
+
+.gutterInner {
+    padding: 1rem 0.75rem 1rem 0;
+    font-family:
+        ui-monospace, "SF Mono", "Fira Code", Menlo, Consolas,
+        "Liberation Mono", monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: right;
+    white-space: pre;
+    color: #5a6472;
+}
+
+.pre :global(.token.comment),
+.preScroll :global(.token.comment),
+.pre :global(.token.prolog),
+.preScroll :global(.token.prolog),
+.pre :global(.token.cdata),
+.preScroll :global(.token.cdata) {
+    color: #637777;
+    font-style: italic;
+}
+
+.pre :global(.token.punctuation),
+.preScroll :global(.token.punctuation) {
+    color: #c792ea;
+}
+
+.pre :global(.token.keyword),
+.preScroll :global(.token.keyword),
+.pre :global(.token.operator),
+.preScroll :global(.token.operator) {
+    color: #7fdbca;
+}
+
+.pre :global(.token.boolean),
+.preScroll :global(.token.boolean) {
+    color: #ff5874;
+}
+
+.pre :global(.token.number),
+.preScroll :global(.token.number) {
+    color: #f78c6c;
+}
+
+.pre :global(.token.string),
+.preScroll :global(.token.string),
+.pre :global(.token.triple-quoted-string),
+.preScroll :global(.token.triple-quoted-string),
+.pre :global(.token.char),
+.preScroll :global(.token.char) {
+    color: #addb67;
+}
+
+.pre :global(.token.function),
+.preScroll :global(.token.function),
+.pre :global(.token.builtin),
+.preScroll :global(.token.builtin),
+.pre :global(.token.constant),
+.preScroll :global(.token.constant) {
+    color: #82aaff;
+}
+
+.pre :global(.token.class-name),
+.preScroll :global(.token.class-name),
+.pre :global(.token.decorator),
+.preScroll :global(.token.decorator) {
+    color: #ffcb8b;
+}

@@ -386,11 +386,6 @@ const Participant = ({
                 : signed
                   ? "Signed"
                   : "Sign transaction"}
-            {!signed && !disabled && !isAnimating && (
-                <div className="absolute top-0 left-0 w-full h-full">
-                    <div className="animate-shimmer absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-30"></div>
-                </div>
-            )}
         </button>
     </div>
 )

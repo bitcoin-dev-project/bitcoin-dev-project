@@ -1,4 +1,10 @@
-import { Barlow, Montserrat, Quicksand } from "next/font/google"
+import {
+    Barlow,
+    Inter,
+    Montserrat,
+    Quicksand,
+    Source_Serif_4
+} from "next/font/google"
 import type { Metadata } from "next"
 import "./globals.css"
 import "remark-github-blockquote-alert/alert.css"
@@ -80,12 +86,31 @@ const montserrat = Montserrat({
     subsets: ["latin"]
 })
 
+// Clean UI font for the Decoding Bitcoin course (see fontFamily.inter in tailwind config)
+const inter = Inter({
+    variable: "--font-inter",
+    preload: true,
+    display: "swap",
+    subsets: ["latin"]
+})
+
+// Serif reading font for lesson body text (see fontFamily.serif in tailwind config).
+// Headings/UI stay on Inter; only prose body uses this.
+const sourceSerif = Source_Serif_4({
+    weight: ["400", "500", "600"],
+    style: ["normal", "italic"],
+    variable: "--font-source-serif",
+    preload: true,
+    display: "swap",
+    subsets: ["latin"]
+})
+
 export default function RootLayout({
     children
 }: {
     children: React.ReactNode
 }) {
-    const fontVariables = `${barlow.variable} ${quicksand.variable} ${montserrat.variable}`
+    const fontVariables = `${barlow.variable} ${quicksand.variable} ${montserrat.variable} ${inter.variable} ${sourceSerif.variable}`
 
     return (
         <html

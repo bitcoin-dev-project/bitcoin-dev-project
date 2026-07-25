@@ -104,17 +104,15 @@ export default function BaseLayout({
 
     const ActionButtons = () => (
         <div className="flex items-center justify-between w-full max-w-3xl mx-auto">
-            <m.a
+            <a
                 href={githubEditUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 border border-gray-300 rounded-md hover:bg-brand-gray dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800/50 transition-colors"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-500 rounded-md hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
             >
                 <GitHubIcon className="w-4 h-4 mr-2" />
                 Suggest Edits
-            </m.a>
+            </a>
             <div className="flex items-center gap-4">
                 <AnimatePresence mode="wait">
                     {isCompleted ? (
@@ -127,9 +125,7 @@ export default function BaseLayout({
                         >
                             <m.button
                                 onClick={toggleCompleted}
-                                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-600 transition-colors"
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
+                                className="inline-flex items-center px-3 py-2 text-sm font-medium text-orange-600 dark:text-orange-500 hover:text-orange-700 dark:hover:text-orange-400 transition-colors"
                             >
                                 <CheckCircle className="w-4 h-4 mr-2" />
                                 Completed
@@ -142,11 +138,7 @@ export default function BaseLayout({
                                     transition={{ delay: 0.2 }}
                                 >
                                     <Link href={`/${next.path}`}>
-                                        <m.button
-                                            className="inline-flex items-center px-4 py-2 text-sm font-medium border-2 border-orange-500 text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-500/10 rounded-md transition-colors"
-                                            whileHover={{ scale: 1.02 }}
-                                            whileTap={{ scale: 0.98 }}
-                                        >
+                                        <m.button className="inline-flex items-center px-4 py-2 text-sm font-medium bg-orange-500 text-white hover:bg-orange-600 rounded-md transition-colors">
                                             Next Topic
                                             <ArrowRight className="w-4 h-4 ml-2" />
                                         </m.button>
@@ -157,9 +149,7 @@ export default function BaseLayout({
                     ) : (
                         <m.button
                             onClick={toggleCompleted}
-                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-orange-500 border-2 border-orange-500 rounded-md hover:bg-orange-50 dark:hover:bg-orange-500/10 transition-colors"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
+                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-600 transition-colors disabled:opacity-70"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -247,7 +237,7 @@ export default function BaseLayout({
                                 </h1>
                             </div>
                         </div>
-                        <article>
+                        <article data-toc-root>
                             <Prose>{children}</Prose>
                         </article>
                         <div className="max-w-3xl mx-auto mt-8 flex justify-between items-center">
@@ -255,7 +245,7 @@ export default function BaseLayout({
                         </div>
                     </>
                 ) : (
-                    <article>
+                    <article data-toc-root>
                         <TopicHeader
                             title={title}
                             tags={tags}
