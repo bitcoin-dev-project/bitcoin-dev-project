@@ -83,5 +83,14 @@
       "payjoin-mailroom"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1773",
+    "publishedAt": "2026-07-29T13:19:02Z",
+    "title": "Validate Homebrew and LLVM prerequisites in generate_bindings.sh on macOS",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
