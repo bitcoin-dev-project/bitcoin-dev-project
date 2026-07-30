@@ -92,5 +92,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1774",
+    "publishedAt": "2026-07-30T09:09:18Z",
+    "title": "is set_output_substitution is dead under a v2-only lint (payjoin/src/core/uri/mod.rs:256)",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
