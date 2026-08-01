@@ -37,5 +37,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2251",
+    "publishedAt": "2026-08-01T17:26:39Z",
+    "title": "KeychainTxOutIndex::lookahead_to_target panics (overflow) or silently no-ops on target_index = u32::MAX",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
