@@ -29,41 +29,44 @@ export default function ExpandableAlert({
     initialLines = 2
 }: ExpandableAlertProps) {
     const [isExpanded, setIsExpanded] = useState(!expandable)
-    const [isHovered, setIsHovered] = useState(false)
     const [isCopied, setIsCopied] = useState(false)
 
-    // Warm, semantic palette tuned to the cream brand. Kept distinct hues so
-    // levels stay readable, but dropped the cool tones (cyan/blue/purple) that
-    // clashed with the warm page: important -> brand orange, info -> warm stone,
-    // success -> emerald. warning/solution were already warm enough.
+    // Fills are mixed down onto the brand cream (#F6F0E6) rather than taken
+    // from Tailwind's stock -50 tints, which read cool and chalky next to it.
+    // They also sit slightly DARKER than the page, so the alert is a recessed
+    // panel and a nested ScriptBlock (#FFFDF5) still reads as the raised card
+    // on top of it. Borders are the same hue, one step down.
     const alertStyles = {
         important: {
-            borderColor: "border-orange-300 dark:border-orange-600",
-            bgColor: "bg-orange-50 dark:bg-orange-800/20",
+            // brand orange (#EB5234) pulled onto the cream
+            borderColor: "border-[#F0CFC2] dark:border-orange-800/60",
+            bgColor: "bg-[#FAEBE3] dark:bg-orange-900/20",
             headerColor: "!text-orange-700 dark:!text-orange-300",
             Icon: CheckCircleIcon
         },
         warning: {
-            borderColor: "border-amber-300 dark:border-amber-600",
-            bgColor: "bg-amber-50 dark:bg-amber-800/20",
+            borderColor: "border-[#EBD9AE] dark:border-amber-800/60",
+            bgColor: "bg-[#F9F0DA] dark:bg-amber-900/20",
             headerColor: "!text-amber-700 dark:!text-amber-300",
             Icon: AlertTriangleIcon
         },
         info: {
-            borderColor: "border-stone-300 dark:border-stone-600",
-            bgColor: "bg-stone-100 dark:bg-stone-800/30",
+            // brand-gray on brand cream: same hue as the page, one step down
+            borderColor: "border-brand-stroke-on-base dark:border-stone-700",
+            bgColor: "bg-brand-gray dark:bg-stone-800/40",
             headerColor: "!text-stone-600 dark:!text-stone-300",
             Icon: InfoIcon
         },
         success: {
-            borderColor: "border-emerald-300 dark:border-emerald-600",
-            bgColor: "bg-emerald-50 dark:bg-emerald-800/20",
+            // warm olive-leaning green so it stays in the cream family
+            borderColor: "border-[#CDDCBE] dark:border-emerald-800/60",
+            bgColor: "bg-[#ECF2E3] dark:bg-emerald-900/20",
             headerColor: "!text-emerald-700 dark:!text-emerald-300",
             Icon: CheckCircleIcon
         },
         solution: {
-            borderColor: "border-green-300 dark:border-green-600",
-            bgColor: "bg-green-50 dark:bg-green-800/20",
+            borderColor: "border-[#C2D6B1] dark:border-green-800/60",
+            bgColor: "bg-[#E6EFDB] dark:bg-green-900/20",
             headerColor: "!text-green-700 dark:!text-green-300",
             Icon: CheckCircleIcon
         }
@@ -107,89 +110,97 @@ export default function ExpandableAlert({
     }
 
     const childrenArray = React.Children.toArray(children)
-    const initialContent = childrenArray.slice(0, initialLines)
-    const expandedContent = childrenArray.slice(initialLines)
+    // Only split when there is a "Show more" button to reveal the rest.
+    // Otherwise everything past initialLines would silently never render.
+    const initialContent = expandable
+        ? childrenArray.slice(0, initialLines)
+        : childrenArray
+    const expandedContent = expandable ? childrenArray.slice(initialLines) : []
 
     return (
-        <div className="mx-auto mb-10 mt-10 prose max-w-3xl">
+        <div className="mx-auto my-6 prose max-w-3xl">
             <div
                 className={clsx(
-                    "border-l-4 p-6 rounded-lg",
+                    "rounded-lg border px-5 py-4",
                     borderColor,
                     bgColor,
                     "text-gray-800 dark:text-gray-200" // Default text color for body
                 )}
             >
-                <div className="flex items-center mb-4 justify-between">
-                    <div className="flex items-center">
-                        <Icon className={`mr-3 w-6 h-6 ${headerColor}`} />
+                {/* No bottom margin when nothing is showing below the header,
+                    otherwise a collapsed alert renders as a header floating in
+                    an empty box. */}
+                <div
+                    className={clsx(
+                        "flex items-center justify-between gap-3",
+                        (initialContent.length > 0 || isExpanded) && "mb-3"
+                    )}
+                >
+                    <div className="flex items-center min-w-0">
+                        <Icon
+                            className={`mr-2 w-4 h-4 shrink-0 ${headerColor}`}
+                        />
                         <h4
-                            className={`mt-0 mb-0 text-lg font-semibold ${headerColor}`}
+                            className={`mt-0 mb-0 text-sm font-semibold ${headerColor}`}
                         >
                             {title}
                         </h4>
+                        {/* The toggle lives in the header rather than on its own
+                            row below it: with initialLines={0} there is nothing
+                            between the title and the toggle, so a separate row
+                            read as an orphaned link. */}
+                        {expandable && expandedContent.length > 0 && (
+                            <button
+                                onClick={toggleExpand}
+                                className={`ml-3 flex shrink-0 items-center gap-1 text-xs font-medium ${headerColor}`}
+                            >
+                                {isExpanded ? (
+                                    <ChevronUpIcon className="w-3.5 h-3.5" />
+                                ) : (
+                                    <ChevronDownIcon className="w-3.5 h-3.5" />
+                                )}
+                                {isExpanded ? "Show less" : "Show more"}
+                            </button>
+                        )}
                     </div>
                     {type === "solution" && (
+                        // Same size and weight as the Show more/less toggle so
+                        // the two controls read as a pair against the title.
                         <button
                             onClick={handleCopy}
-                            className={`flex items-center text-sm ${headerColor}`}
+                            className={`flex shrink-0 items-center gap-1 text-xs font-medium ${headerColor}`}
                         >
                             {isCopied ? (
-                                <CheckIcon size={16} className="mr-1 w-4 h-4" />
+                                <CheckIcon className="w-3.5 h-3.5" />
                             ) : (
-                                <CopyIcon size={16} className="mr-1 w-4 h-4" />
+                                <CopyIcon className="w-3.5 h-3.5" />
                             )}
                             {isCopied ? "Copied!" : "Copy code"}
                         </button>
                     )}
                 </div>
 
-                <div className="mt-2 relative">{initialContent}</div>
+                {/* Collapse the outer margins of the first/last block so the
+                    padding above stays the padding, and pull nested cards
+                    (ScriptBlock ships my-6) in to match the tighter rhythm. */}
+                <div className="relative [&>*:first-child]:mt-0 [&>*:last-child]:mb-0 [&_.not-prose]:my-4">
+                    {initialContent}
+                </div>
 
                 {expandable && expandedContent.length > 0 && (
-                    <>
-                        <button
-                            onClick={toggleExpand}
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}
-                            className={`flex items-center text-base font-bold mt-3 ${headerColor}`}
-                        >
+                    <AnimatePresence>
+                        {isExpanded && (
                             <m.div
-                                animate={{
-                                    y: isHovered ? (isExpanded ? -3 : 3) : 0,
-                                    transition: { duration: 0.2 }
-                                }}
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="[&>*:first-child]:mt-0 [&>*:last-child]:mb-0 [&_.not-prose]:my-4"
                             >
-                                {isExpanded ? (
-                                    <ChevronUpIcon
-                                        size={20}
-                                        className="w-5 h-5"
-                                    />
-                                ) : (
-                                    <ChevronDownIcon
-                                        size={20}
-                                        className="w-5 h-5"
-                                    />
-                                )}
+                                {expandedContent}
                             </m.div>
-                            <span className="ml-2">
-                                {isExpanded ? "Show less" : "Show more"}
-                            </span>
-                        </button>
-                        <AnimatePresence>
-                            {isExpanded && (
-                                <m.div
-                                    initial={{ opacity: 0, height: 0 }}
-                                    animate={{ opacity: 1, height: "auto" }}
-                                    exit={{ opacity: 0, height: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="mt-3 "
-                                >
-                                    {expandedContent}
-                                </m.div>
-                            )}
-                        </AnimatePresence>
-                    </>
+                        )}
+                    </AnimatePresence>
                 )}
             </div>
         </div>

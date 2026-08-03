@@ -33,6 +33,7 @@ const ScriptBlock = dynamic(() => import("./script-block"))
 const ExerciseSelector = dynamic(() => import("./exercise-selector"), {
     ssr: false
 })
+const Exercise = dynamic(() => import("./exercise"))
 const MailingListSignup = dynamic(() => import("./mailing-list-signup"))
 const BitcoinHistory = dynamic(() =>
     import("./bitcoin-history").then((m) => ({ default: m.BitcoinHistory }))
@@ -84,6 +85,7 @@ export const components: MDXComponents = {
     CodeSnippet,
     ScriptBlock,
     ExerciseSelector,
+    Exercise,
     BitcoinHistory,
     MailingListSignup,
     HexTransactionHighlighter,
