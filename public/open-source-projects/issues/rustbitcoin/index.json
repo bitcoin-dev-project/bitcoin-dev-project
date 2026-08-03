@@ -55,7 +55,8 @@
     "title": "Review all data structures to ensure that they maintain invariants while deserializing from serde",
     "labels": [
       "bug",
-      "P-high"
+      "P-high",
+      "1.0"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   },
