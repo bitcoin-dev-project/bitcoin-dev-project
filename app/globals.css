@@ -157,3 +157,40 @@ select:-webkit-autofill:focus {
 .learn-cards-container a:hover {
     outline-color: rgba(169, 164, 155, 0.75);
 }
+
+/* KaTeX renders variables in KaTeX_Math, which is an italic-only face, so
+   font-style alone cannot straighten them — the family has to change too.
+   Lesson math is single letters (Q, P, T, d, t, n) sitting inside upright
+   Inter body text, where the slant read as an inconsistency, not as notation.
+
+   !important is load-bearing here: katex.css is imported by the lesson page
+   while this file comes from the root layout, so Next emits KaTeX's rules
+   after these at identical specificity (0,2,0) and they would otherwise win. */
+.katex .mathnormal,
+.katex .mathit {
+    font-family: KaTeX_Main, "Times New Roman", serif !important;
+    font-style: normal !important;
+}
+
+/* Same swap, but keep the weight that made it \boldsymbol in the first place. */
+.katex .boldsymbol {
+    font-family: KaTeX_Main, "Times New Roman", serif !important;
+    font-style: normal !important;
+    font-weight: bold;
+}
+
+/* Display equations ($$…$$) carry the accent; inline $…$ stays body-colored so
+   variables inside a sentence don't strobe. #C2410C is the same burnt orange
+   ScriptBlock uses for OP_* opcodes, which ties equations to the code blocks —
+   and unlike orange-500 (2.5:1 on the cream) it clears WCAG AA at 4.6:1.
+   Lessons used to set this per-div; this is the single source of truth. */
+.katex-display,
+.katex-display .katex {
+    color: #c2410c;
+}
+
+/* orange-500 is too dark to reuse here (3.2:1 on #201e1e); orange-400 is 7.2:1. */
+.dark .katex-display,
+.dark .katex-display .katex {
+    color: #f7931a;
+}

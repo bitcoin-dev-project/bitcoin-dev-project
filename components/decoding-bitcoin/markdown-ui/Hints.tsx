@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import { LightbulbIcon } from "lucide-react"
+import clsx from "clsx"
 
 interface HintProps {
     hints: string[]
@@ -8,33 +9,57 @@ interface HintProps {
 
 const Hint = ({ hints }: HintProps) => {
     const [revealedHints, setRevealedHints] = useState<number>(0)
+    const allRevealed = revealedHints >= hints.length
 
     const revealNextHint = () => {
-        if (revealedHints < hints.length) {
-            setRevealedHints(revealedHints + 1)
-        }
+        if (!allRevealed) setRevealedHints(revealedHints + 1)
     }
 
     return (
-        <div className="mx-auto py-2 mt-10">
+        // not-prose matters here: the lesson's Prose adds a "•" marker and left
+        // padding to every <li>, which doubled up with the lightbulb icons, and
+        // its <ul> block margins padded the card out well past its own padding.
+        <div className="not-prose my-6">
+            {/* Clicking anywhere on the card reveals the next hint; the button
+                is the visible affordance for the same action. */}
             <div
-                className="bg-brand-card rounded-lg border-l-4 border-[#ebb305] p-6 rounded-lg p-4 cursor-pointer transition-all duration-300 ease-in-out"
                 onClick={revealNextHint}
-            >
-                {revealedHints < hints.length && (
-                    <div className="text-center mt-4 text-md text-gray-500">
-                        Click to reveal next hint ({revealedHints}/
-                        {hints.length})
-                    </div>
+                className={clsx(
+                    "rounded-lg border border-[#EBD9AE] bg-[#F9F0DA] px-5 py-4 dark:border-amber-800/60 dark:bg-amber-900/20",
+                    !allRevealed && "cursor-pointer"
                 )}
-                <ul className="list-none space-y-3">
+            >
+                <div className="mb-3 flex items-center justify-between gap-3">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300">
+                        {hints.length > 1 ? "Hints" : "Hint"}
+                    </span>
+                    {!allRevealed && (
+                        <button
+                            onClick={(e) => {
+                                // The card handles this too — without this the
+                                // click would bubble and reveal two hints.
+                                e.stopPropagation()
+                                revealNextHint()
+                            }}
+                            className="text-xs font-medium text-amber-700 underline decoration-amber-700/40 underline-offset-4 transition-colors hover:decoration-amber-700 dark:text-amber-300"
+                        >
+                            Reveal next ({revealedHints}/{hints.length})
+                        </button>
+                    )}
+                </div>
+
+                <ul className="space-y-2.5">
                     {hints.map((hint, index) => (
                         <li
                             key={index}
-                            className={`flex items-start ${index < revealedHints ? "" : "blur-sm"}`}
+                            className={clsx(
+                                "flex items-start gap-2",
+                                index >= revealedHints &&
+                                    "select-none blur-[3px]"
+                            )}
                         >
-                            <LightbulbIcon className="text-yellow-500 mr-2 mt-1 flex-shrink-0" />
-                            <span className="text-gray-800 leading-relaxed">
+                            <LightbulbIcon className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" />
+                            <span className="text-sm leading-relaxed text-gray-800 dark:text-gray-200">
                                 {hint}
                             </span>
                         </li>
