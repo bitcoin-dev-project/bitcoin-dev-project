@@ -25,14 +25,5 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk-ffi/issues/1055",
-    "publishedAt": "2026-08-03T16:46:54Z",
-    "title": "Repeated node start aborts production mobile processes",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
