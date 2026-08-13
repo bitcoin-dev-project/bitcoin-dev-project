@@ -233,6 +233,11 @@ export const WORKSPACES: ResourceLink[] = [
         name: "Localhost Research",
         detail: "San Francisco Bay Area",
         url: "https://lclhost.org/"
+    },
+    {
+        name: "MIT Digital Currency Initiative",
+        detail: "Cambridge, Massachusetts",
+        url: "https://www.dci.mit.edu/"
     }
 ]
 
