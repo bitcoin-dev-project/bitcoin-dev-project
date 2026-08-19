@@ -14,6 +14,7 @@
     "publishedAt": "2025-02-26T13:14:00.095Z",
     "title": "Better Expect Error Messages",
     "labels": [
+      "Mainnet Remaining",
       "Needs Input",
       "Priority::Low",
       "Starter Issue"
@@ -139,6 +140,7 @@
     "labels": [
       "Help-Wanted",
       "MVP",
+      "Mainnet Remaining",
       "Y1-SAB"
     ],
     "imageUrl": "https://gitlab.com/uploads/-/system/group/avatar/6935946/vls-logo.png"

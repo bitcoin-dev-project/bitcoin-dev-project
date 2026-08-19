@@ -101,5 +101,17 @@
       "flaky test"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/8992",
+    "publishedAt": "2026-08-10T18:44:29Z",
+    "title": "Flaky CI: gw_restore_test times out over iroh",
+    "labels": [
+      "bug",
+      "CI",
+      "lightning",
+      "flaky test"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]

@@ -20,16 +20,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   },
   {
-    "url": "https://github.com/bitcoin/bitcoin/issues/16159",
-    "publishedAt": "2019-06-06T18:31:28Z",
-    "title": "listrecievedbyaddress with include_empty not filtering out \"send\" side of address book",
-    "labels": [
-      "Bug",
-      "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
     "url": "https://github.com/bitcoin/bitcoin/issues/19886",
     "publishedAt": "2020-09-05T17:57:44Z",
     "title": "noban permission probably shouldn't give additional permissions implcitly",
@@ -321,6 +311,16 @@
     "labels": [
       "Bug",
       "Build system"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/35962",
+    "publishedAt": "2026-08-12T20:01:36Z",
+    "title": "Corrupted wallet when upgrading to 31.1",
+    "labels": [
+      "Bug",
+      "Wallet"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }

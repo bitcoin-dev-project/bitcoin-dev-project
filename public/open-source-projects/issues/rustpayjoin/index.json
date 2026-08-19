@@ -21,17 +21,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/739",
-    "publishedAt": "2025-06-03T22:52:58Z",
-    "title": "FFI Tracking Issue",
-    "labels": [
-      "help wanted",
-      "ffi",
-      "tracking"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/865",
     "publishedAt": "2025-07-10T17:47:00Z",
     "title": "`cargo doc` improvements tracking issue",
@@ -70,17 +59,6 @@
     "labels": [
       "documentation",
       "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/1421",
-    "publishedAt": "2026-03-18T04:21:49Z",
-    "title": "Harden mailroom against metadata side channels",
-    "labels": [
-      "enhancement",
-      "good first issue",
-      "payjoin-mailroom"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
