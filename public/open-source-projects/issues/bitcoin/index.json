@@ -313,15 +313,5 @@
       "Build system"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoin/bitcoin/issues/35962",
-    "publishedAt": "2026-08-12T20:01:36Z",
-    "title": "Corrupted wallet when upgrading to 31.1",
-    "labels": [
-      "Bug",
-      "Wallet"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
