@@ -61,5 +61,15 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1849",
+    "publishedAt": "2026-08-27T17:02:59Z",
+    "title": "FFI sender doesn' support v1 payjoin URIs",
+    "labels": [
+      "bug",
+      "ffi"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
