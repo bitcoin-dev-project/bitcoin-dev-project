@@ -46,5 +46,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2267",
+    "publishedAt": "2026-08-27T21:45:02Z",
+    "title": "CanonicalView::balance misclassifies immature coinbase outputs when min_confirmations exceeds their confirmations",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
