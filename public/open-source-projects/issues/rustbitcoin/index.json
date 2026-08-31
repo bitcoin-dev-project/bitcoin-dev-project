@@ -1,14 +1,5 @@
 [
   {
-    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/792",
-    "publishedAt": "2022-01-17T09:26:53Z",
-    "title": "Support signature verification of non-standard transactions",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
-  },
-  {
     "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/811",
     "publishedAt": "2022-01-26T15:47:48Z",
     "title": "New tool to make releases less painful",
