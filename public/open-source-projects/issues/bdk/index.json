@@ -64,5 +64,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2270",
+    "publishedAt": "2026-09-03T18:58:25Z",
+    "title": "TxGraph:: apply_changeset ignores ChangeSet::first_seen",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
