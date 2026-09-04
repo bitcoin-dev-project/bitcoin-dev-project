@@ -73,5 +73,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2271",
+    "publishedAt": "2026-09-04T12:40:40Z",
+    "title": "Equal `seen_at` and `evicted_at` within one sync hides present tx",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
