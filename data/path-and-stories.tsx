@@ -52,12 +52,6 @@ export const NAV_SECTIONS: NavSection[] = [
         href: "/get-funded#organizations",
         items: [],
         columnIndex: 2
-    },
-    {
-        title: "APPLY",
-        href: "/get-funded#apply",
-        items: [],
-        columnIndex: 2
     }
 ]
 

@@ -1,12 +1,7 @@
 "use client"
 
-import {
-    BdpTag,
-    BookIcon,
-    RightArrowIcon
-} from "@bitcoin-dev-project/bdp-ui/icons"
+import { BookIcon, RightArrowIcon } from "@bitcoin-dev-project/bdp-ui/icons"
 import Image from "next/image"
-import BDPStars from "@/components/assets/BDPStarts"
 import Quotes from "@/components/assets/Quotes"
 import GetFundedSidebar from "@/components/get-funded/get-funded-sidebar"
 import FundingOrgCard from "@/components/get-funded/funding-org-card"
@@ -295,71 +290,6 @@ export default function Career() {
                         </p>
                         <ResourceLinks links={CROWDFUNDING} />
                     </section>
-
-                    <section
-                        id="apply"
-                        className="flex scroll-mt-40 lg:scroll-mt-24 flex-col gap-3 pt-16"
-                    >
-                        <SectionHeading>
-                            One form, multiple opportunities
-                        </SectionHeading>
-                        <p className="font-quicksand text-lg leading-[1.4] lg:text-xl">
-                            Ready to apply? Get your work in front of multiple
-                            bitcoin grant organizations with a single
-                            application. Fill out the form once, select which
-                            funding providers to send it to, and submit. Each
-                            organization receives a copy of your application and
-                            will reach out if interested. Apply today and get
-                            one step closer towards becoming a funded bitcoin
-                            contributor.
-                        </p>
-                    </section>
-
-                    <div
-                        id="common-application"
-                        className="mx-auto w-full max-w-lg scroll-mt-40 lg:scroll-mt-24 rounded-2xl border border-brand-gray-100"
-                    >
-                        <div className="flex flex-col gap-3 rounded-2xl p-2">
-                            <div className="relative overflow-hidden rounded-2xl">
-                                <Image
-                                    src="/images/get-funded/common-app-hero.webp"
-                                    alt="Funding Process"
-                                    width={800}
-                                    height={400}
-                                    className="h-auto min-h-[126px] w-full object-cover lg:min-h-[277px]"
-                                />
-                                <div
-                                    className="absolute bottom-3 left-3 flex items-center gap-1 rounded-[12px] border bg-[#F6F0E6] px-2 py-1"
-                                    style={{ borderColor: "#A9A49B" }}
-                                >
-                                    <BdpTag
-                                        width={16}
-                                        className="w-6 text-black lg:w-4"
-                                    />
-                                    <span className="text-[11px] font-medium text-black md:text-sm">
-                                        By BDP
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col justify-between gap-3 lg:flex-row lg:items-center">
-                                <h2 className="font-montserrat text-base font-semibold lg:text-xl">
-                                    Common Application
-                                </h2>
-                                <a
-                                    href="https://grants.bitcoindevs.xyz/"
-                                    target="_blank"
-                                    rel="noopener strict-origin"
-                                    className="flex w-full flex-row justify-center gap-2.5 rounded-[10px] bg-brand-dark p-2.5 lg:w-auto"
-                                >
-                                    <BDPStars />
-                                    <p className="text-sm font-bold text-brand lg:text-left">
-                                        Submit Application
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

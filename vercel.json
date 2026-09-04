@@ -1,15 +1,3 @@
 {
-    "buildCommand": "npm run build:deploy",
-    "redirects": [
-        {
-            "source": "/grants/:path*",
-            "destination": "https://grants.bitcoindevs.xyz/:path*",
-            "permanent": false
-        },
-        {
-            "source": "/grants",
-            "destination": "https://grants.bitcoindevs.xyz/",
-            "permanent": false
-        }
-    ]
+    "buildCommand": "npm run build:deploy"
 }
