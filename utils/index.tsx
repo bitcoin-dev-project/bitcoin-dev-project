@@ -419,18 +419,8 @@ export const FAQS: FAQItem[] = [
                     className="underline text-orange-500 hover:no-underline transition"
                 >
                     get funded
-                </a>{" "}
-                or directly use our{" "}
-                <a
-                    href="https://grants.bitcoindevs.xyz/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline text-orange-500 hover:no-underline transition"
-                >
-                    common application
-                </a>{" "}
-                resource to reach multiple bitcoin funding organizations with
-                one form.
+                </a>
+                .
             </>
         )
     },
