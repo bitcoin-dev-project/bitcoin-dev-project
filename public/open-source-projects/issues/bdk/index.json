@@ -82,5 +82,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2272",
+    "publishedAt": "2026-09-05T04:58:03Z",
+    "title": "bdk_bitcoind_rpc Emitter fails to report evicted transactions after a reorg (Ghost Pending Payments)",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
