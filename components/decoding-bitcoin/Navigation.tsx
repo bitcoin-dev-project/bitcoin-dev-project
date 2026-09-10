@@ -109,6 +109,7 @@ export function Navigation({
     const [expandedTopics, setExpandedTopics] = useState<
         Record<string, boolean>
     >({})
+    const [initialLoad, setInitialLoad] = useState(true)
     const [completedTopics, setCompletedTopics] = useState<Set<string>>(
         new Set()
     )
@@ -158,6 +159,11 @@ export function Navigation({
                 )
             }
         }
+    }, [])
+
+    // Mark initial load complete after first render
+    useEffect(() => {
+        setInitialLoad(false)
     }, [])
 
     // Save expanded state to localStorage whenever it changes
@@ -265,7 +271,10 @@ export function Navigation({
 
     // Auto-expand the section you're currently in — whether you're on the
     // parent page itself or one of its children — so your context is open.
+    // Only on initial load to prevent re-expanding after user collapses.
     useEffect(() => {
+        if (!initialLoad) return
+        
         navigation.forEach((section) => {
             section.links.forEach((link) => {
                 const onChild = link.children?.some(
@@ -275,13 +284,12 @@ export function Navigation({
                     link.href === pathname && (link.children?.length ?? 0) > 0
                 if (onChild || onSelf) {
                     setExpandedTopics((prev) => {
-                        if (prev[link.href]) return prev
                         return { ...prev, [link.href]: true }
                     })
                 }
             })
         })
-    }, [pathname, navigation])
+    }, [pathname, navigation, initialLoad])
 
     // Scroll the active lesson to the middle of the sidebar on load / nav,
     // scoped to the sidebar's own scroll container (never the main page).
