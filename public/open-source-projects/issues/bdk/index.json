@@ -281,5 +281,41 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2307",
+    "publishedAt": "2026-09-13T15:43:18Z",
+    "title": "file_store: `Store::load` never terminates when a changeset entry decodes to zero bytes",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2308",
+    "publishedAt": "2026-09-13T15:46:08Z",
+    "title": "file_store: `Store::append` through a second handle overwrites changesets appended via another handle",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2309",
+    "publishedAt": "2026-09-13T15:50:49Z",
+    "title": "`LocalChain::apply_changeset` silently replaces the genesis block",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2310",
+    "publishedAt": "2026-09-13T15:55:33Z",
+    "title": "Electrum: `batch_fetch_anchors` keeps returning the pre-reorg anchor once header and anchor caches are populated",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
