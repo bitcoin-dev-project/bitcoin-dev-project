@@ -13,17 +13,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/4135",
-    "publishedAt": "2020-03-31T23:58:20Z",
-    "title": "REST API returns a 500 Internal Server Error when trying to fetch an invoice if there are no invoices at all",
-    "labels": [
-      "bug",
-      "REST",
-      "P3"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/4796",
     "publishedAt": "2020-11-23T19:38:34Z",
     "title": "Encountering RequiredNodeFeatureMissing routing error in pathfinding is not gracefully handled",
@@ -46,18 +35,6 @@
       "notifications",
       "neutrino",
       "P2"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
-    "url": "https://github.com/lightningnetwork/lnd/issues/4910",
-    "publishedAt": "2021-01-11T15:53:33Z",
-    "title": "fwdinghistory doesn't include HTLCs settled using HTLC interceptor RPC",
-    "labels": [
-      "bug",
-      "htlcswitch",
-      "P4",
-      "accounting"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
@@ -1132,6 +1109,29 @@
     "labels": [
       "bug",
       "needs triage"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/9101",
+    "publishedAt": "2024-09-13T11:44:15Z",
+    "title": "[bug]: `minFeeRate`  not capped by budget in `LinearFeeFunction`",
+    "labels": [
+      "bug",
+      "fees",
+      "utxo sweeping"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/9108",
+    "publishedAt": "2024-09-16T17:05:52Z",
+    "title": "[bug]: Newly generated wallet chain sync sometimes takes a very long time",
+    "labels": [
+      "bug",
+      "wallet",
+      "backend",
+      "init"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
