@@ -1,14 +1,5 @@
 [
   {
-    "url": "https://github.com/lightningdevkit/rust-lightning/issues/324",
-    "publishedAt": "2019-03-25T18:13:21Z",
-    "title": "Add Test for same-payment_hash-different-CLTV HTLC sorting",
-    "labels": [
-      "good first issue"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/60484029?v=4"
-  },
-  {
     "url": "https://github.com/lightningdevkit/rust-lightning/issues/1667",
     "publishedAt": "2022-08-13T21:40:16Z",
     "title": "do performance benchmarking of LDK",
