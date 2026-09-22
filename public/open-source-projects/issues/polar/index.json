@@ -153,5 +153,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/1396",
+    "publishedAt": "2026-09-22T07:25:37Z",
+    "title": "Bug: Open Channel: unfriendly LND error shown when source node balance is insufficient",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   }
 ]
