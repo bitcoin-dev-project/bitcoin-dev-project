@@ -129,5 +129,16 @@
       "1.0-wanted"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
+  },
+  {
+    "url": "https://github.com/rust-bitcoin/rust-bitcoin/issues/6925",
+    "publishedAt": "2026-09-23T13:04:00Z",
+    "title": "The `Error` in `internals::array_vec` is very bad",
+    "labels": [
+      "API break",
+      "good first issue",
+      "C-internals"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/37084147?v=4"
   }
 ]
