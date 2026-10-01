@@ -61,5 +61,14 @@
       "good first issue"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/1938",
+    "publishedAt": "2026-10-01T20:01:09Z",
+    "title": "V1 roundtrip fuzzer never exercises sender-side proposal validation",
+    "labels": [
+      "good first issue"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
