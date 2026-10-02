@@ -327,5 +327,15 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2341",
+    "publishedAt": "2026-10-02T19:24:16Z",
+    "title": "Esplora: server-supplied height-0 entry in latest_blocks panics sync in CheckPoint::insert",
+    "labels": [
+      "bug",
+      "documentation"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
