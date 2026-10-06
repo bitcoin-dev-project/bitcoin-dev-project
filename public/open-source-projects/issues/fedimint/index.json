@@ -58,16 +58,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   },
   {
-    "url": "https://github.com/fedimint/fedimint/issues/8004",
-    "publishedAt": "2025-11-25T14:30:03Z",
-    "title": "Reissue on recovery causes panic",
-    "labels": [
-      "bug",
-      "client"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
-  },
-  {
     "url": "https://github.com/fedimint/fedimint/issues/8101",
     "publishedAt": "2025-12-20T17:50:33Z",
     "title": "Investigate potential race condition in LNv1 reucrringd registration",
