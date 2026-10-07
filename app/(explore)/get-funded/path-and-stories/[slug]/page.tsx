@@ -38,7 +38,7 @@ const Avatar = ({ person }: { person: PathStory }) => {
                 alt={person.name}
                 width={96}
                 height={96}
-                className="h-20 w-20 shrink-0 rounded-full object-cover lg:h-24 lg:w-24"
+                className="h-20 w-20 shrink-0 rounded-full border-2 border-brand-dark/30 object-cover lg:h-24 lg:w-24"
             />
         )
     }
@@ -70,7 +70,19 @@ export default function PathStoryPage({
 
             <article className="flex flex-col gap-y-10">
                 <header className="flex items-center gap-5">
-                    <Avatar person={person} />
+                    {person.github ? (
+                        <a
+                            href={person.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${person.name} on GitHub`}
+                            className="shrink-0 rounded-full transition-opacity hover:opacity-80"
+                        >
+                            <Avatar person={person} />
+                        </a>
+                    ) : (
+                        <Avatar person={person} />
+                    )}
                     <div className="flex flex-col gap-2">
                         <h1 className="font-montserrat text-[2rem] font-bold leading-none lg:text-[3rem]">
                             {person.name}
@@ -80,6 +92,8 @@ export default function PathStoryPage({
                         </p>
                     </div>
                 </header>
+
+                <hr className="border-t border-brand-stroke-on-base" />
 
                 {!person.available ? (
                     <div className="rounded-xl border border-dashed border-brand-gray-200 bg-brand-gray/40 p-6 font-quicksand text-lg text-brand-dark/70">

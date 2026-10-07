@@ -76,6 +76,8 @@ export type PathStory = {
     role: string
     avatar?: string
     /** false => page exists but the interview content is still pending */
+    /** Profile URL; makes the avatar on the story page clickable */
+    github?: string
     available: boolean
     card: PathStoryCard
     qa: QA[]
@@ -87,6 +89,7 @@ export const PATH_STORIES: PathStory[] = [
         name: "stickies - v",
         role: "Bitcoin Core Contributor, Host Of London BitDevs",
         avatar: "/images/get-funded/people/stickies-v.webp",
+        github: "https://github.com/stickies-v",
         available: true,
         card: {
             role: "Bitcoin Core Contributor | Brink",
@@ -389,6 +392,7 @@ export const PATH_STORIES: PathStory[] = [
         name: "Beulah",
         role: "Cryptography Researcher",
         avatar: "/images/get-funded/people/beulah.webp",
+        github: "https://github.com/beulahevanjalin",
         available: true,
         card: {
             quote: "You have to develop your own judgment about what's technically sound, what's worth pursuing, and what's ready to share.",
@@ -612,6 +616,7 @@ export const PATH_STORIES: PathStory[] = [
         name: "Chuks",
         role: "Lightning Developer",
         avatar: "/images/get-funded/people/chuks.webp",
+        github: "https://github.com/chuksys",
         available: true,
         card: {
             quote: "Three months after I graduated from the Chaincode BOSS 2025 program, I was able to show enough proof-of-work to get a Btrust Starter grant.",
