@@ -162,5 +162,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
+  },
+  {
+    "url": "https://github.com/jamaljsr/polar/issues/1406",
+    "publishedAt": "2026-10-15T20:40:13Z",
+    "title": "Bug: “Missing images” notice lists all images after Docker is detected via “Check Again”",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/1356600?u=332766210005f71b61f09f64ab2d6b9aad32f160&v=4"
   }
 ]
