@@ -104,15 +104,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2278",
-    "publishedAt": "2026-09-08T12:26:03Z",
-    "title": "`IndexedTxGraph::apply_block` does not check merkle root",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2279",
     "publishedAt": "2026-09-09T12:13:18Z",
     "title": "`SpkTxOutIndex::insert_spk` leaves stale mappings when reusing an index",
