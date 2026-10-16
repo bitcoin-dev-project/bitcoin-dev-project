@@ -303,5 +303,16 @@
       "Build system"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoin/bitcoin/issues/36546",
+    "publishedAt": "2026-10-15T16:16:41Z",
+    "title": "rpc: invalidateblock reports success when a block can't be disconnected",
+    "labels": [
+      "Bug",
+      "RPC/REST/ZMQ",
+      "Data corruption"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/528860?v=4"
   }
 ]
