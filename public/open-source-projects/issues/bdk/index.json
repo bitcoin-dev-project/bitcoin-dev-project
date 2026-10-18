@@ -176,15 +176,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2294",
-    "publishedAt": "2026-09-10T17:05:57Z",
-    "title": "Electrum tip height is truncated with `as u32`",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2295",
     "publishedAt": "2026-09-10T17:12:01Z",
     "title": "`full_scan` never terminates when the server reports history for every script",
