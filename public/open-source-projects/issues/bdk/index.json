@@ -95,24 +95,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2277",
-    "publishedAt": "2026-09-07T15:14:26Z",
-    "title": "`KeychainTxOutIndex` panics on overlapping descriptors (non-index-0 spk)",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2279",
-    "publishedAt": "2026-09-09T12:13:18Z",
-    "title": "`SpkTxOutIndex::insert_spk` leaves stale mappings when reusing an index",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2280",
     "publishedAt": "2026-09-09T12:25:17Z",
     "title": "Clock changes can hide present transactions or keep dropped transactions pending",
@@ -194,15 +176,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2293",
-    "publishedAt": "2026-09-10T17:04:51Z",
-    "title": "Electrum outpoint sync silently ignores transaction fetch errors",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2294",
     "publishedAt": "2026-09-10T17:05:57Z",
     "title": "Electrum tip height is truncated with `as u32`",
@@ -233,24 +206,6 @@
     "url": "https://github.com/bitcoindevkit/bdk/issues/2302",
     "publishedAt": "2026-09-11T10:32:16Z",
     "title": "Electrum sync forwards unrelated history transactions and its caches never evict",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2304",
-    "publishedAt": "2026-09-11T10:54:46Z",
-    "title": "Electrum sync leaves a transaction without anchor or `seen_at` when its merkle proof fails",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2305",
-    "publishedAt": "2026-09-11T12:37:14Z",
-    "title": "Electrum batch responses are paired with `zip` without length checks",
     "labels": [
       "bug"
     ],
