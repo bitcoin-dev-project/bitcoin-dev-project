@@ -158,15 +158,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2291",
-    "publishedAt": "2026-09-10T13:34:55Z",
-    "title": "Zero batch size or parallel requests silently skips scans",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2292",
     "publishedAt": "2026-09-10T13:49:50Z",
     "title": "Smaller invalid witnesses replace usable witnesses and cannot be restored",
