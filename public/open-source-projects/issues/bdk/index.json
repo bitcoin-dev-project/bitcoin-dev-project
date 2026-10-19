@@ -1,32 +1,11 @@
 [
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/1618",
-    "publishedAt": "2024-09-19T15:51:13Z",
-    "title": "Test CLI examples using a regtest node in CI",
-    "labels": [
-      "good first issue",
-      "tests",
-      "github_actions"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/1936",
     "publishedAt": "2024-12-03T12:02:57Z",
     "title": "Move `TxTemplate` to `bdk_testenv` and make it better",
     "labels": [
       "good first issue",
       "tests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2088",
-    "publishedAt": "2026-01-03T21:39:04Z",
-    "title": "`CanonicalReason::Assumed` should map to `ChainPosition::Confirmed` if a direct anchor exists",
-    "labels": [
-      "bug",
-      "stale"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
@@ -113,15 +92,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2282",
-    "publishedAt": "2026-09-09T12:45:44Z",
-    "title": "bdk_bitcoind_rpc: Unbounded spin loop, memory growth, and missing txid validation in Emitter::mempool_at",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2285",
     "publishedAt": "2026-09-10T13:05:10Z",
     "title": "file_store: new stores are readable by other users under common umasks",
@@ -170,15 +140,6 @@
     "url": "https://github.com/bitcoindevkit/bdk/issues/2295",
     "publishedAt": "2026-09-10T17:12:01Z",
     "title": "`full_scan` never terminates when the server reports history for every script",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2301",
-    "publishedAt": "2026-09-11T10:27:06Z",
-    "title": "Unconfirmed spend with an invalid witness removes a confirmed UTXO from the balance",
     "labels": [
       "bug"
     ],
@@ -239,15 +200,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2312",
-    "publishedAt": "2026-09-13T21:09:25Z",
-    "title": "Electrum: `chain_update` inserts anchor block hashes that were not checked against the tip chain",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2326",
     "publishedAt": "2026-09-27T17:01:25Z",
     "title": "BDK logo svg",
@@ -263,15 +215,6 @@
     "labels": [
       "bug",
       "documentation"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2344",
-    "publishedAt": "2026-10-05T23:35:40Z",
-    "title": "Anchor ordering can produce incorrect confirmation heights",
-    "labels": [
-      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
