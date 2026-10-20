@@ -19,15 +19,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2251",
-    "publishedAt": "2026-08-01T17:26:39Z",
-    "title": "KeychainTxOutIndex::lookahead_to_target panics (overflow) or silently no-ops on target_index = u32::MAX",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2268",
     "publishedAt": "2026-09-01T16:25:32Z",
     "title": "Improve safety of FilterIter",
@@ -110,15 +101,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2288",
-    "publishedAt": "2026-09-10T13:16:56Z",
-    "title": "Duplicate inputs inflate sent amounts and calculated fees",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2290",
     "publishedAt": "2026-09-10T13:32:37Z",
     "title": "Emitter silently replaces the caller’s genesis on a network mismatch",
@@ -176,24 +158,6 @@
     "url": "https://github.com/bitcoindevkit/bdk/issues/2308",
     "publishedAt": "2026-09-13T15:46:08Z",
     "title": "file_store: `Store::append` through a second handle overwrites changesets appended via another handle",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2309",
-    "publishedAt": "2026-09-13T15:50:49Z",
-    "title": "`LocalChain::apply_changeset` silently replaces the genesis block",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2310",
-    "publishedAt": "2026-09-13T15:55:33Z",
-    "title": "Electrum: `batch_fetch_anchors` keeps returning the pre-reorg anchor once header and anchor caches are populated",
     "labels": [
       "bug"
     ],
