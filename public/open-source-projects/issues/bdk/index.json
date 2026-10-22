@@ -119,24 +119,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2295",
-    "publishedAt": "2026-09-10T17:12:01Z",
-    "title": "`full_scan` never terminates when the server reports history for every script",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2302",
-    "publishedAt": "2026-09-11T10:32:16Z",
-    "title": "Electrum sync forwards unrelated history transactions and its caches never evict",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2306",
     "publishedAt": "2026-09-11T14:45:44Z",
     "title": "file_store: oversized entry length prefix panics `Store::load` instead of returning an error",
@@ -166,9 +148,10 @@
   {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2326",
     "publishedAt": "2026-09-27T17:01:25Z",
-    "title": "BDK logo svg",
+    "title": "static/bdk.svg still shows the old logo (bdk.png has the new one)",
     "labels": [
-      "bug"
+      "bug",
+      "chore"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
