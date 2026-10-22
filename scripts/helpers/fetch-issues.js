@@ -9,6 +9,7 @@ const cross_fetch_1 = __importDefault(require("cross-fetch"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const get_issues_1 = require("../graphql/queries/get-issues");
 const apollo_client_1 = require("../lib/apollo-client");
+const available_issues_1 = require("./available-issues");
 const index_json_1 = __importDefault(require("../public/open-source-projects/index.json"));
 const sanitize_1 = require("../utils/sanitize");
 dotenv_1.default.config();
@@ -46,7 +47,9 @@ const fetchGithubIssues = async () => {
             continue;
         const issues = issuesData?.issues?.edges;
         const repositoryImage = issuesData?.owner?.avatarUrl;
-        const projectIssues = issues.map((edge) => ({
+        const projectIssues = issues
+            .filter((edge) => (0, available_issues_1.isAvailableIssue)(edge.node))
+            .map((edge) => ({
             url: edge.node.url,
             publishedAt: edge.node.publishedAt,
             title: edge.node.title,
@@ -73,7 +76,8 @@ const fetchGitlabIssues = async () => {
         catch {
             // non-fatal: imageUrl stays empty
         }
-        for (const label of labels) {
+        const gitlabLabels = project.gitlab_labels ?? labels;
+        for (const label of gitlabLabels) {
             const url = `https://gitlab.com/api/v4/projects/${encodedPath}/issues` +
                 `?state=opened&labels=${encodeURIComponent(label)}&per_page=99`;
             const res = await (0, cross_fetch_1.default)(url, { headers: authHeaders });
