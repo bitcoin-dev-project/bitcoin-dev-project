@@ -92,27 +92,9 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   },
   {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2286",
-    "publishedAt": "2026-09-10T13:08:17Z",
-    "title": "Canonical view admits conflicting transactions with null prevouts",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
     "url": "https://github.com/bitcoindevkit/bdk/issues/2290",
     "publishedAt": "2026-09-10T13:32:37Z",
     "title": "Emitter silently replaces the caller’s genesis on a network mismatch",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
-  },
-  {
-    "url": "https://github.com/bitcoindevkit/bdk/issues/2292",
-    "publishedAt": "2026-09-10T13:49:50Z",
-    "title": "Smaller invalid witnesses replace usable witnesses and cannot be restored",
     "labels": [
       "bug"
     ],
