@@ -409,18 +409,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7316",
-    "publishedAt": "2023-01-13T13:48:26Z",
-    "title": "[bug]: lncli listchaintxns in reversed order",
-    "labels": [
-      "bug",
-      "rpc",
-      "good first issue",
-      "P3"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7328",
     "publishedAt": "2023-01-16T15:03:58Z",
     "title": "[bug]: 'go to chain for incoming htlc' indefinitely repeats for every new block",
@@ -1132,6 +1120,15 @@
       "wallet",
       "backend",
       "init"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/9119",
+    "publishedAt": "2024-09-18T17:51:36Z",
+    "title": "[bug]: unable to sweep funds > non-mandatory-script-verify-flag (Invalid Schnorr signature)",
+    "labels": [
+      "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
