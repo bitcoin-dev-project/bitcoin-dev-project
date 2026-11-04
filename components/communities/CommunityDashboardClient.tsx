@@ -44,7 +44,9 @@ export default function CommunityDashboardClient({
                                 Cohort completed on{" "}
                                 {new Date(
                                     communityData.currentCohort.endDate
-                                ).toLocaleDateString()}
+                                ).toLocaleDateString("en-US", {
+                                    timeZone: "UTC"
+                                })}
                             </p>
                         </div>
                     </div>

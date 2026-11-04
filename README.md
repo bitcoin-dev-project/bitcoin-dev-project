@@ -6,6 +6,8 @@ This is the source code for the [Bitcoin Dev Project](https://bitcoindevs.xyz) t
 
 ## Setup
 
+Use Node.js 22 (`nvm use`). Next.js 16 requires Node.js 20.9 or newer.
+
 1. Install the dependencies:
 
 ```bash
@@ -47,3 +49,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ---
 
 To run the tests, use `npm run test`
+
+Development and production builds explicitly use Webpack because the Contentlayer
+plugin relies on Webpack hooks. React 18 is retained for compatibility with the
+current BDP UI package.
