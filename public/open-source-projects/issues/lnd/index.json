@@ -126,19 +126,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/5625",
-    "publishedAt": "2021-08-12T10:16:54Z",
-    "title": "lnd should exit with no-success error code when automatically shut down due to bitcoind problems",
-    "labels": [
-      "beginner",
-      "good first issue",
-      "bitcoind",
-      "P3",
-      "error codes"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/5739",
     "publishedAt": "2021-09-16T10:06:17Z",
     "title": "psbt funding: cannot create 1 in, 1 out tx",
@@ -1129,6 +1116,17 @@
     "title": "[bug]: unable to sweep funds > non-mandatory-script-verify-flag (Invalid Schnorr signature)",
     "labels": [
       "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/9164",
+    "publishedAt": "2024-10-05T17:56:13Z",
+    "title": "[bug]: inbound fee documentation issues",
+    "labels": [
+      "bug",
+      "needs triage",
+      "inbound fee"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
