@@ -16,9 +16,6 @@ module.exports = () => {
             optimizePackageImports: ["react-icons"]
         },
         pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-        eslint: {
-            dirs: ["app", "components", "layouts", "scripts"]
-        },
         images: {
             formats: ["image/avif", "image/webp"],
             domains: ["avatars.githubusercontent.com"]

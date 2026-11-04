@@ -10,7 +10,7 @@
         "module": "esnext",
         "resolveJsonModule": true,
         "isolatedModules": true,
-        "jsx": "preserve",
+        "jsx": "react-jsx",
         "incremental": true,
         "baseUrl": ".",
         "plugins": [
@@ -41,7 +41,8 @@
         ".contentlayer/generated",
         ".contentlayer/generated/**/*.json",
         ".next/types/**/*.ts",
-        "utils"
+        "utils",
+        ".next/dev/types/**/*.ts"
     ],
     "exclude": ["node_modules"]
 }

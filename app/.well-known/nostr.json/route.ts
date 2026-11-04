@@ -17,7 +17,8 @@ export async function GET(request: NextRequest) {
             )
         }
 
-        const pubkey = nostrPubkeys.names[name]
+        const names: Record<string, string> = nostrPubkeys.names
+        const pubkey = names[name]
 
         if (!pubkey) {
             return new Response(

@@ -16,12 +16,12 @@ export function generateStaticParams() {
     return PATH_STORIES.map((person) => ({ slug: person.slug }))
 }
 
-export function generateMetadata({
+export async function generateMetadata({
     params
 }: {
-    params: { slug: string }
-}): Metadata {
-    const person = getPathStory(params.slug)
+    params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+    const person = getPathStory((await params).slug)
     if (!person) return {}
 
     return genPageMetadata({
@@ -55,12 +55,12 @@ const Avatar = ({ person }: { person: PathStory }) => {
     )
 }
 
-export default function PathStoryPage({
+export default async function PathStoryPage({
     params
 }: {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
 }) {
-    const person = getPathStory(params.slug)
+    const person = getPathStory((await params).slug)
     if (!person) notFound()
 
     return (

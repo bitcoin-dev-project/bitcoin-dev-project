@@ -7,9 +7,9 @@ import type { Metadata } from "next"
 export async function generateMetadata({
     params
 }: {
-    params: { communityId: string }
+    params: Promise<{ communityId: string }>
 }): Promise<Metadata> {
-    const community = getCommunity(params.communityId)
+    const community = getCommunity((await params).communityId)
     if (!community) return {}
 
     return genPageMetadata({
@@ -19,12 +19,12 @@ export async function generateMetadata({
 }
 
 // Server Component
-export default function CommunityDashboard({
+export default async function CommunityDashboard({
     params
 }: {
-    params: { communityId: string }
+    params: Promise<{ communityId: string }>
 }) {
-    const community = getCommunity(params.communityId)
+    const community = getCommunity((await params).communityId)
 
     if (!community) {
         notFound()

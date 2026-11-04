@@ -1,9 +1,8 @@
 import "css/prism.css"
 import "katex/dist/katex.css"
 
-import { MDXLayoutRenderer } from "pliny/mdx-components"
+import MDXContent from "@/components/decoding-bitcoin/markdown-ui/MDXContent"
 import TopicLayout from "@/components/decoding-bitcoin/layouts/TopicLayout"
-import { components } from "@/components/decoding-bitcoin/markdown-ui/MDXComponents"
 import { genPageMetadata } from "../seo"
 import { getTopicData } from "@/utils/content-utils"
 
@@ -47,12 +46,6 @@ export default async function Page() {
     const { prev, next, post, authorDetails, mainContent, jsonLd } =
         getTopicData(slug)
 
-    const pageComponents = Object.fromEntries(
-        Object.entries(components).filter(([key]) =>
-            (post.usedComponents as string[]).includes(key)
-        )
-    )
-
     return (
         <>
             <script
@@ -65,9 +58,9 @@ export default async function Page() {
                 next={next}
                 prev={prev}
             >
-                <MDXLayoutRenderer
+                <MDXContent
                     code={post.body.code}
-                    components={pageComponents}
+                    usedComponents={post.usedComponents}
                     toc={post.toc}
                 />
             </TopicLayout>

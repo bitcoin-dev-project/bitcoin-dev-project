@@ -1,3 +1,5 @@
+"use client"
+
 import dynamic from "next/dynamic"
 import TOCInline from "pliny/ui/TOCInline"
 import BlogNewsletterForm from "pliny/ui/BlogNewsletterForm"

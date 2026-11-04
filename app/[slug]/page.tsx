@@ -10,9 +10,9 @@ import type { Metadata } from "next"
 export async function generateMetadata({
     params
 }: {
-    params: { slug: KnownCurriculums }
+    params: Promise<{ slug: KnownCurriculums }>
 }): Promise<Metadata> {
-    const curriculum = curriculums[params.slug]
+    const curriculum = curriculums[(await params).slug]
     if (!curriculum) return {}
 
     return genPageMetadata({
@@ -21,12 +21,12 @@ export async function generateMetadata({
     })
 }
 
-export default function Curriculum({
+export default async function Curriculum({
     params
 }: {
-    params: { slug: KnownCurriculums }
+    params: Promise<{ slug: KnownCurriculums }>
 }) {
-    const curriculum = curriculums[params.slug]
+    const curriculum = curriculums[(await params).slug]
     if (!curriculum) {
         return (
             <div className="min-h-screen w-full bg-[#F4EFEA] flex flex-col">

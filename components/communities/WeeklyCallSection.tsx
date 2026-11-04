@@ -22,7 +22,8 @@ export const WeeklyCallSection = ({ weekData }: { weekData: WeeklyData }) => {
 
     // Get day of week from the date
     const dayOfWeek = new Date(weeklyCall.date).toLocaleDateString("en-US", {
-        weekday: "long"
+        weekday: "long",
+        timeZone: "UTC"
     })
 
     useEffect(() => {

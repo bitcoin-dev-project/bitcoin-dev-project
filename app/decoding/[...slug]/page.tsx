@@ -1,10 +1,9 @@
 import "css/prism.css"
 import "katex/dist/katex.css"
 
-import { MDXLayoutRenderer } from "pliny/mdx-components"
+import MDXContent from "@/components/decoding-bitcoin/markdown-ui/MDXContent"
 import { allTopics } from "contentlayer/generated"
 import TopicLayout from "@/components/decoding-bitcoin/layouts/TopicLayout"
-import { components } from "@/components/decoding-bitcoin/markdown-ui/MDXComponents"
 import siteMetadata from "@/data/siteMetadata"
 import { getAuthorDetails, getTopicData } from "@/utils/content-utils"
 import TopicBanner from "@/components/decoding-bitcoin/layouts/TopicBanner"
@@ -21,9 +20,9 @@ type LayoutKey = keyof typeof layouts
 export async function generateMetadata({
     params
 }: {
-    params: { slug: string[] }
+    params: Promise<{ slug: string[] }>
 }) {
-    const slug = decodeURI(params.slug.join("/"))
+    const slug = decodeURI((await params).slug.join("/"))
     const post = allTopics.find((p) => p.slug === slug)
     if (!post) return
 
@@ -67,18 +66,16 @@ export const generateStaticParams = async () => {
     return allTopics.map((p) => ({ slug: p.slug.split("/") }))
 }
 
-export default async function Page({ params }: { params: { slug: string[] } }) {
-    const slug = decodeURI(params.slug.join("/"))
+export default async function Page({
+    params
+}: {
+    params: Promise<{ slug: string[] }>
+}) {
+    const slug = decodeURI((await params).slug.join("/"))
     const { prev, next, post, authorDetails, mainContent, jsonLd } =
         getTopicData(slug)
 
     const Layout = layouts[(post.layout as LayoutKey) || defaultLayout]
-
-    const pageComponents = Object.fromEntries(
-        Object.entries(components).filter(([key]) =>
-            (post.usedComponents as string[]).includes(key)
-        )
-    )
 
     return (
         <div className="scroll-smooth">
@@ -92,9 +89,9 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
                 next={next}
                 prev={prev}
             >
-                <MDXLayoutRenderer
+                <MDXContent
                     code={post.body.code}
-                    components={pageComponents}
+                    usedComponents={post.usedComponents}
                     toc={post.toc}
                 />
             </Layout>
