@@ -146,5 +146,23 @@
       "documentation"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2459",
+    "publishedAt": "2026-11-06T12:41:42Z",
+    "title": "esplora: `blocking` and `async` features fail to compile without `std` (regression in 0.22.3)",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2461",
+    "publishedAt": "2026-11-06T13:13:35Z",
+    "title": "chain: `From<TxGraph> for TxUpdate` drops `first_seen`",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
