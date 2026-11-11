@@ -1,6 +1,22 @@
 {
   "items": [
     {
+      "difficulty": "easy",
+      "tags": [
+        "products"
+      ],
+      "tagList": [
+        "tool",
+        "interactive"
+      ],
+      "bannerColor": "#F6F7F2",
+      "byBDP": true,
+      "logo": "/images/tools/hash-explained-wordmark.png",
+      "title": "Hash Explained",
+      "description": "Explore SHA-256, Merkle trees, and entropy through interactive cryptography visualizations by the Bitcoin Dev Project.",
+      "link": "https://hashexplained.com/"
+    },
+    {
       "difficulty": "medium",
       "tags": [
         "products"
