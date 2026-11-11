@@ -29,6 +29,14 @@ function constructRepoQueries(inputs) {
                                     }
                                 }
                             }
+                            assignees (first: 1) {
+                                totalCount
+                            }
+                            closedByPullRequestsReferences (first: 10) {
+                                nodes {
+                                    state
+                                }
+                            }
                         }
                     }
                     pageInfo {
