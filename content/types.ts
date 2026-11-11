@@ -6,6 +6,7 @@ export type Page = {
         description: string | JSX.Element
         items: ReadonlyArray<{
             image: string
+            imageFit?: "contain" | "cover" | "fill"
             title: string
             subTitle: string
             description: string

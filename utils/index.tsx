@@ -161,7 +161,7 @@ export const FOOTERLINKS: FooterSection[] = [
                 component: GithubNewIcon
             },
             {
-                name: "Discord",
+                name: "X",
                 link: "https://x.com/Bitcoin_Devs",
                 component: XIcon
             },

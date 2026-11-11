@@ -11,6 +11,15 @@ export const tools = {
             items: [
                 {
                     description:
+                        "Explore SHA-256, Merkle trees, and entropy through interactive cryptography visualizations by the Bitcoin Dev Project.",
+                    image: "/images/tools/hash-explained.png",
+                    imageFit: "contain",
+                    title: "Hash Explained",
+                    subTitle: "",
+                    link: "https://hashexplained.com/"
+                },
+                {
+                    description:
                         "The foundational document that introduced Bitcoin, explaining its decentralized, peer-to-peer electronic cash system.",
                     image: "/images/tools/bitcoin-whitepaper.webp",
                     title: "Bitcoin Whitepaper",

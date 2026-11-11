@@ -67,6 +67,7 @@ export default function PageLevel({
                                 <Image
                                     alt={item.title}
                                     className="object-fill max-md:object-cover w-full"
+                                    style={{ objectFit: item.imageFit }}
                                     src={item.image}
                                     fill
                                     sizes="(max-width: 768px) 100vw, (min-width: 769px) 20vw"

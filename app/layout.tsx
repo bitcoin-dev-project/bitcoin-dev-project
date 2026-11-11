@@ -113,10 +113,7 @@ export default function RootLayout({
     const fontVariables = `${barlow.variable} ${quicksand.variable} ${montserrat.variable} ${inter.variable} ${sourceSerif.variable}`
 
     return (
-        <html
-            lang={siteMetadata.language}
-            suppressHydrationWarning={process.env.NODE_ENV === "production"}
-        >
+        <html lang={siteMetadata.language} suppressHydrationWarning>
             <head>
                 <script
                     async

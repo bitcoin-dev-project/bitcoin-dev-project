@@ -149,6 +149,22 @@ select:-webkit-autofill:focus {
     object-fit: contain;
 }
 
+/* Give the wide Hash Explained wordmark room within its learning card. */
+.learn-cards-container
+    a[href="https://hashexplained.com/"]
+    > div
+    > div:first-child
+    > div:first-child {
+    width: calc(100% - 48px);
+}
+
+.learn-cards-container a[href="https://hashexplained.com/"] img
+{
+    width: 280px;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
 .learn-cards-container a {
     outline: 1px solid transparent;
     transition: outline-color 0.2s ease-in;
