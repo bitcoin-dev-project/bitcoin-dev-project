@@ -92,5 +92,14 @@
       "flaky test"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
+  },
+  {
+    "url": "https://github.com/fedimint/fedimint/issues/9506",
+    "publishedAt": "2026-11-11T00:09:53Z",
+    "title": "fedimintd v0.13.0 panics at startup (rustls CryptoProvider) when both bitcoind and esplora backends are configured",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/84478549?v=4"
   }
 ]
