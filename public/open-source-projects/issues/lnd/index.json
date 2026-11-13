@@ -440,19 +440,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7463",
-    "publishedAt": "2023-02-27T10:31:30Z",
-    "title": "[bug]: reverse the order inside invoice settlement flow",
-    "labels": [
-      "bug",
-      "intermediate",
-      "htlcswitch",
-      "P2",
-      "itests"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7515",
     "publishedAt": "2023-03-15T19:04:59Z",
     "title": "[bug]: follow up on decreasing # of errors in `ListChannels`",
@@ -1125,6 +1112,18 @@
       "bug",
       "payments",
       "interop"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/9247",
+    "publishedAt": "2024-11-06T22:30:02Z",
+    "title": "[bug]: can't send payment to blinded path when setting custom data records",
+    "labels": [
+      "bug",
+      "payments",
+      "P2",
+      "blinded paths"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   }
