@@ -164,5 +164,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
+  },
+  {
+    "url": "https://github.com/bitcoindevkit/bdk/issues/2471",
+    "publishedAt": "2026-11-16T09:19:32Z",
+    "title": "Esplora full_scan can process transactions beyond stop_gap when using parallel requests",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/62867074?v=4"
   }
 ]
