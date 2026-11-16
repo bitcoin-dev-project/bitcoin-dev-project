@@ -29,6 +29,14 @@ export type Issue = {
             }
         }[]
     }
+    assignees: {
+        totalCount: number
+    }
+    closedByPullRequestsReferences: {
+        nodes: {
+            state: "OPEN" | "CLOSED" | "MERGED"
+        }[]
+    }
 }
 
 export type RepositoryIssues = {

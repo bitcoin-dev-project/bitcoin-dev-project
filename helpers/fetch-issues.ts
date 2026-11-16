@@ -6,6 +6,7 @@ import dotenv from "dotenv"
 
 import { constructRepoQueries } from "../graphql/queries/get-issues"
 import { getClient } from "../lib/apollo-client"
+import { isAvailableIssue } from "./available-issues"
 import projects from "../public/open-source-projects/index.json"
 import type { Issue, Projects } from "../types"
 import { sanitize } from "../utils/sanitize"
@@ -66,8 +67,9 @@ const fetchGithubIssues = async () => {
         if (!issuesData) continue
         const issues = (issuesData as any)?.issues?.edges as any[]
         const repositoryImage = (issuesData as any)?.owner?.avatarUrl as string
-        const projectIssues: ProjectIssue[] = issues.map(
-            (edge: { node: Issue }) => ({
+        const projectIssues: ProjectIssue[] = issues
+            .filter((edge: { node: Issue }) => isAvailableIssue(edge.node))
+            .map((edge: { node: Issue }) => ({
                 url: edge.node.url,
                 publishedAt: edge.node.publishedAt,
                 title: edge.node.title,
@@ -75,8 +77,7 @@ const fetchGithubIssues = async () => {
                     (label: { node: { name: string } }) => label.node.name
                 ),
                 imageUrl: repositoryImage
-            })
-        )
+            }))
         await saveIssuesToFile(key, projectIssues)
     }
 }

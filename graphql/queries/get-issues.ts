@@ -35,6 +35,14 @@ export function constructRepoQueries(inputs: Repository[]) {
                                     }
                                 }
                             }
+                            assignees (first: 1) {
+                                totalCount
+                            }
+                            closedByPullRequestsReferences (first: 10) {
+                                nodes {
+                                    state
+                                }
+                            }
                         }
                     }
                     pageInfo {
