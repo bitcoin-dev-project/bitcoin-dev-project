@@ -70,5 +70,14 @@
       "bug"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
+  },
+  {
+    "url": "https://github.com/payjoin/rust-payjoin/issues/2061",
+    "publishedAt": "2026-11-17T05:56:49Z",
+    "title": "payjoin-cli receive fails on Bitcoin Core 32: gettransaction no longer returns bip125-replaceable",
+    "labels": [
+      "bug"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   }
 ]
