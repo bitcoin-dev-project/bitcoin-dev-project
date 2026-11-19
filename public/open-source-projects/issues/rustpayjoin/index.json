@@ -53,15 +53,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
   },
   {
-    "url": "https://github.com/payjoin/rust-payjoin/issues/2054",
-    "publishedAt": "2026-11-15T17:59:26Z",
-    "title": "payjoin-cli fails on Bitcoin Core 32.1: wallet RPCs return PSBTv2",
-    "labels": [
-      "bug"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/125623455?v=4"
-  },
-  {
     "url": "https://github.com/payjoin/rust-payjoin/issues/2061",
     "publishedAt": "2026-11-17T05:56:49Z",
     "title": "payjoin-cli receive fails on Bitcoin Core 32: gettransaction no longer returns bip125-replaceable",
