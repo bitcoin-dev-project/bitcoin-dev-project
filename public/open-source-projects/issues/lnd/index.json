@@ -523,18 +523,6 @@
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
   },
   {
-    "url": "https://github.com/lightningnetwork/lnd/issues/7679",
-    "publishedAt": "2023-05-08T19:42:19Z",
-    "title": "[bug]: channel marked as zombie on neutrino node when it works on regular node",
-    "labels": [
-      "bug",
-      "neutrino",
-      "gossip",
-      "needs triage"
-    ],
-    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
-  },
-  {
     "url": "https://github.com/lightningnetwork/lnd/issues/7738",
     "publishedAt": "2023-06-01T04:51:58Z",
     "title": "[bug]: Unannounced channel opens in inactive state.",
@@ -1123,6 +1111,17 @@
       "bug",
       "payments",
       "P2",
+      "blinded paths"
+    ],
+    "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
+  },
+  {
+    "url": "https://github.com/lightningnetwork/lnd/issues/9256",
+    "publishedAt": "2024-11-12T01:04:03Z",
+    "title": "[bug]: `lncli addinvoice --blind --amt 0` does not work",
+    "labels": [
+      "bug",
+      "invoices",
       "blinded paths"
     ],
     "imageUrl": "https://avatars.githubusercontent.com/u/13424735?v=4"
