@@ -46,6 +46,7 @@ export function PhotoSlider() {
         }
     ]
     const infiniteScroll = [...photos, ...photos, ...photos]
+
     const checkScroll = () => {
         if (scrollContainerRef.current) {
             const { scrollLeft, scrollWidth, clientWidth } =
@@ -75,13 +76,15 @@ export function PhotoSlider() {
                 <div
                     ref={scrollContainerRef}
                     onScroll={checkScroll}
-                    className="flex gap-8 w-full max-w-[calc(100dvw)] overflow-x-auto scroll-smooth hide-scrollbar pb-4"
+
+                    className="flex gap-4 md:gap-8 w-full max-w-[calc(100dvw)] overflow-x-auto scroll-smooth hide-scrollbar pb-4 snap-x snap-mandatory pr-4 lg:pr-0"
                     style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                     {infiniteScroll.map((photo, index) => (
                         <div
                             key={index}
-                            className={`flex-shrink-0 relative w-60 h-60  lg:w-80 lg:h-96`}
+                           
+                            className={`flex-shrink-0 relative w-[85vw] md:w-75 h-60 lg:w-[500px] lg:h-96 snap-center`}
                         >
                             <div className="relative w-full h-full rounded-3xl overflow-hidden">
                                 <Image
