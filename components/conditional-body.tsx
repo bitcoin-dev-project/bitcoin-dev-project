@@ -6,6 +6,7 @@ import siteMetadata from "@/data/siteMetadata"
 import { ConditionalBackground } from "./conditional-background"
 import { RebrandedHeader } from "./rebranded-header"
 import FooterComponent from "./footer-component"
+import BossBanner from "./banner/BossBanner"
 
 export function ConditionalBody({
     children,
@@ -36,6 +37,7 @@ export function ConditionalBody({
                 storageKey="bdp-theme"
             >
                 <ConditionalBackground>
+                    <BossBanner />
                     {pathname !== "/" && <RebrandedHeader />}
                     <main>{children}</main>
                     <FooterComponent />
