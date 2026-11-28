@@ -1,105 +1,92 @@
 "use client"
-import clsx from "clsx"
+
+import Image from "next/image"
 import { useEffect, useState } from "react"
 
 const BANNER_KEY = "queuer-banner"
-
-const defaultStyles = {
-    container:
-        "gap-2 flex items-center justify-between w-full px-2 sm:px-4 shadow-md transition-all duration-200 ease-in-out text-center",
-    bannerInfoContainer: `flex flex-col flex-[1_1_auto]`,
-    headingText: "font-semibold text-brand-dark text-sm md:text-lg",
-    bodyText: "text-sm md:text-base",
-    link: "text-brand-orange-100 underline font-semibold text-xs md:text-sm",
-    icon: "text-orange-500  transition-all duration-200 ease-in-out",
-    boss: "text-bdp-accent text-base md:text-lg"
-} as const
 
 const BossBanner = () => {
     const [showBanner, setShowBanner] = useState(false)
 
     const handleClose = () => {
-        if (typeof window !== "undefined") {
-            sessionStorage.setItem(BANNER_KEY, "hidden")
-        }
         setShowBanner(false)
+        try {
+            window.sessionStorage.setItem(BANNER_KEY, "hidden")
+        } catch {
+            // Dismiss for this visit even when browser storage is unavailable.
+        }
     }
 
     useEffect(() => {
-        //  to make BossBanner Render only once
-        const banner_in_session = window.sessionStorage.getItem(BANNER_KEY)
-        if (banner_in_session === "hidden") {
-            setShowBanner(false)
-        } else {
+        try {
+            setShowBanner(
+                window.sessionStorage.getItem(BANNER_KEY) !== "hidden"
+            )
+        } catch {
             setShowBanner(true)
         }
     }, [])
 
+    if (!showBanner) return null
+
     return (
-        <div className={`w-full bg-white sticky top-0 z-[60] font-quicksand`}>
-            <div
-                data-show-banner={showBanner}
-                data-has-heading
-                className={clsx(
-                    defaultStyles.container,
-                    "data-[has-heading='true']:h-16",
-                    "data-[has-heading='false']:h-12",
-                    "data-[show-banner='false']:h-0 overflow-hidden"
-                )}
-            >
-                <div className={clsx(defaultStyles.bannerInfoContainer)}>
-                    <h3 className={clsx(defaultStyles.headingText)}>
-                        Start your career in bitcoin open source —
-                        <span
-                            className={clsx(
-                                defaultStyles.boss,
-                                "text-orange-500"
-                            )}
-                        >
-                            {" "}
-                            ₿OSS
-                        </span>
-                    </h3>
+        <aside
+            aria-label="BOSS Challenge"
+            className="relative z-[60] w-full border-b border-orange-400/40 bg-brand-dark font-quicksand text-white"
+        >
+            <div className="relative mx-auto max-w-7xl px-4 py-4 pr-14 sm:px-14 sm:py-3">
+                <div className="grid justify-items-start gap-3 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6">
+                    <Image
+                        src="/images/banners/boss-challenge.png"
+                        alt="BOSS Challenge"
+                        width={1910}
+                        height={324}
+                        sizes="(min-width: 640px) 12rem, 11rem"
+                        loading="eager"
+                        className="h-auto w-44 max-w-full shrink-0 sm:w-48"
+                    />
+                    <span
+                        aria-hidden="true"
+                        className="hidden h-7 w-px bg-white/20 lg:block"
+                    />
+                    <p className="text-base font-medium leading-relaxed text-white/90">
+                        Start your career in bitcoin open source.
+                    </p>
                     <a
                         onClick={handleClose}
                         target="_blank"
-                        className={clsx(
-                            defaultStyles.link,
-                            "dark:text-orange-400 text-orange-500"
-                        )}
+                        rel="noopener noreferrer"
+                        aria-label="Apply by December 31 for the BOSS Challenge"
+                        className="inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-lg bg-orange-400 px-4 py-2.5 text-sm font-bold text-brand-dark transition-colors hover:bg-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-400 motion-reduce:transition-none"
                         href="https://bosschallenge.xyz"
                     >
-                        APPLY FOR THE ₿OSS CHALLENGE TODAY
+                        Apply by December 31
                     </a>
                 </div>
                 <button
+                    type="button"
+                    aria-label="Dismiss BOSS Challenge banner"
                     onClick={handleClose}
-                    data-show-banner={showBanner}
-                    className={clsx(
-                        defaultStyles.icon,
-                        "opacity-1",
-                        "data-[show-banner='false']:opacity-0"
-                    )}
+                    className="absolute right-2 top-2 flex h-11 w-11 items-center justify-center rounded-lg text-white/70 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400 motion-reduce:transition-none sm:top-1/2 sm:-translate-y-1/2"
                 >
                     <svg
-                        className="h-[20px] w-[20px] md:h-6 md:w-6"
+                        className="h-5 w-5"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        width="24"
-                        height="24"
+                        strokeWidth={1.5}
+                        aria-hidden="true"
                     >
                         <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            strokeWidth="3"
                             d="M6 18L18 6M6 6l12 12"
-                        ></path>
+                        />
                     </svg>
                 </button>
             </div>
-        </div>
+        </aside>
     )
 }
 
